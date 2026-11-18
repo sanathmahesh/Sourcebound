@@ -1,0 +1,901 @@
+{
+ "zai-org/GLM-5.3": [
+  {
+   "check": "structured output (json_schema, strict)",
+   "passed": true,
+   "detail": "ok",
+   "responses": [
+    {
+     "id": "resp_01a1ecd0-9b29-7013-a030-3c8eb38450c2",
+     "choices": [
+      {
+       "finish_reason": "stop",
+       "index": 0,
+       "logprobs": null,
+       "message": {
+        "content": "{\"answer\": \"ready\", \"number\": 7}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": "The user wants a reply with answer = \"ready\" and number = 7. I'll provide that."
+       }
+      }
+     ],
+     "created": 1794974456,
+     "model": "zai-org/GLM-5.3",
+     "object": "chat.completion",
+     "metadata": null,
+     "moderation": null,
+     "service_tier": "asap",
+     "system_fingerprint": null,
+     "usage": {
+      "completion_tokens": 36,
+      "prompt_tokens": 29,
+      "total_tokens": 65,
+      "completion_tokens_details": {
+       "accepted_prediction_tokens": null,
+       "audio_tokens": null,
+       "reasoning_tokens": 23,
+       "rejected_prediction_tokens": null,
+       "text_tokens": null
+      },
+      "prompt_tokens_details": {
+       "audio_tokens": null,
+       "cache_write_tokens": null,
+       "cached_tokens": 28,
+       "image_tokens": null,
+       "text_tokens": null
+      }
+     },
+     "status": "completed"
+    }
+   ]
+  },
+  {
+   "check": "strict function tool call",
+   "passed": true,
+   "detail": "ok",
+   "responses": [
+    {
+     "id": "resp_01a1ecd0-9f8d-7013-9bc4-8837dbe6eaa3",
+     "choices": [
+      {
+       "finish_reason": "tool_calls",
+       "index": 0,
+       "logprobs": null,
+       "message": {
+        "content": null,
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+         {
+          "id": "call_resp_01a1ecd0-9f8d-7013-9bc4-8837dbe6eaa3_0",
+          "function": {
+           "arguments": "{\"metric_id\": \"net_leverage\", \"period\": \"LTM\"}",
+           "name": "get_metric"
+          },
+          "type": "function"
+         }
+        ]
+       }
+      }
+     ],
+     "created": 1794974457,
+     "model": "zai-org/GLM-5.3",
+     "object": "chat.completion",
+     "metadata": null,
+     "moderation": null,
+     "service_tier": "asap",
+     "system_fingerprint": null,
+     "usage": {
+      "completion_tokens": 22,
+      "prompt_tokens": 207,
+      "total_tokens": 229,
+      "completion_tokens_details": {
+       "accepted_prediction_tokens": null,
+       "audio_tokens": null,
+       "reasoning_tokens": 1,
+       "rejected_prediction_tokens": null,
+       "text_tokens": null
+      },
+      "prompt_tokens_details": {
+       "audio_tokens": null,
+       "cache_write_tokens": null,
+       "cached_tokens": 206,
+       "image_tokens": null,
+       "text_tokens": null
+      }
+     },
+     "status": "completed"
+    }
+   ]
+  },
+  {
+   "check": "tool call then structured answer, in one request setup",
+   "passed": false,
+   "detail": "turn 1 did not call the tool: expected one get_metric call, got [] (content '{\"answer\": \"done\", \"number\": 2}')",
+   "responses": [
+    {
+     "id": "resp_01a1ecd0-a428-7fed-8fa6-83a19861abd1",
+     "choices": [
+      {
+       "finish_reason": "stop",
+       "index": 0,
+       "logprobs": null,
+       "message": {
+        "content": "{\"answer\": \"done\", \"number\": 2}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+       }
+      }
+     ],
+     "created": 1794974458,
+     "model": "zai-org/GLM-5.3",
+     "object": "chat.completion",
+     "metadata": null,
+     "moderation": null,
+     "service_tier": "asap",
+     "system_fingerprint": null,
+     "usage": {
+      "completion_tokens": 14,
+      "prompt_tokens": 245,
+      "total_tokens": 259,
+      "completion_tokens_details": {
+       "accepted_prediction_tokens": null,
+       "audio_tokens": null,
+       "reasoning_tokens": 1,
+       "rejected_prediction_tokens": null,
+       "text_tokens": null
+      },
+      "prompt_tokens_details": {
+       "audio_tokens": null,
+       "cache_write_tokens": null,
+       "cached_tokens": 244,
+       "image_tokens": null,
+       "text_tokens": null
+      }
+     },
+     "status": "completed"
+    }
+   ]
+  },
+  {
+   "check": "tool call, then structured answer in a separate request",
+   "passed": true,
+   "detail": "ok",
+   "responses": [
+    {
+     "id": "resp_01a1ecd0-a8d9-7306-b23c-57a8d92c869c",
+     "choices": [
+      {
+       "finish_reason": "tool_calls",
+       "index": 0,
+       "logprobs": null,
+       "message": {
+        "content": null,
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+         {
+          "id": "call_resp_01a1ecd0-a8d9-7306-b23c-57a8d92c869c_0",
+          "function": {
+           "arguments": "{\"metric_id\": \"net_leverage\", \"period\": \"LTM\"}",
+           "name": "get_metric"
+          },
+          "type": "function"
+         }
+        ]
+       }
+      }
+     ],
+     "created": 1794974460,
+     "model": "zai-org/GLM-5.3",
+     "object": "chat.completion",
+     "metadata": null,
+     "moderation": null,
+     "service_tier": "asap",
+     "system_fingerprint": null,
+     "usage": {
+      "completion_tokens": 22,
+      "prompt_tokens": 245,
+      "total_tokens": 267,
+      "completion_tokens_details": {
+       "accepted_prediction_tokens": null,
+       "audio_tokens": null,
+       "reasoning_tokens": 1,
+       "rejected_prediction_tokens": null,
+       "text_tokens": null
+      },
+      "prompt_tokens_details": {
+       "audio_tokens": null,
+       "cache_write_tokens": null,
+       "cached_tokens": 244,
+       "image_tokens": null,
+       "text_tokens": null
+      }
+     },
+     "status": "completed"
+    },
+    {
+     "id": "resp_01a1ecd0-ad2f-7b6a-a85b-02e94e6b1f88",
+     "choices": [
+      {
+       "finish_reason": "stop",
+       "index": 0,
+       "logprobs": null,
+       "message": {
+        "content": "{\"answer\": \"done\", \"number\": 3}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": "Return JSON format."
+       }
+      }
+     ],
+     "created": 1794974461,
+     "model": "zai-org/GLM-5.3",
+     "object": "chat.completion",
+     "metadata": null,
+     "moderation": null,
+     "service_tier": "asap",
+     "system_fingerprint": null,
+     "usage": {
+      "completion_tokens": 18,
+      "prompt_tokens": 108,
+      "total_tokens": 126,
+      "completion_tokens_details": {
+       "accepted_prediction_tokens": null,
+       "audio_tokens": null,
+       "reasoning_tokens": 5,
+       "rejected_prediction_tokens": null,
+       "text_tokens": null
+      },
+      "prompt_tokens_details": {
+       "audio_tokens": null,
+       "cache_write_tokens": null,
+       "cached_tokens": 0,
+       "image_tokens": null,
+       "text_tokens": null
+      }
+     },
+     "status": "completed"
+    }
+   ]
+  }
+ ],
+ "deepseek-ai/DeepSeek-V4-Pro-0813": [
+  {
+   "check": "structured output (json_schema, strict)",
+   "passed": true,
+   "detail": "ok",
+   "responses": [
+    {
+     "id": "resp_01a1ecd0-b18a-7a67-b001-4999d3d4b914",
+     "choices": [
+      {
+       "finish_reason": "stop",
+       "index": 0,
+       "logprobs": null,
+       "message": {
+        "content": "{\"answer\": \"ready\", \"number\": 7}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": "We need answer user asks: \"Reply with answer set to the word 'ready' and number set to 7.\" Need interpret. They want reply with answer set to word 'ready' and number set to 7. Likely format? We need respond maybe \"ready 7\" or JSON? User says \"Reply with answer set to the word 'ready' and number set to 7.\" We need comply. Could say \"ready 7\". Need no extra. final."
+       }
+      }
+     ],
+     "created": 1794974462,
+     "model": "deepseek/deepseek-v4-pro-0813",
+     "object": "chat.completion",
+     "metadata": null,
+     "moderation": null,
+     "service_tier": "asap",
+     "system_fingerprint": null,
+     "usage": {
+      "completion_tokens": 112,
+      "prompt_tokens": 21,
+      "total_tokens": 133,
+      "completion_tokens_details": {
+       "accepted_prediction_tokens": null,
+       "audio_tokens": null,
+       "reasoning_tokens": 99,
+       "rejected_prediction_tokens": null,
+       "text_tokens": null
+      },
+      "prompt_tokens_details": {
+       "audio_tokens": null,
+       "cache_write_tokens": null,
+       "cached_tokens": 20,
+       "image_tokens": null,
+       "text_tokens": null
+      }
+     },
+     "status": "completed"
+    }
+   ]
+  },
+  {
+   "check": "strict function tool call",
+   "passed": true,
+   "detail": "ok",
+   "responses": [
+    {
+     "id": "resp_01a1ecd0-c5a9-7311-8fd5-543f121e0467",
+     "choices": [
+      {
+       "finish_reason": "tool_calls",
+       "index": 0,
+       "logprobs": null,
+       "message": {
+        "content": null,
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+         {
+          "id": "call_resp_01a1ecd0-c5a9-7311-8fd5-543f121e0467_0",
+          "function": {
+           "arguments": "{\"metric_id\": \"net_leverage\", \"period\": \"LTM\"}",
+           "name": "get_metric"
+          },
+          "type": "function"
+         }
+        ]
+       }
+      }
+     ],
+     "created": 1794974467,
+     "model": "deepseek/deepseek-v4-pro-0813",
+     "object": "chat.completion",
+     "metadata": null,
+     "moderation": null,
+     "service_tier": "asap",
+     "system_fingerprint": null,
+     "usage": {
+      "completion_tokens": 66,
+      "prompt_tokens": 332,
+      "total_tokens": 398,
+      "completion_tokens_details": {
+       "accepted_prediction_tokens": null,
+       "audio_tokens": null,
+       "reasoning_tokens": 1,
+       "rejected_prediction_tokens": null,
+       "text_tokens": null
+      },
+      "prompt_tokens_details": {
+       "audio_tokens": null,
+       "cache_write_tokens": null,
+       "cached_tokens": 331,
+       "image_tokens": null,
+       "text_tokens": null
+      }
+     },
+     "status": "completed"
+    }
+   ]
+  },
+  {
+   "check": "tool call then structured answer, in one request setup",
+   "passed": false,
+   "detail": "turn 1 did not call the tool: expected one get_metric call, got [] (content '{\"answer\": \"done\", \"number\": 0}')",
+   "responses": [
+    {
+     "id": "resp_01a1ecd0-d1d0-7b6b-b808-ddd2ba80d4fc",
+     "choices": [
+      {
+       "finish_reason": "stop",
+       "index": 0,
+       "logprobs": null,
+       "message": {
+        "content": "{\"answer\": \"done\", \"number\": 0}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": "The user wants net_leverage for LTM. Let me call get_metric."
+       }
+      }
+     ],
+     "created": 1794974470,
+     "model": "deepseek/deepseek-v4-pro-0813",
+     "object": "chat.completion",
+     "metadata": null,
+     "moderation": null,
+     "service_tier": "asap",
+     "system_fingerprint": null,
+     "usage": {
+      "completion_tokens": 31,
+      "prompt_tokens": 368,
+      "total_tokens": 399,
+      "completion_tokens_details": {
+       "accepted_prediction_tokens": null,
+       "audio_tokens": null,
+       "reasoning_tokens": 18,
+       "rejected_prediction_tokens": null,
+       "text_tokens": null
+      },
+      "prompt_tokens_details": {
+       "audio_tokens": null,
+       "cache_write_tokens": null,
+       "cached_tokens": 367,
+       "image_tokens": null,
+       "text_tokens": null
+      }
+     },
+     "status": "completed"
+    }
+   ]
+  },
+  {
+   "check": "tool call, then structured answer in a separate request",
+   "passed": true,
+   "detail": "ok",
+   "responses": [
+    {
+     "id": "resp_01a1ecd0-ddf5-788d-ab35-c6dc9fec8da9",
+     "choices": [
+      {
+       "finish_reason": "tool_calls",
+       "index": 0,
+       "logprobs": null,
+       "message": {
+        "content": null,
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+         {
+          "id": "call_resp_01a1ecd0-ddf5-788d-ab35-c6dc9fec8da9_0",
+          "function": {
+           "arguments": "{\"metric_id\": \"net_leverage\", \"period\": \"LTM\"}",
+           "name": "get_metric"
+          },
+          "type": "function"
+         }
+        ],
+        "reasoning_content": "The user wants net_leverage for LTM. I need to call get_metric with metric_id \"net_leverage\" and period \"LTM\"."
+       }
+      }
+     ],
+     "created": 1794974473,
+     "model": "deepseek/deepseek-v4-pro-0813",
+     "object": "chat.completion",
+     "metadata": null,
+     "moderation": null,
+     "service_tier": "asap",
+     "system_fingerprint": null,
+     "usage": {
+      "completion_tokens": 97,
+      "prompt_tokens": 368,
+      "total_tokens": 465,
+      "completion_tokens_details": {
+       "accepted_prediction_tokens": null,
+       "audio_tokens": null,
+       "reasoning_tokens": 32,
+       "rejected_prediction_tokens": null,
+       "text_tokens": null
+      },
+      "prompt_tokens_details": {
+       "audio_tokens": null,
+       "cache_write_tokens": null,
+       "cached_tokens": 367,
+       "image_tokens": null,
+       "text_tokens": null
+      }
+     },
+     "status": "completed"
+    },
+    {
+     "id": "resp_01a1ecd0-ea19-7894-a685-01917e418360",
+     "choices": [
+      {
+       "finish_reason": "stop",
+       "index": 0,
+       "logprobs": null,
+       "message": {
+        "content": "{\n  \"answer\": \"done\",\n  \"number\": 3\n}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": "We need answer in required JSON format: {\"number\": 3, \"answer\": \"done\"}."
+       }
+      }
+     ],
+     "created": 1794974476,
+     "model": "deepseek/deepseek-v4-pro-0813",
+     "object": "chat.completion",
+     "metadata": null,
+     "moderation": null,
+     "service_tier": "asap",
+     "system_fingerprint": null,
+     "usage": {
+      "completion_tokens": 39,
+      "prompt_tokens": 149,
+      "total_tokens": 188,
+      "completion_tokens_details": {
+       "accepted_prediction_tokens": null,
+       "audio_tokens": null,
+       "reasoning_tokens": 22,
+       "rejected_prediction_tokens": null,
+       "text_tokens": null
+      },
+      "prompt_tokens_details": {
+       "audio_tokens": null,
+       "cache_write_tokens": null,
+       "cached_tokens": 0,
+       "image_tokens": null,
+       "text_tokens": null
+      }
+     },
+     "status": "completed"
+    }
+   ]
+  }
+ ],
+ "deepseek-ai/DeepSeek-V4.1-Flash-1017": [
+  {
+   "check": "structured output (json_schema, strict)",
+   "passed": true,
+   "detail": "ok",
+   "responses": [
+    {
+     "id": "resp_01a1ecd0-f647-775b-8e02-3aebe3a932d5",
+     "choices": [
+      {
+       "finish_reason": "stop",
+       "index": 0,
+       "logprobs": null,
+       "message": {
+        "content": "{\"answer\": \"ready\", \"number\": 7}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": "The user wants a JSON response with answer \"ready\" and number 7."
+       }
+      }
+     ],
+     "created": 1794974479,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "object": "chat.completion",
+     "metadata": null,
+     "moderation": null,
+     "service_tier": "asap",
+     "system_fingerprint": null,
+     "usage": {
+      "completion_tokens": 30,
+      "prompt_tokens": 121,
+      "total_tokens": 151,
+      "completion_tokens_details": {
+       "accepted_prediction_tokens": null,
+       "audio_tokens": null,
+       "reasoning_tokens": 17,
+       "rejected_prediction_tokens": null,
+       "text_tokens": null
+      },
+      "prompt_tokens_details": {
+       "audio_tokens": null,
+       "cache_write_tokens": null,
+       "cached_tokens": 46,
+       "image_tokens": null,
+       "text_tokens": null
+      }
+     },
+     "status": "completed"
+    }
+   ]
+  },
+  {
+   "check": "strict function tool call",
+   "passed": true,
+   "detail": "ok",
+   "responses": [
+    {
+     "id": "resp_01a1ecd0-fa9f-7546-8c73-756f2659a1e7",
+     "choices": [
+      {
+       "finish_reason": "tool_calls",
+       "index": 0,
+       "logprobs": null,
+       "message": {
+        "content": null,
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+         {
+          "id": "call_resp_01a1ecd0-fa9f-7546-8c73-756f2659a1e7_0",
+          "function": {
+           "arguments": "{\"metric_id\":\"net_leverage\",\"period\":\"LTM\"}",
+           "name": "get_metric"
+          },
+          "type": "function"
+         }
+        ]
+       }
+      }
+     ],
+     "created": 1794974481,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "object": "chat.completion",
+     "metadata": null,
+     "moderation": null,
+     "service_tier": "asap",
+     "system_fingerprint": null,
+     "usage": {
+      "completion_tokens": 60,
+      "prompt_tokens": 347,
+      "total_tokens": 407,
+      "completion_tokens_details": {
+       "accepted_prediction_tokens": null,
+       "audio_tokens": null,
+       "reasoning_tokens": 1,
+       "rejected_prediction_tokens": null,
+       "text_tokens": null
+      },
+      "prompt_tokens_details": {
+       "audio_tokens": null,
+       "cache_write_tokens": null,
+       "cached_tokens": 346,
+       "image_tokens": null,
+       "text_tokens": null
+      }
+     },
+     "status": "completed"
+    }
+   ]
+  },
+  {
+   "check": "tool call then structured answer, in one request setup",
+   "passed": true,
+   "detail": "ok",
+   "responses": [
+    {
+     "id": "resp_01a1ecd1-06cb-765f-a269-6b04a8675518",
+     "choices": [
+      {
+       "finish_reason": "tool_calls",
+       "index": 0,
+       "logprobs": null,
+       "message": {
+        "content": null,
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+         {
+          "id": "call_0",
+          "function": {
+           "arguments": "{\"metric_id\":\"net_leverage\",\"period\":\"LTM\"}",
+           "name": "get_metric"
+          },
+          "type": "function"
+         }
+        ],
+        "reasoning_content": "The user wants net_leverage for LTM. Call get_metric."
+       }
+      }
+     ],
+     "created": 1794974484,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "object": "chat.completion",
+     "metadata": null,
+     "moderation": null,
+     "service_tier": "asap",
+     "system_fingerprint": null,
+     "usage": {
+      "completion_tokens": 75,
+      "prompt_tokens": 458,
+      "total_tokens": 533,
+      "completion_tokens_details": {
+       "accepted_prediction_tokens": null,
+       "audio_tokens": null,
+       "reasoning_tokens": 16,
+       "rejected_prediction_tokens": null,
+       "text_tokens": null
+      },
+      "prompt_tokens_details": {
+       "audio_tokens": null,
+       "cache_write_tokens": null,
+       "cached_tokens": 383,
+       "image_tokens": null,
+       "text_tokens": null
+      }
+     },
+     "status": "completed"
+    },
+    {
+     "id": "resp_01a1ecd1-12f8-765f-a0ad-caa5a83ab76d",
+     "choices": [
+      {
+       "finish_reason": "stop",
+       "index": 0,
+       "logprobs": null,
+       "message": {
+        "content": "{\"answer\": \"done\", \"number\": 3}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": "The value is 3. But number must be integer. Answer \"done\"."
+       }
+      }
+     ],
+     "created": 1794974487,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "object": "chat.completion",
+     "metadata": null,
+     "moderation": null,
+     "service_tier": "asap",
+     "system_fingerprint": null,
+     "usage": {
+      "completion_tokens": 30,
+      "prompt_tokens": 543,
+      "total_tokens": 573,
+      "completion_tokens_details": {
+       "accepted_prediction_tokens": null,
+       "audio_tokens": null,
+       "reasoning_tokens": 17,
+       "rejected_prediction_tokens": null,
+       "text_tokens": null
+      },
+      "prompt_tokens_details": {
+       "audio_tokens": null,
+       "cache_write_tokens": null,
+       "cached_tokens": 468,
+       "image_tokens": null,
+       "text_tokens": null
+      }
+     },
+     "status": "completed"
+    }
+   ]
+  },
+  {
+   "check": "tool call, then structured answer in a separate request",
+   "passed": true,
+   "detail": "ok",
+   "responses": [
+    {
+     "id": "resp_01a1ecd1-174a-78d9-a625-7a9323f83c27",
+     "choices": [
+      {
+       "finish_reason": "tool_calls",
+       "index": 0,
+       "logprobs": null,
+       "message": {
+        "content": null,
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+         {
+          "id": "call_resp_01a1ecd1-174a-78d9-a625-7a9323f83c27_0",
+          "function": {
+           "arguments": "{\"metric_id\":\"net_leverage\",\"period\":\"LTM\"}",
+           "name": "get_metric"
+          },
+          "type": "function"
+         }
+        ]
+       }
+      }
+     ],
+     "created": 1794974488,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "object": "chat.completion",
+     "metadata": null,
+     "moderation": null,
+     "service_tier": "asap",
+     "system_fingerprint": null,
+     "usage": {
+      "completion_tokens": 60,
+      "prompt_tokens": 384,
+      "total_tokens": 444,
+      "completion_tokens_details": {
+       "accepted_prediction_tokens": null,
+       "audio_tokens": null,
+       "reasoning_tokens": 1,
+       "rejected_prediction_tokens": null,
+       "text_tokens": null
+      },
+      "prompt_tokens_details": {
+       "audio_tokens": null,
+       "cache_write_tokens": null,
+       "cached_tokens": 383,
+       "image_tokens": null,
+       "text_tokens": null
+      }
+     },
+     "status": "completed"
+    },
+    {
+     "id": "resp_01a1ecd1-2374-7660-8596-8e98ea994b48",
+     "choices": [
+      {
+       "finish_reason": "stop",
+       "index": 0,
+       "logprobs": null,
+       "message": {
+        "content": "{\"answer\": \"done\", \"number\": 3}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": "The tool returned value 3. But number must be integer. 3."
+       }
+      }
+     ],
+     "created": 1794974491,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "object": "chat.completion",
+     "metadata": null,
+     "moderation": null,
+     "service_tier": "asap",
+     "system_fingerprint": null,
+     "usage": {
+      "completion_tokens": 30,
+      "prompt_tokens": 244,
+      "total_tokens": 274,
+      "completion_tokens_details": {
+       "accepted_prediction_tokens": null,
+       "audio_tokens": null,
+       "reasoning_tokens": 17,
+       "rejected_prediction_tokens": null,
+       "text_tokens": null
+      },
+      "prompt_tokens_details": {
+       "audio_tokens": null,
+       "cache_write_tokens": null,
+       "cached_tokens": 0,
+       "image_tokens": null,
+       "text_tokens": null
+      }
+     },
+     "status": "completed"
+    }
+   ]
+  }
+ ]
+}

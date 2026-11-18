@@ -1,0 +1,10 @@
+# Sail Research list prices, US$ per million tokens, Default (ASAP) tier.
+# Read on 17 November 2026 from https://docs.sailresearch.com/pricing.md (re-read before the phase-5 evals).
+# Cost of a call = (input - cached_input) x input price + cached_input x cached price + output x output price.
+read_on: "2026-11-17"
+source: https://docs.sailresearch.com/pricing.md
+tier: asap
+models:
+  zai-org/GLM-5.3: {input: 0.98, cached_input: 0.18, output: 3.08}
+  deepseek-ai/DeepSeek-V4-Pro-0813: {input: 0.92, cached_input: 0.04, output: 2.77}
+  deepseek-ai/DeepSeek-V4.1-Flash-1017: {input: 0.09, cached_input: 0.006, output: 0.30}

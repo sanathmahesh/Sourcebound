@@ -216,3 +216,30 @@ inventing one.
 ### D31. Saved filing texts as test fixtures
 - **Decision:** three extracted texts (WMT 10-K, GT 10-K, VZ 10-Q), gzipped, with their source URLs.
 - **Why:** section tests run against real filings without network access; gzip keeps them to 280 KB.
+
+### D32. Chat Completions API, although Sail now labels its Responses API "recommended" (phase 4)
+- **Why:** the plan fixed Chat Completions; Sail still lists it as stable, and it supports everything
+  needed (json_schema structured output, strict function tools, service tier, reasoning effort). Re-read
+  17 November 2026: `max_completion_tokens` is the output limit (`max_tokens` is rejected); `seed`, `stop`
+  and `logprobs` are unsupported, so run-to-run spread is measured instead.
+- **Rejected for now:** switching to the Responses API (no capability the project needs; one more change).
+
+### D33. Idempotent retries; the OpenAI SDK's own retries switched off
+- **Why:** Sail's retry guidance (re-read 17 November 2026) says only 429s and capacity 503s are refused
+  before work starts; other errors may have started a generation, so a blind retry can pay twice. Every
+  call sends an Idempotency-Key and reuses it on each retry (backoff: Retry-After, else 1, 2, 4 s + jitter;
+  at most 4 attempts).
+
+### D34. Tools and the answer format go in separate requests (approved 17 November 2026)
+- **Decision:** the follow-up endpoint (phase 7) runs its lookup turns with tools only, then asks for the
+  structured answer in a separate request with the response schema and no tools.
+- **Why:** the capability probe (docs/sail-capability-probe.md, run twice) found GLM-5.3 and
+  DeepSeek-V4-Pro skip the tool and invent a number when tools and a response schema share a request;
+  DeepSeek-V4.1-Flash does not. The separated pattern passed for all three. Memo drafting and judging use
+  structured output only, which all three pass.
+- **Rejected:** dropping the two models (loses the cost-against-accuracy comparison); trusting combined
+  requests (they produced fabricated numbers).
+
+### D35. One reasoning-effort setting per role, the same for every model
+- **Decision:** writer "medium", judge "low" (config/models.yaml); GLM-5.3 rejects "none".
+- **Why:** comparable settings make the model comparison fair; the judge's task is narrow.

@@ -1,0 +1,15 @@
+# Models (PLAN.md 4.2). The active writer and judge come from SAIL_MODEL_WRITER and SAIL_MODEL_JUDGE.
+writers:
+  - zai-org/GLM-5.3
+  - deepseek-ai/DeepSeek-V4-Pro-0813
+  - deepseek-ai/DeepSeek-V4.1-Flash-1017
+judge_candidates:
+  - zai-org/GLM-5.3
+  - deepseek-ai/DeepSeek-V4-Pro-0813
+# GLM-5.3 rejects "none"; "low" is its lowest tier. One setting per role, the same for every model.
+reasoning_effort:
+  writer: medium
+  judge: low
+max_completion_tokens:
+  writer: 8000
+  judge: 2000
