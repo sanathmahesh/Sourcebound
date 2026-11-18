@@ -971,8 +971,9 @@ The site runs on Vercel at https://sourcebound-app.vercel.app. The pages and the
 - **Rate limit at the edge**: the firewall in front of the site counts requests to `/api/ask` per IP address in
   ten-minute windows. The eleventh in a window gets HTTP 429 ("too many requests") before the function runs, so
   it costs nothing.
-- **Deploy hook**: a secret URL that tells Vercel to rebuild. The daily job calls it after committing new data,
-  because on the Hobby plan a bot's commit does not deploy by itself.
+- **Deploy token**: a secret that lets the daily GitHub job deploy to Vercel with the CLI after it commits new
+  data. It replaces Vercel's Git link, which could not be made because the Vercel account is connected to a
+  different GitHub user (D61).
 - **Schedule (cron)**: a GitHub Actions workflow that runs every day at a fixed time to check EDGAR for new
   filings.
 - **Dependency audit**: `npm audit` compares installed packages with known security advisories. What matters is
@@ -998,8 +999,8 @@ lookups and output are bounded, and each answer has a time limit. The last line 
 balance at the provider with auto-recharge off.
 
 **Q: How does new data reach the live site?**
-A: The daily GitHub Action checks EDGAR, recomputes and commits changed files, then calls a Vercel deploy hook,
-which rebuilds the site with the new data. Nothing is recomputed on the live server.
+A: The daily GitHub Action checks EDGAR, recomputes and commits changed files, then deploys the new files to
+Vercel with the CLI and a token kept in GitHub's secrets. Nothing is recomputed on the live server.
 
 **Q: What did you check after deploying?**
 A: That pages and data load, that the server found its settings, that bad requests get a plain 400, that a real

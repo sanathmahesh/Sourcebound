@@ -429,3 +429,17 @@ inventing one.
   with the limitations, as the design brief lists.
 - **Why:** the plan allows RESULTS.md only measured numbers with sample size, date, model ID and command; filling
   them by code makes a mistyped figure impossible.
+
+### D61. The daily job deploys with a Vercel token, not through a Git link
+- **Decision:** the Vercel project is not linked to the repository. After committing new data, the watchlist
+  workflow deploys a copy of the checkout (without .git) with Vercel CLI 65.11.0 and a token kept in GitHub's
+  secrets (VERCEL_TOKEN, with VERCEL_ORG_ID and VERCEL_PROJECT_ID). A manual run can force a deploy. The author
+  chose this on 18 November 2026.
+- **Why:** the author's Vercel account is connected to a different GitHub user, which has no access to this
+  repository, so Vercel refused the link. Deploying a copy without .git avoids Hobby's check on who authored a
+  commit, since the data commits are made by a bot.
+- **Rejected:** reconnecting the Vercel account's GitHub login (the author preferred not to change it); leaving
+  new data undeployed until a manual deploy.
+- **Note:** Vercel does not let a CLI login create tokens (HTTP 403), so the author creates the token in the
+  dashboard.
+

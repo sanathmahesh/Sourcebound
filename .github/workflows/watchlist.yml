@@ -1,12 +1,17 @@
 # Daily watchlist refresh (PLAN.md 4.10): new 10-K/10-Q -> refreshed ratios, scorecard and flags; memo marked
-# stale. No model call and no Sail key here. Commits only when files changed (plus a weekly heartbeat), which
-# triggers a Vercel redeploy.
+# stale. No model call and no Sail key here. Commits only when files changed (plus a weekly heartbeat), then
+# deploys the new data to Vercel with the CLI.
 #
 # Runs daily (enabled by the author, 18 November 2026, PLAN.md phase 10) and can be run by hand from the
-# Actions tab. Needs the EDGAR_USER_AGENT secret, and VERCEL_DEPLOY_HOOK to redeploy after a change.
+# Actions tab. Secrets: EDGAR_USER_AGENT, and VERCEL_TOKEN, VERCEL_ORG_ID and VERCEL_PROJECT_ID for the deploy.
 name: watchlist
 on:
   workflow_dispatch:
+    inputs:
+      deploy:
+        description: "Deploy to Vercel even if no data changed"
+        type: boolean
+        default: false
   schedule:
     - cron: "17 11 * * *"   # daily at 11:17 UTC
 permissions:
@@ -38,11 +43,18 @@ jobs:
             echo "No changes."
           fi
         id: commit
-      # Vercel Hobby deploys only commits authored by the account owner, so a bot commit does not deploy by
-      # itself (Vercel docs, read 18 Nov 2026). A deploy hook (a secret URL) starts the deploy instead.
-      - name: Trigger the Vercel deploy hook
-        if: steps.commit.outputs.changed == 'true'
+      # The Vercel project is not linked to this repository (D61), so the CLI deploys with a token. It deploys a
+      # copy without .git, so no commit author is attached for Vercel's Hobby check on who authored a commit.
+      - name: Deploy to Vercel
+        if: steps.commit.outputs.changed == 'true' || inputs.deploy
         env:
-          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_TELEMETRY_DISABLED: "1"
         run: |
-          if [ -n "$VERCEL_DEPLOY_HOOK" ]; then curl -fsS -X POST "$VERCEL_DEPLOY_HOOK" > /dev/null && echo "deploy requested"; else echo "no deploy hook configured"; fi
+          if [ -z "$VERCEL_TOKEN" ]; then echo "no VERCEL_TOKEN secret: not deployed"; exit 0; fi
+          rsync -a --exclude .git ./ "$RUNNER_TEMP/site/"
+          cd "$RUNNER_TEMP/site"
+          npx -y vercel@65.11.0 deploy --prod --yes --token "$VERCEL_TOKEN" > /dev/null
+          echo "deployed to production"

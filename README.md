@@ -58,17 +58,17 @@ Frontend checks (in `web/`): `npm run gen:types` (TypeScript types from schema.j
 `sourcebound`.
 
 ```bash
-npx vercel@65.11.0 deploy --prod     # deploy this folder to production (pushes to main also deploy once
-                                     #   the Vercel GitHub app can see the repository)
+npx vercel@65.11.0 deploy --prod     # deploy this folder to production (pushes do not deploy by themselves; D61)
 npx vercel@65.11.0 env ls            # server settings: SAIL_BASE_URL, SAIL_API_KEY (secret), SAIL_MODEL_WRITER,
                                      #   SAIL_MODEL_JUDGE, SAIL_SERVICE_TIER
 npx vercel@65.11.0 firewall rules inspect "Rate limit follow-up questions"   # 10 per 10 minutes per IP on /api/ask
 curl https://sourcebound-app.vercel.app/api/health
 ```
 
-The daily watchlist (`.github/workflows/watchlist.yml`) needs two repository secrets: `EDGAR_USER_AGENT` (your
-name and email, as in `.env`) and `VERCEL_DEPLOY_HOOK` (from `npx vercel@65.11.0 deploy-hooks create`). It can
-also be run by hand from the Actions tab.
+The daily watchlist (`.github/workflows/watchlist.yml`, 11:17 UTC) needs repository secrets: `EDGAR_USER_AGENT`
+(your name and email, as in `.env`) and, to deploy new data, `VERCEL_TOKEN` (created in the Vercel dashboard),
+`VERCEL_ORG_ID` and `VERCEL_PROJECT_ID`. Run it by hand from the Actions tab, or
+`gh workflow run watchlist -f deploy=true` to force a deploy.
 
 Model calls need SAIL_* variables in `.env` (see `.env.example`); the key is never printed or committed.
 
