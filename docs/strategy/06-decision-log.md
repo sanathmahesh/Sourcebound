@@ -442,4 +442,6 @@ inventing one.
   new data undeployed until a manual deploy.
 - **Note:** Vercel does not let a CLI login create tokens (HTTP 403), so the author creates the token in the
   dashboard.
+- **Checked:** on 18 November 2026 a manual run with a forced deploy checked all 15 companies, found no new
+  filings, and deployed to production from GitHub; the site, API and data then served from that deployment.
 

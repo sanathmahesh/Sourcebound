@@ -159,7 +159,7 @@ Seeded from PLAN.md section 4.15; later items were added while building, with th
   Code changes are deployed with the CLI; the daily job deploys new data with a Vercel token.
 - The daily job's Vercel token expires after a year unless renewed, and while valid it can deploy any project
   in the author's Vercel team; it lives only in GitHub's encrypted secrets.
-- The daily job runs at 11:17 UTC. Until the VERCEL_TOKEN secret exists, a day with new data commits it to the
-  repository but does not redeploy the site, so the site can lag the repository until the next deploy.
+- The daily job runs at 11:17 UTC and deploys only when data changed (or on a forced manual run). A day on
+  which GitHub delays or skips the schedule leaves the site a day behind.
 - The public commit history was rewritten before the first push to use GitHub's noreply address; commit IDs in
   stop reports written before that no longer exist.
