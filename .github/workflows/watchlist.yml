@@ -2,13 +2,13 @@
 # stale. No model call and no Sail key here. Commits only when files changed (plus a weekly heartbeat), which
 # triggers a Vercel redeploy.
 #
-# The schedule is OFF until the author approves enabling it (PLAN.md phase 10). Until then it can only be run
-# by hand from the Actions tab (workflow_dispatch).
+# Runs daily (enabled by the author, 18 November 2026, PLAN.md phase 10) and can be run by hand from the
+# Actions tab. Needs the EDGAR_USER_AGENT secret, and VERCEL_DEPLOY_HOOK to redeploy after a change.
 name: watchlist
 on:
   workflow_dispatch:
-  # schedule:
-  #   - cron: "17 11 * * *"   # daily at 11:17 UTC
+  schedule:
+    - cron: "17 11 * * *"   # daily at 11:17 UTC
 permissions:
   contents: write
 concurrency:

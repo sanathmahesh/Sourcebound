@@ -157,7 +157,7 @@ Seeded from PLAN.md section 4.15; later items were added while building, with th
   match only this project's own patterns.
 - Until the Vercel GitHub app is given access to the repository, pushes do not deploy by themselves and the
   deploy hook cannot be created; deploys are made from the CLI.
-- Until the EDGAR_USER_AGENT secret is added to the repository, the daily job cannot reach EDGAR, so its
-  schedule stays off.
+- The daily job runs at 11:17 UTC. Until the deploy hook exists, a day with new data commits it to the
+  repository but does not redeploy the site, so the site can lag the repository until the next deploy.
 - The public commit history was rewritten before the first push to use GitHub's noreply address; commit IDs in
   stop reports written before that no longer exist.
