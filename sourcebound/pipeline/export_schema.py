@@ -18,7 +18,7 @@ from sourcebound.paths import PROJECT_ROOT
 
 SCHEMA_FILE = PROJECT_ROOT / "web" / "src" / "contracts" / "schema.json"
 PUBLISHED_MODELS = [c.SiteIndex, c.CompanyMetrics, c.Memo, c.VerificationReport, c.Watchlist, c.WatchState,
-                    c.EvalsFile, c.AskResponse]
+                    c.EvalsFile, c.AboutFile, c.AskResponse]
 
 
 def contract_schema() -> dict:

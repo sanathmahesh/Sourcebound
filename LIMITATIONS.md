@@ -108,8 +108,9 @@ Seeded from PLAN.md section 4.15; later items were added while building, with th
 - When an answer passes the 60-second limit the caller gets a 503, but model requests already started run on
   (up to 45 seconds each) and are billed.
 - The follow-up judge is the provisional judge (GLM-5.3), the same model as the provisional writer.
-- Timing words are a weak point for the judge: in the smoke test it accepted "debt maturing in the next twelve
-  months" for a figure dated at the last fiscal year-end (Walmart, maturity_year_1:FY0).
+- The maturity ladder is as of the last 10-K. Its first bucket keeps the XBRL tag's wording, "debt maturing in
+  the next twelve months", meaning the twelve months after that fiscal year-end; an answer can read it as twelve
+  months from today, and the judge accepted that reading in the smoke test (Walmart, maturity_year_1:FY0).
 - Not verified until a preview deploy: whether Vercel's Python runtime installs from pyproject.toml without
   the dev group, whether the rewrite keeps the /api/... path FastAPI routes on, and whether the 21 MB search
   index is bundled with the function.
@@ -117,3 +118,12 @@ Seeded from PLAN.md section 4.15; later items were added while building, with th
   screen lacks the design brief's "change in leverage and coverage since the prior year-end" column, which
   watchlist.json does not carry; the results screen reads evals.json's untyped `results` defensively.
 - Checklist sign-off lives in one browser's localStorage: it is not an audit trail.
+
+## Added in phase 8
+
+- The opportunity map's ratings are the author's judgment (drafted for review), not measurements.
+- The effort comparison is pending until the author records timings; when recorded, it describes one analyst
+  with small samples.
+- The model recommendation is provisional until the claim labels and judge calibration exist.
+- The decision log is written by hand and records settings and dated one-off observations; unlike artifacts
+  1 to 5 it is not generated from results files, so the automatic number check does not cover it.

@@ -468,3 +468,23 @@ class AskResponse(Strict):
     seconds: float
     data_to: date | None  # the latest balance-sheet date in the metrics used
     disclaimer: str = DISCLAIMER
+
+
+# ----- about.json (phase 8) ------------------------------------------------------------------------------
+
+
+class AboutDocument(Strict):
+    id: str  # e.g. "04-risk-control-table"
+    title: str
+    group: Literal["strategy", "method", "reference"]
+    markdown: str
+    source: str  # the repo file it was read from
+
+
+class AboutFile(Strict):
+    """data/published/about.json: the strategy documents, the method and the limitations, as Markdown."""
+
+    schema_version: str = SCHEMA_VERSION
+    generated_at: datetime
+    documents: list[AboutDocument]
+    disclaimer: str = DISCLAIMER

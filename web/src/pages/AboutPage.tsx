@@ -1,19 +1,37 @@
-// Screen 6: About. The six strategy documents, method, model card and limitations arrive in phase 8 as
-// /data/about.json; until then this page says what the project is and what is still to come.
-export function AboutPage() {
+// Screen 6: About. The six strategy documents, the method and the limitations from /data/about.json, with a
+// side navigation. Long-form reading with wide tables (each table scrolls on its own at phone width).
+import { Markdown } from "../components/Markdown";
+import type { AboutFile } from "../contracts/types";
+import { useJson } from "../data";
+import { Status } from "./Status";
+
+const GROUPS = [["strategy", "Strategy documents"], ["method", "Method"], ["reference", "Reference"]] as const;
+
+export function AboutPage({ doc }: { doc?: string }) {
+  const about = useJson<AboutFile>("/data/about.json");
+  if (about.state !== "ok") return <Status value={about.state} message={about.state === "error" ? about.message : ""} />;
+  const documents = about.data.documents;
+  const current = documents.find((d) => d.id === doc) ?? documents[0];
   return (
-    <article>
-      <h1>About Sourcebound</h1>
-      <p>Sourcebound drafts a credit memo on a US public company from its SEC filings and checks every figure and
-        claim against source data. Figures are computed by code from the company's XBRL data and shown as
-        placeholders the model cannot change; quoted figures must appear in the passage they cite; and an
-        independent model judges whether each claim is supported. Anything unverified stays visible and goes on a
-        checklist for a person to sign off.</p>
-      <p>The strategy documents (opportunity map, manual versus tool-assisted effort, model recommendation, risk and
-        control table, rollout plan, decision log), the method, the model card and the limitations will appear here
-        in a later phase.</p>
-      <p className="note">Educational project. Not investment advice. SB grades are a student's stylized scorecard,
-        not credit ratings.</p>
-    </article>
+    <div className="about">
+      <nav className="about-nav" aria-label="Documents">
+        {GROUPS.map(([group, label]) => (
+          <div key={group}>
+            <h2>{label}</h2>
+            <ul>
+              {documents.filter((d) => d.group === group).map((d) => (
+                <li key={d.id}>
+                  <a href={`#/about/${d.id}`} aria-current={d.id === current?.id ? "page" : undefined}>{d.title}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </nav>
+      <article className="about-doc">
+        {current ? <Markdown text={current.markdown} /> : <p>No documents yet.</p>}
+        {current && <p className="note">Source: {current.source}</p>}
+      </article>
+    </div>
   );
 }

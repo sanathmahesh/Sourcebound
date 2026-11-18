@@ -3,8 +3,8 @@
 A credit-analysis tool that drafts a credit memo on a US public company from its SEC filings and proves
 every figure against source data. Educational project. Not investment advice.
 
-Status: phase 7 of 10 (verified memos, model evaluation, daily watchlist, the live follow-up API and a plain
-interface; not yet deployed). See PLAN.md.
+Status: phase 8 of 10 (verified memos, model evaluation, daily watchlist, the live follow-up API, a plain
+interface and the strategy documents; not yet deployed). See PLAN.md.
 
 ## Setup
 
@@ -35,6 +35,7 @@ uv run python -m sourcebound.pipeline.build_all --memos-from evals/results/memos
 uv run python -m sourcebound.watchlist.run             # the daily job: new filings -> metrics, flags, stale memos
 uv run python -m sourcebound.watchlist.simulate VZ     # simulated new filing on a copy of data/published
 uv run python -m sourcebound.pipeline.export_schema    # data contract -> web/src/contracts/schema.json
+uv run python -m sourcebound.pipeline.build_strategy   # strategy docs from templates + results, about.json
 ```
 
 The site, locally (two terminals):

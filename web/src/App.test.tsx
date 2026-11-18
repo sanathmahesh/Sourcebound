@@ -10,6 +10,7 @@ describe("parseRoute", () => {
     expect(parseRoute("#/watchlist")).toEqual({ page: "watchlist" });
     expect(parseRoute("#/results")).toEqual({ page: "results" });
     expect(parseRoute("#/about")).toEqual({ page: "about" });
+    expect(parseRoute("#/about/04-risk-control-table")).toEqual({ page: "about", doc: "04-risk-control-table" });
   });
 
   it("does not turn arbitrary text into a data path", () => {

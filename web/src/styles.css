@@ -97,3 +97,11 @@ mark { background: var(--mark); color: inherit; }
 .tile-value { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
 .tab { font: inherit; background: none; border: 1px solid var(--line); border-bottom: 0; padding: 6px 12px; cursor: pointer; color: inherit; }
 .tab.on { background: var(--panel); font-weight: 600; }
+
+.about { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 24px; margin-top: 16px; }
+.about-nav h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin: 12px 0 4px; }
+.about-nav ul { list-style: none; padding: 0; margin: 0; }
+.about-nav li { margin: 4px 0; }
+.about-nav a[aria-current="page"] { font-weight: 700; text-decoration: none; color: var(--fg); }
+.markdown pre { background: var(--panel); padding: 8px 12px; overflow-x: auto; }
+@media (max-width: 720px) { .about { grid-template-columns: 1fr; } }

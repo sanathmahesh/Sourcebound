@@ -12,7 +12,8 @@ import { VerificationPage } from "./pages/VerificationPage";
 import { WatchlistPage } from "./pages/WatchlistPage";
 
 export type Route =
-  | { page: "portfolio" | "watchlist" | "results" | "about" | "missing" }
+  | { page: "portfolio" | "watchlist" | "results" | "missing" }
+  | { page: "about"; doc?: string }
   | { page: "memo" | "verification"; ticker: string };
 
 export function parseRoute(hash: string): Route {
@@ -25,6 +26,9 @@ export function parseRoute(hash: string): Route {
   }
   if (parts.length === 1 && ["watchlist", "results", "about"].includes(parts[0])) {
     return { page: parts[0] as "watchlist" | "results" | "about" };
+  }
+  if (parts.length === 2 && parts[0] === "about" && /^[a-z0-9-]{1,60}$/.test(parts[1])) {
+    return { page: "about", doc: parts[1] };
   }
   return { page: "missing" };
 }
@@ -46,7 +50,7 @@ function Page({ route }: { route: Route }) {
     case "verification": return <VerificationPage ticker={route.ticker} />;
     case "watchlist": return <WatchlistPage />;
     case "results": return <ResultsPage />;
-    case "about": return <AboutPage />;
+    case "about": return <AboutPage doc={route.doc} />;
     default: return <p>Page not found. <a href="#/">Back to the portfolio</a>.</p>;
   }
 }

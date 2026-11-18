@@ -1,5 +1,80 @@
 {
  "$defs": {
+  "AboutDocument": {
+   "additionalProperties": false,
+   "properties": {
+    "group": {
+     "enum": [
+      "strategy",
+      "method",
+      "reference"
+     ],
+     "title": "Group",
+     "type": "string"
+    },
+    "id": {
+     "title": "Id",
+     "type": "string"
+    },
+    "markdown": {
+     "title": "Markdown",
+     "type": "string"
+    },
+    "source": {
+     "title": "Source",
+     "type": "string"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    }
+   },
+   "required": [
+    "id",
+    "title",
+    "group",
+    "markdown",
+    "source"
+   ],
+   "title": "AboutDocument",
+   "type": "object"
+  },
+  "AboutFile": {
+   "additionalProperties": false,
+   "description": "data/published/about.json: the strategy documents, the method and the limitations, as Markdown.",
+   "properties": {
+    "disclaimer": {
+     "default": "Educational project. Not investment advice. SB grades are a student's stylized scorecard, not credit ratings.",
+     "title": "Disclaimer",
+     "type": "string"
+    },
+    "documents": {
+     "items": {
+      "$ref": "#/$defs/AboutDocument"
+     },
+     "title": "Documents",
+     "type": "array"
+    },
+    "generated_at": {
+     "format": "date-time",
+     "title": "Generated At",
+     "type": "string"
+    },
+    "schema_version": {
+     "default": "1",
+     "title": "Schema Version",
+     "type": "string"
+    }
+   },
+   "required": [
+    "schema_version",
+    "generated_at",
+    "documents",
+    "disclaimer"
+   ],
+   "title": "AboutFile",
+   "type": "object"
+  },
   "AskRequest": {
    "additionalProperties": false,
    "description": "The request body. The ticker fixes which company's files the tools may read.",

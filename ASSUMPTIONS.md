@@ -134,3 +134,12 @@ were added while building, with the phase that added them.
 62. Questions are 1 to 500 characters after trimming; tickers are the 15 in index.json, in any case.
 63. Tables in the interface format engine values exactly as the Python formatter does (ties to even).
 64. Checklist sign-off is kept per memo run and per browser; it is not a record of review.
+
+## Added in phase 8
+
+65. Strategy artifacts 1 to 5 contain no typed figures: every figure is a placeholder filled from
+    evals/results/results.json or the timing log, or a table built by code. Identifiers (regulation numbers,
+    form types, dates, decision numbers, list numbering) and one quoted external fact ($30 billion, from the
+    guidance) are not figures.
+66. The effort summary is the median minutes per task and condition, with the count of tasks and errors found
+    later.

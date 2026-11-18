@@ -11,7 +11,7 @@ from sourcebound.pipeline.export_schema import SCHEMA_FILE, schema_text
 
 PUBLISHED = PROJECT_ROOT / "data" / "published"
 TOP_LEVEL = {"index.json": c.SiteIndex, "watchlist.json": c.Watchlist, "state.json": c.WatchState,
-             "evals.json": c.EvalsFile}
+             "evals.json": c.EvalsFile, "about.json": c.AboutFile}
 PER_COMPANY = {"metrics.json": c.CompanyMetrics, "memo.json": c.Memo, "verification.json": c.VerificationReport}
 
 
@@ -48,6 +48,6 @@ def test_committed_schema_is_current():
 def test_schema_describes_every_published_root():
     defs = json.loads(schema_text())["$defs"]
     for name in ["SiteIndex", "CompanyMetrics", "Memo", "VerificationReport", "Watchlist", "WatchState",
-                 "EvalsFile", "AskRequest", "AskResponse"]:
+                 "EvalsFile", "AboutFile", "AskRequest", "AskResponse"]:
         assert name in defs
     assert "from" in defs["WatchFlag"]["properties"]  # the alias, as written to watchlist.json

@@ -785,10 +785,111 @@ A: A per-IP rate limit at the edge (a Vercel Firewall rule, about 10 requests pe
 10), short questions, capped output tokens and a bounded lookup loop. There is no login because this is a
 public demonstration.
 
+## 24. The strategy documents (docs/strategy/, sourcebound/strategy/, pipeline/build_strategy.py)
+
+Six short documents that turn the build into a business case a bank could act on. Artifacts 1 to 5 are
+templates: like the memos, they contain no typed figure. Every number is a placeholder filled from
+evals/results/results.json or the timing log, so re-running the evaluation updates them with one command
+(`uv run python -m sourcebound.pipeline.build_strategy`), and a test fails if a digit appears anywhere else.
+
+- **01 Opportunity map**: nine lending and investment workflows rated High, Medium or Low on value,
+  feasibility and risk, with a reason each. Words, not scores, because these are my judgments, not
+  measurements. It explains why memo drafting was chosen: it mixes checkable data with narrative, needs only
+  public data, and banks already review memos, so the tool fits an existing control.
+- **02 Effort comparison**: the protocol for timing myself writing memos by hand and with the tool, the log
+  template, and a results table that stays "pending" until I record timings. Each company is used in only one
+  condition, so knowing its filings from the first attempt cannot speed up the second.
+- **03 Model recommendation**: what was measured for each writer (verdict rates, quoted-figure accuracy,
+  rejected raw numbers, cost and time per memo, run-to-run spread), the judges' calibration (pending) and the
+  seeded errors, plus the rule for choosing, written down before the labels exist so the choice cannot be
+  bent to fit the results.
+- **04 Risk and control table**: each way the tool can fail, the control that catches it, the evidence that
+  the control works, and the matching term from the 2026 model-risk guidance (see section 25).
+- **05 Rollout plan**: shadow, then assisted, then wider use; who is in the pilot; the human review step; what
+  is logged; what triggers a rollback. Thresholds are left for the model owner to set from calibration.
+- **06 Decision log**: every main design choice with the alternatives rejected. Written by hand.
+
+**Q: How do you know the numbers in your strategy documents are right?**
+A: None is typed. They are placeholders filled from the evaluation results file, which is itself produced by a
+command from saved model outputs; a test fails if any other digit appears, and every rate shows its sample
+size.
+
+**Q: Which model would you recommend, and why?**
+A: Not yet: the deciding evidence is the human-labelled sample and the judge's calibration, and the provisional
+judge graded its own model's writing. I wrote the choosing rule first: pick the judge with the lower
+false-pass rate, then drop any writer clearly worse on human-labelled unsupported claims, then prefer lower
+cost and latency.
+
+**Q: Why a shadow stage before analysts use the tool?**
+A: It measures the tool on live work with no risk to decisions: nothing it writes reaches the credit committee
+until the comparison shows it is safe, and the manual process never stops.
+
 ---
 
-## Still to write
+## 25. Model-risk guidance, in plain English (docs/strategy/04-risk-control-table.md)
 
-- US supervisory guidance on model risk (SR 11-7, its 2026 replacement SR 26-2 / OCC 2026-13 / FDIC
-  FIL-15-2026, scope footnote 3) — written when the guidance is read in full, before the control table
-  (phase 8).
+Read from the primary documents on 18 November 2026 (federalreserve.gov, occ.gov, fdic.gov, federalregister.gov).
+
+### What it is
+- **SR 11-7 (2011)** was the Federal Reserve's guidance on model risk management, issued with the OCC (Bulletin
+  2011-12). For fifteen years it was the reference every bank's model-risk team used, and interviewers may still
+  call the whole topic "SR 11-7".
+- **On 17 April 2026** the Fed, OCC and FDIC issued revised "Supervisory Guidance on Model Risk Management": Fed
+  SR 26-2, OCC Bulletin 2026-13, FDIC FIL-15-2026. Each agency rescinded its own older documents (the Fed:
+  SR 11-7 and SR 21-8; the OCC: Bulletin 2011-12 and others; the FDIC: FIL-22-2017 and FIL-27-2021).
+- **Model risk** is the chance of losing money because decisions were based on a model's output. How much it
+  matters depends on the model's **inherent risk** (assumptions, complexity, data quality), its **exposure** (how
+  much business rests on it), its **purpose** (what it is used for) and how it is **used**. Purpose plus
+  exposure gives **materiality**, which sets how much oversight a model needs. **Aggregate risk** is what builds
+  up when many models share data, assumptions or methods.
+- The life cycle: **development** (start with a statement of purpose; test that it works as intended), **use**
+  (know its limitations; don't use it beyond its intended purpose), **validation** (conceptual soundness: is
+  the design sound? outcomes analysis: do outputs match what really happened?), **ongoing monitoring**, all
+  under **governance** (clear roles, a model inventory, documentation) and **effective challenge** (critical
+  review by objective, competent people with enough standing to force changes). Models bought from a **vendor
+  or other third party** are still covered, even when the vendor keeps the details secret.
+
+### Why it does not apply to this project, and why I still use its words
+- The guidance's "model" is a complex quantitative method based on statistical, economic or financial theory,
+  and it explicitly excludes "simple arithmetic calculations" and "deterministic rule-based processes". The
+  ratio engine is exactly that, so it is not a model under the definition.
+- **Footnote 3**: generative AI and agentic AI models "are not within the scope of this guidance"; a bank's own
+  risk management and governance practices should decide the controls for tools it does not cover. The writer,
+  the judge and the follow-up loop are generative AI.
+- It is expected to be most relevant to banks with over $30 billion in total assets, and it "does not set forth
+  enforceable standards or prescriptive requirements".
+- So the control table borrows the vocabulary by choice, because it is the language a bank's model-risk team
+  speaks, and says plainly that it claims no compliance.
+- The OCC said the agencies would issue a request for information on AI in model risk management. I found none
+  in the Federal Register or the Fed's press releases as of 18 November 2026.
+
+### Related documents
+- **OCC Bulletin 2026-54** (4 November 2026), "Super Intelligence: Supervisory Framework": a framework for OCC
+  examiners on banks' use of what it now calls super intelligence (the technologies previously called AI). It
+  says it "does not establish supervisory expectations for banks". Its illustrative risk tiers put "internal
+  document summarization for credit memos" in a moderate tier with mandatory human-in-the-loop review, which is
+  how this tool is meant to be used. Human-in-the-loop means review and approval before an output is used.
+- **Third-party risk management** (June 2023: SR 23-4, OCC Bulletin 2023-17, FDIC FIL-29-2023): a vendor
+  relationship has a life cycle of planning, due diligence and selection, contract negotiation, ongoing
+  monitoring and termination, under governance. Sail is such a vendor. A replacement was proposed on
+  15 September 2026 (open for comment until 16 December 2026); it drops the "life cycle" framing.
+
+**Q: Is your LLM tool covered by SR 26-2?**
+A: No. Footnote 3 puts generative and agentic AI outside its scope, and the ratio engine is deterministic
+arithmetic, which the definition excludes. I borrow the vocabulary deliberately, because a bank's model-risk team
+would assess the tool in those terms, but I claim no compliance.
+
+**Q: What was SR 11-7, and what replaced it?**
+A: The 2011 Fed and OCC guidance that defined model risk management for a generation. In April 2026 the Fed,
+OCC and FDIC replaced their versions with revised guidance (SR 26-2, OCC 2026-13, FDIC FIL-15-2026). It keeps the
+life-cycle ideas, narrows the definition of a model, and says it sets no enforceable standards.
+
+**Q: What is effective challenge, and where is it in your design?**
+A: Critical review by objective, competent people with enough standing to make changes. In the prototype, an
+independent judge checks every claim and a person signs off the checklist; in a rollout, an independent
+validator who did not build the tool would challenge it.
+
+**Q: How would a bank treat Sail?**
+A: As a third party: due diligence before use, contract terms on data and model changes, ongoing monitoring
+(here: model IDs and prices pinned with dates, evaluations re-run on any change), and an exit plan (the manual
+process stays in place).

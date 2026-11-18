@@ -4,6 +4,29 @@ export interface SourceboundDataContract {
   [k: string]: unknown;
 }
 /**
+ * This interface was referenced by `SourceboundDataContract`'s JSON-Schema
+ * via the `definition` "AboutDocument".
+ */
+export interface AboutDocument {
+  group: "strategy" | "method" | "reference";
+  id: string;
+  markdown: string;
+  source: string;
+  title: string;
+}
+/**
+ * data/published/about.json: the strategy documents, the method and the limitations, as Markdown.
+ *
+ * This interface was referenced by `SourceboundDataContract`'s JSON-Schema
+ * via the `definition` "AboutFile".
+ */
+export interface AboutFile {
+  disclaimer: string;
+  documents: AboutDocument[];
+  generated_at: string;
+  schema_version: string;
+}
+/**
  * The request body. The ticker fixes which company's files the tools may read.
  *
  * This interface was referenced by `SourceboundDataContract`'s JSON-Schema

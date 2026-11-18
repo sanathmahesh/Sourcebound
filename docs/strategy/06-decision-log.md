@@ -345,3 +345,29 @@ inventing one.
   host needs no rewrite rules. Exact versions, each at least two weeks old on 18 November 2026. The lockfile was
   generated with npm 12.2.1 via npx because the installed npm 10.9.3 crashes on this dependency set (an internal
   error in its peer-dependency resolver); installs use `npm ci`, which reads the lockfile and works on npm 10.
+
+### D53. Strategy artifacts are rendered from templates, like the memos (phase 8)
+- **Decision:** artifacts 1 to 5 are templates in docs/strategy/templates/ whose figures are placeholders filled
+  from evals/results/results.json and evals/timings.csv; a test fails if any other digit appears (identifiers
+  and list numbering aside). The decision log stays hand-written. The method page is generated from
+  config/grid.yaml and the engine's formula strings. All of it is published as about.json.
+- **Why:** the plan requires that every number in an artifact matches a results file or the timing log; making
+  it impossible to type one is stronger than checking afterwards, and a re-run of the evaluation updates the
+  documents with one command.
+- **Rejected:** hand-written artifacts checked by a search for matching numbers (a typed number that happens to
+  match a result would pass).
+
+### D54. Opportunity-map ratings are words, and the model choice waits for the labels
+- **Decision:** the map rates value, feasibility and risk as High, Medium or Low, labelled as the author's
+  judgment for review. The model memo states a rule for choosing, written before the labels exist, instead of
+  a choice.
+- **Why:** numeric scores would look like measurements; and choosing a model before the human labels exist
+  would rest on the provisional judge grading its own writing.
+
+### D55. The control table cites the 2026 guidance only for vocabulary
+- **Decision:** the risk and control table states the guidance's scope (its definition of a model, footnote 3,
+  the $30 billion relevance line, no enforceable standards) before the table, and maps each control to a
+  borrowed term; it claims no compliance.
+- **Why:** read from the primary documents on 18 November 2026. The ratio engine is outside the definition and
+  the generative parts are outside the scope, so a compliance claim would be false; the vocabulary is still how a
+  bank's model-risk team would assess the tool.
