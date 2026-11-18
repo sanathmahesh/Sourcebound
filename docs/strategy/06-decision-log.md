@@ -397,6 +397,8 @@ inventing one.
   - The Results screen keeps the measures the evaluation actually produces, in the handoff's table layout,
     each with its sample size and a "how measured" note.
   - The drawer gained focus trapping and Escape to close, which the handoff asked for.
+  - On a phone the header's navigation sits on its own row under the wordmark, at the author's request (the
+    prototype stacks the links in a column beside it).
 - **Why:** the plan says to implement the design over the data contract without changing it, and never to show
   invented or false content.
 

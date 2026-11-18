@@ -137,7 +137,6 @@ Seeded from PLAN.md section 4.15; later items were added while building, with th
   column of its own.
 - Checklist "Go to" links exist only for items that point at a claim, the scorecard, the maturity ladder or the
   stale banner; items about a concept (fallback tags, blanks taken as zero) have no single place in the memo.
-- On a phone the header's navigation wraps into a column beside the wordmark, as in the handoff prototype.
 - The visual check is screenshots read by eye, not an automated pixel comparison. The prototype's own runtime
   drew its header and filters but not its tables in headless Chrome, so tables were checked against the handoff
   README and source rather than side by side.

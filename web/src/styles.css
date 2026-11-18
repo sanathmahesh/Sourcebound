@@ -331,6 +331,9 @@ mark { background: var(--hl); color: var(--ink); padding: 1px 0; border-bottom: 
 .markdown code { font-size: 0.85em; }
 
 @media (max-width: 640px) {
+  /* Phone: wordmark and theme toggle share the first row; the navigation takes a full row of its own. */
+  .theme-toggle { margin-left: auto; }
+  .site-nav { order: 3; flex-basis: 100%; gap: 4px 18px; }
   .meta-wide { grid-column: auto; }
   .about-nav { position: static; max-width: none; }
   .flag-line { grid-template-columns: 1fr; }
