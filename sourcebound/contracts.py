@@ -126,7 +126,7 @@ class ChecklistItem(Strict):
     id: str
     category: Literal[
         "not_available", "fallback", "assumed_zero", "override", "reconciliation", "structural_change",
-        "provisional_grade", "stale_data",
+        "provisional_grade", "stale_data", "unsupported_claim", "partially_supported_claim", "draft_problem",
     ]
     severity: Severity
     message: str
@@ -163,3 +163,149 @@ class CompanyMetrics(Strict):
     checklist: list[ChecklistItem]
     log: list[LogItem]
     disclaimer: str = DISCLAIMER
+
+
+# ----- memo.json and verification.json (phase 4) ------------------------------------------------------
+
+
+class Segment(Strict):
+    """A piece of a rendered claim: plain text, an engine metric, or a figure quoted from a passage."""
+
+    t: Literal["text", "metric", "quoted"]
+    v: str
+    metric_id: str | None = None  # "<metric_id>:<period>" for t = metric
+    chunk_id: str | None = None  # the passage a quoted figure comes from
+
+
+class MemoCitation(Strict):
+    chunk_id: str
+    quote: str
+    check: Literal["ok", "chunk_not_found", "quote_too_short", "quote_not_found"]
+
+
+Verdict = Literal["supported", "partially_supported", "unsupported"]
+
+
+class MemoClaim(Strict):
+    id: str
+    kind: Literal["quantitative", "qualitative"]
+    verdict: Verdict
+    judge_reason: str
+    evidence_quote: str
+    checked_by: Literal["judge", "deterministic"]  # deterministic = failed a number or quote check, no model call
+    segments: list[Segment]
+    citations: list[MemoCitation]
+    flags: list[str]  # e.g. "number check failed: ...", "kept after failed repair"
+
+
+class MemoSection(Strict):
+    id: str
+    title: str
+    claims: list[MemoClaim]
+    passages_shown: list[str]  # chunk ids given to the writer
+    notes: list[str]
+
+
+class Passage(Strict):
+    text: str
+    section: str
+    form: str
+    filed: str
+    period_end: str
+    accession: str
+    url: str
+    start: int
+    end: int
+
+
+class CallTotals(Strict):
+    calls: int
+    input_tokens: int
+    cached_input_tokens: int
+    output_tokens: int
+    cost_usd: float
+    seconds: float
+
+
+class RunInfo(Strict):
+    run_id: str
+    started_at: datetime
+    writer_model: str
+    judge_model: str
+    service_tier: str
+    reasoning_effort: dict[str, str]
+    prices_read_on: str
+    drafting: CallTotals
+    verification: CallTotals
+    raw_outputs: str  # path to the saved requests and responses
+
+
+class Memo(Strict):
+    """data/published/companies/<TICKER>/memo.json: a dated snapshot with its own metrics and passages."""
+
+    schema_version: str = SCHEMA_VERSION
+    ticker: str
+    name: str
+    memo_date: date
+    model: str
+    judge_model: str
+    grade: str | None
+    grade_provisional: bool
+    sources: list[Source]
+    sections: list[MemoSection]
+    metrics: dict[str, Metric]
+    passages: dict[str, Passage]
+    trends: list[TrendRow]
+    maturity_ladder: MaturityLadder | None
+    scorecard: Scorecard
+    checklist: list[ChecklistItem]
+    run: RunInfo
+    disclaimer: str = DISCLAIMER
+
+
+class NumberTrace(Strict):
+    claim_id: str
+    kind: Literal["metric", "quoted"]
+    value: str
+    metric_id: str | None = None
+    chunk_id: str | None = None
+
+
+class ClaimCheck(Strict):
+    claim_id: str
+    section: str
+    kind: str
+    verdict: Verdict
+    checked_by: str
+    reason: str
+    citation_checks: list[str]
+    flags: list[str]
+
+
+class VerificationSummary(Strict):
+    claims: int
+    supported: int
+    partially_supported: int
+    unsupported: int
+    checked_by_judge: int
+    checked_deterministically: int
+    metric_figures: int
+    quoted_figures: int
+    raw_numbers_rejected: int  # typed digits the validator rejected in first drafts, before any repair
+    repairs: int
+    sections_without_draft: int
+
+
+class VerificationReport(Strict):
+    """data/published/companies/<TICKER>/verification.json"""
+
+    schema_version: str = SCHEMA_VERSION
+    ticker: str
+    memo_date: date
+    writer_model: str
+    judge_model: str
+    summary: VerificationSummary
+    numbers: list[NumberTrace]
+    claims: list[ClaimCheck]
+    fallback_log: list[LogItem]
+    warnings: list[LogItem]

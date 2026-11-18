@@ -78,3 +78,13 @@ Seeded from PLAN.md section 4.15; later items were added while building, with th
 - Keyword search misses paraphrases; recall is measured in phase 5.
 - Facts that appear only in text (e.g. Walmart's $15.0bn of undrawn committed credit lines) are not used by
   the ratio engine, which reads XBRL only.
+
+## Added in phase 4
+
+- A quoted figure passes the number check if the same number appears anywhere in the cited passage, even
+  with a different meaning; the judge is the only check on that (as the plan anticipated).
+- GLM-5.3 is both the default writer and the provisional judge, so the judge may be lenient on its own
+  writing; phase 5 calibrates the judge against human labels.
+- Model outputs vary between runs and cannot be pinned (no seed); phase 5 measures the spread.
+- GLM-5.3 and DeepSeek-V4-Pro invent values when tools and a response schema share a request (probe); the
+  design avoids that pattern.

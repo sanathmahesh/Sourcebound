@@ -3,7 +3,7 @@
 A credit-analysis tool that drafts a credit memo on a US public company from its SEC filings and proves
 every figure against source data. Educational project. Not investment advice.
 
-Status: phase 3 of 10 (ratios and scorecard for 15 companies; filing text, sections and keyword search). See PLAN.md.
+Status: phase 4 of 10 (ratios, scorecard, filing search, and verified memos drafted by a language model). See PLAN.md.
 
 ## Setup
 
@@ -25,7 +25,12 @@ uv run python -m sourcebound.pipeline.tag_discovery WMT VZ  # which tags compani
 uv run python -m sourcebound.pipeline.golden_templates # blank golden-set sheets (never overwrites)
 uv run python -m sourcebound.pipeline.build_index      # filing text -> data/index/<T>.json, reports/section-coverage.md
 uv run python -m sourcebound.pipeline.search WMT "revolving credit facility" --section liquidity -k 5
+uv run python -m sourcebound.pipeline.capability_probe # what each Sail model supports -> docs/sail-capability-probe.md
+uv run python -m sourcebound.pipeline.generate_memo WMT VZ GT   # memos -> data/published/, reports/memos/ (costs credit)
+uv run pytest -m live                                  # live smoke test against Sail (costs a fraction of a cent)
 ```
+
+Model calls need SAIL_* variables in `.env` (see `.env.example`); the key is never printed or committed.
 
 Add tickers to `export` or `ratio_report` to run a subset. Config: `config/concepts.yaml` (tag chains),
 `config/grid.yaml` (scorecard, frozen as `grid-v1`), `config/overrides.yaml` (approved per-company

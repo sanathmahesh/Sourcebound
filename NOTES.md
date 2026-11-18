@@ -567,6 +567,87 @@ extraction from prose, which the design keeps apart.
 
 ---
 
+## 18. The model client and the capability probe (sourcebound/llm/, docs/sail-capability-probe.md)
+
+### Concepts
+- **Inference provider**: the service that runs a model and returns its output for a fee per token (a
+  token is roughly three-quarters of a word). Sail Research serves open-weight models (GLM, DeepSeek)
+  through an OpenAI-compatible API, so the standard OpenAI Python SDK works with a different base URL.
+- **Structured output**: the request carries a JSON schema and the model must return JSON that fits it.
+- **Tool (function) calling**: the model asks the program to run a named function with arguments (e.g.
+  `get_metric(net_leverage, LTM)`), receives the result, and continues.
+- **Idempotency key**: a unique ID sent with a request so that a retry returns the original result instead
+  of running (and charging for) the work twice.
+- **Reasoning effort**: how much hidden "thinking" the model does before answering; more costs more output
+  tokens and time.
+
+### What the probe found, and what I did about it
+- All three models return valid structured output and make strict tool calls.
+- With tools and a response schema in the *same* request, GLM-5.3 and DeepSeek-V4-Pro skipped the tool and
+  answered with an invented number (twice, with different numbers). DeepSeek-V4.1-Flash used the tool.
+- Splitting the work (tools-only turns, then a separate schema-only answer) passed for all three, so the
+  follow-up endpoint will use that pattern (D34). Memo drafting and judging don't use tools.
+
+**Q: What did you learn from the capability probe?**
+A: That a provider's "supported features" table isn't a guarantee for every model. A two-minute,
+two-cent test caught two models fabricating numbers in one request pattern, before any feature depended on
+it, and the fix was a design change, not a prompt tweak.
+
+**Q: How do you keep retries from double-billing?**
+A: Every call gets an idempotency key reused on each retry; the SDK's own retries are off; only errors the
+provider documents as safe are retried, with backoff.
+
+---
+
+## 19. Drafting by placeholder (sourcebound/memo/)
+
+- **Fixed pipeline**: six sections (business profile, financial risk, liquidity, maturity wall, key risks,
+  rating rationale), each with fixed searches, a section filter and a fixed metric table. Same steps every
+  time, so the memo is repeatable and auditable (D5).
+- **Placeholders**: the writer sees each engine figure as `{{m:net_leverage:LTM}} = 0.96x` and must write
+  the placeholder, never the digits; periods are `{{p:LTM}}`. Code substitutes the value. A figure not in the
+  table (e.g. a facility size) is allowed only if it appears in a passage the claim cites.
+- **One repair**: code checks every draft (placeholders exist, digits traceable, citations point to passages
+  shown, quotes really in them, qualitative claims cite something). If anything fails, the model gets one
+  chance to fix it with the problems listed. Remaining problems are kept, marked and put on the checklist.
+- **Rating rationale** sees the scorecard (as placeholders: values, bands, weights, grade) and only the
+  claims already verified as supported, with their passages.
+
+**Q: Why not let the model write numbers and check them afterwards?**
+A: Copying errors are silent: "1.21x" vs "1.12x" reads fine. With placeholders the model never types an
+engine number, so there is nothing to mistype, and every displayed figure links to its XBRL facts.
+
+---
+
+## 20. Verification in three layers (sourcebound/verify/)
+
+- **(a) Numbers** (code): every placeholder must exist; any other digit must be a token in a cited passage
+  ("quoted figure"). Otherwise the claim is unsupported, with no model call.
+- **(b) Claims**: first code checks that each cited passage was shown to the writer and the quote is in it
+  (after lower-casing and normalising spaces and quote marks; at least three words). Then the **judge** model
+  reads the finished sentence with the full cited passages and the engine values its placeholders stand for,
+  and returns supported / partially supported / unsupported, a reason and an evidence quote.
+- **(c) Reviewer checklist**: unsupported and partially supported claims (which stay visible, marked), draft
+  problems, and all the engine's data items (fallbacks, assumed zeros, overrides, warnings, provisional
+  grade, stale data). A human signs off.
+- The unsupported-claim rate is counted before anything is filtered out.
+
+**Q: Did the checks ever miss something? What did you change?**
+A: In the first Walmart memo the writer claimed the grade was "provisional" when it wasn't, and the judge
+rated it only "partially supported" because it had never been shown the scorecard. Meanwhile true claims
+were marked "partially supported" because the judge saw "FY-2" without its date. Both were evidence gaps,
+not model failures, so I gave the judge the period dates and the scorecard, told the writer the
+provisional status explicitly, added tests for each case and regenerated the memos. The first run's raw
+outputs are kept so the before and after can be compared.
+
+**Q: Isn't using an LLM to check an LLM circular?**
+A: Partly, which is why it's the last layer, not the only one. Numbers and quotes are checked by code first;
+the judge only decides whether a sentence follows from evidence that has already been verified to exist.
+Its verdicts are treated as estimates, calibrated in phase 5 against my own labels (agreement and
+false-pass rate), and a human reviews everything flagged.
+
+---
+
 ## Still to write
 
 - US supervisory guidance on model risk (SR 11-7, its 2026 replacement SR 26-2 / OCC 2026-13 / FDIC

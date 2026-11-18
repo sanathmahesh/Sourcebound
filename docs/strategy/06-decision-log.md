@@ -243,3 +243,22 @@ inventing one.
 ### D35. One reasoning-effort setting per role, the same for every model
 - **Decision:** writer "medium", judge "low" (config/models.yaml); GLM-5.3 rejects "none".
 - **Why:** comparable settings make the model comparison fair; the judge's task is narrow.
+
+### D36. The judge also sees the engine values behind a claim's placeholders
+- **Why:** a claim such as "leverage rose to {{m:...}}" has no passage to cite; giving the judge the
+  values lets it catch a wrong direction or comparison. Passages are still the evidence for everything else.
+
+### D37. A memo embeds only what it uses
+- **Decision:** memo.json holds the metrics its claims, ladder and scorecard reference, and the passages its
+  claims cite, so it is a self-contained dated snapshot; the full metric set stays in metrics.json.
+
+### D38. Every model request and response is saved (data/runs/<TICKER>/<run>.jsonl)
+- **Why:** results can be recomputed and audited without new model calls (PLAN.md 4.11); the API key is
+  never in the request body, and a test checks the saved file does not contain it.
+
+### D39. Judge evidence carries period dates; rating-rationale claims are judged against the scorecard
+- **Why:** the first Walmart memo (run WMT-20261118, GLM-5.3) had true claims marked "partially supported"
+  only because the judge saw "Revenue, FY-2" without the date it stands for, and a false rationale claim
+  (that the grade was provisional) passed as "partially supported" because the judge never saw the
+  scorecard. The writer is now told explicitly whether the grade is provisional.
+- **Effect:** the first run's outputs are kept in data/runs/ for comparison; memos are regenerated.

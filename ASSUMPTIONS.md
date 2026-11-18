@@ -88,3 +88,18 @@ were added while building, with the phase that added them.
     alphanumeric tokens and a 30-word stopword list; each query word counts once.
 44. ExxonMobil's text corpus comes from the predecessor's filing list (10-K for 2025 and 10-Qs to
     30 June 2026), so its text runs a quarter later than its XBRL figures (to 31 March 2026).
+
+## Added in phase 4
+
+45. Model settings (config/models.yaml): writer reasoning effort "medium", judge "low"; output caps 8,000
+    and 2,000 tokens; service tier asap. Costs use the list prices in config/prices.yaml (read 17 Nov 2026).
+46. A typed figure is traceable when it is a number token that appears in a passage the claim cites
+    ("$15.0 billion" needs "15.0" in the passage); engine figures must be placeholders.
+47. A quote matches when, after lower-casing and normalising spaces, quote marks and dashes, it is at least
+    three words and appears in a passage that was shown to the writer for that section.
+48. A claim that states only engine figures may cite nothing; the judge then checks it against the engine
+    values its placeholders stand for.
+49. Each section gets up to eight passages from its fixed queries; near-duplicates (90% of words shared)
+    collapse into the most recently filed copy; with fewer than four, the search widens to all sections.
+50. Unreadable judge output after one retry counts as unsupported, flagged as a judge error.
+51. The rating rationale may cite only passages already cited by claims verified as supported.
