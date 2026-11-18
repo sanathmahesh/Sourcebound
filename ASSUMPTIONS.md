@@ -73,3 +73,18 @@ were added while building, with the phase that added them.
     facts, and flagged as stale data (D24).
 38. ExxonMobil is analysed through its predecessor registrant, Exxon Mobil Corp, under an approved override;
     its latest figures are to 31 March 2026 (D20).
+
+## Added in phase 3
+
+39. The text corpus per company is the primary HTML document of the latest 10-K (the one used for the
+    metrics) and of every original 10-Q filed after it. Exhibits and amendments are not included.
+40. Text extraction keeps visible text only (drops the hidden inline-XBRL header, scripts, styles and
+    display:none elements), writes one paragraph or table row per line, and collapses whitespace.
+41. Section labels come only from headings found in the text (rules in sourcebound/edgar/sections.py);
+    text with no detected section is "unlabelled" or "other_item".
+42. Passages are up to 1,500 characters, never cross a section boundary, and their text equals the source
+    text at their offsets.
+43. Search is BM25 with k1 = 1.5, b = 0.75, idf = ln(1 + (N - df + 0.5)/(df + 0.5)), lowercase
+    alphanumeric tokens and a 30-word stopword list; each query word counts once.
+44. ExxonMobil's text corpus comes from the predecessor's filing list (10-K for 2025 and 10-Qs to
+    30 June 2026), so its text runs a quarter later than its XBRL figures (to 31 March 2026).

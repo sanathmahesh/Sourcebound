@@ -488,6 +488,85 @@ free. Nothing needs to be held in memory between requests.
 
 ---
 
+## 16. Filing text: from HTML to sections (sourcebound/edgar/html_text.py, sections.py)
+
+### Concepts
+- **Primary document**: the 10-K or 10-Q itself, an HTML file in the filing (other files are exhibits).
+- **Inline XBRL**: the HTML with XBRL tags wrapped around the numbers, plus a hidden block (`<ix:header>`)
+  of machine-readable data that a reader never sees. The text extractor drops it.
+- **10-K Items**: 1 Business, 1A Risk Factors, 7 MD&A (management's own explanation of results, liquidity
+  and outlook), 7A Market Risk (interest-rate and currency exposure), 8 Financial Statements (with the
+  notes, including the **debt note**: every bond and loan, rates, maturities, covenants).
+- **10-Q Parts**: Part I Item 1 statements, Item 2 MD&A, Item 3 market risk; Part II Item 1A risk-factor
+  updates.
+- **Covenant**: a promise in a loan agreement, e.g. keeping debt below 3.5x EBITDA; breaking one lets
+  lenders demand repayment. Covenants are found in the debt note and the liquidity discussion.
+
+### How it works and why
+- The extractor (stdlib `html.parser`, about 60 lines) writes one paragraph or table row per line. The
+  resulting text is the "source text": every passage's offsets point into it.
+- Section detection uses only headings found in the text. Real filings break naive rules, and each rule
+  below was added after the section-coverage report showed a real case:
+  - contents entries list every Item too: a titled heading beats a bare one, then the occurrence followed
+    by the most text before a *different* item wins (HCA repeats "ITEM 2. ..." on every page);
+  - 10-Q titles fix the Part ("Management's Discussion" is always Part I), because Community Health's body
+    has no "Part I" heading;
+  - debt-note headings come in several formats ("Note 5. Debt", "NOTE 8 — DEBT", "14. Debt", a number line
+    then a title line); a note ends where the next note number starts; table cells like "3.40%" or a lone
+    "24" are not note headings;
+  - some filings (HCA, Oracle) put a one-line pointer under Item 8 and print the statements at the end,
+    so the debt note is searched across the document.
+- Where detection fails, text is labelled "unlabelled" or "other_item"; a label is never guessed. The
+  section-coverage report (`reports/section-coverage.md`) shows every filing.
+
+**Q: Why not use an LLM to find sections?**
+A: It would be slower, cost money on every rebuild, vary between runs and could not be unit-tested against
+fixed answers. Headings are regular enough that a few explicit rules, each tied to a real example, cover
+most filings, and the coverage report shows exactly where they don't.
+
+---
+
+## 17. Chunking and BM25 search (sourcebound/retrieval/)
+
+### Chunking
+- Paragraphs are grouped into passages of up to 1,500 characters (median above 900); a longer paragraph
+  is split at sentence ends. A passage never crosses a section boundary, so it has one label.
+- Each passage stores its filing (accession, form, dates, document URL), section, and character offsets;
+  its text is exactly `source_text[start:end]`, so a quote can always be checked against the source.
+
+### BM25, worked example (the test case)
+Passages: d0 "revolving credit facility", d1 "credit rating", d2 "credit credit risk". Query
+"credit facility". N = 3, average length 8/3, k1 = 1.5, b = 0.75.
+- idf(credit) = ln(1 + (3 − 3 + 0.5)/(3 + 0.5)) = 0.1335 (in every passage: almost worthless);
+  idf(facility) = ln(1 + (3 − 1 + 0.5)/(1 + 0.5)) = 0.9808 (rare: valuable).
+- d0 has both words once; its length factor is 1 − 0.75 + 0.75 × 3/(8/3) = 1.094, so each word scores
+  idf × 2.5 / (1 + 1.5 × 1.094) = idf × 0.9467. Total 1.055.
+- d2 has "credit" twice but no "facility": 0.183. d1: 0.150. Ranking d0, d2, d1.
+
+### Why BM25
+Sail serves no embedding model (D6), BM25 needs no second vendor, runs in milliseconds inside the
+serverless function, and every score can be explained. Its weakness is paraphrase ("borrowing capacity"
+vs "undrawn revolver"); retrieval recall is measured in the evals before considering embeddings.
+
+### The index file
+`data/index/<TICKER>.json`: passages, BM25 statistics and the inverted index (for each word, the
+passages containing it and how often). Built deterministically, so a rebuild with the same filings gives
+identical bytes; the module that loads it imports neither the EDGAR client nor pandas (the live API needs
+that).
+
+**Q: How would you know if retrieval is good enough?**
+A: The golden-set fact questions record where the answer is in the filing; recall is whether that passage
+is in the top eight results. That's measured in phase 5, per company, before any change of method.
+
+**Q: Search found that Walmart has $15bn of undrawn credit lines, but your liquidity ratio counts zero.
+Why?**
+A: The ratio uses only XBRL-tagged numbers, and Walmart doesn't tag that figure. The memo can quote the
+text (a "quoted figure", traced to the passage), and the gap stays visible on the checklist as an
+assumed zero. Changing the ratio to use text figures would mix a deterministic, tested number with
+extraction from prose, which the design keeps apart.
+
+---
+
 ## Still to write
 
 - US supervisory guidance on model risk (SR 11-7, its 2026 replacement SR 26-2 / OCC 2026-13 / FDIC

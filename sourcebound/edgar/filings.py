@@ -57,3 +57,8 @@ def latest_filing(filings: list[Filing], form: str) -> Filing | None:
 def filing_index_url(cik: int, accession: str) -> str:
     """Link to a filing's index page on EDGAR, which lists every document in the filing."""
     return f"https://www.sec.gov/Archives/edgar/data/{int(cik)}/{accession.replace('-', '')}/{accession}-index.htm"
+
+
+def document_url(cik: int, filing: Filing) -> str:
+    """Link to a filing's primary document (the 10-K or 10-Q itself, as HTML)."""
+    return f"https://www.sec.gov/Archives/edgar/data/{int(cik)}/{filing.accession.replace('-', '')}/{filing.primary_document}"

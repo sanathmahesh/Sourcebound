@@ -192,3 +192,27 @@ inventing one.
   so they were left out of its debt while their interest was in its interest expense. Tested on all 15
   companies before approval: only Caesars changes (LTM debt $11,558m -> $24,746m; debt / EBITDA 3.6x ->
   7.7x; SB-4 -> SB-5). Chain changes do not touch the frozen grid (grid-v1).
+
+### D28. Text extraction with the standard-library HTML parser (phase 3)
+- **Why:** about 60 readable lines, no dependency, 0.1 s per filing; handles inline XBRL by skipping the
+  hidden header and display:none elements.
+- **Rejected:** BeautifulSoup/lxml (more dependencies for no gain here); an LLM (cost, variance, untestable).
+
+### D29. Rule-based section detection, every rule tied to a real filing
+- **Decision:** headings only; titled beats bare; most text before a different item; 10-Q part from title;
+  debt note by numbered heading with a debt title, ending at the next note number, searched across the
+  document outside narrative sections; joint filers' statement items labelled from their titles.
+- **Why:** deterministic and testable; the section-coverage report over all 15 companies drove each rule.
+  Where rules fail, text stays unlabelled rather than guessed.
+
+### D30. BM25 index as one JSON file per company in data/index/, committed
+- **Decision:** passages, statistics and inverted index in one file (about 21 MB for 15 companies);
+  deterministic bytes; the loader imports neither the EDGAR client nor pandas.
+- **Why:** the live API (phase 7) needs the index at run time with no network and no state between
+  requests. data/index/ is not in the plan's layout; it is separate from data/published/ because the site's
+  pages never load it.
+- **Rejected:** building the index at request time (slow, needs EDGAR); a database (none needed).
+
+### D31. Saved filing texts as test fixtures
+- **Decision:** three extracted texts (WMT 10-K, GT 10-K, VZ 10-Q), gzipped, with their source URLs.
+- **Why:** section tests run against real filings without network access; gzip keeps them to 280 KB.

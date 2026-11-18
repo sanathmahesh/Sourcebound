@@ -69,3 +69,13 @@ def test_parse_company_facts_keeps_values_exactly():
     assert len(match) == 1
     assert match[0].value == 796_000_000  # GT FY2025 cash from operations, accn 0001628280-26-006708
     assert match[0].filed == date(2026, 2, 10)
+
+
+def test_document_url():
+    from sourcebound.edgar.filings import document_url
+
+    filings = parse_filings(load_fixture("submissions_VZ.json"))
+    ten_k = latest_filing(filings, "10-K")
+    assert document_url(732712, ten_k) == (
+        "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/vz-20251231.htm"
+    )

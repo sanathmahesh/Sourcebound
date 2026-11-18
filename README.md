@@ -3,7 +3,7 @@
 A credit-analysis tool that drafts a credit memo on a US public company from its SEC filings and proves
 every figure against source data. Educational project. Not investment advice.
 
-Status: phase 2 of 10 (ratios, maturity ladder, trends and the stylized scorecard for 15 companies). See PLAN.md.
+Status: phase 3 of 10 (ratios and scorecard for 15 companies; filing text, sections and keyword search). See PLAN.md.
 
 ## Setup
 
@@ -23,6 +23,8 @@ uv run python -m sourcebound.pipeline.export           # all 15: data/published/
 uv run python -m sourcebound.pipeline.ratio_report     # per-company check reports -> reports/ratios/
 uv run python -m sourcebound.pipeline.tag_discovery WMT VZ  # which tags companies report -> reports/tag-discovery.md
 uv run python -m sourcebound.pipeline.golden_templates # blank golden-set sheets (never overwrites)
+uv run python -m sourcebound.pipeline.build_index      # filing text -> data/index/<T>.json, reports/section-coverage.md
+uv run python -m sourcebound.pipeline.search WMT "revolving credit facility" --section liquidity -k 5
 ```
 
 Add tickers to `export` or `ratio_report` to run a subset. Config: `config/concepts.yaml` (tag chains),

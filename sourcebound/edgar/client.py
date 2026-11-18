@@ -118,6 +118,25 @@ class EdgarClient:
         self._meta_path(url).write_text(json.dumps(meta))
         return data
 
+    def get_text(self, url: str) -> str:
+        """Return a document (e.g. a filing's HTML) as text, from the cache if we have it.
+
+        Filings are mostly UTF-8; older ones may be Latin-1, which is used when UTF-8 decoding fails.
+        """
+        path = self.cache_path(url)
+        if path.exists():
+            body = path.read_bytes()
+        else:
+            body = self._download(url)
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(body)
+            meta = {"url": url, "fetched_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
+            self._meta_path(url).write_text(json.dumps(meta))
+        try:
+            return body.decode("utf-8")
+        except UnicodeDecodeError:
+            return body.decode("latin-1")
+
     def _download(self, url: str) -> bytes:
         """GET url with throttle and retries. Raises EdgarError on a final failure."""
         last_problem = ""

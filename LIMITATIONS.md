@@ -62,3 +62,19 @@ Seeded from PLAN.md section 4.15; later items were added while building, with th
   This is by design, and the comparison with agency ratings will measure its effect.
 - Several reconciliation warnings (total debt against alternative candidates, ladder against total debt)
   remain open for a reviewer to resolve; none changes a value.
+
+## Added in phase 3
+
+- Section detection gaps (reports/section-coverage.md): ExxonMobil's 10-K uses a cross-reference format
+  (Item 7 and Item 8 point to a later "Financial Section"), so its MD&A is not labelled; HCA's and Oracle's
+  Item 8 is a one-line pointer and their statements sit at the end of the document, after the last Item, so
+  they are labelled "other_item" (their debt notes are still found); some
+  10-Qs have no separate debt note (Procter & Gamble, Oracle, ExxonMobil) and P&G's 10-Q has no liquidity
+  heading in the list.
+- Tables are flattened to text; in some filings each table cell becomes its own line, which makes passages
+  of bare numbers.
+- 10-Qs repeat much of the previous quarter's text, so near-identical passages appear from several
+  filings; de-duplication happens when passages are merged for the memo (phase 4).
+- Keyword search misses paraphrases; recall is measured in phase 5.
+- Facts that appear only in text (e.g. Walmart's $15.0bn of undrawn committed credit lines) are not used by
+  the ratio engine, which reads XBRL only.
