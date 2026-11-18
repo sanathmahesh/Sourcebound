@@ -3,7 +3,7 @@
 A credit-analysis tool that drafts a credit memo on a US public company from its SEC filings and proves
 every figure against source data. Educational project. Not investment advice.
 
-Status: phase 4 of 10 (ratios, scorecard, filing search, and verified memos drafted by a language model). See PLAN.md.
+Status: phase 6 of 10 (verified memos, model evaluation, daily watchlist and the published data). See PLAN.md.
 
 ## Setup
 
@@ -28,6 +28,10 @@ uv run python -m sourcebound.pipeline.search WMT "revolving credit facility" --s
 uv run python -m sourcebound.pipeline.capability_probe # what each Sail model supports -> docs/sail-capability-probe.md
 uv run python -m sourcebound.pipeline.generate_memo WMT VZ GT   # memos -> data/published/, reports/memos/ (costs credit)
 uv run pytest -m live                                  # live smoke test against Sail (costs a fraction of a cent)
+uv run python -m sourcebound.evals.report              # evaluation results from saved outputs -> evals/results/results.md
+uv run python -m sourcebound.pipeline.build_all --memos-from evals/results/memos/GLM-5.3/run1   # data/published/
+uv run python -m sourcebound.watchlist.run             # the daily job: new filings -> metrics, flags, stale memos
+uv run python -m sourcebound.watchlist.simulate VZ     # simulated new filing on a copy of data/published
 ```
 
 Model calls need SAIL_* variables in `.env` (see `.env.example`); the key is never printed or committed.

@@ -18,7 +18,7 @@ def make_client() -> EdgarClient:
     return EdgarClient.from_env()
 
 
-def load_and_analyse(client: EdgarClient, ticker: str, specs: dict[str, ConceptSpec]) -> CompanyAnalysis:
+def load_and_analyse(client: EdgarClient, ticker: str, specs: dict[str, ConceptSpec], refresh: bool = False) -> CompanyAnalysis:
     """Three EDGAR requests at most (ticker list, filing list, company facts), each cached.
 
     Applies any approved override from config/overrides.yaml (e.g. a different CIK for XOM).
@@ -26,8 +26,8 @@ def load_and_analyse(client: EdgarClient, ticker: str, specs: dict[str, ConceptS
     overrides = load_overrides(CONFIG_DIR / "overrides.yaml")
     company = company_for(ticker, client.get_json(TICKERS_URL), overrides)
     facts_url = companyfacts_url(company.cik)
-    facts = client.get_json(facts_url)
-    submissions = client.get_json(submissions_url(company.cik))
+    facts = client.get_json(facts_url, refresh=refresh)
+    submissions = client.get_json(submissions_url(company.cik), refresh=refresh)
     return analyse_company(
         company.ticker,
         facts,

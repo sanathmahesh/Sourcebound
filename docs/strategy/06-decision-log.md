@@ -283,3 +283,19 @@ inventing one.
   setting, not the model. The same limit applies to every writer.
 - **Effect:** DeepSeek-V4-Pro's five golden run-1 memos were regenerated; the capped versions are kept in
   evals/results/superseded/ with their raw outputs in data/runs/. GLM-5.3 and Flash memos are unaffected.
+
+### D44. The watchlist job triggers a Vercel deploy hook after committing (phase 6)
+- **Why:** Vercel's docs (troubleshoot-project-collaboration, last updated 13 March 2026; KB guide, 16 October
+  2026) say a Hobby team deploys only commits whose author is the team owner, so the job's bot commits would not
+  deploy. A deploy hook (a secret URL, stored as a GitHub secret; Hobby allows 5 per project, 60 calls an hour)
+  starts the deploy instead. To be confirmed once the repository and project exist.
+- **Rejected:** authoring bot commits as the owner (blurs who changed what); Vercel Cron (cannot write files).
+
+### D45. Staleness is an event, not a comparison
+- **Decision:** the job marks a memo stale when it sees a new filing; regenerating the memo marks it current.
+- **Why:** simple to explain and to test, and it matches the review step: a stale memo stays stale until a
+  human has regenerated and reviewed it.
+
+### D46. Published memos come from the GLM-5.3 evaluation run until the models are chosen
+- **Why:** they are already verified, so publishing them costs nothing; once the author chooses the writer and
+  judge, build-all regenerates (or copies the chosen writer's run and re-judges it) in one command.

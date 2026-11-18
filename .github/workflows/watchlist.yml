@@ -1,0 +1,48 @@
+# Daily watchlist refresh (PLAN.md 4.10): new 10-K/10-Q -> refreshed ratios, scorecard and flags; memo marked
+# stale. No model call and no Sail key here. Commits only when files changed (plus a weekly heartbeat), which
+# triggers a Vercel redeploy.
+#
+# The schedule is OFF until the author approves enabling it (PLAN.md phase 10). Until then it can only be run
+# by hand from the Actions tab (workflow_dispatch).
+name: watchlist
+on:
+  workflow_dispatch:
+  # schedule:
+  #   - cron: "17 11 * * *"   # daily at 11:17 UTC
+permissions:
+  contents: write
+concurrency:
+  group: watchlist
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync
+      - name: Check EDGAR for new filings
+        env:
+          EDGAR_USER_AGENT: ${{ secrets.EDGAR_USER_AGENT }}
+        run: uv run python -m sourcebound.watchlist.run
+      - name: Commit changes, if any
+        run: |
+          if [ -n "$(git status --porcelain data/published)" ]; then
+            git config user.name "sourcebound-watchlist"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/published
+            git commit -m "Watchlist refresh $(date -u +%Y-%m-%d)"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No changes."
+          fi
+        id: commit
+      # Vercel Hobby deploys only commits authored by the account owner, so a bot commit does not deploy by
+      # itself (Vercel docs, read 18 Nov 2026). A deploy hook (a secret URL) starts the deploy instead.
+      - name: Trigger the Vercel deploy hook
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          if [ -n "$VERCEL_DEPLOY_HOOK" ]; then curl -fsS -X POST "$VERCEL_DEPLOY_HOOK" > /dev/null && echo "deploy requested"; else echo "no deploy hook configured"; fi

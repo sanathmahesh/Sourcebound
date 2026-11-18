@@ -39,13 +39,13 @@
      "id": "business_profile-1",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "The passage states Walmart enhances omnichannel capabilities through stores, eCommerce websites, mobile applications and service offerings with approximately 2.1 million associates as of January 31, 2026, as part of a global retail ecosystem.",
-     "evidence_quote": "We are enhancing our omnichannel capabilities through a combination of stores, eCommerce websites, mobile applications and service offerings, as well as our supply chain, combined with approximately 2.1 million associates as of January 31, 2026, to better serve our customers.",
+     "judge_reason": "The passage states Walmart enhances omnichannel capabilities through stores, eCommerce, mobile apps and services with approximately 2.1 million associates as of January 31, 2026, and describes a global retail ecosystem.",
+     "evidence_quote": "We are enhancing our omnichannel capabilities through a combination of stores, eCommerce websites, mobile applications and service offerings... combined with approximately 2.1 million associates as of January 31, 2026... these elements produce a global retail ecosystem",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Walmart Inc. is a global omnichannel retailer serving customers through a combination of stores, eCommerce websites, mobile applications and service offerings, with a workforce of roughly ",
+       "v": "Walmart Inc. is a global omnichannel retailer that combines stores, eCommerce websites, mobile applications and service offerings, supported by approximately ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -57,7 +57,31 @@
       },
       {
        "t": "text",
-       "v": " million associates as of the end of the fiscal year ended 31 January 2026.",
+       "v": " million associates as of January ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "quoted",
+       "v": "31",
+       "metric_id": null,
+       "chunk_id": "WMT-000010416926000055-0016"
+      },
+      {
+       "t": "text",
+       "v": ", ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "quoted",
+       "v": "2026",
+       "metric_id": null,
+       "chunk_id": "WMT-000010416926000055-0016"
+      },
+      {
+       "t": "text",
+       "v": ".",
        "metric_id": null,
        "chunk_id": null
       }
@@ -65,7 +89,7 @@
      "citations": [
       {
        "chunk_id": "WMT-000010416926000055-0016",
-       "quote": "We are enhancing our omnichannel capabilities through a combination of stores, eCommerce websites, mobile applications and service offerings, as well as our supply chain, combined with approximately 2.1 million associates",
+       "quote": "through a combination of stores, eCommerce websites, mobile applications and service offerings, as well as our supply chain, combined with approximately 2.1 million associates",
        "check": "ok"
       }
      ],
@@ -75,13 +99,13 @@
      "id": "business_profile-2",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "The evidence states the company has three segments and that its business expands beyond core retail through mutually reinforcing offerings including membership, advertising, marketplace and fulfillment services, and financial services.",
-     "evidence_quote": "As we execute on our strategy globally, our business continues to expand through offerings such as membership, advertising, marketplace and fulfillment services, and financial services. These offerings represent mutually reinforcing pieces of our omnichannel model",
+     "judge_reason": "The passage explicitly states there are three segments and that each segment's results affect the company's financial condition and results as a whole.",
+     "evidence_quote": "the discussion provides information about the financial results of each of the three segments of our business to provide a better understanding of how each of those segments and its results of operations affect the financial condition and results of operations of the Company as a whole.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "The company reports three segments and is broadening its business beyond core retail through mutually reinforcing offerings such as membership, advertising, marketplace and fulfillment services, and financial services.",
+       "v": "The company operates three business segments, and the financial results of each segment affect the company's financial condition as a whole.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -89,12 +113,7 @@
      "citations": [
       {
        "chunk_id": "WMT-000010416926000055-0148",
-       "quote": "the discussion provides information about the financial results of each of the three segments of our business to provide a better understanding of how each of those segments",
-       "check": "ok"
-      },
-      {
-       "chunk_id": "WMT-000010416926000055-0016",
-       "quote": "our business continues to expand through offerings such as membership, advertising, marketplace and fulfillment services, and financial services",
+       "quote": "the discussion provides information about the financial results of each of the three segments of our business",
        "check": "ok"
       }
      ],
@@ -102,39 +121,15 @@
     },
     {
      "id": "business_profile-3",
-     "kind": "qualitative",
-     "verdict": "supported",
-     "judge_reason": "Evidence states 179 international distribution facilities across exactly the listed markets, plus a large U.S. distribution network of 192 facilities.",
-     "evidence_quote": "Outside the U.S., we utilize a total of 179 distribution facilities strategically located in Africa, Canada, Central America, Chile, China, India and Mexico",
-     "checked_by": "judge",
-     "segments": [
-      {
-       "t": "text",
-       "v": "The company's geographic diversification spans markets including Africa, Canada, Central America, Chile, China, India, Mexico and the United States, supported by a large global distribution network.",
-       "metric_id": null,
-       "chunk_id": null
-      }
-     ],
-     "citations": [
-      {
-       "chunk_id": "WMT-000010416926000055-0031",
-       "quote": "Outside the U.S., we utilize a total of 179 distribution facilities strategically located in Africa, Canada, Central America, Chile, China, India and Mexico, which process and distribute both imported and domestic products",
-       "check": "ok"
-      }
-     ],
-     "flags": []
-    },
-    {
-     "id": "business_profile-4",
      "kind": "quantitative",
      "verdict": "supported",
-     "judge_reason": "All three revenue figures match the metric values exactly.",
+     "judge_reason": "All revenue and EBITDA figures and periods in the claim match the metric values computed from XBRL data.",
      "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "The company operates at substantial scale, with revenue growing from ",
+       "v": "Walmart's scale is substantial, with revenue growing from ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -158,7 +153,7 @@
       },
       {
        "t": "text",
-       "v": " in the fiscal year ended 31 January 2026, and ",
+       "v": " in the fiscal year ended 31 January 2026 and ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -170,25 +165,7 @@
       },
       {
        "t": "text",
-       "v": " for the twelve months to 31 July 2026.",
-       "metric_id": null,
-       "chunk_id": null
-      }
-     ],
-     "citations": [],
-     "flags": []
-    },
-    {
-     "id": "business_profile-5",
-     "kind": "quantitative",
-     "verdict": "supported",
-     "judge_reason": "All three figures in the claim match the computed metric values exactly.",
-     "evidence_quote": "",
-     "checked_by": "judge",
-     "segments": [
-      {
-       "t": "text",
-       "v": "EBITDA increased from ",
+       "v": " in the twelve months to 31 July 2026, while EBITDA rose from ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -212,18 +189,6 @@
       },
       {
        "t": "text",
-       "v": " in the twelve months to 31 July 2026, alongside operating income of ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "$32.3 billion",
-       "metric_id": "operating_income:LTM",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
        "v": " in the twelve months to 31 July 2026.",
        "metric_id": null,
        "chunk_id": null
@@ -233,26 +198,74 @@
      "flags": []
     },
     {
-     "id": "business_profile-6",
+     "id": "business_profile-4",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "Purchasing power enabling low prices, fourth-quarter seasonal sales highs, and intense/evolving competition are all directly stated in the evidence.",
-     "evidence_quote": "Historically, our highest sales volume for each segment has occurred in the fourth quarter of our fiscal year.",
+     "judge_reason": "The passages state Walmart's business expands through membership, advertising, marketplace and fulfillment services, and financial services globally, and Walmart International specifically builds these businesses including healthcare.",
+     "evidence_quote": "our business continues to expand through offerings such as membership, advertising, marketplace and fulfillment services, and financial services.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Cash flows are supported by the company's scale-driven purchasing power, which enables low prices for customers, but exhibit a degree of seasonality, with the fourth fiscal quarter historically generating the highest sales volume in each segment, and the business faces intense and evolving competition across its markets.",
+       "v": "Walmart is diversifying its cash flow sources beyond core retail through offerings such as membership, advertising, marketplace and fulfillment services, and financial services, both in the U.S. and internationally.",
        "metric_id": null,
        "chunk_id": null
       }
      ],
      "citations": [
       {
-       "chunk_id": "WMT-000010416926000055-0030",
-       "quote": "These relationships enable us to obtain pricing that reflects the volume, certainty and cost-effectiveness these arrangements provide to such suppliers, which in turn enables us to provide low prices to our customers.",
+       "chunk_id": "WMT-000010416926000055-0016",
+       "quote": "our business continues to expand through offerings such as membership, advertising, marketplace and fulfillment services, and financial services",
        "check": "ok"
       },
+      {
+       "chunk_id": "WMT-000010416926000055-0023",
+       "quote": "Walmart International continues to build mutually reinforcing businesses in areas such as advertising, marketplace and fulfillment services, financial services and healthcare",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    },
+    {
+     "id": "business_profile-5",
+     "kind": "qualitative",
+     "verdict": "supported",
+     "judge_reason": "The passage states the company operates 179 distribution facilities outside the U.S. in exactly those markets, confirming international operations and geographic diversification.",
+     "evidence_quote": "Outside the U.S., we utilize a total of 179 distribution facilities strategically located in Africa, Canada, Central America, Chile, China, India and Mexico, which process and distribute both imported and domestic products to where our customers live.",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "The company operates internationally with distribution facilities across markets including Africa, Canada, Central America, Chile, China, India and Mexico, providing geographic diversification.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "WMT-000010416926000055-0031",
+       "quote": "Outside the U.S., we utilize a total of 179 distribution facilities strategically located in Africa, Canada, Central America, Chile, China, India and Mexico",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    },
+    {
+     "id": "business_profile-6",
+     "kind": "qualitative",
+     "verdict": "supported",
+     "judge_reason": "Both parts of the claim are directly stated in the evidence passages.",
+     "evidence_quote": "Our business is seasonal to a certain extent and varies by country... Historically, our highest sales volume for each segment has occurred in the fourth quarter of our fiscal year.",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "The business is somewhat seasonal, with the highest sales volume for each segment historically occurring in the fourth quarter of the fiscal year, and it operates in highly competitive and rapidly evolving retail landscapes.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
       {
        "chunk_id": "WMT-000010416926000055-0029",
        "quote": "Historically, our highest sales volume for each segment has occurred in the fourth quarter of our fiscal year.",
@@ -287,13 +300,13 @@
      "id": "financial_risk-1",
      "kind": "quantitative",
      "verdict": "supported",
-     "judge_reason": "All four leverage figures in the claim match the computed metric values exactly.",
+     "judge_reason": "All four leverage figures in the claim match the computed metric values exactly, with Debt/EBITDA flat at 1.21x and net leverage moving from 0.95x to 0.96x, consistent with 'stable'.",
      "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Leverage was stable over the period: Debt / EBITDA was ",
+       "v": "Leverage has remained stable from the fiscal year ended 31 January 2024 to the twelve months to 31 July 2026, with Debt / EBITDA moving from ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -305,7 +318,7 @@
       },
       {
        "t": "text",
-       "v": " in the fiscal year ended 31 January 2024 and ",
+       "v": " to ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -317,7 +330,7 @@
       },
       {
        "t": "text",
-       "v": " in the twelve months to 31 July 2026, while net leverage moved from ",
+       "v": " and net leverage from ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -353,13 +366,13 @@
      "id": "financial_risk-2",
      "kind": "quantitative",
      "verdict": "supported",
-     "judge_reason": "All figures in the claim match the computed metric values exactly (15.03x, 20.99x, $47.4B EBITDA, $2.3B interest).",
+     "judge_reason": "All figures in the claim match the computed metric values: EBITDA/interest of 15.03x for FY ended 31 Jan 2024 rising to 20.99x for LTM to 31 Jul 2026, with EBITDA of $47.4 billion covering interest expense of $2.3 billion.",
      "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Interest coverage improved from ",
+       "v": "Interest coverage improved over the period, with EBITDA / interest rising from ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -383,7 +396,7 @@
       },
       {
        "t": "text",
-       "v": " in the twelve months to 31 July 2026, with LTM EBITDA of ",
+       "v": " in the twelve months to 31 July 2026, as EBITDA of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -395,7 +408,7 @@
       },
       {
        "t": "text",
-       "v": " comfortably covering interest expense of ",
+       "v": " comfortably covered interest expense of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -412,15 +425,21 @@
        "chunk_id": null
       }
      ],
-     "citations": [],
+     "citations": [
+      {
+       "chunk_id": "WMT-000010416926000154-0043",
+       "quote": "the Company received approximately $2.9 billion in tariff refunds pursuant to the CBP process, which were recorded as a reduction to cost of sales",
+       "check": "ok"
+      }
+     ],
      "flags": []
     },
     {
      "id": "financial_risk-3",
-     "kind": "qualitative",
+     "kind": "quantitative",
      "verdict": "supported",
-     "judge_reason": "The metric values confirm FCF/debt fell from 32.2% to 23.6%, and the passage attributes the FCF compression to a $2.9 billion increase in capital expenditures supporting the omnichannel growth strategy.",
-     "evidence_quote": "partially offset by an increase of $2.9 billion in capital expenditures to support our omnichannel growth strategy",
+     "judge_reason": "All figures in the claim match the metric values exactly; the qualitative explanation (capex consuming a large share of CFO) follows directly from $29.4B capex vs $42.9B CFO.",
+     "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
@@ -449,24 +468,41 @@
       },
       {
        "t": "text",
-       "v": " in the twelve months to 31 July 2026, as free cash flow was compressed by an increase of $",
+       "v": " in the twelve months to 31 July 2026, as capital expenditure of ",
        "metric_id": null,
        "chunk_id": null
       },
       {
-       "t": "quoted",
-       "v": "2.9",
-       "metric_id": null,
-       "chunk_id": "WMT-000010416926000055-0166"
+       "t": "metric",
+       "v": "$29.4 billion",
+       "metric_id": "capex:LTM",
+       "chunk_id": null
       },
       {
        "t": "text",
-       "v": " billion in capital expenditures to support our omnichannel growth strategy.",
+       "v": " consumed a large share of cash from operations of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$42.9 billion",
+       "metric_id": "cfo:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in the LTM period.",
        "metric_id": null,
        "chunk_id": null
       }
      ],
      "citations": [
+      {
+       "chunk_id": "WMT-000010416926000154-0052",
+       "quote": "Our strategy includes allocating the majority of our capital to higher-return areas focused on automation such as eCommerce, supply chain and store and club investments.",
+       "check": "ok"
+      },
       {
        "chunk_id": "WMT-000010416926000055-0166",
        "quote": "partially offset by an increase of $2.9 billion in capital expenditures to support our omnichannel growth strategy",
@@ -478,8 +514,8 @@
     {
      "id": "financial_risk-4",
      "kind": "qualitative",
-     "verdict": "supported",
-     "judge_reason": "The metric values confirm total debt of $51.5B at FYE 31 Jan 2026 rising to $57.2B at LTM 31 Jul 2026, and the passages attribute the increases primarily to long-term debt issuances in fiscal 2026 and April 2026, less debt repayments ($2,625M repayments).",
+     "verdict": "partially_supported",
+     "judge_reason": "The total debt values ($51.5B at FYE Jan 31, 2026 and $57.2B LTM) match the metric scorecard, and evidence supports some increase from new long-term debt issuance, but the evidence only documents a $2.6 billion increase in long-term debt during the three months ended April 30, 2026, which cannot account for the full $5.7 billion total debt increase, so the 'driven primarily by' attribution goes beyond the evidence.",
      "evidence_quote": "During the three months ended April 30, 2026, our total outstanding long-term debt increased $2.6 billion, primarily due to the issuance of new long-term debt in April 2026, less current year debt repayments.",
      "checked_by": "judge",
      "segments": [
@@ -509,44 +545,20 @@
       },
       {
        "t": "text",
-       "v": " at the twelve months to 31 July 2026, driven primarily by new long-term debt issuance in fiscal ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "quoted",
-       "v": "2026",
-       "metric_id": null,
-       "chunk_id": "WMT-000010416926000055-0187"
-      },
-      {
-       "t": "text",
-       "v": " and in April ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "quoted",
-       "v": "2026",
-       "metric_id": null,
-       "chunk_id": "WMT-000010416926000055-0187"
-      },
-      {
-       "t": "text",
-       "v": ", partially offset by debt repayments.",
+       "v": " in the LTM period, driven primarily by new long-term debt issuance.",
        "metric_id": null,
        "chunk_id": null
       }
      ],
      "citations": [
       {
-       "chunk_id": "WMT-000010416926000055-0187",
-       "quote": "Our total outstanding long-term debt increased $2.2 billion during fiscal 2026, primarily due to issuances of long-term debt",
+       "chunk_id": "WMT-000010416926000102-0063",
+       "quote": "our total outstanding long-term debt increased $2.6 billion, primarily due to the issuance of new long-term debt in April 2026",
        "check": "ok"
       },
       {
-       "chunk_id": "WMT-000010416926000102-0063",
-       "quote": "our total outstanding long-term debt increased $2.6 billion, primarily due to the issuance of new long-term debt in April 2026, less current year debt repayments",
+       "chunk_id": "WMT-000010416926000055-0187",
+       "quote": "Our total outstanding long-term debt increased $2.2 billion during fiscal 2026, primarily due to issuances of long-term debt.",
        "check": "ok"
       }
      ],
@@ -555,51 +567,22 @@
     {
      "id": "financial_risk-5",
      "kind": "qualitative",
-     "verdict": "supported",
-     "judge_reason": "The LTM figures of $42.9B cash from operations and $29.4B capex are confirmed by the metric values, and the filing states the operating cash flow increase was driven by higher operating income and lower cash tax payments.",
-     "evidence_quote": "The increase in net cash provided by operating activities in fiscal 2026 is primarily due to an increase in cash provided by operating income, lower cash tax payments and the timing of certain payments.",
+     "verdict": "partially_supported",
+     "judge_reason": "The filing supports management's stated focus on improving ROI through margin improvement and disciplined capital spend, but the evidence contains no information about debt levels or leverage being modest.",
+     "evidence_quote": "Returns - improve our Return on Investment through margin improvement and disciplined capital spend.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Cash from operations of ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "$42.9 billion",
-       "metric_id": "cfo:LTM",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": " in the twelve months to 31 July 2026 remained the main offset to capital spending of ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "$29.4 billion",
-       "metric_id": "capex:LTM",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": ", supported by higher operating income and lower cash tax payments.",
+       "v": "Despite higher debt, the modest leverage levels reflect management's stated focus on improving Return on Investment through margin improvement and disciplined capital spend.",
        "metric_id": null,
        "chunk_id": null
       }
      ],
      "citations": [
       {
-       "chunk_id": "WMT-000010416926000055-0166",
-       "quote": "primarily due to an increase in cash provided by operating income, lower cash tax payments and the timing of certain payments",
-       "check": "ok"
-      },
-      {
-       "chunk_id": "WMT-000010416926000154-0052",
-       "quote": "Our strategy includes allocating the majority of our capital to higher-return areas focused on automation such as eCommerce, supply chain and store and club investments",
+       "chunk_id": "WMT-000010416926000055-0152",
+       "quote": "Returns - improve our Return on Investment through margin improvement and disciplined capital spend.",
        "check": "ok"
       }
      ],
@@ -626,25 +609,13 @@
      "id": "liquidity-1",
      "kind": "quantitative",
      "verdict": "supported",
-     "judge_reason": "The metric values confirm liquidity coverage of 1.18x for FY ended 31 January 2026 and 1.07x for the twelve months to 31 July 2026, a decline implying reduced headroom relative to next twelve months' needs.",
-     "evidence_quote": "",
+     "judge_reason": "The 1.07x LTM and 1.18x FY figures match the computed metrics, and the passage confirms $15.0 billion of committed, undrawn credit lines not captured in the measure.",
+     "evidence_quote": "In total, we had committed lines of credit in the U.S. of $15.0 billion at July 31, 2026, all undrawn.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
        "v": "Liquidity coverage was ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "1.18x",
-       "metric_id": "liquidity_coverage:FY0",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": " in the fiscal year ended 31 January 2026 and declined to ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -656,25 +627,43 @@
       },
       {
        "t": "text",
-       "v": " for the twelve months to 31 July 2026, indicating reduced headroom in liquidity sources relative to next twelve months' needs.",
+       "v": " for the twelve months to 31 July 2026, down from ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "1.18x",
+       "metric_id": "liquidity_coverage:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " for the fiscal year ended 31 January 2026, and this measure does not capture the company's undrawn committed credit facilities, which provide additional coverage headroom.",
        "metric_id": null,
        "chunk_id": null
       }
      ],
-     "citations": [],
+     "citations": [
+      {
+       "chunk_id": "WMT-000010416926000154-0069",
+       "quote": "In total, we had committed lines of credit in the U.S. of $15.0 billion at July 31, 2026, all undrawn.",
+       "check": "ok"
+      }
+     ],
      "flags": []
     },
     {
      "id": "liquidity-2",
      "kind": "quantitative",
      "verdict": "supported",
-     "judge_reason": "All five figures in the claim match the LTM metric values exactly, and no other part of the claim goes beyond the evidence.",
+     "judge_reason": "Both metric values match the claim exactly: cash of $11.5 billion is below short-term debt of $13.9 billion at twelve months to 31 July 2026.",
      "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "For the twelve months to 31 July 2026, liquidity sources of cash and cash equivalents of ",
+       "v": "At the twelve months to 31 July 2026, cash and cash equivalents of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -686,19 +675,7 @@
       },
       {
        "t": "text",
-       "v": " and cash from operations of ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "$42.9 billion",
-       "metric_id": "cfo:LTM",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": " stand against short-term debt of ",
+       "v": " were below short-term debt of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -710,7 +687,37 @@
       },
       {
        "t": "text",
-       "v": ", capital expenditure of ",
+       "v": ", leaving a gap before operating cash flow and undrawn facilities are considered.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "liquidity-3",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "Cash from operations of $42.9B exceeds capital expenditure ($29.4B) plus dividends ($7.7B) = $37.1B, matching the claim.",
+     "evidence_quote": "",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Cash from operations of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$42.9 billion",
+       "metric_id": "cfo:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " for the twelve months to 31 July 2026 exceeded the combined outflows of capital expenditure of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -743,16 +750,16 @@
      "flags": []
     },
     {
-     "id": "liquidity-3",
+     "id": "liquidity-4",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "The passage directly states the renewal of both credit facilities and the $15.0 billion committed, all undrawn, at July 31, 2026.",
+     "judge_reason": "The passage confirms the April 2026 renewal/extension of both facilities and that all $15.0 billion of committed U.S. lines were undrawn at July 31, 2026.",
      "evidence_quote": "In April 2026, the Company renewed and extended its existing 364-day revolving credit facility of $10.0 billion as well as its five-year credit facility of $5.0 billion. In total, we had committed lines of credit in the U.S. of $15.0 billion at July 31, 2026, all undrawn.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "The Company renewed and extended a ",
+       "v": "During the twelve months to 31 July 2026, the company renewed and extended its ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -776,7 +783,7 @@
       },
       {
        "t": "text",
-       "v": " billion and a five-year credit facility of $",
+       "v": " billion and its five-year credit facility of $",
        "metric_id": null,
        "chunk_id": null
       },
@@ -788,7 +795,7 @@
       },
       {
        "t": "text",
-       "v": " billion, and had committed lines of credit in the U.S. of $",
+       "v": " billion, and the full $",
        "metric_id": null,
        "chunk_id": null
       },
@@ -800,7 +807,7 @@
       },
       {
        "t": "text",
-       "v": " billion at the end of the twelve months to 31 July 2026, all undrawn, providing liquidity beyond the coverage calculation above.",
+       "v": " billion of committed U.S. lines remained undrawn at period end.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -820,58 +827,24 @@
      "flags": []
     },
     {
-     "id": "liquidity-4",
-     "kind": "qualitative",
-     "verdict": "supported",
-     "judge_reason": "The passage states short-term borrowings consist of commercial paper and lines of credit, rose from $3.1B to $6.6B (more than doubled), and that committed lines of credit support the commercial paper program.",
-     "evidence_quote": "Short-term borrowings consist of commercial paper and lines of credit. Short-term borrowings as of January 31, 2026 and 2025 were $6.6 billion and $3.1 billion, respectively",
-     "checked_by": "judge",
-     "segments": [
-      {
-       "t": "text",
-       "v": "Short-term borrowings consist of commercial paper and lines of credit, and more than doubled from the fiscal year ended 31 January 2025 to the fiscal year ended 31 January 2026, increasing reliance on the commercial paper program that the committed credit lines backstop.",
-       "metric_id": null,
-       "chunk_id": null
-      }
-     ],
-     "citations": [
-      {
-       "chunk_id": "WMT-000010416926000055-0256",
-       "quote": "Short-term borrowings consist of commercial paper and lines of credit.",
-       "check": "ok"
-      },
-      {
-       "chunk_id": "WMT-000010416926000055-0256",
-       "quote": "Short-term borrowings as of January 31, 2026 and 2025 were $6.6 billion and $3.1 billion, respectively",
-       "check": "ok"
-      },
-      {
-       "chunk_id": "WMT-000010416926000055-0256",
-       "quote": "The Company has various committed lines of credit in the U.S. to support its commercial paper program",
-       "check": "ok"
-      }
-     ],
-     "flags": []
-    },
-    {
      "id": "liquidity-5",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "The passage directly states that a downgrade of short-term credit ratings could impair commercial paper market access and require reliance on more expensive debt financing.",
-     "evidence_quote": "any downgrade of our current short-term credit ratings could impair our ability to access the commercial paper markets with the same flexibility that we have experienced historically, potentially requiring us to rely more heavily on more expensive types of debt financing",
+     "judge_reason": "The passage directly states short-term borrowings (commercial paper and lines of credit) increased from $3.1 billion to $6.6 billion, supporting greater short-term funding reliance.",
+     "evidence_quote": "Short-term borrowings as of January 31, 2026 and 2025 were $6.6 billion and $3.1 billion, respectively",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "A downgrade of the Company's short-term credit ratings could impair its access to commercial paper markets, potentially requiring reliance on more expensive types of debt financing.",
+       "v": "Short-term borrowings, which consist of commercial paper and lines of credit, increased from the fiscal year ended 31 January 2025 to the fiscal year ended 31 January 2026, indicating greater reliance on short-term funding over the year.",
        "metric_id": null,
        "chunk_id": null
       }
      ],
      "citations": [
       {
-       "chunk_id": "WMT-000010416926000102-0067",
-       "quote": "any downgrade of our current short-term credit ratings could impair our ability to access the commercial paper markets with the same flexibility",
+       "chunk_id": "WMT-000010416926000055-0256",
+       "quote": "Short-term borrowings as of January 31, 2026 and 2025 were $6.6 billion and $3.1 billion, respectively",
        "check": "ok"
       }
      ],
@@ -880,22 +853,22 @@
     {
      "id": "liquidity-6",
      "kind": "qualitative",
-     "verdict": "partially_supported",
-     "judge_reason": "Increased investing cash usage and increased property/equipment payments are supported, but the claim's assertion about capital expenditure absorbing operating cash flow is not addressed by the evidence.",
-     "evidence_quote": "The increase was primarily due to increased payments for property and equipment and change in net proceeds received from sales of certain strategic investments in the previous fiscal year.",
+     "verdict": "supported",
+     "judge_reason": "The passage states verbatim that any downgrade of short-term credit ratings could impair commercial paper market access and force reliance on more expensive debt financing.",
+     "evidence_quote": "any downgrade of our current short-term credit ratings could impair our ability to access the commercial paper markets with the same flexibility that we have experienced historically, potentially requiring us to rely more heavily on more expensive types of debt financing.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Cash usage from investing rose during the first half of the current fiscal year, primarily due to increased payments for property and equipment, consistent with elevated capital expenditure that absorbs operating cash flow.",
+       "v": "A downgrade of the company's short-term credit ratings could impair its ability to access the commercial paper markets with its historical flexibility, potentially forcing reliance on more expensive debt financing.",
        "metric_id": null,
        "chunk_id": null
       }
      ],
      "citations": [
       {
-       "chunk_id": "WMT-000010416926000154-0069",
-       "quote": "The increase was primarily due to increased payments for property and equipment and change in net proceeds received from sales of certain strategic investments",
+       "chunk_id": "WMT-000010416926000102-0067",
+       "quote": "any downgrade of our current short-term credit ratings could impair our ability to access the commercial paper markets with the same flexibility that we have experienced historically",
        "check": "ok"
       }
      ],
@@ -922,13 +895,13 @@
      "id": "maturity_wall-1",
      "kind": "quantitative",
      "verdict": "supported",
-     "judge_reason": "All claimed maturity amounts and total debt match the computed XBRL metric values exactly.",
+     "judge_reason": "All six maturity figures match the metric values exactly, and $23.3B is a clear majority of the ~$38.1B total, so the bulk indeed sits beyond year five.",
      "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Long-term debt maturities amount to ",
+       "v": "Annual maturities of long-term debt are ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1000,7 +973,49 @@
       },
       {
        "t": "text",
-       "v": " thereafter, out of total debt of ",
+       "v": " thereafter, indicating the bulk of the maturity profile sits beyond year five.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "maturity_wall-2",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "All three figures match the computed metric values: debt due within 24 months of $13.4 billion, share of 26.0%, and total debt of $51.5 billion.",
+     "evidence_quote": "",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Debt due within the next two years totals ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$13.4 billion",
+       "metric_id": "debt_due_24m:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": ", representing ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "26.0%",
+       "metric_id": "share_due_24m:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " of total debt of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1021,34 +1036,16 @@
      "flags": []
     },
     {
-     "id": "maturity_wall-2",
+     "id": "maturity_wall-3",
      "kind": "quantitative",
      "verdict": "supported",
-     "judge_reason": "All figures in the claim (26.0%, $13.4B due within 24 months, $10.7B cash, 1.25x cover) match the computed metric values exactly.",
+     "judge_reason": "Cash ($10.7B), short-term debt ($10.1B), and near-term maturity cover (1.25x) all match the computed metric values exactly.",
      "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
-       "t": "metric",
-       "v": "26.0%",
-       "metric_id": "share_due_24m:FY0",
-       "chunk_id": null
-      },
-      {
        "t": "text",
-       "v": " of total debt, or ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "$13.4 billion",
-       "metric_id": "debt_due_24m:FY0",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": ", falls due within the next two years; against cash and cash equivalents of ",
+       "v": "Cash and cash equivalents of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1060,7 +1057,19 @@
       },
       {
        "t": "text",
-       "v": ", near-term maturity cover is ",
+       "v": " compare with short-term debt of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$10.1 billion",
+       "metric_id": "short_term_debt:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": ", and near-term maturity cover stands at ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1081,52 +1090,16 @@
      "flags": []
     },
     {
-     "id": "maturity_wall-3",
+     "id": "maturity_wall-4",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "The passage states renewal of the $10.0B 364-day and $5.0B five-year facilities, $15.0B total committed U.S. credit lines, all undrawn, supporting the commercial paper program.",
+     "judge_reason": "The passage confirms renewal and extension of the credit facilities and $15.0 billion of committed U.S. lines of credit, all undrawn.",
      "evidence_quote": "In April 2026, the Company renewed and extended its existing 364-day revolving credit facility of $10.0 billion as well as its five-year credit facility of $5.0 billion. In total, the Company had committed lines of credit in the U.S. of $15.0 billion at April 30, 2026 and January 31, 2026, all undrawn.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "The Company renewed and extended its ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "quoted",
-       "v": "364",
-       "metric_id": null,
-       "chunk_id": "WMT-000010416926000102-0012"
-      },
-      {
-       "t": "text",
-       "v": "-day revolving credit facility of $",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "quoted",
-       "v": "10.0",
-       "metric_id": null,
-       "chunk_id": "WMT-000010416926000102-0012"
-      },
-      {
-       "t": "text",
-       "v": " billion and its five-year credit facility of $",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "quoted",
-       "v": "5.0",
-       "metric_id": null,
-       "chunk_id": "WMT-000010416926000102-0012"
-      },
-      {
-       "t": "text",
-       "v": " billion, and held $",
+       "v": "The Company renewed and extended its committed revolving credit facilities, leaving committed lines of credit in the U.S. of $",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1138,7 +1111,7 @@
       },
       {
        "t": "text",
-       "v": " billion of committed U.S. credit lines, all undrawn, supporting its commercial paper program.",
+       "v": " billion, all undrawn.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -1146,28 +1119,28 @@
      "citations": [
       {
        "chunk_id": "WMT-000010416926000102-0012",
-       "quote": "In April 2026, the Company renewed and extended its existing 364-day revolving credit facility of $10.0 billion as well as its five-year credit facility of $5.0 billion.",
+       "quote": "the Company renewed and extended its existing 364-day revolving credit facility of $10.0 billion as well as its five-year credit facility",
        "check": "ok"
       },
       {
        "chunk_id": "WMT-000010416926000102-0012",
-       "quote": "In total, the Company had committed lines of credit in the U.S. of $15.0 billion at April 30, 2026 and January 31, 2026, all undrawn.",
+       "quote": "committed lines of credit in the U.S. of $15.0 billion",
        "check": "ok"
       }
      ],
      "flags": []
     },
     {
-     "id": "maturity_wall-4",
+     "id": "maturity_wall-5",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "Both passages explicitly state issuances are senior, unsecured notes ranking equally with other senior unsecured debt and contain no financial covenants restricting dividends or share repurchases.",
+     "judge_reason": "Both passages state the senior unsecured notes rank equally with other senior unsecured debt, are not convertible, and contain no financial covenants restricting dividends or share repurchases.",
      "evidence_quote": "These issuances are senior, unsecured notes which rank equally with all other senior, unsecured debt obligations of the Company, and are not convertible or exchangeable. These issuances do not contain any financial covenants which restrict the Company's ability to pay dividends or repurchase Company stock.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Recent long-term debt issuances are senior, unsecured notes that rank equally with all other senior, unsecured debt obligations and contain no financial covenants restricting dividends or share repurchases.",
+       "v": "Recent senior unsecured note issuances rank equally with all other senior unsecured debt obligations of the Company, are not convertible, and do not contain financial covenants restricting dividends or share repurchases.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -1175,7 +1148,7 @@
      "citations": [
       {
        "chunk_id": "WMT-000010416926000102-0013",
-       "quote": "These issuances are senior, unsecured notes which rank equally with all other senior, unsecured debt obligations of the Company, and are not convertible or exchangeable.",
+       "quote": "These issuances are senior, unsecured notes which rank equally with all other senior, unsecured debt obligations of the Company",
        "check": "ok"
       },
       {
@@ -1187,16 +1160,16 @@
      "flags": []
     },
     {
-     "id": "maturity_wall-5",
+     "id": "maturity_wall-6",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "The passage states the committed lines of credit carry covenants, the most restrictive of which relates to the maximum amount of secured debt.",
-     "evidence_quote": "the Company has agreed to observe certain covenants, the most restrictive of which relates to the maximum amount of secured debt",
+     "judge_reason": "The passage states verbatim that the most restrictive covenant related to the committed lines of credit relates to the maximum amount of secured debt.",
+     "evidence_quote": "In conjunction with the committed lines of credit listed in the table above, the Company has agreed to observe certain covenants, the most restrictive of which relates to the maximum amount of secured debt.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "The committed lines of credit carry covenants, the most restrictive of which relates to the maximum amount of secured debt.",
+       "v": "In conjunction with its committed lines of credit, the Company has agreed to observe certain covenants, the most restrictive of which relates to the maximum amount of secured debt.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -1205,42 +1178,6 @@
       {
        "chunk_id": "WMT-000010416926000055-0257",
        "quote": "the Company has agreed to observe certain covenants, the most restrictive of which relates to the maximum amount of secured debt",
-       "check": "ok"
-      }
-     ],
-     "flags": []
-    },
-    {
-     "id": "maturity_wall-6",
-     "kind": "qualitative",
-     "verdict": "partially_supported",
-     "judge_reason": "The $2.2 billion increase and primary driver of issuances are directly stated, but the 'refinancing rather than reducing' characterization goes beyond the evidence—issuances ($3,983M) exceeded repayments ($2,625M), indicating net new borrowing rather than pure refinancing.",
-     "evidence_quote": "Our total outstanding long-term debt increased $2.2 billion during fiscal 2026, primarily due to issuances of long-term debt.",
-     "checked_by": "judge",
-     "segments": [
-      {
-       "t": "text",
-       "v": "Total outstanding long-term debt increased $",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "quoted",
-       "v": "2.2",
-       "metric_id": null,
-       "chunk_id": "WMT-000010416926000055-0187"
-      },
-      {
-       "t": "text",
-       "v": " billion during the fiscal year ended 31 January 2026, primarily due to issuances of long-term debt, indicating the Company has been refinancing rather than reducing its debt stack.",
-       "metric_id": null,
-       "chunk_id": null
-      }
-     ],
-     "citations": [
-      {
-       "chunk_id": "WMT-000010416926000055-0187",
-       "quote": "Our total outstanding long-term debt increased $2.2 billion during fiscal 2026, primarily due to issuances of long-term debt.",
        "check": "ok"
       }
      ],
@@ -1267,21 +1204,21 @@
      "id": "key_risks-1",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "The passage lists governmental drug-pricing focus and pharmacy reimbursement/regulatory pressures among factors that could affect the pharmacy business, matching the claim.",
-     "evidence_quote": "increased governmental focus on reducing drug prices including most favored nation pricing policies, maximum fair price negotiations, and direct-to-consumer pharmacy delivery models",
+     "judge_reason": "The passage lists higher consumer debt levels, tariffs/trade barriers, and economic slowdown or recession as factors that could reduce consumer demand, slow discretionary purchases, and materially adversely affect net sales, growth rates, and operating income.",
+     "evidence_quote": "higher consumer debt levels ... the imposition of export and import restrictions, tariffs, trade barriers or other measures ... overall economic slowdown or recession ... could adversely affect consumer demand for the products and services we sell ... cause a slowdown in discretionary purchases of goods, adversely affect our net sales, growth rates, operating income",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Regulatory and reimbursement pressure on the pharmacy business, including governmental drug-pricing initiatives, could reduce a meaningful source of revenue and cash flow.",
+       "v": "Macroeconomic pressures, including higher consumer debt levels, tariffs and trade barriers, and an overall economic slowdown or recession, could reduce consumer demand for the company's products, slow discretionary purchases, and materially adversely affect net sales and operating income, which is the primary source of cash flow available to service debt.",
        "metric_id": null,
        "chunk_id": null
       }
      ],
      "citations": [
       {
-       "chunk_id": "WMT-000010416926000055-0090",
-       "quote": "increased governmental focus on reducing drug prices including most favored nation pricing policies, maximum fair price negotiations, and direct-to-consumer pharmacy delivery models",
+       "chunk_id": "WMT-000010416926000055-0056",
+       "quote": "could adversely affect consumer demand for the products and services we sell in the U.S. or such other markets",
        "check": "ok"
       }
      ],
@@ -1291,21 +1228,21 @@
      "id": "key_risks-2",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "The filing explicitly states that overall economic slowdown or recession could adversely affect consumer demand, net sales, operating income, and result in slower inventory turnover, greater markdowns, and potential impairment charges.",
-     "evidence_quote": "overall economic slowdown or recession and other economic factors in the U.S. ... could adversely affect consumer demand for the products and services we sell ... adversely affect our net sales, growth rates, operating income and result in slower inventory turnover and greater markdowns of inventory ... and could result in impairment charges to intangible assets, goodwill or other long-lived assets.",
+     "judge_reason": "The claim directly matches the risk factor statement that failure to execute the omnichannel strategy and the cost of eCommerce/technology investments may materially adversely affect market position, net sales and financial performance.",
+     "evidence_quote": "Failure to successfully execute our omnichannel strategy and the cost of our investments in eCommerce and technology may materially adversely affect our market position, net sales and financial performance.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "A broader economic slowdown or recession could weaken consumer demand, pressure net sales and operating income, and lead to slower inventory turnover, greater markdowns and potential impairment charges.",
+       "v": "The company's omnichannel strategy requires substantial ongoing investment in eCommerce and technology, and failure to execute this strategy or the cost of these investments could materially adversely affect its market position, net sales and financial performance.",
        "metric_id": null,
        "chunk_id": null
       }
      ],
      "citations": [
       {
-       "chunk_id": "WMT-000010416926000055-0056",
-       "quote": "overall economic slowdown or recession and other economic factors in the U.S., or in any of the other markets in which we operate, could adversely affect consumer demand",
+       "chunk_id": "WMT-000010416926000055-0044",
+       "quote": "Failure to successfully execute our omnichannel strategy and the cost of our investments in eCommerce and technology may materially adversely affect our market position",
        "check": "ok"
       }
      ],
@@ -1314,9 +1251,38 @@
     {
      "id": "key_risks-3",
      "kind": "qualitative",
+     "verdict": "partially_supported",
+     "judge_reason": "The passage supports the reimbursement and drug-pricing risks (MFN pricing, maximum fair price negotiations, changes to/elimination of Medicare Part D or Medicaid), but the claim's characterization of pharmacy as 'a significant earnings stream supporting debt repayment' is not addressed in the evidence.",
+     "evidence_quote": "increased governmental focus on reducing drug prices including most favored nation pricing policies, maximum fair price negotiations, and direct-to-consumer pharmacy delivery models; changes in the scope of or the elimination of Medicare Part D or Medicaid drug programs",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "The pharmacy business faces reimbursement and drug-pricing risks, including increased governmental focus on reducing drug prices, most favored nation pricing policies, maximum fair price negotiations, and potential changes to or elimination of Medicare Part D or Medicaid drug programs, any of which could pressure a significant earnings stream supporting debt repayment.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "WMT-000010416926000055-0090",
+       "quote": "increased governmental focus on reducing drug prices including most favored nation pricing policies, maximum fair price negotiations",
+       "check": "ok"
+      },
+      {
+       "chunk_id": "WMT-000010416926000055-0090",
+       "quote": "changes in the scope of or the elimination of Medicare Part D or Medicaid drug programs",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    },
+    {
+     "id": "key_risks-4",
+     "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "The passage states Walmart International generated ~19% of consolidated net sales in fiscal 2026 and lists political instability, trade protection measures, nationalization, and antitrust proceedings as factors that could negatively affect operating results.",
-     "evidence_quote": "These factors include political conditions, including political instability ... restrictive governmental actions, such as trade protection measures or nationalization; antitrust and competition law regulatory matters, such as those underway in Canada, Mexico and India",
+     "judge_reason": "The passage states Walmart International generated ~19% of consolidated net sales in fiscal 2026 and lists all the cited risk factors as mostly beyond the company's control.",
+     "evidence_quote": "During fiscal 2026, our Walmart International operations generated approximately 19% of our consolidated net sales.",
      "checked_by": "judge",
      "segments": [
       {
@@ -1333,7 +1299,7 @@
       },
       {
        "t": "text",
-       "v": "% of consolidated net sales in the fiscal year ended 31 January 2026, faces risks from political instability, trade protection measures, nationalization and antitrust proceedings that could adversely affect operating results abroad.",
+       "v": "% of our consolidated net sales in the fiscal year ended 31 January 2026, is exposed to political instability, restrictive governmental actions such as trade protection measures or nationalization, foreign exchange regulations, and antitrust proceedings in Canada, Mexico and India, most of which are beyond the company's control.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -1353,48 +1319,48 @@
      "flags": []
     },
     {
-     "id": "key_risks-4",
-     "kind": "qualitative",
-     "verdict": "supported",
-     "judge_reason": "The claim closely paraphrases the stated risk factor heading about omnichannel strategy and eCommerce/technology investment costs.",
-     "evidence_quote": "Failure to successfully execute our omnichannel strategy and the cost of our investments in eCommerce and technology may materially adversely affect our market position, net sales and financial performance.",
-     "checked_by": "judge",
-     "segments": [
-      {
-       "t": "text",
-       "v": "The cost of investments in eCommerce and technology, and the risk of failing to execute the omnichannel strategy, could materially and adversely affect the company's market position, net sales and financial performance.",
-       "metric_id": null,
-       "chunk_id": null
-      }
-     ],
-     "citations": [
-      {
-       "chunk_id": "WMT-000010416926000055-0044",
-       "quote": "Failure to successfully execute our omnichannel strategy and the cost of our investments in eCommerce and technology may materially adversely affect our market position, net sales and financial performance.",
-       "check": "ok"
-      }
-     ],
-     "flags": []
-    },
-    {
      "id": "key_risks-5",
      "kind": "qualitative",
-     "verdict": "supported",
-     "judge_reason": "The passage directly states that health crises could disrupt operations and supply chains, negatively impact consumer disposable income, and adversely affect financial performance.",
-     "evidence_quote": "These risks and their impacts are difficult to predict and could otherwise disrupt and adversely affect our operations and our financial performance.",
+     "verdict": "partially_supported",
+     "judge_reason": "The evidence confirms no material change from the fiscal 2026 Form 10-K risk factors, but it does not state a period of 'twelve months to 31 July 2026'; the no-material-change statement applies to this report without specifying a 12-month coverage window, so the claim overstates the evidence.",
+     "evidence_quote": "No material change in the risk factors discussed in such Form 10-K has occurred.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "A pandemic or other health crisis could disrupt operations and supply chains, dampen consumer disposable income and adversely affect financial performance.",
+       "v": "The company reported no material change in its risk factors through the twelve months to 31 July 2026, indicating the risk profile disclosed in the fiscal ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "quoted",
+       "v": "2026",
+       "metric_id": null,
+       "chunk_id": "WMT-000010416926000154-0086"
+      },
+      {
+       "t": "text",
+       "v": " Form ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "quoted",
+       "v": "10",
+       "metric_id": null,
+       "chunk_id": "WMT-000010416926000154-0086"
+      },
+      {
+       "t": "text",
+       "v": "-K remained unchanged over the most recent period.",
        "metric_id": null,
        "chunk_id": null
       }
      ],
      "citations": [
       {
-       "chunk_id": "WMT-000010416926000055-0059",
-       "quote": "customer demand for certain products may fluctuate, customer behaviors may change and consumer disposable income could be negatively impacted",
+       "chunk_id": "WMT-000010416926000154-0086",
+       "quote": "No material change in the risk factors discussed in such Form 10-K has occurred.",
        "check": "ok"
       }
      ],
@@ -1421,25 +1387,13 @@
      "id": "rating_rationale-1",
      "kind": "quantitative",
      "verdict": "supported",
-     "judge_reason": "All claim elements match the scorecard metrics: weighted score 2.70, grade SB-3, not provisional, and described as a stylized scorecard grade not a credit rating.",
+     "judge_reason": "The metrics confirm SB grade SB-3, weighted score 2.70, all six factors scored (not provisional), and label it a stylized scorecard grade, not a credit rating.",
      "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "The SB weighted score is ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "2.70",
-       "metric_id": "sb_score:latest",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": ", corresponding to an SB grade of ",
+       "v": "The scorecard produces an SB grade of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1451,7 +1405,19 @@
       },
       {
        "t": "text",
-       "v": "; the grade is not provisional because all six factors were scored, and it is a stylized internal scorecard grade, not a credit rating.",
+       "v": " on a weighted score of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "2.70",
+       "metric_id": "sb_score:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": ", the grade is not provisional because all six factors were scored, and the SB grade is a stylized internal scorecard grade, not a credit rating.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -1463,13 +1429,13 @@
      "id": "rating_rationale-2",
      "kind": "quantitative",
      "verdict": "supported",
-     "judge_reason": "Metric values confirm interest coverage at 20.99x, band 1 of 6 (strongest), and its 25% weight is the largest among the six factors.",
+     "judge_reason": "All figures match the computed scorecard: interest coverage band 1, weight 25% (largest), Debt/EBITDA 1.21x band 2 weight 20%, net leverage 0.96x band 2 weight 10%, and band 1 is the strongest band.",
      "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "The strongest factor is interest coverage, at ",
+       "v": "The strongest-scoring factor is interest coverage, with EBITDA / interest of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1493,7 +1459,7 @@
       },
       {
        "t": "text",
-       "v": ", which is the strongest available band, and carrying the largest weight in the scorecard at ",
+       "v": " and carrying the largest weight of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1501,6 +1467,78 @@
        "t": "metric",
        "v": "25.0%",
        "metric_id": "weight_interest_coverage:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": ", while Debt / EBITDA of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "1.21x",
+       "metric_id": "debt_to_ebitda:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " and net leverage of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "0.96x",
+       "metric_id": "net_leverage:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " sit in bands ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "2",
+       "metric_id": "band_debt_to_ebitda:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " and ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "2",
+       "metric_id": "band_net_leverage:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " with weights of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "20.0%",
+       "metric_id": "weight_debt_to_ebitda:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " and ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "10.0%",
+       "metric_id": "weight_net_leverage:latest",
        "chunk_id": null
       },
       {
@@ -1517,139 +1555,13 @@
      "id": "rating_rationale-3",
      "kind": "quantitative",
      "verdict": "supported",
-     "judge_reason": "All values, bands, and weights match the metric evidence; band 3 of 6 is fairly described as mid-range.",
+     "judge_reason": "Liquidity coverage of 1.07x and near-term maturity cover of 1.25x both fall in band 5 with weights of 15.0% and 10.0%, matching the computed metrics and scorecard.",
      "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Leverage measures also score strongly, with Debt / EBITDA of ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "1.21x",
-       "metric_id": "debt_to_ebitda:LTM",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": " in band ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "2",
-       "metric_id": "band_debt_to_ebitda:latest",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": " at a weight of ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "20.0%",
-       "metric_id": "weight_debt_to_ebitda:latest",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": ", net leverage of ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "0.96x",
-       "metric_id": "net_leverage:LTM",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": " in band ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "2",
-       "metric_id": "band_net_leverage:latest",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": " at a weight of ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "10.0%",
-       "metric_id": "weight_net_leverage:latest",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": ", and FCF / debt of ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "23.6%",
-       "metric_id": "fcf_to_debt:LTM",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": " in a mid-range band ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "3",
-       "metric_id": "band_fcf_to_debt:latest",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": " at a weight of ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "20.0%",
-       "metric_id": "weight_fcf_to_debt:latest",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": ".",
-       "metric_id": null,
-       "chunk_id": null
-      }
-     ],
-     "citations": [],
-     "flags": []
-    },
-    {
-     "id": "rating_rationale-4",
-     "kind": "quantitative",
-     "verdict": "supported",
-     "judge_reason": "Both factors are in band 5 with the stated values and weights, and all other scored factors are in bands 1–3, so these are the weakest-scoring factors.",
-     "evidence_quote": "",
-     "checked_by": "judge",
-     "segments": [
-      {
-       "t": "text",
-       "v": "The weakest-scoring factors are liquidity coverage, at ",
+       "v": "The weakest-scoring factors are liquidity coverage of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1661,31 +1573,7 @@
       },
       {
        "t": "text",
-       "v": " in band ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "5",
-       "metric_id": "band_liquidity_coverage:latest",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": " at a weight of ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "15.0%",
-       "metric_id": "weight_liquidity_coverage:latest",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": ", and near-term maturity cover, at ",
+       "v": " and near-term maturity cover of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1697,7 +1585,19 @@
       },
       {
        "t": "text",
-       "v": " in band ",
+       "v": ", which fall in bands ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "5",
+       "metric_id": "band_liquidity_coverage:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " and ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1709,7 +1609,19 @@
       },
       {
        "t": "text",
-       "v": " at a weight of ",
+       "v": " with weights of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "15.0%",
+       "metric_id": "weight_liquidity_coverage:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " and ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1730,16 +1642,94 @@
      "flags": []
     },
     {
-     "id": "rating_rationale-5",
-     "kind": "qualitative",
-     "verdict": "partially_supported",
-     "judge_reason": "Scale and diversification across segments, geographies and expanding offerings are supported (global ecosystem, expanding offerings, distribution facilities in Africa, Canada, Central America, Chile, China, India, Mexico), but the FCF compression claim is only partly supported: fiscal 2025 FCF decreased due to a $3.2 billion capex increase, yet fiscal 2026 FCF increased despite a $2.9 billion capex increase, so current FCF compression is not evidenced.",
-     "evidence_quote": "Free cash flow for fiscal 2026 increased when compared to fiscal 2025 due to an increase in cash provided by operating income, lower cash tax payments and timing of certain payments, partially offset by an increase of $2.9 billion in capital expenditures to support our omnichannel growth strategy.",
+     "id": "rating_rationale-4",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "The metric values confirm FCF/debt of 23.6%, band 3, and weight of 20.0%.",
+     "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "The SB grade is supported by the company's scale and diversification across segments, geographies and expanding offerings, but tempered by the compression of free cash flow from elevated capital spending.",
+       "v": "Free cash flow to debt of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "23.6%",
+       "metric_id": "fcf_to_debt:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " scores in the intermediate band ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "3",
+       "metric_id": "band_fcf_to_debt:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " with a weight of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "20.0%",
+       "metric_id": "weight_fcf_to_debt:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": ".",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "rating_rationale-5",
+     "kind": "qualitative",
+     "verdict": "partially_supported",
+     "judge_reason": "The undrawn committed U.S. credit facilities are supported, but the claim that this liquidity headroom is 'beyond what the scorecard inputs capture' is contradicted by the evidence, since the near-term maturity cover metric explicitly includes cash plus undrawn revolver in its denominator.",
+     "evidence_quote": "In total, we had committed lines of credit in the U.S. of $15.0 billion at July 31, 2026, all undrawn.",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "The weak liquidity and near-term maturity bands are tempered by earlier findings that the company's committed U.S. credit facilities remain fully undrawn, providing liquidity headroom beyond what the scorecard inputs capture.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "WMT-000010416926000154-0069",
+       "quote": "In total, we had committed lines of credit in the U.S. of $15.0 billion at July 31, 2026, all undrawn.",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    },
+    {
+     "id": "rating_rationale-6",
+     "kind": "qualitative",
+     "verdict": "partially_supported",
+     "judge_reason": "The evidence supports diversification beyond core retail (membership, advertising, marketplace, fulfillment, financial services), but the leverage bands are only moderate (band 2 of 6 for debt/EBITDA and net debt/EBITDA), so 'strong leverage and coverage bands' overstates the metrics, though interest coverage (band 1) and near-term coverage (band 5) are strong.",
+     "evidence_quote": "our business continues to expand through offerings such as membership, advertising, marketplace and fulfillment services, and financial services.",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "The strong leverage and coverage bands are supported by earlier findings that the company's cash flow sources are diversifying beyond core retail, reinforcing debt-service capacity.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -1749,45 +1739,6 @@
        "chunk_id": "WMT-000010416926000055-0016",
        "quote": "our business continues to expand through offerings such as membership, advertising, marketplace and fulfillment services, and financial services",
        "check": "ok"
-      },
-      {
-       "chunk_id": "WMT-000010416926000055-0031",
-       "quote": "Outside the U.S., we utilize a total of 179 distribution facilities strategically located in Africa, Canada, Central America, Chile, China, India and Mexico",
-       "check": "ok"
-      },
-      {
-       "chunk_id": "WMT-000010416926000055-0166",
-       "quote": "partially offset by an increase of $2.9 billion in capital expenditures to support our omnichannel growth strategy",
-       "check": "ok"
-      }
-     ],
-     "flags": []
-    },
-    {
-     "id": "rating_rationale-6",
-     "kind": "qualitative",
-     "verdict": "supported",
-     "judge_reason": "The credit lines backstop the commercial paper program and are fully undrawn, and the filing explicitly states a short-term ratings downgrade could impair CP market access and raise borrowing costs; the liquidity and near-term maturity factors score in band 5 of 6 (weaker end), consistent with 'weak.'",
-     "evidence_quote": "The Company has various committed lines of credit in the U.S. to support its commercial paper program... Total $ 15,000 $ — $ 15,000",
-     "checked_by": "judge",
-     "segments": [
-      {
-       "t": "text",
-       "v": "The weak liquidity and near-term maturity bands are partly tempered by committed, undrawn U.S. credit lines that backstop the commercial paper program, though a downgrade of short-term credit ratings could impair access to commercial paper markets and raise borrowing costs.",
-       "metric_id": null,
-       "chunk_id": null
-      }
-     ],
-     "citations": [
-      {
-       "chunk_id": "WMT-000010416926000055-0256",
-       "quote": "Short-term borrowings consist of commercial paper and lines of credit.",
-       "check": "ok"
-      },
-      {
-       "chunk_id": "WMT-000010416926000102-0067",
-       "quote": "any downgrade of our current short-term credit ratings could impair our ability to access the commercial paper markets",
-       "check": "ok"
       }
      ],
      "flags": []
@@ -1796,14 +1747,13 @@
    "passages_shown": [
     "WMT-000010416926000055-0016",
     "WMT-000010416926000055-0148",
+    "WMT-000010416926000055-0023",
     "WMT-000010416926000055-0031",
-    "WMT-000010416926000055-0030",
     "WMT-000010416926000055-0029",
     "WMT-000010416926000055-0027",
-    "WMT-000010416926000055-0166",
-    "WMT-000010416926000055-0187",
-    "WMT-000010416926000102-0063",
+    "WMT-000010416926000154-0043",
     "WMT-000010416926000154-0052",
+    "WMT-000010416926000055-0166",
     "WMT-000010416926000154-0069",
     "WMT-000010416926000055-0256",
     "WMT-000010416926000102-0067",
@@ -1811,11 +1761,9 @@
     "WMT-000010416926000102-0013",
     "WMT-000010416926000055-0258",
     "WMT-000010416926000055-0257",
-    "WMT-000010416926000055-0090",
     "WMT-000010416926000055-0056",
-    "WMT-000010416926000055-0098",
     "WMT-000010416926000055-0044",
-    "WMT-000010416926000055-0059"
+    "WMT-000010416926000055-0098"
    ],
    "notes": []
   }
@@ -4132,63 +4080,6 @@
     }
    ]
   },
-  "operating_income:LTM": {
-   "metric_id": "operating_income",
-   "period": "LTM",
-   "label": "Operating income",
-   "value": 32280000000.0,
-   "unit": "USD",
-   "status": "ok",
-   "formula": "rank 1: OperatingIncomeLoss",
-   "notes": [],
-   "inputs": [
-    {
-     "label": "Operating income",
-     "concept": "operating_income",
-     "tag": "OperatingIncomeLoss",
-     "fallback_rank": 1,
-     "value": 29825000000.0,
-     "unit": "USD",
-     "period": "2025-02-01 to 2026-01-31",
-     "role": "FY0",
-     "sign": 1,
-     "form": "10-K",
-     "accession": "0000104169-26-000055",
-     "filed": "2026-03-13",
-     "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/0000104169-26-000055-index.htm"
-    },
-    {
-     "label": "Operating income",
-     "concept": "operating_income",
-     "tag": "OperatingIncomeLoss",
-     "fallback_rank": 1,
-     "value": 16876000000.0,
-     "unit": "USD",
-     "period": "2026-02-01 to 2026-07-31",
-     "role": "current year-to-date",
-     "sign": 1,
-     "form": "10-Q",
-     "accession": "0000104169-26-000154",
-     "filed": "2026-08-28",
-     "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000154/0000104169-26-000154-index.htm"
-    },
-    {
-     "label": "Operating income",
-     "concept": "operating_income",
-     "tag": "OperatingIncomeLoss",
-     "fallback_rank": 1,
-     "value": 14421000000.0,
-     "unit": "USD",
-     "period": "2025-02-01 to 2025-07-31",
-     "role": "prior-year year-to-date",
-     "sign": -1,
-     "form": "10-Q",
-     "accession": "0000104169-26-000154",
-     "filed": "2026-08-28",
-     "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000154/0000104169-26-000154-index.htm"
-    }
-   ]
-  },
   "revenue:FY-2": {
    "metric_id": "revenue",
    "period": "FY-2",
@@ -4445,6 +4336,48 @@
      "tag": "FinanceLeaseLiabilityNoncurrent",
      "fallback_rank": 1,
      "value": 5905000000.0,
+     "unit": "USD",
+     "period": "at 2026-01-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000104169-26-000154",
+     "filed": "2026-08-28",
+     "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000154/0000104169-26-000154-index.htm"
+    }
+   ]
+  },
+  "short_term_debt:FY0": {
+   "metric_id": "short_term_debt",
+   "period": "FY0",
+   "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+   "value": 10138000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 3542000000.0,
+     "unit": "USD",
+     "period": "at 2026-01-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000104169-26-000154",
+     "filed": "2026-08-28",
+     "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000154/0000104169-26-000154-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "ShortTermBorrowings",
+     "fallback_rank": 2,
+     "value": 6596000000.0,
      "unit": "USD",
      "period": "at 2026-01-31",
      "role": "balance sheet",
@@ -4751,6 +4684,17 @@
    "start": 19373,
    "end": 20362
   },
+  "WMT-000010416926000055-0023": {
+   "text": "Merchandise and Other Offerings. The merchandising strategy for Walmart International is similar to that of our operations in the U.S. in terms of the breadth and scope of merchandise offered for sale. While brand name merchandise accounts for a majority of our sales, we have both leveraged U.S. private brands and developed market specific private brands to serve our customers with high quality, low priced items. Along with the private brands we market globally, such as \"Equate,\" \"George,\" \"Great Value,\" \"Holiday Time,\" \"Mainstays,\" \"Marketside,\" \"Member's Mark\" and \"Parent's Choice,\" our international markets have developed market specific brands including \"Aurrera\" and \"Lider.\" In addition, we have developed and continue to grow our relationships with regional and local suppliers in each market to ensure reliable sources of quality merchandise that is equal to national brands at low prices. Consistent with its strategy, Walmart International continues to build mutually reinforcing businesses in areas such as advertising, marketplace and fulfillment services, financial services and healthcare.\nSam's Club U.S. Segment",
+   "section": "business",
+   "form": "10-K",
+   "filed": "2026-03-13",
+   "period_end": "2026-01-31",
+   "accession": "0000104169-26-000055",
+   "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm",
+   "start": 26826,
+   "end": 27961
+  },
   "WMT-000010416926000055-0027": {
    "text": "Competition. We compete with brick and mortar, eCommerce and omnichannel retailers operating discount, department, retail and wholesale grocery, drug, dollar, variety and specialty stores, supermarkets, supercenter-type stores, membership-only warehouse clubs, gasoline stations and social commerce platforms, as well as companies that offer services in digital advertising, fulfillment and delivery services, health and wellness and financial services. Our ability to develop and effectively operate different formats at the right locations and to deliver a customer-centric omnichannel experience largely determines our competitive position in the retail industry within the markets where we operate. Each of these landscapes is highly competitive and rapidly evolving, and new business models and the entry of new, well-funded competitors continue to intensify this competition. Some of our competitors have longer histories in these lines of business, more customers and greater brand recognition. They may be able to obtain more favorable terms from suppliers and business partners and to devote greater resources to the development of these businesses. In addition, for eCommerce and other internet-based businesses, newer or smaller businesses may be better able to innovate and compete with us.",
    "section": "business",
@@ -4772,17 +4716,6 @@
    "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm",
    "start": 34261,
    "end": 34918
-  },
-  "WMT-000010416926000055-0030": {
-   "text": "Suppliers, Supply Chain and Distribution. As a retailer and warehouse club operator, we utilize a global supply chain that includes both U.S. and international suppliers from whom we purchase the merchandise that we sell in our stores, clubs and online. In many instances, we purchase merchandise from producers located near the stores and clubs in which such merchandise will be sold, particularly perishable items. Consistent with applicable laws, we offer our suppliers the opportunity to efficiently sell significant quantities of their products to us. These relationships enable us to obtain pricing that reflects the volume, certainty and cost-effectiveness these arrangements provide to such suppliers, which in turn enables us to provide low prices to our customers. Our suppliers are subject to standards of conduct, including requirements that they comply with local labor laws, local worker safety laws and other applicable laws. Our ability to acquire from our suppliers the assortment and volume of products we wish to offer to our customers, to receive those products within the required time through our supply chain and to distribute those products to our stores and clubs, determines, along with other supply chain logistics matters (such as containers or port access for example), in part, our in-stock levels in our stores and clubs and the attractiveness of our merchandise assortment we offer to our customers and members.",
-   "section": "business",
-   "form": "10-K",
-   "filed": "2026-03-13",
-   "period_end": "2026-01-31",
-   "accession": "0000104169-26-000055",
-   "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm",
-   "start": 34919,
-   "end": 36362
   },
   "WMT-000010416926000055-0031": {
    "text": "We continue to invest in supply chain automation and our fulfillment and delivery capabilities to better serve our customers. In the U.S., we utilize a network of 192 distribution facilities located strategically throughout the country using a combination of our private truck fleet as well as contracting with common carriers. During fiscal 2026, we began combining the Sam's Club U.S. supply chain function with Walmart U.S. to streamline operations and leverage our enterprise systems and infrastructure over time. Outside the U.S., we utilize a total of 179 distribution facilities strategically located in Africa, Canada, Central America, Chile, China, India and Mexico, which process and distribute both imported and domestic products to where our customers live. For fiscal 2026, the majority of our purchases of store and club merchandise were shipped through these facilities, while most of the remaining merchandise we purchased was shipped directly from suppliers to our stores and clubs. As an omnichannel retailer, we ship merchandise purchased by customers on our eCommerce platforms by a number of methods from multiple locations, including leveraging our network of stores and clubs to fulfill and deliver customer orders, as well as shipping directly from eCommerce fulfillment centers and other distribution facilities.\n9",
@@ -4817,17 +4750,6 @@
    "start": 65609,
    "end": 66757
   },
-  "WMT-000010416926000055-0059": {
-   "text": "The emergence, severity, magnitude and duration of global or regional pandemics, epidemics or other health crises are uncertain and difficult to predict. A pandemic, epidemic or contagious disease outbreak that affects humans or the food supply, such as the avian flu impact on poultry and egg production could impact our business operations, demand for our products and services, in-stock positions, costs of doing business, access to inventory, supply chain operations, ability to predict future performance, exposure to litigation and financial performance, among other things. In the event of any global or regional health crisis, customer demand for certain products may fluctuate, customer behaviors may change and consumer disposable income could be negatively impacted, which may challenge our ability to anticipate and/or adjust inventory levels to meet that demand. These risks and their impacts are difficult to predict and could otherwise disrupt and adversely affect our operations and our financial performance.",
-   "section": "risk_factors",
-   "form": "10-K",
-   "filed": "2026-03-13",
-   "period_end": "2026-01-31",
-   "accession": "0000104169-26-000055",
-   "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm",
-   "start": 68654,
-   "end": 69679
-  },
   "WMT-000010416926000055-0090": {
    "text": "drugs customers purchase at our pharmacies between brands and generics); changes in the health insurance market generally; increased governmental focus on reducing drug prices including most favored nation pricing policies, maximum fair price negotiations, and direct-to-consumer pharmacy delivery models; changes in the scope of or the elimination of Medicare Part D or Medicaid drug programs; increased competition from other retail pharmacy operations including competitors offering online retail pharmacy options and/or home delivery options; further consolidation and strategic alliances among third-party payers, PBMs or purchasers of drugs; overall economic conditions and the ability of our pharmacy customers to pay for drugs prescribed for them to the extent the costs are not reimbursed by a third-party; failure to meet any performance or incentive thresholds to which our level of third-party reimbursement may be subject; changes in laws or regulations or the practices of third-party payers and PBMs related to the use of third-party financial assistance to assist our pharmacy customers with paying for drugs prescribed for them; and any additional changes in the state or federal regulatory environment for the retail pharmacy industry and the pharmaceutical industry, including as a result of health reform efforts and other changes to or novel interpretations of existing state or federal laws, rules and regulations that affect our retail pharmacy business.\n20",
    "section": "risk_factors",
@@ -4860,6 +4782,17 @@
    "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm",
    "start": 165167,
    "end": 166222
+  },
+  "WMT-000010416926000055-0152": {
+   "text": "For a detailed discussion on results of operations by reportable segment, refer to \"Results of Operations\" below.\nCompany Performance Metrics\nWe are committed to helping customers save money and live better through everyday low prices, supported by everyday low costs. At times, we adjust our business strategies to maintain and strengthen our competitive positions in the countries in which we operate. We define our financial priorities as follows:\n•Growth - serve customers through a seamless omnichannel experience;\n•Margin - improve our operating income margin through productivity initiatives as well as category and business mix; and\n•Returns - improve our Return on Investment through margin improvement and disciplined capital spend.\n33\nGrowth\nOur objective of prioritizing growth means we will focus on serving customers and members however they want to shop through our omnichannel business model. This includes increasing comparable store and club sales through increasing membership at Sam's Club U.S. and through Walmart+, accelerating eCommerce sales growth and expansion of omnichannel initiatives that complement our strategy.",
+   "section": "mdna",
+   "form": "10-K",
+   "filed": "2026-03-13",
+   "period_end": "2026-01-31",
+   "accession": "0000104169-26-000055",
+   "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm",
+   "start": 169654,
+   "end": 170797
   },
   "WMT-000010416926000055-0166": {
    "text": "The increase in net cash provided by operating activities in fiscal 2026 is primarily due to an increase in cash provided by operating income, lower cash tax payments and the timing of certain payments. Free cash flow for fiscal 2026 increased when compared to fiscal 2025 due to an increase in cash provided by operating income, lower cash tax payments and timing of certain payments, partially offset by an increase of $2.9 billion in capital expenditures to support our omnichannel growth strategy. Net cash provided by operating activities for fiscal 2025 increased when compared to fiscal 2024 primarily due to an increase in cash provided by operating income and lapping the payment of accrued opioid legal charges in the prior year, partially offset by increased inventory purchases. Free cash flow for fiscal 2025 decreased when compared to fiscal 2024 due to an increase of $3.2 billion in capital expenditures to support our omnichannel growth strategy, partially offset by the increase in net cash provided by operating activities described above.\n37\nResults of Operations\nConsolidated Results of Operations\nFiscal Years Ended January 31,\n(Dollar amounts and retail square feet in millions) 2026 2025 2024\nNet sales $ 706,413 $ 674,538 $ 642,637\nPercentage change from comparable period 4.7 % 5.0 % 6.1 %\nMembership and other income(1)\n6,750 6,447 5,488\nTotal revenues\n713,163 680,985 648,125\nPercentage change from comparable period 4.7 % 5.1 % 6.0 %\nGross profit(2)",
@@ -4960,6 +4893,17 @@
    "start": 82991,
    "end": 84375
   },
+  "WMT-000010416926000154-0043": {
+   "text": "The Company engaged in the process established by the U.S. Customs and Border Protection (\"CBP\") for refunds of tariffs that the Company paid as the importer of record under the International Emergency Economic Powers Act. During the quarter ended July 31, 2026, the Company received approximately $2.9 billion in tariff refunds pursuant to the CBP process, which were recorded as a reduction to cost of sales and represent substantially all of the refunds requested by the Company. A significant portion of these refunds was invested into customer-focused initiatives during the current quarter, primarily through price investment and other cost mitigation strategies, with continued prioritization of price investment expected through fiscal 2027.\nFor a detailed discussion on results of operations by reportable segment, refer to \"Results of Operations\" below.\nCompany Performance Metrics\nWe are committed to helping customers save money and live better through everyday low prices, supported by everyday low costs. At times, we adjust our business strategies to maintain and strengthen our competitive positions in the countries in which we operate. We define our financial priorities as follows:\n•Growth - serve customers through a seamless omnichannel experience;\n•Margin - improve our operating income margin through productivity initiatives as well as category and business mix; and\n•Returns - improve our Return on Investment through margin improvement and disciplined capital spend.\nGrowth",
+   "section": "mdna",
+   "form": "10-Q",
+   "filed": "2026-08-28",
+   "period_end": "2026-07-31",
+   "accession": "0000104169-26-000154",
+   "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000154/wmt-20260731.htm",
+   "start": 52809,
+   "end": 54308
+  },
   "WMT-000010416926000154-0052": {
    "text": "Our strategy includes allocating the majority of our capital to higher-return areas focused on automation such as eCommerce, supply chain and store and club investments. The following table provides additional detail regarding our capital expenditures:\n(Amounts in millions) Six Months Ended July 31,\nAllocation of Capital Expenditures 2026 2025\nSupply chain, customer-facing initiatives, technology and other\n$ 7,659 $ 6,688\nStore and club remodels 3,623 2,917\nNew stores and clubs, including expansions and relocations 1,087 577\nTotal U.S. $ 12,369 $ 10,182\nWalmart International 1,812 1,227\nTotal Capital Expenditures $ 14,181 $ 11,409\nFree Cash Flow\nFree cash flow is considered a non-GAAP financial measure. Management believes, however, that free cash flow, which measures our ability to generate additional cash from our business operations, is an important financial measure for use in evaluating the Company's financial performance. Free cash flow should be considered in addition to, rather than as a substitute for, consolidated net income as a measure of our performance and net cash provided by operating activities as a measure of our liquidity. See Liquidity and Capital Resources for discussions of GAAP metrics including net cash provided by operating activities, net cash used in investing activities and net cash provided by financing activities.",
    "section": "mdna",
@@ -4981,6 +4925,17 @@
    "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000154/wmt-20260731.htm",
    "start": 86699,
    "end": 88164
+  },
+  "WMT-000010416926000154-0086": {
+   "text": "Item 1A. Risk Factors\nIn addition to the other information set forth in this report, you should carefully consider the risk factors disclosed in Part I, Item 1A, under the caption \"Risk Factors,\" of our Annual Report on Form 10-K for the fiscal year ended January 31, 2026, which risks could materially and adversely affect our business, results of operations, financial condition and liquidity. No material change in the risk factors discussed in such Form 10-K has occurred. Such risk factors do not identify all risks that we\n29\nTable of Contents\nface because our business operations could also be affected by additional factors that are not presently known to us or that we currently consider to be immaterial to our operations. Our business operations could also be affected by additional factors that apply to all companies operating in the U.S. and globally.",
+   "section": "risk_factors",
+   "form": "10-Q",
+   "filed": "2026-08-28",
+   "period_end": "2026-07-31",
+   "accession": "0000104169-26-000154",
+   "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000154/wmt-20260731.htm",
+   "start": 105306,
+   "end": 106171
   }
  },
  "trends": [
@@ -5284,30 +5239,51 @@
    "ref": "total_debt"
   },
   {
-   "id": "partially_supported_claim:liquidity-6",
+   "id": "partially_supported_claim:financial_risk-4",
    "category": "partially_supported_claim",
    "severity": "warning",
-   "message": "Liquidity: partially supported (Increased investing cash usage and increased property/equipment payments are supported, but the claim's assertion about capital expenditure absorbing operating cash flow is not addressed by the evidence.): “Cash usage from investing rose during the first half of the current fiscal year, primarily due to increased payments for property and equipment, consistent with elevated capital expenditure that absorbs operating cash flow.”",
-   "ref": "liquidity-6"
+   "message": "Financial risk: partially supported (The total debt values ($51.5B at FYE Jan 31, 2026 and $57.2B LTM) match the metric scorecard, and evidence supports some increase from new long-term debt issuance, but the evidence only documents a $2.6 billion increase in long-term debt during the three months ended April 30, 2026, which cannot account for the full $5.7 billion total debt increase, so the 'driven primarily by' attribution goes beyond the evidence.): “Total debt increased from $51.5 billion at the fiscal year ended 31 January 2026 to $57.2 billion in the LTM period, driven primarily by new long-term debt issuance.”",
+   "ref": "financial_risk-4"
   },
   {
-   "id": "partially_supported_claim:maturity_wall-6",
+   "id": "partially_supported_claim:financial_risk-5",
    "category": "partially_supported_claim",
    "severity": "warning",
-   "message": "Maturity wall: partially supported (The $2.2 billion increase and primary driver of issuances are directly stated, but the 'refinancing rather than reducing' characterization goes beyond the evidence—issuances ($3,983M) exceeded repayments ($2,625M), indicating net new borrowing rather than pure refinancing.): “Total outstanding long-term debt increased $2.2 billion during the fiscal year ended 31 January 2026, primarily due to issuances of long-term debt, indicating the Company has been refinancing rather than reducing its debt stack.”",
-   "ref": "maturity_wall-6"
+   "message": "Financial risk: partially supported (The filing supports management's stated focus on improving ROI through margin improvement and disciplined capital spend, but the evidence contains no information about debt levels or leverage being modest.): “Despite higher debt, the modest leverage levels reflect management's stated focus on improving Return on Investment through margin improvement and disciplined capital spend.”",
+   "ref": "financial_risk-5"
+  },
+  {
+   "id": "partially_supported_claim:key_risks-3",
+   "category": "partially_supported_claim",
+   "severity": "warning",
+   "message": "Key risks: partially supported (The passage supports the reimbursement and drug-pricing risks (MFN pricing, maximum fair price negotiations, changes to/elimination of Medicare Part D or Medicaid), but the claim's characterization of pharmacy as 'a significant earnings stream supporting debt repayment' is not addressed in the evidence.): “The pharmacy business faces reimbursement and drug-pricing risks, including increased governmental focus on reducing drug prices, most favored nation pricing policies, maximum fair price negotiations, and potential changes to or elimination of Medicare Part D or Medicaid drug programs, any of which could pressure a significant earnings stream supporting debt repayment.”",
+   "ref": "key_risks-3"
+  },
+  {
+   "id": "partially_supported_claim:key_risks-5",
+   "category": "partially_supported_claim",
+   "severity": "warning",
+   "message": "Key risks: partially supported (The evidence confirms no material change from the fiscal 2026 Form 10-K risk factors, but it does not state a period of 'twelve months to 31 July 2026'; the no-material-change statement applies to this report without specifying a 12-month coverage window, so the claim overstates the evidence.): “The company reported no material change in its risk factors through the twelve months to 31 July 2026, indicating the risk profile disclosed in the fiscal 2026 Form 10-K remained unchanged over the most recent period.”",
+   "ref": "key_risks-5"
   },
   {
    "id": "partially_supported_claim:rating_rationale-5",
    "category": "partially_supported_claim",
    "severity": "warning",
-   "message": "Rating rationale: partially supported (Scale and diversification across segments, geographies and expanding offerings are supported (global ecosystem, expanding offerings, distribution facilities in Africa, Canada, Central America, Chile, China, India, Mexico), but the FCF compression claim is only partly supported: fiscal 2025 FCF decreased due to a $3.2 billion capex increase, yet fiscal 2026 FCF increased despite a $2.9 billion capex increase, so current FCF compression is not evidenced.): “The SB grade is supported by the company's scale and diversification across segments, geographies and expanding offerings, but tempered by the compression of free cash flow from elevated capital spending.”",
+   "message": "Rating rationale: partially supported (The undrawn committed U.S. credit facilities are supported, but the claim that this liquidity headroom is 'beyond what the scorecard inputs capture' is contradicted by the evidence, since the near-term maturity cover metric explicitly includes cash plus undrawn revolver in its denominator.): “The weak liquidity and near-term maturity bands are tempered by earlier findings that the company's committed U.S. credit facilities remain fully undrawn, providing liquidity headroom beyond what the scorecard inputs capture.”",
    "ref": "rating_rationale-5"
+  },
+  {
+   "id": "partially_supported_claim:rating_rationale-6",
+   "category": "partially_supported_claim",
+   "severity": "warning",
+   "message": "Rating rationale: partially supported (The evidence supports diversification beyond core retail (membership, advertising, marketplace, fulfillment, financial services), but the leverage bands are only moderate (band 2 of 6 for debt/EBITDA and net debt/EBITDA), so 'strong leverage and coverage bands' overstates the metrics, though interest coverage (band 1) and near-term coverage (band 5) are strong.): “The strong leverage and coverage bands are supported by earlier findings that the company's cash flow sources are diversifying beyond core retail, reinforcing debt-service capacity.”",
+   "ref": "rating_rationale-6"
   }
  ],
  "run": {
-  "run_id": "WMT-20261118T041953Z-GLM-5.3",
-  "started_at": "2026-11-18T04:19:53Z",
+  "run_id": "WMT-20261118T050006Z-GLM-5.3",
+  "started_at": "2026-11-18T05:00:06Z",
   "writer_model": "zai-org/GLM-5.3",
   "judge_model": "zai-org/GLM-5.3",
   "service_tier": "asap",
@@ -5317,22 +5293,22 @@
   },
   "prices_read_on": "2026-11-17",
   "drafting": {
-   "calls": 9,
-   "input_tokens": 38320,
-   "cached_input_tokens": 29170,
-   "output_tokens": 24156,
-   "cost_usd": 0.088618,
-   "seconds": 161.25
+   "calls": 7,
+   "input_tokens": 29628,
+   "cached_input_tokens": 21618,
+   "output_tokens": 16604,
+   "cost_usd": 0.062881,
+   "seconds": 146.84
   },
   "verification": {
    "calls": 34,
-   "input_tokens": 19653,
-   "cached_input_tokens": 4224,
-   "output_tokens": 3573,
-   "cost_usd": 0.026886,
-   "seconds": 69.3
+   "input_tokens": 18517,
+   "cached_input_tokens": 3968,
+   "output_tokens": 3799,
+   "cost_usd": 0.026673,
+   "seconds": 68.05
   },
-  "raw_outputs": "WMT/WMT-20261118T041953Z-GLM-5.3.jsonl"
+  "raw_outputs": "WMT/WMT-20261118T050006Z-GLM-5.3.jsonl"
  },
  "disclaimer": "Educational project. Not investment advice. SB grades are a student's stylized scorecard, not credit ratings."
 }

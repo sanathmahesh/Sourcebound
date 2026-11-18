@@ -88,3 +88,15 @@ Seeded from PLAN.md section 4.15; later items were added while building, with th
 - Model outputs vary between runs and cannot be pinned (no seed); phase 5 measures the spread.
 - GLM-5.3 and DeepSeek-V4-Pro invent values when tools and a response schema share a request (probe); the
   design avoids that pattern.
+
+## Added in phase 6
+
+- Liquidity and near-term-maturity flags are noisy: 14 of 15 companies do not tag undrawn revolver capacity,
+  which counts as zero, so most companies carry one of these flags (e.g. Walmart, with $15bn of undrawn lines
+  in its 10-Q text).
+- Vercel Hobby deploys only commits authored by the account owner (Vercel docs, last updated March and
+  October 2026), so the watchlist's bot commits rely on a deploy hook; not verified until a repository and
+  Vercel project exist.
+- ExxonMobil is refreshed on every run (its newest 10-Q's facts sit under its new registrant); this costs one
+  extra EDGAR request a day and changes no file.
+- The scheduled run is off until the author approves it (phase 10).

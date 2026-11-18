@@ -205,3 +205,19 @@ def test_get_text_caches_html_and_decodes(tmp_path):
 def test_get_text_falls_back_to_latin1(tmp_path):
     client = make_client(tmp_path, lambda r: httpx.Response(200, content="na\xefve".encode("latin-1")), FakeClock())
     assert client.get_text(DOC_URL) == "naïve"
+
+
+def test_refresh_downloads_again_and_replaces_the_cache(tmp_path):
+    calls = []
+    replies = [{"v": 1}, {"v": 2}]
+
+    def handler(request):
+        calls.append(request)
+        return httpx.Response(200, json=replies.pop(0))
+
+    client = make_client(tmp_path, handler, FakeClock())
+    assert client.get_json(URL) == {"v": 1}
+    assert client.get_json(URL) == {"v": 1}  # cached
+    assert client.get_json(URL, refresh=True) == {"v": 2}
+    assert client.get_json(URL) == {"v": 2}  # the refreshed copy is now the cache
+    assert len(calls) == 2

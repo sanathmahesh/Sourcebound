@@ -2,7 +2,7 @@
 
 **Educational project. Not investment advice. SB grades are a student's stylized scorecard, not credit ratings.**
 
-Generated 2026-11-18 03:38 UTC. Grid grid-v1 (config/grid.yaml):
+Generated 2026-11-18 07:56 UTC. Grid grid-v1 (config/grid.yaml):
 each cell shows the ratio and, in brackets, its band from 1 (strongest) to 6 (weakest). Basis: LTM ratios,
 with near-term maturity cover from the latest 10-K (FY0). A tie on a threshold takes the worse band.
 Provisional = a factor could not be scored and the other weights were renormalised.

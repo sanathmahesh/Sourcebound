@@ -113,3 +113,14 @@ were added while building, with the phase that added them.
     would include waiting for other memos).
 55. A golden fact question counts for retrieval recall only when the author has copied a quote from the
     passage; the question's own wording is the search query.
+
+## Added in phase 6
+
+56. A memo becomes stale when the daily job detects a new 10-K or 10-Q for its company, and current again only
+    when the author regenerates it locally (and reviews it).
+57. Flags compare LTM with FY0; the near-term maturity flag uses balance-sheet short-term debt over cash,
+    short-term investments and undrawn revolver at the LTM date.
+58. Published files are rewritten only when their content changes; generated_at, data_fetched_at and
+    checked_at are ignored in that comparison. A weekly heartbeat updates the last-checked date.
+59. Until the author chooses the writer and judge, the published memos are the GLM-5.3 run-1 evaluation memos
+    (writer and judge GLM-5.3), copied without new model calls.

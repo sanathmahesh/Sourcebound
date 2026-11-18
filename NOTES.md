@@ -692,6 +692,40 @@ between cost and accuracy with real measurements rather than assumptions.
 
 ---
 
+## 22. The watchlist and the publishing pipeline (sourcebound/watchlist/, pipeline/build_all.py)
+
+### Concepts
+- **Portfolio surveillance**: a bank keeps watching borrowers after lending, looking for deterioration
+  (rising leverage, falling coverage, tightening liquidity, maturities bunching up) so it can act early.
+- **Flags** here compare the latest twelve months with the last fiscal year-end: leverage up 0.5x or a
+  worse band, coverage down 20% or a worse band, liquidity coverage under 1.2 (under 1.0 is an alert), debt
+  due within a year above half of liquid resources (above all of them is an alert), a worse SB grade.
+- **Stale memo**: a memo is a dated snapshot. When a new 10-K or 10-Q arrives, the numbers refresh
+  automatically but the memo is marked stale until I regenerate and review it. Nothing written by a model
+  is published without human review.
+- **Idempotent job**: running it twice with nothing new changes nothing. Files are rewritten only when a
+  number changes (timestamps are ignored), so the daily job commits only on real news, plus a weekly
+  "heartbeat" so the site shows when it last checked.
+- **Deploy hook**: a secret URL that tells Vercel to deploy. Needed because Vercel's free plan deploys only
+  commits authored by the account owner, not by a bot.
+
+### Why it is built this way
+- The job makes no model call and holds no model key (a test checks the module never imports the model
+  client): the Sail key stays on my laptop and in Vercel only, matching the project's own control story.
+- A company whose figures lag its newest filing is retried every day until they catch up; a test and a live
+  simulation (reports/watchlist-simulation.md) prove a quiet day changes no file.
+
+**Q: Why not regenerate the memo automatically when a filing arrives?**
+A: Because then unreviewed model output would be published. The numbers update automatically because they
+are deterministic and tested; prose waits for a human, and the site says the memo is stale.
+
+**Q: Why are so many companies flagged for liquidity?**
+A: Mostly because companies rarely tag their undrawn credit lines in XBRL, so the engine counts them as zero
+(Walmart has $15bn of undrawn lines in its text). The flag is honest about the data it has; the fix is a
+reviewed override with the figure quoted from the filing, which is a proposal, not something done silently.
+
+---
+
 ## Still to write
 
 - US supervisory guidance on model risk (SR 11-7, its 2026 replacement SR 26-2 / OCC 2026-13 / FDIC

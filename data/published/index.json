@@ -1,0 +1,1153 @@
+{
+ "schema_version": "1",
+ "generated_at": "2026-11-18T07:56:41Z",
+ "companies": [
+  {
+   "ticker": "WMT",
+   "name": "Walmart Inc.",
+   "sector": "Retail",
+   "grade": "SB-3",
+   "score": 2.7,
+   "provisional": false,
+   "ig_like": true,
+   "headline": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "period": "LTM",
+     "value": 1.208346526502438,
+     "unit": "x",
+     "status": "ok",
+     "display": "1.21x"
+    },
+    {
+     "metric_id": "net_leverage",
+     "label": "Net leverage",
+     "period": "LTM",
+     "value": 0.9649800519283136,
+     "unit": "x",
+     "status": "ok",
+     "display": "0.96x"
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "period": "LTM",
+     "value": 20.989366415595924,
+     "unit": "x",
+     "status": "ok",
+     "display": "20.99x"
+    },
+    {
+     "metric_id": "fcf_to_debt",
+     "label": "FCF / debt",
+     "period": "LTM",
+     "value": 23.59939206540538,
+     "unit": "%",
+     "status": "ok",
+     "display": "23.6%"
+    },
+    {
+     "metric_id": "liquidity_coverage",
+     "label": "Liquidity coverage",
+     "period": "LTM",
+     "value": 1.0664316490403447,
+     "unit": "x",
+     "status": "ok",
+     "display": "1.07x"
+    }
+   ],
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0000104169-26-000154",
+    "period_end": "2026-07-31",
+    "filed": "2026-08-28"
+   },
+   "data_to": "2026-07-31",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "memo_model": "zai-org/GLM-5.3",
+   "verification": {
+    "claims": 34,
+    "supported": 28,
+    "partially_supported": 6,
+    "unsupported": 0
+   },
+   "open_flags": 3,
+   "flag_types": [
+    "liquidity_shortfall",
+    "near_term_maturities",
+    "grade_change"
+   ]
+  },
+  {
+   "ticker": "VZ",
+   "name": "VERIZON COMMUNICATIONS INC",
+   "sector": "Telecom",
+   "grade": "SB-4",
+   "score": 3.9000000000000004,
+   "provisional": false,
+   "ig_like": false,
+   "headline": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "period": "LTM",
+     "value": 3.421206445903394,
+     "unit": "x",
+     "status": "ok",
+     "display": "3.42x"
+    },
+    {
+     "metric_id": "net_leverage",
+     "label": "Net leverage",
+     "period": "LTM",
+     "value": 3.3286957953446255,
+     "unit": "x",
+     "status": "ok",
+     "display": "3.33x"
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "period": "LTM",
+     "value": 6.3648152999738015,
+     "unit": "x",
+     "status": "ok",
+     "display": "6.36x"
+    },
+    {
+     "metric_id": "fcf_to_debt",
+     "label": "FCF / debt",
+     "period": "LTM",
+     "value": 13.460624545066263,
+     "unit": "%",
+     "status": "ok",
+     "display": "13.5%"
+    },
+    {
+     "metric_id": "liquidity_coverage",
+     "label": "Liquidity coverage",
+     "period": "LTM",
+     "value": 1.0627402972512863,
+     "unit": "x",
+     "status": "ok",
+     "display": "1.06x"
+    }
+   ],
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0000732712-26-000052",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-29"
+   },
+   "data_to": "2026-09-30",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "memo_model": "zai-org/GLM-5.3",
+   "verification": {
+    "claims": 35,
+    "supported": 33,
+    "partially_supported": 2,
+    "unsupported": 0
+   },
+   "open_flags": 2,
+   "flag_types": [
+    "liquidity_shortfall",
+    "near_term_maturities"
+   ]
+  },
+  {
+   "ticker": "GT",
+   "name": "GOODYEAR TIRE & RUBBER CO /OH/",
+   "sector": "Autos",
+   "grade": "SB-6",
+   "score": 5.550000000000001,
+   "provisional": false,
+   "ig_like": false,
+   "headline": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "period": "LTM",
+     "value": 7.443434343434343,
+     "unit": "x",
+     "status": "ok",
+     "display": "7.44x"
+    },
+    {
+     "metric_id": "net_leverage",
+     "label": "Net leverage",
+     "period": "LTM",
+     "value": 6.623232323232323,
+     "unit": "x",
+     "status": "ok",
+     "display": "6.62x"
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "period": "LTM",
+     "value": 2.3855421686746987,
+     "unit": "x",
+     "status": "ok",
+     "display": "2.39x"
+    },
+    {
+     "metric_id": "fcf_to_debt",
+     "label": "FCF / debt",
+     "period": "LTM",
+     "value": 1.2213326095806758,
+     "unit": "%",
+     "status": "ok",
+     "display": "1.2%"
+    },
+    {
+     "metric_id": "liquidity_coverage",
+     "label": "Liquidity coverage",
+     "period": "LTM",
+     "value": 0.7811717576364546,
+     "unit": "x",
+     "status": "ok",
+     "display": "0.78x"
+    }
+   ],
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0001628280-26-070703",
+    "period_end": "2026-09-30",
+    "filed": "2026-11-05"
+   },
+   "data_to": "2026-09-30",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "memo_model": "zai-org/GLM-5.3",
+   "verification": {
+    "claims": 35,
+    "supported": 28,
+    "partially_supported": 6,
+    "unsupported": 1
+   },
+   "open_flags": 5,
+   "flag_types": [
+    "leverage_up",
+    "coverage_down",
+    "liquidity_shortfall",
+    "near_term_maturities",
+    "grade_change"
+   ]
+  },
+  {
+   "ticker": "HCA",
+   "name": "HCA Healthcare, Inc.",
+   "sector": "Healthcare",
+   "grade": "SB-4",
+   "score": 4.25,
+   "provisional": false,
+   "ig_like": false,
+   "headline": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "period": "LTM",
+     "value": 3.1708741522230595,
+     "unit": "x",
+     "status": "ok",
+     "display": "3.17x"
+    },
+    {
+     "metric_id": "net_leverage",
+     "label": "Net leverage",
+     "period": "LTM",
+     "value": 3.113853303190153,
+     "unit": "x",
+     "status": "ok",
+     "display": "3.11x"
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "period": "LTM",
+     "value": 6.741744284504657,
+     "unit": "x",
+     "status": "ok",
+     "display": "6.74x"
+    },
+    {
+     "metric_id": "fcf_to_debt",
+     "label": "FCF / debt",
+     "period": "LTM",
+     "value": 11.829362485889133,
+     "unit": "%",
+     "status": "ok",
+     "display": "11.8%"
+    },
+    {
+     "metric_id": "liquidity_coverage",
+     "label": "Liquidity coverage",
+     "period": "LTM",
+     "value": 0.8644953471725125,
+     "unit": "x",
+     "status": "ok",
+     "display": "0.86x"
+    }
+   ],
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0001193125-26-437871",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-29"
+   },
+   "data_to": "2026-09-30",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "memo_model": "zai-org/GLM-5.3",
+   "verification": {
+    "claims": 35,
+    "supported": 29,
+    "partially_supported": 6,
+    "unsupported": 0
+   },
+   "open_flags": 2,
+   "flag_types": [
+    "liquidity_shortfall",
+    "near_term_maturities"
+   ]
+  },
+  {
+   "ticker": "CCL",
+   "name": "Carnival Corp Ltd.",
+   "sector": "Leisure",
+   "grade": "SB-4",
+   "score": 3.95,
+   "provisional": false,
+   "ig_like": false,
+   "headline": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "period": "LTM",
+     "value": 3.270688004376966,
+     "unit": "x",
+     "status": "ok",
+     "display": "3.27x"
+    },
+    {
+     "metric_id": "net_leverage",
+     "label": "Net leverage",
+     "period": "LTM",
+     "value": 3.103816167418958,
+     "unit": "x",
+     "status": "ok",
+     "display": "3.10x"
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "period": "LTM",
+     "value": 6.211554800339847,
+     "unit": "x",
+     "status": "ok",
+     "display": "6.21x"
+    },
+    {
+     "metric_id": "fcf_to_debt",
+     "label": "FCF / debt",
+     "period": "LTM",
+     "value": 13.282034125125461,
+     "unit": "%",
+     "status": "ok",
+     "display": "13.3%"
+    },
+    {
+     "metric_id": "liquidity_coverage",
+     "label": "Liquidity coverage",
+     "period": "LTM",
+     "value": 1.4154198204541455,
+     "unit": "x",
+     "status": "ok",
+     "display": "1.42x"
+    }
+   ],
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0000815097-26-000107",
+    "period_end": "2026-08-31",
+    "filed": "2026-09-29"
+   },
+   "data_to": "2026-08-31",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "memo_model": "zai-org/GLM-5.3",
+   "verification": {
+    "claims": 36,
+    "supported": 28,
+    "partially_supported": 8,
+    "unsupported": 0
+   },
+   "open_flags": 1,
+   "flag_types": [
+    "near_term_maturities"
+   ]
+  },
+  {
+   "ticker": "MSFT",
+   "name": "MICROSOFT CORP",
+   "sector": "Technology",
+   "grade": "SB-1",
+   "score": 1.3,
+   "provisional": false,
+   "ig_like": true,
+   "headline": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "period": "LTM",
+     "value": 0.5175433052491358,
+     "unit": "x",
+     "status": "ok",
+     "display": "0.52x"
+    },
+    {
+     "metric_id": "net_leverage",
+     "label": "Net leverage",
+     "period": "LTM",
+     "value": 0.20392238843702448,
+     "unit": "x",
+     "status": "ok",
+     "display": "0.20x"
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "period": "LTM",
+     "value": 63.819733167856036,
+     "unit": "x",
+     "status": "ok",
+     "display": "63.82x"
+    },
+    {
+     "metric_id": "fcf_to_debt",
+     "label": "FCF / debt",
+     "period": "LTM",
+     "value": 56.321979446521496,
+     "unit": "%",
+     "status": "ok",
+     "display": "56.3%"
+    },
+    {
+     "metric_id": "liquidity_coverage",
+     "label": "Liquidity coverage",
+     "period": "LTM",
+     "value": 1.5559891242642445,
+     "unit": "x",
+     "status": "ok",
+     "display": "1.56x"
+    }
+   ],
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0001193125-26-436133",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-28"
+   },
+   "data_to": "2026-09-30",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "memo_model": "zai-org/GLM-5.3",
+   "verification": {
+    "claims": 36,
+    "supported": 31,
+    "partially_supported": 5,
+    "unsupported": 0
+   },
+   "open_flags": 0,
+   "flag_types": []
+  },
+  {
+   "ticker": "PG",
+   "name": "PROCTER & GAMBLE Co",
+   "sector": "Consumer",
+   "grade": "SB-2",
+   "score": 2.5,
+   "provisional": false,
+   "ig_like": true,
+   "headline": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "period": "LTM",
+     "value": 1.6895997916485805,
+     "unit": "x",
+     "status": "ok",
+     "display": "1.69x"
+    },
+    {
+     "metric_id": "net_leverage",
+     "label": "Net leverage",
+     "period": "LTM",
+     "value": 1.0226582168591023,
+     "unit": "x",
+     "status": "ok",
+     "display": "1.02x"
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "period": "LTM",
+     "value": 25.512735326688816,
+     "unit": "x",
+     "status": "ok",
+     "display": "25.51x"
+    },
+    {
+     "metric_id": "fcf_to_debt",
+     "label": "FCF / debt",
+     "period": "LTM",
+     "value": 39.40912010276172,
+     "unit": "%",
+     "status": "ok",
+     "display": "39.4%"
+    },
+    {
+     "metric_id": "liquidity_coverage",
+     "label": "Liquidity coverage",
+     "period": "LTM",
+     "value": 1.1063376085797612,
+     "unit": "x",
+     "status": "ok",
+     "display": "1.11x"
+    }
+   ],
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0000080424-26-000256",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-22"
+   },
+   "data_to": "2026-09-30",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "memo_model": "zai-org/GLM-5.3",
+   "verification": {
+    "claims": 34,
+    "supported": 29,
+    "partially_supported": 5,
+    "unsupported": 0
+   },
+   "open_flags": 2,
+   "flag_types": [
+    "liquidity_shortfall",
+    "near_term_maturities"
+   ]
+  },
+  {
+   "ticker": "XOM",
+   "name": "EXXON MOBIL CORP",
+   "sector": "Energy",
+   "grade": "SB-2",
+   "score": 2.45,
+   "provisional": false,
+   "ig_like": true,
+   "headline": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "period": "LTM",
+     "value": 0.7401925764870322,
+     "unit": "x",
+     "status": "ok",
+     "display": "0.74x"
+    },
+    {
+     "metric_id": "net_leverage",
+     "label": "Net leverage",
+     "period": "LTM",
+     "value": 0.6091939742195993,
+     "unit": "x",
+     "status": "ok",
+     "display": "0.61x"
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "period": "LTM",
+     "value": 92.91486291486291,
+     "unit": "x",
+     "status": "ok",
+     "display": "92.91x"
+    },
+    {
+     "metric_id": "fcf_to_debt",
+     "label": "FCF / debt",
+     "period": "LTM",
+     "value": 39.42846352363568,
+     "unit": "%",
+     "status": "ok",
+     "display": "39.4%"
+    },
+    {
+     "metric_id": "liquidity_coverage",
+     "label": "Liquidity coverage",
+     "period": "LTM",
+     "value": 0.9252937008782192,
+     "unit": "x",
+     "status": "ok",
+     "display": "0.93x"
+    }
+   ],
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0000034088-26-000093",
+    "period_end": "2026-06-30",
+    "filed": "2026-08-03"
+   },
+   "data_to": "2026-03-31",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "memo_model": "zai-org/GLM-5.3",
+   "verification": {
+    "claims": 35,
+    "supported": 31,
+    "partially_supported": 4,
+    "unsupported": 0
+   },
+   "open_flags": 2,
+   "flag_types": [
+    "liquidity_shortfall",
+    "near_term_maturities"
+   ]
+  },
+  {
+   "ticker": "UNP",
+   "name": "UNION PACIFIC CORP",
+   "sector": "Transport",
+   "grade": "SB-3",
+   "score": 3.0500000000000003,
+   "provisional": false,
+   "ig_like": true,
+   "headline": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "period": "LTM",
+     "value": 2.31427917270854,
+     "unit": "x",
+     "status": "ok",
+     "display": "2.31x"
+    },
+    {
+     "metric_id": "net_leverage",
+     "label": "Net leverage",
+     "period": "LTM",
+     "value": 2.1455391894985882,
+     "unit": "x",
+     "status": "ok",
+     "display": "2.15x"
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "period": "LTM",
+     "value": 10.317322834645669,
+     "unit": "x",
+     "status": "ok",
+     "display": "10.32x"
+    },
+    {
+     "metric_id": "fcf_to_debt",
+     "label": "FCF / debt",
+     "period": "LTM",
+     "value": 22.07492415248648,
+     "unit": "%",
+     "status": "ok",
+     "display": "22.1%"
+    },
+    {
+     "metric_id": "liquidity_coverage",
+     "label": "Liquidity coverage",
+     "period": "LTM",
+     "value": 1.5121082621082622,
+     "unit": "x",
+     "status": "ok",
+     "display": "1.51x"
+    }
+   ],
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0000100885-26-000321",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-22"
+   },
+   "data_to": "2026-09-30",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "memo_model": "zai-org/GLM-5.3",
+   "verification": {
+    "claims": 35,
+    "supported": 32,
+    "partially_supported": 3,
+    "unsupported": 0
+   },
+   "open_flags": 1,
+   "flag_types": [
+    "near_term_maturities"
+   ]
+  },
+  {
+   "ticker": "ORCL",
+   "name": "ORACLE CORP",
+   "sector": "Technology",
+   "grade": "SB-4",
+   "score": 4.3500000000000005,
+   "provisional": false,
+   "ig_like": false,
+   "headline": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "period": "LTM",
+     "value": 3.963757440037716,
+     "unit": "x",
+     "status": "ok",
+     "display": "3.96x"
+    },
+    {
+     "metric_id": "net_leverage",
+     "label": "Net leverage",
+     "period": "LTM",
+     "value": 2.8712652483941303,
+     "unit": "x",
+     "status": "ok",
+     "display": "2.87x"
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "period": "LTM",
+     "value": 6.649294670846395,
+     "unit": "x",
+     "status": "ok",
+     "display": "6.65x"
+    },
+    {
+     "metric_id": "fcf_to_debt",
+     "label": "FCF / debt",
+     "period": "LTM",
+     "value": -21.34966771234445,
+     "unit": "%",
+     "status": "ok",
+     "display": "-21.3%"
+    },
+    {
+     "metric_id": "liquidity_coverage",
+     "label": "Liquidity coverage",
+     "period": "LTM",
+     "value": 0.941641262440599,
+     "unit": "x",
+     "status": "ok",
+     "display": "0.94x"
+    }
+   ],
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0001193125-26-389274",
+    "period_end": "2026-08-31",
+    "filed": "2026-09-11"
+   },
+   "data_to": "2026-08-31",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "memo_model": "zai-org/GLM-5.3",
+   "verification": {
+    "claims": 35,
+    "supported": 29,
+    "partially_supported": 5,
+    "unsupported": 1
+   },
+   "open_flags": 1,
+   "flag_types": [
+    "liquidity_shortfall"
+   ]
+  },
+  {
+   "ticker": "KSS",
+   "name": "KOHLS Corp",
+   "sector": "Retail",
+   "grade": "SB-3",
+   "score": 2.7222222222222223,
+   "provisional": true,
+   "ig_like": true,
+   "headline": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "period": "LTM",
+     "value": 2.5290923196276185,
+     "unit": "x",
+     "status": "ok",
+     "display": "2.53x"
+    },
+    {
+     "metric_id": "net_leverage",
+     "label": "Net leverage",
+     "period": "LTM",
+     "value": 1.8921644685802947,
+     "unit": "x",
+     "status": "ok",
+     "display": "1.89x"
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "period": "LTM",
+     "value": 4.957692307692308,
+     "unit": "x",
+     "status": "ok",
+     "display": "4.96x"
+    },
+    {
+     "metric_id": "fcf_to_debt",
+     "label": "FCF / debt",
+     "period": "LTM",
+     "value": 31.717791411042946,
+     "unit": "%",
+     "status": "ok",
+     "display": "31.7%"
+    },
+    {
+     "metric_id": "liquidity_coverage",
+     "label": "Liquidity coverage",
+     "period": "LTM",
+     "value": 5.810160427807487,
+     "unit": "x",
+     "status": "ok",
+     "display": "5.81x"
+    }
+   ],
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0001193125-26-381893",
+    "period_end": "2026-08-01",
+    "filed": "2026-09-03"
+   },
+   "data_to": "2026-08-01",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "memo_model": "zai-org/GLM-5.3",
+   "verification": {
+    "claims": 35,
+    "supported": 32,
+    "partially_supported": 3,
+    "unsupported": 0
+   },
+   "open_flags": 0,
+   "flag_types": []
+  },
+  {
+   "ticker": "AAL",
+   "name": "American Airlines Group Inc.",
+   "sector": "Transport",
+   "grade": "SB-5",
+   "score": 5.45,
+   "provisional": false,
+   "ig_like": false,
+   "headline": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "period": "LTM",
+     "value": 10.212037357315808,
+     "unit": "x",
+     "status": "ok",
+     "display": "10.21x"
+    },
+    {
+     "metric_id": "net_leverage",
+     "label": "Net leverage",
+     "period": "LTM",
+     "value": 7.3095814597025255,
+     "unit": "x",
+     "status": "ok",
+     "display": "7.31x"
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "period": "LTM",
+     "value": 1.7373798076923077,
+     "unit": "x",
+     "status": "ok",
+     "display": "1.74x"
+    },
+    {
+     "metric_id": "fcf_to_debt",
+     "label": "FCF / debt",
+     "period": "LTM",
+     "value": -0.30823425803610743,
+     "unit": "%",
+     "status": "ok",
+     "display": "-0.3%"
+    },
+    {
+     "metric_id": "liquidity_coverage",
+     "label": "Liquidity coverage",
+     "period": "LTM",
+     "value": 1.5946082136558326,
+     "unit": "x",
+     "status": "ok",
+     "display": "1.59x"
+    }
+   ],
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0000006201-26-000065",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-22"
+   },
+   "data_to": "2026-09-30",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "memo_model": "zai-org/GLM-5.3",
+   "verification": {
+    "claims": 35,
+    "supported": 32,
+    "partially_supported": 2,
+    "unsupported": 1
+   },
+   "open_flags": 2,
+   "flag_types": [
+    "leverage_up",
+    "coverage_down"
+   ]
+  },
+  {
+   "ticker": "CLF",
+   "name": "CLEVELAND-CLIFFS INC.",
+   "sector": "Materials",
+   "grade": "SB-5",
+   "score": 5.5,
+   "provisional": false,
+   "ig_like": false,
+   "headline": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "period": "LTM",
+     "value": 9.928571428571429,
+     "unit": "x",
+     "status": "ok",
+     "display": "9.93x"
+    },
+    {
+     "metric_id": "net_leverage",
+     "label": "Net leverage",
+     "period": "LTM",
+     "value": 9.82857142857143,
+     "unit": "x",
+     "status": "ok",
+     "display": "9.83x"
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "period": "LTM",
+     "value": 1.2748344370860927,
+     "unit": "x",
+     "status": "ok",
+     "display": "1.27x"
+    },
+    {
+     "metric_id": "fcf_to_debt",
+     "label": "FCF / debt",
+     "period": "LTM",
+     "value": -6.344015696533682,
+     "unit": "%",
+     "status": "ok",
+     "display": "-6.3%"
+    },
+    {
+     "metric_id": "liquidity_coverage",
+     "label": "Liquidity coverage",
+     "period": "LTM",
+     "value": 0.3211314475873544,
+     "unit": "x",
+     "status": "ok",
+     "display": "0.32x"
+    }
+   ],
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0000764065-26-000115",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-20"
+   },
+   "data_to": "2026-09-30",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "memo_model": "zai-org/GLM-5.3",
+   "verification": {
+    "claims": 36,
+    "supported": 30,
+    "partially_supported": 6,
+    "unsupported": 0
+   },
+   "open_flags": 1,
+   "flag_types": [
+    "liquidity_shortfall"
+   ]
+  },
+  {
+   "ticker": "CZR",
+   "name": "Caesars Entertainment, Inc.",
+   "sector": "Gaming",
+   "grade": "SB-5",
+   "score": 4.65,
+   "provisional": false,
+   "ig_like": false,
+   "headline": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "period": "LTM",
+     "value": 7.701836290071584,
+     "unit": "x",
+     "status": "ok",
+     "display": "7.70x"
+    },
+    {
+     "metric_id": "net_leverage",
+     "label": "Net leverage",
+     "period": "LTM",
+     "value": 7.432928727046374,
+     "unit": "x",
+     "status": "ok",
+     "display": "7.43x"
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "period": "LTM",
+     "value": 1.404897245299519,
+     "unit": "x",
+     "status": "ok",
+     "display": "1.40x"
+    },
+    {
+     "metric_id": "fcf_to_debt",
+     "label": "FCF / debt",
+     "period": "LTM",
+     "value": 2.351895255798917,
+     "unit": "%",
+     "status": "ok",
+     "display": "2.4%"
+    },
+    {
+     "metric_id": "liquidity_coverage",
+     "label": "Liquidity coverage",
+     "period": "LTM",
+     "value": 2.7120822622107967,
+     "unit": "x",
+     "status": "ok",
+     "display": "2.71x"
+    }
+   ],
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0001590895-26-000033",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-27"
+   },
+   "data_to": "2026-09-30",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "memo_model": "zai-org/GLM-5.3",
+   "verification": {
+    "claims": 35,
+    "supported": 30,
+    "partially_supported": 5,
+    "unsupported": 0
+   },
+   "open_flags": 0,
+   "flag_types": []
+  },
+  {
+   "ticker": "CYH",
+   "name": "COMMUNITY HEALTH SYSTEMS INC",
+   "sector": "Healthcare",
+   "grade": "SB-5",
+   "score": 4.8,
+   "provisional": false,
+   "ig_like": false,
+   "headline": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "period": "LTM",
+     "value": 5.744418331374853,
+     "unit": "x",
+     "status": "ok",
+     "display": "5.74x"
+    },
+    {
+     "metric_id": "net_leverage",
+     "label": "Net leverage",
+     "period": "LTM",
+     "value": 5.653349001175088,
+     "unit": "x",
+     "status": "ok",
+     "display": "5.65x"
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "period": "LTM",
+     "value": 2.023781212841855,
+     "unit": "x",
+     "status": "ok",
+     "display": "2.02x"
+    },
+    {
+     "metric_id": "fcf_to_debt",
+     "label": "FCF / debt",
+     "period": "LTM",
+     "value": -1.2478265316559272,
+     "unit": "%",
+     "status": "ok",
+     "display": "-1.2%"
+    },
+    {
+     "metric_id": "liquidity_coverage",
+     "label": "Liquidity coverage",
+     "period": "LTM",
+     "value": 1.0427350427350428,
+     "unit": "x",
+     "status": "ok",
+     "display": "1.04x"
+    }
+   ],
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0001193125-26-437869",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-29"
+   },
+   "data_to": "2026-09-30",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "memo_model": "zai-org/GLM-5.3",
+   "verification": {
+    "claims": 35,
+    "supported": 30,
+    "partially_supported": 5,
+    "unsupported": 0
+   },
+   "open_flags": 2,
+   "flag_types": [
+    "liquidity_shortfall",
+    "grade_change"
+   ]
+  }
+ ],
+ "disclaimer": "Educational project. Not investment advice. SB grades are a student's stylized scorecard, not credit ratings."
+}

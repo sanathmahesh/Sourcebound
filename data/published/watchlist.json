@@ -1,0 +1,420 @@
+{
+ "schema_version": "1",
+ "checked_at": "2026-11-18T07:56:41Z",
+ "items": [
+  {
+   "ticker": "WMT",
+   "name": "Walmart Inc.",
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0000104169-26-000154",
+    "period_end": "2026-07-31",
+    "filed": "2026-08-28"
+   },
+   "data_to": "2026-07-31",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "flags": [
+    {
+     "type": "liquidity_shortfall",
+     "severity": "warning",
+     "rule": "liquidity coverage below 1.2 (warning) or 1.0 (alert)",
+     "metric_id": "liquidity_coverage",
+     "from": "1.20x threshold",
+     "to": "1.07x"
+    },
+    {
+     "type": "near_term_maturities",
+     "severity": "alert",
+     "rule": "debt due within 12 months above 50% (warning) or 100% (alert) of cash, short-term investments and undrawn revolver",
+     "metric_id": "short_term_debt",
+     "from": "50% threshold",
+     "to": "121%"
+    },
+    {
+     "type": "grade_change",
+     "severity": "warning",
+     "rule": "a worse SB grade",
+     "metric_id": "sb_grade",
+     "from": "SB-2",
+     "to": "SB-3"
+    }
+   ]
+  },
+  {
+   "ticker": "VZ",
+   "name": "VERIZON COMMUNICATIONS INC",
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0000732712-26-000052",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-29"
+   },
+   "data_to": "2026-09-30",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "flags": [
+    {
+     "type": "liquidity_shortfall",
+     "severity": "warning",
+     "rule": "liquidity coverage below 1.2 (warning) or 1.0 (alert)",
+     "metric_id": "liquidity_coverage",
+     "from": "1.20x threshold",
+     "to": "1.06x"
+    },
+    {
+     "type": "near_term_maturities",
+     "severity": "alert",
+     "rule": "debt due within 12 months above 50% (warning) or 100% (alert) of cash, short-term investments and undrawn revolver",
+     "metric_id": "short_term_debt",
+     "from": "50% threshold",
+     "to": "145%"
+    }
+   ]
+  },
+  {
+   "ticker": "GT",
+   "name": "GOODYEAR TIRE & RUBBER CO /OH/",
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0001628280-26-070703",
+    "period_end": "2026-09-30",
+    "filed": "2026-11-05"
+   },
+   "data_to": "2026-09-30",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "flags": [
+    {
+     "type": "leverage_up",
+     "severity": "warning",
+     "rule": "Debt / EBITDA up by 0.5x or more, or into a worse band",
+     "metric_id": "debt_to_ebitda",
+     "from": "4.57x",
+     "to": "7.44x"
+    },
+    {
+     "type": "coverage_down",
+     "severity": "warning",
+     "rule": "EBITDA / interest down by 20% or more, or into a worse band",
+     "metric_id": "interest_coverage",
+     "from": "3.05x",
+     "to": "2.39x"
+    },
+    {
+     "type": "liquidity_shortfall",
+     "severity": "alert",
+     "rule": "liquidity coverage below 1.2 (warning) or 1.0 (alert)",
+     "metric_id": "liquidity_coverage",
+     "from": "1.20x threshold",
+     "to": "0.78x"
+    },
+    {
+     "type": "near_term_maturities",
+     "severity": "alert",
+     "rule": "debt due within 12 months above 50% (warning) or 100% (alert) of cash, short-term investments and undrawn revolver",
+     "metric_id": "short_term_debt",
+     "from": "50% threshold",
+     "to": "165%"
+    },
+    {
+     "type": "grade_change",
+     "severity": "warning",
+     "rule": "a worse SB grade",
+     "metric_id": "sb_grade",
+     "from": "SB-5",
+     "to": "SB-6"
+    }
+   ]
+  },
+  {
+   "ticker": "HCA",
+   "name": "HCA Healthcare, Inc.",
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0001193125-26-437871",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-29"
+   },
+   "data_to": "2026-09-30",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "flags": [
+    {
+     "type": "liquidity_shortfall",
+     "severity": "alert",
+     "rule": "liquidity coverage below 1.2 (warning) or 1.0 (alert)",
+     "metric_id": "liquidity_coverage",
+     "from": "1.20x threshold",
+     "to": "0.86x"
+    },
+    {
+     "type": "near_term_maturities",
+     "severity": "alert",
+     "rule": "debt due within 12 months above 50% (warning) or 100% (alert) of cash, short-term investments and undrawn revolver",
+     "metric_id": "short_term_debt",
+     "from": "50% threshold",
+     "to": "891%"
+    }
+   ]
+  },
+  {
+   "ticker": "CCL",
+   "name": "Carnival Corp Ltd.",
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0000815097-26-000107",
+    "period_end": "2026-08-31",
+    "filed": "2026-09-29"
+   },
+   "data_to": "2026-08-31",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "flags": [
+    {
+     "type": "near_term_maturities",
+     "severity": "alert",
+     "rule": "debt due within 12 months above 50% (warning) or 100% (alert) of cash, short-term investments and undrawn revolver",
+     "metric_id": "short_term_debt",
+     "from": "50% threshold",
+     "to": "167%"
+    }
+   ]
+  },
+  {
+   "ticker": "MSFT",
+   "name": "MICROSOFT CORP",
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0001193125-26-436133",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-28"
+   },
+   "data_to": "2026-09-30",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "flags": []
+  },
+  {
+   "ticker": "PG",
+   "name": "PROCTER & GAMBLE Co",
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0000080424-26-000256",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-22"
+   },
+   "data_to": "2026-09-30",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "flags": [
+    {
+     "type": "liquidity_shortfall",
+     "severity": "warning",
+     "rule": "liquidity coverage below 1.2 (warning) or 1.0 (alert)",
+     "metric_id": "liquidity_coverage",
+     "from": "1.20x threshold",
+     "to": "1.11x"
+    },
+    {
+     "type": "near_term_maturities",
+     "severity": "alert",
+     "rule": "debt due within 12 months above 50% (warning) or 100% (alert) of cash, short-term investments and undrawn revolver",
+     "metric_id": "short_term_debt",
+     "from": "50% threshold",
+     "to": "111%"
+    }
+   ]
+  },
+  {
+   "ticker": "XOM",
+   "name": "EXXON MOBIL CORP",
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0000034088-26-000093",
+    "period_end": "2026-06-30",
+    "filed": "2026-08-03"
+   },
+   "data_to": "2026-03-31",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "flags": [
+    {
+     "type": "liquidity_shortfall",
+     "severity": "alert",
+     "rule": "liquidity coverage below 1.2 (warning) or 1.0 (alert)",
+     "metric_id": "liquidity_coverage",
+     "from": "1.20x threshold",
+     "to": "0.93x"
+    },
+    {
+     "type": "near_term_maturities",
+     "severity": "alert",
+     "rule": "debt due within 12 months above 50% (warning) or 100% (alert) of cash, short-term investments and undrawn revolver",
+     "metric_id": "short_term_debt",
+     "from": "50% threshold",
+     "to": "172%"
+    }
+   ]
+  },
+  {
+   "ticker": "UNP",
+   "name": "UNION PACIFIC CORP",
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0000100885-26-000321",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-22"
+   },
+   "data_to": "2026-09-30",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "flags": [
+    {
+     "type": "near_term_maturities",
+     "severity": "warning",
+     "rule": "debt due within 12 months above 50% (warning) or 100% (alert) of cash, short-term investments and undrawn revolver",
+     "metric_id": "short_term_debt",
+     "from": "50% threshold",
+     "to": "58%"
+    }
+   ]
+  },
+  {
+   "ticker": "ORCL",
+   "name": "ORACLE CORP",
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0001193125-26-389274",
+    "period_end": "2026-08-31",
+    "filed": "2026-09-11"
+   },
+   "data_to": "2026-08-31",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "flags": [
+    {
+     "type": "liquidity_shortfall",
+     "severity": "alert",
+     "rule": "liquidity coverage below 1.2 (warning) or 1.0 (alert)",
+     "metric_id": "liquidity_coverage",
+     "from": "1.20x threshold",
+     "to": "0.94x"
+    }
+   ]
+  },
+  {
+   "ticker": "KSS",
+   "name": "KOHLS Corp",
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0001193125-26-381893",
+    "period_end": "2026-08-01",
+    "filed": "2026-09-03"
+   },
+   "data_to": "2026-08-01",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "flags": []
+  },
+  {
+   "ticker": "AAL",
+   "name": "American Airlines Group Inc.",
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0000006201-26-000065",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-22"
+   },
+   "data_to": "2026-09-30",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "flags": [
+    {
+     "type": "leverage_up",
+     "severity": "warning",
+     "rule": "Debt / EBITDA up by 0.5x or more, or into a worse band",
+     "metric_id": "debt_to_ebitda",
+     "from": "7.88x",
+     "to": "10.21x"
+    },
+    {
+     "type": "coverage_down",
+     "severity": "warning",
+     "rule": "EBITDA / interest down by 20% or more, or into a worse band",
+     "metric_id": "interest_coverage",
+     "from": "2.14x",
+     "to": "1.74x"
+    }
+   ]
+  },
+  {
+   "ticker": "CLF",
+   "name": "CLEVELAND-CLIFFS INC.",
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0000764065-26-000115",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-20"
+   },
+   "data_to": "2026-09-30",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "flags": [
+    {
+     "type": "liquidity_shortfall",
+     "severity": "alert",
+     "rule": "liquidity coverage below 1.2 (warning) or 1.0 (alert)",
+     "metric_id": "liquidity_coverage",
+     "from": "1.20x threshold",
+     "to": "0.32x"
+    }
+   ]
+  },
+  {
+   "ticker": "CZR",
+   "name": "Caesars Entertainment, Inc.",
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0001590895-26-000033",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-27"
+   },
+   "data_to": "2026-09-30",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "flags": []
+  },
+  {
+   "ticker": "CYH",
+   "name": "COMMUNITY HEALTH SYSTEMS INC",
+   "latest_filing": {
+    "form": "10-Q",
+    "accession": "0001193125-26-437869",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-29"
+   },
+   "data_to": "2026-09-30",
+   "memo_status": "current",
+   "memo_date": "2026-11-18",
+   "flags": [
+    {
+     "type": "liquidity_shortfall",
+     "severity": "warning",
+     "rule": "liquidity coverage below 1.2 (warning) or 1.0 (alert)",
+     "metric_id": "liquidity_coverage",
+     "from": "1.20x threshold",
+     "to": "1.04x"
+    },
+    {
+     "type": "grade_change",
+     "severity": "warning",
+     "rule": "a worse SB grade",
+     "metric_id": "sb_grade",
+     "from": "SB-4",
+     "to": "SB-5"
+    }
+   ]
+  }
+ ]
+}

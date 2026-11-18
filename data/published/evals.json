@@ -1,0 +1,338 @@
+{
+ "schema_version": "1",
+ "generated_at": "2026-11-18T07:56:41Z",
+ "source": "evals/results/results.json",
+ "results": {
+  "generated_at": "2026-11-18 07:51 UTC",
+  "command": "uv run python -m sourcebound.evals.report",
+  "prices_read_on": "2026-11-17",
+  "writers": {
+   "DeepSeek-V4-Pro-0813": {
+    "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+    "memos_run1": 15,
+    "claims_per_memo": 32.733333333333334,
+    "judge_supported": {
+     "value": 0.9226069246435845,
+     "n": 491
+    },
+    "judge_partially": {
+     "value": 0.07128309572301425,
+     "n": 491
+    },
+    "judge_unsupported": {
+     "value": 0.006109979633401222,
+     "n": 491
+    },
+    "raw_numbers_rejected_per_memo": 3.066666666666667,
+    "repairs_per_memo": 1.6,
+    "cost_drafting_per_memo": 0.15752053333333332,
+    "cost_verification_per_memo": 0.020797133333333332,
+    "cost_total_per_memo": 0.17831766666666668,
+    "model_seconds_per_memo": 1364.612,
+    "golden_runs": 3,
+    "run_to_run_judge_supported": {
+     "mean": 0.9142097372405986,
+     "min": 0.893491124260355,
+     "max": 0.9461077844311377,
+     "n": 3
+    },
+    "judge": "zai-org/GLM-5.3"
+   },
+   "DeepSeek-V4.1-Flash-1017": {
+    "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "memos_run1": 15,
+    "claims_per_memo": 34,
+    "judge_supported": {
+     "value": 0.9156862745098039,
+     "n": 510
+    },
+    "judge_partially": {
+     "value": 0.0803921568627451,
+     "n": 510
+    },
+    "judge_unsupported": {
+     "value": 0.00392156862745098,
+     "n": 510
+    },
+    "raw_numbers_rejected_per_memo": 1.2,
+    "repairs_per_memo": 1.2666666666666666,
+    "cost_drafting_per_memo": 0.0076702,
+    "cost_verification_per_memo": 0.022006333333333333,
+    "cost_total_per_memo": 0.029676533333333335,
+    "model_seconds_per_memo": 476.376,
+    "golden_runs": 3,
+    "run_to_run_judge_supported": {
+     "mean": 0.8774309805521556,
+     "min": 0.8713450292397661,
+     "max": 0.8830409356725146,
+     "n": 3
+    },
+    "judge": "zai-org/GLM-5.3"
+   },
+   "GLM-5.3": {
+    "model": "zai-org/GLM-5.3",
+    "memos_run1": 15,
+    "claims_per_memo": 35.06666666666667,
+    "judge_supported": {
+     "value": 0.8593155893536122,
+     "n": 526
+    },
+    "judge_partially": {
+     "value": 0.13498098859315588,
+     "n": 526
+    },
+    "judge_unsupported": {
+     "value": 0.005703422053231939,
+     "n": 526
+    },
+    "raw_numbers_rejected_per_memo": 2.2666666666666666,
+    "repairs_per_memo": 2.066666666666667,
+    "cost_drafting_per_memo": 0.08056393333333334,
+    "cost_verification_per_memo": 0.026183733333333334,
+    "cost_total_per_memo": 0.10674766666666667,
+    "model_seconds_per_memo": 250.588,
+    "golden_runs": 3,
+    "run_to_run_judge_supported": {
+     "mean": 0.8087513757429012,
+     "min": 0.7784090909090909,
+     "max": 0.8342857142857143,
+     "n": 3
+    },
+    "judge": "zai-org/GLM-5.3"
+   }
+  },
+  "memo_numeric_accuracy": {
+   "DeepSeek-V4-Pro-0813": {
+    "engine_figures": {
+     "value": null,
+     "n": 0
+    },
+    "engine_figures_without_hand_value": 212,
+    "quoted_figures_in_cited_passage": {
+     "value": 1.0,
+     "n": 75
+    }
+   },
+   "DeepSeek-V4.1-Flash-1017": {
+    "engine_figures": {
+     "value": null,
+     "n": 0
+    },
+    "engine_figures_without_hand_value": 276,
+    "quoted_figures_in_cited_passage": {
+     "value": 1.0,
+     "n": 23
+    }
+   },
+   "GLM-5.3": {
+    "engine_figures": {
+     "value": null,
+     "n": 0
+    },
+    "engine_figures_without_hand_value": 280,
+    "quoted_figures_in_cited_passage": {
+     "value": 1.0,
+     "n": 65
+    }
+   }
+  },
+  "engine_accuracy": {
+   "accuracy": {
+    "value": null,
+    "n": 0
+   },
+   "coverage": {
+    "value": null,
+    "n": 0
+   },
+   "per_company": {
+    "CCL": {
+     "filled": 0,
+     "match": 0,
+     "mismatch": []
+    },
+    "GT": {
+     "filled": 0,
+     "match": 0,
+     "mismatch": []
+    },
+    "HCA": {
+     "filled": 0,
+     "match": 0,
+     "mismatch": []
+    },
+    "VZ": {
+     "filled": 0,
+     "match": 0,
+     "mismatch": []
+    },
+    "WMT": {
+     "filled": 0,
+     "match": 0,
+     "mismatch": []
+    }
+   }
+  },
+  "retrieval_recall": {
+   "top8": {
+    "value": null,
+    "n": 0
+   }
+  },
+  "labels": {
+   "labelled_rows": 0,
+   "sheet_rows": 180,
+   "per_writer": {
+    "DeepSeek-V4-Pro-0813": {
+     "unsupported_rate": {
+      "value": null,
+      "n": 0
+     },
+     "partially_rate": {
+      "value": null,
+      "n": 0
+     },
+     "citation_precision": {
+      "value": null,
+      "n": 0
+     }
+    },
+    "DeepSeek-V4.1-Flash-1017": {
+     "unsupported_rate": {
+      "value": null,
+      "n": 0
+     },
+     "partially_rate": {
+      "value": null,
+      "n": 0
+     },
+     "citation_precision": {
+      "value": null,
+      "n": 0
+     }
+    },
+    "GLM-5.3": {
+     "unsupported_rate": {
+      "value": null,
+      "n": 0
+     },
+     "partially_rate": {
+      "value": null,
+      "n": 0
+     },
+     "citation_precision": {
+      "value": null,
+      "n": 0
+     }
+    }
+   }
+  },
+  "judge_calibration": {
+   "deepseek-ai/DeepSeek-V4-Pro-0813": {
+    "rows_judged": 180,
+    "cost_usd": 0.4128,
+    "agreement": {
+     "value": null,
+     "n": 0
+    },
+    "false_pass_rate": {
+     "value": null,
+     "n": 0
+    },
+    "confusion": {}
+   },
+   "zai-org/GLM-5.3": {
+    "rows_judged": 180,
+    "cost_usd": 0.1248,
+    "agreement": {
+     "value": null,
+     "n": 0
+    },
+    "false_pass_rate": {
+     "value": null,
+     "n": 0
+    },
+    "confusion": {}
+   }
+  },
+  "seeded_errors": {
+   "deepseek-ai/DeepSeek-V4-Pro-0813": {
+    "negation": {
+     "n": 60,
+     "code": 0,
+     "judge_unsupported": 57,
+     "judge_partial": 0,
+     "missed": 3
+    },
+    "citation_swap": {
+     "n": 43,
+     "code": 43,
+     "judge_unsupported": 0,
+     "judge_partial": 0,
+     "missed": 0
+    },
+    "citation_swap_with_quote": {
+     "n": 43,
+     "code": 7,
+     "judge_unsupported": 27,
+     "judge_partial": 6,
+     "missed": 3
+    },
+    "raw_number": {
+     "n": 24,
+     "code": 24,
+     "judge_unsupported": 0,
+     "judge_partial": 0,
+     "missed": 0
+    },
+    "wrong_placeholder": {
+     "n": 22,
+     "code": 0,
+     "judge_unsupported": 5,
+     "judge_partial": 17,
+     "missed": 0
+    }
+   },
+   "zai-org/GLM-5.3": {
+    "negation": {
+     "n": 60,
+     "code": 0,
+     "judge_unsupported": 54,
+     "judge_partial": 4,
+     "missed": 2
+    },
+    "citation_swap": {
+     "n": 43,
+     "code": 43,
+     "judge_unsupported": 0,
+     "judge_partial": 0,
+     "missed": 0
+    },
+    "citation_swap_with_quote": {
+     "n": 43,
+     "code": 7,
+     "judge_unsupported": 26,
+     "judge_partial": 7,
+     "missed": 3
+    },
+    "raw_number": {
+     "n": 24,
+     "code": 24,
+     "judge_unsupported": 0,
+     "judge_partial": 0,
+     "missed": 0
+    },
+    "wrong_placeholder": {
+     "n": 22,
+     "code": 0,
+     "judge_unsupported": 8,
+     "judge_partial": 11,
+     "missed": 3
+    }
+   }
+  },
+  "scorecard_vs_agencies": {
+   "status": "pending: no agency ratings entered"
+  }
+ }
+}

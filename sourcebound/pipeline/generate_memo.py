@@ -221,13 +221,21 @@ def main() -> None:
     parser.add_argument("--writer", help="writer model (default SAIL_MODEL_WRITER)")
     parser.add_argument("--judge", help="judge model (default SAIL_MODEL_JUDGE)")
     args = parser.parse_args()
+    main_for([t.upper() for t in args.tickers], args.writer, args.judge)
+
+
+def main_for(tickers: list[str], writer: str | None = None, judge: str | None = None) -> None:
+    """Generate, verify and publish memos; each one is then recorded as current in state.json."""
+    from sourcebound.pipeline.build_all import mark_memo_current
+
     load_dotenv(ENV_FILE)
     settings = LlmSettings.from_env()
     client = SailClient(settings)
     prices = load_prices(CONFIG_DIR / "prices.yaml")
-    for ticker in args.tickers:
-        memo, report = generate_memo(ticker.upper(), client, settings=settings, prices=prices,
-                                     writer_model=args.writer, judge_model=args.judge)
+    for ticker in tickers:
+        memo, report = generate_memo(ticker, client, settings=settings, prices=prices,
+                                     writer_model=writer, judge_model=judge)
+        mark_memo_current(ticker)
         s, run = report.summary, memo.run
         print(f"{ticker}: {s.claims} claims: {s.supported} supported, {s.partially_supported} partly, "
               f"{s.unsupported} unsupported; {s.raw_numbers_rejected} raw numbers rejected; {s.repairs} repairs; "

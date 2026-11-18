@@ -5,28 +5,28 @@
  "writer_model": "zai-org/GLM-5.3",
  "judge_model": "zai-org/GLM-5.3",
  "summary": {
-  "claims": 36,
-  "supported": 30,
+  "claims": 35,
+  "supported": 28,
   "partially_supported": 6,
-  "unsupported": 0,
-  "checked_by_judge": 36,
+  "unsupported": 1,
+  "checked_by_judge": 35,
   "checked_deterministically": 0,
-  "metric_figures": 59,
-  "quoted_figures": 21,
+  "metric_figures": 57,
+  "quoted_figures": 14,
   "raw_numbers_rejected": 1,
-  "repairs": 3,
+  "repairs": 2,
   "sections_without_draft": 0
  },
  "numbers": [
   {
-   "claim_id": "business_profile-1",
+   "claim_id": "business_profile-2",
    "kind": "quoted",
    "value": "49",
    "metric_id": null,
    "chunk_id": "GT-000162828026006708-0097"
   },
   {
-   "claim_id": "business_profile-1",
+   "claim_id": "business_profile-2",
    "kind": "quoted",
    "value": "19",
    "metric_id": null,
@@ -37,6 +37,13 @@
    "kind": "metric",
    "value": "$20.1 billion",
    "metric_id": "revenue:FY-2",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "business_profile-4",
+   "kind": "metric",
+   "value": "$18.9 billion",
+   "metric_id": "revenue:FY-1",
    "chunk_id": null
   },
   {
@@ -68,18 +75,11 @@
    "chunk_id": null
   },
   {
-   "claim_id": "business_profile-4",
-   "kind": "metric",
-   "value": "$312 million",
-   "metric_id": "operating_income:FY0",
-   "chunk_id": null
-  },
-  {
-   "claim_id": "business_profile-4",
-   "kind": "metric",
-   "value": "$27 million",
-   "metric_id": "operating_income:LTM",
-   "chunk_id": null
+   "claim_id": "business_profile-5",
+   "kind": "quoted",
+   "value": "2025",
+   "metric_id": null,
+   "chunk_id": "GT-000162828026006708-0006"
   },
   {
    "claim_id": "business_profile-5",
@@ -124,87 +124,66 @@
    "chunk_id": null
   },
   {
-   "claim_id": "financial_risk-3",
-   "kind": "quoted",
-   "value": "807",
-   "metric_id": null,
-   "chunk_id": "GT-000162828026031866-0099"
-  },
-  {
-   "claim_id": "financial_risk-3",
-   "kind": "quoted",
-   "value": "2026",
-   "metric_id": null,
-   "chunk_id": "GT-000162828026031866-0099"
-  },
-  {
-   "claim_id": "financial_risk-3",
-   "kind": "quoted",
-   "value": "51.3",
-   "metric_id": null,
-   "chunk_id": "GT-000162828026031866-0086"
-  },
-  {
-   "claim_id": "financial_risk-3",
-   "kind": "quoted",
-   "value": "2026",
-   "metric_id": null,
-   "chunk_id": "GT-000162828026031866-0099"
-  },
-  {
-   "claim_id": "financial_risk-4",
+   "claim_id": "financial_risk-2",
    "kind": "metric",
    "value": "1.53x",
    "metric_id": "interest_coverage:FY-2",
    "chunk_id": null
   },
   {
-   "claim_id": "financial_risk-4",
+   "claim_id": "financial_risk-2",
    "kind": "metric",
    "value": "2.39x",
    "metric_id": "interest_coverage:LTM",
    "chunk_id": null
   },
   {
-   "claim_id": "financial_risk-4",
+   "claim_id": "financial_risk-2",
    "kind": "metric",
    "value": "3.05x",
    "metric_id": "interest_coverage:FY0",
    "chunk_id": null
   },
   {
-   "claim_id": "financial_risk-4",
-   "kind": "metric",
-   "value": "$415 million",
-   "metric_id": "interest_expense:LTM",
-   "chunk_id": null
-  },
-  {
-   "claim_id": "financial_risk-6",
+   "claim_id": "financial_risk-3",
    "kind": "metric",
    "value": "-0.2%",
    "metric_id": "fcf_to_debt:FY-2",
    "chunk_id": null
   },
   {
-   "claim_id": "financial_risk-6",
+   "claim_id": "financial_risk-3",
+   "kind": "metric",
+   "value": "1.2%",
+   "metric_id": "fcf_to_debt:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "financial_risk-3",
    "kind": "metric",
    "value": "-6.3%",
    "metric_id": "fcf_to_debt:FY-1",
    "chunk_id": null
   },
   {
-   "claim_id": "financial_risk-6",
+   "claim_id": "financial_risk-3",
    "kind": "metric",
    "value": "-0.5%",
    "metric_id": "fcf_to_debt:FY0",
    "chunk_id": null
   },
   {
-   "claim_id": "financial_risk-6",
+   "claim_id": "financial_risk-5",
    "kind": "metric",
-   "value": "1.2%",
-   "metric_id": "fcf_to_debt:LTM",
+   "value": "$7.4 billion",
+   "metric_id": "total_debt:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "financial_risk-5",
+   "kind": "metric",
+   "value": "$990 million",
+   "metric_id": "ebitda:LTM",
    "chunk_id": null
   },
   {
@@ -222,10 +201,10 @@
    "chunk_id": null
   },
   {
-   "claim_id": "financial_risk-6",
+   "claim_id": "liquidity-1",
    "kind": "metric",
-   "value": "$7.4 billion",
-   "metric_id": "total_debt:LTM",
+   "value": "0.78x",
+   "metric_id": "liquidity_coverage:LTM",
    "chunk_id": null
   },
   {
@@ -233,13 +212,6 @@
    "kind": "metric",
    "value": "0.94x",
    "metric_id": "liquidity_coverage:FY0",
-   "chunk_id": null
-  },
-  {
-   "claim_id": "liquidity-1",
-   "kind": "metric",
-   "value": "0.78x",
-   "metric_id": "liquidity_coverage:LTM",
    "chunk_id": null
   },
   {
@@ -271,56 +243,42 @@
    "chunk_id": null
   },
   {
-   "claim_id": "liquidity-3",
-   "kind": "quoted",
-   "value": "4,421",
-   "metric_id": null,
-   "chunk_id": "GT-000162828026031866-0094"
-  },
-  {
-   "claim_id": "liquidity-3",
-   "kind": "quoted",
-   "value": "2,975",
-   "metric_id": null,
-   "chunk_id": "GT-000162828026031866-0094"
-  },
-  {
-   "claim_id": "liquidity-4",
-   "kind": "quoted",
-   "value": "1,050",
-   "metric_id": null,
-   "chunk_id": "GT-000162828026054032-0116"
+   "claim_id": "liquidity-2",
+   "kind": "metric",
+   "value": "$0",
+   "metric_id": "short_term_investments:LTM",
+   "chunk_id": null
   },
   {
    "claim_id": "liquidity-5",
+   "kind": "quoted",
+   "value": "2027",
+   "metric_id": null,
+   "chunk_id": "GT-000162828026070703-0116"
+  },
+  {
+   "claim_id": "liquidity-6",
    "kind": "quoted",
    "value": "825",
    "metric_id": null,
    "chunk_id": "GT-000162828026006708-0133"
   },
   {
-   "claim_id": "liquidity-5",
+   "claim_id": "liquidity-6",
    "kind": "quoted",
    "value": "400",
    "metric_id": null,
    "chunk_id": "GT-000162828026006708-0133"
   },
   {
-   "claim_id": "liquidity-5",
+   "claim_id": "liquidity-6",
    "kind": "quoted",
    "value": "425",
    "metric_id": null,
    "chunk_id": "GT-000162828026006708-0133"
   },
   {
-   "claim_id": "liquidity-5",
-   "kind": "quoted",
-   "value": "225",
-   "metric_id": null,
-   "chunk_id": "GT-000162828026006708-0133"
-  },
-  {
-   "claim_id": "liquidity-5",
+   "claim_id": "liquidity-6",
    "kind": "quoted",
    "value": "100",
    "metric_id": null,
@@ -398,38 +356,24 @@
   },
   {
    "claim_id": "maturity_wall-3",
+   "kind": "metric",
+   "value": "$1.2 billion",
+   "metric_id": "maturity_year_1:FY0",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "maturity_wall-4",
    "kind": "quoted",
    "value": "4,421",
    "metric_id": null,
    "chunk_id": "GT-000162828026006708-0133"
   },
   {
-   "claim_id": "maturity_wall-5",
+   "claim_id": "maturity_wall-4",
    "kind": "quoted",
-   "value": "3.0",
+   "value": "2,749",
    "metric_id": null,
-   "chunk_id": "GT-000162828026070703-0135"
-  },
-  {
-   "claim_id": "maturity_wall-5",
-   "kind": "quoted",
-   "value": "1.0",
-   "metric_id": null,
-   "chunk_id": "GT-000162828026070703-0135"
-  },
-  {
-   "claim_id": "maturity_wall-6",
-   "kind": "quoted",
-   "value": "500",
-   "metric_id": null,
-   "chunk_id": "GT-000162828026006708-0304"
-  },
-  {
-   "claim_id": "maturity_wall-6",
-   "kind": "quoted",
-   "value": "6.625",
-   "metric_id": null,
-   "chunk_id": "GT-000162828026006708-0304"
+   "chunk_id": "GT-000162828026006708-0133"
   },
   {
    "claim_id": "key_risks-1",
@@ -440,6 +384,20 @@
   },
   {
    "claim_id": "key_risks-1",
+   "kind": "metric",
+   "value": "1.2%",
+   "metric_id": "fcf_to_debt:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "key_risks-3",
+   "kind": "quoted",
+   "value": "1.2",
+   "metric_id": null,
+   "chunk_id": "GT-000162828026006708-0069"
+  },
+  {
+   "claim_id": "key_risks-3",
    "kind": "metric",
    "value": "2.39x",
    "metric_id": "interest_coverage:LTM",
@@ -488,20 +446,6 @@
    "chunk_id": null
   },
   {
-   "claim_id": "rating_rationale-2",
-   "kind": "metric",
-   "value": "1.2%",
-   "metric_id": "fcf_to_debt:LTM",
-   "chunk_id": null
-  },
-  {
-   "claim_id": "rating_rationale-3",
-   "kind": "metric",
-   "value": "7.44x",
-   "metric_id": "debt_to_ebitda:LTM",
-   "chunk_id": null
-  },
-  {
    "claim_id": "rating_rationale-3",
    "kind": "metric",
    "value": "6",
@@ -513,13 +457,6 @@
    "kind": "metric",
    "value": "20.0%",
    "metric_id": "weight_debt_to_ebitda:latest",
-   "chunk_id": null
-  },
-  {
-   "claim_id": "rating_rationale-3",
-   "kind": "metric",
-   "value": "6.62x",
-   "metric_id": "net_leverage:LTM",
    "chunk_id": null
   },
   {
@@ -539,13 +476,6 @@
   {
    "claim_id": "rating_rationale-3",
    "kind": "metric",
-   "value": "0.78x",
-   "metric_id": "liquidity_coverage:LTM",
-   "chunk_id": null
-  },
-  {
-   "claim_id": "rating_rationale-3",
-   "kind": "metric",
    "value": "6",
    "metric_id": "band_liquidity_coverage:latest",
    "chunk_id": null
@@ -555,13 +485,6 @@
    "kind": "metric",
    "value": "15.0%",
    "metric_id": "weight_liquidity_coverage:latest",
-   "chunk_id": null
-  },
-  {
-   "claim_id": "rating_rationale-3",
-   "kind": "metric",
-   "value": "2.38x",
-   "metric_id": "near_term_maturity_cover:FY0",
    "chunk_id": null
   },
   {
@@ -577,6 +500,20 @@
    "value": "10.0%",
    "metric_id": "weight_near_term_maturity_cover:latest",
    "chunk_id": null
+  },
+  {
+   "claim_id": "rating_rationale-5",
+   "kind": "quoted",
+   "value": "2027",
+   "metric_id": null,
+   "chunk_id": "GT-000162828026070703-0116"
+  },
+  {
+   "claim_id": "rating_rationale-6",
+   "kind": "metric",
+   "value": "SB-6",
+   "metric_id": "sb_grade:latest",
+   "chunk_id": null
   }
  ],
  "claims": [
@@ -586,8 +523,9 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "Passage states Goodyear is one of the world's leading tire manufacturers with 49 manufacturing facilities in 19 countries.",
+   "reason": "All claim elements match the filing text directly.",
    "citation_checks": [
+    "ok",
     "ok"
    ],
    "flags": []
@@ -598,9 +536,8 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "Both the three regional tire segments (Americas, EMEA, Asia Pacific) and the principal business statement are directly confirmed in the evidence.",
+   "reason": "The filing directly states 49 manufacturing facilities in 19 countries, including the United States, showing a broad global footprint.",
    "citation_checks": [
-    "ok",
     "ok"
    ],
    "flags": []
@@ -611,7 +548,7 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The passages list passenger, high-performance, SUV/light truck, commercial truck, retreads and aviation products, and name Goodyear, Cooper, Kelly, Mastercraft and Mickey Thompson brands across segments.",
+   "reason": "The evidence directly states Goodyear's principal business, tire product lines, and the brands Goodyear, Cooper, Kelly and Mastercraft.",
    "citation_checks": [
     "ok",
     "ok"
@@ -624,7 +561,7 @@
    "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "Every figure in the claim matches the computed metric values exactly, and the described direction of revenue decline and profitability weakening is consistent with them.",
+   "reason": "All revenue figures ($20.1B, $18.9B, $18.3B, $17.6B) and EBITDA figures ($1.4B, $990M) match the metric values exactly, and the described monotonic decline follows directly from them.",
    "citation_checks": [],
    "flags": []
   },
@@ -634,8 +571,9 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The passage directly states all elements: ~$2.2B gross proceeds from completing the OTR tire, Dunlop brand and polymer chemicals sales during 2025, ~$1.5B annual run-rate benefit from cost reduction actions, and using divestiture proceeds to reduce debt.",
+   "reason": "All elements—$2.2B gross proceeds from the OTR, Dunlop, and polymer chemicals divestitures, ~$1.5B annual run-rate cost benefit, and use of proceeds to reduce debt—are stated in the passage.",
    "citation_checks": [
+    "ok",
     "ok",
     "ok"
    ],
@@ -647,8 +585,10 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "Both claims are directly stated in the evidence: principal raw materials are synthetic and natural rubber, and the company faces significant global competition with possible market share decline.",
+   "reason": "All elements of the claim are directly stated in the evidence: global competition and market share risk, purchase of all natural rubber requirements in the world market, negative impact from tariffs/trade restrictions, and raw material, energy and transportation cost increases.",
    "citation_checks": [
+    "ok",
+    "ok",
     "ok",
     "ok"
    ],
@@ -660,44 +600,41 @@
    "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "All four leverage figures in the claim (9.39x→7.44x gross, 8.28x→6.62x net) match the XBRL-computed metric values exactly, and the declines support the 'improved materially' characterization.",
+   "reason": "All four leverage figures (9.39x, 7.44x, 8.28x, 6.62x) match the computed metric values exactly, confirming the claimed decline in both gross and net leverage.",
    "citation_checks": [],
    "flags": []
   },
   {
    "claim_id": "financial_risk-2",
    "section": "financial_risk",
-   "kind": "qualitative",
-   "verdict": "partially_supported",
+   "kind": "quantitative",
+   "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The evidence supports debt repayments of $1,759 million funded by $1,802 million of sale proceeds and lower capital expenditures ($826 million vs $1,188 million), but only for 2025 relative to 2024; there is no evidence about leverage levels or changes for fiscal year 2023, nor that improvement from 2023 was 'primarily' driven by these factors.",
-   "citation_checks": [
-    "ok",
-    "ok"
-   ],
+   "reason": "All three metric values in the claim (1.53x for FY2023, 3.05x for FY2025, and 2.39x for LTM to 30 September 2026) exactly match the computed XBRL scorecard values, including the implied weakening from FY2025 to LTM.",
+   "citation_checks": [],
    "flags": []
   },
   {
    "claim_id": "financial_risk-3",
    "section": "financial_risk",
-   "kind": "qualitative",
-   "verdict": "partially_supported",
+   "kind": "quantitative",
+   "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The $807 million net borrowings in the first three months of 2026 and the 51.3% year-over-year decrease in total segment operating income ($95M vs. $195M) are directly supported, but the characterization of a 'partial reversal since the fiscal year ended 31 December 2025' (i.e., prior debt reduction) is not addressed by the evidence.",
-   "citation_checks": [
-    "ok",
-    "ok"
-   ],
+   "reason": "All four metric values match exactly (-0.2%, -6.3%, -0.5%, 1.2%), and the ratio did turn positive in LTM after two negative interim readings, moving only modestly between endpoints.",
+   "citation_checks": [],
    "flags": []
   },
   {
    "claim_id": "financial_risk-4",
    "section": "financial_risk",
-   "kind": "quantitative",
+   "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "All figures match the computed metric values: coverage improved from 1.53x (FY2023) to 2.39x (LTM to 30 Sep 2026), down from 3.05x in FY2025, with LTM interest expense of $415 million.",
-   "citation_checks": [],
+   "reason": "Evidence states debt was repaid with proceeds from asset sales (OTR, Dunlop, Chemical), lowering average debt and the average interest rate from 6.24% to 5.76%, which directly implies improved leverage and interest coverage.",
+   "citation_checks": [
+    "ok",
+    "ok"
+   ],
    "flags": []
   },
   {
@@ -706,8 +643,9 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The evidence states interest expense decreased due to lower rates on lower average debt from repaying debt with asset sale proceeds, with lower average interest rate and debt balances cited.",
+   "reason": "Net borrowings of $807 million in Q1 2026 vs. $198 million in Q1 2025 support net new borrowings; segment operating income fell 18.8% in 2025 supporting weakened earnings; the metric values match total debt of $7.4 billion and LTM EBITDA of $990 million.",
    "citation_checks": [
+    "ok",
     "ok"
    ],
    "flags": []
@@ -716,10 +654,12 @@
    "claim_id": "financial_risk-6",
    "section": "financial_risk",
    "kind": "quantitative",
-   "verdict": "supported",
+   "verdict": "partially_supported",
    "checked_by": "judge",
-   "reason": "All cited ratios and levels (-0.2%, -6.3%, -0.5%, 1.2%, CFO $748M, capex $658M, total debt $7.4B) match the computed metric values, and the 'modestly exceeding' and 'stable but weak' characterizations reasonably follow from them.",
-   "citation_checks": [],
+   "reason": "The CFO ($748M) and capex ($658M) figures match the LTM metrics, giving positive FCF of $90M; however, the 'reduced capital spending' rationale is only evidenced for Q1 2026 vs Q1 2025 ($84M decrease), not for the full twelve months to 30 September 2026.",
+   "citation_checks": [
+    "ok"
+   ],
    "flags": []
   },
   {
@@ -728,7 +668,7 @@
    "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "Both coverage figures (0.94x FY0 and 0.78x LTM) match the computed metrics, and values below 1.0x directly imply sources fell short of needs in both periods.",
+   "reason": "Both coverage figures (0.78x for the twelve months to 30 September 2026 and 0.94x for FY ended 31 December 2025) match the computed metric values, and coverage below 1.0x directly implies that liquidity covered only part of the next twelve months' needs.",
    "citation_checks": [],
    "flags": []
   },
@@ -738,7 +678,7 @@
    "kind": "quantitative",
    "verdict": "partially_supported",
    "checked_by": "judge",
-   "reason": "Cash ($812M), cash from operations ($748M), short-term debt ($1.3B), and capex ($658M) all match the LTM metrics, but 'no dividends paid' is not supported by any evidence or metric.",
+   "reason": "Cash, operating cash flow, short-term debt, capex, and zero short-term investments match the metric values, but the claim that no dividends were paid is not covered by the evidence (no dividend metric or passage provided).",
    "citation_checks": [],
    "flags": []
   },
@@ -748,8 +688,9 @@
    "kind": "qualitative",
    "verdict": "partially_supported",
    "checked_by": "judge",
-   "reason": "The decline from $4,421 million to $2,975 million is supported, but it occurred between December 31, 2025 and March 31, 2026, not over the twelve months to September 30, 2026.",
+   "reason": "The company does disclose substantial committed availability ($2,975 million of unused credit at March 31, 2026), supporting the conclusion that a coverage metric excluding it would understate liquidity; however, the evidence says nothing about the metric's assumptions or why it excludes undrawn capacity, so that part goes beyond the evidence.",
    "citation_checks": [
+    "ok",
     "ok"
    ],
    "flags": []
@@ -760,7 +701,7 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The evidence confirms the $1,050 million senior notes issuance, the intended use to repay/redeem/repurchase 2027 notes, and the temporary application to revolving credit facility balances.",
+   "reason": "Unused availability under credit agreements fell from $4,421 million to $2,975 million while the company had net borrowings (e.g., $807 million in Q1), consistent with increased borrowings reducing the buffer.",
    "citation_checks": [
     "ok",
     "ok"
@@ -773,8 +714,9 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "All four figures (capex ~$825M, interest $400–425M, rationalization ~$225M, ~$100M cash from working capital) are stated in the passage for the period following fiscal year-end December 31, 2025.",
+   "reason": "The passage states the company issued $1,050 million of 8.875% senior notes due 2032 and intends to use proceeds to repay its 4.875% and 7.625% senior notes due 2027, which addresses those maturities and thus reduces near-term refinancing risk.",
    "citation_checks": [
+    "ok",
     "ok"
    ],
    "flags": []
@@ -785,8 +727,11 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The passage directly states management's belief that liquidity is adequate to fund operating and investing needs and debt maturities for the next twelve months based on existing cash and available credit.",
+   "reason": "All figures match the passage exactly: 2026 capex ~$825 million, interest expense $400–$425 million, ~$100 million working capital cash, and liquidity adequate for the next twelve months.",
    "citation_checks": [
+    "ok",
+    "ok",
+    "ok",
     "ok"
    ],
    "flags": []
@@ -797,7 +742,7 @@
    "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The passage's maturity table shows $1,183M (2026), $1,035M (2027), $802M (2028), $864M (2029) and $506M (2030), matching the claim's figures, and no amounts beyond year five are disclosed.",
+   "reason": "The maturity table shows totals of $1,183M, $1,035M, $802M, $864M and $506M for 2026-2030, matching the claim's rounded figures.",
    "citation_checks": [
     "ok"
    ],
@@ -809,7 +754,7 @@
    "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "All figures in the claim match the computed XBRL metrics: $1.9B due within 24 months, 30.7% share, $6.2B total debt.",
+   "reason": "All three figures ($1.9B debt due within 24 months, 30.7% share, $6.2B total debt for FY2025) match the computed metric values exactly.",
    "citation_checks": [],
    "flags": []
   },
@@ -819,19 +764,17 @@
    "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The metric is 2.38x with cash of $801 million and undrawn revolver assumed zero (not reported in XBRL), and the filing confirms $4,421 million of unused availability at December 31, 2025.",
-   "citation_checks": [
-    "ok"
-   ],
+   "reason": "All claimed figures match the computed metric values.",
+   "citation_checks": [],
    "flags": []
   },
   {
    "claim_id": "maturity_wall-4",
    "section": "maturity_wall",
    "kind": "qualitative",
-   "verdict": "supported",
+   "verdict": "partially_supported",
    "checked_by": "judge",
-   "reason": "The passage directly states liquidity is adequate to fund operating and investing needs and debt maturities for the next twelve months and to respond to further changes in the business environment.",
+   "reason": "The $4,421 million unused availability and $2,749 million first lien revolver figures are supported, but the evidence says nothing about what the near-term maturity cover metric assumes regarding undrawn revolving credit capacity.",
    "citation_checks": [
     "ok"
    ],
@@ -843,9 +786,8 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The evidence confirms the covenant applies only to GEBV and its subsidiaries, caps Consolidated Net GEBV Indebtedness to Consolidated GEBV EBITDA at 3.0 to 1.0, is also in the pan-European accounts receivable securitization facility, and the company was in compliance at September 30, 2026.",
+   "reason": "The claim directly quotes management's statement that liquidity is adequate for operating and investing needs and debt maturities over the next twelve months.",
    "citation_checks": [
-    "ok",
     "ok"
    ],
    "flags": []
@@ -856,7 +798,7 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The passage states $500 million 6.625% senior notes issued June 3, 2025 (fiscal year ended Dec 31, 2025), unsecured senior obligations guaranteed by U.S. and Canadian subsidiaries that also guarantee the U.S. first lien revolving credit facility.",
+   "reason": "The passage states the first lien revolving credit facility limits additional debt, dividends, share repurchases, liens and asset sales, and that both the facility and note indentures include cross-defaults to material indebtedness of Goodyear and its subsidiaries.",
    "citation_checks": [
     "ok",
     "ok"
@@ -869,8 +811,10 @@
    "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "Both figures match the computed XBRL metrics exactly.",
-   "citation_checks": [],
+   "reason": "The leverage and FCF metrics match the computed values, and management's risk statement about difficulty satisfying obligations is quoted directly.",
+   "citation_checks": [
+    "ok"
+   ],
    "flags": []
   },
   {
@@ -879,7 +823,7 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The passages state both that long-term ability to meet obligations and repay maturing indebtedness depends on capital markets access and improved operating results, and that access cannot be assured.",
+   "reason": "The passage directly states all parts of the claim: repayment of maturing indebtedness depends on capital markets access, that access cannot be assured, and liquidity relies on supplier financing programs and accounts receivable factoring which could become unavailable or less attractive.",
    "citation_checks": [
     "ok",
     "ok"
@@ -892,7 +836,7 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The passage directly states that a substantial portion of assets is subject to liens securing indebtedness, limiting the ability to pledge remaining assets as security for additional secured debt.",
+   "reason": "The passage confirms $1.2 billion of variable rate debt as of December 31, 2025 and that rising rates would increase debt service obligations; the 2.39x EBITDA interest coverage for LTM 30 September 2026 is confirmed by the metric value.",
    "citation_checks": [
     "ok"
    ],
@@ -904,7 +848,7 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The passage explicitly states that inability to access capital markets could require deferring planned capital expenditures, reducing discretionary spending, selling additional assets and restructuring existing debt.",
+   "reason": "The passage directly states that a substantial portion of assets is under liens securing indebtedness, limiting the ability to pledge remaining assets as security for additional secured debt.",
    "citation_checks": [
     "ok"
    ],
@@ -916,22 +860,8 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The evidence directly states all elements of the claim: variable rate borrowings create interest rate risk, rising rates would increase debt service and use more available cash, and no assurance hedging will offset increases.",
+   "reason": "The passage directly states that declines in vehicle production or replacement tire demand could reduce sales volumes and cause under-absorbed fixed costs, and describes this as an adverse effect, though cash flow for debt service is not explicitly mentioned.",
    "citation_checks": [
-    "ok",
-    "ok"
-   ],
-   "flags": []
-  },
-  {
-   "claim_id": "key_risks-6",
-   "section": "key_risks",
-   "kind": "qualitative",
-   "verdict": "partially_supported",
-   "checked_by": "judge",
-   "reason": "Cyclical automotive production and under-absorbed fixed costs are directly stated, but the cash flow pressure is not mentioned in the evidence.",
-   "citation_checks": [
-    "ok",
     "ok"
    ],
    "flags": []
@@ -942,7 +872,7 @@
    "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "Scorecard metrics confirm SB-6 grade, weighted score 5.55, all six factors scored (not provisional), and that the SB grade is a stylized scorecard grade, not a credit rating.",
+   "reason": "The scorecard metrics confirm SB-6 grade, weighted score of 5.55, and that all six factors were scored (not provisional).",
    "citation_checks": [],
    "flags": []
   },
@@ -950,9 +880,9 @@
    "claim_id": "rating_rationale-2",
    "section": "rating_rationale",
    "kind": "quantitative",
-   "verdict": "partially_supported",
+   "verdict": "unsupported",
    "checked_by": "judge",
-   "reason": "Interest coverage is indeed band 5 with the highest weight (25.0%), and FCF/debt is band 5 with 20.0% weight on a 1.2% ratio, but calling band 5 'strongest' is wrong since band 1 is strongest and band 5 is second-weakest of six.",
+   "reason": "The metric values confirm EBITDA/interest and FCF/debt are each band 5 with weights 25% and 20%, but the claim that these are the 'strongest-scoring factors' is wrong: band 1 is strongest, and all other factors scored at band 6, making bands 5 merely the least weak among weak factors; the claim of 'strongest' is at best misleading given no factor scored strongly.",
    "citation_checks": [],
    "flags": []
   },
@@ -962,7 +892,7 @@
    "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "All four metrics, their values, band 6 ratings, and weights match the scorecard evidence exactly.",
+   "reason": "All four factors are shown at band 6 (the weakest) with the stated weights, and the other two factors score band 5, so these are the weakest-scoring factors.",
    "citation_checks": [],
    "flags": []
   },
@@ -970,10 +900,13 @@
    "claim_id": "rating_rationale-4",
    "section": "rating_rationale",
    "kind": "qualitative",
-   "verdict": "supported",
+   "verdict": "partially_supported",
    "checked_by": "judge",
-   "reason": "The filing explicitly states the company has a substantial amount of debt and that a substantial portion of assets is subject to liens securing it, and the scorecard's weakest-band (band 6 of 6) leverage scores (debt/EBITDA and net debt/EBITDA) are consistent with those disclosures.",
+   "reason": "FY2025 improvement (debt repaid with sale proceeds, average rate down to 5.76%, interest expense down) is supported, and Q1 2026 net borrowings of $807 million support new borrowings; but the evidence covers only the first three months of 2026, not the twelve months to 30 September 2026, and provides no data showing leverage rose or that segment earnings weakened in that 2026 period.",
    "citation_checks": [
+    "ok",
+    "ok",
+    "ok",
     "ok"
    ],
    "flags": []
@@ -982,10 +915,12 @@
    "claim_id": "rating_rationale-5",
    "section": "rating_rationale",
    "kind": "qualitative",
-   "verdict": "supported",
+   "verdict": "partially_supported",
    "checked_by": "judge",
-   "reason": "The passage directly states the causal chain: interest expense fell due to lower interest rates on lower average debt levels from repaying debt with asset sale proceeds, and the scorecard shows interest coverage scoring strongly (band 5 of 6).",
+   "reason": "Management's statement on adequate liquidity for the next twelve months and the new senior notes retiring the 2027 maturities are supported, but the evidence shows unused availability only from Dec 31, 2025 to Mar 31, 2026 (a three-month comparison), not a decline over the twelve months to Sept 30, 2026, and no Sept 30 availability figure is given.",
    "citation_checks": [
+    "ok",
+    "ok",
     "ok"
    ],
    "flags": []
@@ -993,14 +928,11 @@
   {
    "claim_id": "rating_rationale-6",
    "section": "rating_rationale",
-   "kind": "qualitative",
+   "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The scorecard shows liquidity_coverage and near_term_maturity_cover both at band 6 of 6 (weakest band), and the passages state the liquidity adequacy for the next twelve months and that access to capital markets cannot be assured.",
-   "citation_checks": [
-    "ok",
-    "ok"
-   ],
+   "reason": "The evidence explicitly labels the SB grade as a stylized scorecard grade, not a credit rating, with SB-6 as the latest value.",
+   "citation_checks": [],
    "flags": []
   }
  ],

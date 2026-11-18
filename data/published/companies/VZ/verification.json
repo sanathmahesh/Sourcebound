@@ -5,15 +5,15 @@
  "writer_model": "zai-org/GLM-5.3",
  "judge_model": "zai-org/GLM-5.3",
  "summary": {
-  "claims": 34,
-  "supported": 28,
-  "partially_supported": 6,
+  "claims": 35,
+  "supported": 33,
+  "partially_supported": 2,
   "unsupported": 0,
-  "checked_by_judge": 34,
+  "checked_by_judge": 35,
   "checked_deterministically": 0,
-  "metric_figures": 56,
-  "quoted_figures": 11,
-  "raw_numbers_rejected": 6,
+  "metric_figures": 55,
+  "quoted_figures": 2,
+  "raw_numbers_rejected": 4,
   "repairs": 3,
   "sections_without_draft": 0
  },
@@ -35,51 +35,16 @@
   {
    "claim_id": "business_profile-3",
    "kind": "metric",
-   "value": "$138.2 billion",
-   "metric_id": "revenue:FY0",
+   "value": "$134.0 billion",
+   "metric_id": "revenue:FY-2",
    "chunk_id": null
   },
   {
    "claim_id": "business_profile-3",
    "kind": "metric",
-   "value": "$47.6 billion",
-   "metric_id": "ebitda:FY0",
+   "value": "$138.2 billion",
+   "metric_id": "revenue:FY0",
    "chunk_id": null
-  },
-  {
-   "claim_id": "business_profile-6",
-   "kind": "quoted",
-   "value": "89,900",
-   "metric_id": null,
-   "chunk_id": "VZ-000073271226000007-0030"
-  },
-  {
-   "claim_id": "business_profile-6",
-   "kind": "quoted",
-   "value": "89",
-   "metric_id": null,
-   "chunk_id": "VZ-000073271226000007-0030"
-  },
-  {
-   "claim_id": "business_profile-6",
-   "kind": "quoted",
-   "value": "27",
-   "metric_id": null,
-   "chunk_id": "VZ-000073271226000007-0032"
-  },
-  {
-   "claim_id": "business_profile-6",
-   "kind": "quoted",
-   "value": "31",
-   "metric_id": null,
-   "chunk_id": "VZ-000073271226000007-0030"
-  },
-  {
-   "claim_id": "business_profile-6",
-   "kind": "quoted",
-   "value": "2025",
-   "metric_id": null,
-   "chunk_id": "VZ-000073271226000007-0030"
   },
   {
    "claim_id": "financial_risk-1",
@@ -91,50 +56,64 @@
   {
    "claim_id": "financial_risk-1",
    "kind": "metric",
-   "value": "3.09x",
-   "metric_id": "debt_to_ebitda:FY-1",
-   "chunk_id": null
-  },
-  {
-   "claim_id": "financial_risk-1",
-   "kind": "metric",
    "value": "3.42x",
    "metric_id": "debt_to_ebitda:LTM",
    "chunk_id": null
   },
   {
-   "claim_id": "financial_risk-2",
+   "claim_id": "financial_risk-1",
    "kind": "metric",
    "value": "3.67x",
    "metric_id": "net_leverage:FY-2",
    "chunk_id": null
   },
   {
-   "claim_id": "financial_risk-2",
-   "kind": "metric",
-   "value": "3.00x",
-   "metric_id": "net_leverage:FY-1",
-   "chunk_id": null
-  },
-  {
-   "claim_id": "financial_risk-2",
+   "claim_id": "financial_risk-1",
    "kind": "metric",
    "value": "3.33x",
    "metric_id": "net_leverage:LTM",
    "chunk_id": null
   },
   {
-   "claim_id": "financial_risk-3",
+   "claim_id": "financial_risk-2",
    "kind": "metric",
    "value": "7.33x",
    "metric_id": "interest_coverage:FY-2",
    "chunk_id": null
   },
   {
-   "claim_id": "financial_risk-3",
+   "claim_id": "financial_risk-2",
    "kind": "metric",
    "value": "6.36x",
    "metric_id": "interest_coverage:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "financial_risk-2",
+   "kind": "metric",
+   "value": "$7.6 billion",
+   "metric_id": "interest_expense:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "financial_risk-2",
+   "kind": "metric",
+   "value": "$48.6 billion",
+   "metric_id": "ebitda:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "financial_risk-4",
+   "kind": "metric",
+   "value": "$158.2 billion",
+   "metric_id": "total_debt:FY0",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "financial_risk-4",
+   "kind": "metric",
+   "value": "$166.2 billion",
+   "metric_id": "total_debt:LTM",
    "chunk_id": null
   },
   {
@@ -152,6 +131,20 @@
    "chunk_id": null
   },
   {
+   "claim_id": "financial_risk-6",
+   "kind": "metric",
+   "value": "$39.0 billion",
+   "metric_id": "cfo:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "financial_risk-6",
+   "kind": "metric",
+   "value": "$16.7 billion",
+   "metric_id": "capex:LTM",
+   "chunk_id": null
+  },
+  {
    "claim_id": "liquidity-1",
    "kind": "metric",
    "value": "1.48x",
@@ -166,28 +159,28 @@
    "chunk_id": null
   },
   {
-   "claim_id": "liquidity-2",
+   "claim_id": "liquidity-1",
    "kind": "metric",
    "value": "$4.5 billion",
    "metric_id": "cash:LTM",
    "chunk_id": null
   },
   {
-   "claim_id": "liquidity-2",
+   "claim_id": "liquidity-1",
    "kind": "metric",
    "value": "$12.0 billion",
    "metric_id": "undrawn_revolver:LTM",
    "chunk_id": null
   },
   {
-   "claim_id": "liquidity-2",
+   "claim_id": "liquidity-1",
    "kind": "metric",
    "value": "$39.0 billion",
    "metric_id": "cfo:LTM",
    "chunk_id": null
   },
   {
-   "claim_id": "liquidity-2",
+   "claim_id": "liquidity-1",
    "kind": "metric",
    "value": "$23.9 billion",
    "metric_id": "short_term_debt:LTM",
@@ -196,58 +189,30 @@
   {
    "claim_id": "liquidity-2",
    "kind": "metric",
+   "value": "1.06x",
+   "metric_id": "liquidity_coverage:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "liquidity-3",
+   "kind": "metric",
+   "value": "$39.0 billion",
+   "metric_id": "cfo:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "liquidity-3",
+   "kind": "metric",
    "value": "$16.7 billion",
    "metric_id": "capex:LTM",
    "chunk_id": null
   },
   {
-   "claim_id": "liquidity-2",
+   "claim_id": "liquidity-3",
    "kind": "metric",
    "value": "$11.7 billion",
    "metric_id": "dividends:LTM",
    "chunk_id": null
-  },
-  {
-   "claim_id": "liquidity-3",
-   "kind": "quoted",
-   "value": "12.0",
-   "metric_id": null,
-   "chunk_id": "VZ-000073271226000052-0048"
-  },
-  {
-   "claim_id": "liquidity-3",
-   "kind": "quoted",
-   "value": "2026",
-   "metric_id": null,
-   "chunk_id": "VZ-000073271226000052-0048"
-  },
-  {
-   "claim_id": "liquidity-3",
-   "kind": "quoted",
-   "value": "2030",
-   "metric_id": null,
-   "chunk_id": "VZ-000073271226000052-0048"
-  },
-  {
-   "claim_id": "liquidity-5",
-   "kind": "quoted",
-   "value": "13.2",
-   "metric_id": null,
-   "chunk_id": "VZ-000073271226000052-0038"
-  },
-  {
-   "claim_id": "liquidity-5",
-   "kind": "quoted",
-   "value": "30",
-   "metric_id": null,
-   "chunk_id": "VZ-000073271226000052-0038"
-  },
-  {
-   "claim_id": "liquidity-5",
-   "kind": "quoted",
-   "value": "2026",
-   "metric_id": null,
-   "chunk_id": "VZ-000073271226000052-0038"
   },
   {
    "claim_id": "maturity_wall-1",
@@ -327,28 +292,42 @@
    "chunk_id": null
   },
   {
-   "claim_id": "maturity_wall-3",
+   "claim_id": "maturity_wall-4",
    "kind": "metric",
    "value": "$19.0 billion",
    "metric_id": "cash:FY0",
    "chunk_id": null
   },
   {
-   "claim_id": "maturity_wall-3",
+   "claim_id": "maturity_wall-4",
    "kind": "metric",
    "value": "$13.7 billion",
    "metric_id": "undrawn_revolver:FY0",
    "chunk_id": null
   },
   {
-   "claim_id": "key_risks-1",
+   "claim_id": "maturity_wall-4",
    "kind": "metric",
-   "value": "6.36x",
-   "metric_id": "interest_coverage:LTM",
+   "value": "$28.2 billion",
+   "metric_id": "debt_due_24m:FY0",
    "chunk_id": null
   },
   {
-   "claim_id": "key_risks-4",
+   "claim_id": "maturity_wall-6",
+   "kind": "quoted",
+   "value": "2025",
+   "metric_id": null,
+   "chunk_id": "VZ-000073271226000007-0149"
+  },
+  {
+   "claim_id": "maturity_wall-6",
+   "kind": "quoted",
+   "value": "2026",
+   "metric_id": null,
+   "chunk_id": "VZ-000073271226000007-0149"
+  },
+  {
+   "claim_id": "key_risks-3",
    "kind": "metric",
    "value": "3.42x",
    "metric_id": "debt_to_ebitda:LTM",
@@ -369,35 +348,35 @@
    "chunk_id": null
   },
   {
-   "claim_id": "rating_rationale-2",
+   "claim_id": "rating_rationale-3",
    "kind": "metric",
    "value": "3",
    "metric_id": "band_interest_coverage:latest",
    "chunk_id": null
   },
   {
-   "claim_id": "rating_rationale-2",
+   "claim_id": "rating_rationale-3",
+   "kind": "metric",
+   "value": "6.36x",
+   "metric_id": "interest_coverage:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "rating_rationale-3",
    "kind": "metric",
    "value": "25.0%",
    "metric_id": "weight_interest_coverage:latest",
    "chunk_id": null
   },
   {
-   "claim_id": "rating_rationale-3",
+   "claim_id": "rating_rationale-4",
    "kind": "metric",
    "value": "5",
    "metric_id": "band_liquidity_coverage:latest",
    "chunk_id": null
   },
   {
-   "claim_id": "rating_rationale-3",
-   "kind": "metric",
-   "value": "15.0%",
-   "metric_id": "weight_liquidity_coverage:latest",
-   "chunk_id": null
-  },
-  {
-   "claim_id": "rating_rationale-3",
+   "claim_id": "rating_rationale-4",
    "kind": "metric",
    "value": "1.06x",
    "metric_id": "liquidity_coverage:LTM",
@@ -406,8 +385,8 @@
   {
    "claim_id": "rating_rationale-4",
    "kind": "metric",
-   "value": "3.42x",
-   "metric_id": "debt_to_ebitda:LTM",
+   "value": "15.0%",
+   "metric_id": "weight_liquidity_coverage:latest",
    "chunk_id": null
   },
   {
@@ -420,36 +399,8 @@
   {
    "claim_id": "rating_rationale-4",
    "kind": "metric",
-   "value": "20.0%",
-   "metric_id": "weight_debt_to_ebitda:latest",
-   "chunk_id": null
-  },
-  {
-   "claim_id": "rating_rationale-4",
-   "kind": "metric",
-   "value": "3.33x",
-   "metric_id": "net_leverage:LTM",
-   "chunk_id": null
-  },
-  {
-   "claim_id": "rating_rationale-4",
-   "kind": "metric",
    "value": "4",
    "metric_id": "band_net_leverage:latest",
-   "chunk_id": null
-  },
-  {
-   "claim_id": "rating_rationale-4",
-   "kind": "metric",
-   "value": "10.0%",
-   "metric_id": "weight_net_leverage:latest",
-   "chunk_id": null
-  },
-  {
-   "claim_id": "rating_rationale-4",
-   "kind": "metric",
-   "value": "13.5%",
-   "metric_id": "fcf_to_debt:LTM",
    "chunk_id": null
   },
   {
@@ -462,29 +413,8 @@
   {
    "claim_id": "rating_rationale-4",
    "kind": "metric",
-   "value": "20.0%",
-   "metric_id": "weight_fcf_to_debt:latest",
-   "chunk_id": null
-  },
-  {
-   "claim_id": "rating_rationale-4",
-   "kind": "metric",
-   "value": "0.86x",
-   "metric_id": "near_term_maturity_cover:FY0",
-   "chunk_id": null
-  },
-  {
-   "claim_id": "rating_rationale-4",
-   "kind": "metric",
    "value": "4",
    "metric_id": "band_near_term_maturity_cover:latest",
-   "chunk_id": null
-  },
-  {
-   "claim_id": "rating_rationale-4",
-   "kind": "metric",
-   "value": "10.0%",
-   "metric_id": "weight_near_term_maturity_cover:latest",
    "chunk_id": null
   }
  ],
@@ -495,7 +425,7 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The claim matches the MD&A overview passage verbatim.",
+   "reason": "The claim matches the filing text verbatim.",
    "citation_checks": [
     "ok"
    ],
@@ -507,9 +437,8 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The evidence directly states the two reportable segments (Consumer and Business) are operated and managed as strategic business units.",
+   "reason": "The filing explicitly states Verizon has two reportable segments, Consumer and Business, operated and managed as strategic business units.",
    "citation_checks": [
-    "ok",
     "ok"
    ],
    "flags": []
@@ -520,7 +449,7 @@
    "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "All four figures (LTM revenue $139.4B, EBITDA $48.6B, FY0 revenue $138.2B, EBITDA $47.6B) match the metric values exactly.",
+   "reason": "All figures in the claim match the computed metric values exactly.",
    "citation_checks": [],
    "flags": []
   },
@@ -530,7 +459,7 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The claim is a direct paraphrase of the MD&A overview passage.",
+   "reason": "The claim restates the passage exactly.",
    "citation_checks": [
     "ok"
    ],
@@ -540,11 +469,10 @@
    "claim_id": "business_profile-5",
    "section": "business_profile",
    "kind": "qualitative",
-   "verdict": "supported",
+   "verdict": "partially_supported",
    "checked_by": "judge",
-   "reason": "The passage states exactly that the industry is highly competitive, competition is expected to remain intense as traditional and non-traditional participants seek market share, and that Verizon's attractive offerings, high-quality networks, and customer base support its competitive position.",
+   "reason": "The passage supports attractive offerings/value proposition, high-quality networks, and managing through changing market conditions, but 'high-quality customer base' is not directly stated (only 'customer base' in that sentence) and 'cash flow stability' is not mentioned in the evidence.",
    "citation_checks": [
-    "ok",
     "ok"
    ],
    "flags": []
@@ -555,7 +483,7 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "All figures (89,900 FTEs, 89% U.S.-based, ~27% union-represented by two unions as of Dec 31, 2025) are directly stated in the passages.",
+   "reason": "Each element of the claim—competitive factors including prices, network performance, and evolving consumer preferences; adverse U.S./international economic conditions including inflation and changing interest rates; and cyberattacks and system failures affecting networks—is explicitly listed among factors that could affect future results.",
    "citation_checks": [
     "ok",
     "ok"
@@ -568,7 +496,7 @@
    "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "All three Debt/EBITDA figures (3.72x, 3.09x, 3.42x) exactly match the computed metric values, and characterizing this modest range as 'stable' is consistent with the data.",
+   "reason": "All four leverage figures (3.72x, 3.42x, 3.67x, 3.33x) exactly match the computed metric values, and the small changes are consistent with the 'broadly stable' characterization.",
    "citation_checks": [],
    "flags": []
   },
@@ -578,29 +506,31 @@
    "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The metric values exactly match the claimed net leverage figures of 3.67x (FY2023), 3.00x (FY2024), and 3.33x (LTM to 30 September 2026).",
+   "reason": "All figures in the claim match the computed metric values exactly: EBITDA/interest declined from 7.33x (FY2023) to 6.36x (LTM), with LTM interest expense of $7.6 billion and LTM EBITDA of $48.6 billion, confirming the deterioration.",
    "citation_checks": [],
    "flags": []
   },
   {
    "claim_id": "financial_risk-3",
    "section": "financial_risk",
-   "kind": "quantitative",
+   "kind": "qualitative",
    "verdict": "partially_supported",
    "checked_by": "judge",
-   "reason": "The 7.33x and 6.36x values match the metric scorecard, but there is no evidence for the claim that the largest decline occurred in the twelve months to 30 September 2026 (no intermediate period data or passages provided).",
-   "citation_checks": [],
+   "reason": "The evidence supports higher total interest costs (9M 2026: $6,342M vs $5,505M) and lower capitalized interest due to C-Band licenses being placed into service, but the deterioration in interest coverage itself is not shown in the evidence, and the annual data shows total interest costs actually decreased in 2025 vs 2024.",
+   "citation_checks": [
+    "ok",
+    "ok"
+   ],
    "flags": []
   },
   {
    "claim_id": "financial_risk-4",
    "section": "financial_risk",
-   "kind": "qualitative",
-   "verdict": "partially_supported",
+   "kind": "quantitative",
+   "verdict": "supported",
    "checked_by": "judge",
-   "reason": "Evidence shows nine-month interest costs rose 15.2% and average debt outstanding increased, but the claim is framed for the twelve months to 30 September 2026, and no evidence is given on interest coverage (EBIT/interest) or its deterioration.",
+   "reason": "The metric values confirm total debt of $158.2B at FY2025 and $166.2B at LTM 30 Sept 2026, and the filing confirms assets acquired as part of the Frontier acquisition during the period.",
    "citation_checks": [
-    "ok",
     "ok"
    ],
    "flags": []
@@ -609,11 +539,10 @@
    "claim_id": "financial_risk-5",
    "section": "financial_risk",
    "kind": "qualitative",
-   "verdict": "partially_supported",
+   "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The Frontier acquisition adding depreciable and amortizable assets is supported, but the evidence does not establish a rise in leverage after fiscal year end 31 December 2024 or its timing relative to the acquisition.",
+   "reason": "The table shows FCF rose $2,250M due to operating cash flow up $1,913M while capex declined modestly by $337M.",
    "citation_checks": [
-    "ok",
     "ok"
    ],
    "flags": []
@@ -621,14 +550,11 @@
   {
    "claim_id": "financial_risk-6",
    "section": "financial_risk",
-   "kind": "qualitative",
-   "verdict": "partially_supported",
+   "kind": "quantitative",
+   "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The 12.4% and 13.5% FCF/debt values match the scorecard, but the stated drivers (higher operating cash flow, lower capex) are only shown for the nine months ended September 30, 2026 vs 2025, not versus the fiscal year ended 31 December 2023, and no FY2023 cash flow figures are given.",
-   "citation_checks": [
-    "ok",
-    "ok"
-   ],
+   "reason": "All figures match the computed metrics: 12.4% FY2023, 13.5% LTM Sep-2026, LTM CFO $39.0B, capex $16.7B; 'stable' is a reasonable characterization of the modest change.",
+   "citation_checks": [],
    "flags": []
   },
   {
@@ -637,10 +563,8 @@
    "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The decline from 1.48x to 1.06x matches the computed metric values, and both figures above 1.0x support that liquidity sources still exceed but more tightly cover the next twelve months' needs.",
-   "citation_checks": [
-    "ok"
-   ],
+   "reason": "All figures (1.48x FY, 1.06x LTM, $4.5B cash, $12.0B undrawn revolver, $39.0B CFO, $23.9B short-term debt) match the metric values provided.",
+   "citation_checks": [],
    "flags": []
   },
   {
@@ -649,21 +573,18 @@
    "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "All six LTM figures in the claim ($4.5B cash, $12.0B undrawn revolver, $39.0B cash from operations, $23.9B short-term debt, $16.7B capex, $11.7B dividends paid) exactly match the computed metric values.",
+   "reason": "A liquidity coverage ratio of 1.06x for the twelve months to 30 September 2026 directly indicates liquidity sources exceed the combined twelve-month needs (debt maturities, capex, dividends) by a modest margin, consistent with the claim.",
    "citation_checks": [],
    "flags": []
   },
   {
    "claim_id": "liquidity-3",
    "section": "liquidity",
-   "kind": "qualitative",
+   "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "All elements—September 2026 amendment of the $12.0 billion facility, maturity extension to 2030, and no drawings since inception—are stated in the evidence; the backup liquidity characterization follows from the facility's terms.",
-   "citation_checks": [
-    "ok",
-    "ok"
-   ],
+   "reason": "The metric values confirm CFO of $39.0B exceeds capex ($16.7B) plus dividends ($11.7B) = $28.4B, leaving a ~$10.6B surplus that follows directly as an internal funding cushion.",
+   "citation_checks": [],
    "flags": []
   },
   {
@@ -672,7 +593,7 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The passage states the revolving credit facility requires no financial covenants or specified credit ratings and permits borrowing after a material adverse change.",
+   "reason": "Passage (1) directly states all parts of the claim about financial covenants, credit ratings, and material adverse change.",
    "citation_checks": [
     "ok"
    ],
@@ -684,9 +605,20 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The filing states Verizon had no commercial paper outstanding as of September 30, 2026, and issued $13.2 billion net proceeds with $13.2 billion in principal repayments during the nine months, though the 'twelve months' phrasing in the claim is a minor inaccuracy since the evidence covers nine months.",
+   "reason": "The filing directly states no drawings against the revolving credit facility since inception as of September 30, 2026.",
    "citation_checks": [
-    "ok",
+    "ok"
+   ],
+   "flags": []
+  },
+  {
+   "claim_id": "liquidity-6",
+   "section": "liquidity",
+   "kind": "qualitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The claim directly restates management's statement in the liquidity discussion.",
+   "citation_checks": [
     "ok"
    ],
    "flags": []
@@ -697,7 +629,7 @@
    "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "All six maturity amounts in the claim exactly match the XBRL-computed metric values.",
+   "reason": "All six debt maturity figures in the claim exactly match the XBRL-computed metric values for the fiscal year ended 31 December 2025.",
    "citation_checks": [],
    "flags": []
   },
@@ -707,7 +639,7 @@
    "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "Metric values confirm $28.2B debt due within 24 months, 17.8% share, and $158.2B total debt for FY ending 31 December 2025.",
+   "reason": "All figures ($28.2B within 24 months, 17.8% share, $158.2B total debt) match the computed metrics, and the 17.8% share directly implies the majority matures beyond 24 months.",
    "citation_checks": [],
    "flags": []
   },
@@ -717,22 +649,18 @@
    "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "All figures in the claim (0.86x cover, $28.2B near-term maturities, $19.0B cash, $13.7B undrawn revolver) match the computed metric values exactly, and the characterization that maturities exceed cash follows from a cover below 1.0x.",
+   "reason": "The metric values confirm near-term maturity cover of 0.86x and debt due within 24 months of $28.2 billion, which directly supports the claim that cash and short-term investments do not fully cover near-term debt.",
    "citation_checks": [],
    "flags": []
   },
   {
    "claim_id": "maturity_wall-4",
    "section": "maturity_wall",
-   "kind": "qualitative",
+   "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "Both passages explicitly state compliance with all restrictive covenants and that covenants are typical for large, investment grade companies.",
-   "citation_checks": [
-    "ok",
-    "ok",
-    "ok"
-   ],
+   "reason": "All three figures match the evidence: 19.0 + 13.7 = 32.7 billion exceeds 28.2 billion of debt due within 24 months.",
+   "citation_checks": [],
    "flags": []
   },
   {
@@ -741,7 +669,7 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The filing explicitly states the December 31, 2025 cash balance included net cash proceeds from notes issued to fund the Frontier acquisition, and that the increase contributed to the elevated balance.",
+   "reason": "The passage directly states both that covenants are typical for large investment grade companies and that Verizon and its consolidated subsidiaries are in compliance with all restrictive covenants.",
    "citation_checks": [
     "ok"
    ],
@@ -753,7 +681,7 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The nine-month September 30, 2026 filing shows ABS Notes issuances ($1,538 million in March 2026) during the period, and the $1.0 billion principal repayments for an anticipated redemption occurred in March 2026, within the twelve months to September 30, 2026.",
+   "reason": "Each part of the claim is directly stated in the evidence passages.",
    "citation_checks": [
     "ok",
     "ok"
@@ -766,7 +694,7 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The passage states Verizon's debt service obligations require dedicating significant operating cash flow to principal and interest, reducing funds for working capital, capital expenditures and other purposes, and the scorecard metric confirms 6.36x interest coverage for the LTM to 30 September 2026.",
+   "reason": "The claim directly restates the risk factor language in the filing.",
    "citation_checks": [
     "ok"
    ],
@@ -778,7 +706,7 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The passage states exactly that the company is exposed to increased interest rate risk to the extent its debt obligations carry variable rates or it must refinance existing debt bearing interest below current market rates.",
+   "reason": "The passage states all claimed effects: higher rates and rating downgrades increase borrowing costs, collateral posting, and refinancing difficulty.",
    "citation_checks": [
     "ok"
    ],
@@ -790,7 +718,7 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The passage states that adverse financial market changes, including higher interest rates, or a decrease in debt ratings could increase borrowing costs and make it harder to obtain financing or refinance indebtedness.",
+   "reason": "The passage states both variable-rate and refinancing interest rate risk, and the 3.42x Debt/EBITDA metric matches the claim's leverage figure.",
    "citation_checks": [
     "ok"
    ],
@@ -802,7 +730,7 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The passage explicitly states initiatives to reduce indebtedness and achieve/maintain target leverage ratios may be unsuccessful due to macroeconomic, business and other factors, and the XBRL-derived debt/EBITDA metric confirms 3.42x for the LTM to 30 September 2026.",
+   "reason": "The claim is a verbatim statement from the risk factor passage.",
    "citation_checks": [
     "ok"
    ],
@@ -814,7 +742,7 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The passage states unfavorable economic conditions (recession, inflation) could hurt demand and affordability, increase customers unable to pay bills, and amplify risks to competitive position and margins.",
+   "reason": "The passage states recession/inflation could reduce demand for products and services, increase customers unable to pay bills, and amplify other risks including margins.",
    "citation_checks": [
     "ok"
    ],
@@ -824,9 +752,9 @@
    "claim_id": "rating_rationale-1",
    "section": "rating_rationale",
    "kind": "quantitative",
-   "verdict": "partially_supported",
+   "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The SB-4 grade, 3.90 weighted score, and 'stylized scorecard grade, not a credit rating' framing are all confirmed by the scorecard values, but the evidence gives only 'latest' figures and never states the twelve months to 30 September 2026 period.",
+   "reason": "Metric values confirm SB-4 grade, weighted score 3.90, and that it is a stylized scorecard grade, not a credit rating.",
    "citation_checks": [],
    "flags": []
   },
@@ -836,7 +764,7 @@
    "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "Evidence confirms all six factors scored (grade not provisional) and interest coverage is the strongest band at 3 with the highest weight of 25.0%.",
+   "reason": "The scorecard data explicitly states the grade is not provisional and all six factors were scored, each with a band value.",
    "citation_checks": [],
    "flags": []
   },
@@ -846,7 +774,7 @@
    "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "Liquidity sources/uses is band 5 (the highest/weakest band among the six factors), weight 15.0%, and liquidity coverage is 1.06x for the twelve months to 30 September 2026 — all matching the metric evidence.",
+   "reason": "Interest coverage has the best (lowest) band of all six factors at 3, the LTM value of 6.36x, and the highest weight at 25.0%, matching every part of the claim.",
    "citation_checks": [],
    "flags": []
   },
@@ -856,7 +784,7 @@
    "kind": "quantitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "All metric values, bands, and weights match the computed scorecard; band 4 of 6 is reasonably characterized as the middle of the scale.",
+   "reason": "Metric values confirm liquidity coverage is band 5 at 1.06x with 15.0% weight, weaker than the band-4 factors (debt/EBITDA, net leverage, FCF/debt, near-term maturity cover) and interest coverage (band 3), making it the weakest-scoring factor.",
    "citation_checks": [],
    "flags": []
   },
@@ -864,10 +792,12 @@
    "claim_id": "rating_rationale-5",
    "section": "rating_rationale",
    "kind": "qualitative",
-   "verdict": "partially_supported",
+   "verdict": "supported",
    "checked_by": "judge",
-   "reason": "The evidence supports Verizon's scale, diversified services, and two Consumer/Business segments, and shows coverage/leverage factor scores, but the causal claim that segments 'underpin' cash generation is not established by the evidence.",
+   "reason": "All three parts of the claim are directly stated in the evidence: leading provider status, no financial covenants/credit rating requirements on the revolver, and sufficient sources of funds beyond 12 months.",
    "citation_checks": [
+    "ok",
+    "ok",
     "ok"
    ],
    "flags": []
@@ -878,7 +808,7 @@
    "kind": "qualitative",
    "verdict": "supported",
    "checked_by": "judge",
-   "reason": "All elements of the claim are supported: significant cash flow dedicated to principal and interest, increased interest rate and refinancing risk, and the undrawn revolver with no drawings since inception permitting borrowing after a material adverse change.",
+   "reason": "Both the substantial debt requiring dedicated cash flow to principal and interest, and the risk that adverse economic conditions impair customers' ability to pay bills, are stated verbatim in the evidence passages.",
    "citation_checks": [
     "ok",
     "ok"

@@ -46,8 +46,8 @@
      "id": "business_profile-1",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "The claim matches the MD&A overview passage verbatim.",
-     "evidence_quote": "Verizon Communications Inc. is a holding company that, acting through its subsidiaries, is one of the world's leading providers of communications, technology, information and streaming products and services to consumers, businesses and government entities.",
+     "judge_reason": "The claim matches the filing text verbatim.",
+     "evidence_quote": "Verizon Communications Inc. is a holding company that, acting through its subsidiaries, is one of the world’s leading providers of communications, technology, information and streaming products and services to consumers, businesses and government entities.",
      "checked_by": "judge",
      "segments": [
       {
@@ -60,7 +60,7 @@
      "citations": [
       {
        "chunk_id": "VZ-000073271226000007-0085",
-       "quote": "Verizon Communications Inc. is a holding company that, acting through its subsidiaries, is one of the world’s leading providers of communications, technology, information and streaming products and services to consumers, businesses and government entities.",
+       "quote": "is one of the world's leading providers of communications, technology, information and streaming products and services to consumers, businesses and government entities",
        "check": "ok"
       }
      ],
@@ -70,13 +70,13 @@
      "id": "business_profile-2",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "The evidence directly states the two reportable segments (Consumer and Business) are operated and managed as strategic business units.",
-     "evidence_quote": "We have two reportable segments that we operate and manage as strategic business units - Verizon Consumer Group (Consumer) and Verizon Business Group (Business).",
+     "judge_reason": "The filing explicitly states Verizon has two reportable segments, Consumer and Business, operated and managed as strategic business units.",
+     "evidence_quote": "We have two reportable segments that we operate and manage as strategic business units - Consumer and Business.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "The company operates and manages its business through two reportable segments, Consumer and Business, which it treats as strategic business units.",
+       "v": "Verizon operates and manages its business through two reportable segments, Consumer and Business, which it treats as strategic business units.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -86,11 +86,6 @@
        "chunk_id": "VZ-000073271226000007-0085",
        "quote": "We have two reportable segments that we operate and manage as strategic business units - Consumer and Business.",
        "check": "ok"
-      },
-      {
-       "chunk_id": "VZ-000073271226000052-0097",
-       "quote": "We have two reportable segments that we operate and manage as strategic business units - Verizon Consumer Group (Consumer) and Verizon Business Group (Business).",
-       "check": "ok"
       }
      ],
      "flags": []
@@ -99,13 +94,13 @@
      "id": "business_profile-3",
      "kind": "quantitative",
      "verdict": "supported",
-     "judge_reason": "All four figures (LTM revenue $139.4B, EBITDA $48.6B, FY0 revenue $138.2B, EBITDA $47.6B) match the metric values exactly.",
+     "judge_reason": "All figures in the claim match the computed metric values exactly.",
      "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Verizon operates at substantial scale, with revenue of ",
+       "v": "Verizon operates at large scale, generating revenue of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -129,7 +124,19 @@
       },
       {
        "t": "text",
-       "v": " for the twelve months to 30 September 2026, up from ",
+       "v": " for the twelve months to 30 September 2026, with revenue having grown from ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$134.0 billion",
+       "metric_id": "revenue:FY-2",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in the fiscal year ended 31 December 2023 to ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -137,18 +144,6 @@
        "t": "metric",
        "v": "$138.2 billion",
        "metric_id": "revenue:FY0",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": " and ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "$47.6 billion",
-       "metric_id": "ebitda:FY0",
        "chunk_id": null
       },
       {
@@ -165,37 +160,13 @@
      "id": "business_profile-4",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "The claim is a direct paraphrase of the MD&A overview passage.",
-     "evidence_quote": "With a presence around the world, we offer data, video and voice services and solutions on our networks and platforms that are designed to meet customers' demand for mobility, reliable network connectivity and security.",
+     "judge_reason": "The claim restates the passage exactly.",
+     "evidence_quote": "The telecommunications industry is highly competitive, and we expect competition to remain intense as traditional and non-traditional participants seek increased market share.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "The company offers data, video and voice services and solutions on its networks and platforms to meet customer demand for mobility, reliable network connectivity and security, with a presence around the world.",
-       "metric_id": null,
-       "chunk_id": null
-      }
-     ],
-     "citations": [
-      {
-       "chunk_id": "VZ-000073271226000007-0085",
-       "quote": "With a presence around the world, we offer data, video and voice services and solutions on our networks and platforms that are designed to meet customers’ demand for mobility, reliable network connectivity and security.",
-       "check": "ok"
-      }
-     ],
-     "flags": []
-    },
-    {
-     "id": "business_profile-5",
-     "kind": "qualitative",
-     "verdict": "supported",
-     "judge_reason": "The passage states exactly that the industry is highly competitive, competition is expected to remain intense as traditional and non-traditional participants seek market share, and that Verizon's attractive offerings, high-quality networks, and customer base support its competitive position.",
-     "evidence_quote": "The telecommunications industry is highly competitive, and we expect competition to remain intense as traditional and non-traditional participants seek increased market share. We believe that our attractive offerings and value proposition as well as our high-quality networks and customer base support our competitive position",
-     "checked_by": "judge",
-     "segments": [
-      {
-       "t": "text",
-       "v": "The telecommunications industry is highly competitive, and Verizon expects competition to remain intense as traditional and non-traditional participants seek increased market share, which the company believes it can address through its attractive offerings, high-quality networks and customer base.",
+       "v": "The telecommunications industry in which Verizon operates is highly competitive, and the company expects competition to remain intense as traditional and non-traditional participants seek increased market share.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -205,10 +176,29 @@
        "chunk_id": "VZ-000073271226000007-0128",
        "quote": "The telecommunications industry is highly competitive, and we expect competition to remain intense as traditional and non-traditional participants seek increased market share.",
        "check": "ok"
-      },
+      }
+     ],
+     "flags": []
+    },
+    {
+     "id": "business_profile-5",
+     "kind": "qualitative",
+     "verdict": "partially_supported",
+     "judge_reason": "The passage supports attractive offerings/value proposition, high-quality networks, and managing through changing market conditions, but 'high-quality customer base' is not directly stated (only 'customer base' in that sentence) and 'cash flow stability' is not mentioned in the evidence.",
+     "evidence_quote": "We believe that our attractive offerings and value proposition as well as our high-quality networks and customer base support our competitive position and give us the ability to plan and manage through changing market conditions.",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Verizon believes its attractive offerings and value proposition, high-quality networks and high-quality customer base support its competitive position and its ability to manage through changing market conditions, which is supportive of cash flow stability.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
       {
        "chunk_id": "VZ-000073271226000007-0128",
-       "quote": "we believe that our attractive offerings and value proposition as well as our high-quality networks and customer base support our competitive position",
+       "quote": "our attractive offerings and value proposition as well as our high-quality networks and customer base support our competitive position and give us the ability to plan and manage through changing market conditions",
        "check": "ok"
       }
      ],
@@ -218,86 +208,26 @@
      "id": "business_profile-6",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "All figures (89,900 FTEs, 89% U.S.-based, ~27% union-represented by two unions as of Dec 31, 2025) are directly stated in the passages.",
-     "evidence_quote": "Verizon has approximately 89,900 employees on a full-time equivalent basis as of December 31, 2025, 89% of whom are based in the U.S.",
+     "judge_reason": "Each element of the claim—competitive factors including prices, network performance, and evolving consumer preferences; adverse U.S./international economic conditions including inflation and changing interest rates; and cyberattacks and system failures affecting networks—is explicitly listed among factors that could affect future results.",
+     "evidence_quote": "the effects of competition in the markets in which we operate, including the inability to successfully respond to competitive factors such as prices, promotional incentives, network performance and quality, and evolving consumer preferences;",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Verizon has approximately ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "quoted",
-       "v": "89,900",
-       "metric_id": null,
-       "chunk_id": "VZ-000073271226000007-0030"
-      },
-      {
-       "t": "text",
-       "v": " employees on a full-time equivalent basis, ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "quoted",
-       "v": "89",
-       "metric_id": null,
-       "chunk_id": "VZ-000073271226000007-0030"
-      },
-      {
-       "t": "text",
-       "v": "% of whom are based in the U.S., and approximately ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "quoted",
-       "v": "27",
-       "metric_id": null,
-       "chunk_id": "VZ-000073271226000007-0032"
-      },
-      {
-       "t": "text",
-       "v": "% of employees were represented by two unions as of December ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "quoted",
-       "v": "31",
-       "metric_id": null,
-       "chunk_id": "VZ-000073271226000007-0030"
-      },
-      {
-       "t": "text",
-       "v": ", ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "quoted",
-       "v": "2025",
-       "metric_id": null,
-       "chunk_id": "VZ-000073271226000007-0030"
-      },
-      {
-       "t": "text",
-       "v": ".",
+       "v": "Verizon's future results are exposed to risks including intense price and network-based competition, evolving consumer preferences, adverse conditions in the U.S. and international economies including inflation and changing interest rates, and cyberattacks or system failures affecting its networks.",
        "metric_id": null,
        "chunk_id": null
       }
      ],
      "citations": [
       {
-       "chunk_id": "VZ-000073271226000007-0030",
-       "quote": "Verizon has approximately 89,900 employees on a full-time equivalent basis as of December 31, 2025, 89% of whom are based in the U.S.",
+       "chunk_id": "VZ-000073271226000023-0136",
+       "quote": "adverse conditions in the U.S. and international economies, including inflation and changing interest rates in the markets in which we operate",
        "check": "ok"
       },
       {
-       "chunk_id": "VZ-000073271226000007-0032",
-       "quote": "the two unions that in total represented approximately 27% of our employees as of December 31, 2025.",
+       "chunk_id": "VZ-000073271226000007-0128",
+       "quote": "The telecommunications industry is highly competitive, and we expect competition to remain intense as traditional and non-traditional participants seek increased market share.",
        "check": "ok"
       }
      ],
@@ -324,13 +254,13 @@
      "id": "financial_risk-1",
      "kind": "quantitative",
      "verdict": "supported",
-     "judge_reason": "All three Debt/EBITDA figures (3.72x, 3.09x, 3.42x) exactly match the computed metric values, and characterizing this modest range as 'stable' is consistent with the data.",
+     "judge_reason": "All four leverage figures (3.72x, 3.42x, 3.67x, 3.33x) exactly match the computed metric values, and the small changes are consistent with the 'broadly stable' characterization.",
      "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Debt / EBITDA was stable over the review period, improving from ",
+       "v": "Leverage was broadly stable over the review period, with debt / EBITDA of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -342,19 +272,7 @@
       },
       {
        "t": "text",
-       "v": " in the fiscal year ended 31 December 2023 to ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "3.09x",
-       "metric_id": "debt_to_ebitda:FY-1",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": " in the fiscal year ended 31 December 2024 before rising to ",
+       "v": " in the fiscal year ended 31 December 2023 versus ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -366,25 +284,7 @@
       },
       {
        "t": "text",
-       "v": " in the twelve months to 30 September 2026.",
-       "metric_id": null,
-       "chunk_id": null
-      }
-     ],
-     "citations": [],
-     "flags": []
-    },
-    {
-     "id": "financial_risk-2",
-     "kind": "quantitative",
-     "verdict": "supported",
-     "judge_reason": "The metric values exactly match the claimed net leverage figures of 3.67x (FY2023), 3.00x (FY2024), and 3.33x (LTM to 30 September 2026).",
-     "evidence_quote": "",
-     "checked_by": "judge",
-     "segments": [
-      {
-       "t": "text",
-       "v": "Net leverage followed a similar pattern, declining from ",
+       "v": " in the twelve months to 30 September 2026, and net leverage of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -396,19 +296,7 @@
       },
       {
        "t": "text",
-       "v": " in the fiscal year ended 31 December 2023 to ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "3.00x",
-       "metric_id": "net_leverage:FY-1",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": " in the fiscal year ended 31 December 2024 and then increasing to ",
+       "v": " versus ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -420,7 +308,7 @@
       },
       {
        "t": "text",
-       "v": " in the twelve months to 30 September 2026.",
+       "v": ".",
        "metric_id": null,
        "chunk_id": null
       }
@@ -429,16 +317,16 @@
      "flags": []
     },
     {
-     "id": "financial_risk-3",
+     "id": "financial_risk-2",
      "kind": "quantitative",
-     "verdict": "partially_supported",
-     "judge_reason": "The 7.33x and 6.36x values match the metric scorecard, but there is no evidence for the claim that the largest decline occurred in the twelve months to 30 September 2026 (no intermediate period data or passages provided).",
+     "verdict": "supported",
+     "judge_reason": "All figures in the claim match the computed metric values exactly: EBITDA/interest declined from 7.33x (FY2023) to 6.36x (LTM), with LTM interest expense of $7.6 billion and LTM EBITDA of $48.6 billion, confirming the deterioration.",
      "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "EBITDA / interest worsened from ",
+       "v": "Interest coverage worsened over the period, with EBITDA / interest declining from ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -462,7 +350,31 @@
       },
       {
        "t": "text",
-       "v": " in the twelve months to 30 September 2026, with the largest decline occurring in the twelve months to 30 September 2026.",
+       "v": " in the twelve months to 30 September 2026 on LTM interest expense of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$7.6 billion",
+       "metric_id": "interest_expense:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " against EBITDA of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$48.6 billion",
+       "metric_id": "ebitda:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": ".",
        "metric_id": null,
        "chunk_id": null
       }
@@ -471,16 +383,16 @@
      "flags": []
     },
     {
-     "id": "financial_risk-4",
+     "id": "financial_risk-3",
      "kind": "qualitative",
      "verdict": "partially_supported",
-     "judge_reason": "Evidence shows nine-month interest costs rose 15.2% and average debt outstanding increased, but the claim is framed for the twelve months to 30 September 2026, and no evidence is given on interest coverage (EBIT/interest) or its deterioration.",
-     "evidence_quote": "Total interest costs on debt balances $ 2,097 $ 1,846 $ 251 13.6 % $ 6,342 $ 5,505 $ 837 15.2 %",
+     "judge_reason": "The evidence supports higher total interest costs (9M 2026: $6,342M vs $5,505M) and lower capitalized interest due to C-Band licenses being placed into service, but the deterioration in interest coverage itself is not shown in the evidence, and the annual data shows total interest costs actually decreased in 2025 vs 2024.",
+     "evidence_quote": "Total interest expense increased during 2025 compared to 2024 primarily as a result of a decrease in capitalized interest due to additional C-Band spectrum licenses being placed into service, partially offset by a decrease in interest costs due to lower average debt balances and a lower interest rate.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "The deterioration in interest coverage in the twelve months to 30 September 2026 was driven by higher total interest costs on debt balances alongside a larger average amount of debt outstanding.",
+       "v": "The deterioration in interest coverage reflects higher total interest costs on debt balances, together with a decrease in capitalized interest as additional C-Band spectrum licenses were placed into service.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -488,28 +400,52 @@
      "citations": [
       {
        "chunk_id": "VZ-000073271226000052-0119",
-       "quote": "Total interest costs on debt balances $ 2,097 $ 1,846 $ 251 13.6 %",
+       "quote": "Total interest costs on debt balances $ 2,097 $ 1,846 $ 251 13.6 % $ 6,342 $ 5,505 $ 837 15.2 %",
        "check": "ok"
       },
       {
-       "chunk_id": "VZ-000073271226000052-0119",
-       "quote": "Average debt outstanding(1)(3) $ 167,321 $ 146,578 $ 168,591 $ 145,154",
+       "chunk_id": "VZ-000073271226000007-0096",
+       "quote": "primarily as a result of a decrease in capitalized interest due to additional C-Band spectrum licenses being placed into service",
        "check": "ok"
       }
      ],
      "flags": []
     },
     {
-     "id": "financial_risk-5",
-     "kind": "qualitative",
-     "verdict": "partially_supported",
-     "judge_reason": "The Frontier acquisition adding depreciable and amortizable assets is supported, but the evidence does not establish a rise in leverage after fiscal year end 31 December 2024 or its timing relative to the acquisition.",
+     "id": "financial_risk-4",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "The metric values confirm total debt of $158.2B at FY2025 and $166.2B at LTM 30 Sept 2026, and the filing confirms assets acquired as part of the Frontier acquisition during the period.",
      "evidence_quote": "including the impact of depreciable assets acquired as part of the Frontier acquisition",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "The rise in leverage after the fiscal year ended 31 December 2024 coincided with the Frontier acquisition, which added depreciable and amortizable assets to the company's asset base.",
+       "v": "Total debt rose from ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$158.2 billion",
+       "metric_id": "total_debt:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " at the fiscal year ended 31 December 2025 to ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$166.2 billion",
+       "metric_id": "total_debt:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " at the twelve months to 30 September 2026, a period in which the company recorded assets acquired as part of the Frontier acquisition.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -519,10 +455,29 @@
        "chunk_id": "VZ-000073271226000023-0113",
        "quote": "including the impact of depreciable assets acquired as part of the Frontier acquisition",
        "check": "ok"
-      },
+      }
+     ],
+     "flags": []
+    },
+    {
+     "id": "financial_risk-5",
+     "kind": "qualitative",
+     "verdict": "supported",
+     "judge_reason": "The table shows FCF rose $2,250M due to operating cash flow up $1,913M while capex declined modestly by $337M.",
+     "evidence_quote": "Net cash provided by operating activities $ 29,936 $ 28,023 $ 1,913 Less Capital expenditures (including capitalized software) 11,926 12,263 (337) Free cash flow $ 18,010 $ 15,760 $ 2,250",
+     "checked_by": "judge",
+     "segments": [
       {
-       "chunk_id": "VZ-000073271226000052-0119",
-       "quote": "Average debt outstanding(1)(3) $ 167,321 $ 146,578 $ 168,591 $ 145,154",
+       "t": "text",
+       "v": "Free cash flow increased year over year in the most recent nine-month reporting period, as higher net cash provided by operating activities more than offset a modest decline in capital expenditures.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "VZ-000073271226000052-0154",
+       "quote": "Net cash provided by operating activities $ 29,936 $ 28,023 $ 1,913",
        "check": "ok"
       }
      ],
@@ -530,15 +485,15 @@
     },
     {
      "id": "financial_risk-6",
-     "kind": "qualitative",
-     "verdict": "partially_supported",
-     "judge_reason": "The 12.4% and 13.5% FCF/debt values match the scorecard, but the stated drivers (higher operating cash flow, lower capex) are only shown for the nine months ended September 30, 2026 vs 2025, not versus the fiscal year ended 31 December 2023, and no FY2023 cash flow figures are given.",
-     "evidence_quote": "Net cash provided by operating activities $ 29,936 $ 28,023 $ 1,913 ... Less Capital expenditures (including capitalized software) 11,926 12,263 (337)",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "All figures match the computed metrics: 12.4% FY2023, 13.5% LTM Sep-2026, LTM CFO $39.0B, capex $16.7B; 'stable' is a reasonable characterization of the modest change.",
+     "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "FCF / debt remained stable, at ",
+       "v": "FCF / debt was stable across the period, at ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -550,7 +505,7 @@
       },
       {
        "t": "text",
-       "v": " in the fiscal year ended 31 December 2023 versus ",
+       "v": " in the fiscal year ended 31 December 2023 and ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -562,23 +517,36 @@
       },
       {
        "t": "text",
-       "v": " in the twelve months to 30 September 2026, supported by higher net cash provided by operating activities and slightly lower capital expenditures.",
+       "v": " in the twelve months to 30 September 2026, supported by LTM operating cash flow of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$39.0 billion",
+       "metric_id": "cfo:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " against capital expenditure of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$16.7 billion",
+       "metric_id": "capex:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": ".",
        "metric_id": null,
        "chunk_id": null
       }
      ],
-     "citations": [
-      {
-       "chunk_id": "VZ-000073271226000052-0154",
-       "quote": "Net cash provided by operating activities $ 29,936 $ 28,023 $ 1,913",
-       "check": "ok"
-      },
-      {
-       "chunk_id": "VZ-000073271226000052-0154",
-       "quote": "Less Capital expenditures (including capitalized software) 11,926 12,263 (337)",
-       "check": "ok"
-      }
-     ],
+     "citations": [],
      "flags": []
     }
    ],
@@ -602,13 +570,13 @@
      "id": "liquidity-1",
      "kind": "quantitative",
      "verdict": "supported",
-     "judge_reason": "The decline from 1.48x to 1.06x matches the computed metric values, and both figures above 1.0x support that liquidity sources still exceed but more tightly cover the next twelve months' needs.",
+     "judge_reason": "All figures (1.48x FY, 1.06x LTM, $4.5B cash, $12.0B undrawn revolver, $39.0B CFO, $23.9B short-term debt) match the metric values provided.",
      "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Liquidity coverage declined from ",
+       "v": "Liquidity coverage measured ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -620,7 +588,7 @@
       },
       {
        "t": "text",
-       "v": " in the fiscal year ended 31 December 2025 to ",
+       "v": " for the fiscal year ended 31 December 2025 and ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -632,31 +600,7 @@
       },
       {
        "t": "text",
-       "v": " in the twelve months to 30 September 2026, indicating that liquidity sources still exceed but more tightly cover next-twelve-month needs.",
-       "metric_id": null,
-       "chunk_id": null
-      }
-     ],
-     "citations": [
-      {
-       "chunk_id": "VZ-000073271226000046-0139",
-       "quote": "Our sources of funds, primarily from operations and, to the extent necessary, from external financing arrangements, are sufficient to meet ongoing operating and investing requirements over the next 12 months and beyond.",
-       "check": "ok"
-      }
-     ],
-     "flags": []
-    },
-    {
-     "id": "liquidity-2",
-     "kind": "quantitative",
-     "verdict": "supported",
-     "judge_reason": "All six LTM figures in the claim ($4.5B cash, $12.0B undrawn revolver, $39.0B cash from operations, $23.9B short-term debt, $16.7B capex, $11.7B dividends paid) exactly match the computed metric values.",
-     "evidence_quote": "",
-     "checked_by": "judge",
-     "segments": [
-      {
-       "t": "text",
-       "v": "For the twelve months to 30 September 2026, liquidity sources of ",
+       "v": " for the twelve months to 30 September 2026, with the metric based on cash of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -668,7 +612,7 @@
       },
       {
        "t": "text",
-       "v": " in cash, ",
+       "v": ", undrawn revolving credit capacity of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -680,7 +624,7 @@
       },
       {
        "t": "text",
-       "v": " of undrawn revolving credit capacity and ",
+       "v": " and cash from operations of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -692,7 +636,7 @@
       },
       {
        "t": "text",
-       "v": " of cash from operations compare with needs of ",
+       "v": " against short-term debt of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -704,7 +648,67 @@
       },
       {
        "t": "text",
-       "v": " in short-term debt, ",
+       "v": ".",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "liquidity-2",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "A liquidity coverage ratio of 1.06x for the twelve months to 30 September 2026 directly indicates liquidity sources exceed the combined twelve-month needs (debt maturities, capex, dividends) by a modest margin, consistent with the claim.",
+     "evidence_quote": "",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Liquidity coverage of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "1.06x",
+       "metric_id": "liquidity_coverage:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " for the twelve months to 30 September 2026 indicates that liquidity sources exceed, but only modestly, the combined twelve-month needs of debt maturities, capital expenditure and dividends.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "liquidity-3",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "The metric values confirm CFO of $39.0B exceeds capex ($16.7B) plus dividends ($11.7B) = $28.4B, leaving a ~$10.6B surplus that follows directly as an internal funding cushion.",
+     "evidence_quote": "",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Cash from operations of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$39.0 billion",
+       "metric_id": "cfo:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " for the twelve months to 30 September 2026 exceeded the combined capital expenditure of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -716,7 +720,7 @@
       },
       {
        "t": "text",
-       "v": " of capital expenditure and ",
+       "v": " and dividends paid of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -728,7 +732,7 @@
       },
       {
        "t": "text",
-       "v": " of dividends paid.",
+       "v": ", providing an internal funding cushion for debt service.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -737,88 +741,23 @@
      "flags": []
     },
     {
-     "id": "liquidity-3",
-     "kind": "qualitative",
-     "verdict": "supported",
-     "judge_reason": "All elements—September 2026 amendment of the $12.0 billion facility, maturity extension to 2030, and no drawings since inception—are stated in the evidence; the backup liquidity characterization follows from the facility's terms.",
-     "evidence_quote": "In September 2026, we amended our $12.0 billion revolving credit facility and extended its maturity to 2030.",
-     "checked_by": "judge",
-     "segments": [
-      {
-       "t": "text",
-       "v": "Verizon amended its $",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "quoted",
-       "v": "12.0",
-       "metric_id": null,
-       "chunk_id": "VZ-000073271226000052-0048"
-      },
-      {
-       "t": "text",
-       "v": " billion revolving credit facility in September ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "quoted",
-       "v": "2026",
-       "metric_id": null,
-       "chunk_id": "VZ-000073271226000052-0048"
-      },
-      {
-       "t": "text",
-       "v": " and extended its maturity to ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "quoted",
-       "v": "2030",
-       "metric_id": null,
-       "chunk_id": "VZ-000073271226000052-0048"
-      },
-      {
-       "t": "text",
-       "v": ", and there have been no drawings against the facility since its inception, preserving it as a reliable backup liquidity source.",
-       "metric_id": null,
-       "chunk_id": null
-      }
-     ],
-     "citations": [
-      {
-       "chunk_id": "VZ-000073271226000052-0048",
-       "quote": "In September 2026, we amended our $12.0 billion revolving credit facility and extended its maturity to 2030.",
-       "check": "ok"
-      },
-      {
-       "chunk_id": "VZ-000073271226000052-0048",
-       "quote": "As of September 30, 2026, there have been no drawings against the revolving credit facility since its inception.",
-       "check": "ok"
-      }
-     ],
-     "flags": []
-    },
-    {
      "id": "liquidity-4",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "The passage states the revolving credit facility requires no financial covenants or specified credit ratings and permits borrowing after a material adverse change.",
+     "judge_reason": "Passage (1) directly states all parts of the claim about financial covenants, credit ratings, and material adverse change.",
      "evidence_quote": "The revolving credit facility does not require us to comply with financial covenants or maintain specified credit ratings, and it permits us to borrow even if our business has incurred a material adverse change.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "The revolving credit facility does not require compliance with financial covenants or maintenance of specified credit ratings and permits borrowing even after a material adverse change, which supports its availability under stress.",
+       "v": "The revolving credit facility does not require compliance with financial covenants or maintenance of specified credit ratings and remains available to draw even if the business incurs a material adverse change.",
        "metric_id": null,
        "chunk_id": null
       }
      ],
      "citations": [
       {
-       "chunk_id": "VZ-000073271226000046-0144",
+       "chunk_id": "VZ-000073271226000052-0048",
        "quote": "The revolving credit facility does not require us to comply with financial covenants or maintain specified credit ratings, and it permits us to borrow even if our business has incurred a material adverse change.",
        "check": "ok"
       }
@@ -829,62 +768,45 @@
      "id": "liquidity-5",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "The filing states Verizon had no commercial paper outstanding as of September 30, 2026, and issued $13.2 billion net proceeds with $13.2 billion in principal repayments during the nine months, though the 'twelve months' phrasing in the claim is a minor inaccuracy since the evidence covers nine months.",
-     "evidence_quote": "During the nine months ended September 30, 2026, we issued $13.2 billion in net proceeds and made $13.2 billion in principal repayments of commercial paper. As of September 30, 2026, we had no commercial paper outstanding.",
+     "judge_reason": "The filing directly states no drawings against the revolving credit facility since inception as of September 30, 2026.",
+     "evidence_quote": "As of September 30, 2026, there have been no drawings against the revolving credit facility since its inception.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Verizon had no commercial paper outstanding as of the end of the twelve months to 30 September 2026, having issued and repaid $",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "quoted",
-       "v": "13.2",
-       "metric_id": null,
-       "chunk_id": "VZ-000073271226000052-0038"
-      },
-      {
-       "t": "text",
-       "v": " billion in commercial paper on a net basis during the nine months ended September ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "quoted",
-       "v": "30",
-       "metric_id": null,
-       "chunk_id": "VZ-000073271226000052-0038"
-      },
-      {
-       "t": "text",
-       "v": ", ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "quoted",
-       "v": "2026",
-       "metric_id": null,
-       "chunk_id": "VZ-000073271226000052-0038"
-      },
-      {
-       "t": "text",
-       "v": ", showing active use of short-term market access without a build-up of outstanding paper.",
+       "v": "As of the end of the twelve months to 30 September 2026, there had been no drawings against the revolving credit facility since its inception.",
        "metric_id": null,
        "chunk_id": null
       }
      ],
      "citations": [
       {
-       "chunk_id": "VZ-000073271226000052-0038",
-       "quote": "During the nine months ended September 30, 2026, we issued $13.2 billion in net proceeds and made $13.2 billion in principal repayments of commercial paper.",
+       "chunk_id": "VZ-000073271226000052-0048",
+       "quote": "As of September 30, 2026, there have been no drawings against the revolving credit facility since its inception.",
        "check": "ok"
-      },
+      }
+     ],
+     "flags": []
+    },
+    {
+     "id": "liquidity-6",
+     "kind": "qualitative",
+     "verdict": "supported",
+     "judge_reason": "The claim directly restates management's statement in the liquidity discussion.",
+     "evidence_quote": "Our sources of funds, primarily from operations and, to the extent necessary, from external financing arrangements, are sufficient to meet ongoing operating and investing requirements over the next 12 months and beyond.",
+     "checked_by": "judge",
+     "segments": [
       {
-       "chunk_id": "VZ-000073271226000052-0038",
-       "quote": "As of September 30, 2026, we had no commercial paper outstanding.",
+       "t": "text",
+       "v": "Management states that sources of funds, primarily from operations and, to the extent necessary, external financing arrangements, are sufficient to meet ongoing operating and investing requirements over the next twelve months and beyond.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "VZ-000073271226000046-0139",
+       "quote": "are sufficient to meet ongoing operating and investing requirements over the next 12 months and beyond",
        "check": "ok"
       }
      ],
@@ -911,13 +833,13 @@
      "id": "maturity_wall-1",
      "kind": "quantitative",
      "verdict": "supported",
-     "judge_reason": "All six maturity amounts in the claim exactly match the XBRL-computed metric values.",
+     "judge_reason": "All six debt maturity figures in the claim exactly match the XBRL-computed metric values for the fiscal year ended 31 December 2025.",
      "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Verizon's debt maturity profile is spread over the next five years, with ",
+       "v": "As of the fiscal year ended 31 December 2025, debt maturing in the next twelve months totals ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -929,7 +851,7 @@
       },
       {
        "t": "text",
-       "v": " maturing in the next twelve months, ",
+       "v": ", with ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -941,7 +863,7 @@
       },
       {
        "t": "text",
-       "v": " in year two, ",
+       "v": " due in year two, ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -977,7 +899,7 @@
       },
       {
        "t": "text",
-       "v": " in year five, and the largest portion, ",
+       "v": " in year five, and ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -989,7 +911,7 @@
       },
       {
        "t": "text",
-       "v": ", maturing after year five.",
+       "v": " maturing after year five.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -1001,13 +923,13 @@
      "id": "maturity_wall-2",
      "kind": "quantitative",
      "verdict": "supported",
-     "judge_reason": "Metric values confirm $28.2B debt due within 24 months, 17.8% share, and $158.2B total debt for FY ending 31 December 2025.",
+     "judge_reason": "All figures ($28.2B within 24 months, 17.8% share, $158.2B total debt) match the computed metrics, and the 17.8% share directly implies the majority matures beyond 24 months.",
      "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Near-term maturities of ",
+       "v": "Debt due within twenty-four months stands at ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1019,7 +941,7 @@
       },
       {
        "t": "text",
-       "v": " represent ",
+       "v": ", representing ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1043,7 +965,7 @@
       },
       {
        "t": "text",
-       "v": " as of the fiscal year ended 31 December 2025.",
+       "v": ", so the majority of the debt stack matures beyond the near term.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -1055,13 +977,13 @@
      "id": "maturity_wall-3",
      "kind": "quantitative",
      "verdict": "supported",
-     "judge_reason": "All figures in the claim (0.86x cover, $28.2B near-term maturities, $19.0B cash, $13.7B undrawn revolver) match the computed metric values exactly, and the characterization that maturities exceed cash follows from a cover below 1.0x.",
+     "judge_reason": "The metric values confirm near-term maturity cover of 0.86x and debt due within 24 months of $28.2 billion, which directly supports the claim that cash and short-term investments do not fully cover near-term debt.",
      "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Near-term maturity cover stands at ",
+       "v": "Near-term maturity cover is ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1073,7 +995,7 @@
       },
       {
        "t": "text",
-       "v": ", as near-term maturities of ",
+       "v": ", indicating that cash and short-term investments alone do not fully cover the ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1085,7 +1007,25 @@
       },
       {
        "t": "text",
-       "v": " exceed cash and cash equivalents of ",
+       "v": " of debt due within twenty-four months.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "maturity_wall-4",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "All three figures match the evidence: 19.0 + 13.7 = 32.7 billion exceeds 28.2 billion of debt due within 24 months.",
+     "evidence_quote": "",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Cash of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1097,7 +1037,7 @@
       },
       {
        "t": "text",
-       "v": ", although undrawn revolving credit capacity of ",
+       "v": " combined with undrawn revolving credit capacity of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1109,7 +1049,19 @@
       },
       {
        "t": "text",
-       "v": " provides an additional liquidity source.",
+       "v": " exceeds the ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$28.2 billion",
+       "metric_id": "debt_due_24m:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " of debt due within twenty-four months.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -1118,50 +1070,16 @@
      "flags": []
     },
     {
-     "id": "maturity_wall-4",
-     "kind": "qualitative",
-     "verdict": "supported",
-     "judge_reason": "Both passages explicitly state compliance with all restrictive covenants and that covenants are typical for large, investment grade companies.",
-     "evidence_quote": "We and our consolidated subsidiaries are in compliance with all of our restrictive covenants in our debt agreements.",
-     "checked_by": "judge",
-     "segments": [
-      {
-       "t": "text",
-       "v": "Verizon and its consolidated subsidiaries are in compliance with all restrictive covenants in their debt agreements, which contain covenants typical for large, investment grade companies.",
-       "metric_id": null,
-       "chunk_id": null
-      }
-     ],
-     "citations": [
-      {
-       "chunk_id": "VZ-000073271226000007-0149",
-       "quote": "Our credit agreements contain covenants that are typical for large, investment grade companies.",
-       "check": "ok"
-      },
-      {
-       "chunk_id": "VZ-000073271226000007-0149",
-       "quote": "We and our consolidated subsidiaries are in compliance with all of our restrictive covenants in our debt agreements.",
-       "check": "ok"
-      },
-      {
-       "chunk_id": "VZ-000073271226000023-0125",
-       "quote": "We and our consolidated subsidiaries are in compliance with all of our restrictive covenants in our debt agreements.",
-       "check": "ok"
-      }
-     ],
-     "flags": []
-    },
-    {
      "id": "maturity_wall-5",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "The filing explicitly states the December 31, 2025 cash balance included net cash proceeds from notes issued to fund the Frontier acquisition, and that the increase contributed to the elevated balance.",
-     "evidence_quote": "Our cash balance at December 31, 2025 included net cash proceeds from notes issued in 2025 to fund the acquisition of Frontier, which closed in January 2026.",
+     "judge_reason": "The passage directly states both that covenants are typical for large investment grade companies and that Verizon and its consolidated subsidiaries are in compliance with all restrictive covenants.",
+     "evidence_quote": "Our credit agreements contain covenants that are typical for large, investment grade companies. ... We and our consolidated subsidiaries are in compliance with all of our restrictive covenants in our debt agreements.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "The elevated cash balance at the fiscal year ended 31 December 2025 partly reflected pre-funding of the Frontier acquisition, as the balance included net cash proceeds from notes issued for that purpose.",
+       "v": "Verizon and its consolidated subsidiaries were in compliance with all restrictive covenants in their debt agreements, and the credit agreements contain covenants typical for large investment grade companies.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -1169,7 +1087,7 @@
      "citations": [
       {
        "chunk_id": "VZ-000073271226000007-0149",
-       "quote": "included net cash proceeds from notes issued in 2025 to fund the acquisition of Frontier, which closed in January 2026.",
+       "quote": "We and our consolidated subsidiaries are in compliance with all of our restrictive covenants in our debt agreements.",
        "check": "ok"
       }
      ],
@@ -1179,26 +1097,50 @@
      "id": "maturity_wall-6",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "The nine-month September 30, 2026 filing shows ABS Notes issuances ($1,538 million in March 2026) during the period, and the $1.0 billion principal repayments for an anticipated redemption occurred in March 2026, within the twelve months to September 30, 2026.",
-     "evidence_quote": "During the three months ended March 31, 2026, we made aggregate principal repayments of $1.0 billion in connection with an anticipated redemption of ABS Notes.",
+     "judge_reason": "Each part of the claim is directly stated in the evidence passages.",
+     "evidence_quote": "Our cash balance at December 31, 2025 included net cash proceeds from notes issued in 2025 to fund the acquisition of Frontier, which closed in January 2026.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "During the twelve months to 30 September 2026, Verizon continued to fund itself through asset-backed note issuances and made aggregate principal repayments in connection with an anticipated redemption of ABS Notes.",
+       "v": "The cash balance at the fiscal year ended 31 December 2025 was boosted by net proceeds from notes issued in ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "quoted",
+       "v": "2025",
+       "metric_id": null,
+       "chunk_id": "VZ-000073271226000007-0149"
+      },
+      {
+       "t": "text",
+       "v": " to fund the Frontier acquisition that closed in January ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "quoted",
+       "v": "2026",
+       "metric_id": null,
+       "chunk_id": "VZ-000073271226000007-0149"
+      },
+      {
+       "t": "text",
+       "v": ", and the company continued to issue asset-backed notes, which are included in debt maturing within one year and long-term debt.",
        "metric_id": null,
        "chunk_id": null
       }
      ],
      "citations": [
       {
-       "chunk_id": "VZ-000073271226000023-0035",
-       "quote": "During the three months ended March 31, 2026, we made aggregate principal repayments of $1.0 billion in connection with an anticipated redemption of ABS Notes.",
+       "chunk_id": "VZ-000073271226000007-0149",
+       "quote": "Our cash balance at December 31, 2025 included net cash proceeds from notes issued in 2025 to fund the acquisition of Frontier, which closed in January 2026.",
        "check": "ok"
       },
       {
-       "chunk_id": "VZ-000073271226000052-0042",
-       "quote": "During the nine months ended September 30, 2026, we completed the following ABS Notes transactions:",
+       "chunk_id": "VZ-000073271226000007-0271",
+       "quote": "The asset-backed debt issued is included in Debt maturing within one year and Long-term debt in our consolidated balance sheets.",
        "check": "ok"
       }
      ],
@@ -1225,25 +1167,13 @@
      "id": "key_risks-1",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "The passage states Verizon's debt service obligations require dedicating significant operating cash flow to principal and interest, reducing funds for working capital, capital expenditures and other purposes, and the scorecard metric confirms 6.36x interest coverage for the LTM to 30 September 2026.",
-     "evidence_quote": "requiring us to dedicate significant cash flow from operations to the payment of principal, interest and other amounts payable on our debt, which would reduce the funds we have available for other purposes, such as working capital, capital expenditures, dividend payments, share repurchases and acquisitions",
+     "judge_reason": "The claim directly restates the risk factor language in the filing.",
+     "evidence_quote": "requiring us to dedicate significant cash flow from operations to the payment of principal, interest and other amounts payable on our debt, which would reduce the funds we have available for other purposes",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Verizon's substantial debt service obligations require it to dedicate significant operating cash flow to principal and interest payments, reducing funds available for working capital, capital expenditures and other purposes, even though interest coverage stood at ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "6.36x",
-       "metric_id": "interest_coverage:LTM",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": " in the twelve months to 30 September 2026.",
+       "v": "Verizon's substantial debt level and related debt service obligations require it to dedicate significant cash flow from operations to principal, interest and other amounts payable on its debt, reducing funds available for other purposes.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -1261,21 +1191,21 @@
      "id": "key_risks-2",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "The passage states exactly that the company is exposed to increased interest rate risk to the extent its debt obligations carry variable rates or it must refinance existing debt bearing interest below current market rates.",
-     "evidence_quote": "exposing us to increased interest rate risk to the extent that (i) our debt obligations are subject to variable interest rates or (ii) we need to refinance existing debt that bears interest at a rate lower than current market rates.",
+     "judge_reason": "The passage states all claimed effects: higher rates and rating downgrades increase borrowing costs, collateral posting, and refinancing difficulty.",
+     "evidence_quote": "Adverse changes in the financial markets, including increases in interest rates or changes in exchange rates, could increase our cost of borrowing, require us to post a significant amount of collateral, and/or make it more difficult for us to obtain financing for our operations or refinance existing indebtedness.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "The company is exposed to increased interest rate risk to the extent its obligations carry variable rates or it must refinance existing debt that bears interest below current market rates.",
+       "v": "Adverse changes in the financial markets, including higher interest rates or rating downgrades, could increase Verizon's borrowing costs, require it to post significant collateral, or make it more difficult to obtain financing or refinance existing indebtedness.",
        "metric_id": null,
        "chunk_id": null
       }
      ],
      "citations": [
       {
-       "chunk_id": "VZ-000073271226000007-0063",
-       "quote": "we need to refinance existing debt that bears interest at a rate lower than current market rates",
+       "chunk_id": "VZ-000073271226000007-0064",
+       "quote": "could increase our cost of borrowing, require us to post a significant amount of collateral, and/or make it more difficult for us to obtain financing for our operations or refinance existing indebtedness",
        "check": "ok"
       }
      ],
@@ -1285,37 +1215,13 @@
      "id": "key_risks-3",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "The passage states that adverse financial market changes, including higher interest rates, or a decrease in debt ratings could increase borrowing costs and make it harder to obtain financing or refinance indebtedness.",
-     "evidence_quote": "Adverse changes in the financial markets, including increases in interest rates or changes in exchange rates, could increase our cost of borrowing... A decrease in these ratings could increase our cost of borrowing and/or make it more difficult for us to obtain financing.",
+     "judge_reason": "The passage states both variable-rate and refinancing interest rate risk, and the 3.42x Debt/EBITDA metric matches the claim's leverage figure.",
+     "evidence_quote": "exposing us to increased interest rate risk to the extent that (i) our debt obligations are subject to variable interest rates or (ii) we need to refinance existing debt that bears interest at a rate lower than current market rates.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Adverse changes in financial markets, including higher interest rates, or a decrease in its debt ratings could increase Verizon's borrowing costs and make it more difficult to obtain financing or refinance existing indebtedness.",
-       "metric_id": null,
-       "chunk_id": null
-      }
-     ],
-     "citations": [
-      {
-       "chunk_id": "VZ-000073271226000007-0064",
-       "quote": "make it more difficult for us to obtain financing for our operations or refinance existing indebtedness",
-       "check": "ok"
-      }
-     ],
-     "flags": []
-    },
-    {
-     "id": "key_risks-4",
-     "kind": "qualitative",
-     "verdict": "supported",
-     "judge_reason": "The passage explicitly states initiatives to reduce indebtedness and achieve/maintain target leverage ratios may be unsuccessful due to macroeconomic, business and other factors, and the XBRL-derived debt/EBITDA metric confirms 3.42x for the LTM to 30 September 2026.",
-     "evidence_quote": "Our initiatives aimed at reducing our indebtedness and achieving or maintaining any target leverage ratio may be unsuccessful due to macroeconomic, business and other factors.",
-     "checked_by": "judge",
-     "segments": [
-      {
-       "t": "text",
-       "v": "Management's initiatives aimed at reducing indebtedness and achieving or maintaining any target leverage ratio may be unsuccessful due to macroeconomic, business and other factors, which is relevant given debt to EBITDA of ",
+       "v": "To the extent Verizon's debt bears variable interest rates or refinancing occurs at rates above those on existing debt, the company is exposed to increased interest rate risk, a concern given leverage of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1327,7 +1233,31 @@
       },
       {
        "t": "text",
-       "v": " in the twelve months to 30 September 2026.",
+       "v": ".",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "VZ-000073271226000007-0063",
+       "quote": "exposing us to increased interest rate risk to the extent that (i) our debt obligations are subject to variable interest rates or (ii) we need to refinance existing debt",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    },
+    {
+     "id": "key_risks-4",
+     "kind": "qualitative",
+     "verdict": "supported",
+     "judge_reason": "The claim is a verbatim statement from the risk factor passage.",
+     "evidence_quote": "Our initiatives aimed at reducing our indebtedness and achieving or maintaining any target leverage ratio may be unsuccessful due to macroeconomic, business and other factors.",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Verizon's initiatives aimed at reducing indebtedness and achieving or maintaining any target leverage ratio may be unsuccessful due to macroeconomic, business and other factors.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -1345,13 +1275,13 @@
      "id": "key_risks-5",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "The passage states unfavorable economic conditions (recession, inflation) could hurt demand and affordability, increase customers unable to pay bills, and amplify risks to competitive position and margins.",
+     "judge_reason": "The passage states recession/inflation could reduce demand for products and services, increase customers unable to pay bills, and amplify other risks including margins.",
      "evidence_quote": "Adverse economic conditions may lead to an increased number of our consumer and business customers that are unable to continue paying their bills for our services. Unfavorable economic conditions could also amplify other risks discussed in this report, including, but not limited to, those related to our competitive position and margins.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Unfavorable economic conditions, such as a recession or inflation, could reduce demand for Verizon's products and services and increase the number of customers unable to continue paying their bills, amplifying risks to its competitive position and margins.",
+       "v": "Unfavorable economic conditions, including recession or inflation, could reduce demand for Verizon's products and services, increase the number of customers unable to pay their bills, and amplify other risks to the company's margins.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -1385,14 +1315,14 @@
     {
      "id": "rating_rationale-1",
      "kind": "quantitative",
-     "verdict": "partially_supported",
-     "judge_reason": "The SB-4 grade, 3.90 weighted score, and 'stylized scorecard grade, not a credit rating' framing are all confirmed by the scorecard values, but the evidence gives only 'latest' figures and never states the twelve months to 30 September 2026 period.",
+     "verdict": "supported",
+     "judge_reason": "Metric values confirm SB-4 grade, weighted score 3.90, and that it is a stylized scorecard grade, not a credit rating.",
      "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "The SB grade for the twelve months to 30 September 2026 is ",
+       "v": "The SB grade is ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1404,7 +1334,7 @@
       },
       {
        "t": "text",
-       "v": ", a stylized internal scorecard grade and not a credit rating, reflecting a weighted score of ",
+       "v": ", corresponding to a weighted score of ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1416,7 +1346,7 @@
       },
       {
        "t": "text",
-       "v": ".",
+       "v": ", and this is a stylized internal scorecard grade, not a credit rating.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -1428,13 +1358,31 @@
      "id": "rating_rationale-2",
      "kind": "quantitative",
      "verdict": "supported",
-     "judge_reason": "Evidence confirms all six factors scored (grade not provisional) and interest coverage is the strongest band at 3 with the highest weight of 25.0%.",
+     "judge_reason": "The scorecard data explicitly states the grade is not provisional and all six factors were scored, each with a band value.",
      "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "The grade is not provisional because all six scorecard factors were scored, with interest coverage scoring strongest at band ",
+       "v": "The SB grade is not provisional, as all six scorecard factors were scored for the latest period.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "rating_rationale-3",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "Interest coverage has the best (lowest) band of all six factors at 3, the LTM value of 6.36x, and the highest weight at 25.0%, matching every part of the claim.",
+     "evidence_quote": "",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Interest coverage is the strongest-scoring factor, in band ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1446,7 +1394,19 @@
       },
       {
        "t": "text",
-       "v": " on the heaviest weight of ",
+       "v": " at ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "6.36x",
+       "metric_id": "interest_coverage:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " for the twelve months to 30 September 2026, and it carries the highest weight in the scorecard at ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1467,16 +1427,16 @@
      "flags": []
     },
     {
-     "id": "rating_rationale-3",
+     "id": "rating_rationale-4",
      "kind": "quantitative",
      "verdict": "supported",
-     "judge_reason": "Liquidity sources/uses is band 5 (the highest/weakest band among the six factors), weight 15.0%, and liquidity coverage is 1.06x for the twelve months to 30 September 2026 — all matching the metric evidence.",
+     "judge_reason": "Metric values confirm liquidity coverage is band 5 at 1.06x with 15.0% weight, weaker than the band-4 factors (debt/EBITDA, net leverage, FCF/debt, near-term maturity cover) and interest coverage (band 3), making it the weakest-scoring factor.",
      "evidence_quote": "",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "Liquidity coverage is the weakest factor, scoring band ",
+       "v": "Liquidity coverage is the weakest-scoring factor, in band ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1488,19 +1448,7 @@
       },
       {
        "t": "text",
-       "v": " on a weight of ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "15.0%",
-       "metric_id": "weight_liquidity_coverage:latest",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": ", with liquidity coverage of ",
+       "v": " at ",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1512,37 +1460,19 @@
       },
       {
        "t": "text",
-       "v": " in the twelve months to 30 September 2026.",
-       "metric_id": null,
-       "chunk_id": null
-      }
-     ],
-     "citations": [],
-     "flags": []
-    },
-    {
-     "id": "rating_rationale-4",
-     "kind": "quantitative",
-     "verdict": "supported",
-     "judge_reason": "All metric values, bands, and weights match the computed scorecard; band 4 of 6 is reasonably characterized as the middle of the scale.",
-     "evidence_quote": "",
-     "checked_by": "judge",
-     "segments": [
-      {
-       "t": "text",
-       "v": "The remaining factors score in the middle of the scale: debt to EBITDA of ",
+       "v": " for the twelve months to 30 September 2026 with a weight of ",
        "metric_id": null,
        "chunk_id": null
       },
       {
        "t": "metric",
-       "v": "3.42x",
-       "metric_id": "debt_to_ebitda:LTM",
+       "v": "15.0%",
+       "metric_id": "weight_liquidity_coverage:latest",
        "chunk_id": null
       },
       {
        "t": "text",
-       "v": " scores band ",
+       "v": ", while debt / EBITDA (",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1554,31 +1484,7 @@
       },
       {
        "t": "text",
-       "v": " on a weight of ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "20.0%",
-       "metric_id": "weight_debt_to_ebitda:latest",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": ", net leverage of ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "3.33x",
-       "metric_id": "net_leverage:LTM",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": " scores band ",
+       "v": "), net leverage (",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1590,31 +1496,7 @@
       },
       {
        "t": "text",
-       "v": " on a weight of ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "10.0%",
-       "metric_id": "weight_net_leverage:latest",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": ", FCF to debt of ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "13.5%",
-       "metric_id": "fcf_to_debt:LTM",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": " scores band ",
+       "v": "), FCF / debt (",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1626,31 +1508,7 @@
       },
       {
        "t": "text",
-       "v": " on a weight of ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "20.0%",
-       "metric_id": "weight_fcf_to_debt:latest",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": ", and near-term maturity cover of ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "0.86x",
-       "metric_id": "near_term_maturity_cover:FY0",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": " scores band ",
+       "v": ") and near-term maturity cover (",
        "metric_id": null,
        "chunk_id": null
       },
@@ -1662,19 +1520,7 @@
       },
       {
        "t": "text",
-       "v": " on a weight of ",
-       "metric_id": null,
-       "chunk_id": null
-      },
-      {
-       "t": "metric",
-       "v": "10.0%",
-       "metric_id": "weight_near_term_maturity_cover:latest",
-       "chunk_id": null
-      },
-      {
-       "t": "text",
-       "v": ".",
+       "v": ") each sit in intermediate bands.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -1685,14 +1531,14 @@
     {
      "id": "rating_rationale-5",
      "kind": "qualitative",
-     "verdict": "partially_supported",
-     "judge_reason": "The evidence supports Verizon's scale, diversified services, and two Consumer/Business segments, and shows coverage/leverage factor scores, but the causal claim that segments 'underpin' cash generation is not established by the evidence.",
-     "evidence_quote": "We have two reportable segments that we operate and manage as strategic business units - Consumer and Business.",
+     "verdict": "supported",
+     "judge_reason": "All three parts of the claim are directly stated in the evidence: leading provider status, no financial covenants/credit rating requirements on the revolver, and sufficient sources of funds beyond 12 months.",
+     "evidence_quote": "Our sources of funds, primarily from operations and, to the extent necessary, from external financing arrangements, are sufficient to meet ongoing operating and investing requirements over the next 12 months and beyond.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "The grade is supported by Verizon's substantial scale and diversified communications, technology and information services offered through its Consumer and Business segments, which underpin the cash generation measured by the scorecard's coverage and leverage factors.",
+       "v": "Earlier findings support the grade: Verizon is one of the world's leading providers of communications services, its revolving credit facility does not require compliance with financial covenants or maintenance of specified credit ratings, and management states that sources of funds are sufficient to meet ongoing operating and investing requirements over the next twelve months and beyond.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -1700,7 +1546,17 @@
      "citations": [
       {
        "chunk_id": "VZ-000073271226000007-0085",
-       "quote": "We have two reportable segments that we operate and manage as strategic business units - Consumer and Business.",
+       "quote": "is a holding company that, acting through its subsidiaries, is one of the world’s leading providers of communications, technology, information and streaming products and services",
+       "check": "ok"
+      },
+      {
+       "chunk_id": "VZ-000073271226000052-0048",
+       "quote": "The revolving credit facility does not require us to comply with financial covenants or maintain specified credit ratings",
+       "check": "ok"
+      },
+      {
+       "chunk_id": "VZ-000073271226000046-0139",
+       "quote": "Our sources of funds, primarily from operations and, to the extent necessary, from external financing arrangements, are sufficient to meet ongoing operating and investing requirements over the next 12 months and beyond.",
        "check": "ok"
       }
      ],
@@ -1710,13 +1566,13 @@
      "id": "rating_rationale-6",
      "kind": "qualitative",
      "verdict": "supported",
-     "judge_reason": "All elements of the claim are supported: significant cash flow dedicated to principal and interest, increased interest rate and refinancing risk, and the undrawn revolver with no drawings since inception permitting borrowing after a material adverse change.",
-     "evidence_quote": "requiring us to dedicate significant cash flow from operations to the payment of principal, interest and other amounts payable on our debt ... exposing us to increased interest rate risk ... it permits us to borrow even if our business has incurred a material adverse change ... there have been no drawings against the revolving credit facility since its inception.",
+     "judge_reason": "Both the substantial debt requiring dedicated cash flow to principal and interest, and the risk that adverse economic conditions impair customers' ability to pay bills, are stated verbatim in the evidence passages.",
+     "evidence_quote": "requiring us to dedicate significant cash flow from operations to the payment of principal, interest and other amounts payable on our debt... Adverse economic conditions may lead to an increased number of our consumer and business customers that are unable to continue paying their bills for our services.",
      "checked_by": "judge",
      "segments": [
       {
        "t": "text",
-       "v": "The grade is tempered by Verizon's substantial debt service obligations, which require dedicating significant operating cash flow to principal and interest, and by exposure to increased interest rate risk and refinancing risk, although the undrawn revolving credit facility, which has had no drawings since inception and permits borrowing even after a material adverse change, provides support.",
+       "v": "The grade is tempered by Verizon's substantial debt level and related debt service obligations, which require dedicating significant cash flow from operations to principal and interest payments, and by the risk that adverse economic conditions reduce customers' ability to pay their bills.",
        "metric_id": null,
        "chunk_id": null
       }
@@ -1724,12 +1580,12 @@
      "citations": [
       {
        "chunk_id": "VZ-000073271226000007-0063",
-       "quote": "requiring us to dedicate significant cash flow from operations to the payment of principal, interest and other amounts payable on our debt, which would reduce the funds we have available",
+       "quote": "requiring us to dedicate significant cash flow from operations to the payment of principal, interest and other amounts payable on our debt",
        "check": "ok"
       },
       {
-       "chunk_id": "VZ-000073271226000046-0144",
-       "quote": "The revolving credit facility does not require us to comply with financial covenants or maintain specified credit ratings, and it permits us to borrow even if our business has incurred a material adverse change.",
+       "chunk_id": "VZ-000073271226000007-0044",
+       "quote": "Adverse economic conditions may lead to an increased number of our consumer and business customers that are unable to continue paying their bills for our services.",
        "check": "ok"
       }
      ],
@@ -1738,18 +1594,14 @@
    ],
    "passages_shown": [
     "VZ-000073271226000007-0085",
-    "VZ-000073271226000052-0097",
     "VZ-000073271226000007-0128",
-    "VZ-000073271226000007-0030",
-    "VZ-000073271226000007-0032",
-    "VZ-000073271226000046-0139",
+    "VZ-000073271226000023-0136",
+    "VZ-000073271226000023-0113",
+    "VZ-000073271226000052-0154",
     "VZ-000073271226000052-0048",
-    "VZ-000073271226000046-0144",
-    "VZ-000073271226000052-0038",
+    "VZ-000073271226000046-0139",
     "VZ-000073271226000007-0149",
-    "VZ-000073271226000023-0125",
-    "VZ-000073271226000023-0035",
-    "VZ-000073271226000052-0042",
+    "VZ-000073271226000007-0271",
     "VZ-000073271226000007-0063",
     "VZ-000073271226000007-0064",
     "VZ-000073271226000007-0044"
@@ -2034,78 +1886,6 @@
     }
    ]
   },
-  "debt_to_ebitda:FY-1": {
-   "metric_id": "debt_to_ebitda",
-   "period": "FY-1",
-   "label": "Debt / EBITDA",
-   "value": 3.09188887457598,
-   "unit": "x",
-   "status": "ok",
-   "formula": "total_debt / EBITDA",
-   "notes": [],
-   "inputs": [
-    {
-     "label": "Total debt (borrowings plus finance-lease liabilities)",
-     "concept": "total_debt",
-     "tag": "LongTermDebtAndCapitalLeaseObligations",
-     "fallback_rank": 2,
-     "value": 121381000000.0,
-     "unit": "USD",
-     "period": "at 2024-12-31",
-     "role": "balance sheet",
-     "sign": 1,
-     "form": "10-K",
-     "accession": "0000732712-26-000007",
-     "filed": "2026-02-17",
-     "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm"
-    },
-    {
-     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
-     "concept": "short_term_debt",
-     "tag": "DebtCurrent",
-     "fallback_rank": 1,
-     "value": 22633000000.0,
-     "unit": "USD",
-     "period": "at 2024-12-31",
-     "role": "balance sheet",
-     "sign": 1,
-     "form": "10-K",
-     "accession": "0000732712-26-000007",
-     "filed": "2026-02-17",
-     "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm"
-    },
-    {
-     "label": "Operating income",
-     "concept": "operating_income",
-     "tag": "OperatingIncomeLoss",
-     "fallback_rank": 1,
-     "value": 28686000000.0,
-     "unit": "USD",
-     "period": "2024-01-01 to 2024-12-31",
-     "role": "FY-1",
-     "sign": 1,
-     "form": "10-K",
-     "accession": "0000732712-26-000007",
-     "filed": "2026-02-17",
-     "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm"
-    },
-    {
-     "label": "Depreciation and amortisation",
-     "concept": "d_and_a",
-     "tag": "DepreciationAndAmortization",
-     "fallback_rank": 2,
-     "value": 17892000000.0,
-     "unit": "USD",
-     "period": "2024-01-01 to 2024-12-31",
-     "role": "FY-1",
-     "sign": 1,
-     "form": "10-K",
-     "accession": "0000732712-26-000007",
-     "filed": "2026-02-17",
-     "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm"
-    }
-   ]
-  },
   "debt_to_ebitda:FY-2": {
    "metric_id": "debt_to_ebitda",
    "period": "FY-2",
@@ -2379,48 +2159,6 @@
      "accession": "0000732712-26-000052",
      "filed": "2026-10-29",
      "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm"
-    }
-   ]
-  },
-  "ebitda:FY0": {
-   "metric_id": "ebitda",
-   "period": "FY0",
-   "label": "EBITDA",
-   "value": 47608000000.0,
-   "unit": "USD",
-   "status": "ok",
-   "formula": "operating_income + d_and_a",
-   "notes": [],
-   "inputs": [
-    {
-     "label": "Operating income",
-     "concept": "operating_income",
-     "tag": "OperatingIncomeLoss",
-     "fallback_rank": 1,
-     "value": 29259000000.0,
-     "unit": "USD",
-     "period": "2025-01-01 to 2025-12-31",
-     "role": "FY0",
-     "sign": 1,
-     "form": "10-K",
-     "accession": "0000732712-26-000007",
-     "filed": "2026-02-17",
-     "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm"
-    },
-    {
-     "label": "Depreciation and amortisation",
-     "concept": "d_and_a",
-     "tag": "DepreciationAndAmortization",
-     "fallback_rank": 2,
-     "value": 18349000000.0,
-     "unit": "USD",
-     "period": "2025-01-01 to 2025-12-31",
-     "role": "FY0",
-     "sign": 1,
-     "form": "10-K",
-     "accession": "0000732712-26-000007",
-     "filed": "2026-02-17",
-     "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm"
     }
    ]
   },
@@ -2902,6 +2640,63 @@
      "filed": "2026-10-29",
      "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm"
     },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpenseNonoperating",
+     "fallback_rank": 2,
+     "value": 6694000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000732712-26-000007",
+     "filed": "2026-02-17",
+     "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpenseNonoperating",
+     "fallback_rank": 2,
+     "value": 5875000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-09-30",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000732712-26-000052",
+     "filed": "2026-10-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpenseNonoperating",
+     "fallback_rank": 2,
+     "value": 4935000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-09-30",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000732712-26-000052",
+     "filed": "2026-10-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm"
+    }
+   ]
+  },
+  "interest_expense:LTM": {
+   "metric_id": "interest_expense",
+   "period": "LTM",
+   "label": "Interest expense",
+   "value": 7634000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: InterestExpenseNonoperating",
+   "notes": [],
+   "inputs": [
     {
      "label": "Interest expense",
      "concept": "interest_expense",
@@ -3483,95 +3278,6 @@
     }
    ]
   },
-  "net_leverage:FY-1": {
-   "metric_id": "net_leverage",
-   "period": "FY-1",
-   "label": "Net leverage",
-   "value": 3.001846365236807,
-   "unit": "x",
-   "status": "ok",
-   "formula": "(total_debt - cash - short_term_investments) / EBITDA",
-   "notes": [
-    "short_term_investments: assumed zero: not reported"
-   ],
-   "inputs": [
-    {
-     "label": "Total debt (borrowings plus finance-lease liabilities)",
-     "concept": "total_debt",
-     "tag": "LongTermDebtAndCapitalLeaseObligations",
-     "fallback_rank": 2,
-     "value": 121381000000.0,
-     "unit": "USD",
-     "period": "at 2024-12-31",
-     "role": "balance sheet",
-     "sign": 1,
-     "form": "10-K",
-     "accession": "0000732712-26-000007",
-     "filed": "2026-02-17",
-     "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm"
-    },
-    {
-     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
-     "concept": "short_term_debt",
-     "tag": "DebtCurrent",
-     "fallback_rank": 1,
-     "value": 22633000000.0,
-     "unit": "USD",
-     "period": "at 2024-12-31",
-     "role": "balance sheet",
-     "sign": 1,
-     "form": "10-K",
-     "accession": "0000732712-26-000007",
-     "filed": "2026-02-17",
-     "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm"
-    },
-    {
-     "label": "Cash and cash equivalents",
-     "concept": "cash",
-     "tag": "CashAndCashEquivalentsAtCarryingValue",
-     "fallback_rank": 1,
-     "value": 4194000000.0,
-     "unit": "USD",
-     "period": "at 2024-12-31",
-     "role": "balance sheet",
-     "sign": 1,
-     "form": "10-K",
-     "accession": "0000732712-26-000007",
-     "filed": "2026-02-17",
-     "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm"
-    },
-    {
-     "label": "Operating income",
-     "concept": "operating_income",
-     "tag": "OperatingIncomeLoss",
-     "fallback_rank": 1,
-     "value": 28686000000.0,
-     "unit": "USD",
-     "period": "2024-01-01 to 2024-12-31",
-     "role": "FY-1",
-     "sign": 1,
-     "form": "10-K",
-     "accession": "0000732712-26-000007",
-     "filed": "2026-02-17",
-     "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm"
-    },
-    {
-     "label": "Depreciation and amortisation",
-     "concept": "d_and_a",
-     "tag": "DepreciationAndAmortization",
-     "fallback_rank": 2,
-     "value": 17892000000.0,
-     "unit": "USD",
-     "period": "2024-01-01 to 2024-12-31",
-     "role": "FY-1",
-     "sign": 1,
-     "form": "10-K",
-     "accession": "0000732712-26-000007",
-     "filed": "2026-02-17",
-     "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm"
-    }
-   ]
-  },
   "net_leverage:FY-2": {
    "metric_id": "net_leverage",
    "period": "FY-2",
@@ -3825,6 +3531,33 @@
     }
    ]
   },
+  "revenue:FY-2": {
+   "metric_id": "revenue",
+   "period": "FY-2",
+   "label": "Revenue",
+   "value": 133974000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: Revenues",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Revenue",
+     "concept": "revenue",
+     "tag": "Revenues",
+     "fallback_rank": 1,
+     "value": 133974000000.0,
+     "unit": "USD",
+     "period": "2023-01-01 to 2023-12-31",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000732712-26-000007",
+     "filed": "2026-02-17",
+     "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm"
+    }
+   ]
+  },
   "revenue:FY0": {
    "metric_id": "revenue",
    "period": "FY0",
@@ -4074,6 +3807,48 @@
     }
    ]
   },
+  "total_debt:LTM": {
+   "metric_id": "total_debt",
+   "period": "LTM",
+   "label": "Total debt (borrowings plus finance-lease liabilities)",
+   "value": 166233000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: LongTermDebtAndCapitalLeaseObligations + [short_term_debt]",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtAndCapitalLeaseObligations",
+     "fallback_rank": 2,
+     "value": 142344000000.0,
+     "unit": "USD",
+     "period": "at 2026-09-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000732712-26-000052",
+     "filed": "2026-10-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 23889000000.0,
+     "unit": "USD",
+     "period": "at 2026-09-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000732712-26-000052",
+     "filed": "2026-10-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm"
+    }
+   ]
+  },
   "undrawn_revolver:FY0": {
    "metric_id": "undrawn_revolver",
    "period": "FY0",
@@ -4128,28 +3903,6 @@
     }
    ]
   },
-  "weight_debt_to_ebitda:latest": {
-   "metric_id": "weight_debt_to_ebitda",
-   "period": "latest",
-   "label": "Debt / EBITDA: scorecard weight",
-   "value": 20.0,
-   "unit": "%",
-   "status": "ok",
-   "formula": "config/grid.yaml (grid-v1)",
-   "notes": [],
-   "inputs": []
-  },
-  "weight_fcf_to_debt:latest": {
-   "metric_id": "weight_fcf_to_debt",
-   "period": "latest",
-   "label": "FCF / debt: scorecard weight",
-   "value": 20.0,
-   "unit": "%",
-   "status": "ok",
-   "formula": "config/grid.yaml (grid-v1)",
-   "notes": [],
-   "inputs": []
-  },
   "weight_interest_coverage:latest": {
    "metric_id": "weight_interest_coverage",
    "period": "latest",
@@ -4171,53 +3924,9 @@
    "formula": "config/grid.yaml (grid-v1)",
    "notes": [],
    "inputs": []
-  },
-  "weight_near_term_maturity_cover:latest": {
-   "metric_id": "weight_near_term_maturity_cover",
-   "period": "latest",
-   "label": "Debt due in 24 months / (cash + undrawn revolver): scorecard weight",
-   "value": 10.0,
-   "unit": "%",
-   "status": "ok",
-   "formula": "config/grid.yaml (grid-v1)",
-   "notes": [],
-   "inputs": []
-  },
-  "weight_net_leverage:latest": {
-   "metric_id": "weight_net_leverage",
-   "period": "latest",
-   "label": "Net debt / EBITDA: scorecard weight",
-   "value": 10.0,
-   "unit": "%",
-   "status": "ok",
-   "formula": "config/grid.yaml (grid-v1)",
-   "notes": [],
-   "inputs": []
   }
  },
  "passages": {
-  "VZ-000073271226000007-0030": {
-   "text": "The FCC regulates some of the rates that carriers pay each other for the exchange of voice traffic (particularly traditional wireline traffic) over different networks and other aspects of interconnection for some voice services. The FCC also regulates some of the rates and terms and conditions for certain wireline \"business data services\" and other services and network facilities. Verizon is both a seller and a buyer of these services, and both makes and receives interconnection payments.\nHuman Capital Resources\nVerizon has approximately 89,900 employees on a full-time equivalent basis as of December 31, 2025, 89% of whom are based in the U.S. In order to realize our core business strategy, we seek to recruit and retain employees with the skills, experiences and perspectives necessary to meet the needs of the customers and communities we serve.\nVerizon strives to be an employer of choice by offering our employees competitive compensation and benefits packages, and provides extensive on-the-job training opportunities, tuition reimbursement programs and career development support to enable our employees to maximize their potential and thrive professionally.",
-   "section": "business",
-   "form": "10-K",
-   "filed": "2026-02-17",
-   "period_end": "2025-12-31",
-   "accession": "0000732712-26-000007",
-   "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/vz-20251231.htm",
-   "start": 36817,
-   "end": 37990
-  },
-  "VZ-000073271226000007-0032": {
-   "text": "Verizon respects our employees' rights to freedom of association and collective bargaining in compliance with applicable laws, including the right to join or not join labor unions. We have a long history of working with the Communications Workers of America and the International Brotherhood of Electrical Workers — the two unions that in total represented approximately 27% of our employees as of December 31, 2025. The collective bargaining agreements covering our union-represented employees who serve customers in our mid-Atlantic and northeast service areas extend through August 1, 2026. Other collective bargaining agreements covering smaller groups of employees, and the collective bargaining agreements covering the union-represented employees who joined us as a result of the Frontier acquisition, extend through various dates in 2026 through 2030. In addition, where applicable outside of the U.S., we engage with employee representative bodies such as works council. Verizon meets with U.S. national and local union leaders, as well as works council leaders outside the U.S., to talk about key business topics, including safety, customer service, plans to improve operational processes, our business performance and the impacts that changing technology and competition are having on our customers, employees and business strategy.\n9\nTable of Contents\nPatents, Trademarks and Licenses",
-   "section": "business",
-   "form": "10-K",
-   "filed": "2026-02-17",
-   "period_end": "2025-12-31",
-   "accession": "0000732712-26-000007",
-   "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/vz-20251231.htm",
-   "start": 38455,
-   "end": 39850
-  },
   "VZ-000073271226000007-0044": {
    "text": "Unfavorable economic conditions, such as a recession or economic slowdown in the U.S. or elsewhere, or inflation in the markets in which we operate, could negatively affect the affordability of and demand for some of our products and services and our cost of doing business. In difficult economic conditions, consumers may seek to reduce discretionary spending by forgoing purchases of our products, electing to use fewer higher margin services, dropping down in price plans or obtaining lower-cost products and services. Similarly, under these conditions, business customers may delay purchasing decisions, or full implementation of our service offerings, reduce their use of our services or choose lower-cost offerings from our competitors. In addition, our business with public sector customers has been and may in the future be negatively affected by a reduction of the federal and state government workforce and other government cost efficiency measures. Adverse economic conditions may lead to an increased number of our consumer and business customers that are unable to continue paying their bills for our services. Unfavorable economic conditions could also amplify other risks discussed in this report, including, but not limited to, those related to our competitive position and margins. Furthermore, our initiatives designed to reduce costs and improve operating efficiencies may be ineffective or insufficient.",
    "section": "risk_factors",
@@ -4262,6 +3971,17 @@
    "start": 96642,
    "end": 97797
   },
+  "VZ-000073271226000007-0096": {
+   "text": "See Note 11 to the consolidated financial statements for more information on the other components of net periodic benefit income (cost).\nInterest Expense\n(dollars in millions)\nYears Ended December 31, 2025 2024 Increase/(Decrease)\nTotal interest costs on debt balances $ 7,434 $ 7,612 $ (178) (2.3) %\nLess capitalized interest costs 740 963 (223) (23.2)\nInterest Expense $ 6,694 $ 6,649 $ 45 0.7\nAverage debt outstanding(1)(3)\n$ 147,406 $ 150,361\nEffective interest rate(2)(3)\n5.0 % 5.1 %\n(1)The average debt outstanding is a financial measure and is calculated by applying a simple average of prior thirteen-month end balances of total short-term and long-term debt, net of discounts, premiums and unamortized debt issuance costs.\n(2)The effective interest rate is the rate of actual interest incurred on debt. It is calculated by dividing the annualized total interest costs on debt balances by the average debt outstanding.\n(3)We believe that this measure is useful to management, investors and other users of our financial information in evaluating our debt financing cost and trends in our debt leverage management.\nTotal interest expense increased during 2025 compared to 2024 primarily as a result of a decrease in capitalized interest due to additional C-Band spectrum licenses being placed into service, partially offset by a decrease in interest costs due to lower average debt balances and a lower interest rate.\nProvision for Income Taxes\n(dollars in millions)",
+   "section": "mdna",
+   "form": "10-K",
+   "filed": "2026-02-17",
+   "period_end": "2025-12-31",
+   "accession": "0000732712-26-000007",
+   "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/vz-20251231.htm",
+   "start": 110793,
+   "end": 112265
+  },
   "VZ-000073271226000007-0128": {
    "text": "The telecommunications industry is highly competitive, and we expect competition to remain intense as traditional and non-traditional participants seek increased market share. We believe that our attractive offerings and value proposition as well as our high-quality networks and customer base support our competitive position and give us the ability to plan and manage through changing market conditions. We remain focused on executing on the fundamentals of the business: enhancing our networks, offering innovative services and products, growing and maintaining a high-quality customer base, and delivering strong financial and operating results. We are undertaking various business transformation initiatives and continue to focus on cost efficiencies in order to have flexibility to adjust to changes in the competitive and economic environments, streamline our operations, enhance customer experience and increase shareholder value.",
    "section": "mdna",
@@ -4284,16 +4004,16 @@
    "start": 176599,
    "end": 177975
   },
-  "VZ-000073271226000023-0035": {
-   "text": "Proceeds from our asset-backed debt transactions are reflected in Cash flows from financing activities in our condensed consolidated statements of cash flows. The asset-backed debt issued is included in Debt maturing within one year and Long-term debt in our condensed consolidated balance sheets.\nABS Notes\nDuring the three months ended March 31, 2026, we completed the following ABS Notes transactions:\n(dollars in millions) Interest Rates % Expected Weighted-average Life to Maturity (in years) Principal Amount Issued\nMarch 2026\nSeries 2026-1\nA-1a Senior class notes 3.940 1.94 $ 1,103\nA-1b Senior class notes\nCompounded SOFR + 0.400(1)\n1.94 368\nB Junior class notes 4.190 1.94 —\nC Junior class notes 4.430 1.94 67\nTotal $ 1,538\n(1) Compounded Secured Overnight Financing Rate (SOFR) is calculated using SOFR as published by the Federal Reserve Bank of New York in accordance with the terms of such notes.\nUnder the terms of each series of ABS Notes outstanding as of March 31, 2026, there is a revolving period of up to two years, three years, or five years, as applicable, during which we may transfer additional receivables to the ABS Entity. During the three months ended March 31, 2026, we made aggregate principal repayments of $1.0 billion in connection with an anticipated redemption of ABS Notes.\nABS Financing Facilities",
+  "VZ-000073271226000007-0271": {
+   "text": "In connection with the master repurchase agreement, the Company has agreed to unconditionally and irrevocably guarantee payment obligations of the related ABS Entity, including to repurchase Class R Interest from the Counterparty.\nCash collections on the receivables and on the underlying receivables related to the participation interest collateralizing our ABS Notes and ABS Financing Facilities are required at certain specified times to be placed into segregated accounts. Deposits to the segregated accounts are considered restricted cash and are included in Prepaid expenses and other and Other assets in our consolidated balance sheets.\n75\nTable of Contents\nProceeds from our asset-backed debt transactions are reflected in Cash flows from financing activities in our consolidated statements of cash flows. The asset-backed debt issued is included in Debt maturing within one year and Long-term debt in our consolidated balance sheets.\nABS Notes\nDuring the year ended December 31, 2025, we completed the following ABS Notes transactions:\n(dollars in millions) Interest Rates % Expected Weighted-average Life to Maturity (in years) Principal Amount Issued\nJanuary 2025\nSeries 2025-1\nA Senior class notes\n4.710 2.99 $ 535\nB Junior class notes 4.940 2.99 41\nC Junior class notes 5.090 2.99 25\nSeries 2025-2\nA Senior class notes 4.940 5.00 446\nB Junior class notes 5.160 5.00 34\nC Junior class notes 5.340 5.00 20\nJanuary 2025 total\n1,101\nMarch 2025\nSeries 2025-3\nA-1a Senior class notes",
    "section": "debt_note",
-   "form": "10-Q",
-   "filed": "2026-05-01",
-   "period_end": "2026-03-31",
-   "accession": "0000732712-26-000023",
-   "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000023/vz-20260331.htm",
-   "start": 42399,
-   "end": 43733
+   "form": "10-K",
+   "filed": "2026-02-17",
+   "period_end": "2025-12-31",
+   "accession": "0000732712-26-000007",
+   "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/vz-20251231.htm",
+   "start": 322791,
+   "end": 324281
   },
   "VZ-000073271226000023-0113": {
    "text": "Depreciation and amortization expense increased during the three months ended March 31, 2026 compared to the similar period in 2025 driven by the change in the mix of total Verizon depreciable and amortizable assets, including the impact of depreciable assets acquired as part of the Frontier acquisition, and Business's usage of those assets.\nSegment Operating Income and Segment EBITDA\nSegment EBITDA and Segment EBITDA margin are non-GAAP financial measures. See “Segment Results of Operations — Verizon Consumer Group — Segment Operating Income and Segment EBITDA” for additional details.\nThree Months Ended\nMarch 31, Increase\n(dollars in millions) 2026 2025\nSegment Operating Income $ 884 $ 664 $ 220 33.1 %\nAdd Depreciation and amortization expense 1,081 1,020 61 6.0\nSegment EBITDA $ 1,965 $ 1,684 $ 281 16.7\nSegment operating income margin(1)\n11.9 % 9.1 %\nSegment EBITDA margin 26.5 % 23.1 %\n(1) Segment operating income margin reflects the profitability of the segment as a percentage of revenue. Segment operating income margin is calculated by dividing total segment operating income by total segment operating revenues.\nThe changes in the table above during the three months ended March 31, 2026 compared to the similar period in 2025 were primarily a result of the factors described in connection with Business operating revenues and operating expenses.\nSpecial Items\nSpecial items included in Income Before Provision For Income Taxes were as follows:\nThree Months Ended\nMarch 31,",
@@ -4306,16 +4026,16 @@
    "start": 140527,
    "end": 142020
   },
-  "VZ-000073271226000023-0125": {
-   "text": "Our credit agreements contain covenants that are typical for large, investment grade companies. These covenants include requirements to pay interest and principal in a timely fashion, pay taxes, maintain insurance with responsible and reputable insurance companies, preserve our corporate existence, keep appropriate books and records of financial transactions, maintain our properties, provide financial and other reports to our lenders, limit pledging and disposition of assets and mergers and consolidations, and other similar covenants.\nWe and our consolidated subsidiaries are in compliance with all of our restrictive covenants in our debt agreements.\nChange In Cash, Cash Equivalents and Restricted Cash\nOur Cash and cash equivalents at March 31, 2026 totaled $8.4 billion, a $10.7 billion decrease compared to December 31, 2025, primarily as a result of the factors discussed above.\n44\nTable of Contents\nRestricted cash totaled $266 million and $451 million as of March 31, 2026 and December 31, 2025, respectively, primarily related to cash collections on certain receivables and on the underlying receivables related to the participation interest that are required at certain specified times to be placed into segregated accounts.\nFree Cash Flow",
-   "section": "liquidity",
+  "VZ-000073271226000023-0136": {
+   "text": "The following important factors, along with those discussed elsewhere in this report and in other filings with the Securities and Exchange Commission (SEC), could affect future results and could cause those results to differ materially from those expressed in the forward-looking statements:\n•the effects of competition in the markets in which we operate, including the inability to successfully respond to competitive factors such as prices, promotional incentives, network performance and quality, and evolving consumer preferences;\n•failure to take advantage of, or respond to competitors' use of, developments in technology, including artificial intelligence, and address changes in consumer demand;\n•the inability to implement our business strategy;\n•adverse conditions in the U.S. and international economies, including inflation and changing interest rates in the markets in which we operate;\n•changes to international trade and tariff policies and related economic and other impacts;\n•cyberattacks impacting our networks or systems and any resulting financial or reputational impact;\n•our ability to implement business transformation initiatives and achieve their anticipated benefits;\n•system failures and disruptions to our networks and operations and any resulting financial, reputational or business impact;",
+   "section": "mdna",
    "form": "10-Q",
    "filed": "2026-05-01",
    "period_end": "2026-03-31",
    "accession": "0000732712-26-000023",
    "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000023/vz-20260331.htm",
-   "start": 154763,
-   "end": 156018
+   "start": 167616,
+   "end": 168935
   },
   "VZ-000073271226000046-0139": {
    "text": "Consolidated Financial Condition\nSix Months Ended\nJune 30,\n(dollars in millions) 2026 2025 Change\nCash Flows Provided By (Used In)\nOperating activities\n$ 18,419 $ 16,757 $ 1,662\nInvesting activities\n(18,500) (7,190) (11,310)\nFinancing activities\n(17,114) (10,271) (6,843)\nDecrease in cash, cash equivalents and restricted cash $ (17,195) $ (704) $ (16,491)\nWe use the net cash generated from our operations to invest in new businesses and spectrum, fund expansion and modernization of our networks, pay dividends, service and repay external financing and, when appropriate, buy back shares of our outstanding common stock. Our sources of funds, primarily from operations and, to the extent necessary, from external financing arrangements, are sufficient to meet ongoing operating and investing requirements over the next 12 months and beyond.\nOur cash and cash equivalents are held both domestically and internationally, and are invested to maintain principal and provide liquidity. See \"Change In Cash, Cash Equivalents and Restricted Cash\" for additional information regarding the changes in our cash balances. See \"Market Risk\" for additional information regarding our foreign currency risk management strategies.",
@@ -4328,39 +4048,6 @@
    "start": 176833,
    "end": 178049
   },
-  "VZ-000073271226000046-0144": {
-   "text": "Proceeds from our asset-backed debt transactions are reflected in Cash flows from financing activities in our condensed consolidated statements of cash flows. The asset-backed debt issued is included in Debt maturing within one year and Long-term debt in our condensed consolidated balance sheets.\n53\nTable of Contents\nSee Note 5 to the condensed consolidated financial statements for additional information.\nLong-Term Credit Facilities\nAt June 30, 2026\n(dollars in millions) Maturities Facility Capacity Unused Capacity Principal Amount Outstanding\nVerizon revolving credit facility(1)\n2028 $ 12,000 $ 11,976 $ —\nVarious export credit facilities(2)\n2026 - 2033 11,950 85 5,718\nTotal $ 23,950 $ 12,061 $ 5,718\n(1) The revolving credit facility does not require us to comply with financial covenants or maintain specified credit ratings, and it permits us to borrow even if our business has incurred a material adverse change. The revolving credit facility provides for the issuance of letters of credit. As of June 30, 2026, there have been no drawings against the revolving credit facility since its inception.",
-   "section": "liquidity",
-   "form": "10-Q",
-   "filed": "2026-07-31",
-   "period_end": "2026-06-30",
-   "accession": "0000732712-26-000046",
-   "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000046/vz-20260630.htm",
-   "start": 183599,
-   "end": 184710
-  },
-  "VZ-000073271226000052-0038": {
-   "text": "During the nine months ended September 30, 2026, we issued $13.2 billion in net proceeds and made $13.2 billion in principal repayments of commercial paper. These transactions are reflected within Cash flow from financing activities in our condensed consolidated statements of cash flows on a net basis. As of September 30, 2026, we had no commercial paper outstanding.\nAsset-Backed Debt",
-   "section": "debt_note",
-   "form": "10-Q",
-   "filed": "2026-10-29",
-   "period_end": "2026-09-30",
-   "accession": "0000732712-26-000052",
-   "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/vz-20260930.htm",
-   "start": 48391,
-   "end": 48778
-  },
-  "VZ-000073271226000052-0042": {
-   "text": "In connection with the master repurchase agreements, the Company has agreed to unconditionally and irrevocably guarantee payment obligations of the related ABS Entities, including to repurchase Class R Interest and residual equity interests, as applicable, from the Counterparties.\nCash collections on the receivables and on the underlying receivables related to the participation interest collateralizing our ABS Notes and ABS Financing Facilities are required at certain specified times to be placed into segregated accounts. Deposits to the segregated accounts are considered restricted cash and are included in Prepaid expenses and other and Other assets in our condensed consolidated balance sheets.\nProceeds from our asset-backed debt transactions are reflected in Cash flows from financing activities in our condensed consolidated statements of cash flows. The asset-backed debt issued is included in Debt maturing within one year and Long-term debt in our condensed consolidated balance sheets.\nABS Notes\nDuring the nine months ended September 30, 2026, we completed the following ABS Notes transactions:\n(dollars in millions) Interest Rates % Expected Weighted-average Life to Maturity (in years) Principal Amount Issued\nMarch 2026\nSeries 2026-1\nA-1a Senior class notes 3.940 1.94 $ 1,103\nA-1b Senior class notes\nCompounded SOFR + 0.400(1)\n1.94 368\nB Junior class notes 4.190 1.94 —\nC Junior class notes 4.430 1.94 67\nMarch 2026 total 1,538\nJune 2026\nSeries 2026-2\nA-1a Senior class notes",
-   "section": "debt_note",
-   "form": "10-Q",
-   "filed": "2026-10-29",
-   "period_end": "2026-09-30",
-   "accession": "0000732712-26-000052",
-   "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/vz-20260930.htm",
-   "start": 51948,
-   "end": 53445
-  },
   "VZ-000073271226000052-0048": {
    "text": "(1) The revolving credit facility does not require us to comply with financial covenants or maintain specified credit ratings, and it permits us to borrow even if our business has incurred a material adverse change. The revolving credit facility provides for the issuance of letters of credit. As of September 30, 2026, there have been no drawings against the revolving credit facility since its inception.\n(2) During the nine months ended September 30, 2026, we drew down approximately $1.6 billion. During the nine months ended September 30, 2025, there were no drawings from these facilities. Borrowings under certain of these facilities are repaid semi-annually in equal installments up to the applicable maturity dates. Maturities reflect maturity dates of principal amounts outstanding. Any amounts borrowed under these facilities and subsequently repaid cannot be reborrowed.\nIn September 2026, we amended our $12.0 billion revolving credit facility and extended its maturity to 2030.\nNon-Cash Transactions",
    "section": "debt_note",
@@ -4371,17 +4058,6 @@
    "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/vz-20260930.htm",
    "start": 59738,
    "end": 60751
-  },
-  "VZ-000073271226000052-0097": {
-   "text": "Item 2. Management’s Discussion and Analysis of Financial Condition and Results of Operations\nOverview\nVerizon Communications Inc. (the Company) is a holding company that, acting through its subsidiaries (together with the Company, collectively, Verizon), is one of the world's leading providers of communications, technology, information and streaming products and services to consumers, businesses and government entities. With a presence around the world, we offer data, video and voice services and solutions on our networks and platforms that are designed to meet customers’ demand for mobility, reliable network connectivity and security. To compete effectively in today’s dynamic marketplace, we are focused on delivering what customers want and need in the digital world by offering innovative products and services, delivering excellent customer experience, and leveraging the capabilities of our high-performing networks.\nHighlights of Our Financial Results for the Three Months Ended September 30, 2026 and 2025\n(dollars in millions)\nHighlights of Our Financial Results for the Nine Months Ended September 30, 2026 and 2025\n(dollars in millions)\n37\nTable of Contents\nBusiness Overview\nWe have two reportable segments that we operate and manage as strategic business units - Verizon Consumer Group (Consumer) and Verizon Business Group (Business).\nRevenue by Segment for the Three Months Ended September 30, 2026 and 2025",
-   "section": "mdna",
-   "form": "10-Q",
-   "filed": "2026-10-29",
-   "period_end": "2026-09-30",
-   "accession": "0000732712-26-000052",
-   "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/vz-20260930.htm",
-   "start": 121137,
-   "end": 122568
   },
   "VZ-000073271226000052-0119": {
    "text": "See Note 8 to the condensed consolidated financial statements for more information on the other components of net periodic benefit cost.\nInterest Expense\nThree Months Ended Nine Months Ended\nSeptember 30, Increase/(Decrease) September 30, Increase/(Decrease)\n(dollars in millions) 2026 2025 2026 2025\nTotal interest costs on debt balances $ 2,097 $ 1,846 $ 251 13.6 % $ 6,342 $ 5,505 $ 837 15.2 %\nLess capitalized interest costs 147 182 (35) (19.2) 467 570 (103) (18.1)\nInterest Expense\n$ 1,950 $ 1,664 $ 286 17.2 $ 5,875 $ 4,935 $ 940 19.0\nAverage debt outstanding(1)(3)\n$ 167,321 $ 146,578 $ 168,591 $ 145,154\nEffective interest rate(2)(3)\n5.0 % 5.0 % 5.0 % 5.1 %\n(1)The average debt outstanding is a financial measure and is calculated by applying a simple average of prior months' end balances of total short-term and long-term debt, net of discounts, premiums and unamortized debt issuance costs.\n(2)The effective interest rate is the rate of actual interest incurred on debt. It is calculated by dividing the annualized total interest costs on debt balances by the average debt outstanding.\n(3)We believe that this measure is useful to management, investors and other users of our financial information in evaluating our debt financing cost and trends in our debt leverage management.",
@@ -4686,51 +4362,23 @@
    "ref": "short_term_debt"
   },
   {
+   "id": "partially_supported_claim:business_profile-5",
+   "category": "partially_supported_claim",
+   "severity": "warning",
+   "message": "Business profile: partially supported (The passage supports attractive offerings/value proposition, high-quality networks, and managing through changing market conditions, but 'high-quality customer base' is not directly stated (only 'customer base' in that sentence) and 'cash flow stability' is not mentioned in the evidence.): “Verizon believes its attractive offerings and value proposition, high-quality networks and high-quality customer base support its competitive position and its ability to manage through changing market conditions, which is supportive of cash flow stability.”",
+   "ref": "business_profile-5"
+  },
+  {
    "id": "partially_supported_claim:financial_risk-3",
    "category": "partially_supported_claim",
    "severity": "warning",
-   "message": "Financial risk: partially supported (The 7.33x and 6.36x values match the metric scorecard, but there is no evidence for the claim that the largest decline occurred in the twelve months to 30 September 2026 (no intermediate period data or passages provided).): “EBITDA / interest worsened from 7.33x in the fiscal year ended 31 December 2023 to 6.36x in the twelve months to 30 September 2026, with the largest decline occurring in the twelve months to 30 September 2026.”",
+   "message": "Financial risk: partially supported (The evidence supports higher total interest costs (9M 2026: $6,342M vs $5,505M) and lower capitalized interest due to C-Band licenses being placed into service, but the deterioration in interest coverage itself is not shown in the evidence, and the annual data shows total interest costs actually decreased in 2025 vs 2024.): “The deterioration in interest coverage reflects higher total interest costs on debt balances, together with a decrease in capitalized interest as additional C-Band spectrum licenses were placed into service.”",
    "ref": "financial_risk-3"
-  },
-  {
-   "id": "partially_supported_claim:financial_risk-4",
-   "category": "partially_supported_claim",
-   "severity": "warning",
-   "message": "Financial risk: partially supported (Evidence shows nine-month interest costs rose 15.2% and average debt outstanding increased, but the claim is framed for the twelve months to 30 September 2026, and no evidence is given on interest coverage (EBIT/interest) or its deterioration.): “The deterioration in interest coverage in the twelve months to 30 September 2026 was driven by higher total interest costs on debt balances alongside a larger average amount of debt outstanding.”",
-   "ref": "financial_risk-4"
-  },
-  {
-   "id": "partially_supported_claim:financial_risk-5",
-   "category": "partially_supported_claim",
-   "severity": "warning",
-   "message": "Financial risk: partially supported (The Frontier acquisition adding depreciable and amortizable assets is supported, but the evidence does not establish a rise in leverage after fiscal year end 31 December 2024 or its timing relative to the acquisition.): “The rise in leverage after the fiscal year ended 31 December 2024 coincided with the Frontier acquisition, which added depreciable and amortizable assets to the company's asset base.”",
-   "ref": "financial_risk-5"
-  },
-  {
-   "id": "partially_supported_claim:financial_risk-6",
-   "category": "partially_supported_claim",
-   "severity": "warning",
-   "message": "Financial risk: partially supported (The 12.4% and 13.5% FCF/debt values match the scorecard, but the stated drivers (higher operating cash flow, lower capex) are only shown for the nine months ended September 30, 2026 vs 2025, not versus the fiscal year ended 31 December 2023, and no FY2023 cash flow figures are given.): “FCF / debt remained stable, at 12.4% in the fiscal year ended 31 December 2023 versus 13.5% in the twelve months to 30 September 2026, supported by higher net cash provided by operating activities and slightly lower capital expenditures.”",
-   "ref": "financial_risk-6"
-  },
-  {
-   "id": "partially_supported_claim:rating_rationale-1",
-   "category": "partially_supported_claim",
-   "severity": "warning",
-   "message": "Rating rationale: partially supported (The SB-4 grade, 3.90 weighted score, and 'stylized scorecard grade, not a credit rating' framing are all confirmed by the scorecard values, but the evidence gives only 'latest' figures and never states the twelve months to 30 September 2026 period.): “The SB grade for the twelve months to 30 September 2026 is SB-4, a stylized internal scorecard grade and not a credit rating, reflecting a weighted score of 3.90.”",
-   "ref": "rating_rationale-1"
-  },
-  {
-   "id": "partially_supported_claim:rating_rationale-5",
-   "category": "partially_supported_claim",
-   "severity": "warning",
-   "message": "Rating rationale: partially supported (The evidence supports Verizon's scale, diversified services, and two Consumer/Business segments, and shows coverage/leverage factor scores, but the causal claim that segments 'underpin' cash generation is not established by the evidence.): “The grade is supported by Verizon's substantial scale and diversified communications, technology and information services offered through its Consumer and Business segments, which underpin the cash generation measured by the scorecard's coverage and leverage factors.”",
-   "ref": "rating_rationale-5"
   }
  ],
  "run": {
-  "run_id": "VZ-20261118T042344Z-GLM-5.3",
-  "started_at": "2026-11-18T04:23:44Z",
+  "run_id": "VZ-20261118T050006Z-GLM-5.3",
+  "started_at": "2026-11-18T05:00:06Z",
   "writer_model": "zai-org/GLM-5.3",
   "judge_model": "zai-org/GLM-5.3",
   "service_tier": "asap",
@@ -4741,21 +4389,21 @@
   "prices_read_on": "2026-11-17",
   "drafting": {
    "calls": 9,
-   "input_tokens": 39658,
-   "cached_input_tokens": 17408,
-   "output_tokens": 14885,
-   "cost_usd": 0.070784,
-   "seconds": 106.29
+   "input_tokens": 35343,
+   "cached_input_tokens": 29534,
+   "output_tokens": 17651,
+   "cost_usd": 0.065374,
+   "seconds": 159.92
   },
   "verification": {
-   "calls": 34,
-   "input_tokens": 18091,
-   "cached_input_tokens": 4352,
-   "output_tokens": 3795,
-   "cost_usd": 0.025936,
-   "seconds": 86.02
+   "calls": 35,
+   "input_tokens": 17477,
+   "cached_input_tokens": 4795,
+   "output_tokens": 3237,
+   "cost_usd": 0.023261,
+   "seconds": 71.1
   },
-  "raw_outputs": "VZ/VZ-20261118T042344Z-GLM-5.3.jsonl"
+  "raw_outputs": "VZ/VZ-20261118T050006Z-GLM-5.3.jsonl"
  },
  "disclaimer": "Educational project. Not investment advice. SB grades are a student's stylized scorecard, not credit ratings."
 }

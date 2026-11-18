@@ -1,0 +1,247 @@
+{
+ "schema_version": "1",
+ "checked_at": "2026-11-18T07:56:41Z",
+ "last_heartbeat": "2026-11-18T07:56:41Z",
+ "companies": {
+  "WMT": {
+   "latest_10k": {
+    "form": "10-K",
+    "accession": "0000104169-26-000055",
+    "period_end": "2026-01-31",
+    "filed": "2026-03-13"
+   },
+   "latest_10q": {
+    "form": "10-Q",
+    "accession": "0000104169-26-000154",
+    "period_end": "2026-07-31",
+    "filed": "2026-08-28"
+   },
+   "memo_status": "current",
+   "memo_date": "2026-11-18"
+  },
+  "VZ": {
+   "latest_10k": {
+    "form": "10-K",
+    "accession": "0000732712-26-000007",
+    "period_end": "2025-12-31",
+    "filed": "2026-02-17"
+   },
+   "latest_10q": {
+    "form": "10-Q",
+    "accession": "0000732712-26-000052",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-29"
+   },
+   "memo_status": "current",
+   "memo_date": "2026-11-18"
+  },
+  "GT": {
+   "latest_10k": {
+    "form": "10-K",
+    "accession": "0001628280-26-006708",
+    "period_end": "2025-12-31",
+    "filed": "2026-02-10"
+   },
+   "latest_10q": {
+    "form": "10-Q",
+    "accession": "0001628280-26-070703",
+    "period_end": "2026-09-30",
+    "filed": "2026-11-05"
+   },
+   "memo_status": "current",
+   "memo_date": "2026-11-18"
+  },
+  "HCA": {
+   "latest_10k": {
+    "form": "10-K",
+    "accession": "0001193125-26-044769",
+    "period_end": "2025-12-31",
+    "filed": "2026-02-10"
+   },
+   "latest_10q": {
+    "form": "10-Q",
+    "accession": "0001193125-26-437871",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-29"
+   },
+   "memo_status": "current",
+   "memo_date": "2026-11-18"
+  },
+  "CCL": {
+   "latest_10k": {
+    "form": "10-K",
+    "accession": "0000815097-26-000007",
+    "period_end": "2025-11-30",
+    "filed": "2026-01-27"
+   },
+   "latest_10q": {
+    "form": "10-Q",
+    "accession": "0000815097-26-000107",
+    "period_end": "2026-08-31",
+    "filed": "2026-09-29"
+   },
+   "memo_status": "current",
+   "memo_date": "2026-11-18"
+  },
+  "MSFT": {
+   "latest_10k": {
+    "form": "10-K",
+    "accession": "0001193125-26-323660",
+    "period_end": "2026-06-30",
+    "filed": "2026-07-29"
+   },
+   "latest_10q": {
+    "form": "10-Q",
+    "accession": "0001193125-26-436133",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-28"
+   },
+   "memo_status": "current",
+   "memo_date": "2026-11-18"
+  },
+  "PG": {
+   "latest_10k": {
+    "form": "10-K",
+    "accession": "0000080424-26-000103",
+    "period_end": "2026-06-30",
+    "filed": "2026-08-04"
+   },
+   "latest_10q": {
+    "form": "10-Q",
+    "accession": "0000080424-26-000256",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-22"
+   },
+   "memo_status": "current",
+   "memo_date": "2026-11-18"
+  },
+  "XOM": {
+   "latest_10k": {
+    "form": "10-K",
+    "accession": "0000034088-26-000045",
+    "period_end": "2025-12-31",
+    "filed": "2026-02-18"
+   },
+   "latest_10q": {
+    "form": "10-Q",
+    "accession": "0000034088-26-000093",
+    "period_end": "2026-06-30",
+    "filed": "2026-08-03"
+   },
+   "memo_status": "current",
+   "memo_date": "2026-11-18"
+  },
+  "UNP": {
+   "latest_10k": {
+    "form": "10-K",
+    "accession": "0000100885-26-000037",
+    "period_end": "2025-12-31",
+    "filed": "2026-02-06"
+   },
+   "latest_10q": {
+    "form": "10-Q",
+    "accession": "0000100885-26-000321",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-22"
+   },
+   "memo_status": "current",
+   "memo_date": "2026-11-18"
+  },
+  "ORCL": {
+   "latest_10k": {
+    "form": "10-K",
+    "accession": "0001193125-26-277521",
+    "period_end": "2026-05-31",
+    "filed": "2026-06-22"
+   },
+   "latest_10q": {
+    "form": "10-Q",
+    "accession": "0001193125-26-389274",
+    "period_end": "2026-08-31",
+    "filed": "2026-09-11"
+   },
+   "memo_status": "current",
+   "memo_date": "2026-11-18"
+  },
+  "KSS": {
+   "latest_10k": {
+    "form": "10-K",
+    "accession": "0001193125-26-115982",
+    "period_end": "2026-01-31",
+    "filed": "2026-03-19"
+   },
+   "latest_10q": {
+    "form": "10-Q",
+    "accession": "0001193125-26-381893",
+    "period_end": "2026-08-01",
+    "filed": "2026-09-03"
+   },
+   "memo_status": "current",
+   "memo_date": "2026-11-18"
+  },
+  "AAL": {
+   "latest_10k": {
+    "form": "10-K",
+    "accession": "0000006201-26-000014",
+    "period_end": "2025-12-31",
+    "filed": "2026-02-18"
+   },
+   "latest_10q": {
+    "form": "10-Q",
+    "accession": "0000006201-26-000065",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-22"
+   },
+   "memo_status": "current",
+   "memo_date": "2026-11-18"
+  },
+  "CLF": {
+   "latest_10k": {
+    "form": "10-K",
+    "accession": "0000764065-26-000025",
+    "period_end": "2025-12-31",
+    "filed": "2026-02-09"
+   },
+   "latest_10q": {
+    "form": "10-Q",
+    "accession": "0000764065-26-000115",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-20"
+   },
+   "memo_status": "current",
+   "memo_date": "2026-11-18"
+  },
+  "CZR": {
+   "latest_10k": {
+    "form": "10-K",
+    "accession": "0001590895-26-000011",
+    "period_end": "2025-12-31",
+    "filed": "2026-02-17"
+   },
+   "latest_10q": {
+    "form": "10-Q",
+    "accession": "0001590895-26-000033",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-27"
+   },
+   "memo_status": "current",
+   "memo_date": "2026-11-18"
+  },
+  "CYH": {
+   "latest_10k": {
+    "form": "10-K",
+    "accession": "0001193125-26-059509",
+    "period_end": "2025-12-31",
+    "filed": "2026-02-19"
+   },
+   "latest_10q": {
+    "form": "10-Q",
+    "accession": "0001193125-26-437869",
+    "period_end": "2026-09-30",
+    "filed": "2026-10-29"
+   },
+   "memo_status": "current",
+   "memo_date": "2026-11-18"
+  }
+ }
+}

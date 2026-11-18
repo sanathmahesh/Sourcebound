@@ -309,3 +309,112 @@ class VerificationReport(Strict):
     claims: list[ClaimCheck]
     fallback_log: list[LogItem]
     warnings: list[LogItem]
+
+
+# ----- state.json, watchlist.json, index.json, evals.json (phase 6) ----------------------------------
+
+
+class FilingRef(Strict):
+    form: str
+    accession: str
+    period_end: date
+    filed: date
+
+
+class CompanyState(Strict):
+    latest_10k: FilingRef | None
+    latest_10q: FilingRef | None
+    memo_status: Literal["current", "stale", "missing"]
+    memo_date: date | None
+
+
+class WatchState(Strict):
+    """data/published/state.json: what the daily job last saw for each company."""
+
+    schema_version: str = SCHEMA_VERSION
+    checked_at: datetime
+    last_heartbeat: datetime
+    companies: dict[str, CompanyState]
+
+
+class WatchFlag(BaseModel):
+    model_config = ConfigDict(extra="forbid", populate_by_name=True)
+
+    type: str
+    severity: Literal["warning", "alert"]
+    rule: str
+    metric_id: str
+    from_: str = Field(alias="from")
+    to: str
+
+
+class WatchItem(Strict):
+    ticker: str
+    name: str
+    latest_filing: FilingRef | None
+    data_to: date | None  # balance-sheet date of the latest metrics (LTM)
+    memo_status: Literal["current", "stale", "missing"]
+    memo_date: date | None
+    flags: list[WatchFlag]
+
+
+class Watchlist(Strict):
+    """data/published/watchlist.json"""
+
+    schema_version: str = SCHEMA_VERSION
+    checked_at: datetime
+    items: list[WatchItem]
+
+
+class HeadlineRatio(Strict):
+    metric_id: str
+    label: str
+    period: str
+    value: float | None
+    unit: str
+    status: Status
+    display: str
+
+
+class VerificationCounts(Strict):
+    claims: int
+    supported: int
+    partially_supported: int
+    unsupported: int
+
+
+class IndexEntry(Strict):
+    ticker: str
+    name: str
+    sector: str
+    grade: str | None
+    score: float | None
+    provisional: bool
+    ig_like: bool | None
+    headline: list[HeadlineRatio]
+    latest_filing: FilingRef | None
+    data_to: date | None
+    memo_status: Literal["current", "stale", "missing"]
+    memo_date: date | None
+    memo_model: str | None
+    verification: VerificationCounts | None
+    open_flags: int
+    flag_types: list[str]
+
+
+class SiteIndex(Strict):
+    """data/published/index.json: one entry per company, for the portfolio page."""
+
+    schema_version: str = SCHEMA_VERSION
+    generated_at: datetime
+    companies: list[IndexEntry]
+    disclaimer: str = DISCLAIMER
+
+
+class EvalsFile(Strict):
+    """data/published/evals.json: the evaluation results (evals/results/results.json), for the site."""
+
+    schema_version: str = SCHEMA_VERSION
+    generated_at: datetime
+    source: str
+    results: dict

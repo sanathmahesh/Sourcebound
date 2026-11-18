@@ -102,10 +102,13 @@ class EdgarClient:
 
     # ----- fetching ----------------------------------------------------------------------------
 
-    def get_json(self, url: str) -> dict:
-        """Return the JSON at url, from the cache if we have it, otherwise from EDGAR."""
+    def get_json(self, url: str, refresh: bool = False) -> dict:
+        """Return the JSON at url, from the cache if we have it, otherwise from EDGAR.
+
+        refresh=True downloads it again and replaces the cached copy (the daily watchlist needs today's data).
+        """
         path = self.cache_path(url)
-        if path.exists():
+        if path.exists() and not refresh:
             return json.loads(path.read_bytes())
         body = self._download(url)
         try:

@@ -1,6 +1,6 @@
 # Coverage report
 
-Generated 2026-11-18 03:38 UTC. For each company and concept: the fallback rank used in FY-2·FY-1·FY0·LTM.
+Generated 2026-11-18 07:56 UTC. For each company and concept: the fallback rank used in FY-2·FY-1·FY0·LTM.
 `1` = first-choice tag, `2`+ = a fallback (logged), `0` = assumed zero because not reported (on the
 reviewer checklist), `–` = not available. Chains are in config/concepts.yaml.
 
