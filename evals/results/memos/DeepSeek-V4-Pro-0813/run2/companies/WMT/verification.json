@@ -1,0 +1,1070 @@
+{
+ "schema_version": "1",
+ "ticker": "WMT",
+ "memo_date": "2026-11-18",
+ "writer_model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+ "judge_model": "zai-org/GLM-5.3",
+ "summary": {
+  "claims": 32,
+  "supported": 28,
+  "partially_supported": 4,
+  "unsupported": 0,
+  "checked_by_judge": 32,
+  "checked_deterministically": 0,
+  "metric_figures": 51,
+  "quoted_figures": 10,
+  "raw_numbers_rejected": 5,
+  "repairs": 2,
+  "sections_without_draft": 0
+ },
+ "numbers": [
+  {
+   "claim_id": "business_profile-1",
+   "kind": "metric",
+   "value": "$735.8 billion",
+   "metric_id": "revenue:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "business_profile-2",
+   "kind": "metric",
+   "value": "$47.4 billion",
+   "metric_id": "ebitda:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "financial_risk-1",
+   "kind": "metric",
+   "value": "1.21x",
+   "metric_id": "debt_to_ebitda:FY-2",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "financial_risk-1",
+   "kind": "metric",
+   "value": "1.21x",
+   "metric_id": "debt_to_ebitda:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "financial_risk-2",
+   "kind": "metric",
+   "value": "0.95x",
+   "metric_id": "net_leverage:FY-2",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "financial_risk-2",
+   "kind": "metric",
+   "value": "0.96x",
+   "metric_id": "net_leverage:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "financial_risk-3",
+   "kind": "metric",
+   "value": "20.99x",
+   "metric_id": "interest_coverage:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "financial_risk-3",
+   "kind": "metric",
+   "value": "15.03x",
+   "metric_id": "interest_coverage:FY-2",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "financial_risk-4",
+   "kind": "metric",
+   "value": "32.2%",
+   "metric_id": "fcf_to_debt:FY-2",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "financial_risk-4",
+   "kind": "metric",
+   "value": "23.6%",
+   "metric_id": "fcf_to_debt:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "financial_risk-5",
+   "kind": "metric",
+   "value": "$51.5 billion",
+   "metric_id": "total_debt:FY0",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "financial_risk-5",
+   "kind": "metric",
+   "value": "$57.2 billion",
+   "metric_id": "total_debt:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "liquidity-1",
+   "kind": "metric",
+   "value": "1.18x",
+   "metric_id": "liquidity_coverage:FY0",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "liquidity-2",
+   "kind": "metric",
+   "value": "1.07x",
+   "metric_id": "liquidity_coverage:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "liquidity-3",
+   "kind": "metric",
+   "value": "$42.9 billion",
+   "metric_id": "cfo:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "liquidity-3",
+   "kind": "metric",
+   "value": "$29.4 billion",
+   "metric_id": "capex:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "liquidity-3",
+   "kind": "metric",
+   "value": "$7.7 billion",
+   "metric_id": "dividends:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "liquidity-4",
+   "kind": "metric",
+   "value": "$11.5 billion",
+   "metric_id": "cash:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "liquidity-4",
+   "kind": "metric",
+   "value": "$13.9 billion",
+   "metric_id": "short_term_debt:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "liquidity-5",
+   "kind": "quoted",
+   "value": "15.0",
+   "metric_id": null,
+   "chunk_id": "WMT-000010416926000154-0069"
+  },
+  {
+   "claim_id": "liquidity-5",
+   "kind": "quoted",
+   "value": "10.0",
+   "metric_id": null,
+   "chunk_id": "WMT-000010416926000154-0069"
+  },
+  {
+   "claim_id": "liquidity-5",
+   "kind": "quoted",
+   "value": "364",
+   "metric_id": null,
+   "chunk_id": "WMT-000010416926000154-0069"
+  },
+  {
+   "claim_id": "liquidity-5",
+   "kind": "quoted",
+   "value": "5.0",
+   "metric_id": null,
+   "chunk_id": "WMT-000010416926000154-0069"
+  },
+  {
+   "claim_id": "maturity_wall-1",
+   "kind": "metric",
+   "value": "$3.5 billion",
+   "metric_id": "maturity_year_1:FY0",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "maturity_wall-1",
+   "kind": "metric",
+   "value": "$3.2 billion",
+   "metric_id": "maturity_year_2:FY0",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "maturity_wall-1",
+   "kind": "metric",
+   "value": "$3.4 billion",
+   "metric_id": "maturity_year_3:FY0",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "maturity_wall-1",
+   "kind": "metric",
+   "value": "$2.1 billion",
+   "metric_id": "maturity_year_4:FY0",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "maturity_wall-1",
+   "kind": "metric",
+   "value": "$2.6 billion",
+   "metric_id": "maturity_year_5:FY0",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "maturity_wall-1",
+   "kind": "metric",
+   "value": "$23.3 billion",
+   "metric_id": "maturity_after_year_5:FY0",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "maturity_wall-2",
+   "kind": "metric",
+   "value": "$51.5 billion",
+   "metric_id": "total_debt:FY0",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "maturity_wall-2",
+   "kind": "metric",
+   "value": "$13.4 billion",
+   "metric_id": "debt_due_24m:FY0",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "maturity_wall-2",
+   "kind": "metric",
+   "value": "26.0%",
+   "metric_id": "share_due_24m:FY0",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "maturity_wall-3",
+   "kind": "metric",
+   "value": "1.25x",
+   "metric_id": "near_term_maturity_cover:FY0",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "maturity_wall-3",
+   "kind": "metric",
+   "value": "$10.7 billion",
+   "metric_id": "cash:FY0",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "maturity_wall-3",
+   "kind": "metric",
+   "value": "$10.1 billion",
+   "metric_id": "short_term_debt:FY0",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "maturity_wall-4",
+   "kind": "quoted",
+   "value": "2026",
+   "metric_id": null,
+   "chunk_id": "WMT-000010416926000055-0258"
+  },
+  {
+   "claim_id": "maturity_wall-5",
+   "kind": "quoted",
+   "value": "364",
+   "metric_id": null,
+   "chunk_id": "WMT-000010416926000102-0012"
+  },
+  {
+   "claim_id": "maturity_wall-5",
+   "kind": "quoted",
+   "value": "2026",
+   "metric_id": null,
+   "chunk_id": "WMT-000010416926000102-0012"
+  },
+  {
+   "claim_id": "maturity_wall-5",
+   "kind": "quoted",
+   "value": "30",
+   "metric_id": null,
+   "chunk_id": "WMT-000010416926000102-0012"
+  },
+  {
+   "claim_id": "maturity_wall-5",
+   "kind": "quoted",
+   "value": "2026",
+   "metric_id": null,
+   "chunk_id": "WMT-000010416926000102-0012"
+  },
+  {
+   "claim_id": "maturity_wall-6",
+   "kind": "quoted",
+   "value": "2026",
+   "metric_id": null,
+   "chunk_id": "WMT-000010416926000055-0187"
+  },
+  {
+   "claim_id": "rating_rationale-1",
+   "kind": "metric",
+   "value": "SB-3",
+   "metric_id": "sb_grade:latest",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "rating_rationale-1",
+   "kind": "metric",
+   "value": "2.70",
+   "metric_id": "sb_score:latest",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "rating_rationale-2",
+   "kind": "metric",
+   "value": "20.99x",
+   "metric_id": "interest_coverage:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "rating_rationale-2",
+   "kind": "metric",
+   "value": "1",
+   "metric_id": "band_interest_coverage:latest",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "rating_rationale-2",
+   "kind": "metric",
+   "value": "25.0%",
+   "metric_id": "weight_interest_coverage:latest",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "rating_rationale-2",
+   "kind": "metric",
+   "value": "1.21x",
+   "metric_id": "debt_to_ebitda:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "rating_rationale-2",
+   "kind": "metric",
+   "value": "0.96x",
+   "metric_id": "net_leverage:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "rating_rationale-2",
+   "kind": "metric",
+   "value": "2",
+   "metric_id": "band_debt_to_ebitda:latest",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "rating_rationale-2",
+   "kind": "metric",
+   "value": "2",
+   "metric_id": "band_net_leverage:latest",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "rating_rationale-2",
+   "kind": "metric",
+   "value": "20.0%",
+   "metric_id": "weight_debt_to_ebitda:latest",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "rating_rationale-2",
+   "kind": "metric",
+   "value": "10.0%",
+   "metric_id": "weight_net_leverage:latest",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "rating_rationale-3",
+   "kind": "metric",
+   "value": "1.07x",
+   "metric_id": "liquidity_coverage:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "rating_rationale-3",
+   "kind": "metric",
+   "value": "5",
+   "metric_id": "band_liquidity_coverage:latest",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "rating_rationale-3",
+   "kind": "metric",
+   "value": "15.0%",
+   "metric_id": "weight_liquidity_coverage:latest",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "rating_rationale-3",
+   "kind": "metric",
+   "value": "1.25x",
+   "metric_id": "near_term_maturity_cover:FY0",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "rating_rationale-3",
+   "kind": "metric",
+   "value": "5",
+   "metric_id": "band_near_term_maturity_cover:latest",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "rating_rationale-3",
+   "kind": "metric",
+   "value": "10.0%",
+   "metric_id": "weight_near_term_maturity_cover:latest",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "rating_rationale-3",
+   "kind": "metric",
+   "value": "23.6%",
+   "metric_id": "fcf_to_debt:LTM",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "rating_rationale-3",
+   "kind": "metric",
+   "value": "3",
+   "metric_id": "band_fcf_to_debt:latest",
+   "chunk_id": null
+  },
+  {
+   "claim_id": "rating_rationale-3",
+   "kind": "metric",
+   "value": "20.0%",
+   "metric_id": "weight_fcf_to_debt:latest",
+   "chunk_id": null
+  }
+ ],
+ "claims": [
+  {
+   "claim_id": "business_profile-1",
+   "section": "business_profile",
+   "kind": "quantitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The LTM revenue metric computed from XBRL data exactly matches the claimed $735.8 billion for the twelve months to 31 July 2026.",
+   "citation_checks": [],
+   "flags": []
+  },
+  {
+   "claim_id": "business_profile-2",
+   "section": "business_profile",
+   "kind": "quantitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric value from XBRL data matches the claim exactly.",
+   "citation_checks": [],
+   "flags": []
+  },
+  {
+   "claim_id": "business_profile-3",
+   "section": "business_profile",
+   "kind": "qualitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage states Walmart enhances its omnichannel capabilities through stores, eCommerce websites, mobile applications and service offerings.",
+   "citation_checks": [
+    "ok"
+   ],
+   "flags": []
+  },
+  {
+   "claim_id": "business_profile-4",
+   "section": "business_profile",
+   "kind": "qualitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The filing directly states the business is seasonal to a certain extent and that the highest sales volume has historically occurred in the fourth quarter of the fiscal year.",
+   "citation_checks": [
+    "ok"
+   ],
+   "flags": []
+  },
+  {
+   "claim_id": "business_profile-5",
+   "section": "business_profile",
+   "kind": "qualitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage describes 192 U.S. and 179 international distribution facilities that supply stores, clubs, and eCommerce customers, matching the claim.",
+   "citation_checks": [
+    "ok"
+   ],
+   "flags": []
+  },
+  {
+   "claim_id": "financial_risk-1",
+   "section": "financial_risk",
+   "kind": "quantitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "Both stated values (1.21x and 1.21x) match the metric values for FY-2 (FYE 31 Jan 2024) and LTM (twelve months to 31 July 2026), so the claim of stability is supported.",
+   "citation_checks": [],
+   "flags": []
+  },
+  {
+   "claim_id": "financial_risk-2",
+   "section": "financial_risk",
+   "kind": "quantitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "Both net leverage values (0.95x for FY ended 31 January 2024 and 0.96x for twelve months to 31 July 2026) match the computed metric values exactly, confirming stability.",
+   "citation_checks": [],
+   "flags": []
+  },
+  {
+   "claim_id": "financial_risk-3",
+   "section": "financial_risk",
+   "kind": "quantitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "Both ratios match the computed XBRL metric values for the stated periods.",
+   "citation_checks": [],
+   "flags": []
+  },
+  {
+   "claim_id": "financial_risk-4",
+   "section": "financial_risk",
+   "kind": "quantitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "Both metric values match the scorecard exactly, confirming the ratio declined from 32.2% to 23.6%.",
+   "citation_checks": [],
+   "flags": []
+  },
+  {
+   "claim_id": "financial_risk-5",
+   "section": "financial_risk",
+   "kind": "quantitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "Both total debt figures ($51.5B in FY ended 31 Jan 2026 and $57.2B in the twelve months to 31 July 2026) match the computed metric values exactly.",
+   "citation_checks": [],
+   "flags": []
+  },
+  {
+   "claim_id": "financial_risk-6",
+   "section": "financial_risk",
+   "kind": "qualitative",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The capex pressure on free cash flow is supported, but the filing says long-term debt increased 'primarily due to issuances of long-term debt,' with the debt table showing proceeds of $3,983M largely from reclassifications ($3,569M), so calling issuance the primary driver overstates the evidence.",
+   "citation_checks": [
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "flags": []
+  },
+  {
+   "claim_id": "liquidity-1",
+   "section": "liquidity",
+   "kind": "quantitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The computed metric value for liquidity coverage for FY ending 31 January 2026 is exactly 1.18x.",
+   "citation_checks": [],
+   "flags": []
+  },
+  {
+   "claim_id": "liquidity-2",
+   "section": "liquidity",
+   "kind": "quantitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The claimed liquidity coverage of 1.07x for the twelve months to 31 July 2026 matches the computed metric value exactly.",
+   "citation_checks": [],
+   "flags": []
+  },
+  {
+   "claim_id": "liquidity-3",
+   "section": "liquidity",
+   "kind": "quantitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "All three metric values match the claim exactly, confirming cash from operations exceeded capex and dividends paid.",
+   "citation_checks": [],
+   "flags": []
+  },
+  {
+   "claim_id": "liquidity-4",
+   "section": "liquidity",
+   "kind": "quantitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "Both metric values match the claim exactly for the twelve months to 31 July 2026.",
+   "citation_checks": [],
+   "flags": []
+  },
+  {
+   "claim_id": "liquidity-5",
+   "section": "liquidity",
+   "kind": "qualitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage directly states all elements: $15.0 billion committed U.S. credit lines, all undrawn, consisting of a $10.0 billion 364-day facility and $5.0 billion five-year facility, at July 31, 2026.",
+   "citation_checks": [
+    "ok",
+    "ok"
+   ],
+   "flags": []
+  },
+  {
+   "claim_id": "maturity_wall-1",
+   "section": "maturity_wall",
+   "kind": "quantitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "All six maturity figures in the claim exactly match the computed metric values.",
+   "citation_checks": [],
+   "flags": []
+  },
+  {
+   "claim_id": "maturity_wall-2",
+   "section": "maturity_wall",
+   "kind": "quantitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "Both figures ($51.5 billion total debt and $13.4 billion representing 26.0%) match the computed XBRL metric values for FY0.",
+   "citation_checks": [],
+   "flags": []
+  },
+  {
+   "claim_id": "maturity_wall-3",
+   "section": "maturity_wall",
+   "kind": "quantitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "All three figures (1.25x cover, $10.7B cash, $10.1B short-term debt) match the computed metric values for FY0.",
+   "citation_checks": [],
+   "flags": []
+  },
+  {
+   "claim_id": "maturity_wall-4",
+   "section": "maturity_wall",
+   "kind": "qualitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage explicitly states the fiscal 2026 issuances are senior, unsecured notes with no financial covenants restricting dividends or stock repurchases.",
+   "citation_checks": [
+    "ok",
+    "ok"
+   ],
+   "flags": []
+  },
+  {
+   "claim_id": "maturity_wall-5",
+   "section": "maturity_wall",
+   "kind": "qualitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage directly states the renewal of both credit facilities in April 2026 and that all $15.0 billion of U.S. committed lines were undrawn at April 30, 2026.",
+   "citation_checks": [
+    "ok",
+    "ok"
+   ],
+   "flags": []
+  },
+  {
+   "claim_id": "maturity_wall-6",
+   "section": "maturity_wall",
+   "kind": "qualitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage states total outstanding long-term debt increased $2.2 billion during fiscal 2026, primarily due to issuances of long-term debt.",
+   "citation_checks": [
+    "ok"
+   ],
+   "flags": []
+  },
+  {
+   "claim_id": "key_risks-1",
+   "section": "key_risks",
+   "kind": "qualitative",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The passage supports that slowdown, recession, tariffs or trade barriers could reduce demand, shift mix to lower-margin goods, and hurt net sales and operating income, but the concluding inference about cash available for debt service is not stated in the evidence.",
+   "citation_checks": [
+    "ok"
+   ],
+   "flags": []
+  },
+  {
+   "claim_id": "key_risks-2",
+   "section": "key_risks",
+   "kind": "qualitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The filing explicitly lists failure to meet performance or incentive thresholds affecting third-party reimbursement as a risk to the pharmacy business.",
+   "citation_checks": [
+    "ok"
+   ],
+   "flags": []
+  },
+  {
+   "claim_id": "key_risks-3",
+   "section": "key_risks",
+   "kind": "qualitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage states Walmart International's future operating results could be negatively affected by political, legal, regulatory, tax and currency risks, and lists those factors as beyond its control; the cash flow part follows directly as operating results affect cash flows contributed.",
+   "citation_checks": [
+    "ok"
+   ],
+   "flags": []
+  },
+  {
+   "claim_id": "key_risks-4",
+   "section": "key_risks",
+   "kind": "qualitative",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The passage supports that failure to execute the omnichannel strategy and eCommerce/technology investment costs could materially harm market position, net sales and financial performance, but it does not mention reduced free cash flow for debt repayment.",
+   "citation_checks": [
+    "ok"
+   ],
+   "flags": []
+  },
+  {
+   "claim_id": "key_risks-5",
+   "section": "key_risks",
+   "kind": "qualitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage states failure to comply with financial services laws and regulations could result in fines, sanctions, penalties and reputational harm; the claim adds 'direct cash outflow,' which reasonably characterizes fines/penalties but is not explicitly stated.",
+   "citation_checks": [
+    "ok"
+   ],
+   "flags": []
+  },
+  {
+   "claim_id": "rating_rationale-1",
+   "section": "rating_rationale",
+   "kind": "quantitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The scorecard confirms SB-3 grade, stylized not a credit rating, weighted score 2.70, and non-provisional status with all six factors scored.",
+   "citation_checks": [],
+   "flags": []
+  },
+  {
+   "claim_id": "rating_rationale-2",
+   "section": "rating_rationale",
+   "kind": "quantitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "All figures match the computed metrics: EBITDA/interest 20.99x at band 1 with 25.0% weight (highest weight and best band, making it the strongest input), Debt/EBITDA 1.21x band 2 with 20.0% weight, and net leverage 0.96x band 2 with 10.0% weight.",
+   "citation_checks": [],
+   "flags": []
+  },
+  {
+   "claim_id": "rating_rationale-3",
+   "section": "rating_rationale",
+   "kind": "quantitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "All cited values match the metric evidence: liquidity coverage 1.07x band 5 weight 15.0%, near-term maturity cover 1.25x band 5 weight 10.0%, FCF/debt 23.6% band 3 weight 20.0%, and bands 5 are the weakest among the six factors shown.",
+   "citation_checks": [],
+   "flags": []
+  },
+  {
+   "claim_id": "rating_rationale-4",
+   "section": "rating_rationale",
+   "kind": "qualitative",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence supports the existence of Walmart's omnichannel ecosystem and global distribution footprint, but nothing in the passages or metrics links these to stronger leverage or interest coverage factors; the scorecard shows interest coverage in band 1 of 6 (weak) and leverage in band 2 of 6.",
+   "citation_checks": [
+    "ok",
+    "ok"
+   ],
+   "flags": []
+  },
+  {
+   "claim_id": "rating_rationale-5",
+   "section": "rating_rationale",
+   "kind": "qualitative",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "Scorecard shows liquidity coverage and near-term maturity cover are the weakest factors (band 5 of 6 vs. band 1-3 for others), while the evidence confirms $15.0 billion of undrawn committed U.S. lines and compliance-related risks across pharmacy, Walmart International, and financial services that could affect results and cash flows.",
+   "citation_checks": [
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "flags": []
+  }
+ ],
+ "fallback_log": [
+  {
+   "kind": "fallback",
+   "concept": "d_and_a",
+   "period": "FY-2",
+   "message": "used rank 3 DepreciationAmortizationAndAccretionNet because rank 1 DepreciationDepletionAndAmortization: DepreciationDepletionAndAmortization not reported for 2023-02-01 to 2024-01-31; rank 2 DepreciationAndAmortization: DepreciationAndAmortization not reported for 2023-02-01 to 2024-01-31",
+   "severity": "info",
+   "subject": "DepreciationAmortizationAndAccretionNet"
+  },
+  {
+   "kind": "fallback",
+   "concept": "interest_expense",
+   "period": "FY-2",
+   "message": "used rank 3 InterestExpenseDebt + FinanceLeaseInterestExpense because rank 1 InterestExpense: InterestExpense not reported for 2023-02-01 to 2024-01-31; rank 2 InterestExpenseNonoperating: InterestExpenseNonoperating not reported for 2023-02-01 to 2024-01-31",
+   "severity": "info",
+   "subject": "InterestExpenseDebt + FinanceLeaseInterestExpense"
+  },
+  {
+   "kind": "fallback",
+   "concept": "short_term_debt",
+   "period": "FY-2",
+   "message": "used rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper because rank 1 DebtCurrent: DebtCurrent not reported at 2024-01-31",
+   "severity": "info",
+   "subject": "LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "short_term_debt",
+   "period": "FY-2",
+   "message": "CommercialPaper assumed zero: not reported (part of rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper)",
+   "severity": "info",
+   "subject": "CommercialPaper"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "short_term_investments",
+   "period": "FY-2",
+   "message": "assumed zero: not reported (rank 1 ShortTermInvestments: ShortTermInvestments not reported at 2024-01-31; rank 2 MarketableSecuritiesCurrent: MarketableSecuritiesCurrent not reported at 2024-01-31; rank 3 AvailableForSaleSecuritiesDebtSecuritiesCurrent: AvailableForSaleSecuritiesDebtSecuritiesCurrent not reported at 2024-01-31)",
+   "severity": "info",
+   "subject": "short_term_investments"
+  },
+  {
+   "kind": "fallback",
+   "concept": "dividends",
+   "period": "FY-2",
+   "message": "used rank 2 PaymentsOfDividendsCommonStock because rank 1 PaymentsOfDividends: PaymentsOfDividends not reported for 2023-02-01 to 2024-01-31",
+   "severity": "info",
+   "subject": "PaymentsOfDividendsCommonStock"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "undrawn_revolver",
+   "period": "FY-2",
+   "message": "assumed zero: not reported (rank 1 LineOfCreditFacilityRemainingBorrowingCapacity: LineOfCreditFacilityRemainingBorrowingCapacity not reported at 2024-01-31)",
+   "severity": "info",
+   "subject": "undrawn_revolver"
+  },
+  {
+   "kind": "fallback",
+   "concept": "d_and_a",
+   "period": "FY-1",
+   "message": "used rank 3 DepreciationAmortizationAndAccretionNet because rank 1 DepreciationDepletionAndAmortization: DepreciationDepletionAndAmortization not reported for 2024-02-01 to 2025-01-31; rank 2 DepreciationAndAmortization: DepreciationAndAmortization not reported for 2024-02-01 to 2025-01-31",
+   "severity": "info",
+   "subject": "DepreciationAmortizationAndAccretionNet"
+  },
+  {
+   "kind": "fallback",
+   "concept": "interest_expense",
+   "period": "FY-1",
+   "message": "used rank 3 InterestExpenseDebt + FinanceLeaseInterestExpense because rank 1 InterestExpense: InterestExpense not reported for 2024-02-01 to 2025-01-31; rank 2 InterestExpenseNonoperating: InterestExpenseNonoperating not reported for 2024-02-01 to 2025-01-31",
+   "severity": "info",
+   "subject": "InterestExpenseDebt + FinanceLeaseInterestExpense"
+  },
+  {
+   "kind": "fallback",
+   "concept": "short_term_debt",
+   "period": "FY-1",
+   "message": "used rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper because rank 1 DebtCurrent: DebtCurrent not reported at 2025-01-31",
+   "severity": "info",
+   "subject": "LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "short_term_debt",
+   "period": "FY-1",
+   "message": "CommercialPaper assumed zero: not reported (part of rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper)",
+   "severity": "info",
+   "subject": "CommercialPaper"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "short_term_investments",
+   "period": "FY-1",
+   "message": "assumed zero: not reported (rank 1 ShortTermInvestments: ShortTermInvestments not reported at 2025-01-31; rank 2 MarketableSecuritiesCurrent: MarketableSecuritiesCurrent not reported at 2025-01-31; rank 3 AvailableForSaleSecuritiesDebtSecuritiesCurrent: AvailableForSaleSecuritiesDebtSecuritiesCurrent not reported at 2025-01-31)",
+   "severity": "info",
+   "subject": "short_term_investments"
+  },
+  {
+   "kind": "fallback",
+   "concept": "dividends",
+   "period": "FY-1",
+   "message": "used rank 2 PaymentsOfDividendsCommonStock because rank 1 PaymentsOfDividends: PaymentsOfDividends not reported for 2024-02-01 to 2025-01-31",
+   "severity": "info",
+   "subject": "PaymentsOfDividendsCommonStock"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "undrawn_revolver",
+   "period": "FY-1",
+   "message": "assumed zero: not reported (rank 1 LineOfCreditFacilityRemainingBorrowingCapacity: LineOfCreditFacilityRemainingBorrowingCapacity not reported at 2025-01-31)",
+   "severity": "info",
+   "subject": "undrawn_revolver"
+  },
+  {
+   "kind": "fallback",
+   "concept": "d_and_a",
+   "period": "FY0",
+   "message": "used rank 3 DepreciationAmortizationAndAccretionNet because rank 1 DepreciationDepletionAndAmortization: DepreciationDepletionAndAmortization not reported for 2025-02-01 to 2026-01-31; rank 2 DepreciationAndAmortization: DepreciationAndAmortization not reported for 2025-02-01 to 2026-01-31",
+   "severity": "info",
+   "subject": "DepreciationAmortizationAndAccretionNet"
+  },
+  {
+   "kind": "fallback",
+   "concept": "interest_expense",
+   "period": "FY0",
+   "message": "used rank 3 InterestExpenseDebt + FinanceLeaseInterestExpense because rank 1 InterestExpense: InterestExpense not reported for 2025-02-01 to 2026-01-31; rank 2 InterestExpenseNonoperating: InterestExpenseNonoperating not reported for 2025-02-01 to 2026-01-31",
+   "severity": "info",
+   "subject": "InterestExpenseDebt + FinanceLeaseInterestExpense"
+  },
+  {
+   "kind": "fallback",
+   "concept": "short_term_debt",
+   "period": "FY0",
+   "message": "used rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper because rank 1 DebtCurrent: DebtCurrent not reported at 2026-01-31",
+   "severity": "info",
+   "subject": "LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "short_term_debt",
+   "period": "FY0",
+   "message": "CommercialPaper assumed zero: not reported (part of rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper)",
+   "severity": "info",
+   "subject": "CommercialPaper"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "short_term_investments",
+   "period": "FY0",
+   "message": "assumed zero: not reported (rank 1 ShortTermInvestments: ShortTermInvestments not reported at 2026-01-31; rank 2 MarketableSecuritiesCurrent: MarketableSecuritiesCurrent not reported at 2026-01-31; rank 3 AvailableForSaleSecuritiesDebtSecuritiesCurrent: AvailableForSaleSecuritiesDebtSecuritiesCurrent not reported at 2026-01-31)",
+   "severity": "info",
+   "subject": "short_term_investments"
+  },
+  {
+   "kind": "fallback",
+   "concept": "dividends",
+   "period": "FY0",
+   "message": "used rank 2 PaymentsOfDividendsCommonStock because rank 1 PaymentsOfDividends: PaymentsOfDividends not reported for 2025-02-01 to 2026-01-31",
+   "severity": "info",
+   "subject": "PaymentsOfDividendsCommonStock"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "undrawn_revolver",
+   "period": "FY0",
+   "message": "assumed zero: not reported (rank 1 LineOfCreditFacilityRemainingBorrowingCapacity: LineOfCreditFacilityRemainingBorrowingCapacity not reported at 2026-01-31)",
+   "severity": "info",
+   "subject": "undrawn_revolver"
+  },
+  {
+   "kind": "fallback",
+   "concept": "d_and_a",
+   "period": "LTM",
+   "message": "used rank 3 DepreciationAmortizationAndAccretionNet because rank 1 DepreciationDepletionAndAmortization: DepreciationDepletionAndAmortization not reported for 2025-02-01 to 2026-01-31; rank 2 DepreciationAndAmortization: DepreciationAndAmortization not reported for 2025-02-01 to 2026-01-31",
+   "severity": "info",
+   "subject": "DepreciationAmortizationAndAccretionNet"
+  },
+  {
+   "kind": "fallback",
+   "concept": "interest_expense",
+   "period": "LTM",
+   "message": "used rank 3 InterestExpenseDebt + FinanceLeaseInterestExpense because rank 1 InterestExpense: InterestExpense not reported for 2025-02-01 to 2026-01-31; rank 2 InterestExpenseNonoperating: InterestExpenseNonoperating not reported for 2025-02-01 to 2026-01-31",
+   "severity": "info",
+   "subject": "InterestExpenseDebt + FinanceLeaseInterestExpense"
+  },
+  {
+   "kind": "fallback",
+   "concept": "short_term_debt",
+   "period": "LTM",
+   "message": "used rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper because rank 1 DebtCurrent: DebtCurrent not reported at 2026-07-31",
+   "severity": "info",
+   "subject": "LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "short_term_debt",
+   "period": "LTM",
+   "message": "CommercialPaper assumed zero: not reported (part of rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper)",
+   "severity": "info",
+   "subject": "CommercialPaper"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "short_term_investments",
+   "period": "LTM",
+   "message": "assumed zero: not reported (rank 1 ShortTermInvestments: ShortTermInvestments not reported at 2026-07-31; rank 2 MarketableSecuritiesCurrent: MarketableSecuritiesCurrent not reported at 2026-07-31; rank 3 AvailableForSaleSecuritiesDebtSecuritiesCurrent: AvailableForSaleSecuritiesDebtSecuritiesCurrent not reported at 2026-07-31)",
+   "severity": "info",
+   "subject": "short_term_investments"
+  },
+  {
+   "kind": "fallback",
+   "concept": "dividends",
+   "period": "LTM",
+   "message": "used rank 2 PaymentsOfDividendsCommonStock because rank 1 PaymentsOfDividends: PaymentsOfDividends not reported for 2025-02-01 to 2026-01-31",
+   "severity": "info",
+   "subject": "PaymentsOfDividendsCommonStock"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "undrawn_revolver",
+   "period": "LTM",
+   "message": "assumed zero: not reported (rank 1 LineOfCreditFacilityRemainingBorrowingCapacity: LineOfCreditFacilityRemainingBorrowingCapacity not reported at 2026-07-31)",
+   "severity": "info",
+   "subject": "undrawn_revolver"
+  }
+ ],
+ "warnings": [
+  {
+   "kind": "reconciliation",
+   "concept": "total_debt",
+   "period": "FY-2",
+   "message": "total debt uses rank 1 LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities] = $46,891m, but rank 6 DebtLongtermAndShorttermCombinedAmount = $39,579m (-15.6%). Check which matches the balance sheet.",
+   "severity": "warning",
+   "subject": "total_debt"
+  },
+  {
+   "kind": "reconciliation",
+   "concept": "total_debt",
+   "period": "FY-1",
+   "message": "total debt uses rank 1 LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities] = $45,790m, but rank 6 DebtLongtermAndShorttermCombinedAmount = $35,999m (-21.4%). Check which matches the balance sheet.",
+   "severity": "warning",
+   "subject": "total_debt"
+  },
+  {
+   "kind": "reconciliation",
+   "concept": "total_debt",
+   "period": "FY0",
+   "message": "total debt uses rank 1 LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities] = $51,523m, but rank 6 DebtLongtermAndShorttermCombinedAmount = $38,166m (-25.9%). Check which matches the balance sheet.",
+   "severity": "warning",
+   "subject": "total_debt"
+  },
+  {
+   "kind": "reconciliation",
+   "concept": "total_debt",
+   "period": "LTM",
+   "message": "total debt uses rank 1 LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities] = $57,243m, but rank 6 DebtLongtermAndShorttermCombinedAmount = $39,932m (-30.2%). Check which matches the balance sheet.",
+   "severity": "warning",
+   "subject": "total_debt"
+  }
+ ]
+}

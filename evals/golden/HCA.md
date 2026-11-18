@@ -56,10 +56,10 @@ Pass rule: inputs match after rounding to the filing's unit; ratios within 0.05x
 
 ## Fact questions
 
-| # | Question | Answer | Exact location (section and page) |
-|---|---|---|---|
-| Q1 | Size and expiry of the main revolving credit facility | | |
-| Q2 | Financial covenants, and whether the company states it complies | | |
-| Q3 | Largest single debt maturity in the next three years | | |
-| Q4 | Management's stated sources of liquidity | | |
-| Q5 | The risk factor most relevant to repaying debt | | |
+| # | Question | Answer | Exact location (section and page) | Quote (a few words copied from the passage) |
+|---|---|---|---|---|
+| Q1 | Size and expiry of the main revolving credit facility | | | |
+| Q2 | Financial covenants, and whether the company states it complies | | | |
+| Q3 | Largest single debt maturity in the next three years | | | |
+| Q4 | Management's stated sources of liquidity | | | |
+| Q5 | The risk factor most relevant to repaying debt | | | |

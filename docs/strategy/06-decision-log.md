@@ -262,3 +262,24 @@ inventing one.
   (that the grade was provisional) passed as "partially supported" because the judge never saw the
   scorecard. The writer is now told explicitly whether the grade is provisional.
 - **Effect:** the first run's outputs are kept in data/runs/ for comparison; memos are regenerated.
+
+### D40. Evaluation runs are resumable and recomputable (phase 5)
+- **Decision:** eval memos go to evals/results/memos/<writer>/run<n>/ and are skipped if present; the report
+  reads only saved files; judge candidates and seeded errors replay the saved drafts.
+- **Why:** an interrupted run never pays twice, and every number can be recomputed without new model calls.
+
+### D41. Golden sheets get a quote column for the fact questions (phase 5)
+- **Why:** retrieval recall needs to know which passage the author located; a page number cannot be matched
+  to a passage, a short copied quote can. The sheets were regenerated before the author had edited them.
+
+### D42. Agency ratings: one rank per company, averaged across the agencies entered
+- **Why:** the author may enter one, two or three agencies; averaging their positions on one scale (AAA/Aaa
+  = 1 ... D/C = 22) keeps every company in the comparison. IG = BBB-/Baa3 or better.
+
+### D43. Writer output limit raised from 8,000 to 16,000 tokens (approved 18 November 2026)
+- **Why:** in the first golden runs DeepSeek-V4-Pro's reasoning (medium effort) used the whole 8,000-token
+  limit in 11 draft calls (finish_reason "length", empty or cut-off answers), forcing repairs and leaving one
+  memo section without a draft; GLM-5.3 and DeepSeek-V4.1-Flash never reached it. The limit was measuring my
+  setting, not the model. The same limit applies to every writer.
+- **Effect:** DeepSeek-V4-Pro's five golden run-1 memos were regenerated; the capped versions are kept in
+  evals/results/superseded/ with their raw outputs in data/runs/. GLM-5.3 and Flash memos are unaffected.

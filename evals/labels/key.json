@@ -1,0 +1,1262 @@
+{
+ "L001": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "GT",
+  "section": "key_risks",
+  "claim_id": "key_risks-4"
+ },
+ "L002": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "CCL",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-3"
+ },
+ "L003": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "VZ",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-2"
+ },
+ "L004": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "VZ",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-4"
+ },
+ "L005": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "HCA",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-4"
+ },
+ "L006": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "WMT",
+  "section": "business_profile",
+  "claim_id": "business_profile-2"
+ },
+ "L007": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "WMT",
+  "section": "key_risks",
+  "claim_id": "key_risks-4"
+ },
+ "L008": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "WMT",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-6"
+ },
+ "L009": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "WMT",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-1"
+ },
+ "L010": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "GT",
+  "section": "liquidity",
+  "claim_id": "liquidity-2"
+ },
+ "L011": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "VZ",
+  "section": "liquidity",
+  "claim_id": "liquidity-4"
+ },
+ "L012": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "VZ",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-2"
+ },
+ "L013": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "CCL",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-4"
+ },
+ "L014": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "HCA",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-3"
+ },
+ "L015": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "CCL",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-4"
+ },
+ "L016": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "VZ",
+  "section": "business_profile",
+  "claim_id": "business_profile-6"
+ },
+ "L017": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "WMT",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-2"
+ },
+ "L018": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "GT",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-5"
+ },
+ "L019": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "GT",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-4"
+ },
+ "L020": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "WMT",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-6"
+ },
+ "L021": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "CCL",
+  "section": "key_risks",
+  "claim_id": "key_risks-5"
+ },
+ "L022": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "VZ",
+  "section": "key_risks",
+  "claim_id": "key_risks-3"
+ },
+ "L023": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "WMT",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-2"
+ },
+ "L024": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "CCL",
+  "section": "key_risks",
+  "claim_id": "key_risks-2"
+ },
+ "L025": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "GT",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-1"
+ },
+ "L026": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "GT",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-4"
+ },
+ "L027": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "HCA",
+  "section": "business_profile",
+  "claim_id": "business_profile-1"
+ },
+ "L028": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "VZ",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-4"
+ },
+ "L029": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "VZ",
+  "section": "liquidity",
+  "claim_id": "liquidity-2"
+ },
+ "L030": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "GT",
+  "section": "business_profile",
+  "claim_id": "business_profile-6"
+ },
+ "L031": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "WMT",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-3"
+ },
+ "L032": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "GT",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-4"
+ },
+ "L033": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "HCA",
+  "section": "liquidity",
+  "claim_id": "liquidity-5"
+ },
+ "L034": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "CCL",
+  "section": "business_profile",
+  "claim_id": "business_profile-6"
+ },
+ "L035": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "CCL",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-3"
+ },
+ "L036": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "GT",
+  "section": "liquidity",
+  "claim_id": "liquidity-4"
+ },
+ "L037": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "HCA",
+  "section": "liquidity",
+  "claim_id": "liquidity-2"
+ },
+ "L038": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "GT",
+  "section": "liquidity",
+  "claim_id": "liquidity-2"
+ },
+ "L039": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "VZ",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-3"
+ },
+ "L040": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "VZ",
+  "section": "liquidity",
+  "claim_id": "liquidity-5"
+ },
+ "L041": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "GT",
+  "section": "business_profile",
+  "claim_id": "business_profile-1"
+ },
+ "L042": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "CCL",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-3"
+ },
+ "L043": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "CCL",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-3"
+ },
+ "L044": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "GT",
+  "section": "key_risks",
+  "claim_id": "key_risks-2"
+ },
+ "L045": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "HCA",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-2"
+ },
+ "L046": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "VZ",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-2"
+ },
+ "L047": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "CCL",
+  "section": "key_risks",
+  "claim_id": "key_risks-4"
+ },
+ "L048": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "HCA",
+  "section": "key_risks",
+  "claim_id": "key_risks-2"
+ },
+ "L049": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "GT",
+  "section": "key_risks",
+  "claim_id": "key_risks-5"
+ },
+ "L050": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "VZ",
+  "section": "business_profile",
+  "claim_id": "business_profile-2"
+ },
+ "L051": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "WMT",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-4"
+ },
+ "L052": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "CCL",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-6"
+ },
+ "L053": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "VZ",
+  "section": "key_risks",
+  "claim_id": "key_risks-1"
+ },
+ "L054": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "VZ",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-5"
+ },
+ "L055": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "CCL",
+  "section": "liquidity",
+  "claim_id": "liquidity-5"
+ },
+ "L056": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "HCA",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-1"
+ },
+ "L057": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "GT",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-2"
+ },
+ "L058": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "GT",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-2"
+ },
+ "L059": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "VZ",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-1"
+ },
+ "L060": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "WMT",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-6"
+ },
+ "L061": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "HCA",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-1"
+ },
+ "L062": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "VZ",
+  "section": "liquidity",
+  "claim_id": "liquidity-5"
+ },
+ "L063": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "VZ",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-5"
+ },
+ "L064": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "CCL",
+  "section": "liquidity",
+  "claim_id": "liquidity-4"
+ },
+ "L065": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "VZ",
+  "section": "key_risks",
+  "claim_id": "key_risks-4"
+ },
+ "L066": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "GT",
+  "section": "business_profile",
+  "claim_id": "business_profile-1"
+ },
+ "L067": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "CCL",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-2"
+ },
+ "L068": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "GT",
+  "section": "business_profile",
+  "claim_id": "business_profile-1"
+ },
+ "L069": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "VZ",
+  "section": "business_profile",
+  "claim_id": "business_profile-1"
+ },
+ "L070": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "CCL",
+  "section": "business_profile",
+  "claim_id": "business_profile-1"
+ },
+ "L071": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "GT",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-1"
+ },
+ "L072": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "VZ",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-3"
+ },
+ "L073": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "WMT",
+  "section": "liquidity",
+  "claim_id": "liquidity-6"
+ },
+ "L074": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "WMT",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-6"
+ },
+ "L075": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "GT",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-2"
+ },
+ "L076": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "GT",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-6"
+ },
+ "L077": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "WMT",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-6"
+ },
+ "L078": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "HCA",
+  "section": "business_profile",
+  "claim_id": "business_profile-4"
+ },
+ "L079": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "HCA",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-4"
+ },
+ "L080": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "WMT",
+  "section": "business_profile",
+  "claim_id": "business_profile-3"
+ },
+ "L081": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "HCA",
+  "section": "key_risks",
+  "claim_id": "key_risks-5"
+ },
+ "L082": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "HCA",
+  "section": "liquidity",
+  "claim_id": "liquidity-5"
+ },
+ "L083": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "VZ",
+  "section": "business_profile",
+  "claim_id": "business_profile-5"
+ },
+ "L084": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "WMT",
+  "section": "key_risks",
+  "claim_id": "key_risks-2"
+ },
+ "L085": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "GT",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-2"
+ },
+ "L086": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "HCA",
+  "section": "key_risks",
+  "claim_id": "key_risks-5"
+ },
+ "L087": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "GT",
+  "section": "liquidity",
+  "claim_id": "liquidity-1"
+ },
+ "L088": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "GT",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-1"
+ },
+ "L089": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "VZ",
+  "section": "business_profile",
+  "claim_id": "business_profile-2"
+ },
+ "L090": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "WMT",
+  "section": "liquidity",
+  "claim_id": "liquidity-2"
+ },
+ "L091": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "HCA",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-5"
+ },
+ "L092": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "HCA",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-4"
+ },
+ "L093": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "WMT",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-3"
+ },
+ "L094": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "HCA",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-1"
+ },
+ "L095": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "GT",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-6"
+ },
+ "L096": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "HCA",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-2"
+ },
+ "L097": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "CCL",
+  "section": "liquidity",
+  "claim_id": "liquidity-5"
+ },
+ "L098": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "CCL",
+  "section": "key_risks",
+  "claim_id": "key_risks-4"
+ },
+ "L099": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "WMT",
+  "section": "key_risks",
+  "claim_id": "key_risks-4"
+ },
+ "L100": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "CCL",
+  "section": "liquidity",
+  "claim_id": "liquidity-5"
+ },
+ "L101": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "VZ",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-3"
+ },
+ "L102": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "WMT",
+  "section": "key_risks",
+  "claim_id": "key_risks-4"
+ },
+ "L103": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "CCL",
+  "section": "liquidity",
+  "claim_id": "liquidity-3"
+ },
+ "L104": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "HCA",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-6"
+ },
+ "L105": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "CCL",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-4"
+ },
+ "L106": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "VZ",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-6"
+ },
+ "L107": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "WMT",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-4"
+ },
+ "L108": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "WMT",
+  "section": "liquidity",
+  "claim_id": "liquidity-6"
+ },
+ "L109": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "CCL",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-6"
+ },
+ "L110": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "GT",
+  "section": "key_risks",
+  "claim_id": "key_risks-5"
+ },
+ "L111": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "WMT",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-5"
+ },
+ "L112": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "WMT",
+  "section": "liquidity",
+  "claim_id": "liquidity-2"
+ },
+ "L113": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "GT",
+  "section": "liquidity",
+  "claim_id": "liquidity-5"
+ },
+ "L114": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "VZ",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-1"
+ },
+ "L115": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "CCL",
+  "section": "key_risks",
+  "claim_id": "key_risks-3"
+ },
+ "L116": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "WMT",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-2"
+ },
+ "L117": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "CCL",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-5"
+ },
+ "L118": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "CCL",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-2"
+ },
+ "L119": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "HCA",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-2"
+ },
+ "L120": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "CCL",
+  "section": "business_profile",
+  "claim_id": "business_profile-2"
+ },
+ "L121": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "WMT",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-1"
+ },
+ "L122": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "CCL",
+  "section": "liquidity",
+  "claim_id": "liquidity-3"
+ },
+ "L123": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "GT",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-4"
+ },
+ "L124": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "HCA",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-4"
+ },
+ "L125": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "CCL",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-3"
+ },
+ "L126": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "WMT",
+  "section": "liquidity",
+  "claim_id": "liquidity-6"
+ },
+ "L127": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "GT",
+  "section": "business_profile",
+  "claim_id": "business_profile-5"
+ },
+ "L128": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "VZ",
+  "section": "key_risks",
+  "claim_id": "key_risks-4"
+ },
+ "L129": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "GT",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-2"
+ },
+ "L130": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "WMT",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-4"
+ },
+ "L131": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "HCA",
+  "section": "key_risks",
+  "claim_id": "key_risks-4"
+ },
+ "L132": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "HCA",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-5"
+ },
+ "L133": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "CCL",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-3"
+ },
+ "L134": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "GT",
+  "section": "liquidity",
+  "claim_id": "liquidity-3"
+ },
+ "L135": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "WMT",
+  "section": "key_risks",
+  "claim_id": "key_risks-3"
+ },
+ "L136": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "GT",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-4"
+ },
+ "L137": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "GT",
+  "section": "key_risks",
+  "claim_id": "key_risks-2"
+ },
+ "L138": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "CCL",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-5"
+ },
+ "L139": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "VZ",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-3"
+ },
+ "L140": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "HCA",
+  "section": "liquidity",
+  "claim_id": "liquidity-4"
+ },
+ "L141": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "VZ",
+  "section": "key_risks",
+  "claim_id": "key_risks-1"
+ },
+ "L142": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "VZ",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-3"
+ },
+ "L143": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "CCL",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-3"
+ },
+ "L144": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "HCA",
+  "section": "business_profile",
+  "claim_id": "business_profile-2"
+ },
+ "L145": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "WMT",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-3"
+ },
+ "L146": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "VZ",
+  "section": "liquidity",
+  "claim_id": "liquidity-2"
+ },
+ "L147": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "CCL",
+  "section": "business_profile",
+  "claim_id": "business_profile-5"
+ },
+ "L148": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "HCA",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-3"
+ },
+ "L149": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "WMT",
+  "section": "key_risks",
+  "claim_id": "key_risks-3"
+ },
+ "L150": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "WMT",
+  "section": "business_profile",
+  "claim_id": "business_profile-2"
+ },
+ "L151": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "GT",
+  "section": "key_risks",
+  "claim_id": "key_risks-3"
+ },
+ "L152": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "CCL",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-3"
+ },
+ "L153": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "VZ",
+  "section": "key_risks",
+  "claim_id": "key_risks-2"
+ },
+ "L154": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "VZ",
+  "section": "business_profile",
+  "claim_id": "business_profile-2"
+ },
+ "L155": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "HCA",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-3"
+ },
+ "L156": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "VZ",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-3"
+ },
+ "L157": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "WMT",
+  "section": "liquidity",
+  "claim_id": "liquidity-1"
+ },
+ "L158": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "WMT",
+  "section": "business_profile",
+  "claim_id": "business_profile-6"
+ },
+ "L159": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "HCA",
+  "section": "key_risks",
+  "claim_id": "key_risks-4"
+ },
+ "L160": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "WMT",
+  "section": "business_profile",
+  "claim_id": "business_profile-6"
+ },
+ "L161": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "CCL",
+  "section": "business_profile",
+  "claim_id": "business_profile-2"
+ },
+ "L162": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "WMT",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-4"
+ },
+ "L163": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "CCL",
+  "section": "key_risks",
+  "claim_id": "key_risks-1"
+ },
+ "L164": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "HCA",
+  "section": "business_profile",
+  "claim_id": "business_profile-4"
+ },
+ "L165": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "HCA",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-5"
+ },
+ "L166": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "WMT",
+  "section": "business_profile",
+  "claim_id": "business_profile-3"
+ },
+ "L167": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "CCL",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-1"
+ },
+ "L168": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "VZ",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-1"
+ },
+ "L169": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "HCA",
+  "section": "business_profile",
+  "claim_id": "business_profile-4"
+ },
+ "L170": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "GT",
+  "section": "business_profile",
+  "claim_id": "business_profile-5"
+ },
+ "L171": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "VZ",
+  "section": "liquidity",
+  "claim_id": "liquidity-3"
+ },
+ "L172": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "GT",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-2"
+ },
+ "L173": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "HCA",
+  "section": "liquidity",
+  "claim_id": "liquidity-6"
+ },
+ "L174": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "HCA",
+  "section": "key_risks",
+  "claim_id": "key_risks-2"
+ },
+ "L175": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "HCA",
+  "section": "liquidity",
+  "claim_id": "liquidity-1"
+ },
+ "L176": {
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "run": "evals/results/memos/DeepSeek-V4.1-Flash-1017/run1",
+  "ticker": "CCL",
+  "section": "business_profile",
+  "claim_id": "business_profile-6"
+ },
+ "L177": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "GT",
+  "section": "financial_risk",
+  "claim_id": "financial_risk-5"
+ },
+ "L178": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "HCA",
+  "section": "business_profile",
+  "claim_id": "business_profile-1"
+ },
+ "L179": {
+  "model": "zai-org/GLM-5.3",
+  "run": "evals/results/memos/GLM-5.3/run1",
+  "ticker": "HCA",
+  "section": "maturity_wall",
+  "claim_id": "maturity_wall-5"
+ },
+ "L180": {
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "run": "evals/results/memos/DeepSeek-V4-Pro-0813/run1",
+  "ticker": "VZ",
+  "section": "rating_rationale",
+  "claim_id": "rating_rationale-3"
+ }
+}

@@ -103,3 +103,13 @@ were added while building, with the phase that added them.
     collapse into the most recently filed copy; with fewer than four, the search widens to all sections.
 50. Unreadable judge output after one retry counts as unsupported, flagged as a judge error.
 51. The rating rationale may cite only passages already cited by claims verified as supported.
+
+## Added in phase 5
+
+52. Evaluation memos are verified by the provisional judge (GLM-5.3) until the author chooses a judge;
+    the chosen judge then re-judges every writer's claims from the saved drafts.
+53. Run-to-run spread uses three runs per writer on the golden five; the other ten companies run once.
+54. Model time per memo is the sum of its calls' latencies (memos run in parallel, so wall time per memo
+    would include waiting for other memos).
+55. A golden fact question counts for retrieval recall only when the author has copied a quote from the
+    passage; the question's own wording is the search query.

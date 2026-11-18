@@ -25,7 +25,7 @@ from sourcebound import contracts as c
 from sourcebound.llm.prices import call_cost, load_prices
 from sourcebound.llm.provider import LlmResult, LlmSettings, SailClient
 from sourcebound.memo.draft import SectionContext, draft_section
-from sourcebound.memo.metric_table import build_table, rationale_keys
+from sourcebound.memo.metric_table import build_table, rationale_keys, scorecard_context
 from sourcebound.memo.render import period_phrases
 from sourcebound.memo.retrieve import retrieve_for_section
 from sourcebound.memo.sections import SECTION_SPECS
@@ -85,13 +85,15 @@ def _claims_for(spec_id, outcome, ctx, client, judge_model, effort, max_tokens) 
 
 def generate_memo(ticker: str, client, *, settings: LlmSettings, prices: dict, writer_model: str | None = None,
                   judge_model: str | None = None, published_dir: Path = PUBLISHED_DIR, runs_dir: Path = RUNS_DIR,
-                  reports_dir: Path = REPORTS_DIR) -> tuple[c.Memo, c.VerificationReport]:
+                  reports_dir: Path = REPORTS_DIR, metrics_dir: Path | None = None) -> tuple[c.Memo, c.VerificationReport]:
+    """metrics_dir: where metrics.json is read (default: published_dir); memo files go to published_dir."""
     config = yaml.safe_load((CONFIG_DIR / "models.yaml").read_text())
     efforts, limits = config["reasoning_effort"], config["max_completion_tokens"]
     writer, judge = writer_model or settings.writer_model, judge_model or settings.judge_model
     started = datetime.now(timezone.utc).replace(microsecond=0)
     company_dir = Path(published_dir) / "companies" / ticker
-    cm = c.CompanyMetrics.model_validate_json((company_dir / "metrics.json").read_text())
+    metrics_file = Path(metrics_dir or published_dir) / "companies" / ticker / "metrics.json"
+    cm = c.CompanyMetrics.model_validate_json(metrics_file.read_text())
     index = load_index(ticker)
     table, all_metrics = build_table(cm)
     periods = period_phrases(cm.periods)
@@ -137,13 +139,7 @@ def generate_memo(ticker: str, client, *, settings: LlmSettings, prices: dict, w
             findings.append("".join(s.v for s in claim.segments) + (f" [cites {', '.join(ids)}]" if ids else ""))
             cited |= {cid: ctx.shown()[cid] for cid in ids}
     card = cm.scorecard
-    missing = [f.label for f in card.factors if f.band is None]
-    provisional = (f"The grade is provisional: {', '.join(missing)} could not be scored, so the other weights "
-                   "were renormalised." if card.provisional else "The grade is not provisional: all six factors were scored.")
-    status = ["The SB grade is {{m:sb_grade:latest}} and the weighted score {{m:sb_score:latest}}.", provisional]
-    scorecard_evidence = [("Scorecard: SB grade (latest)", f"{card.grade or 'not available'}; {provisional}")] + [
-        (f"Scorecard: {f.label} ({f.id}:{f.period})",
-         f"band {f.band} of 6, weight {f.weight:.0%}" if f.band is not None else "not scored") for f in card.factors]
+    status, scorecard_evidence = scorecard_context(cm)
     rationale = SECTION_SPECS[-1]
     run_section(rationale, list(cited.values()), [table[k] for k in rationale_keys(cm) if k in table],
                 status, findings, [], scorecard_evidence)

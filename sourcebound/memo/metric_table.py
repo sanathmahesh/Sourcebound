@@ -63,3 +63,16 @@ def rationale_keys(cm: CompanyMetrics) -> list[str]:
     for f in cm.scorecard.factors:
         keys += [f"{f.id}:{f.period}", f"band_{f.id}:latest", f"weight_{f.id}:latest"]
     return keys + ["sb_score:latest", "sb_grade:latest"]
+
+
+def scorecard_context(cm: CompanyMetrics) -> tuple[list[str], list[tuple[str, str]]]:
+    """For the rating rationale: lines for the writer, and evidence the judge sees for every claim."""
+    card = cm.scorecard
+    missing = [f.label for f in card.factors if f.band is None]
+    provisional = (f"The grade is provisional: {', '.join(missing)} could not be scored, so the other weights "
+                   "were renormalised." if card.provisional else "The grade is not provisional: all six factors were scored.")
+    status = ["The SB grade is {{m:sb_grade:latest}} and the weighted score {{m:sb_score:latest}}.", provisional]
+    evidence = [("Scorecard: SB grade (latest)", f"{card.grade or 'not available'}; {provisional}")] + [
+        (f"Scorecard: {f.label} ({f.id}:{f.period})",
+         f"band {f.band} of 6, weight {f.weight:.0%}" if f.band is not None else "not scored") for f in card.factors]
+    return status, evidence

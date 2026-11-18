@@ -1,0 +1,1265 @@
+{
+ "judge": "deepseek-ai/DeepSeek-V4-Pro-0813",
+ "rows": {
+  "L001": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage explicitly states that variable-rate borrowings expose the company to higher debt service obligations if interest rates increase.",
+   "cost_usd": 0.0008851900000000001,
+   "seconds": 5.124119374901056
+  },
+  "L002": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values directly show interest coverage improved from 2.09x in FY-2 to 6.21x in LTM, with LTM interest expense of $1.2 billion.",
+   "cost_usd": 0.00088264,
+   "seconds": 7.120366999879479
+  },
+  "L003": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values directly confirm the decline in EBITDA / interest from 7.33x in FY-2 to 6.36x in LTM, along with LTM interest expense of $7.6 billion and EBITDA of $48.6 billion.",
+   "cost_usd": 0.00108472,
+   "seconds": 7.119829792063683
+  },
+  "L004": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence passage explicitly states that Verizon and its consolidated subsidiaries are in compliance with all restrictive covenants in their debt agreements.",
+   "cost_usd": 0.00076654,
+   "seconds": 7.133650917094201
+  },
+  "L005": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The company's description as a leading health care services company with facilities in 19 states and England is supported, but the scorecard evidence does not show the SB-4 grade is supported by scale or geographic diversification.",
+   "cost_usd": 0.00314088,
+   "seconds": 19.155749833211303
+  },
+  "L006": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values match both figures in the claim exactly.",
+   "cost_usd": 0.00059378,
+   "seconds": 3.112303084228188
+  },
+  "L007": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence confirms regulatory requirements and possible fines, sanctions, and penalties, but it does not state that these would reduce cash available for debt service.",
+   "cost_usd": 0.0014270399999999999,
+   "seconds": 9.115769708063453
+  },
+  "L008": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values confirm FCF/debt of 23.6% in band 3 at a 20.0% weight, and the passage shows the most recent quarter's free cash flow was negative at $(1,946) million, supporting the tempering statement.",
+   "cost_usd": 0.00564096,
+   "seconds": 47.165582625195384
+  },
+  "L009": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The computed metric values show Debt / EBITDA of 1.21x for both FY-2 and LTM, matching the claim and indicating stability.",
+   "cost_usd": 0.00076363,
+   "seconds": 5.122734208125621
+  },
+  "L010": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The claim matches the provided metric values for cash and cash equivalents and short-term debt for the twelve months to 30 September 2026.",
+   "cost_usd": 0.00080243,
+   "seconds": 5.1244067922234535
+  },
+  "L011": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence explicitly states the revolving credit facility has no financial covenant or credit rating maintenance requirement, permits borrowing even after a material adverse change, and has had no drawings since inception, supporting the claim.",
+   "cost_usd": 0.0020649,
+   "seconds": 13.122988999821246
+  },
+  "L012": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values show debt due within 24 months of $28.2 billion and 17.8% of total debt, exactly matching the claim.",
+   "cost_usd": 0.0012576500000000001,
+   "seconds": 9.140183500014246
+  },
+  "L013": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values and scorecard confirm each factor is in band 4 with the stated LTM values and weights.",
+   "cost_usd": 0.0014144099999999998,
+   "seconds": 11.12941554095596
+  },
+  "L014": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values and scorecard show liquidity coverage at 0.86x, band 6 of 6, weight 15.0%, and near-term maturity cover at 7.15x, band 6 of 6, weight 10.0%, both being the weakest-scoring factors.",
+   "cost_usd": 0.0016266599999999998,
+   "seconds": 11.130287750158459
+  },
+  "L015": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence confirms the company is the largest global cruise company with a multi-brand portfolio and that no travel agency group accounted for 10% or more of revenue, but it does not state these qualitative factors support the SB-4 grade, which is based on separate financial scorecard metrics.",
+   "cost_usd": 0.005861269999999999,
+   "seconds": 53.168721915688366
+  },
+  "L016": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence expressly identifies all cited risk factors\u2014competition including price, network, and evolving consumer preferences; adverse U.S./international economic conditions including inflation and interest rates; and cyberattacks or system failures affecting networks.",
+   "cost_usd": 0.00245956,
+   "seconds": 17.149460958316922
+  },
+  "L017": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values confirm EBITDA / interest is 20.99x LTM, in scorecard band 1, with the highest weight of 25.0%, making it the strongest factor.",
+   "cost_usd": 0.0012873899999999998,
+   "seconds": 7.112693459261209
+  },
+  "L018": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage explicitly states management believes liquidity is adequate for the next twelve months, and the scorecard metric shows liquidity coverage at band 6 of 6, the weakest band.",
+   "cost_usd": 0.0024795,
+   "seconds": 21.125687167048454
+  },
+  "L019": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence supports that total segment operating income decreased in 2025, but it does not state or imply that this reduced EBITDA or was a headwind to leverage.",
+   "cost_usd": 0.0013521300000000002,
+   "seconds": 9.127132707741112
+  },
+  "L020": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage explicitly states capital expenditures increased to support the omnichannel growth strategy and partially offset free cash flow.",
+   "cost_usd": 0.0012326700000000002,
+   "seconds": 11.117750958073884
+  },
+  "L021": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage directly states that emissions-related regulation may require capital investments, increase operating costs, and restrict or limit access to certain destinations and/or countries.",
+   "cost_usd": 0.00162077,
+   "seconds": 11.119716334156692
+  },
+  "L022": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence explicitly states that debt service obligations require dedicating significant cash flow from operations to principal and interest payments, reducing funds available for other purposes.",
+   "cost_usd": 0.0009586600000000001,
+   "seconds": 7.115446500014514
+  },
+  "L023": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "All figures in the claim match the computed metric values: debt due within 24 months of $13.4 billion, share of 26.0%, and total debt of $51.5 billion.",
+   "cost_usd": 0.00073677,
+   "seconds": 5.113065333105624
+  },
+  "L024": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The passage supports that Carnival may incur more debt despite its leverage, but it does not state that this could further strain its ability to service and repay obligations.",
+   "cost_usd": 0.00125173,
+   "seconds": 9.128763624932617
+  },
+  "L025": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values and scorecard directly show an SB-6 grade with a weighted score of 5.55 and state the grade is not provisional because all six factors were scored.",
+   "cost_usd": 0.00131978,
+   "seconds": 11.118188999593258
+  },
+  "L026": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage confirms $4,421 million unused availability at December 31, 2025 and management's belief that liquidity is adequate for the next twelve months, while the scorecard shows liquidity-related factors at weak bands (5-6 of 6).",
+   "cost_usd": 0.00513242,
+   "seconds": 39.15967387473211
+  },
+  "L027": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The revenue and EBITDA figures exactly match the provided metric values, but the descriptor 'large acute-care provider' is not supported by the evidence.",
+   "cost_usd": 0.0015955899999999998,
+   "seconds": 15.128102875314653
+  },
+  "L028": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence directly shows management's statement that funds are sufficient for the next 12 months and beyond, which supports a positive liquidity assessment consistent with the scorecard, and it also confirms aggressive competitor pricing/promotions putting pressure on pricing and margins, tempering the outcome.",
+   "cost_usd": 0.00951697,
+   "seconds": 84.30964191723615
+  },
+  "L029": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "All figures in the claim exactly match the provided metric values for the twelve months to 30 September 2026.",
+   "cost_usd": 0.0013448499999999999,
+   "seconds": 9.12359374994412
+  },
+  "L030": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The competition, natural rubber, tariff/trade, and cost-increase risks are stated, but the evidence says cost increases 'may' affect operating results/financial condition and does not state exposure to cash flows or an actual negative impact from those costs.",
+   "cost_usd": 0.00573538,
+   "seconds": 45.157779125031084
+  },
+  "L031": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The computed metric value for near-term maturity cover in the fiscal year ended 31 January 2026 is exactly 1.25x, matching the claim.",
+   "cost_usd": 0.00062705,
+   "seconds": 3.1050748331472278
+  },
+  "L032": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence passage explicitly states management's belief that liquidity is adequate to fund operating and investing needs and debt maturities for the next twelve months.",
+   "cost_usd": 0.00081677,
+   "seconds": 3.1116220001131296
+  },
+  "L033": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence passage explicitly states the company expects to finance capital expenditures with internally generated and borrowed funds.",
+   "cost_usd": 0.0008135899999999999,
+   "seconds": 5.109952667262405
+  },
+  "L034": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence supports that overcapacity and competition may negatively impact sales, pricing, and destination options, but it does not state or directly show that cash flows remain exposed or mention cyclicality.",
+   "cost_usd": 0.00136319,
+   "seconds": 7.124033750034869
+  },
+  "L035": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The computed metric shows near-term maturity cover of 2.66x with scorecard band 6 of 6 and weight 10.0%, and no other factor has a weaker band, so the claim is directly supported.",
+   "cost_usd": 0.00125492,
+   "seconds": 7.111344582866877
+  },
+  "L036": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence shows unused availability declined at March 31 vs December 31 and borrowings increased, but no unused availability data is provided for the full year or September 30, so the full-year claim is only partially supported.",
+   "cost_usd": 0.009231310000000001,
+   "seconds": 74.33380029117689
+  },
+  "L037": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "All stated LTM figures for the twelve months to 30 September 2026 exactly match the computed XBRL metric values.",
+   "cost_usd": 0.00173465,
+   "seconds": 19.13576270826161
+  },
+  "L038": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The cash, cash from operations, short-term debt, capital expenditure, and short-term investments figures match the provided metric values, but the claim that no dividends were paid is not supported by any evidence.",
+   "cost_usd": 0.0014788899999999998,
+   "seconds": 15.121716458816081
+  },
+  "L039": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The reported near-term maturity cover of 0.86x is below 1.0x, directly indicating that cash and short-term investments do not fully cover the $28.2 billion of debt due within 24 months.",
+   "cost_usd": 0.00165831,
+   "seconds": 15.126604749821126
+  },
+  "L040": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence directly states there had been no drawings against the revolving credit facility as of September 30, 2026, which aligns with the claim.",
+   "cost_usd": 0.00164767,
+   "seconds": 13.115001916885376
+  },
+  "L041": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "Both the LTM revenue and EBITDA figures in the claim match the computed metric values for the twelve months to 30 September 2026.",
+   "cost_usd": 0.0005855,
+   "seconds": 5.107573417015374
+  },
+  "L042": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values match every part of the claim, including the 2.66x cover, $2.6 billion short-term debt, $1.9 billion cash, and zero assumptions for unreported short-term investments and undrawn revolver.",
+   "cost_usd": 0.0011669,
+   "seconds": 11.116505833808333
+  },
+  "L043": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values confirm near-term maturity cover is 2.66x, scorecard band 6 of 6 (the weakest band), and weight 10.0%.",
+   "cost_usd": 0.00158458,
+   "seconds": 13.131864916998893
+  },
+  "L044": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The company states that repaying maturing indebtedness may depend on access to capital markets and that such access cannot be assured.",
+   "cost_usd": 0.00198273,
+   "seconds": 17.133660541847348
+  },
+  "L045": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "Both EBITDA / interest metric values match the claim exactly, and the small change from 6.56x to 6.74x supports the description as stable.",
+   "cost_usd": 0.0017118899999999998,
+   "seconds": 17.131375915836543
+  },
+  "L046": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The computed metric values exactly match both leverage figures in the claim (3.67x for FY2023 and 3.33x for LTM Sep 2026), and the modest change is consistent with the description 'stable'.",
+   "cost_usd": 0.00538946,
+   "seconds": 49.1718258340843
+  },
+  "L047": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence passage states this exact risk regarding negative impacts on cruise sales, pricing and destination options.",
+   "cost_usd": 0.0009025300000000001,
+   "seconds": 5.125988124869764
+  },
+  "L048": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence passage directly states the company faces increased interest rate risk on variable-rate borrowings and when refinancing debt in a rising or high rate environment.",
+   "cost_usd": 0.0009679900000000001,
+   "seconds": 5.152393416967243
+  },
+  "L049": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The passage supports lower sales volumes and under-absorbed fixed costs from declines in automotive production or replacement tire demand, but does not support the added assertion that this pressures cash flow available for debt service.",
+   "cost_usd": 0.0022486999999999997,
+   "seconds": 15.133314041886479
+  },
+  "L050": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence explicitly states Verizon has two reportable segments, named Verizon Consumer Group and Verizon Business Group.",
+   "cost_usd": 0.0008728,
+   "seconds": 5.121873375028372
+  },
+  "L051": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage directly states the Company renewed and extended its revolving credit facilities totaling $15.0 billion in committed U.S. lines of credit, all undrawn.",
+   "cost_usd": 0.00188418,
+   "seconds": 9.117680958937854
+  },
+  "L052": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence supports the $7.8 billion undrawn export credit facilities for planned ship deliveries as of November 30, 2025, but it does not address the claim's premise of zero undrawn revolving credit capacity.",
+   "cost_usd": 0.00175844,
+   "seconds": 11.12636358384043
+  },
+  "L053": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage directly states adverse changes including interest rate increases could increase borrowing costs and make obtaining financing or refinancing existing indebtedness more difficult.",
+   "cost_usd": 0.00105567,
+   "seconds": 5.239420874975622
+  },
+  "L054": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence passage directly states the exact fact in the claim.",
+   "cost_usd": 0.0009732100000000001,
+   "seconds": 5.110981374979019
+  },
+  "L055": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage states the company operates with a substantial working capital deficit and that customer deposits collected before sailing are used to fund operations.",
+   "cost_usd": 0.00127913,
+   "seconds": 7.11099416622892
+  },
+  "L056": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The claim's leverage figures exactly match the computed metric values: Debt/EBITDA of 3.17x for both FY-2 and LTM, and net leverage of 3.09x for FY-2 and 3.11x for LTM, which are essentially stable over the period.",
+   "cost_usd": 0.0013634200000000002,
+   "seconds": 7.119900333229452
+  },
+  "L057": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "EBITDA/interest increased from 1.53x to 2.39x, supporting the improvement, but FCF/debt changed from -0.2% to 1.2%, so the 'stable' characterization is not supported by the metric values.",
+   "cost_usd": 0.004131800000000001,
+   "seconds": 33.17654304206371
+  },
+  "L058": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values directly match all parts of the claim: $1.9 billion debt due within 24 months, 30.7% share, and $6.2 billion total debt.",
+   "cost_usd": 0.00072661,
+   "seconds": 5.113395124673843
+  },
+  "L059": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The claim matches the computed metric values exactly: Debt/EBITDA is 3.72x for FY ended 31 December 2023 and 3.42x for LTM to 30 September 2026, while net leverage moves from 3.67x to 3.33x, supporting the description of both measures as broadly stable.",
+   "cost_usd": 0.0007873200000000001,
+   "seconds": 7.145809666719288
+  },
+  "L060": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence shows diversification beyond core retail through membership, advertising, marketplace and financial services, but it does not state that this reinforces debt-service capacity; the scorecard shows strong leverage and interest coverage bands but weaker liquidity coverage and near-term maturity cover bands.",
+   "cost_usd": 0.0074139900000000005,
+   "seconds": 60.37076541688293
+  },
+  "L061": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The claim matches the computed metric values for debt maturing in years two through five after the fiscal year ended 31 December 2025.",
+   "cost_usd": 0.0016092,
+   "seconds": 13.595604457892478
+  },
+  "L062": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence table explicitly shows unused capacity of $11,976 million and principal amount outstanding of $\u2014 for the Verizon revolving credit facility as of June 30, 2026.",
+   "cost_usd": 0.00144349,
+   "seconds": 11.120102166198194
+  },
+  "L063": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The grade not being provisional and the revolving facility details are supported, but the claim of a 'weak liquidity band' is contradicted by the scorecard showing liquidity coverage band 5 of 6 (not weak) and near-term maturity cover band 4 of 6.",
+   "cost_usd": 0.010861309999999999,
+   "seconds": 68.39796370919794
+  },
+  "L064": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence confirms the undrawn export credit facilities fund ship deliveries through 2033, but it does not state that they sit outside any reported coverage measure.",
+   "cost_usd": 0.00124934,
+   "seconds": 7.127564792055637
+  },
+  "L065": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence supports competitor pricing/promotions pressuring Verizon's pricing and margins, but it does not state or imply an effect on operating cash flow.",
+   "cost_usd": 0.00108253,
+   "seconds": 7.110343458130956
+  },
+  "L066": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage directly states Goodyear is one of the world's leading tire manufacturers with operations in most regions and operates through the three named regional segments.",
+   "cost_usd": 0.0028857799999999997,
+   "seconds": 15.12318416731432
+  },
+  "L067": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values directly match every part of the claim: $5.1 billion debt due within 24 months, 19.2% share, $26.6 billion total debt, and 2.66x near-term maturity cover.",
+   "cost_usd": 0.00101633,
+   "seconds": 5.1105919582769275
+  },
+  "L068": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The claim matches the computed metric values for revenue and EBITDA in both periods exactly.",
+   "cost_usd": 0.00051787,
+   "seconds": 3.2855292498134077
+  },
+  "L069": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The revenue and EBITDA figures exactly match the provided metric values, and the qualitative scale statement follows directly from these large figures.",
+   "cost_usd": 0.00688815,
+   "seconds": 76.32201225031167
+  },
+  "L070": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage states Carnival Corporation & plc is the largest global cruise company and among the largest leisure travel companies, with a portfolio listing exactly the cruise lines named in the claim.",
+   "cost_usd": 0.0011376600000000002,
+   "seconds": 5.134060125332326
+  },
+  "L071": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The claimed debt maturity amounts for years one through five exactly match the computed metric values for the fiscal year ended 31 December 2025.",
+   "cost_usd": 0.00088148,
+   "seconds": 7.165412375237793
+  },
+  "L072": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metrics show EBITDA/interest in band 3 at 6.36x LTM with the highest scorecard weight of 25.0%, making it the strongest-scoring factor among the six scored factors.",
+   "cost_usd": 0.00131875,
+   "seconds": 11.138287249952555
+  },
+  "L073": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage explicitly states that the Company has various committed lines of credit in the U.S. to support its commercial paper program.",
+   "cost_usd": 0.00088674,
+   "seconds": 7.111783500295132
+  },
+  "L074": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence supports that borrowings rose because long-term debt issuance exceeded repayments, but it does not mention or support the claim that this offset some of the cash generated.",
+   "cost_usd": 0.0055997,
+   "seconds": 39.16084166709334
+  },
+  "L075": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values confirm all four cited factors scored in band 6, the weakest band, with the exact stated weights.",
+   "cost_usd": 0.0022887,
+   "seconds": 13.1162144173868
+  },
+  "L076": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage expressly states the first lien revolving credit facility covenants limit additional debt, dividends, share repurchases, liens and asset sales, and that both this facility and the note indentures include cross-defaults to material indebtedness.",
+   "cost_usd": 0.0046593599999999995,
+   "seconds": 35.17037016712129
+  },
+  "L077": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The non-provisional grade, all six factors scored, and $15.0 billion undrawn U.S. credit lines at July 31, 2026 are supported, but the description of liquidity factors as weak is not supported and appears contradicted by the scorecard's liquidity bands of 5/6.",
+   "cost_usd": 0.0037017000000000005,
+   "seconds": 19.124413749668747
+  },
+  "L078": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The claim's FY0 and LTM EBITDA and operating income figures exactly match the provided metric values, and the LTM values are higher than the FY0 values.",
+   "cost_usd": 0.00117434,
+   "seconds": 11.150979166850448
+  },
+  "L079": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage directly states the $2.207 billion commercial paper outstanding at December 31, 2025, the $4.000 billion maximum, and the intent to maintain minimum available borrowing capacity under the $8.000 billion credit facility equal to the outstanding program amount.",
+   "cost_usd": 0.002192,
+   "seconds": 13.206164333969355
+  },
+  "L080": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage explicitly states the company is enhancing omnichannel capabilities through stores, eCommerce websites, mobile applications and service offerings, within a global retail ecosystem.",
+   "cost_usd": 0.00100886,
+   "seconds": 7.125837875064462
+  },
+  "L081": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The computed metric Debt / EBITDA, LTM to 30 September 2026 is 3.17x, which directly matches the claim.",
+   "cost_usd": 0.0006686900000000001,
+   "seconds": 5.107981666922569
+  },
+  "L082": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric computation states undrawn revolver was assumed zero, so the 0.86x figure excludes revolver capacity, and the filing identifies amounts available under the senior unsecured credit facility as an additional source of capital.",
+   "cost_usd": 0.00124698,
+   "seconds": 7.116786791011691
+  },
+  "L083": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The claim is stated nearly verbatim in the evidence passage, with 'us' referring to Verizon.",
+   "cost_usd": 0.00086358,
+   "seconds": 3.1091227079741657
+  },
+  "L084": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence passage explicitly states that Walmart International's future operating results could be negatively affected by political conditions, legal and regulatory constraints, trade policies, and foreign exchange or currency regulations.",
+   "cost_usd": 0.00226163,
+   "seconds": 15.22464129095897
+  },
+  "L085": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The claim exactly matches the computed metric values and scorecard bands/weights for all three factors.",
+   "cost_usd": 0.00114269,
+   "seconds": 5.114609749987721
+  },
+  "L086": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage explicitly states that general economic conditions, including inflation, have and may continue to have a negative impact on results of operations, liquidity, and ability to repay outstanding debt.",
+   "cost_usd": 0.0012735799999999999,
+   "seconds": 5.1101650833152235
+  },
+  "L087": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The claim matches the computed metric values exactly: 0.94x for FY2025 and 0.78x for the twelve months to 30 September 2026.",
+   "cost_usd": 0.00084934,
+   "seconds": 7.216459291987121
+  },
+  "L088": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values show Debt/EBITDA declined from 9.39x in FY-2 to 7.44x in LTM, matching the claim.",
+   "cost_usd": 0.00079411,
+   "seconds": 7.121513959020376
+  },
+  "L089": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence confirms two reportable segments, Consumer and Business, but does not state that this reduces reliance on any single customer group.",
+   "cost_usd": 0.00122918,
+   "seconds": 7.119153332896531
+  },
+  "L090": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values show cash and equivalents of $11.5 billion and short-term debt of $13.9 billion for the twelve months to 31 July 2026, so cash was lower than short-term debt.",
+   "cost_usd": 0.0009455199999999999,
+   "seconds": 7.106372958049178
+  },
+  "L091": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence states the April 2026 note issuance proceeds were used to repay commercial paper and that all 2026 notes were redeemed in May 2026, directly matching the claim.",
+   "cost_usd": 0.0024788900000000005,
+   "seconds": 17.20156591711566
+  },
+  "L092": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence supports the increase in short-term borrowings/commercial paper and shows liquidity metrics in the weakest band, but it does not state that this tempers the assigned SB grade.",
+   "cost_usd": 0.00493741,
+   "seconds": 43.169018666259944
+  },
+  "L093": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The computed metric values match all figures in the claim, including the 1.25x cover, $10.1 billion short-term debt, $10.7 billion cash, and the stated exclusion assumptions.",
+   "cost_usd": 0.0014143699999999999,
+   "seconds": 13.126228000037372
+  },
+  "L094": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "All stated figures match the computed metrics: Debt/EBITDA of 3.17x for FY ended 31 Dec 2023 and LTM to 30 Sep 2026, net leverage of 3.11x for LTM, and 2.96x for FY ended 31 Dec 2025.",
+   "cost_usd": 0.0028029100000000005,
+   "seconds": 29.312684499658644
+  },
+  "L095": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The LTM metric values show cash from operations of $748 million exceeding capital expenditure of $658 million, and the passage notes decreased capital expenditures of $84 million, supporting the claim.",
+   "cost_usd": 0.0018174200000000001,
+   "seconds": 21.19399324990809
+  },
+  "L096": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage reports maturities of $2.547B, $3.645B, $3.577B and $4.021B for years two through five, which round to the claim's $2.5B, $3.6B, $3.6B and $4.0B.",
+   "cost_usd": 0.0029414899999999997,
+   "seconds": 23.21172112505883
+  },
+  "L097": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage explicitly states the company operates with a substantial working capital deficit and that customer deposits are used alongside other cash sources to fund operations, service debt, and support capital investments.",
+   "cost_usd": 0.0012375399999999999,
+   "seconds": 7.16212408291176
+  },
+  "L098": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence supports that EU/UK regulations and the IMO Strategy may require capital investments and increase operating costs, but it does not state that this diverts cash flow away from debt repayment.",
+   "cost_usd": 0.00212303,
+   "seconds": 15.157010542228818
+  },
+  "L099": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage directly states Walmart International generated approximately 19% of consolidated net sales in fiscal 2026 and identifies political instability, restrictive governmental actions such as trade protection measures or nationalization, foreign exchange or currency regulations, and antitrust/competition matters in Canada, Mexico and India as factors mostly beyond the company's control.",
+   "cost_usd": 0.00187372,
+   "seconds": 13.208995916880667
+  },
+  "L100": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence supports the working capital deficit, its cause from collecting guest deposits ahead of sailing, and the use of those deposits to fund operations, service debt, and support capital investments, but it does not state that the deficit is a structural feature rather than an immediate liquidity strain.",
+   "cost_usd": 0.00959834,
+   "seconds": 86.31307699950412
+  },
+  "L101": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values show EBITDA/interest declined from 7.33x in FY2023 to 6.36x in the LTM to 30 Sep 2026, with LTM interest expense of $7.6B and EBITDA of $48.6B.",
+   "cost_usd": 0.0037307800000000004,
+   "seconds": 29.18623120803386
+  },
+  "L102": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The claim directly matches the strategic risk factor stated in the passage.",
+   "cost_usd": 0.0009596100000000001,
+   "seconds": 5.219445375259966
+  },
+  "L103": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence supports the $4.5 billion available under the Revolving Facility and the $1.2 billion cash position, but the characterization as 'committed backstop liquidity' goes beyond the evidence, which notes borrowing is subject to conditions.",
+   "cost_usd": 0.00439867,
+   "seconds": 41.168124499730766
+  },
+  "L104": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The interest expense portion is supported, but the operating cash flow evidence refers to a second-quarter decline, not the first half of 2026.",
+   "cost_usd": 0.00307858,
+   "seconds": 25.14560962514952
+  },
+  "L105": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The computed metric values show FCF / debt increased from 3.3% in the fiscal year ended 30 November 2023 to 13.3% in the twelve months to 31 August 2026, matching the claim exactly.",
+   "cost_usd": 0.0011403600000000002,
+   "seconds": 11.124233833979815
+  },
+  "L106": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The risk disclosures explicitly state debt service requires dedicating significant cash flow from operations to principal and interest payments, and adverse economic conditions may increase customers unable to pay, while scorecard debt metrics sit in weaker bands (e.g., Debt/EBITDA band 4 of 6).",
+   "cost_usd": 0.00633086,
+   "seconds": 55.28386562457308
+  },
+  "L107": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values show FCF / debt LTM at 23.6%, scorecard band 3, and weight 20.0%, exactly matching the claim.",
+   "cost_usd": 0.0008783800000000001,
+   "seconds": 5.1149871670641005
+  },
+  "L108": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage explicitly states that a downgrade could increase future borrowing costs and impair the ability to access commercial paper markets with the same flexibility.",
+   "cost_usd": 0.00177408,
+   "seconds": 11.137627667281777
+  },
+  "L109": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The debt-stack management portion is directly supported, but the fiscal 2025 capital-spending portion is only evidenced for nine months and does not include the new shipbuilding program.",
+   "cost_usd": 0.00522505,
+   "seconds": 41.14083612523973
+  },
+  "L110": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence states that certain borrowings are at variable rates, and that if interest rates increase, debt service obligations would increase and require using more available cash, directly matching the claim.",
+   "cost_usd": 0.00104029,
+   "seconds": 5.125997458118945
+  },
+  "L111": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence passage explicitly states the committed lines of credit include covenants and the most restrictive covenant relates to the maximum amount of secured debt.",
+   "cost_usd": 0.00132277,
+   "seconds": 5.112991583067924
+  },
+  "L112": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "All five metric values for the twelve months to 31 July 2026 match the claim exactly.",
+   "cost_usd": 0.00096643,
+   "seconds": 5.11853270791471
+  },
+  "L113": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence explicitly states that unused availability under various credit agreements was $4,421 million at December 31, 2025.",
+   "cost_usd": 0.00095301,
+   "seconds": 3.142114209011197
+  },
+  "L114": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values exactly match the claim's figures, showing modest declines from 3.72x to 3.42x and 3.67x to 3.33x, consistent with broadly stable leverage.",
+   "cost_usd": 0.0008907300000000001,
+   "seconds": 7.134636458940804
+  },
+  "L115": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence passage directly states the listed factors could lead to a decline in demand for cruises and have significant negative impacts on financial condition and operations.",
+   "cost_usd": 0.0014135699999999998,
+   "seconds": 11.116802542004734
+  },
+  "L116": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The provided metric values show net leverage was 0.95x in the year ended 31 January 2024 and 0.96x for the twelve months to 31 July 2026, directly supporting the stated move and its characterization as stable and close to the starting level.",
+   "cost_usd": 0.00125843,
+   "seconds": 13.203002625145018
+  },
+  "L117": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence shows new senior unsecured notes issued with maturities from 2029 to 2033 and the use of issuance proceeds plus cash on hand to prepay nearer-dated 2026-2028 notes and secured term loans, directly matching the claim.",
+   "cost_usd": 0.0031575,
+   "seconds": 21.214154792018235
+  },
+  "L118": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The claim matches the computed metric values exactly for both ratios over the stated periods.",
+   "cost_usd": 0.00073385,
+   "seconds": 5.162922458257526
+  },
+  "L119": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values show EBITDA / interest at 6.74x LTM, scorecard band 3 of 6 (the strongest band among all factors), and weight 25.0%, matching every part of the claim.",
+   "cost_usd": 0.0015958100000000002,
+   "seconds": 9.21744129108265
+  },
+  "L120": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence explicitly lists all eight cruise lines and states each brand meets a distinct set of consumer psychographics and vacation needs, enabling penetration of large addressable customer segments.",
+   "cost_usd": 0.00251919,
+   "seconds": 19.147282832767814
+  },
+  "L121": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values for Debt / EBITDA and net leverage exactly match every figure stated in the claim.",
+   "cost_usd": 0.0008593500000000002,
+   "seconds": 5.110247583128512
+  },
+  "L122": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage directly states the $10.7 billion undrawn export credit facilities as of August 31, 2026.",
+   "cost_usd": 0.0008654200000000001,
+   "seconds": 3.118339458014816
+  },
+  "L123": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "Evidence supports 2025 debt repayment and lower average interest rate, plus Q1 2026 net borrowings, but it does not show improved leverage/interest coverage in 2025 or rising leverage and weakening segment earnings in the twelve months to 30 September 2026.",
+   "cost_usd": 0.006894239999999999,
+   "seconds": 47.172502167057246
+  },
+  "L124": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence shows issuance, net draws, and repayments for the six months ended June 30, 2026, but the claim concerns the twelve months to September 30, 2026, so the full period is not covered.",
+   "cost_usd": 0.01034266,
+   "seconds": 78.35165858315304
+  },
+  "L125": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "All claim elements match the computed scorecard metrics: near-term maturity cover is band 6 at 2.66x with 10.0% weight, and liquidity coverage is band 4 at 1.42x with 15.0% weight, making band 6 the weakest-scoring factor.",
+   "cost_usd": 0.00245298,
+   "seconds": 19.12550950003788
+  },
+  "L126": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The claim is directly stated in the evidence passage.",
+   "cost_usd": 0.00112032,
+   "seconds": 7.122721916995943
+  },
+  "L127": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The passage supports significant global competition and exposure to raw material, energy and transportation cost increases, but it does not say these make cash flows less stable; it only says they may materially adversely affect operating results and financial condition.",
+   "cost_usd": 0.004301269999999999,
+   "seconds": 31.226466125342995
+  },
+  "L128": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence supports that unfavorable economic conditions may increase customers unable to pay bills, but it does not state that this may pressure cash flow.",
+   "cost_usd": 0.00123946,
+   "seconds": 9.118804707657546
+  },
+  "L129": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The computed metric values show net leverage fell from 8.28x to 6.62x over the stated periods, matching the claim.",
+   "cost_usd": 0.0008512799999999999,
+   "seconds": 7.179394499864429
+  },
+  "L130": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence confirms the $15.0 billion undrawn U.S. committed lines at July 31, 2026, but does not support the assertion that the liquidity and maturity bands temper the grade less than the measured ratios alone suggest.",
+   "cost_usd": 0.0039289,
+   "seconds": 35.130617540795356
+  },
+  "L131": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence supports staffing shortages, union activity raising labor costs, and a material adverse effect on capacity, growth prospects and results of operations, but it does not state any impact on cash flows available for debt service.",
+   "cost_usd": 0.0014213,
+   "seconds": 13.116147540975362
+  },
+  "L132": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence shows the company issued long-term debt and increased short-term borrowings/revolving credit facility draws, but it does not provide total debt balances, leverage ratios, or EBITDA, so the claims that debt rose and that leverage stayed flat only because EBITDA grew are unsupported.",
+   "cost_usd": 0.00474908,
+   "seconds": 35.194962666835636
+  },
+  "L133": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The filing explicitly states the 2025 senior unsecured note issuances and unsecured term loan borrowings, that proceeds plus cash on hand were used to prepay debt, and that $409 million of debt extinguishment and modification costs were recognized.",
+   "cost_usd": 0.00296652,
+   "seconds": 23.18123837513849
+  },
+  "L134": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The claim matches the stated unused availability amounts for December 31, 2025 and 2024 in the evidence passage.",
+   "cost_usd": 0.00082827,
+   "seconds": 5.109191667288542
+  },
+  "L135": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence supports negative effects on operating results from political instability and legal/regulatory constraints, but does not mention cash flow.",
+   "cost_usd": 0.00112874,
+   "seconds": 11.135554292239249
+  },
+  "L136": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage explicitly states $4,421 million of unused availability at December 31, 2025 and management's belief that its liquidity position is adequate to fund operating and investing needs and debt maturities for the next twelve months.",
+   "cost_usd": 0.00408975,
+   "seconds": 33.13986008381471
+  },
+  "L137": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence directly states that repaying maturing indebtedness may depend on access to capital markets, that such access cannot be assured, and that liquidity could be adversely affected if supplier financing or receivables factoring become unavailable or less attractive.",
+   "cost_usd": 0.00266684,
+   "seconds": 21.1877503329888
+  },
+  "L138": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passages directly state compliance with applicable debt covenants as of November 30, 2025 and August 31, 2026, and that cross-default/cross-acceleration clauses could make substantially all outstanding debt due and terminated.",
+   "cost_usd": 0.00409437,
+   "seconds": 29.183503875043243
+  },
+  "L139": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values confirm liquidity coverage is band 5 with 15.0% weight on 1.06x, near-term maturity cover is band 4 with 10.0% weight on 0.86x, and band 5 is the weakest scored factor.",
+   "cost_usd": 0.0022186,
+   "seconds": 15.133352499920875
+  },
+  "L140": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence confirms an $8.000 billion senior unsecured revolving facility, but it does not identify it as the \u201cprincipal committed backstop.\u201d",
+   "cost_usd": 0.0023301100000000003,
+   "seconds": 19.134622207842767
+  },
+  "L141": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence passage explicitly states this consequence of Verizon's debt level and debt service obligations.",
+   "cost_usd": 0.00118391,
+   "seconds": 7.125393250025809
+  },
+  "L142": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence shows higher interest expense with increased average debt and stable effective rate for the nine months ended September 30, but it does not cover a twelve-month period or interest coverage.",
+   "cost_usd": 0.00914884,
+   "seconds": 78.3374207499437
+  },
+  "L143": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The claim exactly matches the provided metric values: 2.09x for FY ended 30 November 2023 and 6.21x for LTM to 31 August 2026, indicating an improvement.",
+   "cost_usd": 0.00059837,
+   "seconds": 5.113750416785479
+  },
+  "L144": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The passage directly supports that facilities are located in 19 states and England, but it does not explicitly state that this provides geographic diversification of hospital and outpatient operations.",
+   "cost_usd": 0.00194127,
+   "seconds": 17.139668584335595
+  },
+  "L145": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The provided metric values directly confirm all stated figures: FCF/debt declined from 32.2% in FY2024 to 23.6% in LTM, with capital expenditure of $29.4 billion against cash from operations of $42.9 billion.",
+   "cost_usd": 0.00220067,
+   "seconds": 13.155275499913841
+  },
+  "L146": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The 1.06x liquidity coverage ratio is directly supported by the metric, but the evidence does not define the ratio as covering debt maturities, capital expenditure, and dividends, nor does it state that the excess is 'only modest.'",
+   "cost_usd": 0.00150695,
+   "seconds": 13.120181542355567
+  },
+  "L147": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The passage supports that no travel agency group accounted for 10% or more of revenues in 2025, but the conclusion about diversified distribution channels is not stated in the evidence.",
+   "cost_usd": 0.00162938,
+   "seconds": 13.168083999771625
+  },
+  "L148": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values show liquidity coverage at band 6 with 15.0% weight, near-term maturity cover at band 6 with 10.0% weight, and values of 0.86x and 7.15x, matching the claim exactly.",
+   "cost_usd": 0.00138289,
+   "seconds": 7.112947208806872
+  },
+  "L149": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence supports the listed pharmacy reimbursement and drug-pricing risks, but it does not state that they could pressure a significant earnings stream supporting debt repayment.",
+   "cost_usd": 0.00160126,
+   "seconds": 11.129148583859205
+  },
+  "L150": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage explicitly states the company has three segments and that each segment's results affect the financial condition and results of operations of the Company as a whole.",
+   "cost_usd": 0.0009247200000000001,
+   "seconds": 5.1134125418029726
+  },
+  "L151": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence explicitly states that the company's substantial debt could impair its ability to obtain financing in the future.",
+   "cost_usd": 0.00099843,
+   "seconds": 5.116620790679008
+  },
+  "L152": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The claim matches the computed metric values exactly: total debt fell from $26.6 billion in FY2025 to $23.9 billion in LTM to 31 August 2026, and LTM EBITDA was $7.3 billion.",
+   "cost_usd": 0.0008280900000000001,
+   "seconds": 7.117923999670893
+  },
+  "L153": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage states that adverse financial market changes, including interest rate increases and rating decreases, could increase borrowing costs, require collateral, and make obtaining or refinancing financing more difficult, matching the claim.",
+   "cost_usd": 0.0016705700000000001,
+   "seconds": 13.237421041820198
+  },
+  "L154": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage explicitly states Verizon has two reportable segments operated and managed as strategic business units, Consumer and Business.",
+   "cost_usd": 0.0007880399999999999,
+   "seconds": 3.10676045762375
+  },
+  "L155": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values show near-term maturity cover of 7.15x, cash of $1.0 billion, and undrawn revolver capacity of $0 assumed because not reported, matching the claim exactly.",
+   "cost_usd": 0.00116696,
+   "seconds": 9.170887624844909
+  },
+  "L156": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The computed near-term maturity cover for FY0 is exactly 0.86x, matching the claim.",
+   "cost_usd": 0.00073331,
+   "seconds": 7.12486866582185
+  },
+  "L157": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values show 1.07x for LTM and 1.18x for FY0, and the reported $15.0 billion undrawn committed lines of credit are excluded from the metric because undrawn_revolver was assumed zero, supporting the additional coverage headroom statement.",
+   "cost_usd": 0.00190617,
+   "seconds": 11.132338124793023
+  },
+  "L158": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passages directly state both the seasonal nature with fourth-quarter peak sales per segment and that the retail landscapes are highly competitive and rapidly evolving.",
+   "cost_usd": 0.00197494,
+   "seconds": 13.122110333293676
+  },
+  "L159": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage states that a covenant breach could cause default, acceleration of amounts outstanding, and cross-default under other indebtedness.",
+   "cost_usd": 0.00135775,
+   "seconds": 7.167851957958192
+  },
+  "L160": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence directly states both that Walmart's business is seasonal and varies by country and that the retail landscape is highly competitive, rapidly evolving, and being intensified by new well-funded competitors.",
+   "cost_usd": 0.00890997,
+   "seconds": 74.43584874970838
+  },
+  "L161": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage directly states each brand meets distinct consumer psychographics and vacation needs, allowing penetration of large addressable customer segments.",
+   "cost_usd": 0.00118329,
+   "seconds": 7.120205750223249
+  },
+  "L162": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage explicitly states the Company renewed and extended its 364-day and five-year facilities and that all committed U.S. lines were undrawn.",
+   "cost_usd": 0.0017410799999999999,
+   "seconds": 9.125269749667495
+  },
+  "L163": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage directly states that breaching covenants could trigger a default, cross-default borrowings may be accelerated, and assets may be insufficient to repay in full.",
+   "cost_usd": 0.0036661800000000002,
+   "seconds": 29.151291249785572
+  },
+  "L164": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The filing states the company operated freestanding ambulatory surgery centers and endoscopy centers, and its facilities are located in 19 states and England, matching the claim of US concentration plus one market abroad.",
+   "cost_usd": 0.00140387,
+   "seconds": 7.146664333064109
+  },
+  "L165": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The company does report borrowing capacity under its senior unsecured credit facility, but the scorecard shows the near-term maturity metric denominator includes cash and undrawn revolver, so the claim that the metric treats undrawn revolver capacity as zero is not supported.",
+   "cost_usd": 0.008490649999999999,
+   "seconds": 70.29655045783147
+  },
+  "L166": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "All four figures in the claim exactly match the computed metric values for FY0 and LTM.",
+   "cost_usd": 0.0009573499999999999,
+   "seconds": 9.201780749950558
+  },
+  "L167": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The weighted score, grade description, and non-provisional status are exactly as stated in the provided scorecard metrics.",
+   "cost_usd": 0.007372490000000001,
+   "seconds": 60.317712584044784
+  },
+  "L168": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "All stated debt maturity amounts match the computed XBRL metric values for the fiscal year ended 31 December 2025.",
+   "cost_usd": 0.00116754,
+   "seconds": 11.13187058409676
+  },
+  "L169": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage lists multiple facility types and states the facilities are located in 19 states and England, which directly supports the claim's geographic and service-line diversification.",
+   "cost_usd": 0.00153316,
+   "seconds": 9.140779791865498
+  },
+  "L170": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The claim is stated verbatim in the evidence passage.",
+   "cost_usd": 0.00084985,
+   "seconds": 5.149964292068034
+  },
+  "L171": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values show cash from operations of $39.0 billion, which exceeds both capital expenditure of $16.7 billion and dividends of $11.7 billion for the twelve months to 30 September 2026.",
+   "cost_usd": 0.0010257999999999999,
+   "seconds": 7.113207750022411
+  },
+  "L172": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The computed XBRL metrics show debt due within 24 months of $1.9 billion, a share of 30.7%, and total debt of $6.2 billion for the fiscal year ended 31 December 2025, matching the claim.",
+   "cost_usd": 0.00088999,
+   "seconds": 5.105242167133838
+  },
+  "L173": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The filing states the company has significant debt service requirements and total debt of $48.023 billion at March 31, 2026, which is the end of the first quarter of 2026.",
+   "cost_usd": 0.00103733,
+   "seconds": 5.111398791894317
+  },
+  "L174": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage directly states that HCA's ability to refinance on favorable terms or at all depends on global economic and financial conditions, and that credit rating downgrades may negatively affect availability and rates of debt financing.",
+   "cost_usd": 0.00376409,
+   "seconds": 31.185664874967188
+  },
+  "L175": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence passage explicitly states the credit agreement provides $8.000 billion of senior unsecured revolving credit commitments with a five-year term.",
+   "cost_usd": 0.0009174100000000001,
+   "seconds": 7.114119207952172
+  },
+  "L176": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence passage explicitly states that overcapacity and competition in the cruise and land-based vacation industry may negatively impact cruise sales and pricing, which directly supports the claim.",
+   "cost_usd": 0.00092187,
+   "seconds": 5.109337207861245
+  },
+  "L177": {
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The total debt and EBITDA figures match the provided metrics, and the evidence shows net borrowings of $807 million in early 2026 plus a 2025 decline in segment operating income; however, no prior-period leverage or full twelve-month borrowing/earnings comparison is provided to support the assertion that leverage 'has risen again' over the twelve months to 30 September 2026.",
+   "cost_usd": 0.0048746300000000005,
+   "seconds": 37.15252920798957
+  },
+  "L178": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The claim matches the provided metric values exactly: Revenue FY-2 is $65.0 billion, FY0 is $75.6 billion, and LTM is $78.7 billion.",
+   "cost_usd": 0.0008290899999999999,
+   "seconds": 7.125473499763757
+  },
+  "L179": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence explicitly states the April 2026 issuance amount and use of net proceeds to repay commercial paper, and the May 2026 redemptions of both note issues.",
+   "cost_usd": 0.0028121000000000005,
+   "seconds": 19.12307950016111
+  },
+  "L180": {
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values show liquidity sources / uses at 1.06x, scorecard band 5 (the weakest band among all scored factors), and scorecard weight 15.0%.",
+   "cost_usd": 0.0016326700000000001,
+   "seconds": 15.12329016579315
+  }
+ }
+}

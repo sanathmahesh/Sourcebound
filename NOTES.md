@@ -648,6 +648,50 @@ false-pass rate), and a human reviews everything flagged.
 
 ---
 
+## 21. Evaluation (sourcebound/evals/, evals/)
+
+### What is measured, and why each matters
+- **Engine numeric accuracy**: my hand-verified 10-K values against the engine's (inputs equal after
+  rounding to the filing's unit; ratios within 0.05x or 1 point). Reported with **coverage**: the share of
+  items where the engine produced a value at all. High accuracy with low coverage would hide failures.
+- **Memo numeric accuracy**: every figure printed in a golden-set memo, checked against my value (engine
+  figures) or the cited passage (quoted figures); plus how many raw numbers the validator rejected.
+- **Citation precision**: of the claims I labelled, the share whose cited passage actually supports them.
+- **Unsupported-claim rate**: by my labels on a blind sample (the reference), and by the judge on all 15
+  companies (labelled as judge-estimated).
+- **Judge calibration**: agreement with my labels and the **false-pass rate**, the judge calling a claim
+  supported that I called unsupported. False passes matter most: they are errors that would reach a reader.
+- **Seeded errors**: known-good claims corrupted on purpose (wrong number, negation, swapped citation) to
+  see which layer catches what. It shows why the layers exist: code catches what code can, the judge the rest.
+- **Retrieval recall**: whether the passage I found for each fact question is in the top eight results.
+- **Cost and time per memo** from the API's own token counts at list price; **run-to-run spread** from
+  three runs per writer, because model output can't be pinned (no seed).
+- **Scorecard against agency ratings**: Spearman rank correlation and IG/HY agreement, n = 15, with a
+  plain statement that the sample is small.
+
+### Concepts
+- **Blind labelling**: the labelling sheet hides which model wrote each claim, so my labels can't favour
+  one. The key is in a separate file.
+- **Spearman rank correlation**: do two lists put companies in the same order? +1 identical order, 0 none,
+  −1 reversed. It ignores scale, which suits comparing a 1–6 score with letter ratings.
+- **Sample size**: every share is shown with n. 3 of 4 and 75 of 100 are both 75%, but mean very
+  different things.
+
+### Why it is built this way
+- Every result is recomputed from saved files (memos, raw model outputs, labels) with no model calls; a test
+  enforces it. Re-judging the same claims with another judge reuses the saved drafts.
+- Runs are resumable: a memo already on disk is never regenerated, so an interruption never pays twice.
+
+**Q: How do you know your judge is any good?**
+A: I labelled a blind sample myself and measured the judge's agreement and, more importantly, its false-pass
+rate. The judge is chosen on that, then fixed for every writer so the writers are compared fairly.
+
+**Q: Why three writer models?**
+A: Two mid-priced models from different labs and one about ten times cheaper, to show the trade-off
+between cost and accuracy with real measurements rather than assumptions.
+
+---
+
 ## Still to write
 
 - US supervisory guidance on model risk (SR 11-7, its 2026 replacement SR 26-2 / OCC 2026-13 / FDIC

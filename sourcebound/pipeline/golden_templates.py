@@ -106,10 +106,10 @@ def render_golden_sheet(a: CompanyAnalysis) -> str:
         "",
         "## Fact questions",
         "",
-        "| # | Question | Answer | Exact location (section and page) |",
-        "|---|---|---|---|",
+        "| # | Question | Answer | Exact location (section and page) | Quote (a few words copied from the passage) |",
+        "|---|---|---|---|---|",
     ]
-    lines += [f"| {code} | {question} | | |" for code, question in QUESTIONS]
+    lines += [f"| {code} | {question} | | | |" for code, question in QUESTIONS]
     return "\n".join(lines) + "\n"
 
 

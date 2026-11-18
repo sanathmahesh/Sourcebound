@@ -11,5 +11,5 @@ reasoning_effort:
   writer: medium
   judge: low
 max_completion_tokens:
-  writer: 8000
+  writer: 16000
   judge: 2000

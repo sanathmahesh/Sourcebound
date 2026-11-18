@@ -1,0 +1,4589 @@
+{
+ "schema_version": "1",
+ "ticker": "XOM",
+ "name": "EXXON MOBIL CORP",
+ "memo_date": "2026-11-18",
+ "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "judge_model": "zai-org/GLM-5.3",
+ "grade": "SB-2",
+ "grade_provisional": false,
+ "sources": [
+  {
+   "form": "10-K",
+   "accession": "0000034088-26-000045",
+   "period_end": "2025-12-31",
+   "filed": "2026-02-18",
+   "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+  },
+  {
+   "form": "10-Q",
+   "accession": "0000034088-26-000067",
+   "period_end": "2026-03-31",
+   "filed": "2026-05-04",
+   "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+  },
+  {
+   "form": "10-Q",
+   "accession": "0000034088-26-000093",
+   "period_end": "2026-06-30",
+   "filed": "2026-08-03",
+   "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000093/xom-20260630.htm"
+  }
+ ],
+ "sections": [
+  {
+   "id": "business_profile",
+   "title": "Business profile",
+   "claims": [
+    {
+     "id": "business_profile-1",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "All four figures match the computed metric values exactly.",
+     "evidence_quote": "",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "In the fiscal year ended 31 December 2025, revenue was ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$332.2 billion",
+       "metric_id": "revenue:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " and EBITDA was ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$67.9 billion",
+       "metric_id": "ebitda:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": ", while for the twelve months to 31 March 2026 revenue was ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$334.2 billion",
+       "metric_id": "revenue:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " and EBITDA was ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$64.4 billion",
+       "metric_id": "ebitda:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": ".",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "business_profile-2",
+     "kind": "qualitative",
+     "verdict": "supported",
+     "judge_reason": "Passage 1 states ExxonMobil operates in the highly competitive energy and petrochemical industries and competes in many national and international markets, and passage 2 describes capital projects and programs contributing to Energy, Chemical, and/or Specialty Products segments.",
+     "evidence_quote": "The Corporation competes with other firms in the sale or purchase of needed goods and services in many national and international markets",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "ExxonMobil operates in the energy and petrochemical industries and competes in many national and international markets, with capital projects and programs tied to Energy, Chemical, and Specialty Products segments.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "XOM-000003408826000045-0005",
+       "quote": "The energy and petrochemical industries are highly competitive, both within the industries and also with other industries in supplying the energy, fuel, and chemical needs of industrial and individual consumers.",
+       "check": "ok"
+      },
+      {
+       "chunk_id": "XOM-000003408826000045-0005",
+       "quote": "The Corporation competes with other firms in the sale or purchase of needed goods and services in many national and international markets",
+       "check": "ok"
+      },
+      {
+       "chunk_id": "XOM-000003408826000093-0040",
+       "quote": "capital projects and programs of work that contribute to Energy, Chemical, and/or Specialty Products segments",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    },
+    {
+     "id": "business_profile-3",
+     "kind": "qualitative",
+     "verdict": "supported",
+     "judge_reason": "The passage states compliance with existing and potential future government regulations, including taxes and environmental regulations, may have material effects on capital expenditures, earnings, and competitive position.",
+     "evidence_quote": "compliance with existing and potential future government regulations, including taxes, environmental regulations, and other government regulations and policies that directly or indirectly affect the production and sale of our products, may have material effects on the capital expenditures, earnings, and competitive position of ExxonMobil.",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Compliance with existing and potential future government regulations, including taxes and environmental regulations, may have material effects on capital expenditures, earnings and competitive position.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "XOM-000003408826000045-0008",
+       "quote": "compliance with existing and potential future government regulations, including taxes, environmental regulations, and other government regulations and policies",
+       "check": "ok"
+      },
+      {
+       "chunk_id": "XOM-000003408826000045-0008",
+       "quote": "may have material effects on the capital expenditures, earnings, and competitive position of ExxonMobil",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    },
+    {
+     "id": "business_profile-4",
+     "kind": "qualitative",
+     "verdict": "supported",
+     "judge_reason": "The evidence directly states that economic conditions and seasonal fluctuations impact prices, differentials, margins, and volume/mix for the company's products.",
+     "evidence_quote": "economic conditions and seasonal fluctuations that impact prices, differentials, margins, and volume/mix for our products",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Results are exposed to economic conditions and seasonal fluctuations that affect prices, differentials, margins, and volume/mix for the company’s products.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "XOM-000003408826000093-0035",
+       "quote": "economic conditions and seasonal fluctuations that impact prices, differentials, margins, and volume/mix for our products",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    },
+    {
+     "id": "business_profile-5",
+     "kind": "qualitative",
+     "verdict": "supported",
+     "judge_reason": "The claim restates the passage's definition of Advantaged Volume Growth and its components.",
+     "evidence_quote": "Advantaged Volume Growth. Represents earnings impacts from change in volume/mix from advantaged assets, advantaged projects, and high-value products.",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Earnings drivers include advantaged volume growth from advantaged assets, advantaged projects, and high-value products.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "XOM-000003408826000093-0040",
+       "quote": "Advantaged Volume Growth. Represents earnings impacts from change in volume/mix from advantaged assets, advantaged projects, and high-value products.",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    }
+   ],
+   "passages_shown": [
+    "XOM-000003408826000093-0040",
+    "XOM-000003408826000045-0007",
+    "XOM-000003408826000045-0005",
+    "XOM-000003408826000067-0031",
+    "XOM-000003408826000045-0006",
+    "XOM-000003408826000093-0035",
+    "XOM-000003408826000045-0008",
+    "XOM-000003408826000045-0084"
+   ],
+   "notes": []
+  },
+  {
+   "id": "financial_risk",
+   "title": "Financial risk",
+   "claims": [
+    {
+     "id": "financial_risk-1",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "The claimed values 0.56x (FY ended 31 Dec 2023) and 0.74x (twelve months to 31 Mar 2026) match the scorecard metrics, and the rise indicates worsening leverage.",
+     "evidence_quote": "",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Debt / EBITDA rose from ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "0.56x",
+       "metric_id": "debt_to_ebitda:FY-2",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in the fiscal year ended 31 December 2023 to ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "0.74x",
+       "metric_id": "debt_to_ebitda:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in the twelve months to 31 March 2026, a worsening trend over the period.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "financial_risk-2",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "All four figures (0.14x, 0.61x, $43.5bn, $47.7bn) match the computed metric values exactly.",
+     "evidence_quote": "",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Net leverage rose from ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "0.14x",
+       "metric_id": "net_leverage:FY-2",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in the fiscal year ended 31 December 2023 to ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "0.61x",
+       "metric_id": "net_leverage:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in the twelve months to 31 March 2026, with total debt increasing from ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$43.5 billion",
+       "metric_id": "total_debt:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " at the fiscal year ended 31 December 2025 to ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$47.7 billion",
+       "metric_id": "total_debt:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " at the twelve months to 31 March 2026.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "financial_risk-3",
+     "kind": "qualitative",
+     "verdict": "partially_supported",
+     "judge_reason": "Weaker operating cash generation in the latest quarter is supported ($8.7B vs $12.95B, down $4.2B), but the evidence contains no debt-related ratios or data showing their deterioration.",
+     "evidence_quote": "Cash provided by operating activities totaled $8.7 billion for the first three months of 2026, $4.2 billion lower than 2025.",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Weaker operating cash generation in the latest quarter contributed to the deterioration in debt-related ratios.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "XOM-000003408826000067-0043",
+       "quote": "Cash provided by operating activities totaled $8.7 billion for the first three months of 2026, $4.2 billion lower than 2025.",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    },
+    {
+     "id": "financial_risk-4",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "All figures in the claim (FCF/debt of 80.5% in FY2023 falling to 39.4% LTM to 31 March 2026, capex of $28.9B, cash from operations of $47.7B) match the computed metric values, and the LTM capex of $28.9B against $47.7B of operating cash flow reasonably supports the statement that capex absorbed much of operating cash flow.",
+     "evidence_quote": "",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "FCF / debt fell from ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "80.5%",
+       "metric_id": "fcf_to_debt:FY-2",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in the fiscal year ended 31 December 2023 to ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "39.4%",
+       "metric_id": "fcf_to_debt:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in the twelve months to 31 March 2026, as capital expenditure of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$28.9 billion",
+       "metric_id": "capex:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " absorbed much of the ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$47.7 billion",
+       "metric_id": "cfo:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " of cash from operations.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "financial_risk-5",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "All figures match the computed metric values, and the move from 87.48x to 92.91x is reasonably characterized as stable.",
+     "evidence_quote": "",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "EBITDA / interest was ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "92.91x",
+       "metric_id": "interest_coverage:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in the twelve months to 31 March 2026 against ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "87.48x",
+       "metric_id": "interest_coverage:FY-2",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in the fiscal year ended 31 December 2023, a stable trend, with interest expense of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$693 million",
+       "metric_id": "interest_expense:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in the twelve months to 31 March 2026.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "financial_risk-6",
+     "kind": "qualitative",
+     "verdict": "supported",
+     "judge_reason": "The evidence directly states expenses increased $255 million year-over-year due to lower interest income and absence of favorable tax items.",
+     "evidence_quote": "Corporate and Financing expenses were $1,053 million for the first quarter of 2026, $255 million higher than the first quarter of 2025, due to lower interest income and the absence of favorable tax items.",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Corporate and financing expenses increased year over year, reflecting lower interest income and the absence of prior favorable tax items.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "XOM-000003408826000067-0042",
+       "quote": "Corporate and Financing expenses were $1,053 million for the first quarter of 2026, $255 million higher than the first quarter of 2025",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    }
+   ],
+   "passages_shown": [
+    "XOM-000003408826000067-0043",
+    "XOM-000003408826000093-0028",
+    "XOM-000003408826000067-0019",
+    "XOM-000003408826000093-0056",
+    "XOM-000003408826000093-0055",
+    "XOM-000003408826000093-0027",
+    "XOM-000003408826000067-0033",
+    "XOM-000003408826000067-0042"
+   ],
+   "notes": []
+  },
+  {
+   "id": "liquidity",
+   "title": "Liquidity",
+   "claims": [
+    {
+     "id": "liquidity-1",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "Both liquidity coverage values match the metric computations exactly.",
+     "evidence_quote": "",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Liquidity coverage was ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "1.14x",
+       "metric_id": "liquidity_coverage:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in the fiscal year ended 31 December 2025 and ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "0.93x",
+       "metric_id": "liquidity_coverage:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in the twelve months to 31 March 2026.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "liquidity-2",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "Both figures match the computed XBRL metrics: cash of $8.4B is smaller than short-term debt of $14.5B, so the conclusion follows directly.",
+     "evidence_quote": "",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Cash and cash equivalents of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$8.4 billion",
+       "metric_id": "cash:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " at the twelve months to 31 March 2026 were smaller than short-term debt of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$14.5 billion",
+       "metric_id": "short_term_debt:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": ", so cash balances alone do not cover near-term maturities.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "liquidity-3",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "CFO of $47.7B exceeds capex ($28.9B) plus dividends ($17.2B) = $46.1B, per the computed LTM metric values.",
+     "evidence_quote": "",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Cash from operations of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$47.7 billion",
+       "metric_id": "cfo:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in the twelve months to 31 March 2026 exceeded capital expenditure of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$28.9 billion",
+       "metric_id": "capex:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " and dividends of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$17.2 billion",
+       "metric_id": "dividends:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " combined.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "liquidity-4",
+     "kind": "qualitative",
+     "verdict": "partially_supported",
+     "judge_reason": "The undrawn committed lines ($7.4B short-term, $0.3B long-term at end of Q2 2026) are supported, but no evidence addresses liquidity coverage ratios or the assumption that they exclude undrawn revolver capacity.",
+     "evidence_quote": "The Corporation had undrawn short-term committed lines of credit of $7.4 billion and undrawn long-term committed lines of credit of $0.3 billion as of the end of second quarter 2026.",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "The reported liquidity coverage ratios assume no undrawn revolver capacity, while the company reports committed lines that were largely undrawn at the end of the second quarter of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "quoted",
+       "v": "2026",
+       "metric_id": null,
+       "chunk_id": "XOM-000003408826000093-0058"
+      },
+      {
+       "t": "text",
+       "v": ".",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "XOM-000003408826000093-0058",
+       "quote": "undrawn short-term committed lines of credit of $7.4 billion and undrawn long-term committed lines of credit of $0.3 billion as of the end of second quarter 2026",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    },
+    {
+     "id": "liquidity-5",
+     "kind": "qualitative",
+     "verdict": "supported",
+     "judge_reason": "Passage states internally generated funds are expected to cover the majority of financial requirements, supplemented by long-term and short-term debt.",
+     "evidence_quote": "Internally generated funds are expected to cover the majority of financial requirements, supplemented by long-term and short-term debt.",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Management expects internally generated funds to cover most financial requirements, with debt used as a supplement.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "XOM-000003408826000093-0058",
+       "quote": "Internally generated funds are expected to cover the majority of financial requirements, supplemented by long-term and short-term debt.",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    },
+    {
+     "id": "liquidity-6",
+     "kind": "qualitative",
+     "verdict": "supported",
+     "judge_reason": "The passage states planned capital spending of $27–29 billion for 2026 and that actual spending could vary with project progress.",
+     "evidence_quote": "The Corporation plans to invest in the range of $27 billion to $29 billion in 2026. Actual spending could vary depending on the progress of individual projects.",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Capital spending is planned in a stated range for ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "quoted",
+       "v": "2026",
+       "metric_id": null,
+       "chunk_id": "XOM-000003408826000067-0045"
+      },
+      {
+       "t": "text",
+       "v": ", with actual spending subject to project progress.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "XOM-000003408826000067-0045",
+       "quote": "The Corporation plans to invest in the range of $27 billion to $29 billion in 2026. Actual spending could vary depending on the progress of individual projects.",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    }
+   ],
+   "passages_shown": [
+    "XOM-000003408826000093-0058",
+    "XOM-000003408826000067-0043",
+    "XOM-000003408826000067-0045",
+    "XOM-000003408826000093-0056",
+    "XOM-000003408826000093-0057",
+    "XOM-000003408826000093-0037",
+    "XOM-000003408826000067-0044",
+    "XOM-000003408826000067-0028"
+   ],
+   "notes": []
+  },
+  {
+   "id": "maturity_wall",
+   "title": "Maturity wall",
+   "claims": [
+    {
+     "id": "maturity_wall-1",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "All five maturity values match the metric table exactly, and the claim correctly notes that debt maturing after year five is not available.",
+     "evidence_quote": "",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Debt maturing in year one is ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$6.2 billion",
+       "metric_id": "maturity_year_1:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": ", followed by ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$2.5 billion",
+       "metric_id": "maturity_year_2:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in year two, ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$1.7 billion",
+       "metric_id": "maturity_year_3:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in year three, ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$1.7 billion",
+       "metric_id": "maturity_year_4:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in year four, and ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$5.3 billion",
+       "metric_id": "maturity_year_5:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in year five; debt maturing after year five is ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "not available",
+       "metric_id": "maturity_after_year_5:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in the metric table.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "maturity_wall-2",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "Both figures in the claim match the XBRL-computed metrics for debt due within 24 months ($11.8B) and its share of total debt (27.1%) for FY0.",
+     "evidence_quote": "",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Debt falling due within the two-year window is ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$11.8 billion",
+       "metric_id": "debt_due_24m:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": ", equal to ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "27.1%",
+       "metric_id": "share_due_24m:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " of total debt.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "maturity_wall-3",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "All three figures (1.10x cover, $10.7 billion cash, $9.3 billion short-term debt) match the computed metric values for FY0.",
+     "evidence_quote": "",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Near-term maturity cover is ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "1.10x",
+       "metric_id": "near_term_maturity_cover:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": ", against cash of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$10.7 billion",
+       "metric_id": "cash:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " and short-term debt of ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "$9.3 billion",
+       "metric_id": "short_term_debt:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": ".",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "maturity_wall-4",
+     "kind": "qualitative",
+     "verdict": "supported",
+     "judge_reason": "The debt note states unused long-term lines of credit of $1.0 billion at December 31, 2025.",
+     "evidence_quote": "At December 31, 2025, the Corporation's unused long-term lines of credit were $1.0 billion.",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "The debt note reports unused long-term lines of credit of $",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "quoted",
+       "v": "1.0",
+       "metric_id": null,
+       "chunk_id": "XOM-000003408826000045-0288"
+      },
+      {
+       "t": "text",
+       "v": " billion at the fiscal year ended 31 December 2025.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "XOM-000003408826000045-0288",
+       "quote": "At December 31, 2025, the Corporation's unused long-term lines of credit were $1.0 billion.",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    },
+    {
+     "id": "maturity_wall-5",
+     "kind": "qualitative",
+     "verdict": "supported",
+     "judge_reason": "The passage explicitly states undrawn short-term committed lines of credit of $7.3 billion and undrawn long-term committed lines of credit of $0.3 billion.",
+     "evidence_quote": "The Corporation had undrawn short-term committed lines of credit of $7.3 billion and undrawn long-term committed lines of credit of $0.3 billion as of the end of first quarter 2026.",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "The liquidity passage reports undrawn short-term committed lines of credit of $",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "quoted",
+       "v": "7.3",
+       "metric_id": null,
+       "chunk_id": "XOM-000003408826000067-0045"
+      },
+      {
+       "t": "text",
+       "v": " billion and undrawn long-term committed lines of credit of $",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "quoted",
+       "v": "0.3",
+       "metric_id": null,
+       "chunk_id": "XOM-000003408826000067-0045"
+      },
+      {
+       "t": "text",
+       "v": " billion.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "XOM-000003408826000067-0045",
+       "quote": "The Corporation had undrawn short-term committed lines of credit of $7.3 billion and undrawn long-term committed lines of credit of $0.3 billion as of the end of first quarter 2026.",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    },
+    {
+     "id": "maturity_wall-6",
+     "kind": "qualitative",
+     "verdict": "supported",
+     "judge_reason": "The passage states verbatim that internally generated funds are expected to cover the majority of financial requirements, supplemented by long-term and short-term debt.",
+     "evidence_quote": "Internally generated funds are expected to cover the majority of financial requirements, supplemented by long-term and short-term debt.",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Management expects internally generated funds to cover the majority of financial requirements, supplemented by long-term and short-term debt.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "XOM-000003408826000067-0045",
+       "quote": "Internally generated funds are expected to cover the majority of financial requirements, supplemented by long-term and short-term debt.",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    }
+   ],
+   "passages_shown": [
+    "XOM-000003408826000045-0289",
+    "XOM-000003408826000045-0288",
+    "XOM-000003408826000093-0058",
+    "XOM-000003408826000067-0045",
+    "XOM-000003408826000045-0290",
+    "XOM-000003408826000067-0044",
+    "XOM-000003408826000093-0057",
+    "XOM-000003408826000067-0046"
+   ],
+   "notes": []
+  },
+  {
+   "id": "key_risks",
+   "title": "Key risks",
+   "claims": [
+    {
+     "id": "key_risks-1",
+     "kind": "qualitative",
+     "verdict": "supported",
+     "judge_reason": "The passage directly states economic downturns/recessions adversely impact results tied to energy and petrochemical demand; the 'cash flow for debt service' framing is standard risk-factor language consistent with this passage.",
+     "evidence_quote": "The occurrence of economic downturns, recessions or other periods of low or negative economic growth will typically have a direct adverse impact on our results.",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Economic downturns or recessions can directly reduce demand for energy and petrochemicals and adversely affect results, which are a source of cash flow for debt service.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "XOM-000003408826000045-0012",
+       "quote": "The occurrence of economic downturns, recessions or other periods of low or negative economic growth will typically have a direct adverse impact on our results.",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    },
+    {
+     "id": "key_risks-2",
+     "kind": "qualitative",
+     "verdict": "supported",
+     "judge_reason": "The passage states business results are exposed to potential negative impacts from changes in interest rates, inflation, and currency exchange rates.",
+     "evidence_quote": "ExxonMobil's business results are also exposed to potential negative impacts due to changes in interest rates, inflation, currency exchange rates, changes in usage of the U.S. dollar in global trade, and other local or regional market conditions.",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Changes in interest rates, inflation and currency exchange rates can negatively affect business results.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "XOM-000003408826000045-0017",
+       "quote": "ExxonMobil’s business results are also exposed to potential negative impacts due to changes in interest rates, inflation, currency exchange rates",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    },
+    {
+     "id": "key_risks-3",
+     "kind": "qualitative",
+     "verdict": "supported",
+     "judge_reason": "The passage directly states that countries limit access to oil and gas resources via leasing, licensing, or permitting restrictions, and that such restrictions could adversely affect production.",
+     "evidence_quote": "A number of countries limit access to their oil and gas resources, including by restricting leasing, licensing, or permitting activities",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Restrictions on access to oil and gas resources, including limits on leasing, licensing or permitting, could constrain production and adversely affect results.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "XOM-000003408826000045-0018",
+       "quote": "A number of countries limit access to their oil and gas resources, including by restricting leasing, licensing, or permitting activities",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    },
+    {
+     "id": "key_risks-4",
+     "kind": "qualitative",
+     "verdict": "supported",
+     "judge_reason": "The passage states ExxonMobil faces competition from state-owned companies that may pursue government objectives with less focus on financial returns than privately-owned firms like ExxonMobil, directly supporting the claim about competitive pressure and returns.",
+     "evidence_quote": "In some cases, these state-owned companies may pursue opportunities in furtherance of strategic, national, or supranational objectives of their government owners, with less focus on financial returns than companies owned by private shareholders, such as ExxonMobil.",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Competition from state-owned companies that may place less focus on financial returns can pressure ExxonMobil’s competitive position and returns.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "XOM-000003408826000045-0041",
+       "quote": "these state-owned companies may pursue opportunities in furtherance of strategic, national, or supranational objectives of their government owners, with less focus on financial returns than companies owned by private shareholders",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    }
+   ],
+   "passages_shown": [
+    "XOM-000003408826000045-0012",
+    "XOM-000003408826000045-0018",
+    "XOM-000003408826000045-0017",
+    "XOM-000003408826000045-0033",
+    "XOM-000003408826000045-0016",
+    "XOM-000003408826000045-0010",
+    "XOM-000003408826000045-0041",
+    "XOM-000003408826000045-0043"
+   ],
+   "notes": []
+  },
+  {
+   "id": "rating_rationale",
+   "title": "Rating rationale",
+   "claims": [
+    {
+     "id": "rating_rationale-1",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "All claim elements match the computed scorecard metrics: SB-2 grade, 2.45 weighted score, six factors scored, and grade noted as stylized not a credit rating.",
+     "evidence_quote": "",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "The scorecard result is ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "SB-2",
+       "metric_id": "sb_grade:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " with weighted score ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "2.45",
+       "metric_id": "sb_score:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": ", all six factors were scored, and the SB grade is a stylized internal scorecard grade, not a credit rating.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "rating_rationale-2",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "The evidence shows interest coverage at 92.91x in band 1 with 25.0% weight and debt/EBITDA at 0.74x in band 1 with 20.0% weight, matching the claim exactly, and these are the strongest (band 1) factors among the six scored.",
+     "evidence_quote": "",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "The strongest scorecard factors are interest coverage at ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "92.91x",
+       "metric_id": "interest_coverage:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in band ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "1",
+       "metric_id": "band_interest_coverage:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " with weight ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "25.0%",
+       "metric_id": "weight_interest_coverage:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": ", and debt / EBITDA at ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "0.74x",
+       "metric_id": "debt_to_ebitda:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in band ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "1",
+       "metric_id": "band_debt_to_ebitda:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " with weight ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "20.0%",
+       "metric_id": "weight_debt_to_ebitda:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": ".",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "rating_rationale-3",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "Metric values confirm net leverage 0.61x in band 2 at 10% weight and FCF/debt 39.4% in band 2 at 20% weight.",
+     "evidence_quote": "",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "Net leverage scores ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "0.61x",
+       "metric_id": "net_leverage:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in band ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "2",
+       "metric_id": "band_net_leverage:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " with weight ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "10.0%",
+       "metric_id": "weight_net_leverage:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": ", and FCF / debt scores ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "39.4%",
+       "metric_id": "fcf_to_debt:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in band ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "2",
+       "metric_id": "band_fcf_to_debt:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " with weight ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "20.0%",
+       "metric_id": "weight_fcf_to_debt:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": ".",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "rating_rationale-4",
+     "kind": "quantitative",
+     "verdict": "supported",
+     "judge_reason": "Metric values match exactly: liquidity coverage 0.93x in band 6 (weakest) at 15.0% weight, and near-term maturity cover 1.10x in band 5 (next weakest) at 10.0% weight.",
+     "evidence_quote": "",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "The weakest bands are liquidity coverage at ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "0.93x",
+       "metric_id": "liquidity_coverage:LTM",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in band ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "6",
+       "metric_id": "band_liquidity_coverage:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " with weight ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "15.0%",
+       "metric_id": "weight_liquidity_coverage:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": ", and near-term maturity cover at ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "1.10x",
+       "metric_id": "near_term_maturity_cover:FY0",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " in band ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "5",
+       "metric_id": "band_near_term_maturity_cover:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": " with weight ",
+       "metric_id": null,
+       "chunk_id": null
+      },
+      {
+       "t": "metric",
+       "v": "10.0%",
+       "metric_id": "weight_near_term_maturity_cover:latest",
+       "chunk_id": null
+      },
+      {
+       "t": "text",
+       "v": ".",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [],
+     "flags": []
+    },
+    {
+     "id": "rating_rationale-5",
+     "kind": "qualitative",
+     "verdict": "supported",
+     "judge_reason": "Passage confirms both mitigants—undrawn committed credit lines and management's expectation that internally generated funds cover most financial requirements—against the weak liquidity_coverage (band 6) and near_term_maturity_cover (band 5) scorecard bands.",
+     "evidence_quote": "The Corporation had undrawn short-term committed lines of credit of $7.3 billion and undrawn long-term committed lines of credit of $0.3 billion as of the end of first quarter 2026.",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "The weak liquidity and near-term maturity bands are tempered by undrawn committed credit lines and by management's expectation that internally generated funds cover most financial requirements.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "XOM-000003408826000067-0045",
+       "quote": "undrawn short-term committed lines of credit of $7.3 billion and undrawn long-term committed lines of credit of $0.3 billion",
+       "check": "ok"
+      },
+      {
+       "chunk_id": "XOM-000003408826000067-0045",
+       "quote": "Internally generated funds are expected to cover the majority of financial requirements",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    },
+    {
+     "id": "rating_rationale-6",
+     "kind": "qualitative",
+     "verdict": "supported",
+     "judge_reason": "Evidence confirms exposure to economic conditions and seasonal fluctuations affecting prices/margins, and that compliance with government regulations may have material effects on expenditures, earnings, and competitive position.",
+     "evidence_quote": "compliance with existing and potential future government regulations, including taxes, environmental regulations, and other government regulations and policies that directly or indirectly affect the production and sale of our products, may have material effects on the capital expenditures, earnings, and competitive position of ExxonMobil",
+     "checked_by": "judge",
+     "segments": [
+      {
+       "t": "text",
+       "v": "The grade is tempered by commodity and regulatory risks, since results are exposed to economic conditions and seasonal fluctuations, and compliance with government regulations may have material effects.",
+       "metric_id": null,
+       "chunk_id": null
+      }
+     ],
+     "citations": [
+      {
+       "chunk_id": "XOM-000003408826000093-0035",
+       "quote": "economic conditions and seasonal fluctuations that impact prices, differentials, margins, and volume/mix for our products",
+       "check": "ok"
+      },
+      {
+       "chunk_id": "XOM-000003408826000045-0008",
+       "quote": "compliance with existing and potential future government regulations, including taxes, environmental regulations",
+       "check": "ok"
+      }
+     ],
+     "flags": []
+    }
+   ],
+   "passages_shown": [
+    "XOM-000003408826000045-0005",
+    "XOM-000003408826000093-0040",
+    "XOM-000003408826000045-0008",
+    "XOM-000003408826000093-0035",
+    "XOM-000003408826000067-0042",
+    "XOM-000003408826000093-0058",
+    "XOM-000003408826000067-0045",
+    "XOM-000003408826000045-0288",
+    "XOM-000003408826000045-0012",
+    "XOM-000003408826000045-0017",
+    "XOM-000003408826000045-0018",
+    "XOM-000003408826000045-0041"
+   ],
+   "notes": []
+  }
+ ],
+ "metrics": {
+  "band_debt_to_ebitda:latest": {
+   "metric_id": "band_debt_to_ebitda",
+   "period": "latest",
+   "label": "Debt / EBITDA: scorecard band (1 strongest, 6 weakest)",
+   "value": 1.0,
+   "unit": "band",
+   "status": "ok",
+   "formula": "band of debt_to_ebitda:LTM on config/grid.yaml (grid-v1)",
+   "notes": [],
+   "inputs": []
+  },
+  "band_fcf_to_debt:latest": {
+   "metric_id": "band_fcf_to_debt",
+   "period": "latest",
+   "label": "FCF / debt: scorecard band (1 strongest, 6 weakest)",
+   "value": 2.0,
+   "unit": "band",
+   "status": "ok",
+   "formula": "band of fcf_to_debt:LTM on config/grid.yaml (grid-v1)",
+   "notes": [],
+   "inputs": []
+  },
+  "band_interest_coverage:latest": {
+   "metric_id": "band_interest_coverage",
+   "period": "latest",
+   "label": "EBITDA / interest: scorecard band (1 strongest, 6 weakest)",
+   "value": 1.0,
+   "unit": "band",
+   "status": "ok",
+   "formula": "band of interest_coverage:LTM on config/grid.yaml (grid-v1)",
+   "notes": [],
+   "inputs": []
+  },
+  "band_liquidity_coverage:latest": {
+   "metric_id": "band_liquidity_coverage",
+   "period": "latest",
+   "label": "Liquidity sources / uses: scorecard band (1 strongest, 6 weakest)",
+   "value": 6.0,
+   "unit": "band",
+   "status": "ok",
+   "formula": "band of liquidity_coverage:LTM on config/grid.yaml (grid-v1)",
+   "notes": [],
+   "inputs": []
+  },
+  "band_near_term_maturity_cover:latest": {
+   "metric_id": "band_near_term_maturity_cover",
+   "period": "latest",
+   "label": "Debt due in 24 months / (cash + undrawn revolver): scorecard band (1 strongest, 6 weakest)",
+   "value": 5.0,
+   "unit": "band",
+   "status": "ok",
+   "formula": "band of near_term_maturity_cover:FY0 on config/grid.yaml (grid-v1)",
+   "notes": [],
+   "inputs": []
+  },
+  "band_net_leverage:latest": {
+   "metric_id": "band_net_leverage",
+   "period": "latest",
+   "label": "Net debt / EBITDA: scorecard band (1 strongest, 6 weakest)",
+   "value": 2.0,
+   "unit": "band",
+   "status": "ok",
+   "formula": "band of net_leverage:LTM on config/grid.yaml (grid-v1)",
+   "notes": [],
+   "inputs": []
+  },
+  "capex:LTM": {
+   "metric_id": "capex",
+   "period": "LTM",
+   "label": "Capital expenditure",
+   "value": 28930000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: PaymentsToAcquirePropertyPlantAndEquipment",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 28358000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 6470000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 5898000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    }
+   ]
+  },
+  "cash:FY0": {
+   "metric_id": "cash",
+   "period": "FY0",
+   "label": "Cash and cash equivalents",
+   "value": 10681000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: CashAndCashEquivalentsAtCarryingValue",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Cash and cash equivalents",
+     "concept": "cash",
+     "tag": "CashAndCashEquivalentsAtCarryingValue",
+     "fallback_rank": 1,
+     "value": 10681000000.0,
+     "unit": "USD",
+     "period": "at 2025-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    }
+   ]
+  },
+  "cash:LTM": {
+   "metric_id": "cash",
+   "period": "LTM",
+   "label": "Cash and cash equivalents",
+   "value": 8435000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: CashAndCashEquivalentsAtCarryingValue",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Cash and cash equivalents",
+     "concept": "cash",
+     "tag": "CashAndCashEquivalentsAtCarryingValue",
+     "fallback_rank": 1,
+     "value": 8435000000.0,
+     "unit": "USD",
+     "period": "at 2026-03-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    }
+   ]
+  },
+  "cfo:LTM": {
+   "metric_id": "cfo",
+   "period": "LTM",
+   "label": "Cash from operations",
+   "value": 47722000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: NetCashProvidedByUsedInOperatingActivities",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 51970000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 8705000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 12953000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    }
+   ]
+  },
+  "debt_due_24m:FY0": {
+   "metric_id": "debt_due_24m",
+   "period": "FY0",
+   "label": "Debt due within 24 months",
+   "value": 11796000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "short_term_debt + maturity_year_2",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "DebtCurrent",
+     "fallback_rank": 1,
+     "value": 9296000000.0,
+     "unit": "USD",
+     "period": "at 2025-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Debt maturing in year two",
+     "concept": "maturity_year_2",
+     "tag": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo",
+     "fallback_rank": 1,
+     "value": 2500000000.0,
+     "unit": "USD",
+     "period": "at 2025-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    }
+   ]
+  },
+  "debt_to_ebitda:FY-2": {
+   "metric_id": "debt_to_ebitda",
+   "period": "FY-2",
+   "label": "Debt / EBITDA",
+   "value": 0.5597323388041415,
+   "unit": "x",
+   "status": "ok",
+   "formula": "total_debt / EBITDA",
+   "notes": [
+    "operating_income: derived: pre-tax income from continuing operations plus interest expense"
+   ],
+   "inputs": [
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtAndCapitalLeaseObligations",
+     "fallback_rank": 2,
+     "value": 37483000000.0,
+     "unit": "USD",
+     "period": "at 2023-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-25-000010",
+     "filed": "2025-02-19",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408825000010/0000034088-25-000010-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "DebtCurrent",
+     "fallback_rank": 1,
+     "value": 4090000000.0,
+     "unit": "USD",
+     "period": "at 2023-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-25-000010",
+     "filed": "2025-02-19",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408825000010/0000034088-25-000010-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+     "fallback_rank": 2,
+     "value": 52783000000.0,
+     "unit": "USD",
+     "period": "2023-01-01 to 2023-12-31",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 849000000.0,
+     "unit": "USD",
+     "period": "2023-01-01 to 2023-12-31",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationDepletionAndAmortization",
+     "fallback_rank": 1,
+     "value": 20641000000.0,
+     "unit": "USD",
+     "period": "2023-01-01 to 2023-12-31",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    }
+   ]
+  },
+  "debt_to_ebitda:LTM": {
+   "metric_id": "debt_to_ebitda",
+   "period": "LTM",
+   "label": "Debt / EBITDA",
+   "value": 0.7401925764870322,
+   "unit": "x",
+   "status": "ok",
+   "formula": "total_debt / EBITDA",
+   "notes": [
+    "operating_income: derived: pre-tax income from continuing operations plus interest expense"
+   ],
+   "inputs": [
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtAndCapitalLeaseObligations",
+     "fallback_rank": 2,
+     "value": 33130000000.0,
+     "unit": "USD",
+     "period": "at 2026-03-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "DebtCurrent",
+     "fallback_rank": 1,
+     "value": 14531000000.0,
+     "unit": "USD",
+     "period": "at 2026-03-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+     "fallback_rank": 2,
+     "value": 41268000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+     "fallback_rank": 2,
+     "value": 6967000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+     "fallback_rank": 2,
+     "value": 11600000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 603000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 295000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 205000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationDepletionAndAmortization",
+     "fallback_rank": 1,
+     "value": 25993000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationDepletionAndAmortization",
+     "fallback_rank": 1,
+     "value": 6771000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationDepletionAndAmortization",
+     "fallback_rank": 1,
+     "value": 5702000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    }
+   ]
+  },
+  "dividends:LTM": {
+   "metric_id": "dividends",
+   "period": "LTM",
+   "label": "Dividends paid",
+   "value": 17230000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: PaymentsOfDividendsCommonStock",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Dividends paid",
+     "concept": "dividends",
+     "tag": "PaymentsOfDividendsCommonStock",
+     "fallback_rank": 2,
+     "value": 17231000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Dividends paid",
+     "concept": "dividends",
+     "tag": "PaymentsOfDividendsCommonStock",
+     "fallback_rank": 2,
+     "value": 4334000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Dividends paid",
+     "concept": "dividends",
+     "tag": "PaymentsOfDividendsCommonStock",
+     "fallback_rank": 2,
+     "value": 4335000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    }
+   ]
+  },
+  "ebitda:FY0": {
+   "metric_id": "ebitda",
+   "period": "FY0",
+   "label": "EBITDA",
+   "value": 67864000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "operating_income + d_and_a",
+   "notes": [
+    "operating_income: derived: pre-tax income from continuing operations plus interest expense"
+   ],
+   "inputs": [
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+     "fallback_rank": 2,
+     "value": 41268000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 603000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationDepletionAndAmortization",
+     "fallback_rank": 1,
+     "value": 25993000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    }
+   ]
+  },
+  "ebitda:LTM": {
+   "metric_id": "ebitda",
+   "period": "LTM",
+   "label": "EBITDA",
+   "value": 64390000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "operating_income + d_and_a",
+   "notes": [
+    "operating_income: derived: pre-tax income from continuing operations plus interest expense"
+   ],
+   "inputs": [
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+     "fallback_rank": 2,
+     "value": 41268000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+     "fallback_rank": 2,
+     "value": 6967000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+     "fallback_rank": 2,
+     "value": 11600000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 603000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 295000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 205000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationDepletionAndAmortization",
+     "fallback_rank": 1,
+     "value": 25993000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationDepletionAndAmortization",
+     "fallback_rank": 1,
+     "value": 6771000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationDepletionAndAmortization",
+     "fallback_rank": 1,
+     "value": 5702000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    }
+   ]
+  },
+  "fcf_to_debt:FY-2": {
+   "metric_id": "fcf_to_debt",
+   "period": "FY-2",
+   "label": "FCF / debt",
+   "value": 80.46087604935896,
+   "unit": "%",
+   "status": "ok",
+   "formula": "(cfo - capex) / total_debt",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 55369000000.0,
+     "unit": "USD",
+     "period": "2023-01-01 to 2023-12-31",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 21919000000.0,
+     "unit": "USD",
+     "period": "2023-01-01 to 2023-12-31",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtAndCapitalLeaseObligations",
+     "fallback_rank": 2,
+     "value": 37483000000.0,
+     "unit": "USD",
+     "period": "at 2023-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-25-000010",
+     "filed": "2025-02-19",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408825000010/0000034088-25-000010-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "DebtCurrent",
+     "fallback_rank": 1,
+     "value": 4090000000.0,
+     "unit": "USD",
+     "period": "at 2023-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-25-000010",
+     "filed": "2025-02-19",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408825000010/0000034088-25-000010-index.htm"
+    }
+   ]
+  },
+  "fcf_to_debt:LTM": {
+   "metric_id": "fcf_to_debt",
+   "period": "LTM",
+   "label": "FCF / debt",
+   "value": 39.42846352363568,
+   "unit": "%",
+   "status": "ok",
+   "formula": "(cfo - capex) / total_debt",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 51970000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 8705000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 12953000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 28358000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 6470000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 5898000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtAndCapitalLeaseObligations",
+     "fallback_rank": 2,
+     "value": 33130000000.0,
+     "unit": "USD",
+     "period": "at 2026-03-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "DebtCurrent",
+     "fallback_rank": 1,
+     "value": 14531000000.0,
+     "unit": "USD",
+     "period": "at 2026-03-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    }
+   ]
+  },
+  "interest_coverage:FY-2": {
+   "metric_id": "interest_coverage",
+   "period": "FY-2",
+   "label": "EBITDA / interest",
+   "value": 87.4829210836278,
+   "unit": "x",
+   "status": "ok",
+   "formula": "EBITDA / interest_expense",
+   "notes": [
+    "operating_income: derived: pre-tax income from continuing operations plus interest expense"
+   ],
+   "inputs": [
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+     "fallback_rank": 2,
+     "value": 52783000000.0,
+     "unit": "USD",
+     "period": "2023-01-01 to 2023-12-31",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 849000000.0,
+     "unit": "USD",
+     "period": "2023-01-01 to 2023-12-31",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationDepletionAndAmortization",
+     "fallback_rank": 1,
+     "value": 20641000000.0,
+     "unit": "USD",
+     "period": "2023-01-01 to 2023-12-31",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 849000000.0,
+     "unit": "USD",
+     "period": "2023-01-01 to 2023-12-31",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    }
+   ]
+  },
+  "interest_coverage:LTM": {
+   "metric_id": "interest_coverage",
+   "period": "LTM",
+   "label": "EBITDA / interest",
+   "value": 92.91486291486291,
+   "unit": "x",
+   "status": "ok",
+   "formula": "EBITDA / interest_expense",
+   "notes": [
+    "operating_income: derived: pre-tax income from continuing operations plus interest expense"
+   ],
+   "inputs": [
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+     "fallback_rank": 2,
+     "value": 41268000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+     "fallback_rank": 2,
+     "value": 6967000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+     "fallback_rank": 2,
+     "value": 11600000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 603000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 295000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 205000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationDepletionAndAmortization",
+     "fallback_rank": 1,
+     "value": 25993000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationDepletionAndAmortization",
+     "fallback_rank": 1,
+     "value": 6771000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationDepletionAndAmortization",
+     "fallback_rank": 1,
+     "value": 5702000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 603000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 295000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 205000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    }
+   ]
+  },
+  "interest_expense:LTM": {
+   "metric_id": "interest_expense",
+   "period": "LTM",
+   "label": "Interest expense",
+   "value": 693000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: InterestExpense",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 603000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 295000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 205000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    }
+   ]
+  },
+  "liquidity_coverage:FY0": {
+   "metric_id": "liquidity_coverage",
+   "period": "FY0",
+   "label": "Liquidity coverage",
+   "value": 1.1414958549694816,
+   "unit": "x",
+   "status": "ok",
+   "formula": "(cash + short_term_investments + undrawn_revolver + max(cfo, 0)) / (short_term_debt + capex + dividends)",
+   "notes": [
+    "short_term_investments: assumed zero: not reported",
+    "undrawn_revolver: assumed zero: not reported"
+   ],
+   "inputs": [
+    {
+     "label": "Cash and cash equivalents",
+     "concept": "cash",
+     "tag": "CashAndCashEquivalentsAtCarryingValue",
+     "fallback_rank": 1,
+     "value": 10681000000.0,
+     "unit": "USD",
+     "period": "at 2025-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 51970000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "DebtCurrent",
+     "fallback_rank": 1,
+     "value": 9296000000.0,
+     "unit": "USD",
+     "period": "at 2025-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 28358000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Dividends paid",
+     "concept": "dividends",
+     "tag": "PaymentsOfDividendsCommonStock",
+     "fallback_rank": 2,
+     "value": 17231000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    }
+   ]
+  },
+  "liquidity_coverage:LTM": {
+   "metric_id": "liquidity_coverage",
+   "period": "LTM",
+   "label": "Liquidity coverage",
+   "value": 0.9252937008782192,
+   "unit": "x",
+   "status": "ok",
+   "formula": "(cash + short_term_investments + undrawn_revolver + max(cfo, 0)) / (short_term_debt + capex + dividends)",
+   "notes": [
+    "short_term_investments: assumed zero: not reported",
+    "undrawn_revolver: assumed zero: not reported"
+   ],
+   "inputs": [
+    {
+     "label": "Cash and cash equivalents",
+     "concept": "cash",
+     "tag": "CashAndCashEquivalentsAtCarryingValue",
+     "fallback_rank": 1,
+     "value": 8435000000.0,
+     "unit": "USD",
+     "period": "at 2026-03-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 51970000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 8705000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 12953000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "DebtCurrent",
+     "fallback_rank": 1,
+     "value": 14531000000.0,
+     "unit": "USD",
+     "period": "at 2026-03-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 28358000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 6470000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 5898000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Dividends paid",
+     "concept": "dividends",
+     "tag": "PaymentsOfDividendsCommonStock",
+     "fallback_rank": 2,
+     "value": 17231000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Dividends paid",
+     "concept": "dividends",
+     "tag": "PaymentsOfDividendsCommonStock",
+     "fallback_rank": 2,
+     "value": 4334000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Dividends paid",
+     "concept": "dividends",
+     "tag": "PaymentsOfDividendsCommonStock",
+     "fallback_rank": 2,
+     "value": 4335000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    }
+   ]
+  },
+  "maturity_after_year_5:FY0": {
+   "metric_id": "maturity_after_year_5",
+   "period": "FY0",
+   "label": "Debt maturing after year five",
+   "value": null,
+   "unit": "USD",
+   "status": "not_available",
+   "formula": "",
+   "notes": [
+    "not available: rank 1 LongTermDebtMaturitiesRepaymentsOfPrincipalAfterYearFive: LongTermDebtMaturitiesRepaymentsOfPrincipalAfterYearFive not reported at 2025-12-31"
+   ],
+   "inputs": []
+  },
+  "maturity_year_1:FY0": {
+   "metric_id": "maturity_year_1",
+   "period": "FY0",
+   "label": "Debt maturing in the next twelve months",
+   "value": 6200000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: LongTermDebtCurrent",
+   "notes": [
+    "balance-sheet current portion of long-term debt (the maturity table's year-1 figure is not tagged)"
+   ],
+   "inputs": [
+    {
+     "label": "Debt maturing in the next twelve months",
+     "concept": "maturity_year_1",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 6200000000.0,
+     "unit": "USD",
+     "period": "at 2025-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    }
+   ]
+  },
+  "maturity_year_2:FY0": {
+   "metric_id": "maturity_year_2",
+   "period": "FY0",
+   "label": "Debt maturing in year two",
+   "value": 2500000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Debt maturing in year two",
+     "concept": "maturity_year_2",
+     "tag": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo",
+     "fallback_rank": 1,
+     "value": 2500000000.0,
+     "unit": "USD",
+     "period": "at 2025-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    }
+   ]
+  },
+  "maturity_year_3:FY0": {
+   "metric_id": "maturity_year_3",
+   "period": "FY0",
+   "label": "Debt maturing in year three",
+   "value": 1700000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: LongTermDebtMaturitiesRepaymentsOfPrincipalInYearThree",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Debt maturing in year three",
+     "concept": "maturity_year_3",
+     "tag": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearThree",
+     "fallback_rank": 1,
+     "value": 1700000000.0,
+     "unit": "USD",
+     "period": "at 2025-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    }
+   ]
+  },
+  "maturity_year_4:FY0": {
+   "metric_id": "maturity_year_4",
+   "period": "FY0",
+   "label": "Debt maturing in year four",
+   "value": 1700000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFour",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Debt maturing in year four",
+     "concept": "maturity_year_4",
+     "tag": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFour",
+     "fallback_rank": 1,
+     "value": 1700000000.0,
+     "unit": "USD",
+     "period": "at 2025-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    }
+   ]
+  },
+  "maturity_year_5:FY0": {
+   "metric_id": "maturity_year_5",
+   "period": "FY0",
+   "label": "Debt maturing in year five",
+   "value": 5300000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFive",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Debt maturing in year five",
+     "concept": "maturity_year_5",
+     "tag": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFive",
+     "fallback_rank": 1,
+     "value": 5300000000.0,
+     "unit": "USD",
+     "period": "at 2025-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    }
+   ]
+  },
+  "near_term_maturity_cover:FY0": {
+   "metric_id": "near_term_maturity_cover",
+   "period": "FY0",
+   "label": "Near-term maturity cover",
+   "value": 1.1043909746278437,
+   "unit": "x",
+   "status": "ok",
+   "formula": "(short_term_debt + maturity_year_2) / (cash + short_term_investments + undrawn_revolver)",
+   "notes": [
+    "short_term_investments: assumed zero: not reported",
+    "undrawn_revolver: assumed zero: not reported"
+   ],
+   "inputs": [
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "DebtCurrent",
+     "fallback_rank": 1,
+     "value": 9296000000.0,
+     "unit": "USD",
+     "period": "at 2025-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Debt maturing in year two",
+     "concept": "maturity_year_2",
+     "tag": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo",
+     "fallback_rank": 1,
+     "value": 2500000000.0,
+     "unit": "USD",
+     "period": "at 2025-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Cash and cash equivalents",
+     "concept": "cash",
+     "tag": "CashAndCashEquivalentsAtCarryingValue",
+     "fallback_rank": 1,
+     "value": 10681000000.0,
+     "unit": "USD",
+     "period": "at 2025-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    }
+   ]
+  },
+  "net_leverage:FY-2": {
+   "metric_id": "net_leverage",
+   "period": "FY-2",
+   "label": "Net leverage",
+   "value": 0.13509619915716345,
+   "unit": "x",
+   "status": "ok",
+   "formula": "(total_debt - cash - short_term_investments) / EBITDA",
+   "notes": [
+    "short_term_investments: assumed zero: not reported",
+    "operating_income: derived: pre-tax income from continuing operations plus interest expense"
+   ],
+   "inputs": [
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtAndCapitalLeaseObligations",
+     "fallback_rank": 2,
+     "value": 37483000000.0,
+     "unit": "USD",
+     "period": "at 2023-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-25-000010",
+     "filed": "2025-02-19",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408825000010/0000034088-25-000010-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "DebtCurrent",
+     "fallback_rank": 1,
+     "value": 4090000000.0,
+     "unit": "USD",
+     "period": "at 2023-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-25-000010",
+     "filed": "2025-02-19",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408825000010/0000034088-25-000010-index.htm"
+    },
+    {
+     "label": "Cash and cash equivalents",
+     "concept": "cash",
+     "tag": "CashAndCashEquivalentsAtCarryingValue",
+     "fallback_rank": 1,
+     "value": 31539000000.0,
+     "unit": "USD",
+     "period": "at 2023-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-25-000010",
+     "filed": "2025-02-19",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408825000010/0000034088-25-000010-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+     "fallback_rank": 2,
+     "value": 52783000000.0,
+     "unit": "USD",
+     "period": "2023-01-01 to 2023-12-31",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 849000000.0,
+     "unit": "USD",
+     "period": "2023-01-01 to 2023-12-31",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationDepletionAndAmortization",
+     "fallback_rank": 1,
+     "value": 20641000000.0,
+     "unit": "USD",
+     "period": "2023-01-01 to 2023-12-31",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    }
+   ]
+  },
+  "net_leverage:LTM": {
+   "metric_id": "net_leverage",
+   "period": "LTM",
+   "label": "Net leverage",
+   "value": 0.6091939742195993,
+   "unit": "x",
+   "status": "ok",
+   "formula": "(total_debt - cash - short_term_investments) / EBITDA",
+   "notes": [
+    "short_term_investments: assumed zero: not reported",
+    "operating_income: derived: pre-tax income from continuing operations plus interest expense"
+   ],
+   "inputs": [
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtAndCapitalLeaseObligations",
+     "fallback_rank": 2,
+     "value": 33130000000.0,
+     "unit": "USD",
+     "period": "at 2026-03-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "DebtCurrent",
+     "fallback_rank": 1,
+     "value": 14531000000.0,
+     "unit": "USD",
+     "period": "at 2026-03-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Cash and cash equivalents",
+     "concept": "cash",
+     "tag": "CashAndCashEquivalentsAtCarryingValue",
+     "fallback_rank": 1,
+     "value": 8435000000.0,
+     "unit": "USD",
+     "period": "at 2026-03-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+     "fallback_rank": 2,
+     "value": 41268000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+     "fallback_rank": 2,
+     "value": 6967000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+     "fallback_rank": 2,
+     "value": 11600000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 603000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 295000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 205000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationDepletionAndAmortization",
+     "fallback_rank": 1,
+     "value": 25993000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationDepletionAndAmortization",
+     "fallback_rank": 1,
+     "value": 6771000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationDepletionAndAmortization",
+     "fallback_rank": 1,
+     "value": 5702000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    }
+   ]
+  },
+  "revenue:FY0": {
+   "metric_id": "revenue",
+   "period": "FY0",
+   "label": "Revenue",
+   "value": 332238000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: Revenues",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Revenue",
+     "concept": "revenue",
+     "tag": "Revenues",
+     "fallback_rank": 1,
+     "value": 332238000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    }
+   ]
+  },
+  "revenue:LTM": {
+   "metric_id": "revenue",
+   "period": "LTM",
+   "label": "Revenue",
+   "value": 334246000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: Revenues",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Revenue",
+     "concept": "revenue",
+     "tag": "Revenues",
+     "fallback_rank": 1,
+     "value": 332238000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-12-31",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Revenue",
+     "concept": "revenue",
+     "tag": "Revenues",
+     "fallback_rank": 1,
+     "value": 85138000000.0,
+     "unit": "USD",
+     "period": "2026-01-01 to 2026-03-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Revenue",
+     "concept": "revenue",
+     "tag": "Revenues",
+     "fallback_rank": 1,
+     "value": 83130000000.0,
+     "unit": "USD",
+     "period": "2025-01-01 to 2025-03-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    }
+   ]
+  },
+  "sb_grade:latest": {
+   "metric_id": "sb_grade",
+   "period": "latest",
+   "label": "SB grade (a stylized scorecard grade, not a credit rating)",
+   "value": 2.45,
+   "unit": "grade",
+   "status": "ok",
+   "formula": "weighted score mapped to SB-1 ... SB-6 (config/grid.yaml)",
+   "notes": [
+    "SB-2"
+   ],
+   "inputs": []
+  },
+  "sb_score:latest": {
+   "metric_id": "sb_score",
+   "period": "latest",
+   "label": "SB weighted score (1 strongest, 6 weakest)",
+   "value": 2.45,
+   "unit": "score",
+   "status": "ok",
+   "formula": "sum of weight x band over the factors scored, divided by their weights",
+   "notes": [],
+   "inputs": []
+  },
+  "share_due_24m:FY0": {
+   "metric_id": "share_due_24m",
+   "period": "FY0",
+   "label": "Share of debt due within 24 months",
+   "value": 27.09419574155316,
+   "unit": "%",
+   "status": "ok",
+   "formula": "(short_term_debt + maturity_year_2) / total_debt",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "DebtCurrent",
+     "fallback_rank": 1,
+     "value": 9296000000.0,
+     "unit": "USD",
+     "period": "at 2025-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Debt maturing in year two",
+     "concept": "maturity_year_2",
+     "tag": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo",
+     "fallback_rank": 1,
+     "value": 2500000000.0,
+     "unit": "USD",
+     "period": "at 2025-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000034088-26-000045",
+     "filed": "2026-02-18",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm"
+    },
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtAndCapitalLeaseObligations",
+     "fallback_rank": 2,
+     "value": 34241000000.0,
+     "unit": "USD",
+     "period": "at 2025-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "DebtCurrent",
+     "fallback_rank": 1,
+     "value": 9296000000.0,
+     "unit": "USD",
+     "period": "at 2025-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    }
+   ]
+  },
+  "short_term_debt:FY0": {
+   "metric_id": "short_term_debt",
+   "period": "FY0",
+   "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+   "value": 9296000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: DebtCurrent",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "DebtCurrent",
+     "fallback_rank": 1,
+     "value": 9296000000.0,
+     "unit": "USD",
+     "period": "at 2025-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    }
+   ]
+  },
+  "short_term_debt:LTM": {
+   "metric_id": "short_term_debt",
+   "period": "LTM",
+   "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+   "value": 14531000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: DebtCurrent",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "DebtCurrent",
+     "fallback_rank": 1,
+     "value": 14531000000.0,
+     "unit": "USD",
+     "period": "at 2026-03-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    }
+   ]
+  },
+  "total_debt:FY0": {
+   "metric_id": "total_debt",
+   "period": "FY0",
+   "label": "Total debt (borrowings plus finance-lease liabilities)",
+   "value": 43537000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: LongTermDebtAndCapitalLeaseObligations + [short_term_debt]",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtAndCapitalLeaseObligations",
+     "fallback_rank": 2,
+     "value": 34241000000.0,
+     "unit": "USD",
+     "period": "at 2025-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "DebtCurrent",
+     "fallback_rank": 1,
+     "value": 9296000000.0,
+     "unit": "USD",
+     "period": "at 2025-12-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    }
+   ]
+  },
+  "total_debt:LTM": {
+   "metric_id": "total_debt",
+   "period": "LTM",
+   "label": "Total debt (borrowings plus finance-lease liabilities)",
+   "value": 47661000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: LongTermDebtAndCapitalLeaseObligations + [short_term_debt]",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtAndCapitalLeaseObligations",
+     "fallback_rank": 2,
+     "value": 33130000000.0,
+     "unit": "USD",
+     "period": "at 2026-03-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "DebtCurrent",
+     "fallback_rank": 1,
+     "value": 14531000000.0,
+     "unit": "USD",
+     "period": "at 2026-03-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000034088-26-000067",
+     "filed": "2026-05-04",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/0000034088-26-000067-index.htm"
+    }
+   ]
+  },
+  "weight_debt_to_ebitda:latest": {
+   "metric_id": "weight_debt_to_ebitda",
+   "period": "latest",
+   "label": "Debt / EBITDA: scorecard weight",
+   "value": 20.0,
+   "unit": "%",
+   "status": "ok",
+   "formula": "config/grid.yaml (grid-v1)",
+   "notes": [],
+   "inputs": []
+  },
+  "weight_fcf_to_debt:latest": {
+   "metric_id": "weight_fcf_to_debt",
+   "period": "latest",
+   "label": "FCF / debt: scorecard weight",
+   "value": 20.0,
+   "unit": "%",
+   "status": "ok",
+   "formula": "config/grid.yaml (grid-v1)",
+   "notes": [],
+   "inputs": []
+  },
+  "weight_interest_coverage:latest": {
+   "metric_id": "weight_interest_coverage",
+   "period": "latest",
+   "label": "EBITDA / interest: scorecard weight",
+   "value": 25.0,
+   "unit": "%",
+   "status": "ok",
+   "formula": "config/grid.yaml (grid-v1)",
+   "notes": [],
+   "inputs": []
+  },
+  "weight_liquidity_coverage:latest": {
+   "metric_id": "weight_liquidity_coverage",
+   "period": "latest",
+   "label": "Liquidity sources / uses: scorecard weight",
+   "value": 15.0,
+   "unit": "%",
+   "status": "ok",
+   "formula": "config/grid.yaml (grid-v1)",
+   "notes": [],
+   "inputs": []
+  },
+  "weight_near_term_maturity_cover:latest": {
+   "metric_id": "weight_near_term_maturity_cover",
+   "period": "latest",
+   "label": "Debt due in 24 months / (cash + undrawn revolver): scorecard weight",
+   "value": 10.0,
+   "unit": "%",
+   "status": "ok",
+   "formula": "config/grid.yaml (grid-v1)",
+   "notes": [],
+   "inputs": []
+  },
+  "weight_net_leverage:latest": {
+   "metric_id": "weight_net_leverage",
+   "period": "latest",
+   "label": "Net debt / EBITDA: scorecard weight",
+   "value": 10.0,
+   "unit": "%",
+   "status": "ok",
+   "formula": "config/grid.yaml (grid-v1)",
+   "notes": [],
+   "inputs": []
+  }
+ },
+ "passages": {
+  "XOM-000003408826000045-0005": {
+   "text": "The energy and petrochemical industries are highly competitive, both within the industries and also with other industries in supplying the energy, fuel, and chemical needs of industrial and individual consumers. Certain industry participants, including ExxonMobil, are expanding the scope of investments in lower-emission energy and emission-reduction services and technologies. The Corporation competes with other firms in the sale or purchase of needed goods and services in many national and international markets and employs all methods of competition which are lawful and appropriate for such purposes.\nOperating data and industry segment information for the Corporation are contained in the Financial Section of this report under the following: “Management's Discussion and Analysis of Financial Condition and Results of Operations: Business Results” and Note 3. Information on oil and gas reserves is contained in the “Oil and Gas Reserves” part of the “Supplemental Information on Oil and Gas Exploration and Production Activities” portion of the Financial Section of this report.",
+   "section": "business",
+   "form": "10-K",
+   "filed": "2026-02-18",
+   "period_end": "2025-12-31",
+   "accession": "0000034088-26-000045",
+   "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm",
+   "start": 6991,
+   "end": 8079
+  },
+  "XOM-000003408826000045-0008": {
+   "text": "As discussed in Item 1A in this report, compliance with existing and potential future government regulations, including taxes, environmental regulations, and other government regulations and policies that directly or indirectly affect the production and sale of our products, may have material effects on the capital expenditures, earnings, and competitive position of ExxonMobil. For additional information on the Corporation's worldwide environmental expenditures, see \"Management's Discussion and Analysis of Financial Condition and Results of Operations: Environmental Matters\" in the Financial Section of this report.\nInformation concerning the source and availability of raw materials used in the Corporation’s business, the extent of seasonality in the business, the possibility of renegotiation of profits or termination of contracts at the election of governments, and risks attendant to foreign operations may be found in Item 1A and Item 2 in this report.\n1\nTable of Contents\nFinancial Table of Contents",
+   "section": "business",
+   "form": "10-K",
+   "filed": "2026-02-18",
+   "period_end": "2025-12-31",
+   "accession": "0000034088-26-000045",
+   "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm",
+   "start": 10442,
+   "end": 11456
+  },
+  "XOM-000003408826000045-0012": {
+   "text": "Economic conditions. The demand for energy and petrochemicals is generally linked closely with broad-based economic activities and levels of prosperity. The occurrence of economic downturns, recessions or other periods of low or negative economic growth will typically have a direct adverse impact on our results. Other factors that affect general economic conditions in the world or in a major region, such as changes in population growth rates or living standards, periods of civil unrest or armed hostilities, escalating geopolitical volatility, government regulation or austerity programs, national or regional trade tariffs, trade sanctions or trade controls, international monetary and currency exchange rate fluctuations, decoupling of economies, disruption, realignment, or breaking of current or historical trade or military alliances or global trade or supply chain networks, changes in international trade patterns or shipping routes, or a broader breakdown in global trade, security or public health, can also impact the supply and demand for energy and petrochemicals.",
+   "section": "risk_factors",
+   "form": "10-K",
+   "filed": "2026-02-18",
+   "period_end": "2025-12-31",
+   "accession": "0000034088-26-000045",
+   "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm",
+   "start": 14337,
+   "end": 15418
+  },
+  "XOM-000003408826000045-0017": {
+   "text": "Other market factors. ExxonMobil’s business results are also exposed to potential negative impacts due to changes in interest rates, inflation, currency exchange rates, changes in usage of the U.S. dollar in global trade, and other local or regional market conditions. In addition to direct potential impacts on our costs and revenues, market factors such as rates of inflation may indirectly impact our results to the extent such factors reduce general rates of economic growth and therefore energy demand, as discussed under “Economic conditions.” Market factors may also result in losses from commodity derivatives and other instruments we use to hedge price exposures or for commodity and treasury trading activities. Additional information regarding the potential future impact of market factors on our businesses is included or incorporated by reference under Item 7A in this report.\nGovernment and Political Factors\nExxonMobil’s results can be adversely affected by political or regulatory developments affecting our businesses or operations.",
+   "section": "risk_factors",
+   "form": "10-K",
+   "filed": "2026-02-18",
+   "period_end": "2025-12-31",
+   "accession": "0000034088-26-000045",
+   "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm",
+   "start": 19825,
+   "end": 20874
+  },
+  "XOM-000003408826000045-0018": {
+   "text": "Access limitations. A number of countries limit access to their oil and gas resources, including by restricting leasing, licensing, or permitting activities directly or indirectly through the influence on these processes by well-funded local or international groups opposing the development of these resources. They also may place resources off-limits from development altogether. Restrictions on production of oil and gas could increase to the extent governments view such measures as a viable approach for pursuing national and global energy, security, and climate policies. Restrictions on foreign investment in the oil and gas sector tend to increase in times of high commodity prices or when national governments may have less need for outside sources of private capital. Many countries also restrict the import or export of certain products based on point of origin, and such restrictions may increase during periods of escalating geopolitical or trade tensions.",
+   "section": "risk_factors",
+   "form": "10-K",
+   "filed": "2026-02-18",
+   "period_end": "2025-12-31",
+   "accession": "0000034088-26-000045",
+   "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm",
+   "start": 20875,
+   "end": 21843
+  },
+  "XOM-000003408826000045-0041": {
+   "text": "Competition. As noted in Item 1 above, the energy and petrochemical industries are highly competitive. We face competition not only from other private firms, but also from state-owned companies that are increasingly competing for opportunities outside of their home countries and as partners with other private firms. In some cases, these state-owned companies may pursue opportunities in furtherance of strategic, national, or supranational objectives of their government owners, with less focus on financial returns than companies owned by private shareholders, such as ExxonMobil. Technology and expertise provided by industry service companies or AI may also enhance the competitiveness of firms that may not have the internal resources and capabilities of ExxonMobil or reduce the need for resource-owning countries to partner with private-sector oil and gas companies in order to monetize national resources. As described in more detail above, our hydrocarbon-based energy products are also subject to growing and, in many cases, government-supported competition from alternative energy sources. In addition, as we enter new markets in pursuit of lower-emission and other new business opportunities, we will need to compete effectively with established competitors in these markets, as well as with new market entrants seeking to capitalize on these opportunities, while successfully navigating changing market conditions or technologies.",
+   "section": "risk_factors",
+   "form": "10-K",
+   "filed": "2026-02-18",
+   "period_end": "2025-12-31",
+   "accession": "0000034088-26-000045",
+   "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm",
+   "start": 45108,
+   "end": 46552
+  },
+  "XOM-000003408826000045-0288": {
+   "text": "Note 12. Long-Term Debt\nAt December 31, 2025, long-term debt consisted of $26.4 billion due in U.S. dollars and $7.8 billion representing the U.S. dollar equivalent at year-end exchange rates of amounts payable in foreign currencies. These amounts exclude that portion of long-term debt, totaling $6.2 billion, which matures within one year and is included in current liabilities.\nThe amounts of long-term debt, excluding finance lease obligations, maturing in each of the four years after December 31, 2026, are: 2027 – $2.5 billion; 2028 – $1.7 billion; 2029 – $1.7 billion; and 2030 – $5.3 billion. At December 31, 2025, the Corporation's unused long-term lines of credit were $1.0 billion.\nThe Corporation may use non-derivative financial instruments, such as its foreign currency-denominated debt, as hedges of its net investments in certain foreign subsidiaries. Under this method, the change in the carrying value of the financial instruments due to foreign exchange fluctuations is reported in accumulated other comprehensive income. As of December 31, 2025, the Corporation has designated its $3.5 billion of Euro-denominated debt and related accrued interest as a net investment hedge of its European business. The net investment hedge is deemed to be perfectly effective.\n100\nTable of Contents\nFinancial Table of Contents\nNOTES TO CONSOLIDATED FINANCIAL STATEMENTS\nSummarized long-term debt at year-end 2025 and 2024 are shown in the table below:",
+   "section": "debt_note",
+   "form": "10-K",
+   "filed": "2026-02-18",
+   "period_end": "2025-12-31",
+   "accession": "0000034088-26-000045",
+   "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm",
+   "start": 339540,
+   "end": 340997
+  },
+  "XOM-000003408826000067-0042": {
+   "text": "Corporate and Financing Financial Results\nThree Months Ended\nMarch 31,\n(millions of dollars)\n2026\n2025\nEarnings (loss) (U.S. GAAP)\n(1,053)\n(798)\nCorporate and Financing expenses were $1,053 million for the first quarter of 2026, $255 million higher than the first quarter of\n2025, due to lower interest income and the absence of favorable tax items.\n(1) Net debt is total debt of $47.7 billion less $8.4 billion of cash and cash equivalents excluding restricted cash . Net debt to capital ratio is net debt divided by\nnet debt plus total equity of $261.0 billion. Total debt is the sum of notes and loans payable and long-term debt, as reported in the Consolidated Balance Sheet.\n26\nTable of Contents",
+   "section": "mdna",
+   "form": "10-Q",
+   "filed": "2026-05-04",
+   "period_end": "2026-03-31",
+   "accession": "0000034088-26-000067",
+   "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/xom-20260331.htm",
+   "start": 60640,
+   "end": 61340
+  },
+  "XOM-000003408826000067-0043": {
+   "text": "LIQUIDITY AND CAPITAL RESOURCES\n(millions of dollars)\nThree Months Ended\nMarch 31,\n2026\n2025\nNet cash provided by/(used in)\nOperating activities\n8,705\n12,953\nInvesting activities\n(6,006)\n(4,135)\nFinancing activities\n(4,900)\n(13,579)\nEffect of exchange rate changes\n(45)\n86\nIncrease/(decrease) in cash and cash equivalents\n(2,246)\n(4,675)\nCash and cash equivalents (at end of period)\n8,435\n18,512\nCash flow from operations and asset sales\nNet cash provided by operating activities (U.S. GAAP)\n8,705\n12,953\nProceeds associated with sales of subsidiaries, property, plant & equipment, and sales and returns\nof investments\n219\n1,823\nCash flow from operations and asset sales (Non-GAAP)\n8,924\n14,776\nBecause of the ongoing nature of our asset management and divestment program, we believe it is useful for investors to consider proceeds\nassociated with asset sales together with cash provided by operating activities when evaluating cash available for investment in the business\nand financing activities, including shareholder distributions.\nCash flow from operations and asset sales in the first quarter of 2026 was $8.9 billion, a decrease of $5.9 billion from the\ncomparable 2025 period.\nCash provided by operating activities totaled $8.7 billion for the first three months of 2026, $4.2 billion lower than 2025. Net\nincome including noncontrolling interests was $4.5 billion, a decrease of $3.6 billion from the prior year period. The adjustment",
+   "section": "liquidity",
+   "form": "10-Q",
+   "filed": "2026-05-04",
+   "period_end": "2026-03-31",
+   "accession": "0000034088-26-000067",
+   "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/xom-20260331.htm",
+   "start": 61341,
+   "end": 62785
+  },
+  "XOM-000003408826000067-0045": {
+   "text": "first quarter, an increase of 2.1 percentage points from year-end 2025. The Corporation's capital allocation priorities are\ninvesting in competitively advantaged, high-return projects, maintaining a strong balance sheet, and sharing our success with\nour shareholders through more consistent share repurchases and a growing dividend. The Corporation distributed a total of $4.3\nbillion to shareholders in the first three months of 2026 through dividends.\nThe Corporation has access to significant capacity of long-term and short-term liquidity. Internally generated funds are\nexpected to cover the majority of financial requirements, supplemented by long-term and short-term debt. Commercial paper is\nused to balance short-term liquidity requirements and is reflected in \"Notes and loans payable\" on the Consolidated Balance\nSheet, with changes in outstanding commercial paper between periods included in the Consolidated Statement of Cash Flows.\nThe Corporation had undrawn short-term committed lines of credit of $7.3 billion and undrawn long-term committed lines of\ncredit of $0.3 billion as of the end of first quarter 2026.\nThe Corporation’s financial strength enables it to make large, long-term capital expenditures. Cash capex in the first quarter of\n2026 was $6.2 billion, up $0.3 billion from the first quarter of 2025. The Corporation plans to invest in the range of $27 billion\nto $29 billion in 2026. Actual spending could vary depending on the progress of individual projects.\n27",
+   "section": "liquidity",
+   "form": "10-Q",
+   "filed": "2026-05-04",
+   "period_end": "2026-03-31",
+   "accession": "0000034088-26-000067",
+   "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000067/xom-20260331.htm",
+   "start": 64244,
+   "end": 65736
+  },
+  "XOM-000003408826000093-0035": {
+   "text": "feedstocks and other market factors; economic conditions and seasonal fluctuations that impact prices, differentials, margins,\nand volume/mix for our products; developments or changes in local, national, or international laws, regulations, taxes, trade\nsanctions, trade tariffs, or policies affecting our business, such as government policies supporting lower carbon and new market\ninvestment opportunities, the punitive European taxes on the oil and gas sector and unequal support for different technological\nmethods of emissions reduction or evolving, ambiguous and unharmonized voluntary or mandatory standards or extraterritorial\nlaws and regulations imposed by various jurisdictions related to sustainability and greenhouse gas reporting; timely granting of\ngovernmental permits, licenses, and certifications; uncertain impacts of deregulation on the legal and regulatory environment;\nprice impacts and the broader government responses to inflationary pressures; changes in interest and exchange rates; variable\nimpacts of trading activities and derivative positions, including timing effects, on our margins and results each quarter; actions\nof co-venturers or partners, competitors and commercial counterparties, including suppliers and customers; government actions\nin pursuit of national energy and security policies and priorities affecting our business; the outcome of commercial negotiations,",
+   "section": "mdna",
+   "form": "10-Q",
+   "filed": "2026-08-03",
+   "period_end": "2026-06-30",
+   "accession": "0000034088-26-000093",
+   "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000093/xom-20260630.htm",
+   "start": 49513,
+   "end": 50917
+  },
+  "XOM-000003408826000093-0040": {
+   "text": "The earnings drivers provide additional visibility into our business results. The Corporation evaluates these drivers periodically\nto determine if any enhancements may provide helpful insights to the market. Listed below are descriptions of the earnings\ndrivers:\nAdvantaged Volume Growth. Represents earnings impacts from change in volume/mix from advantaged assets, advantaged\nprojects, and high-value products. Occasionally, additional granularity is provided to aid investors. For example, Middle East\nvolumes are presented separately in this filing.\n•Advantaged Assets (Advantaged growth projects). Includes Permian, Guyana, and LNG.\n•Advantaged Projects. Includes capital projects and programs of work that contribute to Energy, Chemical, and/or\nSpecialty Products segments that drive integration of segments/businesses, increase yield of higher value products, or\ndeliver higher than average returns.\n•High-Value Products. Includes performance products and lower-emission fuels. Performance products (performance\nchemicals, performance lubricants) refers to products that provide differentiated performance for multiple applications\nthrough enhanced properties versus commodity alternatives and bring significant additional value to customers and\nend-users. Lower-emission fuels refers to fuels with lower life cycle emissions than conventional transportation fuels\nfor gasoline, diesel and jet transport.",
+   "section": "mdna",
+   "form": "10-Q",
+   "filed": "2026-08-03",
+   "period_end": "2026-06-30",
+   "accession": "0000034088-26-000093",
+   "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000093/xom-20260630.htm",
+   "start": 56658,
+   "end": 58069
+  },
+  "XOM-000003408826000093-0058": {
+   "text": "the second quarter of 2026 compared to 14.0 percent at year-end 2025. The net debt to capital ratio (1) was 10.7 percent at the\nend of the second quarter, a decrease of 0.3 percentage points from year-end 2025. The Corporation's capital allocation\npriorities are investing in competitively advantaged, high-return projects, maintaining a strong balance sheet, and sharing our\nsuccess with our shareholders through more consistent share repurchases and a growing dividend. The Corporation distributed a\ntotal of $8.6 billion to shareholders in the first six months of 2026 through dividends.\nThe Corporation has access to significant capacity of long-term and short-term liquidity. Internally generated funds are\nexpected to cover the majority of financial requirements, supplemented by long-term and short-term debt. Commercial paper is\nused to balance short-term liquidity requirements and is reflected in \"Notes and loans payable\" on the Consolidated Balance\nSheet, with changes in outstanding commercial paper between periods included in the Consolidated Statement of Cash Flows.\nThe Corporation had undrawn short-term committed lines of credit of $7.4 billion and undrawn long-term committed lines of\ncredit of $0.3 billion as of the end of second quarter 2026.\nThe Corporation’s financial strength enables it to make large, long-term capital expenditures. Cash capex in the second quarter",
+   "section": "liquidity",
+   "form": "10-Q",
+   "filed": "2026-08-03",
+   "period_end": "2026-06-30",
+   "accession": "0000034088-26-000093",
+   "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000093/xom-20260630.htm",
+   "start": 81710,
+   "end": 83103
+  }
+ },
+ "trends": [
+  {
+   "metric_id": "debt_to_ebitda",
+   "label": "Debt / EBITDA",
+   "unit": "x",
+   "values": {
+    "FY-2": 0.5597323388041415,
+    "FY-1": 0.5689459971900533,
+    "FY0": 0.6415330661322646,
+    "LTM": 0.7401925764870322
+   },
+   "statuses": {
+    "FY-2": "ok",
+    "FY-1": "ok",
+    "FY0": "ok",
+    "LTM": "ok"
+   },
+   "direction": "worsening"
+  },
+  {
+   "metric_id": "net_leverage",
+   "label": "Net leverage",
+   "unit": "x",
+   "values": {
+    "FY-2": 0.13509619915716345,
+    "FY-1": 0.2548185129107501,
+    "FY0": 0.4841447601084522,
+    "LTM": 0.6091939742195993
+   },
+   "statuses": {
+    "FY-2": "ok",
+    "FY-1": "ok",
+    "FY0": "ok",
+    "LTM": "ok"
+   },
+   "direction": "worsening"
+  },
+  {
+   "metric_id": "interest_coverage",
+   "label": "EBITDA / interest",
+   "unit": "x",
+   "values": {
+    "FY-2": 87.4829210836278,
+    "FY-1": 73.605421686747,
+    "FY0": 112.54394693200663,
+    "LTM": 92.91486291486291
+   },
+   "statuses": {
+    "FY-2": "ok",
+    "FY-1": "ok",
+    "FY0": "ok",
+    "LTM": "ok"
+   },
+   "direction": "stable"
+  },
+  {
+   "metric_id": "fcf_to_debt",
+   "label": "FCF / debt",
+   "unit": "%",
+   "values": {
+    "FY-2": 80.46087604935896,
+    "FY-1": 73.64181251498442,
+    "FY0": 54.2343294209523,
+    "LTM": 39.42846352363568
+   },
+   "statuses": {
+    "FY-2": "ok",
+    "FY-1": "ok",
+    "FY0": "ok",
+    "LTM": "ok"
+   },
+   "direction": "worsening"
+  },
+  {
+   "metric_id": "liquidity_coverage",
+   "label": "Liquidity coverage",
+   "unit": "x",
+   "values": {
+    "FY-2": 2.1222954822954825,
+    "FY-1": 1.698052866311324,
+    "FY0": 1.1414958549694816,
+    "LTM": 0.9252937008782192
+   },
+   "statuses": {
+    "FY-2": "ok",
+    "FY-1": "ok",
+    "FY0": "ok",
+    "LTM": "ok"
+   },
+   "direction": "worsening"
+  }
+ ],
+ "maturity_ladder": {
+  "as_of": "2025-12-31",
+  "buckets": [
+   {
+    "id": "maturity_year_1",
+    "label": "Year 1",
+    "value": 6200000000.0,
+    "status": "ok",
+    "metric_key": "maturity_year_1:FY0"
+   },
+   {
+    "id": "maturity_year_2",
+    "label": "Year 2",
+    "value": 2500000000.0,
+    "status": "ok",
+    "metric_key": "maturity_year_2:FY0"
+   },
+   {
+    "id": "maturity_year_3",
+    "label": "Year 3",
+    "value": 1700000000.0,
+    "status": "ok",
+    "metric_key": "maturity_year_3:FY0"
+   },
+   {
+    "id": "maturity_year_4",
+    "label": "Year 4",
+    "value": 1700000000.0,
+    "status": "ok",
+    "metric_key": "maturity_year_4:FY0"
+   },
+   {
+    "id": "maturity_year_5",
+    "label": "Year 5",
+    "value": 5300000000.0,
+    "status": "ok",
+    "metric_key": "maturity_year_5:FY0"
+   },
+   {
+    "id": "maturity_after_year_5",
+    "label": "After year 5",
+    "value": null,
+    "status": "not_available",
+    "metric_key": "maturity_after_year_5:FY0"
+   }
+  ],
+  "total": null,
+  "metric_keys": [
+   "debt_due_24m:FY0",
+   "share_due_24m:FY0",
+   "near_term_maturity_cover:FY0"
+  ]
+ },
+ "scorecard": {
+  "basis": "latest",
+  "grid_version": "grid-v1",
+  "factors": [
+   {
+    "id": "debt_to_ebitda",
+    "label": "Debt / EBITDA",
+    "period": "LTM",
+    "value": 0.7401925764870322,
+    "status": "ok",
+    "band": 1,
+    "weight": 0.2,
+    "effective_weight": 0.2,
+    "note": ""
+   },
+   {
+    "id": "net_leverage",
+    "label": "Net debt / EBITDA",
+    "period": "LTM",
+    "value": 0.6091939742195993,
+    "status": "ok",
+    "band": 2,
+    "weight": 0.1,
+    "effective_weight": 0.1,
+    "note": ""
+   },
+   {
+    "id": "interest_coverage",
+    "label": "EBITDA / interest",
+    "period": "LTM",
+    "value": 92.91486291486291,
+    "status": "ok",
+    "band": 1,
+    "weight": 0.25,
+    "effective_weight": 0.25,
+    "note": ""
+   },
+   {
+    "id": "fcf_to_debt",
+    "label": "FCF / debt",
+    "period": "LTM",
+    "value": 39.42846352363568,
+    "status": "ok",
+    "band": 2,
+    "weight": 0.2,
+    "effective_weight": 0.2,
+    "note": ""
+   },
+   {
+    "id": "liquidity_coverage",
+    "label": "Liquidity sources / uses",
+    "period": "LTM",
+    "value": 0.9252937008782192,
+    "status": "ok",
+    "band": 6,
+    "weight": 0.15,
+    "effective_weight": 0.15,
+    "note": ""
+   },
+   {
+    "id": "near_term_maturity_cover",
+    "label": "Debt due in 24 months / (cash + undrawn revolver)",
+    "period": "FY0",
+    "value": 1.1043909746278437,
+    "status": "ok",
+    "band": 5,
+    "weight": 0.1,
+    "effective_weight": 0.1,
+    "note": ""
+   }
+  ],
+  "weighted_score": 2.45,
+  "grade": "SB-2",
+  "provisional": false,
+  "ig_like": true,
+  "disclaimer": "Educational project. Not investment advice. SB grades are a student's stylized scorecard, not credit ratings."
+ },
+ "checklist": [
+  {
+   "id": "override:XOM:cik",
+   "category": "override",
+   "severity": "warning",
+   "message": "Override approved 2026-11-17 (cik 34088): On 1 July 2026 ExxonMobil moved into a new holding company, ExxonMobil Holdings Corp (CIK 2115436), which SEC's ticker file now maps XOM to (Form 8-K12B, accession 0001193125-26-291990). The new registrant has filed no 10-K yet. The predecessor, Exxon Mobil Corp (CIK 34088), holds the 10-K for fiscal 2025 and the 10-Qs to 30 June 2026, so its filings are used. Remove this override once the new registrant files its first 10-K (expected around February 2027).",
+   "ref": "XOM"
+  },
+  {
+   "id": "not_available:maturity_after_year_5:maturity-after-year-5",
+   "category": "not_available",
+   "severity": "warning",
+   "message": "Debt maturing after year five not available in FY0: no candidate tag is reported (see the log).",
+   "ref": "maturity_after_year_5"
+  },
+  {
+   "id": "fallback:operating_income:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest-interest-expense",
+   "category": "fallback",
+   "severity": "info",
+   "message": "Operating income: used rank 2 IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest + [interest_expense] in FY-2, FY-1, FY0, LTM.",
+   "ref": "operating_income"
+  },
+  {
+   "id": "fallback:total_debt:LongTermDebtAndCapitalLeaseObligations-short-term-debt",
+   "category": "fallback",
+   "severity": "info",
+   "message": "Total debt (borrowings plus finance-lease liabilities): used rank 2 LongTermDebtAndCapitalLeaseObligations + [short_term_debt] in FY-2, FY-1, FY0, LTM.",
+   "ref": "total_debt"
+  },
+  {
+   "id": "fallback:dividends:PaymentsOfDividendsCommonStock",
+   "category": "fallback",
+   "severity": "info",
+   "message": "Dividends paid: used rank 2 PaymentsOfDividendsCommonStock in FY-2, FY-1, FY0, LTM.",
+   "ref": "dividends"
+  },
+  {
+   "id": "fallback:maturity_year_1:LongTermDebtCurrent",
+   "category": "fallback",
+   "severity": "info",
+   "message": "Debt maturing in the next twelve months: used rank 2 LongTermDebtCurrent in FY0.",
+   "ref": "maturity_year_1"
+  },
+  {
+   "id": "fallback:short_term_borrowings:CommercialPaper",
+   "category": "fallback",
+   "severity": "info",
+   "message": "Short-term borrowings (including commercial paper): used rank 2 CommercialPaper in FY0.",
+   "ref": "short_term_borrowings"
+  },
+  {
+   "id": "fallback:finance_lease_liabilities:FinanceLeaseLiability",
+   "category": "fallback",
+   "severity": "info",
+   "message": "Finance-lease liabilities (current plus non-current): used rank 2 FinanceLeaseLiability in FY0.",
+   "ref": "finance_lease_liabilities"
+  },
+  {
+   "id": "assumed_zero:short_term_investments:short-term-investments",
+   "category": "assumed_zero",
+   "severity": "info",
+   "message": "Short-term investments assumed zero (not reported) in FY-2, FY-1, FY0, LTM.",
+   "ref": "short_term_investments"
+  },
+  {
+   "id": "assumed_zero:undrawn_revolver:undrawn-revolver",
+   "category": "assumed_zero",
+   "severity": "info",
+   "message": "Undrawn revolving credit capacity assumed zero (not reported) in FY-2, FY-1, FY0, LTM.",
+   "ref": "undrawn_revolver"
+  },
+  {
+   "id": "stale_data:10-Q",
+   "category": "stale_data",
+   "severity": "warning",
+   "message": "the newest 10-Q, 0000034088-26-000093 (period ended 2026-06-30, filed 2026-08-03), has no facts in this company's XBRL data; using 0000034088-26-000067 (period ended 2026-03-31) instead",
+   "ref": "10-Q"
+  },
+  {
+   "id": "reconciliation:total_debt:FY0:25",
+   "category": "reconciliation",
+   "severity": "warning",
+   "message": "total debt uses rank 2 LongTermDebtAndCapitalLeaseObligations + [short_term_debt] = $43,537m, but rank 3 LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings = $40,475m (-7.0%). Check which matches the balance sheet.",
+   "ref": "total_debt"
+  },
+  {
+   "id": "partially_supported_claim:financial_risk-3",
+   "category": "partially_supported_claim",
+   "severity": "warning",
+   "message": "Financial risk: partially supported (Weaker operating cash generation in the latest quarter is supported ($8.7B vs $12.95B, down $4.2B), but the evidence contains no debt-related ratios or data showing their deterioration.): “Weaker operating cash generation in the latest quarter contributed to the deterioration in debt-related ratios.”",
+   "ref": "financial_risk-3"
+  },
+  {
+   "id": "partially_supported_claim:liquidity-4",
+   "category": "partially_supported_claim",
+   "severity": "warning",
+   "message": "Liquidity: partially supported (The undrawn committed lines ($7.4B short-term, $0.3B long-term at end of Q2 2026) are supported, but no evidence addresses liquidity coverage ratios or the assumption that they exclude undrawn revolver capacity.): “The reported liquidity coverage ratios assume no undrawn revolver capacity, while the company reports committed lines that were largely undrawn at the end of the second quarter of 2026.”",
+   "ref": "liquidity-4"
+  }
+ ],
+ "run": {
+  "run_id": "XOM-20261118T061827Z-DeepSeek-V4.1-Flash-1017",
+  "started_at": "2026-11-18T06:18:27Z",
+  "writer_model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "judge_model": "zai-org/GLM-5.3",
+  "service_tier": "asap",
+  "reasoning_effort": {
+   "writer": "medium",
+   "judge": "low"
+  },
+  "prices_read_on": "2026-11-17",
+  "drafting": {
+   "calls": 7,
+   "input_tokens": 27249,
+   "cached_input_tokens": 5888,
+   "output_tokens": 19794,
+   "cost_usd": 0.007896,
+   "seconds": 424.17
+  },
+  "verification": {
+   "calls": 33,
+   "input_tokens": 15145,
+   "cached_input_tokens": 4224,
+   "output_tokens": 2831,
+   "cost_usd": 0.020182,
+   "seconds": 54.73
+  },
+  "raw_outputs": "XOM/XOM-20261118T061827Z-DeepSeek-V4.1-Flash-1017.jsonl"
+ },
+ "disclaimer": "Educational project. Not investment advice. SB grades are a student's stylized scorecard, not credit ratings."
+}

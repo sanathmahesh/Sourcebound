@@ -1,0 +1,1926 @@
+{
+ "judge": "zai-org/GLM-5.3",
+ "seed": 20261118,
+ "results": [
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "WMT",
+   "claim_id": "maturity_wall-6",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence directly contradicts the claim, stating the Company has agreed to observe covenants, the most restrictive relating to secured debt.",
+   "cost_usd": 0.0008543599999999999
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "WMT",
+   "claim_id": "maturity_wall-6",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "WMT",
+   "claim_id": "maturity_wall-6",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence contains no mention of committed lines of credit or covenants; it only discusses debt issuances, maturities, and notes that the issuances contain no financial covenants.",
+   "cost_usd": 0.00076462
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "WMT",
+   "claim_id": "rating_rationale-3",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence confirms liquidity coverage of 1.07x and near-term maturity cover of 1.25x, each in band 5, with weights of 15.0% and 10.0% respectively, and these are indeed the weakest-scoring factors (all other factors are in bands 1-3); the claim's negation is contradicted.",
+   "cost_usd": 0.00095642
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "WMT",
+   "claim_id": "rating_rationale-3",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 2.60",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "WMT",
+   "claim_id": "rating_rationale-3",
+   "corruption": "wrong_placeholder",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "Metric values confirm liquidity coverage 1.21x and near-term maturity cover 1.25x, both in band 5 with weights 15.0% and 10.0%, the weakest bands among the six factors.",
+   "cost_usd": 0.00071338
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "WMT",
+   "claim_id": "financial_risk-1",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence confirms leverage did remain essentially stable: Debt/EBITDA was 1.21x in both periods and net leverage moved only from 0.95x to 0.96x, contradicting the claim that this is not the case.",
+   "cost_usd": 0.0005403399999999999
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "WMT",
+   "claim_id": "financial_risk-1",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 2.81",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "WMT",
+   "claim_id": "financial_risk-1",
+   "corruption": "wrong_placeholder",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "Net leverage 0.95x to 0.96x is supported by metric values, but the claimed Debt/EBITDA starting value of 15.03x is actually the EBITDA/interest ratio; no Debt/EBITDA value for FY-2 is provided, so leverage stability via Debt/EBITDA is not evidenced.",
+   "cost_usd": 0.0006555599999999999
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "WMT",
+   "claim_id": "liquidity-2",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The metric values show cash and cash equivalents ($11.5B) were below short-term debt ($13.9B) at LTM to 31 July 2026, so the claim's negation of this is contradicted.",
+   "cost_usd": 0.00049484
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "WMT",
+   "claim_id": "liquidity-2",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 18.2",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "WMT",
+   "claim_id": "liquidity-2",
+   "corruption": "wrong_placeholder",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The $29.4 billion is capital expenditure, not cash and cash equivalents; no cash figure is provided, and capex being above short-term debt does not evidence the claimed liquidity gap.",
+   "cost_usd": 0.00039151999999999996
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "VZ",
+   "claim_id": "business_profile-6",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence explicitly lists these risks as factors that could affect future results, directly contradicting the claim's negation.",
+   "cost_usd": 0.0011248400000000002
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "VZ",
+   "claim_id": "business_profile-6",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "VZ",
+   "claim_id": "business_profile-6",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence passage is a general business overview of Verizon's segments and strategy and does not mention competition, economic conditions, inflation, interest rates, or cyberattack risks.",
+   "cost_usd": 0.0005224200000000001
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "VZ",
+   "claim_id": "business_profile-3",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The claim asserts the negation of facts that are all fully supported by the metric values: revenue $139.4B and EBITDA $48.6B for LTM to 30 Sep 2026, and revenue growth from $134.0B (FY2023) to $138.2B (FY2025).",
+   "cost_usd": 0.00060292
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "VZ",
+   "claim_id": "business_profile-3",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 210.1",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "VZ",
+   "claim_id": "business_profile-3",
+   "corruption": "wrong_placeholder",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "EBITDA of $48.6B (LTM to 30 Sep 2026) and revenue growth from $134.0B (FY2023) to $138.2B (FY2025) match the metric values, but the claimed LTM revenue of $16.7 billion is actually the capital expenditure figure, not revenue.",
+   "cost_usd": 0.00066788
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "VZ",
+   "claim_id": "business_profile-2",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence directly contradicts the claim, stating Verizon has two reportable segments, Consumer and Business, operated and managed as strategic business units.",
+   "cost_usd": 0.0005437
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "VZ",
+   "claim_id": "business_profile-2",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "VZ",
+   "claim_id": "business_profile-2",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence passage discusses competition and business strategy but contains no mention of reportable segments, Consumer and Business, or strategic business units.",
+   "cost_usd": 0.00041252
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "VZ",
+   "claim_id": "liquidity-5",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The passage directly states there have been no drawings against the revolving credit facility since inception as of September 30, 2026, contradicting the claim.",
+   "cost_usd": 0.0006040399999999999
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "VZ",
+   "claim_id": "liquidity-5",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "VZ",
+   "claim_id": "liquidity-5",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence only discusses cash flows, taxes, and pension funding; it contains no information about a revolving credit facility or drawings against it.",
+   "cost_usd": 0.0005470599999999999
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "GT",
+   "claim_id": "liquidity-4",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence shows unused availability declined from $4,421 million to $2,975 million while net borrowings increased, directly contradicting the claim.",
+   "cost_usd": 0.00106632
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "GT",
+   "claim_id": "liquidity-4",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "GT",
+   "claim_id": "liquidity-4",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence shows net debt repayments of $1,759 million, meaning borrowings decreased rather than increased during the year.",
+   "cost_usd": 0.0006851
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "GT",
+   "claim_id": "financial_risk-5",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence shows the opposite of the claim's denial: net borrowings of $807 million were taken on in Q1 2026, segment operating income fell 18.8% in 2025, and total debt of $7.4 billion against $990 million of EBITDA indicates leverage has risen.",
+   "cost_usd": 0.0012554600000000001
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "GT",
+   "claim_id": "financial_risk-5",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 12.1",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "GT",
+   "claim_id": "financial_risk-5",
+   "corruption": "wrong_placeholder",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The $658 million figure is capital expenditure per the XBRL metric, not total debt; the evidence contains no total debt figure or leverage data, and while net borrowings are noted for Q1 2026 and segment income declined in 2025, the claim's core debt/leverage assertion is unsupported.",
+   "cost_usd": 0.00102516
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "GT",
+   "claim_id": "financial_risk-5",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "GT",
+   "claim_id": "financial_risk-5",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The debt ($7.4B) and EBITDA ($990M) figures are confirmed by the metric values, but the claims that leverage rose due to net new borrowings and that segment earnings weakened are not supported; the passage describes net debt repayments and asset-sale-driven liquidity, not new borrowing, and covers a different period.",
+   "cost_usd": 0.00116744
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "GT",
+   "claim_id": "maturity_wall-1",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The passage's maturity table shows exactly $1,183M (\u2248$1.2B), $1,035M (\u2248$1.0B), $802M, $864M and $506M for 2026\u20132030, so the claim's negation is false.",
+   "cost_usd": 0.0011227399999999997
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "GT",
+   "claim_id": "maturity_wall-1",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 2.8",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "GT",
+   "claim_id": "maturity_wall-1",
+   "corruption": "wrong_placeholder",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "Years two through five match the table ($1,035, $802, $864, $506), but year one is $1,183 million in the evidence, not $826 million.",
+   "cost_usd": 0.00091806
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "GT",
+   "claim_id": "maturity_wall-1",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "GT",
+   "claim_id": "maturity_wall-1",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "All five maturity amounts ($1.2B, $1.0B, $802M, $864M, $506M) match the XBRL-computed metric values for the fiscal year ended 31 December 2025.",
+   "cost_usd": 0.00082104
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "GT",
+   "claim_id": "key_risks-3",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence directly states the company had approximately $1.2 billion of variable rate debt outstanding as of December 31, 2025, contradicting the claim's negation; the rest of the claim is otherwise supported.",
+   "cost_usd": 0.0006166400000000001
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "GT",
+   "claim_id": "key_risks-3",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 4.58",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "GT",
+   "claim_id": "key_risks-3",
+   "corruption": "wrong_placeholder",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The $1.2 billion variable rate debt and interest rate risk statement are supported by the passage, but the metric is Debt/EBITDA, not EBITDA interest coverage, so the claim mischaracterizes the 7.44x figure.",
+   "cost_usd": 0.00070624
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "GT",
+   "claim_id": "key_risks-3",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 1.2",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "GT",
+   "claim_id": "key_risks-3",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 1.2",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "HCA",
+   "claim_id": "liquidity-6",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence states exactly the opposite of the claim: planned capex are expected to be between $5.0 billion and $5.5 billion in 2026 excluding acquisitions, and the company expects to finance capex with internally generated and borrowed funds.",
+   "cost_usd": 0.00079836
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "HCA",
+   "claim_id": "liquidity-6",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "HCA",
+   "claim_id": "liquidity-6",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 5.0; number not from a placeholder or a cited passage: 5.5",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "HCA",
+   "claim_id": "key_risks-3",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The filing states the opposite: a breach of the financial covenant could result in default, acceleration, termination of commitments, and cross-defaults under a significant portion of other indebtedness.",
+   "cost_usd": 0.00072066
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "HCA",
+   "claim_id": "key_risks-3",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "HCA",
+   "claim_id": "key_risks-3",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence discusses general indebtedness risks and facility availability but says nothing about covenant breach triggering default, acceleration, termination of commitments, or cross-defaults.",
+   "cost_usd": 0.00058962
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "HCA",
+   "claim_id": "business_profile-6",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence directly contradicts the claim, stating that admissions, lengths of stay and reimbursement amounts continue to be negatively affected by these pressures and that these pressures are expected to continue.",
+   "cost_usd": 0.0007222000000000001
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "HCA",
+   "claim_id": "business_profile-6",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "HCA",
+   "claim_id": "business_profile-6",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence passage concerns antitrust and environmental laws, not payer pre-authorization, utilization review, or outpatient pressures.",
+   "cost_usd": 0.0005577000000000001
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "HCA",
+   "claim_id": "financial_risk-1",
+   "corruption": "negation",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "All the specific figures (3.17x Debt/EBITDA in FY2023 and LTM, 3.11x ending net leverage, 2.96x low in FY2025) match the metric values, but the conclusion that leverage was 'not stable' overstates the evidence, since gross Debt/EBITDA was identical at both endpoints and only net leverage showed modest variation.",
+   "cost_usd": 0.0012438400000000002
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "HCA",
+   "claim_id": "financial_risk-1",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 5.75",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "HCA",
+   "claim_id": "financial_risk-1",
+   "corruption": "wrong_placeholder",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The 3.17x Debt/EBITDA, 3.11x LTM net leverage, and 2.96x FY2025 net leverage figures are supported, but the 6.56x figure is EBITDA/interest for FY2023, not Debt/EBITDA, so the claim misattributes that metric and the 'stable leverage' characterization is not established.",
+   "cost_usd": 0.00065374
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "CCL",
+   "claim_id": "key_risks-6",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The claim asserts the metrics are not those values, but the evidence scorecard shows Debt/EBITDA of 3.27x, EBITDA/interest of 6.21x, and FCF/debt of 13.3% for the LTM to 31 August 2026, exactly matching the negated statement.",
+   "cost_usd": 0.0007972400000000001
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "CCL",
+   "claim_id": "key_risks-6",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 5.91",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "CCL",
+   "claim_id": "key_risks-6",
+   "corruption": "wrong_placeholder",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "EBITDA/interest (6.21x) and FCF/debt (13.3%) match the metric values, but debt/EBITDA of 6.21x is not in the evidence, and the qualitative 'moderate leverage, limited FCF' interpretation goes beyond the boilerplate passage provided.",
+   "cost_usd": 0.00074026
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "CCL",
+   "claim_id": "key_risks-6",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "CCL",
+   "claim_id": "key_risks-6",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "All three ratios in the claim match the computed LTM metric values exactly, and the qualitative characterization follows from those figures.",
+   "cost_usd": 0.00061118
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "CCL",
+   "claim_id": "rating_rationale-6",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence contradicts the claim: the filings explicitly cite overcapacity/competition risks and covenant-breach cross-default acceleration provisions, so these earlier findings do exist.",
+   "cost_usd": 0.00126596
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "CCL",
+   "claim_id": "rating_rationale-6",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "CCL",
+   "claim_id": "rating_rationale-6",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence contains only a business overview and scorecard metrics; it says nothing about industry overcapacity, competitive pressures, or cross-default/covenant acceleration provisions.",
+   "cost_usd": 0.0008484799999999999
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "CCL",
+   "claim_id": "business_profile-1",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The filing directly states the opposite: Carnival Corporation & plc is the largest global cruise company among the largest leisure travel companies with exactly that portfolio of cruise lines.",
+   "cost_usd": 0.00075888
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "CCL",
+   "claim_id": "business_profile-1",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "CCL",
+   "claim_id": "business_profile-1",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence does not mention Carnival's size relative to competitors or list its cruise line brands.",
+   "cost_usd": 0.00045074
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "CCL",
+   "claim_id": "liquidity-1",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence shows liquidity coverage was exactly 1.42x for the twelve months to 31 August 2026 and 1.31x for the fiscal year ended 30 November 2025, contradicting the claim's negation.",
+   "cost_usd": 0.00059522
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "CCL",
+   "claim_id": "liquidity-1",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 3.13",
+   "cost_usd": 0
+  },
+  {
+   "writer": "zai-org/GLM-5.3",
+   "ticker": "CCL",
+   "claim_id": "liquidity-1",
+   "corruption": "wrong_placeholder",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The 3.27x figure is Debt/EBITDA for the twelve months to 31 August 2026, not liquidity coverage; liquidity coverage FY0 is only 1.31x, so the claim misattributes the metrics. The 'moderate cushion' characterization also goes beyond the evidence, which relies on assumed-zero values for short-term investments, undrawn revolver, and dividends.",
+   "cost_usd": 0.00064702
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "WMT",
+   "claim_id": "business_profile-5",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence directly contradicts the claim, stating Walmart's business continues to expand through these mutually reinforcing offerings.",
+   "cost_usd": 0.00053614
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "WMT",
+   "claim_id": "business_profile-5",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "WMT",
+   "claim_id": "business_profile-5",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence is generic MD&A boilerplate with no mention of membership, advertising, marketplace, fulfillment, financial services, or an omnichannel model.",
+   "cost_usd": 0.0005273200000000001
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "WMT",
+   "claim_id": "key_risks-1",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence directly states the opposite: these services require compliance with legal and regulatory requirements, and non-compliance could result in fines, sanctions, penalties and reputational harm.",
+   "cost_usd": 0.0005795399999999999
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "WMT",
+   "claim_id": "key_risks-1",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "WMT",
+   "claim_id": "key_risks-1",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence only discusses retail pharmacy regulatory risks, not financial services offerings.",
+   "cost_usd": 0.00048756
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "WMT",
+   "claim_id": "business_profile-1",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence directly states Walmart enhances its omnichannel capabilities through stores, eCommerce websites, mobile applications and service offerings, contradicting the claim's negation.",
+   "cost_usd": 0.00058178
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "WMT",
+   "claim_id": "business_profile-1",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "WMT",
+   "claim_id": "business_profile-1",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence passage only describes the MD&A overview and segments; it never mentions omnichannel retailing, eCommerce websites, mobile applications, or service offerings.",
+   "cost_usd": 0.0005206
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "WMT",
+   "claim_id": "liquidity-3",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The claim asserts CFO did not exceed capex plus dividends, but the metric values show $42.9B > ($29.4B + $7.7B = $37.1B), so cash from operations did exceed the combined outflows.",
+   "cost_usd": 0.0005541999999999999
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "WMT",
+   "claim_id": "liquidity-3",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 65.3",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "WMT",
+   "claim_id": "liquidity-3",
+   "corruption": "wrong_placeholder",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence provides no cash from operations figure; moreover, the claimed cash from operations of $29.4 billion equals capex of $29.4 billion, so it cannot exceed capex plus dividends of $7.7 billion (total $37.1 billion).",
+   "cost_usd": 0.0004899399999999999
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "VZ",
+   "claim_id": "financial_risk-4",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The claim asserts FCF did not increase alongside rising average debt, but the evidence shows free cash flow increased by $2,250M and average debt outstanding rose from $146,578M to $168,591M (nine months).",
+   "cost_usd": 0.001117
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "VZ",
+   "claim_id": "financial_risk-4",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "VZ",
+   "claim_id": "financial_risk-4",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "FCF increased ($3,637M to $3,783M) per the table, but the evidence contains no data on average debt outstanding, so the claim that debt rose and FCF/debt was broadly stable is not supported.",
+   "cost_usd": 0.0006706800000000001
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "VZ",
+   "claim_id": "liquidity-3",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The passage directly states the opposite: sources of funds are sufficient to meet operating and investing requirements over the next 12 months and beyond.",
+   "cost_usd": 0.00065822
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "VZ",
+   "claim_id": "liquidity-3",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 12",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "VZ",
+   "claim_id": "liquidity-3",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 12",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "VZ",
+   "claim_id": "key_risks-5",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The passage directly states the opposite: further regulation of broadband, wireless, and other activities could result in significant increases in costs, restrict the ability to compete, and limit returns on network investments.",
+   "cost_usd": 0.0007258400000000001
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "VZ",
+   "claim_id": "key_risks-5",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "VZ",
+   "claim_id": "key_risks-5",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence passage concerns financial markets and borrowing costs, not regulation of broadband/wireless or returns on network investments.",
+   "cost_usd": 0.00048868
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "VZ",
+   "claim_id": "business_profile-4",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence directly contradicts the claim, stating the industry is highly competitive and competition is expected to remain intense.",
+   "cost_usd": 0.0004737
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "VZ",
+   "claim_id": "business_profile-4",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "VZ",
+   "claim_id": "business_profile-4",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The passage discusses Verizon's business overview and segments but never states that the telecommunications industry is highly competitive or that competition is expected to remain intense.",
+   "cost_usd": 0.00057366
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "GT",
+   "claim_id": "maturity_wall-5",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence directly states both that $500 million of 6.625% senior notes were issued and that the company has the option to redeem them in whole or in part prior to maturity, contradicting the claim's negation.",
+   "cost_usd": 0.00087998
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "GT",
+   "claim_id": "maturity_wall-5",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "GT",
+   "claim_id": "maturity_wall-5",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 6.625",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "GT",
+   "claim_id": "rating_rationale-6",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The claim denies the risk disclosures exist, but the evidence explicitly states both that long-term ability to meet obligations may depend on capital market access and that substantial debt could impair future financing.",
+   "cost_usd": 0.00121248
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "GT",
+   "claim_id": "rating_rationale-6",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "GT",
+   "claim_id": "rating_rationale-6",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence contains only MD&A overview text and scorecard metrics; no risk disclosure passages about capital markets access or debt impairing future financing are provided.",
+   "cost_usd": 0.0007321399999999998
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "GT",
+   "claim_id": "rating_rationale-5",
+   "corruption": "negation",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "While debt repayment funded by asset sales and lower interest expense did occur, leverage scores remain in the weakest band (6 of 6) for debt/EBITDA and net leverage, so the improvement did not temper those weakest-band scores.",
+   "cost_usd": 0.00207152
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "GT",
+   "claim_id": "rating_rationale-5",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "GT",
+   "claim_id": "rating_rationale-5",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The weakest-band leverage scores are confirmed (debt/EBITDA and net leverage both band 6 of 6), but the evidence contains no support for improvement through FY2025, debt repayment funded by asset sales, or lower interest expense.",
+   "cost_usd": 0.0009725199999999999
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "GT",
+   "claim_id": "maturity_wall-3",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The metric computed from XBRL data shows near-term maturity cover is exactly 2.38x, contradicting the claim.",
+   "cost_usd": 0.00031648
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "GT",
+   "claim_id": "maturity_wall-3",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 4.57",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "GT",
+   "claim_id": "maturity_wall-3",
+   "corruption": "wrong_placeholder",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence is a Debt/EBITDA ratio (4.57x), not a near-term maturity cover; the metric does not match the claim.",
+   "cost_usd": 0.00031578
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "HCA",
+   "claim_id": "liquidity-3",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The passage states $3.086 billion WAS available as of June 30, 2026, contradicting the claim that it was not.",
+   "cost_usd": 0.00054832
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "HCA",
+   "claim_id": "liquidity-3",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 30; number not from a placeholder or a cited passage: 3.086",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "HCA",
+   "claim_id": "liquidity-3",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 30; number not from a placeholder or a cited passage: 3.086",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "HCA",
+   "claim_id": "key_risks-2",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence directly states the opposite: variable-rate borrowings and refinancing in a rising/high rate environment expose the company to increased interest rate risk.",
+   "cost_usd": 0.0006332999999999999
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "HCA",
+   "claim_id": "key_risks-2",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "HCA",
+   "claim_id": "key_risks-2",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The passage supports that variable rate debt exposes the company to interest rate risk, but says nothing about refinancing debt in a rising or high rate environment.",
+   "cost_usd": 0.000697
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "HCA",
+   "claim_id": "financial_risk-5",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence directly contradicts the claim: short-term borrowings, including $2.207 billion of outstanding commercial paper notes, increased current liabilities and contributed to the working capital decline.",
+   "cost_usd": 0.0008167000000000001
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "HCA",
+   "claim_id": "financial_risk-5",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "HCA",
+   "claim_id": "financial_risk-5",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence only shows a decline in operating cash flow; it says nothing about short-term borrowings, commercial paper notes increasing, or liquidity coverage.",
+   "cost_usd": 0.0005200399999999999
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "HCA",
+   "claim_id": "liquidity-4",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The passage explicitly states planned capital expenditures are expected to be between $5.0 billion and $5.5 billion in 2026, excluding acquisitions, directly contradicting the claim.",
+   "cost_usd": 0.0007013400000000001
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "HCA",
+   "claim_id": "liquidity-4",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 5.0; number not from a placeholder or a cited passage: 5.5",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "HCA",
+   "claim_id": "liquidity-4",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 5.0; number not from a placeholder or a cited passage: 5.5",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "CCL",
+   "claim_id": "financial_risk-1",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence shows debt/EBITDA did improve from 7.07x (FY ended 30 Nov 2023) to 3.27x (LTM to 31 Aug 2026), so the claim denying this improvement is contradicted.",
+   "cost_usd": 0.00049862
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "CCL",
+   "claim_id": "financial_risk-1",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 11.61",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "CCL",
+   "claim_id": "financial_risk-1",
+   "corruption": "wrong_placeholder",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The claim compares Debt/EBITDA across two periods, but the evidence provides EBITDA/interest for FY-2 and Debt/EBITDA for LTM, so no comparable Debt/EBITDA figure for the earlier period is given.",
+   "cost_usd": 0.0004065
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "CCL",
+   "claim_id": "rating_rationale-5",
+   "corruption": "negation",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The scorecard's six factors are purely financial metrics, so there's no evidence these risk factors directly temper the grade; however, the filings confirm all these risks exist (overcapacity, pandemics/inflation demand shocks, fuel volatility, and a $9.1B working capital deficit funded by customer deposits), and whether they influence the grade through liquidity or coverage factors is not determinable from the evidence.",
+   "cost_usd": 0.0024517600000000003
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "CCL",
+   "claim_id": "rating_rationale-5",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "CCL",
+   "claim_id": "rating_rationale-5",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "None of the cited risk factors (overcapacity, pandemic/inflation demand shocks, fuel volatility, working capital deficit/customer deposits) appear in the evidence passage or the metric scorecard.",
+   "cost_usd": 0.0009492799999999999
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "CCL",
+   "claim_id": "key_risks-5",
+   "corruption": "negation",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The passage states these regulatory activities 'may in the future have a material impact... by requiring us to make capital investments in new equipment or technologies, pay for emission allowances, purchase carbon offset credits, or otherwise incur additional costs' and 'may continue to impact us indirectly by increasing our operating costs', so the negated claim is false and the original claim is supported.",
+   "cost_usd": 0.00084848
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "CCL",
+   "claim_id": "key_risks-5",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "CCL",
+   "claim_id": "key_risks-5",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence discusses port destination risks and competition, not sustainability/emissions regulatory costs such as equipment investments, emission allowances, or carbon offsets.",
+   "cost_usd": 0.00058122
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "CCL",
+   "claim_id": "liquidity-2",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence directly states the company had $5.7 billion of liquidity, including $1.2 billion cash and $4.5 billion available under the revolving facility, as of August 31, 2026, contradicting the negated claim.",
+   "cost_usd": 0.0008399400000000001
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "CCL",
+   "claim_id": "liquidity-2",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 2.8",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "CCL",
+   "claim_id": "liquidity-2",
+   "corruption": "wrong_placeholder",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "Total liquidity ($5.7B) and revolver availability ($4.5B) are supported, but the filing states cash and cash equivalents were $1.2 billion, not $3.6 billion; $3.6 billion is the LTM capital expenditure.",
+   "cost_usd": 0.00078898
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "CCL",
+   "claim_id": "liquidity-2",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 5.7",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4-Pro-0813",
+   "ticker": "CCL",
+   "claim_id": "liquidity-2",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 5.7",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "WMT",
+   "claim_id": "business_profile-2",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The metric values confirm EBITDA was exactly $44.0 billion in FY ended 31 January 2026 and $47.4 billion for the twelve months to 31 July 2026, contradicting the claim.",
+   "cost_usd": 0.00038298
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "WMT",
+   "claim_id": "business_profile-2",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 67.0",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "WMT",
+   "claim_id": "business_profile-2",
+   "corruption": "wrong_placeholder",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The $47.4 billion EBITDA for the twelve months to 31 July 2026 is supported by the LTM metric value, but the $26.6 billion figure for the fiscal year ended 31 January 2026 is capital expenditure, not EBITDA.",
+   "cost_usd": 0.00045927999999999995
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "WMT",
+   "claim_id": "rating_rationale-5",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The claim is a negation, but the metric values confirm that Debt/EBITDA 1.21x and net leverage 0.96x both map to band 2 at weights 20.0% and 10.0% respectively.",
+   "cost_usd": 0.00072066
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "WMT",
+   "claim_id": "rating_rationale-5",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 2.81",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "WMT",
+   "claim_id": "rating_rationale-5",
+   "corruption": "wrong_placeholder",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The evidence confirms both metrics' values, band 2 mappings, and weights of 20.0% and 10.0%.",
+   "cost_usd": 0.00060698
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "WMT",
+   "claim_id": "rating_rationale-6",
+   "corruption": "negation",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The claim's denial of band 3 at 20% weight is contradicted by the scorecard metrics (band 3, weight 20%), though the point about negative quarterly FCF is supported by the passage.",
+   "cost_usd": 0.00113338
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "WMT",
+   "claim_id": "rating_rationale-6",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 36.4",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "WMT",
+   "claim_id": "rating_rationale-6",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "WMT",
+   "claim_id": "rating_rationale-6",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "Band 3 and 20.0% weight are confirmed by the metrics, but no evidence shows negative free cash flow in the most recent quarter.",
+   "cost_usd": 0.0007557999999999999
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "WMT",
+   "claim_id": "liquidity-5",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The claim asserts FCF was not negative, but the evidence shows FCF of $(1,946) million because payments for property and equipment ($6,684M) exceeded operating cash flow ($4,738M).",
+   "cost_usd": 0.00067208
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "WMT",
+   "claim_id": "liquidity-5",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "WMT",
+   "claim_id": "liquidity-5",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence only discusses short-term borrowings and credit facilities; it contains no cash flow data on operating activities or property/equipment payments, and no metric values are provided.",
+   "cost_usd": 0.0005470599999999999
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "VZ",
+   "claim_id": "financial_risk-2",
+   "corruption": "negation",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The two leverage figures (3.67x for FY ending 31 Dec 2023 and 3.33x for the twelve months to 30 Sep 2026) are confirmed by the metric values, but the characterization that net leverage was 'not stable' goes beyond the evidence \u2014 a move from 3.67x to 3.33x is a modest change that could reasonably be described as stable, so this judgment does not follow directly from the data.",
+   "cost_usd": 0.0011065
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "VZ",
+   "claim_id": "financial_risk-2",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 6.50",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "VZ",
+   "claim_id": "financial_risk-2",
+   "corruption": "wrong_placeholder",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The metric values confirm leverage of 3.72x for FY ended 31 Dec 2023 and 3.33x for the twelve months to 30 Sep 2026, a modest change consistent with the claim of stability.",
+   "cost_usd": 0.00057646
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "VZ",
+   "claim_id": "rating_rationale-2",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence confirms exactly what the claim denies: interest coverage band 3 at 25.0% weight on 6.36x, and FCF/debt band 4 at 20.0% weight on 13.5%.",
+   "cost_usd": 0.00083084
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "VZ",
+   "claim_id": "rating_rationale-2",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 6",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "VZ",
+   "claim_id": "maturity_wall-3",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The claim denies the metric is 0.86x, but the computed scorecard explicitly reports near-term maturity cover as 0.86x.",
+   "cost_usd": 0.00031801999999999997
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "VZ",
+   "claim_id": "maturity_wall-3",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 2.29",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "VZ",
+   "claim_id": "maturity_wall-3",
+   "corruption": "wrong_placeholder",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The only metric provided is Debt/EBITDA of 3.32x; there is no evidence about near-term maturity cover, so the 3.32x figure cannot be attributed to that concept.",
+   "cost_usd": 0.00043898
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "VZ",
+   "claim_id": "financial_risk-5",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence explicitly attributes part of the higher asset base and D&A to assets acquired in the Frontier acquisition, directly contradicting the claim.",
+   "cost_usd": 0.0007516
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "VZ",
+   "claim_id": "financial_risk-5",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "VZ",
+   "claim_id": "financial_risk-5",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence only discusses free cash flow definition and reconciliation; nothing about the Frontier transaction or depreciation and amortization from acquired assets.",
+   "cost_usd": 0.00055336
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "GT",
+   "claim_id": "rating_rationale-6",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The claim asserts the grade is not tempered by these factors, but the evidence explicitly states the company faces significant global competition, raw material/energy/transportation cost increases, and that access to capital markets cannot be assured.",
+   "cost_usd": 0.00111308
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "GT",
+   "claim_id": "rating_rationale-6",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "GT",
+   "claim_id": "rating_rationale-6",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence passages and metric scorecard say nothing about global competition, raw material/energy/transportation cost exposure, or capital markets access, so these asserted tempering factors cannot be verified against the given evidence.",
+   "cost_usd": 0.0008601
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "GT",
+   "claim_id": "key_risks-1",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The metric values confirm debt/EBITDA was 7.44x, EBITDA/interest was 2.39x, and FCF/debt was 1.2% for the LTM to 30 September 2026, directly contradicting the claim's negation.",
+   "cost_usd": 0.00047453999999999997
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "GT",
+   "claim_id": "key_risks-1",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 12.16",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "GT",
+   "claim_id": "key_risks-1",
+   "corruption": "wrong_placeholder",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "EBITDA/interest of 2.39x and FCF/debt of 1.2% are supported by the metric values, but debt/EBITDA of 2.39x is not evidenced (the 2.39x value corresponds to EBITDA/interest, not debt/EBITDA).",
+   "cost_usd": 0.0005469200000000001
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "GT",
+   "claim_id": "business_profile-5",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence explicitly states the company faces significant global competition and raw material, energy and transportation cost increases, directly contradicting the claim.",
+   "cost_usd": 0.00061874
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "GT",
+   "claim_id": "business_profile-5",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "GT",
+   "claim_id": "business_profile-5",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The passages only discuss community engagement and compliance/ethics topics; nothing about global competition, raw material, energy or transportation costs, or cash flow stability.",
+   "cost_usd": 0.00047720000000000005
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "GT",
+   "claim_id": "rating_rationale-3",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The claim is a negation: evidence confirms near-term maturity cover of 2.38x at band 6 with 10.0% weight, interest coverage of 2.39x at band 5 with 25.0%, and FCF/debt of 1.2% at band 5 with 20.0%, so the 'not the case' assertion is contradicted.",
+   "cost_usd": 0.0010743600000000001
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "GT",
+   "claim_id": "rating_rationale-3",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 4.57",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "GT",
+   "claim_id": "rating_rationale-3",
+   "corruption": "wrong_placeholder",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "Bands and weights for near-term maturity cover (6, 10%), interest coverage (2.39x, band 5, 25%) and FCF/debt (1.2%, band 5, 20%) match the evidence, but the 4.57x value is actually the Debt/EBITDA metric, not near-term maturity cover, whose value is not provided.",
+   "cost_usd": 0.00107982
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "HCA",
+   "claim_id": "liquidity-3",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The claim denies that the coverage metric assumes $0 of undrawn revolving capacity while the company reports availability, but the evidence shows exactly that: the metric value is $0 (assumed zero, not reported) while the filing discloses $3.816 billion available under the senior unsecured credit facility as of July 24, 2026.",
+   "cost_usd": 0.0009438199999999999
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "HCA",
+   "claim_id": "liquidity-3",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 1",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "HCA",
+   "claim_id": "liquidity-3",
+   "corruption": "wrong_placeholder",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The $5.2 billion figure is the LTM capital expenditure, not undrawn revolving capacity; the filing shows revolver availability of $3.086 billion (June 30, 2026) and $3.816 billion (July 24, 2026).",
+   "cost_usd": 0.0007636400000000001
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "HCA",
+   "claim_id": "liquidity-3",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "HCA",
+   "claim_id": "liquidity-3",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "supported",
+   "checked_by": "judge",
+   "reason": "The scorecard explicitly assumes $0 undrawn revolving capacity (not reported), while the filing discloses $5.664 billion available under the senior unsecured credit facility as of January 31, 2026, confirming the claim's contrast.",
+   "cost_usd": 0.0008116600000000001
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "HCA",
+   "claim_id": "rating_rationale-2",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The metric values show interest coverage is the strongest-scoring factor at 6.74x, band 3 (best of all six factors), with 25.0% weight (highest), so the claim that this is not the case is contradicted.",
+   "cost_usd": 0.00059956
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "HCA",
+   "claim_id": "rating_rationale-2",
+   "corruption": "raw_number",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: number check failed: number not from a placeholder or a cited passage: 11.11",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "HCA",
+   "claim_id": "rating_rationale-2",
+   "corruption": "wrong_placeholder",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "Interest coverage indeed has band 3 and a 25.0% weight (best score among the six factors), but the 3.17x figure is the Debt/EBITDA ratio, not interest coverage \u2014 the interest coverage multiple itself is not provided.",
+   "cost_usd": 0.00082468
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "HCA",
+   "claim_id": "key_risks-4",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The claim is a negation, but the evidence explicitly states a covenant breach could cause default, acceleration, and cross-default on other indebtedness.",
+   "cost_usd": 0.0006936400000000001
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "HCA",
+   "claim_id": "key_risks-4",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "HCA",
+   "claim_id": "key_risks-4",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The passages discuss significant indebtedness and availability under the senior unsecured credit facility, but nowhere mention covenant breaches triggering default, acceleration, or cross-default across other debt.",
+   "cost_usd": 0.00060264
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "HCA",
+   "claim_id": "key_risks-3",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The passage directly contradicts the claim: refinancing on favorable terms, or at all, IS directly affected by global economic and financial conditions, and credit rating downgrades may negatively affect financing availability and rates.",
+   "cost_usd": 0.00067264
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "HCA",
+   "claim_id": "key_risks-3",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "HCA",
+   "claim_id": "key_risks-3",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The passage shows indebtedness raises vulnerability to adverse economic conditions, but it does not state that refinancing debt is affected by global economic/financial conditions or credit rating downgrades.",
+   "cost_usd": 0.00074628
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "CCL",
+   "claim_id": "financial_risk-6",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "Both passages contradict the claim: the first states debt transactions involved issuance, modification, extinguishment and refinancing, and the second states nonrecurrence of debt extinguishment losses affected period comparisons.",
+   "cost_usd": 0.0010348199999999999
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "CCL",
+   "claim_id": "financial_risk-6",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "CCL",
+   "claim_id": "financial_risk-6",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "partially_supported",
+   "checked_by": "judge",
+   "reason": "The evidence supports only the nonrecurrence of debt extinguishment losses affecting comparisons; the claim's listing of issuance, modification, extinguishment and refinancing transactions is not mentioned in the evidence.",
+   "cost_usd": 0.00070498
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "CCL",
+   "claim_id": "business_profile-2",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence states the opposite: each brand does meet the needs of a distinct set of consumer psychographics and vacation needs, enabling penetration of large addressable segments.",
+   "cost_usd": 0.0006183199999999999
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "CCL",
+   "claim_id": "business_profile-2",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "CCL",
+   "claim_id": "business_profile-2",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence discusses employee relations and talent development, not brand portfolio targeting of consumer psychographics or addressable market segments.",
+   "cost_usd": 0.00046516
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "CCL",
+   "claim_id": "business_profile-3",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence directly states the opposite of the claim: the mobility of cruise ships does let Carnival move vessels between regions to meet changing demand.",
+   "cost_usd": 0.0005171
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "CCL",
+   "claim_id": "business_profile-3",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "CCL",
+   "claim_id": "business_profile-3",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The evidence is about employee and union relations and talent development; it says nothing about moving ships between regions to meet demand.",
+   "cost_usd": 0.0004594200000000001
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "CCL",
+   "claim_id": "key_risks-3",
+   "corruption": "negation",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The filing explicitly states these factors could lead to a decline in cruise demand with significant negative impacts, directly contradicting the claim's negation.",
+   "cost_usd": 0.0005835999999999999
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "CCL",
+   "claim_id": "key_risks-3",
+   "corruption": "citation_swap",
+   "verdict": "unsupported",
+   "checked_by": "deterministic",
+   "reason": "unsupported: quote not found",
+   "cost_usd": 0
+  },
+  {
+   "writer": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "ticker": "CCL",
+   "claim_id": "key_risks-3",
+   "corruption": "citation_swap_with_quote",
+   "verdict": "unsupported",
+   "checked_by": "judge",
+   "reason": "The listed passage discusses port destination risks, overcapacity, and competition \u2014 not geopolitical uncertainty, war, pandemics, inflation, or higher interest rates affecting cruise demand.",
+   "cost_usd": 0.0006592000000000001
+  }
+ ]
+}
