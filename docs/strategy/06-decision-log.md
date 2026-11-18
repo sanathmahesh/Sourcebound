@@ -299,3 +299,49 @@ inventing one.
 ### D46. Published memos come from the GLM-5.3 evaluation run until the models are chosen
 - **Why:** they are already verified, so publishing them costs nothing; once the author chooses the writer and
   judge, build-all regenerates (or copies the chosen writer's run and re-judges it) in one command.
+
+### D47. Deploy layout: one Python function for /api, the Vite build as static files (phase 7)
+- **Decision:** `api/index.py` exposes the FastAPI app; `vercel.json` rewrites `/api/*` to it, builds `web/`
+  and serves `web/dist` (with the published JSON copied to `dist/data`). The function may run 75 seconds, so the
+  app's own 60-second limit answers first with a plain 503.
+- **Why:** Vercel's docs, re-read 18 November 2026, still detect FastAPI from an `app` object in a standard
+  entry file (app.py, index.py, server.py, main.py at the root, in src/ or app/, or `tool.vercel.entrypoint`)
+  and recommend a newer "Services" setup for a frontend plus backend, without saying whether Hobby has it. The
+  plan's default layout uses only long-standing features. Unverified until a preview deploy (needs approval).
+- **Rejected:** Services (Hobby availability unknown); a FastAPI app at the root (Vercel would treat the whole
+  project as a Python app).
+
+### D48. A live answer keeps only claims the judge marks supported
+- **Decision:** `/api/ask` runs the memo's checks on every claim and keeps only "supported"; partly supported
+  and unsupported claims go to the "removed" list with the reason.
+- **Why:** a memo is reviewed by a person before publication and its partly supported claims are marked and
+  listed; a live answer is read straight away with no reviewer, so the bar is higher.
+
+### D49. Follow-up limits sized for 60 seconds
+- **Decision:** at most 3 lookup rounds, 3 lookups per round, 5 passages per search, 5 claims; writer reasoning
+  effort low with a 4,000-token cap; judges run in parallel; each model request times out at 45 seconds with
+  one retry. The final answer always comes from a schema-only request, even when the model stops looking
+  things up early (D34 applied strictly).
+- **Evidence:** a two-round Walmart question took 18.3 s and an out-of-scope one 2.5 s (GLM-5.3, 18 November
+  2026, one run each, so indicative only).
+
+### D50. The data contract is exported as one JSON Schema; TypeScript types are generated from it
+- **Decision:** `pipeline/export_schema.py` writes `web/src/contracts/schema.json` from the Pydantic models
+  (published files in serialization mode, with defaulted fields marked required because they are always
+  written; the request body in validation mode); `json-schema-to-typescript` generates `types.ts`. Tests fail if
+  either is out of date, and every published file is validated against its model.
+- **Why:** contracts.py stays the single source of the shapes, and a contract change cannot silently break the
+  interface.
+
+### D51. The interface formats numbers exactly as the Python engine does
+- **Decision:** `web/src/format.ts` mirrors `format_metric`, rounding like Python (the double's exact value,
+  ties to even); a test compares it with every metric chip in the 15 published memos.
+- **Why:** the first version used JavaScript's `toFixed`, and the test caught HCA's FY0 debt ($47.25 billion)
+  reading "$47.3 billion" in a table and "$47.2 billion" in the memo.
+- **Rejected:** publishing a display string for every value (a contract change; can be proposed for phase 9).
+
+### D52. Plain React with hash routing; the npm lockfile is generated with npm 12.2.1
+- **Decision:** no router or component library (phase 9 replaces the look); routes are URL hashes, so the static
+  host needs no rewrite rules. Exact versions, each at least two weeks old on 18 November 2026. The lockfile was
+  generated with npm 12.2.1 via npx because the installed npm 10.9.3 crashes on this dependency set (an internal
+  error in its peer-dependency resolver); installs use `npm ci`, which reads the lockfile and works on npm 10.

@@ -31,6 +31,13 @@ class SectionDraft(_Strict):
     claims: list[DraftClaim]
 
 
+class AskAnswer(_Strict):
+    """The follow-up endpoint's final answer: memo-shaped claims, or out_of_scope with none."""
+
+    status: Literal["ok", "out_of_scope"]
+    claims: list[DraftClaim]
+
+
 class JudgeVerdict(_Strict):
     verdict: Literal["supported", "partially_supported", "unsupported"]
     reason: str
@@ -73,7 +80,17 @@ JUDGE_SCHEMA = {
     "required": ["verdict", "reason", "evidence_quote"],
     "additionalProperties": False,
 }
+ASK_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "status": {"type": "string", "enum": ["ok", "out_of_scope"]},
+        "claims": DRAFT_SCHEMA["properties"]["claims"],
+    },
+    "required": ["status", "claims"],
+    "additionalProperties": False,
+}
 DRAFT_FORMAT = {"type": "json_schema", "json_schema": {"name": "section_draft", "strict": True, "schema": DRAFT_SCHEMA}}
+ASK_FORMAT = {"type": "json_schema", "json_schema": {"name": "ask_answer", "strict": True, "schema": ASK_SCHEMA}}
 JUDGE_FORMAT = {"type": "json_schema", "json_schema": {"name": "judge_verdict", "strict": True, "schema": JUDGE_SCHEMA}}
 
 

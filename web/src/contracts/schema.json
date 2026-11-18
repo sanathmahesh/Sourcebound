@@ -1,0 +1,2277 @@
+{
+ "$defs": {
+  "AskRequest": {
+   "additionalProperties": false,
+   "description": "The request body. The ticker fixes which company's files the tools may read.",
+   "properties": {
+    "question": {
+     "maxLength": 500,
+     "minLength": 1,
+     "title": "Question",
+     "type": "string"
+    },
+    "ticker": {
+     "maxLength": 10,
+     "minLength": 1,
+     "title": "Ticker",
+     "type": "string"
+    }
+   },
+   "required": [
+    "ticker",
+    "question"
+   ],
+   "title": "AskRequest",
+   "type": "object"
+  },
+  "AskResponse": {
+   "additionalProperties": false,
+   "description": "The answer. Claims have the memo's shape; only claims the judge marked supported are kept.",
+   "properties": {
+    "claims": {
+     "items": {
+      "$ref": "#/$defs/MemoClaim"
+     },
+     "title": "Claims",
+     "type": "array"
+    },
+    "data_to": {
+     "anyOf": [
+      {
+       "format": "date",
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Data To"
+    },
+    "disclaimer": {
+     "default": "Educational project. Not investment advice. SB grades are a student's stylized scorecard, not credit ratings.",
+     "title": "Disclaimer",
+     "type": "string"
+    },
+    "judge_model": {
+     "title": "Judge Model",
+     "type": "string"
+    },
+    "metrics": {
+     "additionalProperties": {
+      "$ref": "#/$defs/Metric"
+     },
+     "title": "Metrics",
+     "type": "object"
+    },
+    "model": {
+     "title": "Model",
+     "type": "string"
+    },
+    "passages": {
+     "additionalProperties": {
+      "$ref": "#/$defs/Passage"
+     },
+     "title": "Passages",
+     "type": "object"
+    },
+    "question": {
+     "title": "Question",
+     "type": "string"
+    },
+    "removed": {
+     "items": {
+      "$ref": "#/$defs/RemovedClaim"
+     },
+     "title": "Removed",
+     "type": "array"
+    },
+    "schema_version": {
+     "default": "1",
+     "title": "Schema Version",
+     "type": "string"
+    },
+    "seconds": {
+     "title": "Seconds",
+     "type": "number"
+    },
+    "status": {
+     "enum": [
+      "ok",
+      "out_of_scope"
+     ],
+     "title": "Status",
+     "type": "string"
+    },
+    "ticker": {
+     "title": "Ticker",
+     "type": "string"
+    },
+    "trace": {
+     "items": {
+      "$ref": "#/$defs/ToolTrace"
+     },
+     "title": "Trace",
+     "type": "array"
+    }
+   },
+   "required": [
+    "schema_version",
+    "ticker",
+    "question",
+    "status",
+    "claims",
+    "removed",
+    "metrics",
+    "passages",
+    "trace",
+    "model",
+    "judge_model",
+    "seconds",
+    "data_to",
+    "disclaimer"
+   ],
+   "title": "AskResponse",
+   "type": "object"
+  },
+  "CallTotals": {
+   "additionalProperties": false,
+   "properties": {
+    "cached_input_tokens": {
+     "title": "Cached Input Tokens",
+     "type": "integer"
+    },
+    "calls": {
+     "title": "Calls",
+     "type": "integer"
+    },
+    "cost_usd": {
+     "title": "Cost Usd",
+     "type": "number"
+    },
+    "input_tokens": {
+     "title": "Input Tokens",
+     "type": "integer"
+    },
+    "output_tokens": {
+     "title": "Output Tokens",
+     "type": "integer"
+    },
+    "seconds": {
+     "title": "Seconds",
+     "type": "number"
+    }
+   },
+   "required": [
+    "calls",
+    "input_tokens",
+    "cached_input_tokens",
+    "output_tokens",
+    "cost_usd",
+    "seconds"
+   ],
+   "title": "CallTotals",
+   "type": "object"
+  },
+  "ChecklistItem": {
+   "additionalProperties": false,
+   "properties": {
+    "category": {
+     "enum": [
+      "not_available",
+      "fallback",
+      "assumed_zero",
+      "override",
+      "reconciliation",
+      "structural_change",
+      "provisional_grade",
+      "stale_data",
+      "unsupported_claim",
+      "partially_supported_claim",
+      "draft_problem"
+     ],
+     "title": "Category",
+     "type": "string"
+    },
+    "id": {
+     "title": "Id",
+     "type": "string"
+    },
+    "message": {
+     "title": "Message",
+     "type": "string"
+    },
+    "ref": {
+     "title": "Ref",
+     "type": "string"
+    },
+    "severity": {
+     "enum": [
+      "info",
+      "warning"
+     ],
+     "title": "Severity",
+     "type": "string"
+    }
+   },
+   "required": [
+    "id",
+    "category",
+    "severity",
+    "message",
+    "ref"
+   ],
+   "title": "ChecklistItem",
+   "type": "object"
+  },
+  "ClaimCheck": {
+   "additionalProperties": false,
+   "properties": {
+    "checked_by": {
+     "title": "Checked By",
+     "type": "string"
+    },
+    "citation_checks": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Citation Checks",
+     "type": "array"
+    },
+    "claim_id": {
+     "title": "Claim Id",
+     "type": "string"
+    },
+    "flags": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Flags",
+     "type": "array"
+    },
+    "kind": {
+     "title": "Kind",
+     "type": "string"
+    },
+    "reason": {
+     "title": "Reason",
+     "type": "string"
+    },
+    "section": {
+     "title": "Section",
+     "type": "string"
+    },
+    "verdict": {
+     "enum": [
+      "supported",
+      "partially_supported",
+      "unsupported"
+     ],
+     "title": "Verdict",
+     "type": "string"
+    }
+   },
+   "required": [
+    "claim_id",
+    "section",
+    "kind",
+    "verdict",
+    "checked_by",
+    "reason",
+    "citation_checks",
+    "flags"
+   ],
+   "title": "ClaimCheck",
+   "type": "object"
+  },
+  "CompanyMetrics": {
+   "additionalProperties": false,
+   "description": "data/published/companies/<TICKER>/metrics.json: the latest metrics, possibly newer than the memo.",
+   "properties": {
+    "checklist": {
+     "items": {
+      "$ref": "#/$defs/ChecklistItem"
+     },
+     "title": "Checklist",
+     "type": "array"
+    },
+    "cik": {
+     "title": "Cik",
+     "type": "integer"
+    },
+    "data_fetched_at": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Data Fetched At"
+    },
+    "disclaimer": {
+     "default": "Educational project. Not investment advice. SB grades are a student's stylized scorecard, not credit ratings.",
+     "title": "Disclaimer",
+     "type": "string"
+    },
+    "generated_at": {
+     "format": "date-time",
+     "title": "Generated At",
+     "type": "string"
+    },
+    "log": {
+     "items": {
+      "$ref": "#/$defs/LogItem"
+     },
+     "title": "Log",
+     "type": "array"
+    },
+    "maturity_ladder": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/MaturityLadder"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "metrics": {
+     "additionalProperties": {
+      "$ref": "#/$defs/Metric"
+     },
+     "title": "Metrics",
+     "type": "object"
+    },
+    "name": {
+     "title": "Name",
+     "type": "string"
+    },
+    "period_problems": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Period Problems",
+     "type": "array"
+    },
+    "periods": {
+     "items": {
+      "$ref": "#/$defs/PeriodInfo"
+     },
+     "title": "Periods",
+     "type": "array"
+    },
+    "schema_version": {
+     "default": "1",
+     "title": "Schema Version",
+     "type": "string"
+    },
+    "scorecard": {
+     "$ref": "#/$defs/Scorecard"
+    },
+    "scorecard_fy0": {
+     "$ref": "#/$defs/Scorecard"
+    },
+    "sector": {
+     "title": "Sector",
+     "type": "string"
+    },
+    "sources": {
+     "items": {
+      "$ref": "#/$defs/Source"
+     },
+     "title": "Sources",
+     "type": "array"
+    },
+    "ticker": {
+     "title": "Ticker",
+     "type": "string"
+    },
+    "trends": {
+     "items": {
+      "$ref": "#/$defs/TrendRow"
+     },
+     "title": "Trends",
+     "type": "array"
+    }
+   },
+   "required": [
+    "schema_version",
+    "ticker",
+    "name",
+    "cik",
+    "sector",
+    "generated_at",
+    "data_fetched_at",
+    "sources",
+    "periods",
+    "period_problems",
+    "metrics",
+    "trends",
+    "maturity_ladder",
+    "scorecard",
+    "scorecard_fy0",
+    "checklist",
+    "log",
+    "disclaimer"
+   ],
+   "title": "CompanyMetrics",
+   "type": "object"
+  },
+  "CompanyState": {
+   "additionalProperties": false,
+   "properties": {
+    "latest_10k": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/FilingRef"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "latest_10q": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/FilingRef"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "memo_date": {
+     "anyOf": [
+      {
+       "format": "date",
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Memo Date"
+    },
+    "memo_status": {
+     "enum": [
+      "current",
+      "stale",
+      "missing"
+     ],
+     "title": "Memo Status",
+     "type": "string"
+    }
+   },
+   "required": [
+    "latest_10k",
+    "latest_10q",
+    "memo_status",
+    "memo_date"
+   ],
+   "title": "CompanyState",
+   "type": "object"
+  },
+  "EvalsFile": {
+   "additionalProperties": false,
+   "description": "data/published/evals.json: the evaluation results (evals/results/results.json), for the site.",
+   "properties": {
+    "generated_at": {
+     "format": "date-time",
+     "title": "Generated At",
+     "type": "string"
+    },
+    "results": {
+     "additionalProperties": true,
+     "title": "Results",
+     "type": "object"
+    },
+    "schema_version": {
+     "default": "1",
+     "title": "Schema Version",
+     "type": "string"
+    },
+    "source": {
+     "title": "Source",
+     "type": "string"
+    }
+   },
+   "required": [
+    "schema_version",
+    "generated_at",
+    "source",
+    "results"
+   ],
+   "title": "EvalsFile",
+   "type": "object"
+  },
+  "FilingRef": {
+   "additionalProperties": false,
+   "properties": {
+    "accession": {
+     "title": "Accession",
+     "type": "string"
+    },
+    "filed": {
+     "format": "date",
+     "title": "Filed",
+     "type": "string"
+    },
+    "form": {
+     "title": "Form",
+     "type": "string"
+    },
+    "period_end": {
+     "format": "date",
+     "title": "Period End",
+     "type": "string"
+    }
+   },
+   "required": [
+    "form",
+    "accession",
+    "period_end",
+    "filed"
+   ],
+   "title": "FilingRef",
+   "type": "object"
+  },
+  "HeadlineRatio": {
+   "additionalProperties": false,
+   "properties": {
+    "display": {
+     "title": "Display",
+     "type": "string"
+    },
+    "label": {
+     "title": "Label",
+     "type": "string"
+    },
+    "metric_id": {
+     "title": "Metric Id",
+     "type": "string"
+    },
+    "period": {
+     "title": "Period",
+     "type": "string"
+    },
+    "status": {
+     "enum": [
+      "ok",
+      "not_available",
+      "not_meaningful",
+      "net_cash"
+     ],
+     "title": "Status",
+     "type": "string"
+    },
+    "unit": {
+     "title": "Unit",
+     "type": "string"
+    },
+    "value": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Value"
+    }
+   },
+   "required": [
+    "metric_id",
+    "label",
+    "period",
+    "value",
+    "unit",
+    "status",
+    "display"
+   ],
+   "title": "HeadlineRatio",
+   "type": "object"
+  },
+  "IndexEntry": {
+   "additionalProperties": false,
+   "properties": {
+    "data_to": {
+     "anyOf": [
+      {
+       "format": "date",
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Data To"
+    },
+    "flag_types": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Flag Types",
+     "type": "array"
+    },
+    "grade": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Grade"
+    },
+    "headline": {
+     "items": {
+      "$ref": "#/$defs/HeadlineRatio"
+     },
+     "title": "Headline",
+     "type": "array"
+    },
+    "ig_like": {
+     "anyOf": [
+      {
+       "type": "boolean"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Ig Like"
+    },
+    "latest_filing": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/FilingRef"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "memo_date": {
+     "anyOf": [
+      {
+       "format": "date",
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Memo Date"
+    },
+    "memo_model": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Memo Model"
+    },
+    "memo_status": {
+     "enum": [
+      "current",
+      "stale",
+      "missing"
+     ],
+     "title": "Memo Status",
+     "type": "string"
+    },
+    "name": {
+     "title": "Name",
+     "type": "string"
+    },
+    "open_flags": {
+     "title": "Open Flags",
+     "type": "integer"
+    },
+    "provisional": {
+     "title": "Provisional",
+     "type": "boolean"
+    },
+    "score": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Score"
+    },
+    "sector": {
+     "title": "Sector",
+     "type": "string"
+    },
+    "ticker": {
+     "title": "Ticker",
+     "type": "string"
+    },
+    "verification": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/VerificationCounts"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    }
+   },
+   "required": [
+    "ticker",
+    "name",
+    "sector",
+    "grade",
+    "score",
+    "provisional",
+    "ig_like",
+    "headline",
+    "latest_filing",
+    "data_to",
+    "memo_status",
+    "memo_date",
+    "memo_model",
+    "verification",
+    "open_flags",
+    "flag_types"
+   ],
+   "title": "IndexEntry",
+   "type": "object"
+  },
+  "LadderBucket": {
+   "additionalProperties": false,
+   "properties": {
+    "id": {
+     "title": "Id",
+     "type": "string"
+    },
+    "label": {
+     "title": "Label",
+     "type": "string"
+    },
+    "metric_key": {
+     "title": "Metric Key",
+     "type": "string"
+    },
+    "status": {
+     "enum": [
+      "ok",
+      "not_available",
+      "not_meaningful",
+      "net_cash"
+     ],
+     "title": "Status",
+     "type": "string"
+    },
+    "value": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Value"
+    }
+   },
+   "required": [
+    "id",
+    "label",
+    "value",
+    "status",
+    "metric_key"
+   ],
+   "title": "LadderBucket",
+   "type": "object"
+  },
+  "LogItem": {
+   "additionalProperties": false,
+   "properties": {
+    "concept": {
+     "title": "Concept",
+     "type": "string"
+    },
+    "kind": {
+     "title": "Kind",
+     "type": "string"
+    },
+    "message": {
+     "title": "Message",
+     "type": "string"
+    },
+    "period": {
+     "title": "Period",
+     "type": "string"
+    },
+    "severity": {
+     "enum": [
+      "info",
+      "warning"
+     ],
+     "title": "Severity",
+     "type": "string"
+    },
+    "subject": {
+     "title": "Subject",
+     "type": "string"
+    }
+   },
+   "required": [
+    "kind",
+    "concept",
+    "period",
+    "message",
+    "severity",
+    "subject"
+   ],
+   "title": "LogItem",
+   "type": "object"
+  },
+  "MaturityLadder": {
+   "additionalProperties": false,
+   "properties": {
+    "as_of": {
+     "format": "date",
+     "title": "As Of",
+     "type": "string"
+    },
+    "buckets": {
+     "items": {
+      "$ref": "#/$defs/LadderBucket"
+     },
+     "title": "Buckets",
+     "type": "array"
+    },
+    "metric_keys": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Metric Keys",
+     "type": "array"
+    },
+    "total": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Total"
+    }
+   },
+   "required": [
+    "as_of",
+    "buckets",
+    "total",
+    "metric_keys"
+   ],
+   "title": "MaturityLadder",
+   "type": "object"
+  },
+  "Memo": {
+   "additionalProperties": false,
+   "description": "data/published/companies/<TICKER>/memo.json: a dated snapshot with its own metrics and passages.",
+   "properties": {
+    "checklist": {
+     "items": {
+      "$ref": "#/$defs/ChecklistItem"
+     },
+     "title": "Checklist",
+     "type": "array"
+    },
+    "disclaimer": {
+     "default": "Educational project. Not investment advice. SB grades are a student's stylized scorecard, not credit ratings.",
+     "title": "Disclaimer",
+     "type": "string"
+    },
+    "grade": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Grade"
+    },
+    "grade_provisional": {
+     "title": "Grade Provisional",
+     "type": "boolean"
+    },
+    "judge_model": {
+     "title": "Judge Model",
+     "type": "string"
+    },
+    "maturity_ladder": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/MaturityLadder"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "memo_date": {
+     "format": "date",
+     "title": "Memo Date",
+     "type": "string"
+    },
+    "metrics": {
+     "additionalProperties": {
+      "$ref": "#/$defs/Metric"
+     },
+     "title": "Metrics",
+     "type": "object"
+    },
+    "model": {
+     "title": "Model",
+     "type": "string"
+    },
+    "name": {
+     "title": "Name",
+     "type": "string"
+    },
+    "passages": {
+     "additionalProperties": {
+      "$ref": "#/$defs/Passage"
+     },
+     "title": "Passages",
+     "type": "object"
+    },
+    "run": {
+     "$ref": "#/$defs/RunInfo"
+    },
+    "schema_version": {
+     "default": "1",
+     "title": "Schema Version",
+     "type": "string"
+    },
+    "scorecard": {
+     "$ref": "#/$defs/Scorecard"
+    },
+    "sections": {
+     "items": {
+      "$ref": "#/$defs/MemoSection"
+     },
+     "title": "Sections",
+     "type": "array"
+    },
+    "sources": {
+     "items": {
+      "$ref": "#/$defs/Source"
+     },
+     "title": "Sources",
+     "type": "array"
+    },
+    "ticker": {
+     "title": "Ticker",
+     "type": "string"
+    },
+    "trends": {
+     "items": {
+      "$ref": "#/$defs/TrendRow"
+     },
+     "title": "Trends",
+     "type": "array"
+    }
+   },
+   "required": [
+    "schema_version",
+    "ticker",
+    "name",
+    "memo_date",
+    "model",
+    "judge_model",
+    "grade",
+    "grade_provisional",
+    "sources",
+    "sections",
+    "metrics",
+    "passages",
+    "trends",
+    "maturity_ladder",
+    "scorecard",
+    "checklist",
+    "run",
+    "disclaimer"
+   ],
+   "title": "Memo",
+   "type": "object"
+  },
+  "MemoCitation": {
+   "additionalProperties": false,
+   "properties": {
+    "check": {
+     "enum": [
+      "ok",
+      "chunk_not_found",
+      "quote_too_short",
+      "quote_not_found"
+     ],
+     "title": "Check",
+     "type": "string"
+    },
+    "chunk_id": {
+     "title": "Chunk Id",
+     "type": "string"
+    },
+    "quote": {
+     "title": "Quote",
+     "type": "string"
+    }
+   },
+   "required": [
+    "chunk_id",
+    "quote",
+    "check"
+   ],
+   "title": "MemoCitation",
+   "type": "object"
+  },
+  "MemoClaim": {
+   "additionalProperties": false,
+   "properties": {
+    "checked_by": {
+     "enum": [
+      "judge",
+      "deterministic"
+     ],
+     "title": "Checked By",
+     "type": "string"
+    },
+    "citations": {
+     "items": {
+      "$ref": "#/$defs/MemoCitation"
+     },
+     "title": "Citations",
+     "type": "array"
+    },
+    "evidence_quote": {
+     "title": "Evidence Quote",
+     "type": "string"
+    },
+    "flags": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Flags",
+     "type": "array"
+    },
+    "id": {
+     "title": "Id",
+     "type": "string"
+    },
+    "judge_reason": {
+     "title": "Judge Reason",
+     "type": "string"
+    },
+    "kind": {
+     "enum": [
+      "quantitative",
+      "qualitative"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "segments": {
+     "items": {
+      "$ref": "#/$defs/Segment"
+     },
+     "title": "Segments",
+     "type": "array"
+    },
+    "verdict": {
+     "enum": [
+      "supported",
+      "partially_supported",
+      "unsupported"
+     ],
+     "title": "Verdict",
+     "type": "string"
+    }
+   },
+   "required": [
+    "id",
+    "kind",
+    "verdict",
+    "judge_reason",
+    "evidence_quote",
+    "checked_by",
+    "segments",
+    "citations",
+    "flags"
+   ],
+   "title": "MemoClaim",
+   "type": "object"
+  },
+  "MemoSection": {
+   "additionalProperties": false,
+   "properties": {
+    "claims": {
+     "items": {
+      "$ref": "#/$defs/MemoClaim"
+     },
+     "title": "Claims",
+     "type": "array"
+    },
+    "id": {
+     "title": "Id",
+     "type": "string"
+    },
+    "notes": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Notes",
+     "type": "array"
+    },
+    "passages_shown": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Passages Shown",
+     "type": "array"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    }
+   },
+   "required": [
+    "id",
+    "title",
+    "claims",
+    "passages_shown",
+    "notes"
+   ],
+   "title": "MemoSection",
+   "type": "object"
+  },
+  "Metric": {
+   "additionalProperties": false,
+   "properties": {
+    "formula": {
+     "title": "Formula",
+     "type": "string"
+    },
+    "inputs": {
+     "items": {
+      "$ref": "#/$defs/MetricInput"
+     },
+     "title": "Inputs",
+     "type": "array"
+    },
+    "label": {
+     "title": "Label",
+     "type": "string"
+    },
+    "metric_id": {
+     "title": "Metric Id",
+     "type": "string"
+    },
+    "notes": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Notes",
+     "type": "array"
+    },
+    "period": {
+     "title": "Period",
+     "type": "string"
+    },
+    "status": {
+     "enum": [
+      "ok",
+      "not_available",
+      "not_meaningful",
+      "net_cash"
+     ],
+     "title": "Status",
+     "type": "string"
+    },
+    "unit": {
+     "title": "Unit",
+     "type": "string"
+    },
+    "value": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Value"
+    }
+   },
+   "required": [
+    "metric_id",
+    "period",
+    "label",
+    "value",
+    "unit",
+    "status",
+    "formula",
+    "notes",
+    "inputs"
+   ],
+   "title": "Metric",
+   "type": "object"
+  },
+  "MetricInput": {
+   "additionalProperties": false,
+   "description": "One XBRL fact behind a metric.",
+   "properties": {
+    "accession": {
+     "title": "Accession",
+     "type": "string"
+    },
+    "concept": {
+     "title": "Concept",
+     "type": "string"
+    },
+    "fallback_rank": {
+     "title": "Fallback Rank",
+     "type": "integer"
+    },
+    "filed": {
+     "format": "date",
+     "title": "Filed",
+     "type": "string"
+    },
+    "form": {
+     "title": "Form",
+     "type": "string"
+    },
+    "label": {
+     "title": "Label",
+     "type": "string"
+    },
+    "period": {
+     "title": "Period",
+     "type": "string"
+    },
+    "role": {
+     "title": "Role",
+     "type": "string"
+    },
+    "sign": {
+     "title": "Sign",
+     "type": "integer"
+    },
+    "tag": {
+     "title": "Tag",
+     "type": "string"
+    },
+    "unit": {
+     "title": "Unit",
+     "type": "string"
+    },
+    "url": {
+     "title": "Url",
+     "type": "string"
+    },
+    "value": {
+     "title": "Value",
+     "type": "number"
+    }
+   },
+   "required": [
+    "label",
+    "concept",
+    "tag",
+    "fallback_rank",
+    "value",
+    "unit",
+    "period",
+    "role",
+    "sign",
+    "form",
+    "accession",
+    "filed",
+    "url"
+   ],
+   "title": "MetricInput",
+   "type": "object"
+  },
+  "NumberTrace": {
+   "additionalProperties": false,
+   "properties": {
+    "chunk_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Chunk Id"
+    },
+    "claim_id": {
+     "title": "Claim Id",
+     "type": "string"
+    },
+    "kind": {
+     "enum": [
+      "metric",
+      "quoted"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "metric_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Metric Id"
+    },
+    "value": {
+     "title": "Value",
+     "type": "string"
+    }
+   },
+   "required": [
+    "claim_id",
+    "kind",
+    "value",
+    "metric_id",
+    "chunk_id"
+   ],
+   "title": "NumberTrace",
+   "type": "object"
+  },
+  "Passage": {
+   "additionalProperties": false,
+   "properties": {
+    "accession": {
+     "title": "Accession",
+     "type": "string"
+    },
+    "end": {
+     "title": "End",
+     "type": "integer"
+    },
+    "filed": {
+     "title": "Filed",
+     "type": "string"
+    },
+    "form": {
+     "title": "Form",
+     "type": "string"
+    },
+    "period_end": {
+     "title": "Period End",
+     "type": "string"
+    },
+    "section": {
+     "title": "Section",
+     "type": "string"
+    },
+    "start": {
+     "title": "Start",
+     "type": "integer"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    },
+    "url": {
+     "title": "Url",
+     "type": "string"
+    }
+   },
+   "required": [
+    "text",
+    "section",
+    "form",
+    "filed",
+    "period_end",
+    "accession",
+    "url",
+    "start",
+    "end"
+   ],
+   "title": "Passage",
+   "type": "object"
+  },
+  "PeriodInfo": {
+   "additionalProperties": false,
+   "properties": {
+    "balance_sheet_date": {
+     "format": "date",
+     "title": "Balance Sheet Date",
+     "type": "string"
+    },
+    "flow_windows": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Flow Windows",
+     "type": "array"
+    },
+    "label": {
+     "title": "Label",
+     "type": "string"
+    },
+    "note": {
+     "title": "Note",
+     "type": "string"
+    }
+   },
+   "required": [
+    "label",
+    "balance_sheet_date",
+    "flow_windows",
+    "note"
+   ],
+   "title": "PeriodInfo",
+   "type": "object"
+  },
+  "RemovedClaim": {
+   "additionalProperties": false,
+   "description": "A claim that failed verification and was taken out of the answer.",
+   "properties": {
+    "reason": {
+     "title": "Reason",
+     "type": "string"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    },
+    "verdict": {
+     "enum": [
+      "supported",
+      "partially_supported",
+      "unsupported"
+     ],
+     "title": "Verdict",
+     "type": "string"
+    }
+   },
+   "required": [
+    "text",
+    "verdict",
+    "reason"
+   ],
+   "title": "RemovedClaim",
+   "type": "object"
+  },
+  "RunInfo": {
+   "additionalProperties": false,
+   "properties": {
+    "drafting": {
+     "$ref": "#/$defs/CallTotals"
+    },
+    "judge_model": {
+     "title": "Judge Model",
+     "type": "string"
+    },
+    "prices_read_on": {
+     "title": "Prices Read On",
+     "type": "string"
+    },
+    "raw_outputs": {
+     "title": "Raw Outputs",
+     "type": "string"
+    },
+    "reasoning_effort": {
+     "additionalProperties": {
+      "type": "string"
+     },
+     "title": "Reasoning Effort",
+     "type": "object"
+    },
+    "run_id": {
+     "title": "Run Id",
+     "type": "string"
+    },
+    "service_tier": {
+     "title": "Service Tier",
+     "type": "string"
+    },
+    "started_at": {
+     "format": "date-time",
+     "title": "Started At",
+     "type": "string"
+    },
+    "verification": {
+     "$ref": "#/$defs/CallTotals"
+    },
+    "writer_model": {
+     "title": "Writer Model",
+     "type": "string"
+    }
+   },
+   "required": [
+    "run_id",
+    "started_at",
+    "writer_model",
+    "judge_model",
+    "service_tier",
+    "reasoning_effort",
+    "prices_read_on",
+    "drafting",
+    "verification",
+    "raw_outputs"
+   ],
+   "title": "RunInfo",
+   "type": "object"
+  },
+  "Scorecard": {
+   "additionalProperties": false,
+   "properties": {
+    "basis": {
+     "enum": [
+      "latest",
+      "FY0"
+     ],
+     "title": "Basis",
+     "type": "string"
+    },
+    "disclaimer": {
+     "default": "Educational project. Not investment advice. SB grades are a student's stylized scorecard, not credit ratings.",
+     "title": "Disclaimer",
+     "type": "string"
+    },
+    "factors": {
+     "items": {
+      "$ref": "#/$defs/ScorecardFactor"
+     },
+     "title": "Factors",
+     "type": "array"
+    },
+    "grade": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Grade"
+    },
+    "grid_version": {
+     "title": "Grid Version",
+     "type": "string"
+    },
+    "ig_like": {
+     "anyOf": [
+      {
+       "type": "boolean"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Ig Like"
+    },
+    "provisional": {
+     "title": "Provisional",
+     "type": "boolean"
+    },
+    "weighted_score": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Weighted Score"
+    }
+   },
+   "required": [
+    "basis",
+    "grid_version",
+    "factors",
+    "weighted_score",
+    "grade",
+    "provisional",
+    "ig_like",
+    "disclaimer"
+   ],
+   "title": "Scorecard",
+   "type": "object"
+  },
+  "ScorecardFactor": {
+   "additionalProperties": false,
+   "properties": {
+    "band": {
+     "anyOf": [
+      {
+       "maximum": 6,
+       "minimum": 1,
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Band"
+    },
+    "effective_weight": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Effective Weight"
+    },
+    "id": {
+     "title": "Id",
+     "type": "string"
+    },
+    "label": {
+     "title": "Label",
+     "type": "string"
+    },
+    "note": {
+     "title": "Note",
+     "type": "string"
+    },
+    "period": {
+     "title": "Period",
+     "type": "string"
+    },
+    "status": {
+     "enum": [
+      "ok",
+      "not_available",
+      "not_meaningful",
+      "net_cash"
+     ],
+     "title": "Status",
+     "type": "string"
+    },
+    "value": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Value"
+    },
+    "weight": {
+     "title": "Weight",
+     "type": "number"
+    }
+   },
+   "required": [
+    "id",
+    "label",
+    "period",
+    "value",
+    "status",
+    "band",
+    "weight",
+    "effective_weight",
+    "note"
+   ],
+   "title": "ScorecardFactor",
+   "type": "object"
+  },
+  "Segment": {
+   "additionalProperties": false,
+   "description": "A piece of a rendered claim: plain text, an engine metric, or a figure quoted from a passage.",
+   "properties": {
+    "chunk_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Chunk Id"
+    },
+    "metric_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Metric Id"
+    },
+    "t": {
+     "enum": [
+      "text",
+      "metric",
+      "quoted"
+     ],
+     "title": "T",
+     "type": "string"
+    },
+    "v": {
+     "title": "V",
+     "type": "string"
+    }
+   },
+   "required": [
+    "t",
+    "v",
+    "metric_id",
+    "chunk_id"
+   ],
+   "title": "Segment",
+   "type": "object"
+  },
+  "SiteIndex": {
+   "additionalProperties": false,
+   "description": "data/published/index.json: one entry per company, for the portfolio page.",
+   "properties": {
+    "companies": {
+     "items": {
+      "$ref": "#/$defs/IndexEntry"
+     },
+     "title": "Companies",
+     "type": "array"
+    },
+    "disclaimer": {
+     "default": "Educational project. Not investment advice. SB grades are a student's stylized scorecard, not credit ratings.",
+     "title": "Disclaimer",
+     "type": "string"
+    },
+    "generated_at": {
+     "format": "date-time",
+     "title": "Generated At",
+     "type": "string"
+    },
+    "schema_version": {
+     "default": "1",
+     "title": "Schema Version",
+     "type": "string"
+    }
+   },
+   "required": [
+    "schema_version",
+    "generated_at",
+    "companies",
+    "disclaimer"
+   ],
+   "title": "SiteIndex",
+   "type": "object"
+  },
+  "Source": {
+   "additionalProperties": false,
+   "properties": {
+    "accession": {
+     "title": "Accession",
+     "type": "string"
+    },
+    "filed": {
+     "format": "date",
+     "title": "Filed",
+     "type": "string"
+    },
+    "form": {
+     "title": "Form",
+     "type": "string"
+    },
+    "period_end": {
+     "format": "date",
+     "title": "Period End",
+     "type": "string"
+    },
+    "url": {
+     "title": "Url",
+     "type": "string"
+    }
+   },
+   "required": [
+    "form",
+    "accession",
+    "period_end",
+    "filed",
+    "url"
+   ],
+   "title": "Source",
+   "type": "object"
+  },
+  "ToolTrace": {
+   "additionalProperties": false,
+   "description": "One tool call the model made, for the \"what was looked up\" list.",
+   "properties": {
+    "arguments": {
+     "additionalProperties": true,
+     "title": "Arguments",
+     "type": "object"
+    },
+    "result": {
+     "title": "Result",
+     "type": "string"
+    },
+    "round": {
+     "title": "Round",
+     "type": "integer"
+    },
+    "tool": {
+     "title": "Tool",
+     "type": "string"
+    }
+   },
+   "required": [
+    "round",
+    "tool",
+    "arguments",
+    "result"
+   ],
+   "title": "ToolTrace",
+   "type": "object"
+  },
+  "TrendRow": {
+   "additionalProperties": false,
+   "properties": {
+    "direction": {
+     "enum": [
+      "improving",
+      "worsening",
+      "stable",
+      "not available"
+     ],
+     "title": "Direction",
+     "type": "string"
+    },
+    "label": {
+     "title": "Label",
+     "type": "string"
+    },
+    "metric_id": {
+     "title": "Metric Id",
+     "type": "string"
+    },
+    "statuses": {
+     "additionalProperties": {
+      "enum": [
+       "ok",
+       "not_available",
+       "not_meaningful",
+       "net_cash"
+      ],
+      "type": "string"
+     },
+     "title": "Statuses",
+     "type": "object"
+    },
+    "unit": {
+     "title": "Unit",
+     "type": "string"
+    },
+    "values": {
+     "additionalProperties": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "title": "Values",
+     "type": "object"
+    }
+   },
+   "required": [
+    "metric_id",
+    "label",
+    "unit",
+    "values",
+    "statuses",
+    "direction"
+   ],
+   "title": "TrendRow",
+   "type": "object"
+  },
+  "VerificationCounts": {
+   "additionalProperties": false,
+   "properties": {
+    "claims": {
+     "title": "Claims",
+     "type": "integer"
+    },
+    "partially_supported": {
+     "title": "Partially Supported",
+     "type": "integer"
+    },
+    "supported": {
+     "title": "Supported",
+     "type": "integer"
+    },
+    "unsupported": {
+     "title": "Unsupported",
+     "type": "integer"
+    }
+   },
+   "required": [
+    "claims",
+    "supported",
+    "partially_supported",
+    "unsupported"
+   ],
+   "title": "VerificationCounts",
+   "type": "object"
+  },
+  "VerificationReport": {
+   "additionalProperties": false,
+   "description": "data/published/companies/<TICKER>/verification.json",
+   "properties": {
+    "claims": {
+     "items": {
+      "$ref": "#/$defs/ClaimCheck"
+     },
+     "title": "Claims",
+     "type": "array"
+    },
+    "fallback_log": {
+     "items": {
+      "$ref": "#/$defs/LogItem"
+     },
+     "title": "Fallback Log",
+     "type": "array"
+    },
+    "judge_model": {
+     "title": "Judge Model",
+     "type": "string"
+    },
+    "memo_date": {
+     "format": "date",
+     "title": "Memo Date",
+     "type": "string"
+    },
+    "numbers": {
+     "items": {
+      "$ref": "#/$defs/NumberTrace"
+     },
+     "title": "Numbers",
+     "type": "array"
+    },
+    "schema_version": {
+     "default": "1",
+     "title": "Schema Version",
+     "type": "string"
+    },
+    "summary": {
+     "$ref": "#/$defs/VerificationSummary"
+    },
+    "ticker": {
+     "title": "Ticker",
+     "type": "string"
+    },
+    "warnings": {
+     "items": {
+      "$ref": "#/$defs/LogItem"
+     },
+     "title": "Warnings",
+     "type": "array"
+    },
+    "writer_model": {
+     "title": "Writer Model",
+     "type": "string"
+    }
+   },
+   "required": [
+    "schema_version",
+    "ticker",
+    "memo_date",
+    "writer_model",
+    "judge_model",
+    "summary",
+    "numbers",
+    "claims",
+    "fallback_log",
+    "warnings"
+   ],
+   "title": "VerificationReport",
+   "type": "object"
+  },
+  "VerificationSummary": {
+   "additionalProperties": false,
+   "properties": {
+    "checked_by_judge": {
+     "title": "Checked By Judge",
+     "type": "integer"
+    },
+    "checked_deterministically": {
+     "title": "Checked Deterministically",
+     "type": "integer"
+    },
+    "claims": {
+     "title": "Claims",
+     "type": "integer"
+    },
+    "metric_figures": {
+     "title": "Metric Figures",
+     "type": "integer"
+    },
+    "partially_supported": {
+     "title": "Partially Supported",
+     "type": "integer"
+    },
+    "quoted_figures": {
+     "title": "Quoted Figures",
+     "type": "integer"
+    },
+    "raw_numbers_rejected": {
+     "title": "Raw Numbers Rejected",
+     "type": "integer"
+    },
+    "repairs": {
+     "title": "Repairs",
+     "type": "integer"
+    },
+    "sections_without_draft": {
+     "title": "Sections Without Draft",
+     "type": "integer"
+    },
+    "supported": {
+     "title": "Supported",
+     "type": "integer"
+    },
+    "unsupported": {
+     "title": "Unsupported",
+     "type": "integer"
+    }
+   },
+   "required": [
+    "claims",
+    "supported",
+    "partially_supported",
+    "unsupported",
+    "checked_by_judge",
+    "checked_deterministically",
+    "metric_figures",
+    "quoted_figures",
+    "raw_numbers_rejected",
+    "repairs",
+    "sections_without_draft"
+   ],
+   "title": "VerificationSummary",
+   "type": "object"
+  },
+  "WatchFlag": {
+   "additionalProperties": false,
+   "properties": {
+    "from": {
+     "title": "From",
+     "type": "string"
+    },
+    "metric_id": {
+     "title": "Metric Id",
+     "type": "string"
+    },
+    "rule": {
+     "title": "Rule",
+     "type": "string"
+    },
+    "severity": {
+     "enum": [
+      "warning",
+      "alert"
+     ],
+     "title": "Severity",
+     "type": "string"
+    },
+    "to": {
+     "title": "To",
+     "type": "string"
+    },
+    "type": {
+     "title": "Type",
+     "type": "string"
+    }
+   },
+   "required": [
+    "type",
+    "severity",
+    "rule",
+    "metric_id",
+    "from",
+    "to"
+   ],
+   "title": "WatchFlag",
+   "type": "object"
+  },
+  "WatchItem": {
+   "additionalProperties": false,
+   "properties": {
+    "data_to": {
+     "anyOf": [
+      {
+       "format": "date",
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Data To"
+    },
+    "flags": {
+     "items": {
+      "$ref": "#/$defs/WatchFlag"
+     },
+     "title": "Flags",
+     "type": "array"
+    },
+    "latest_filing": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/FilingRef"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "memo_date": {
+     "anyOf": [
+      {
+       "format": "date",
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Memo Date"
+    },
+    "memo_status": {
+     "enum": [
+      "current",
+      "stale",
+      "missing"
+     ],
+     "title": "Memo Status",
+     "type": "string"
+    },
+    "name": {
+     "title": "Name",
+     "type": "string"
+    },
+    "ticker": {
+     "title": "Ticker",
+     "type": "string"
+    }
+   },
+   "required": [
+    "ticker",
+    "name",
+    "latest_filing",
+    "data_to",
+    "memo_status",
+    "memo_date",
+    "flags"
+   ],
+   "title": "WatchItem",
+   "type": "object"
+  },
+  "WatchState": {
+   "additionalProperties": false,
+   "description": "data/published/state.json: what the daily job last saw for each company.",
+   "properties": {
+    "checked_at": {
+     "format": "date-time",
+     "title": "Checked At",
+     "type": "string"
+    },
+    "companies": {
+     "additionalProperties": {
+      "$ref": "#/$defs/CompanyState"
+     },
+     "title": "Companies",
+     "type": "object"
+    },
+    "last_heartbeat": {
+     "format": "date-time",
+     "title": "Last Heartbeat",
+     "type": "string"
+    },
+    "schema_version": {
+     "default": "1",
+     "title": "Schema Version",
+     "type": "string"
+    }
+   },
+   "required": [
+    "schema_version",
+    "checked_at",
+    "last_heartbeat",
+    "companies"
+   ],
+   "title": "WatchState",
+   "type": "object"
+  },
+  "Watchlist": {
+   "additionalProperties": false,
+   "description": "data/published/watchlist.json",
+   "properties": {
+    "checked_at": {
+     "format": "date-time",
+     "title": "Checked At",
+     "type": "string"
+    },
+    "items": {
+     "items": {
+      "$ref": "#/$defs/WatchItem"
+     },
+     "title": "Items",
+     "type": "array"
+    },
+    "schema_version": {
+     "default": "1",
+     "title": "Schema Version",
+     "type": "string"
+    }
+   },
+   "required": [
+    "schema_version",
+    "checked_at",
+    "items"
+   ],
+   "title": "Watchlist",
+   "type": "object"
+  }
+ },
+ "title": "Sourcebound data contract"
+}

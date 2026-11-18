@@ -1,0 +1,14 @@
+# Not needed by the site or the live function (keeps the upload small; secrets are never uploaded).
+.env
+.env.*
+.venv/
+data/raw/
+data/runs/
+tests/
+reports/
+planning/
+evals/
+.github/
+web/node_modules/
+web/dist/
+**/__pycache__/

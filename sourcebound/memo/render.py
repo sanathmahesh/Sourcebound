@@ -9,7 +9,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from sourcebound.contracts import Metric, PeriodInfo, Segment
+from sourcebound.contracts import Metric, Passage, PeriodInfo, Segment
+from sourcebound.retrieval.chunking import Chunk
 from sourcebound.verify.numbers import NUMBER, check_claim_numbers, passage_numbers, split_placeholders
 
 
@@ -53,6 +54,13 @@ def format_metric(metric: Metric) -> str:
     else:
         text = f"{v:g}"
     return f"{text} (net cash)" if metric.status == "net_cash" else text
+
+
+def passage_from_chunk(chunk: Chunk) -> Passage:
+    """A search passage as the reader sees it in the source drawer, with its filing and offsets."""
+    return Passage(text=chunk.text, section=chunk.section, form=chunk.form, filed=chunk.filed,
+                   period_end=chunk.period_end, accession=chunk.accession, url=chunk.url,
+                   start=chunk.start, end=chunk.end)
 
 
 def period_phrases(periods: list[PeriodInfo]) -> dict[str, str]:

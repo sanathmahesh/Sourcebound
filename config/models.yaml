@@ -13,3 +13,10 @@ reasoning_effort:
 max_completion_tokens:
   writer: 16000
   judge: 2000
+# Live follow-up questions (/api/ask): kept small to answer within 60 seconds.
+ask:
+  reasoning_effort: low
+  max_completion_tokens: 4000
+  max_rounds: 3
+  max_claims: 5
+  timeout_seconds: 60

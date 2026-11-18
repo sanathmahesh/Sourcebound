@@ -3,15 +3,17 @@
 A credit-analysis tool that drafts a credit memo on a US public company from its SEC filings and proves
 every figure against source data. Educational project. Not investment advice.
 
-Status: phase 6 of 10 (verified memos, model evaluation, daily watchlist and the published data). See PLAN.md.
+Status: phase 7 of 10 (verified memos, model evaluation, daily watchlist, the live follow-up API and a plain
+interface; not yet deployed). See PLAN.md.
 
 ## Setup
 
-Requires [uv](https://docs.astral.sh/uv/) (it installs Python 3.12).
+Requires [uv](https://docs.astral.sh/uv/) (it installs Python 3.12) and, for the interface, Node 22.
 
 ```bash
 cp .env.example .env      # then set EDGAR_USER_AGENT to your name and email
 uv sync
+cd web && npm ci && cd ..
 ```
 
 ## Run
@@ -32,7 +34,21 @@ uv run python -m sourcebound.evals.report              # evaluation results from
 uv run python -m sourcebound.pipeline.build_all --memos-from evals/results/memos/GLM-5.3/run1   # data/published/
 uv run python -m sourcebound.watchlist.run             # the daily job: new filings -> metrics, flags, stale memos
 uv run python -m sourcebound.watchlist.simulate VZ     # simulated new filing on a copy of data/published
+uv run python -m sourcebound.pipeline.export_schema    # data contract -> web/src/contracts/schema.json
 ```
+
+The site, locally (two terminals):
+
+```bash
+uv run --env-file .env uvicorn api.index:app --port 8000   # the live API (/api/ask costs a few cents a question)
+cd web && npm run dev                                       # http://localhost:5173 (proxies /api to port 8000)
+```
+
+Frontend checks (in `web/`): `npm run gen:types` (TypeScript types from schema.json), `npm run check:types`,
+`npm run typecheck`, `npm test`, `npm run build` (writes `web/dist/`, with the published JSON under `dist/data`).
+
+Deploy layout (not yet deployed): `vercel.json` builds the Vite app as static files and runs `api/index.py`
+(the FastAPI app) as one Python function; `/api/*` is rewritten to it.
 
 Model calls need SAIL_* variables in `.env` (see `.env.example`); the key is never printed or committed.
 

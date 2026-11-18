@@ -100,3 +100,20 @@ Seeded from PLAN.md section 4.15; later items were added while building, with th
 - ExxonMobil is refreshed on every run (its newest 10-Q's facts sit under its new registrant); this costs one
   extra EDGAR request a day and changes no file.
 - The scheduled run is off until the author approves it (phase 10).
+
+## Added in phase 7
+
+- `/api/ask` has no rate limit or login until the Vercel Firewall rule is added (phase 10); until then anyone
+  with the URL could spend Sail credit.
+- When an answer passes the 60-second limit the caller gets a 503, but model requests already started run on
+  (up to 45 seconds each) and are billed.
+- The follow-up judge is the provisional judge (GLM-5.3), the same model as the provisional writer.
+- Timing words are a weak point for the judge: in the smoke test it accepted "debt maturing in the next twelve
+  months" for a figure dated at the last fiscal year-end (Walmart, maturity_year_1:FY0).
+- Not verified until a preview deploy: whether Vercel's Python runtime installs from pyproject.toml without
+  the dev group, whether the rewrite keeps the /api/... path FastAPI routes on, and whether the 21 MB search
+  index is bundled with the function.
+- Placeholder interface: plain styling; trends and the maturity ladder are tables, not charts; the watchlist
+  screen lacks the design brief's "change in leverage and coverage since the prior year-end" column, which
+  watchlist.json does not carry; the results screen reads evals.json's untyped `results` defensively.
+- Checklist sign-off lives in one browser's localStorage: it is not an audit trail.

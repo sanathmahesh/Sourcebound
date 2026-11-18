@@ -124,3 +124,13 @@ were added while building, with the phase that added them.
     checked_at are ignored in that comparison. A weekly heartbeat updates the last-checked date.
 59. Until the author chooses the writer and judge, the published memos are the GLM-5.3 run-1 evaluation memos
     (writer and judge GLM-5.3), copied without new model calls.
+
+## Added in phase 7
+
+60. A follow-up answer uses the company's latest published metrics.json (possibly newer than its memo) and its
+    search index; the answer states the data date.
+61. A follow-up answer shows only claims the judge marks supported; the rest are listed as removed with the
+    reason.
+62. Questions are 1 to 500 characters after trimming; tickers are the 15 in index.json, in any case.
+63. Tables in the interface format engine values exactly as the Python formatter does (ties to even).
+64. Checklist sign-off is kept per memo run and per browser; it is not a record of review.

@@ -26,11 +26,10 @@ from sourcebound.llm.prices import call_cost, load_prices
 from sourcebound.llm.provider import LlmResult, LlmSettings, SailClient
 from sourcebound.memo.draft import SectionContext, draft_section
 from sourcebound.memo.metric_table import build_table, rationale_keys, scorecard_context
-from sourcebound.memo.render import period_phrases
+from sourcebound.memo.render import passage_from_chunk, period_phrases
 from sourcebound.memo.retrieve import retrieve_for_section
 from sourcebound.memo.sections import SECTION_SPECS
 from sourcebound.paths import CONFIG_DIR, ENV_FILE, PROJECT_ROOT, REPORTS_DIR
-from sourcebound.retrieval.chunking import Chunk
 from sourcebound.retrieval.index import load_index
 from sourcebound.verify.checklist import memo_checklist
 from sourcebound.verify.claims import verify_claim
@@ -63,12 +62,6 @@ def _totals(records, prices: dict, prefix: str) -> c.CallTotals:
         cost_usd=round(sum(call_cost(prices, req["model"], r.usage) for req, r in chosen), 6),
         seconds=round(sum(r.seconds for _, r in chosen), 2),
     )
-
-
-def _passage(chunk: Chunk) -> c.Passage:
-    return c.Passage(text=chunk.text, section=chunk.section, form=chunk.form, filed=chunk.filed,
-                     period_end=chunk.period_end, accession=chunk.accession, url=chunk.url,
-                     start=chunk.start, end=chunk.end)
 
 
 def _claims_for(spec_id, outcome, ctx, client, judge_model, effort, max_tokens) -> list[c.MemoClaim]:
@@ -166,7 +159,7 @@ def generate_memo(ticker: str, client, *, settings: LlmSettings, prices: dict, w
         ticker=ticker, name=cm.name, memo_date=started.date(), model=writer, judge_model=judge,
         grade=card.grade, grade_provisional=card.provisional, sources=list(sources.values()), sections=sections,
         metrics={k: all_metrics[k] for k in sorted(referenced) if k in all_metrics},
-        passages={cid: _passage(ch) for cid, ch in sorted(cited_chunks.items())},
+        passages={cid: passage_from_chunk(ch) for cid, ch in sorted(cited_chunks.items())},
         trends=cm.trends, maturity_ladder=cm.maturity_ladder, scorecard=card,
         checklist=memo_checklist(cm.checklist, sections),
         run=c.RunInfo(run_id=run_id, started_at=started, writer_model=writer, judge_model=judge,

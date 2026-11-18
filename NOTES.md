@@ -724,6 +724,67 @@ A: Mostly because companies rarely tag their undrawn credit lines in XBRL, so th
 (Walmart has $15bn of undrawn lines in its text). The flag is honest about the data it has; the fix is a
 reviewed override with the figure quoted from the filing, which is a proposal, not something done silently.
 
+## 23. The live question box and the interface (sourcebound/api/, api/index.py, web/)
+
+### Concepts
+- **Static site plus one function**: almost everything on the site is a pre-built JSON file served from a CDN
+  (fast, free, cannot break at runtime). Only follow-up questions need a model at request time, so only
+  `/api/ask` runs code: one Python function on Vercel, started on demand ("serverless"). A warm instance keeps
+  the loaded metrics and search index in memory for the next request.
+- **Tool calling**: the model cannot read our files. It asks for a lookup by name with arguments
+  (`get_metric("net_leverage", "LTM")` or `search_filing("revolving credit facility", "liquidity")`); our
+  code runs it and sends back the result. The model never sees the ticker as an argument, so it cannot read
+  another company's data.
+- **A bounded loop**: at most three rounds of lookups (three per round), then one request for the answer. The
+  bounds cap cost and time (the answer must arrive within 60 seconds) and make behaviour predictable.
+- **Two kinds of request**: lookup turns carry tools and no answer format; the answer turn carries the answer
+  format and no tools. The capability probe found two of the three models invent numbers when both share a
+  request (decision D34).
+- **The same three checks as the memo**: placeholders for engine figures, quoted figures must be in a cited
+  passage the model was actually shown, then the judge. Live answers keep only "supported" claims, because no
+  person reviews them first; the removed ones are listed with the reason so nothing is hidden.
+- **HTTP status codes**: 400 means the request is wrong (fix it); 429 means "too many requests, slow down";
+  503 means "service unavailable, try later". Each comes with a plain sentence, never a stack trace.
+- **One contract, generated types**: contracts.py (Pydantic) is the single definition of every JSON shape. It
+  is exported as JSON Schema and turned into TypeScript types, so the interface cannot read a field that does
+  not exist; tests fail if either file is stale, and every published file is validated.
+- **Banker's rounding (round half to even)**: Python rounds an exact tie to the even digit (47.25 -> 47.2),
+  JavaScript's `toFixed` rounds it up (47.3). The interface copies Python's rule, and a test compares it with
+  every figure in the 15 memos; that test found HCA's $47.25 billion reading differently in two places.
+- **Hash routing**: page addresses like `#/c/WMT` are handled in the browser, so the static host serves one
+  `index.html` and needs no server rules.
+
+### Why it is built this way
+- The function imports neither pandas nor the EDGAR client (a test checks this): it reads only published files,
+  so it starts fast and cannot reach EDGAR.
+- The interface is deliberately plain: phase 9 replaces its look with the design handoff over the same data.
+- Measured once each on 18 November 2026 (GLM-5.3 as writer and judge): a Walmart revolver question took 18.3 s
+  (two lookup rounds, three claims kept, one removed by the judge); "Should I buy Carnival stock?" was refused as
+  out of scope in 2.5 s.
+
+**Q: Why not let the model answer follow-up questions freely?**
+A: Because its figures could be invented. It writes engine figures as placeholders that code fills in, may
+only quote figures from passages it looked up and cites, and every claim is judged; failing claims are removed
+and shown in a "removed" list.
+
+**Q: What happens if the model provider is slow or down?**
+A: Each model request times out at 45 seconds with one retry; the whole answer stops at 60 seconds with a plain
+503 ("took longer than 60 seconds"). Rate limiting by the provider becomes a 429 ("busy, try again in a few
+minutes"). Nothing else on the site depends on the provider.
+
+**Q: How do you keep the frontend and backend in sync?**
+A: The Pydantic models generate a JSON Schema, which generates TypeScript types. Tests fail if the committed
+schema or types are out of date, and every published file is validated against its model.
+
+**Q: Is the checklist sign-off an audit trail?**
+A: No. It is saved in one browser only. A real deployment would record who signed off what, and when, on a
+server, with the memo version.
+
+**Q: How would you stop someone running up the model bill?**
+A: A per-IP rate limit at the edge (a Vercel Firewall rule, about 10 requests per 10 minutes, added in phase
+10), short questions, capped output tokens and a bounded lookup loop. There is no login because this is a
+public demonstration.
+
 ---
 
 ## Still to write

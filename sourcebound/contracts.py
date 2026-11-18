@@ -12,9 +12,9 @@ Metrics are keyed "<metric_id>:<period>", e.g. "net_leverage:LTM", matching the 
 from __future__ import annotations
 
 from datetime import date, datetime
-from typing import Literal
+from typing import Annotated, Literal
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, StringConstraints
 
 SCHEMA_VERSION = "1"
 DISCLAIMER = (
@@ -27,7 +27,9 @@ Severity = Literal["info", "warning"]
 
 
 class Strict(BaseModel):
-    model_config = ConfigDict(extra="forbid")
+    # Published files are written with every field, defaults included, so the exported schema marks them all
+    # required (serialization mode); TypeScript then needs no "maybe missing" checks.
+    model_config = ConfigDict(extra="forbid", json_schema_serialization_defaults_required=True)
 
 
 class MetricInput(Strict):
@@ -338,7 +340,7 @@ class WatchState(Strict):
 
 
 class WatchFlag(BaseModel):
-    model_config = ConfigDict(extra="forbid", populate_by_name=True)
+    model_config = ConfigDict(extra="forbid", populate_by_name=True, json_schema_serialization_defaults_required=True)
 
     type: str
     severity: Literal["warning", "alert"]
@@ -418,3 +420,51 @@ class EvalsFile(Strict):
     generated_at: datetime
     source: str
     results: dict
+
+
+# ----- the live follow-up endpoint, POST /api/ask (phase 7) --------------------------------------------
+
+Question = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1, max_length=500)]
+
+
+class AskRequest(Strict):
+    """The request body. The ticker fixes which company's files the tools may read."""
+
+    ticker: Annotated[str, StringConstraints(strip_whitespace=True, to_upper=True, min_length=1, max_length=10)]
+    question: Question
+
+
+class ToolTrace(Strict):
+    """One tool call the model made, for the "what was looked up" list."""
+
+    round: int
+    tool: str
+    arguments: dict
+    result: str  # a one-line summary of what the tool returned
+
+
+class RemovedClaim(Strict):
+    """A claim that failed verification and was taken out of the answer."""
+
+    text: str  # rendered: placeholders replaced by engine values
+    verdict: Verdict
+    reason: str
+
+
+class AskResponse(Strict):
+    """The answer. Claims have the memo's shape; only claims the judge marked supported are kept."""
+
+    schema_version: str = SCHEMA_VERSION
+    ticker: str
+    question: str
+    status: Literal["ok", "out_of_scope"]
+    claims: list[MemoClaim]
+    removed: list[RemovedClaim]
+    metrics: dict[str, Metric]  # the metrics the kept claims show, with their lineage
+    passages: dict[str, Passage]  # the passages the kept claims cite
+    trace: list[ToolTrace]
+    model: str
+    judge_model: str
+    seconds: float
+    data_to: date | None  # the latest balance-sheet date in the metrics used
+    disclaimer: str = DISCLAIMER
