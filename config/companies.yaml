@@ -1,0 +1,20 @@
+# The 15 companies, approved 17 November 2026 (PLAN.md 4.12). US non-financial filers.
+# CIKs are not stored here: they are looked up at run time in SEC's company_tickers.json.
+# Sectors are the plan's own labels. Phase 1 uses WMT, VZ and GT only.
+
+companies:
+  - {ticker: WMT, name: Walmart, sector: Retail, golden: true}
+  - {ticker: VZ, name: Verizon, sector: Telecom, golden: true}
+  - {ticker: GT, name: Goodyear, sector: Autos, golden: true}
+  - {ticker: HCA, name: HCA Healthcare, sector: Healthcare, golden: true}
+  - {ticker: CCL, name: Carnival, sector: Leisure, golden: true}
+  - {ticker: MSFT, name: Microsoft, sector: Technology, golden: false}
+  - {ticker: PG, name: Procter & Gamble, sector: Consumer, golden: false}
+  - {ticker: XOM, name: ExxonMobil, sector: Energy, golden: false}
+  - {ticker: UNP, name: Union Pacific, sector: Transport, golden: false}
+  - {ticker: ORCL, name: Oracle, sector: Technology, golden: false}
+  - {ticker: KSS, name: Kohl's, sector: Retail, golden: false}
+  - {ticker: AAL, name: American Airlines, sector: Transport, golden: false}
+  - {ticker: CLF, name: Cleveland-Cliffs, sector: Materials, golden: false}
+  - {ticker: CZR, name: Caesars Entertainment, sector: Gaming, golden: false}
+  - {ticker: CYH, name: Community Health Systems, sector: Healthcare, golden: false}

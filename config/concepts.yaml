@@ -1,0 +1,196 @@
+# Concept fallback chains (PLAN.md 4.5). Starting points, to be revised only with approval.
+#
+# Each concept:
+#   label:     plain-English name
+#   kind:      flow (measured over a period: income statement, cash flow) or
+#              instant (measured on a date: balance sheet)
+#   required:  true  -> no fact means "not available", and ratios using it are "not available"
+#              false -> no fact means "assumed zero: not reported", logged and put on the checklist
+#   chain:     candidates in rank order (rank 1 first). The first candidate the company reports wins.
+#
+# A candidate is either
+#   - tag: <us-gaap tag>                       one reported fact, or
+#   - sum: [<component>, ...]                  the sum of several components.
+# A component is `tag: <us-gaap tag>` or `concept: <another concept>` (resolved through that concept's
+# own chain). A component marked `optional: true` counts as zero when not reported, and is logged.
+# A candidate resolves only if every non-optional component is reported for the period.
+# `flag` is a note shown beside every value resolved through that candidate.
+
+revenue:
+  label: Revenue
+  kind: flow
+  required: true
+  chain:
+    - tag: RevenueFromContractWithCustomerExcludingAssessedTax
+    - tag: Revenues
+    - tag: RevenueFromContractWithCustomerIncludingAssessedTax
+    - tag: SalesRevenueNet
+
+operating_income:
+  label: Operating income
+  kind: flow
+  required: true
+  chain:
+    - tag: OperatingIncomeLoss
+    # "Pre-tax income from continuing operations" has two common us-gaap tags; both are tried.
+    - sum:
+        - tag: IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest
+        - concept: interest_expense
+      flag: "derived: pre-tax income from continuing operations plus interest expense"
+    - sum:
+        - tag: IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments
+        - concept: interest_expense
+      flag: "derived: pre-tax income from continuing operations plus interest expense"
+
+d_and_a:
+  label: Depreciation and amortisation
+  kind: flow
+  required: true
+  chain:
+    - tag: DepreciationDepletionAndAmortization
+    - tag: DepreciationAndAmortization
+    - tag: DepreciationAmortizationAndAccretionNet
+    - sum:
+        - tag: Depreciation
+        - tag: AmortizationOfIntangibleAssets
+
+interest_expense:
+  label: Interest expense
+  kind: flow
+  required: true
+  chain:
+    - tag: InterestExpense
+    - tag: InterestExpenseNonoperating
+    - tag: InterestExpenseDebt
+    - tag: InterestAndDebtExpense
+    - tag: InterestPaidNet
+      flag: "proxy: cash interest paid, not interest expense"
+
+short_term_debt:
+  label: Short-term debt (short-term borrowings plus current portion of long-term debt)
+  kind: instant
+  required: true
+  chain:
+    - tag: DebtCurrent
+    - sum:
+        - tag: LongTermDebtCurrent
+        - tag: ShortTermBorrowings
+          optional: true
+        - tag: CommercialPaper
+          optional: true
+
+total_debt:
+  label: Total debt
+  kind: instant
+  required: true
+  chain:
+    - tag: DebtLongtermAndShorttermCombinedAmount
+    - sum:
+        - tag: LongTermDebtNoncurrent
+        - concept: short_term_debt
+    - sum:
+        - tag: LongTermDebt
+        - tag: ShortTermBorrowings
+          optional: true
+    - sum:
+        - tag: LongTermDebtAndCapitalLeaseObligations
+        - tag: LongTermDebtAndCapitalLeaseObligationsCurrent
+        - tag: ShortTermBorrowings
+          optional: true
+
+cash:
+  label: Cash and cash equivalents
+  kind: instant
+  required: true
+  chain:
+    - tag: CashAndCashEquivalentsAtCarryingValue
+    - tag: CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents
+      flag: "includes restricted cash"
+
+short_term_investments:
+  label: Short-term investments
+  kind: instant
+  required: false
+  # The plan lists three tags joined by "or". They can overlap (available-for-sale debt securities are
+  # usually part of short-term investments), so they are a chain: the first one reported is used.
+  chain:
+    - tag: ShortTermInvestments
+    - tag: MarketableSecuritiesCurrent
+    - tag: AvailableForSaleSecuritiesDebtSecuritiesCurrent
+
+cfo:
+  label: Cash from operations
+  kind: flow
+  required: true
+  chain:
+    - tag: NetCashProvidedByUsedInOperatingActivities
+    - tag: NetCashProvidedByUsedInOperatingActivitiesContinuingOperations
+
+capex:
+  label: Capital expenditure
+  kind: flow
+  required: true
+  chain:
+    - tag: PaymentsToAcquirePropertyPlantAndEquipment
+    - tag: PaymentsToAcquireProductiveAssets
+    - tag: PaymentsForCapitalImprovements
+
+# ----- Used from phase 2 (listed now so the tag-discovery report covers them) ------------------------
+
+dividends:
+  label: Dividends paid
+  kind: flow
+  required: false
+  chain:
+    - tag: PaymentsOfDividends
+    - tag: PaymentsOfDividendsCommonStock
+    - tag: PaymentsOfOrdinaryDividends
+
+undrawn_revolver:
+  label: Undrawn revolving credit capacity
+  kind: instant
+  required: false
+  chain:
+    - tag: LineOfCreditFacilityRemainingBorrowingCapacity
+
+maturity_year_1:
+  label: Debt maturing in the next twelve months
+  kind: instant
+  required: true
+  chain:
+    - tag: LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths
+
+maturity_year_2:
+  label: Debt maturing in year two
+  kind: instant
+  required: true
+  chain:
+    - tag: LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo
+
+maturity_year_3:
+  label: Debt maturing in year three
+  kind: instant
+  required: true
+  chain:
+    - tag: LongTermDebtMaturitiesRepaymentsOfPrincipalInYearThree
+
+maturity_year_4:
+  label: Debt maturing in year four
+  kind: instant
+  required: true
+  chain:
+    - tag: LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFour
+
+maturity_year_5:
+  label: Debt maturing in year five
+  kind: instant
+  required: true
+  chain:
+    - tag: LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFive
+
+maturity_after_year_5:
+  label: Debt maturing after year five
+  kind: instant
+  required: true
+  chain:
+    - tag: LongTermDebtMaturitiesRepaymentsOfPrincipalAfterYearFive

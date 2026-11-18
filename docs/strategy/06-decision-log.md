@@ -63,3 +63,41 @@ inventing one.
 - **Rejected:** none recorded in the plan.
 
 ## Made while building
+
+### D11. EDGAR client on httpx with a disk cache that mirrors the URL (phase 1)
+- **Why:** httpx has a built-in mock transport, so throttle, retry and cache behaviour is tested with no
+  network. Mirroring the URL makes the cache inspectable by hand; a sidecar file records the fetch time,
+  which becomes the data date in reports.
+- **Rejected:** `requests` (needs an extra mocking library); the standard-library `urllib` (no bundled
+  certificates on this machine's Python, and harder to mock).
+
+### D12. Plain dataclasses in the engine instead of pandas for phase 1
+- **Why:** a company has a few thousand facts; explicit loops over small dataclasses are easier to walk an
+  interviewer through than DataFrame operations. pandas stays in the stack for tabular work where it earns
+  its place (coverage reports, evals).
+- **Rejected:** loading company facts into a DataFrame.
+
+### D13. Periods anchored on the 10-K's report date and identified by fact dates
+- **Why:** the submissions API states the period each filing covers; fact start and end dates are the
+  only reliable description of a fact's period.
+- **Rejected:** the API's fy/fp fields (they describe the filing, not the fact); the frames API
+  (calendar-aligned to within 30 days, which blurs non-calendar fiscal years).
+
+### D14. One tag per LTM value
+- **Why:** mixing tags across FY0, current YTD and prior YTD could add numbers with different scopes.
+- **Rejected:** falling back window by window.
+
+### D15. Debt reconciliation compares every total-debt candidate, warning above 5%
+- **Why:** a tag can cover less than its name suggests. On real data this caught Walmart's rank-1 tag
+  omitting short-term borrowings. The check changes no value; it puts the gap in front of the reviewer.
+- **Rejected:** trusting rank 1 silently; auto-switching to the larger candidate (that would be a silent
+  substitution).
+
+### D16. Phase-1 reports written to reports/ and committed
+- **Why:** the hand check needs files that can be diffed across runs. reports/ is not in the plan's
+  layout; it holds human-readable check reports, separate from data/published/ (the site's JSON).
+
+### D17. Test fixtures are trimmed captures plus the script that made them
+- **Why:** the full responses for three companies are about 13 MB. The capture keeps every chain tag from
+  2021 on, unmodified, with the source URL and fetch time; the script makes the trimming reproducible.
+- **Rejected:** committing full responses; hand-written fixtures of real companies (not traceable).

@@ -1,0 +1,24 @@
+{
+ "_capture": {
+  "source_url": "https://www.sec.gov/files/company_tickers.json",
+  "fetched_at": "2026-11-18T01:51:39+00:00",
+  "trimmed": "rows for WMT, VZ, GT"
+ },
+ "rows": {
+  "10": {
+   "cik_str": 104169,
+   "ticker": "WMT",
+   "title": "Walmart Inc."
+  },
+  "76": {
+   "cik_str": 732712,
+   "ticker": "VZ",
+   "title": "VERIZON COMMUNICATIONS INC"
+  },
+  "2527": {
+   "cik_str": 42582,
+   "ticker": "GT",
+   "title": "GOODYEAR TIRE & RUBBER CO /OH/"
+  }
+ }
+}
