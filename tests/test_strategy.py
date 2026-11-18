@@ -107,3 +107,20 @@ def test_published_about_file_matches_the_documents_in_the_repo():
 
 def test_code_spans_are_names_not_figures():
     assert r.stray_numbers("See `test_bad_requests_get_400_with_a_plain_message` and 7 others.", []) == ["7"]
+
+
+def test_results_file_is_current_and_carries_no_typed_figures():
+    from sourcebound.paths import PROJECT_ROOT
+    from sourcebound.pipeline.build_strategy import render_results
+
+    text = render_results()  # raises if the template types a figure by hand
+    assert (PROJECT_ROOT / "RESULTS.md").read_text() == text, "run: uv run python -m sourcebound.pipeline.build_strategy"
+    for words in ("pending (n = 0)", "uv run python -m sourcebound.evals.report", "zai-org/GLM-5.3"):
+        assert words in text
+
+
+def test_about_page_carries_the_model_card_and_limitations():
+    from sourcebound.pipeline.build_strategy import about_documents
+
+    reference = [d.id for d in about_documents() if d.group == "reference"]
+    assert reference == ["model_card", "limitations"]

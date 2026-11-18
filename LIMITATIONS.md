@@ -103,17 +103,16 @@ Seeded from PLAN.md section 4.15; later items were added while building, with th
 
 ## Added in phase 7
 
-- `/api/ask` has no rate limit or login until the Vercel Firewall rule is added (phase 10); until then anyone
-  with the URL could spend Sail credit.
+- `/api/ask` has no login. Since phase 10 a Vercel Firewall rule limits it per IP address (see phase 10 below).
 - When an answer passes the 60-second limit the caller gets a 503, but model requests already started run on
   (up to 45 seconds each) and are billed.
 - The follow-up judge is the provisional judge (GLM-5.3), the same model as the provisional writer.
 - The maturity ladder is as of the last 10-K. Its first bucket keeps the XBRL tag's wording, "debt maturing in
   the next twelve months", meaning the twelve months after that fiscal year-end; an answer can read it as twelve
   months from today, and the judge accepted that reading in the smoke test (Walmart, maturity_year_1:FY0).
-- Not verified until a preview deploy: whether Vercel's Python runtime installs from pyproject.toml without
-  the dev group, whether the rewrite keeps the /api/... path FastAPI routes on, and whether the 21 MB search
-  index is bundled with the function.
+- Checked on the live deploy (18 November 2026): Vercel installs "required dependencies from uv.lock" (its
+  build log does not mention the dev group); the rewrite keeps the /api/... path; the search index is bundled
+  (a live question searched the filings).
 - The results screen reads evals.json's untyped `results` defensively. (Phase 7's plain styling and the missing
   watchlist change column were resolved in phase 9.)
 - Checklist sign-off lives in one browser's localStorage: it is not an audit trail.
@@ -125,7 +124,8 @@ Seeded from PLAN.md section 4.15; later items were added while building, with th
   with small samples.
 - The model recommendation is provisional until the claim labels and judge calibration exist.
 - The decision log is written by hand and records settings and dated one-off observations; unlike artifacts
-  1 to 5 it is not generated from results files, so the automatic number check does not cover it.
+  1 to 5 it is not generated from results files, so the automatic number check does not cover it. The author
+  accepted this on 18 November 2026.
 
 ## Added in phase 9
 
@@ -143,3 +143,21 @@ Seeded from PLAN.md section 4.15; later items were added while building, with th
 - watchlist.json gained its change field by an offline rebuild from the published state and metrics, with
   checked_at unchanged and no EDGAR request; the next daily run writes it the normal way.
 
+## Added in phase 10
+
+- The site is at sourcebound-app.vercel.app (sourcebound.vercel.app belongs to someone else's site). Vercel makes
+  a project's first deployment production, so the planned preview check happened on production instead.
+- Preview deployments are behind Vercel Authentication; only the production addresses are public.
+- The rate limit counts per IP address: people sharing one address (an office, a campus) share its ten questions
+  per ten minutes, and someone rotating addresses can exceed it. The small prepaid Sail balance remains the
+  backstop.
+- The frontend's build and test tools (vite, vitest, json-schema-to-typescript) use picomatch 4.0.7, which has a
+  high-severity advisory (GHSA-fc5q-39xc-vjpf, slow matching on crafted glob patterns) and no fixed version as of
+  18 November 2026. Nothing shipped to the browser uses it (`npm audit --omit=dev` finds none), and the tools
+  match only this project's own patterns.
+- Until the Vercel GitHub app is given access to the repository, pushes do not deploy by themselves and the
+  deploy hook cannot be created; deploys are made from the CLI.
+- Until the EDGAR_USER_AGENT secret is added to the repository, the daily job cannot reach EDGAR, so its
+  schedule stays off.
+- The public commit history was rewritten before the first push to use GitHub's noreply address; commit IDs in
+  stop reports written before that no longer exist.

@@ -156,3 +156,11 @@ were added while building, with the phase that added them.
 70. The stale banner's "figures as of" date is the latest period end among the memo's filings.
 71. The light theme is the default; a viewer's choice of theme is remembered in their browser.
 
+## Added in phase 10
+
+72. The follow-up box allows 10 questions per 10 minutes per IP address, counted in fixed windows; the excess
+    gets HTTP 429, which the site shows as "Rate limited".
+73. The server needs only the five SAIL_* settings; it never calls EDGAR, so EDGAR_USER_AGENT is not on Vercel.
+    The API key is stored as a Vercel secret (hidden once saved); the other four are plain settings.
+74. RESULTS.md holds only figures measured by code, cost and timing, and (once entered) the author's labels and
+    hand-checked values. The judge's verdict shares are estimates and are left out.

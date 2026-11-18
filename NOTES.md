@@ -956,3 +956,58 @@ against the handoff.
 A: The site is static files. With hash routes the host serves one index.html for every page and needs no
 rewrite rules; the handoff's path names (`/memo/:ticker`, `/about/:doc`) are kept after the `#`.
 
+## 27. Deployment and operations (vercel.json, .github/workflows/, phase 10)
+
+The site runs on Vercel at https://sourcebound-app.vercel.app. The pages and the published JSON are static files;
+`/api/*` goes to one Python function (the FastAPI app), which reads the published files and calls Sail.
+
+### Concepts in plain English
+- **Static site and function**: most of the site is plain files served from a CDN, which is fast and cannot
+  break. Only the question box needs code running on a server, and that code runs per request as a "function".
+- **Environment variables**: settings handed to the server at run time instead of written into the code. The
+  Sail API key is one, stored by Vercel as a secret, so it never appears in the repository or the browser.
+- **Preview and production**: each deploy gets its own private address (a preview, behind a Vercel login); the
+  production address is the public one. Vercel made this project's first deploy production directly.
+- **Rate limit at the edge**: the firewall in front of the site counts requests to `/api/ask` per IP address in
+  ten-minute windows. The eleventh in a window gets HTTP 429 ("too many requests") before the function runs, so
+  it costs nothing.
+- **Deploy hook**: a secret URL that tells Vercel to rebuild. The daily job calls it after committing new data,
+  because on the Hobby plan a bot's commit does not deploy by itself.
+- **Schedule (cron)**: a GitHub Actions workflow that runs every day at a fixed time to check EDGAR for new
+  filings.
+- **Dependency audit**: `npm audit` compares installed packages with known security advisories. What matters is
+  whether the affected package reaches users (here, none does) or only the build tools.
+
+### Why it is built this way
+- The function reads only published files and never calls EDGAR, so the server holds one secret (the Sail key)
+  and cannot be used to scrape EDGAR.
+- The rate limit sits in the firewall, not in the code, so blocked requests never start a model call.
+- Every figure in RESULTS.md is filled in by code from the results file; the judge's verdict shares are left out
+  because they are estimates.
+- Before the repository went public, the commit history was rewritten to GitHub's noreply address so the
+  author's email is not published.
+
+**Q: How do you keep the API key secret?**
+A: It lives only in the local .env (gitignored, never uploaded) and in Vercel's encrypted settings, marked as a
+secret. The browser never calls Sail; it calls our function. CI fails if the built site contains anything that
+looks like a key, and before the first public push every commit was scanned for it.
+
+**Q: What stops someone running up the model bill?**
+A: A firewall rule allows ten questions per ten minutes per IP address, questions are capped at 500 characters,
+lookups and output are bounded, and each answer has a time limit. The last line of defence is a small prepaid
+balance at the provider with auto-recharge off.
+
+**Q: How does new data reach the live site?**
+A: The daily GitHub Action checks EDGAR, recomputes and commits changed files, then calls a Vercel deploy hook,
+which rebuilds the site with the new data. Nothing is recomputed on the live server.
+
+**Q: What did you check after deploying?**
+A: That pages and data load, that the server found its settings, that bad requests get a plain 400, that a real
+question is answered with only supported claims, that an off-topic one is refused, and that the eleventh request
+in ten minutes gets 429.
+
+**Q: The npm audit shows high-severity vulnerabilities. Is the site exposed?**
+A: No. All of them trace to one advisory in a pattern-matching library used only by the build and test tools,
+which match this project's own patterns. The packages shipped to the browser have no known advisories. There is
+no fixed version yet; downgrading the tools would be worse.
+

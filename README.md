@@ -3,8 +3,11 @@
 A credit-analysis tool that drafts a credit memo on a US public company from its SEC filings and proves
 every figure against source data. Educational project. Not investment advice.
 
-Status: phase 9 of 10 (verified memos, model evaluation, daily watchlist, the live follow-up API, the strategy
-documents and the designed interface; not yet deployed). See PLAN.md.
+Live: **https://sourcebound-app.vercel.app**
+
+Status: all ten phases built and deployed (verified memos, model evaluation, the daily watchlist, the live
+follow-up API, the strategy documents and the designed interface). Figures that need the author's labels and
+hand-checked values are marked pending. See PLAN.md, RESULTS.md and MODEL_CARD.md.
 
 ## Setup
 
@@ -48,8 +51,24 @@ cd web && npm run dev                                       # http://localhost:5
 Frontend checks (in `web/`): `npm run gen:types` (TypeScript types from schema.json), `npm run check:types`,
 `npm run typecheck`, `npm test`, `npm run build` (writes `web/dist/`, with the published JSON under `dist/data`).
 
-Deploy layout (not yet deployed): `vercel.json` builds the Vite app as static files and runs `api/index.py`
-(the FastAPI app) as one Python function; `/api/*` is rewritten to it.
+## Deploy
+
+`vercel.json` builds the Vite app as static files (with the published JSON under `/data`) and runs
+`api/index.py`, the FastAPI app, as one Python function; `/api/*` is rewritten to it. The Vercel project is
+`sourcebound`.
+
+```bash
+npx vercel@65.11.0 deploy --prod     # deploy this folder to production (pushes to main also deploy once
+                                     #   the Vercel GitHub app can see the repository)
+npx vercel@65.11.0 env ls            # server settings: SAIL_BASE_URL, SAIL_API_KEY (secret), SAIL_MODEL_WRITER,
+                                     #   SAIL_MODEL_JUDGE, SAIL_SERVICE_TIER
+npx vercel@65.11.0 firewall rules inspect "Rate limit follow-up questions"   # 10 per 10 minutes per IP on /api/ask
+curl https://sourcebound-app.vercel.app/api/health
+```
+
+The daily watchlist (`.github/workflows/watchlist.yml`) needs two repository secrets: `EDGAR_USER_AGENT` (your
+name and email, as in `.env`) and `VERCEL_DEPLOY_HOOK` (from `npx vercel@65.11.0 deploy-hooks create`). It can
+also be run by hand from the Actions tab.
 
 Model calls need SAIL_* variables in `.env` (see `.env.example`); the key is never printed or committed.
 
@@ -65,4 +84,5 @@ the cache. Delete `data/raw/` to download fresh data.
 - PLAN.md: the plan. CLAUDE.md: ground rules.
 - NOTES.md: study notes, concepts and interview questions.
 - evals/README.md: what you fill in by hand (golden sheets, agency ratings).
+- RESULTS.md: measured results (generated). MODEL_CARD.md: intended use, limits and the review procedure.
 - ASSUMPTIONS.md, LIMITATIONS.md, docs/strategy/06-decision-log.md.

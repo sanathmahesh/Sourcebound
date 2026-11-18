@@ -402,3 +402,30 @@ inventing one.
 - **Why:** the plan says to implement the design over the data contract without changing it, and never to show
   invented or false content.
 
+### D58. Deployed to Vercel from the CLI, with the rate limit at the edge (phase 10)
+- **Decision:** a Vercel project `sourcebound` on the author's Hobby plan, deployed with Vercel CLI 65.11.0
+  (the newest release at least two weeks old on 18 November 2026). Five server settings (SAIL_*), the API key
+  stored as a secret. A firewall rule on `/api/ask`: 10 requests per 600-second fixed window per IP address,
+  then HTTP 429; the author approved publishing it. Address: sourcebound-app.vercel.app, the author's choice
+  because sourcebound.vercel.app is taken.
+- **Why:** the plan's phase 10; the CLI could do every step (environment variables, firewall, domains) and its
+  facts were re-read on 18 November 2026: Hobby allows one rate-limit rule per project and functions up to
+  300 seconds.
+- **Checked live:** pages and data load; `/api/health` reports the settings present; bad requests get 400; a
+  question was answered in about 15 seconds with every kept claim supported; an out-of-scope question was refused;
+  the 11th request in a window got 429.
+- **Rejected:** a rate limit inside the function (it would still run, and bill, for each request).
+
+### D59. The public history uses GitHub's noreply address
+- **Decision:** before the first push to the public repository, the author chose to replace the personal email
+  on all commits and on the `grid-v1` tag with GitHub's noreply address; future commits in this repository use it
+  too. File contents are unchanged (the final tree is identical).
+- **Why:** a public commit history would otherwise publish the author's personal email.
+
+### D60. RESULTS.md is generated, like the strategy artifacts; the model card joins the About page
+- **Decision:** RESULTS.md is rendered from docs/templates/RESULTS.md with figures from results.json, and the
+  build fails on any typed figure. It holds the plan's four measures per model (three pending the author's labels
+  and hand-checked values) plus two code checks and the model time. MODEL_CARD.md is published on the About page
+  with the limitations, as the design brief lists.
+- **Why:** the plan allows RESULTS.md only measured numbers with sample size, date, model ID and command; filling
+  them by code makes a mistyped figure impossible.

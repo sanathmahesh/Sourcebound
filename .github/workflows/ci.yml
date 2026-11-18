@@ -28,3 +28,6 @@ jobs:
       - run: npm run typecheck
       - run: npm test
       - run: npm run build
+      - name: No secrets in the built site (a value given to a secret's name, or a key- or token-shaped string)
+        run: |
+          ! grep -rIlE '(SAIL_API_KEY|EDGAR_USER_AGENT).?[[:space:]]*[=:][[:space:]]*[^[:space:]].{7,}|Bearer [A-Za-z0-9._-]{20,}|sk-[A-Za-z0-9_-]{20,}' dist

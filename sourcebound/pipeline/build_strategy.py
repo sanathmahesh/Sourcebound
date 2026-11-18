@@ -5,8 +5,9 @@ Run:  uv run python -m sourcebound.pipeline.build_strategy
 1. docs/strategy/templates/*.md -> docs/strategy/*.md, figures filled from evals/results/results.json and the
    timing log (sourcebound/strategy/render.py).
 2. docs/method.md, generated from config/grid.yaml and the engine's formulas.
-3. data/published/about.json: the six artifacts (the decision log is hand-written), the method and the
-   limitations, as Markdown for the About page.
+3. RESULTS.md, from docs/templates/RESULTS.md: measured results only, every figure from results.json.
+4. data/published/about.json: the six artifacts (the decision log is hand-written), the method, the model card
+   and the limitations, as Markdown for the About page.
 No model is called.
 """
 
@@ -26,6 +27,10 @@ from sourcebound.strategy.timings import read_timings
 PUBLISHED_DIR = PROJECT_ROOT / "data" / "published"
 METHOD_FILE = PROJECT_ROOT / "docs" / "method.md"
 METHOD_EXAMPLE = "WMT"  # any company: the formula strings are the same for all
+RESULTS_TEMPLATE = PROJECT_ROOT / "docs" / "templates" / "RESULTS.md"
+RESULTS_OUT = PROJECT_ROOT / "RESULTS.md"
+RESULTS_HEADER = ("<!-- Generated from docs/templates/RESULTS.md by "
+                  "`uv run python -m sourcebound.pipeline.build_strategy`. Edit the template, not this file. -->\n\n")
 
 
 def render_artifacts() -> dict[str, str]:
@@ -42,6 +47,15 @@ def render_artifacts() -> dict[str, str]:
     return rendered
 
 
+def render_results() -> str:
+    """RESULTS.md: measured figures only, each from results.json; raises if one would be typed by hand."""
+    text, spans = r.render(RESULTS_TEMPLATE.read_text(), json.loads(r.RESULTS_FILE.read_text()), [])
+    stray = r.stray_numbers(text, spans)
+    if stray:
+        raise ValueError(f"RESULTS.md: figures typed by hand: {stray}")
+    return RESULTS_HEADER + text
+
+
 def method_text(published_dir: Path = PUBLISHED_DIR) -> str:
     example = c.CompanyMetrics.model_validate_json(
         (published_dir / "companies" / METHOD_EXAMPLE / "metrics.json").read_text())
@@ -54,7 +68,8 @@ def _title(markdown: str) -> str:
 
 def about_documents() -> list[c.AboutDocument]:
     sources = [(path, "strategy") for path in sorted(r.STRATEGY_DIR.glob("0*.md"))]
-    sources += [(METHOD_FILE, "method"), (PROJECT_ROOT / "LIMITATIONS.md", "reference")]
+    sources += [(METHOD_FILE, "method"), (PROJECT_ROOT / "MODEL_CARD.md", "reference"),
+                (PROJECT_ROOT / "LIMITATIONS.md", "reference")]
     documents = []
     for path, group in sources:
         markdown = path.read_text()
@@ -69,6 +84,8 @@ def main() -> None:
         print(f"wrote docs/strategy/{name}")
     METHOD_FILE.write_text(method_text())
     print("wrote docs/method.md")
+    RESULTS_OUT.write_text(render_results())
+    print("wrote RESULTS.md")
     about = c.AboutFile(generated_at=datetime.now(timezone.utc).replace(microsecond=0), documents=about_documents())
     (PUBLISHED_DIR / "about.json").write_text(about.model_dump_json(indent=1) + "\n")
     print(f"wrote data/published/about.json ({len(about.documents)} documents)")
