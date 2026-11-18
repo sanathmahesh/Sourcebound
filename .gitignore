@@ -1,0 +1,29 @@
+# Secrets: never commit
+.env
+.env.*
+!.env.example
+
+# EDGAR download cache (re-creatable; see sourcebound/edgar/client.py)
+data/raw/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.hypothesis/
+*.egg-info/
+build/
+dist/
+
+# Node / frontend
+node_modules/
+web/dist/
+
+# Editors and OS
+.DS_Store
+.vscode/
+.idea/
+
+# Vercel
+.vercel/
