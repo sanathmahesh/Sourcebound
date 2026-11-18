@@ -4,7 +4,7 @@
  "name": "CLEVELAND-CLIFFS INC.",
  "cik": 764065,
  "sector": "Materials",
- "generated_at": "2026-11-18T03:19:49Z",
+ "generated_at": "2026-11-18T03:38:19Z",
  "data_fetched_at": "2026-11-18T02:56:17+00:00",
  "sources": [
   {
@@ -4352,7 +4352,7 @@
    "kind": "assumed_zero",
    "concept": "finance_lease_liabilities",
    "period": "LTM",
-   "message": "assumed zero: not reported (rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityCurrent not reported at 2026-09-30; rank 2 FinanceLeaseLiability: FinanceLeaseLiability not reported at 2026-09-30)",
+   "message": "assumed zero: not reported (rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityNoncurrent not reported at 2026-09-30; rank 2 FinanceLeaseLiability: FinanceLeaseLiability not reported at 2026-09-30)",
    "severity": "info",
    "subject": "finance_lease_liabilities"
   },

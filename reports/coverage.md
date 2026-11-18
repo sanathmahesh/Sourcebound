@@ -1,6 +1,6 @@
 # Coverage report
 
-Generated 2026-11-18 03:19 UTC. For each company and concept: the fallback rank used in FY-2·FY-1·FY0·LTM.
+Generated 2026-11-18 03:38 UTC. For each company and concept: the fallback rank used in FY-2·FY-1·FY0·LTM.
 `1` = first-choice tag, `2`+ = a fallback (logged), `0` = assumed zero because not reported (on the
 reviewer checklist), `–` = not available. Chains are in config/concepts.yaml.
 
@@ -41,7 +41,7 @@ reviewer checklist), `–` = not available. Chains are in config/concepts.yaml.
 | KSS | 2 | – | – | – | – | – | 0 | 1 |
 | AAL | 1 | 1 | 1 | 1 | 1 | 1 | 0 | 1 |
 | CLF | 1 | 1 | 1 | 1 | 1 | 1 | 0 | 1 |
-| CZR | 1 | 1 | 1 | 1 | 1 | 1 | 0 | 2 |
+| CZR | 1 | 1 | 1 | 1 | 1 | 1 | 0 | 1 |
 | CYH | 1 | 1 | 1 | 1 | 1 | 1 | 0 | 1 |
 
 ## Ratios, FY-2·FY-1·FY0·LTM

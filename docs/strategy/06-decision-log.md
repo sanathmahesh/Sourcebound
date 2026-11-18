@@ -185,3 +185,10 @@ inventing one.
 - **Decision:** generated blank from the latest 10-K, never overwritten once they exist; a finance-lease row
   (D18) and derived formulas identical to the engine's definitions.
 - **Why:** the author's values must be independent of the tool's, and both must measure the same thing.
+
+### D27. Chain revision 3: finance-lease current portion optional (approved 17 November 2026)
+- **Decision:** in the finance-lease sum, FinanceLeaseLiabilityCurrent is optional (assumed zero, logged).
+- **Why:** Caesars tags about $13.1bn of non-current finance-lease liabilities with no current-portion tag,
+  so they were left out of its debt while their interest was in its interest expense. Tested on all 15
+  companies before approval: only Caesars changes (LTM debt $11,558m -> $24,746m; debt / EBITDA 3.6x ->
+  7.7x; SB-4 -> SB-5). Chain changes do not touch the frozen grid (grid-v1).

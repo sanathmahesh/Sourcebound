@@ -6,6 +6,7 @@
 # cash-paid proxy; amortisation optional beside depreciation; more short-term-debt tags, and short-term
 # debt assumed zero when nothing is reported; Oracle's notes-payable debt; balance-sheet current portion
 # as a year-1 maturity fallback.
+# Revision 3, approved 17 November 2026 (D27): the finance-lease current portion is optional.
 #
 # Each concept:
 #   label:     plain-English name
@@ -160,8 +161,10 @@ finance_lease_liabilities:
   kind: instant
   required: false
   chain:
+    # The current portion is optional (approved, D27): Caesars tags only the non-current part.
     - sum:
         - tag: FinanceLeaseLiabilityCurrent
+          optional: true
         - tag: FinanceLeaseLiabilityNoncurrent
     - tag: FinanceLeaseLiability
 

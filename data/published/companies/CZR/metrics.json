@@ -4,7 +4,7 @@
  "name": "Caesars Entertainment, Inc.",
  "cik": 1590895,
  "sector": "Gaming",
- "generated_at": "2026-11-18T03:19:49Z",
+ "generated_at": "2026-11-18T03:38:19Z",
  "data_fetched_at": "2026-11-18T02:56:19+00:00",
  "sources": [
   {
@@ -726,7 +726,7 @@
    "metric_id": "total_debt",
    "period": "FY-2",
    "label": "Total debt (borrowings plus finance-lease liabilities)",
-   "value": 12366000000.0,
+   "value": 25048000000.0,
    "unit": "USD",
    "status": "ok",
    "formula": "rank 1: LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities]",
@@ -765,9 +765,9 @@
     {
      "label": "Finance-lease liabilities (current plus non-current)",
      "concept": "finance_lease_liabilities",
-     "tag": "FinanceLeaseLiability",
-     "fallback_rank": 2,
-     "value": 77000000.0,
+     "tag": "FinanceLeaseLiabilityNoncurrent",
+     "fallback_rank": 1,
+     "value": 12759000000.0,
      "unit": "USD",
      "period": "at 2023-12-31",
      "role": "balance sheet",
@@ -783,7 +783,7 @@
    "metric_id": "total_debt",
    "period": "FY-1",
    "label": "Total debt (borrowings plus finance-lease liabilities)",
-   "value": 12210000000.0,
+   "value": 25041000000.0,
    "unit": "USD",
    "status": "ok",
    "formula": "rank 1: LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities]",
@@ -822,9 +822,9 @@
     {
      "label": "Finance-lease liabilities (current plus non-current)",
      "concept": "finance_lease_liabilities",
-     "tag": "FinanceLeaseLiability",
-     "fallback_rank": 2,
-     "value": 68000000.0,
+     "tag": "FinanceLeaseLiabilityNoncurrent",
+     "fallback_rank": 1,
+     "value": 12899000000.0,
      "unit": "USD",
      "period": "at 2024-12-31",
      "role": "balance sheet",
@@ -840,7 +840,7 @@
    "metric_id": "total_debt",
    "period": "FY0",
    "label": "Total debt (borrowings plus finance-lease liabilities)",
-   "value": 11931000000.0,
+   "value": 24880000000.0,
    "unit": "USD",
    "status": "ok",
    "formula": "rank 1: LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities]",
@@ -879,17 +879,17 @@
     {
      "label": "Finance-lease liabilities (current plus non-current)",
      "concept": "finance_lease_liabilities",
-     "tag": "FinanceLeaseLiability",
-     "fallback_rank": 2,
-     "value": 147000000.0,
+     "tag": "FinanceLeaseLiabilityNoncurrent",
+     "fallback_rank": 1,
+     "value": 13096000000.0,
      "unit": "USD",
      "period": "at 2025-12-31",
      "role": "balance sheet",
      "sign": 1,
-     "form": "10-K",
-     "accession": "0001590895-26-000011",
-     "filed": "2026-02-17",
-     "url": "https://www.sec.gov/Archives/edgar/data/1590895/000159089526000011/0001590895-26-000011-index.htm"
+     "form": "10-Q",
+     "accession": "0001590895-26-000033",
+     "filed": "2026-10-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/1590895/000159089526000033/0001590895-26-000033-index.htm"
     }
    ]
   },
@@ -897,7 +897,7 @@
    "metric_id": "total_debt",
    "period": "LTM",
    "label": "Total debt (borrowings plus finance-lease liabilities)",
-   "value": 11558000000.0,
+   "value": 24746000000.0,
    "unit": "USD",
    "status": "ok",
    "formula": "rank 1: LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities]",
@@ -924,6 +924,21 @@
      "tag": "LongTermDebtCurrent",
      "fallback_rank": 2,
      "value": 114000000.0,
+     "unit": "USD",
+     "period": "at 2026-09-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0001590895-26-000033",
+     "filed": "2026-10-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/1590895/000159089526000033/0001590895-26-000033-index.htm"
+    },
+    {
+     "label": "Finance-lease liabilities (current plus non-current)",
+     "concept": "finance_lease_liabilities",
+     "tag": "FinanceLeaseLiabilityNoncurrent",
+     "fallback_rank": 1,
+     "value": 13188000000.0,
      "unit": "USD",
      "period": "at 2026-09-30",
      "role": "balance sheet",
@@ -1654,26 +1669,26 @@
    "metric_id": "finance_lease_liabilities",
    "period": "FY0",
    "label": "Finance-lease liabilities (current plus non-current)",
-   "value": 147000000.0,
+   "value": 13096000000.0,
    "unit": "USD",
    "status": "ok",
-   "formula": "rank 2: FinanceLeaseLiability",
+   "formula": "rank 1: FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent",
    "notes": [],
    "inputs": [
     {
      "label": "Finance-lease liabilities (current plus non-current)",
      "concept": "finance_lease_liabilities",
-     "tag": "FinanceLeaseLiability",
-     "fallback_rank": 2,
-     "value": 147000000.0,
+     "tag": "FinanceLeaseLiabilityNoncurrent",
+     "fallback_rank": 1,
+     "value": 13096000000.0,
      "unit": "USD",
      "period": "at 2025-12-31",
      "role": "balance sheet",
      "sign": 1,
-     "form": "10-K",
-     "accession": "0001590895-26-000011",
-     "filed": "2026-02-17",
-     "url": "https://www.sec.gov/Archives/edgar/data/1590895/000159089526000011/0001590895-26-000011-index.htm"
+     "form": "10-Q",
+     "accession": "0001590895-26-000033",
+     "filed": "2026-10-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/1590895/000159089526000033/0001590895-26-000033-index.htm"
     }
    ]
   },
@@ -1909,7 +1924,7 @@
    "metric_id": "debt_to_ebitda",
    "period": "FY-2",
    "label": "Debt / EBITDA",
-   "value": 3.312617197964104,
+   "value": 6.709884811143852,
    "unit": "x",
    "status": "ok",
    "formula": "total_debt / EBITDA",
@@ -1948,9 +1963,9 @@
     {
      "label": "Finance-lease liabilities (current plus non-current)",
      "concept": "finance_lease_liabilities",
-     "tag": "FinanceLeaseLiability",
-     "fallback_rank": 2,
-     "value": 77000000.0,
+     "tag": "FinanceLeaseLiabilityNoncurrent",
+     "fallback_rank": 1,
+     "value": 12759000000.0,
      "unit": "USD",
      "period": "at 2023-12-31",
      "role": "balance sheet",
@@ -1996,7 +2011,7 @@
    "metric_id": "debt_to_ebitda",
    "period": "FY-1",
    "label": "Debt / EBITDA",
-   "value": 3.3654906284454245,
+   "value": 6.902149944873209,
    "unit": "x",
    "status": "ok",
    "formula": "total_debt / EBITDA",
@@ -2035,9 +2050,9 @@
     {
      "label": "Finance-lease liabilities (current plus non-current)",
      "concept": "finance_lease_liabilities",
-     "tag": "FinanceLeaseLiability",
-     "fallback_rank": 2,
-     "value": 68000000.0,
+     "tag": "FinanceLeaseLiabilityNoncurrent",
+     "fallback_rank": 1,
+     "value": 12899000000.0,
      "unit": "USD",
      "period": "at 2024-12-31",
      "role": "balance sheet",
@@ -2083,7 +2098,7 @@
    "metric_id": "debt_to_ebitda",
    "period": "FY0",
    "label": "Debt / EBITDA",
-   "value": 3.6430534351145036,
+   "value": 7.596946564885497,
    "unit": "x",
    "status": "ok",
    "formula": "total_debt / EBITDA",
@@ -2122,17 +2137,17 @@
     {
      "label": "Finance-lease liabilities (current plus non-current)",
      "concept": "finance_lease_liabilities",
-     "tag": "FinanceLeaseLiability",
-     "fallback_rank": 2,
-     "value": 147000000.0,
+     "tag": "FinanceLeaseLiabilityNoncurrent",
+     "fallback_rank": 1,
+     "value": 13096000000.0,
      "unit": "USD",
      "period": "at 2025-12-31",
      "role": "balance sheet",
      "sign": 1,
-     "form": "10-K",
-     "accession": "0001590895-26-000011",
-     "filed": "2026-02-17",
-     "url": "https://www.sec.gov/Archives/edgar/data/1590895/000159089526000011/0001590895-26-000011-index.htm"
+     "form": "10-Q",
+     "accession": "0001590895-26-000033",
+     "filed": "2026-10-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/1590895/000159089526000033/0001590895-26-000033-index.htm"
     },
     {
      "label": "Operating income",
@@ -2170,7 +2185,7 @@
    "metric_id": "debt_to_ebitda",
    "period": "LTM",
    "label": "Debt / EBITDA",
-   "value": 3.5972611266728913,
+   "value": 7.701836290071584,
    "unit": "x",
    "status": "ok",
    "formula": "total_debt / EBITDA",
@@ -2197,6 +2212,21 @@
      "tag": "LongTermDebtCurrent",
      "fallback_rank": 2,
      "value": 114000000.0,
+     "unit": "USD",
+     "period": "at 2026-09-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0001590895-26-000033",
+     "filed": "2026-10-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/1590895/000159089526000033/0001590895-26-000033-index.htm"
+    },
+    {
+     "label": "Finance-lease liabilities (current plus non-current)",
+     "concept": "finance_lease_liabilities",
+     "tag": "FinanceLeaseLiabilityNoncurrent",
+     "fallback_rank": 1,
+     "value": 13188000000.0,
      "unit": "USD",
      "period": "at 2026-09-30",
      "role": "balance sheet",
@@ -2302,7 +2332,7 @@
    "metric_id": "net_leverage",
    "period": "FY-2",
    "label": "Net leverage",
-   "value": 3.043396731851058,
+   "value": 6.4406643450308065,
    "unit": "x",
    "status": "ok",
    "formula": "(total_debt - cash - short_term_investments) / EBITDA",
@@ -2343,9 +2373,9 @@
     {
      "label": "Finance-lease liabilities (current plus non-current)",
      "concept": "finance_lease_liabilities",
-     "tag": "FinanceLeaseLiability",
-     "fallback_rank": 2,
-     "value": 77000000.0,
+     "tag": "FinanceLeaseLiabilityNoncurrent",
+     "fallback_rank": 1,
+     "value": 12759000000.0,
      "unit": "USD",
      "period": "at 2023-12-31",
      "role": "balance sheet",
@@ -2406,7 +2436,7 @@
    "metric_id": "net_leverage",
    "period": "FY-1",
    "label": "Net leverage",
-   "value": 3.1267916207276736,
+   "value": 6.663450937155457,
    "unit": "x",
    "status": "ok",
    "formula": "(total_debt - cash - short_term_investments) / EBITDA",
@@ -2447,9 +2477,9 @@
     {
      "label": "Finance-lease liabilities (current plus non-current)",
      "concept": "finance_lease_liabilities",
-     "tag": "FinanceLeaseLiability",
-     "fallback_rank": 2,
-     "value": 68000000.0,
+     "tag": "FinanceLeaseLiabilityNoncurrent",
+     "fallback_rank": 1,
+     "value": 12899000000.0,
      "unit": "USD",
      "period": "at 2024-12-31",
      "role": "balance sheet",
@@ -2510,7 +2540,7 @@
    "metric_id": "net_leverage",
    "period": "FY0",
    "label": "Net leverage",
-   "value": 3.3722137404580153,
+   "value": 7.326106870229007,
    "unit": "x",
    "status": "ok",
    "formula": "(total_debt - cash - short_term_investments) / EBITDA",
@@ -2551,17 +2581,17 @@
     {
      "label": "Finance-lease liabilities (current plus non-current)",
      "concept": "finance_lease_liabilities",
-     "tag": "FinanceLeaseLiability",
-     "fallback_rank": 2,
-     "value": 147000000.0,
+     "tag": "FinanceLeaseLiabilityNoncurrent",
+     "fallback_rank": 1,
+     "value": 13096000000.0,
      "unit": "USD",
      "period": "at 2025-12-31",
      "role": "balance sheet",
      "sign": 1,
-     "form": "10-K",
-     "accession": "0001590895-26-000011",
-     "filed": "2026-02-17",
-     "url": "https://www.sec.gov/Archives/edgar/data/1590895/000159089526000011/0001590895-26-000011-index.htm"
+     "form": "10-Q",
+     "accession": "0001590895-26-000033",
+     "filed": "2026-10-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/1590895/000159089526000033/0001590895-26-000033-index.htm"
     },
     {
      "label": "Cash and cash equivalents",
@@ -2614,7 +2644,7 @@
    "metric_id": "net_leverage",
    "period": "LTM",
    "label": "Net leverage",
-   "value": 3.3283535636476813,
+   "value": 7.432928727046374,
    "unit": "x",
    "status": "ok",
    "formula": "(total_debt - cash - short_term_investments) / EBITDA",
@@ -2643,6 +2673,21 @@
      "tag": "LongTermDebtCurrent",
      "fallback_rank": 2,
      "value": 114000000.0,
+     "unit": "USD",
+     "period": "at 2026-09-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0001590895-26-000033",
+     "filed": "2026-10-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/1590895/000159089526000033/0001590895-26-000033-index.htm"
+    },
+    {
+     "label": "Finance-lease liabilities (current plus non-current)",
+     "concept": "finance_lease_liabilities",
+     "tag": "FinanceLeaseLiabilityNoncurrent",
+     "fallback_rank": 1,
+     "value": 13188000000.0,
      "unit": "USD",
      "period": "at 2026-09-30",
      "role": "balance sheet",
@@ -3083,7 +3128,7 @@
    "metric_id": "fcf_to_debt",
    "period": "FY-2",
    "label": "FCF / debt",
-   "value": 4.407245673621219,
+   "value": 2.1758224209517727,
    "unit": "%",
    "status": "ok",
    "formula": "(cfo - capex) / total_debt",
@@ -3152,9 +3197,9 @@
     {
      "label": "Finance-lease liabilities (current plus non-current)",
      "concept": "finance_lease_liabilities",
-     "tag": "FinanceLeaseLiability",
-     "fallback_rank": 2,
-     "value": 77000000.0,
+     "tag": "FinanceLeaseLiabilityNoncurrent",
+     "fallback_rank": 1,
+     "value": 12759000000.0,
      "unit": "USD",
      "period": "at 2023-12-31",
      "role": "balance sheet",
@@ -3170,7 +3215,7 @@
    "metric_id": "fcf_to_debt",
    "period": "FY-1",
    "label": "FCF / debt",
-   "value": -1.8099918099918102,
+   "value": -0.8825526137135099,
    "unit": "%",
    "status": "ok",
    "formula": "(cfo - capex) / total_debt",
@@ -3239,9 +3284,9 @@
     {
      "label": "Finance-lease liabilities (current plus non-current)",
      "concept": "finance_lease_liabilities",
-     "tag": "FinanceLeaseLiability",
-     "fallback_rank": 2,
-     "value": 68000000.0,
+     "tag": "FinanceLeaseLiabilityNoncurrent",
+     "fallback_rank": 1,
+     "value": 12899000000.0,
      "unit": "USD",
      "period": "at 2024-12-31",
      "role": "balance sheet",
@@ -3257,7 +3302,7 @@
    "metric_id": "fcf_to_debt",
    "period": "FY0",
    "label": "FCF / debt",
-   "value": 4.165618975777387,
+   "value": 1.997588424437299,
    "unit": "%",
    "status": "ok",
    "formula": "(cfo - capex) / total_debt",
@@ -3326,17 +3371,17 @@
     {
      "label": "Finance-lease liabilities (current plus non-current)",
      "concept": "finance_lease_liabilities",
-     "tag": "FinanceLeaseLiability",
-     "fallback_rank": 2,
-     "value": 147000000.0,
+     "tag": "FinanceLeaseLiabilityNoncurrent",
+     "fallback_rank": 1,
+     "value": 13096000000.0,
      "unit": "USD",
      "period": "at 2025-12-31",
      "role": "balance sheet",
      "sign": 1,
-     "form": "10-K",
-     "accession": "0001590895-26-000011",
-     "filed": "2026-02-17",
-     "url": "https://www.sec.gov/Archives/edgar/data/1590895/000159089526000011/0001590895-26-000011-index.htm"
+     "form": "10-Q",
+     "accession": "0001590895-26-000033",
+     "filed": "2026-10-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/1590895/000159089526000033/0001590895-26-000033-index.htm"
     }
    ]
   },
@@ -3344,7 +3389,7 @@
    "metric_id": "fcf_to_debt",
    "period": "LTM",
    "label": "FCF / debt",
-   "value": 5.0354732652708085,
+   "value": 2.351895255798917,
    "unit": "%",
    "status": "ok",
    "formula": "(cfo - capex) / total_debt",
@@ -3461,6 +3506,21 @@
      "tag": "LongTermDebtCurrent",
      "fallback_rank": 2,
      "value": 114000000.0,
+     "unit": "USD",
+     "period": "at 2026-09-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0001590895-26-000033",
+     "filed": "2026-10-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/1590895/000159089526000033/0001590895-26-000033-index.htm"
+    },
+    {
+     "label": "Finance-lease liabilities (current plus non-current)",
+     "concept": "finance_lease_liabilities",
+     "tag": "FinanceLeaseLiabilityNoncurrent",
+     "fallback_rank": 1,
+     "value": 13188000000.0,
      "unit": "USD",
      "period": "at 2026-09-30",
      "role": "balance sheet",
@@ -3882,7 +3942,7 @@
    "metric_id": "share_due_24m",
    "period": "FY0",
    "label": "Share of debt due within 24 months",
-   "value": 1.910988182046769,
+   "value": 0.9163987138263666,
    "unit": "%",
    "status": "ok",
    "formula": "(short_term_debt + maturity_year_2) / total_debt",
@@ -3951,17 +4011,17 @@
     {
      "label": "Finance-lease liabilities (current plus non-current)",
      "concept": "finance_lease_liabilities",
-     "tag": "FinanceLeaseLiability",
-     "fallback_rank": 2,
-     "value": 147000000.0,
+     "tag": "FinanceLeaseLiabilityNoncurrent",
+     "fallback_rank": 1,
+     "value": 13096000000.0,
      "unit": "USD",
      "period": "at 2025-12-31",
      "role": "balance sheet",
      "sign": 1,
-     "form": "10-K",
-     "accession": "0001590895-26-000011",
-     "filed": "2026-02-17",
-     "url": "https://www.sec.gov/Archives/edgar/data/1590895/000159089526000011/0001590895-26-000011-index.htm"
+     "form": "10-Q",
+     "accession": "0001590895-26-000033",
+     "filed": "2026-10-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/1590895/000159089526000033/0001590895-26-000033-index.htm"
     }
    ]
   },
@@ -4032,10 +4092,10 @@
    "label": "Debt / EBITDA",
    "unit": "x",
    "values": {
-    "FY-2": 3.312617197964104,
-    "FY-1": 3.3654906284454245,
-    "FY0": 3.6430534351145036,
-    "LTM": 3.5972611266728913
+    "FY-2": 6.709884811143852,
+    "FY-1": 6.902149944873209,
+    "FY0": 7.596946564885497,
+    "LTM": 7.701836290071584
    },
    "statuses": {
     "FY-2": "ok",
@@ -4043,17 +4103,17 @@
     "FY0": "ok",
     "LTM": "ok"
    },
-   "direction": "stable"
+   "direction": "worsening"
   },
   {
    "metric_id": "net_leverage",
    "label": "Net leverage",
    "unit": "x",
    "values": {
-    "FY-2": 3.043396731851058,
-    "FY-1": 3.1267916207276736,
-    "FY0": 3.3722137404580153,
-    "LTM": 3.3283535636476813
+    "FY-2": 6.4406643450308065,
+    "FY-1": 6.663450937155457,
+    "FY0": 7.326106870229007,
+    "LTM": 7.432928727046374
    },
    "statuses": {
     "FY-2": "ok",
@@ -4061,7 +4121,7 @@
     "FY0": "ok",
     "LTM": "ok"
    },
-   "direction": "stable"
+   "direction": "worsening"
   },
   {
    "metric_id": "interest_coverage",
@@ -4086,10 +4146,10 @@
    "label": "FCF / debt",
    "unit": "%",
    "values": {
-    "FY-2": 4.407245673621219,
-    "FY-1": -1.8099918099918102,
-    "FY0": 4.165618975777387,
-    "LTM": 5.0354732652708085
+    "FY-2": 2.1758224209517727,
+    "FY-1": -0.8825526137135099,
+    "FY0": 1.997588424437299,
+    "LTM": 2.351895255798917
    },
    "statuses": {
     "FY-2": "ok",
@@ -4179,9 +4239,9 @@
     "id": "debt_to_ebitda",
     "label": "Debt / EBITDA",
     "period": "LTM",
-    "value": 3.5972611266728913,
+    "value": 7.701836290071584,
     "status": "ok",
-    "band": 4,
+    "band": 6,
     "weight": 0.2,
     "effective_weight": 0.2,
     "note": ""
@@ -4190,9 +4250,9 @@
     "id": "net_leverage",
     "label": "Net debt / EBITDA",
     "period": "LTM",
-    "value": 3.3283535636476813,
+    "value": 7.432928727046374,
     "status": "ok",
-    "band": 4,
+    "band": 6,
     "weight": 0.1,
     "effective_weight": 0.1,
     "note": ""
@@ -4212,7 +4272,7 @@
     "id": "fcf_to_debt",
     "label": "FCF / debt",
     "period": "LTM",
-    "value": 5.0354732652708085,
+    "value": 2.351895255798917,
     "status": "ok",
     "band": 5,
     "weight": 0.2,
@@ -4242,8 +4302,8 @@
     "note": ""
    }
   ],
-  "weighted_score": 4.05,
-  "grade": "SB-4",
+  "weighted_score": 4.65,
+  "grade": "SB-5",
   "provisional": false,
   "ig_like": false,
   "disclaimer": "Educational project. Not investment advice. SB grades are a student's stylized scorecard, not credit ratings."
@@ -4256,9 +4316,9 @@
     "id": "debt_to_ebitda",
     "label": "Debt / EBITDA",
     "period": "FY0",
-    "value": 3.6430534351145036,
+    "value": 7.596946564885497,
     "status": "ok",
-    "band": 4,
+    "band": 6,
     "weight": 0.2,
     "effective_weight": 0.2,
     "note": ""
@@ -4267,9 +4327,9 @@
     "id": "net_leverage",
     "label": "Net debt / EBITDA",
     "period": "FY0",
-    "value": 3.3722137404580153,
+    "value": 7.326106870229007,
     "status": "ok",
-    "band": 4,
+    "band": 6,
     "weight": 0.1,
     "effective_weight": 0.1,
     "note": ""
@@ -4289,7 +4349,7 @@
     "id": "fcf_to_debt",
     "label": "FCF / debt",
     "period": "FY0",
-    "value": 4.165618975777387,
+    "value": 1.997588424437299,
     "status": "ok",
     "band": 5,
     "weight": 0.2,
@@ -4319,8 +4379,8 @@
     "note": ""
    }
   ],
-  "weighted_score": 4.2,
-  "grade": "SB-4",
+  "weighted_score": 4.800000000000001,
+  "grade": "SB-5",
   "provisional": false,
   "ig_like": false,
   "disclaimer": "Educational project. Not investment advice. SB grades are a student's stylized scorecard, not credit ratings."
@@ -4339,13 +4399,6 @@
    "severity": "info",
    "message": "Short-term debt (short-term borrowings plus current portion of long-term debt): used rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper in FY-2, FY-1, FY0, LTM.",
    "ref": "short_term_debt"
-  },
-  {
-   "id": "fallback:finance_lease_liabilities:FinanceLeaseLiability",
-   "category": "fallback",
-   "severity": "info",
-   "message": "Finance-lease liabilities (current plus non-current): used rank 2 FinanceLeaseLiability in FY-2, FY-1, FY0.",
-   "ref": "finance_lease_liabilities"
   },
   {
    "id": "fallback:interest_expense:InterestIncomeExpenseNonoperatingNet",
@@ -4369,6 +4422,13 @@
    "ref": "short_term_debt"
   },
   {
+   "id": "assumed_zero:finance_lease_liabilities:FinanceLeaseLiabilityCurrent",
+   "category": "assumed_zero",
+   "severity": "info",
+   "message": "Finance-lease liabilities (current plus non-current): FinanceLeaseLiabilityCurrent assumed zero (not reported) in FY-2, FY-1, FY0, LTM.",
+   "ref": "finance_lease_liabilities"
+  },
+  {
    "id": "assumed_zero:short_term_investments:short-term-investments",
    "category": "assumed_zero",
    "severity": "info",
@@ -4388,13 +4448,6 @@
    "severity": "info",
    "message": "Undrawn revolving credit capacity assumed zero (not reported) in FY-2, FY-1, FY0, LTM.",
    "ref": "undrawn_revolver"
-  },
-  {
-   "id": "assumed_zero:finance_lease_liabilities:finance-lease-liabilities",
-   "category": "assumed_zero",
-   "severity": "info",
-   "message": "Finance-lease liabilities (current plus non-current) assumed zero (not reported) in LTM.",
-   "ref": "finance_lease_liabilities"
   },
   {
    "id": "assumed_zero:short_term_borrowings:short-term-borrowings",
@@ -4438,12 +4491,12 @@
    "subject": "CommercialPaper"
   },
   {
-   "kind": "fallback",
+   "kind": "assumed_zero",
    "concept": "finance_lease_liabilities",
    "period": "FY-2",
-   "message": "used rank 2 FinanceLeaseLiability because rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityCurrent not reported at 2023-12-31",
+   "message": "FinanceLeaseLiabilityCurrent assumed zero: not reported (part of rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent)",
    "severity": "info",
-   "subject": "FinanceLeaseLiability"
+   "subject": "FinanceLeaseLiabilityCurrent"
   },
   {
    "kind": "assumed_zero",
@@ -4502,12 +4555,12 @@
    "subject": "CommercialPaper"
   },
   {
-   "kind": "fallback",
+   "kind": "assumed_zero",
    "concept": "finance_lease_liabilities",
    "period": "FY-1",
-   "message": "used rank 2 FinanceLeaseLiability because rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityCurrent not reported at 2024-12-31",
+   "message": "FinanceLeaseLiabilityCurrent assumed zero: not reported (part of rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent)",
    "severity": "info",
-   "subject": "FinanceLeaseLiability"
+   "subject": "FinanceLeaseLiabilityCurrent"
   },
   {
    "kind": "assumed_zero",
@@ -4566,12 +4619,12 @@
    "subject": "CommercialPaper"
   },
   {
-   "kind": "fallback",
+   "kind": "assumed_zero",
    "concept": "finance_lease_liabilities",
    "period": "FY0",
-   "message": "used rank 2 FinanceLeaseLiability because rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityCurrent not reported at 2025-12-31",
+   "message": "FinanceLeaseLiabilityCurrent assumed zero: not reported (part of rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent)",
    "severity": "info",
-   "subject": "FinanceLeaseLiability"
+   "subject": "FinanceLeaseLiabilityCurrent"
   },
   {
    "kind": "assumed_zero",
@@ -4641,9 +4694,9 @@
    "kind": "assumed_zero",
    "concept": "finance_lease_liabilities",
    "period": "LTM",
-   "message": "assumed zero: not reported (rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityCurrent not reported at 2026-09-30; rank 2 FinanceLeaseLiability: FinanceLeaseLiability not reported at 2026-09-30)",
+   "message": "FinanceLeaseLiabilityCurrent assumed zero: not reported (part of rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent)",
    "severity": "info",
-   "subject": "finance_lease_liabilities"
+   "subject": "FinanceLeaseLiabilityCurrent"
   },
   {
    "kind": "assumed_zero",

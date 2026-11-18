@@ -4,7 +4,7 @@
  "name": "MICROSOFT CORP",
  "cik": 789019,
  "sector": "Technology",
- "generated_at": "2026-11-18T03:19:49Z",
+ "generated_at": "2026-11-18T03:38:18Z",
  "data_fetched_at": "2026-11-18T02:55:29+00:00",
  "sources": [
   {
@@ -5486,7 +5486,7 @@
    "kind": "fallback",
    "concept": "finance_lease_liabilities",
    "period": "FY-2",
-   "message": "used rank 2 FinanceLeaseLiability because rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityCurrent not reported at 2024-06-30",
+   "message": "used rank 2 FinanceLeaseLiability because rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityNoncurrent not reported at 2024-06-30",
    "severity": "info",
    "subject": "FinanceLeaseLiability"
   },
@@ -5550,7 +5550,7 @@
    "kind": "fallback",
    "concept": "finance_lease_liabilities",
    "period": "FY-1",
-   "message": "used rank 2 FinanceLeaseLiability because rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityCurrent not reported at 2025-06-30",
+   "message": "used rank 2 FinanceLeaseLiability because rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityNoncurrent not reported at 2025-06-30",
    "severity": "info",
    "subject": "FinanceLeaseLiability"
   },
@@ -5622,7 +5622,7 @@
    "kind": "fallback",
    "concept": "finance_lease_liabilities",
    "period": "FY0",
-   "message": "used rank 2 FinanceLeaseLiability because rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityCurrent not reported at 2026-06-30",
+   "message": "used rank 2 FinanceLeaseLiability because rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityNoncurrent not reported at 2026-06-30",
    "severity": "info",
    "subject": "FinanceLeaseLiability"
   },
@@ -5694,7 +5694,7 @@
    "kind": "fallback",
    "concept": "finance_lease_liabilities",
    "period": "LTM",
-   "message": "used rank 2 FinanceLeaseLiability because rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityCurrent not reported at 2026-09-30",
+   "message": "used rank 2 FinanceLeaseLiability because rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityNoncurrent not reported at 2026-09-30",
    "severity": "info",
    "subject": "FinanceLeaseLiability"
   },

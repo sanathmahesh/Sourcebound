@@ -4,7 +4,7 @@
  "name": "Carnival Corp Ltd.",
  "cik": 815097,
  "sector": "Leisure",
- "generated_at": "2026-11-18T03:19:49Z",
+ "generated_at": "2026-11-18T03:38:18Z",
  "data_fetched_at": "2026-11-18T02:55:28+00:00",
  "sources": [
   {
@@ -4318,7 +4318,7 @@
    "kind": "assumed_zero",
    "concept": "finance_lease_liabilities",
    "period": "FY-2",
-   "message": "assumed zero: not reported (rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityCurrent not reported at 2023-11-30; rank 2 FinanceLeaseLiability: FinanceLeaseLiability not reported at 2023-11-30)",
+   "message": "assumed zero: not reported (rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityNoncurrent not reported at 2023-11-30; rank 2 FinanceLeaseLiability: FinanceLeaseLiability not reported at 2023-11-30)",
    "severity": "info",
    "subject": "finance_lease_liabilities"
   },
@@ -4398,7 +4398,7 @@
    "kind": "assumed_zero",
    "concept": "finance_lease_liabilities",
    "period": "FY-1",
-   "message": "assumed zero: not reported (rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityCurrent not reported at 2024-11-30; rank 2 FinanceLeaseLiability: FinanceLeaseLiability not reported at 2024-11-30)",
+   "message": "assumed zero: not reported (rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityNoncurrent not reported at 2024-11-30; rank 2 FinanceLeaseLiability: FinanceLeaseLiability not reported at 2024-11-30)",
    "severity": "info",
    "subject": "finance_lease_liabilities"
   },
@@ -4478,7 +4478,7 @@
    "kind": "assumed_zero",
    "concept": "finance_lease_liabilities",
    "period": "FY0",
-   "message": "assumed zero: not reported (rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityCurrent not reported at 2025-11-30; rank 2 FinanceLeaseLiability: FinanceLeaseLiability not reported at 2025-11-30)",
+   "message": "assumed zero: not reported (rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityNoncurrent not reported at 2025-11-30; rank 2 FinanceLeaseLiability: FinanceLeaseLiability not reported at 2025-11-30)",
    "severity": "info",
    "subject": "finance_lease_liabilities"
   },
@@ -4558,7 +4558,7 @@
    "kind": "assumed_zero",
    "concept": "finance_lease_liabilities",
    "period": "LTM",
-   "message": "assumed zero: not reported (rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityCurrent not reported at 2026-08-31; rank 2 FinanceLeaseLiability: FinanceLeaseLiability not reported at 2026-08-31)",
+   "message": "assumed zero: not reported (rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityNoncurrent not reported at 2026-08-31; rank 2 FinanceLeaseLiability: FinanceLeaseLiability not reported at 2026-08-31)",
    "severity": "info",
    "subject": "finance_lease_liabilities"
   },

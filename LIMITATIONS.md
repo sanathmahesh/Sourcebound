@@ -52,9 +52,9 @@ Seeded from PLAN.md section 4.15; later items were added while building, with th
   HCA, Goodyear, Procter & Gamble and ExxonMobil ("after year 5"). Their ladder totals and the ladder
   reconciliation are not available; Kohl's near-term maturity cover is not scored, so its grade is
   provisional.
-- Caesars tags about $13.1bn of lease obligations (to be confirmed in its 10-K) as non-current finance-lease
-  liabilities without a current-portion tag, so they are left out of its debt while their interest is in its
-  interest expense. A chain change is proposed in the phase-2 stop report.
+- Caesars tags about $13.1bn of lease obligations as non-current finance-lease liabilities without a
+  current-portion tag. Since chain revision 3 (D27) they count as debt; what they are (the counterparties)
+  is to be confirmed in its 10-K.
 - Net interest understates gross interest expense where interest income is material.
 - ExxonMobil's latest figures (31 March 2026) are about six months older than most companies'.
 - The scorecard is ratio-only: no business-risk factors and no operating-lease adjustment, so companies with

@@ -61,3 +61,13 @@ def test_concept_reference_must_have_same_kind():
     }
     with pytest.raises(ValueError, match="kind"):
         parse_concepts(raw)
+
+
+def test_approved_chain_change_d27_finance_lease_current_portion_optional():
+    """Approved 17 November 2026 (D27): Caesars tags only the non-current finance-lease liability."""
+    specs = load_concepts(CONFIG_DIR / "concepts.yaml")
+    first = specs["finance_lease_liabilities"].chain[0]
+    assert [(c.tag, c.optional) for c in first.components] == [
+        ("FinanceLeaseLiabilityCurrent", True),
+        ("FinanceLeaseLiabilityNoncurrent", False),
+    ]
