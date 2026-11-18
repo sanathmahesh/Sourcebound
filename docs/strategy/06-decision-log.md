@@ -445,3 +445,14 @@ inventing one.
 - **Checked:** on 18 November 2026 a manual run with a forced deploy checked all 15 companies, found no new
   filings, and deployed to production from GitHub; the site, API and data then served from that deployment.
 
+### D62. The project closes without human evaluation; GLM-5.3 is the final writer and judge
+- **Decision (the author, 18 November 2026):** no claim labels, golden values, agency ratings or timings will be
+  entered. Measures that needed them read "not measured" everywhere, instead of "pending". The writer and judge
+  stay `zai-org/GLM-5.3`. The opportunity map carries no authorship label, only the note that its ratings are
+  judgment, not measurement.
+- **Why:** the site is complete and the author does not want to do the hand work. Saying "pending" would imply
+  figures that will not arrive. GLM-5.3 had the lowest model time per memo, a middle cost, and the published
+  memos were already made with it, so keeping it needs no new model calls.
+- **Consequence:** the judge's error rate is unknown, and the writer and judge are the same model. Both are stated
+  in the model card, the model recommendation and the limitations.
+

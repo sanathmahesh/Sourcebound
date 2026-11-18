@@ -24,9 +24,9 @@ def test_placeholders_render_from_results_with_their_sample_size():
     assert [text[a:b] for a, b in spans] == ["85.9% (n = 526)", "$0.107"]
 
 
-def test_unmeasured_rates_render_as_pending():
+def test_unmeasured_rates_render_as_not_measured():
     text, _ = r.render("{{r:judge_calibration>zai-org/GLM-5.3>agreement|rate}}", RESULTS, [])
-    assert text == "pending (n = 0)"
+    assert text == "not measured (n = 0)"
 
 
 def test_unknown_paths_and_formats_fail_loudly():
@@ -53,12 +53,12 @@ def write_log(path, rows):
         writer.writerows(rows)
 
 
-def test_empty_timing_log_means_pending(tmp_path):
+def test_empty_timing_log_means_not_measured(tmp_path):
     path = tmp_path / "timings.csv"
     write_log(path, [])
     assert summarise(read_timings(path)) == []
     text, _ = r.render("{{table:timings}}", RESULTS, read_timings(path))
-    assert "No timings recorded yet" in text
+    assert "No timings were recorded" in text and "not measured (n = 0)" in text
 
 
 def test_timing_summary_uses_medians_per_task_and_condition(tmp_path):
@@ -115,7 +115,7 @@ def test_results_file_is_current_and_carries_no_typed_figures():
 
     text = render_results()  # raises if the template types a figure by hand
     assert (PROJECT_ROOT / "RESULTS.md").read_text() == text, "run: uv run python -m sourcebound.pipeline.build_strategy"
-    for words in ("pending (n = 0)", "uv run python -m sourcebound.evals.report", "zai-org/GLM-5.3"):
+    for words in ("not measured (n = 0)", "No human evaluation was done", "uv run python -m sourcebound.evals.report", "zai-org/GLM-5.3"):
         assert words in text
 
 

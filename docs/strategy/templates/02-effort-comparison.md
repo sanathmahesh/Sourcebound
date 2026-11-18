@@ -1,7 +1,8 @@
 # Manual against tool-assisted effort
 
 Does the tool save time without adding errors? This document holds the protocol, the log template and the
-results. Every result comes from timings the author records in `evals/timings.csv`; none is estimated.
+results. No timings were recorded, so the comparison is not measured; the protocol below is how it would be.
+Nothing here is estimated.
 
 ## Results
 

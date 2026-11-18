@@ -2,8 +2,7 @@
 
 # Opportunity map
 
-**Status: draft for the author's review.** The ratings below are judgment, not measurement, and the author is
-expected to change them. No market statistics are used.
+The ratings below are judgment, not measurement. No market statistics are used.
 
 Where could a language-model tool help a bank's investment and lending teams? Each workflow is rated on three
 things:

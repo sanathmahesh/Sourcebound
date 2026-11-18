@@ -3,11 +3,12 @@
 # Manual against tool-assisted effort
 
 Does the tool save time without adding errors? This document holds the protocol, the log template and the
-results. Every result comes from timings the author records in `evals/timings.csv`; none is estimated.
+results. No timings were recorded, so the comparison is not measured; the protocol below is how it would be.
+Nothing here is estimated.
 
 ## Results
 
-No timings recorded yet: every effort figure is pending (n = 0).
+No timings were recorded, so the effort comparison is not measured (n = 0).
 
 "Errors found later" counts mistakes discovered afterwards, when the memo is checked against the author's
 hand-verified golden sheet.

@@ -3,7 +3,7 @@
 Templates live in docs/strategy/templates/. As in the memos, no figure is typed. Two kinds of placeholder:
 - {{r:writers>GLM-5.3>cost_total_per_memo|usd3}}: a value from evals/results/results.json (path parts
   separated by ">", because model names contain dots and slashes), in a named format. Rates always show their
-  sample size, and an unmeasured rate reads "pending (n = 0)".
+  sample size, and an unmeasured rate reads "not measured (n = 0)".
 - {{table:writers}}: a table built by code from results.json or the timing log (evals/timings.csv).
 Then stray_numbers() lists any digit in the rendered text that did not come from a placeholder and is not an
 identifier (a regulation number, a form type, a date, a decision number, list numbering, a name in a code
@@ -50,7 +50,7 @@ def _pct(value: float) -> str:
 
 
 def _rate(rate: dict) -> str:
-    return f"pending (n = {rate['n']})" if rate["value"] is None else f"{_pct(rate['value'])} (n = {rate['n']})"
+    return f"not measured (n = {rate['n']})" if rate["value"] is None else f"{_pct(rate['value'])} (n = {rate['n']})"
 
 
 def _spread(s: dict) -> str:
@@ -125,7 +125,7 @@ def seeded_table(results: dict) -> str:
 def timings_table(timings: list[Timing]) -> str:
     summary = summarise(timings)
     if not summary:
-        return "No timings recorded yet: every effort figure is pending (n = 0)."
+        return "No timings were recorded, so the effort comparison is not measured (n = 0)."
     return _md_table(["Task", "Condition", "Tasks timed", "Median minutes", "Errors found later"],
                      [[s.task, s.condition, str(s.n), f"{s.median_minutes:.0f}", str(s.errors_found_later)]
                       for s in summary])

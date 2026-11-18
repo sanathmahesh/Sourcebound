@@ -30,18 +30,19 @@ matching term from the 2026 interagency model-risk guidance.
   open for comment until 16 December 2026.
 
 Evidence figures come from `evals/results/results.json` (generated 2026-11-18 07:51 UTC), using the
-provisional judge, zai-org/GLM-5.3. "Pending" figures need the author's golden values or claim labels.
+judge, zai-org/GLM-5.3. Figures marked "not measured" needed human labels or hand-checked values, which were
+not collected.
 
 ## The table
 
 | Failure mode | Control | Evidence it works | Guidance term (borrowed) |
 |---|---|---|---|
-| The engine picks the wrong XBRL fact (wrong tag, period or restated value) | Ranked fallback chains in config; period and year-to-date alignment checks; most recently filed value with restatements logged; fallbacks listed on the reviewer checklist | tests/test_resolver.py, tests/test_periods.py, tests/test_concepts_config.py; engine figures against hand-checked golden values: pending (n = 0) | Model testing; documentation (the engine itself is not a model under the definition) |
+| The engine picks the wrong XBRL fact (wrong tag, period or restated value) | Ranked fallback chains in config; period and year-to-date alignment checks; most recently filed value with restatements logged; fallbacks listed on the reviewer checklist | tests/test_resolver.py, tests/test_periods.py, tests/test_concepts_config.py; engine figures against hand-checked golden values: not measured (n = 0) | Model testing; documentation (the engine itself is not a model under the definition) |
 | A missing figure is filled in with a guess | A missing fact is "not available", never estimated; it goes on the checklist | tests/test_ratios.py (`test_missing_input_is_not_available`), tests/test_periods.py (`test_missing_prior_year_is_reported_not_guessed`) | Model use: limitations |
 | The writer types a wrong number | Engine figures are placeholders filled by code; any typed figure must appear in a cited passage | tests/test_number_and_quote_checks.py; raw numbers rejected per GLM-5.3 memo: 2.3; seeded typed figures caught by code: 24 of 24 | Model development: conceptual soundness of the design; model testing |
 | A quote is not in the passage it cites, or cites a passage the model never saw | Quote check against the cited passage; citations limited to passages shown | tests/test_number_and_quote_checks.py; seeded citations moved without their quote, caught by code: 43 of 43; GLM-5.3 quoted figures found in the cited passage: 100.0% (n = 65) | Outcomes analysis |
-| A claim overstates or contradicts its evidence | An independent judge reads each claim with its passages and metric values; partly supported and unsupported claims are marked and listed for review | Seeded negations judged unsupported: 54 of 60; human-labelled unsupported-claim rate (GLM-5.3 writer): pending (n = 0) | Outcomes analysis; effective challenge |
-| The judge passes an unsupported claim | Judge calibrated against a blind human-labelled sample; the judge is chosen by its false-pass rate; the reviewer checklist | GLM-5.3 false-pass rate: pending (n = 0); agreement with labels: pending (n = 0) | Effective challenge; model validation |
+| A claim overstates or contradicts its evidence | An independent judge reads each claim with its passages and metric values; partly supported and unsupported claims are marked and listed for review | Seeded negations judged unsupported: 54 of 60; human-labelled unsupported-claim rate (GLM-5.3 writer): not measured (n = 0) | Outcomes analysis; effective challenge |
+| The judge passes an unsupported claim | Judge calibrated against a blind human-labelled sample; the judge is chosen by its false-pass rate; the reviewer checklist | GLM-5.3 false-pass rate: not measured (n = 0); agreement with labels: not measured (n = 0) | Effective challenge; model validation |
 | Writer and judge share a blind spot | Two judge candidates calibrated separately; seeded errors run through each | Seeded swapped placeholders missed by the GLM-5.3 judge: 3 of 22; by the DeepSeek-V4-Pro-0813 judge: 0 of 22 | Aggregate risk |
 | Results change from run to run | Fixed six-section pipeline; every request and response saved; run-to-run spread measured | GLM-5.3 share of claims judged supported across three runs: 80.9% (77.8% to 83.4%, 3 runs) | Ongoing model monitoring |
 | A memo goes stale after a new filing | Daily job detects new filings, recomputes ratios and flags, and marks the memo stale until it is regenerated and reviewed | tests/test_watchlist.py (`test_new_filing_refreshes_flags_and_marks_the_memo_stale`); reports/watchlist-simulation.md | Ongoing model monitoring; model use |
@@ -54,6 +55,7 @@ provisional judge, zai-org/GLM-5.3. "Pending" figures need the author's golden v
 
 ## What is missing
 
-Pending figures need the author's golden values and claim labels. In a bank, the human sign-off would be recorded
+No human evaluation was done, so the judge's error rate and the engine's accuracy against hand-checked values
+are not measured. In a bank, the human sign-off would be recorded
 on a server with the reviewer's name and time; here it stays in one browser. An independent validator, who
 provides effective challenge, is part of the rollout plan, not of this prototype.

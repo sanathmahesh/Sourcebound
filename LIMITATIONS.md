@@ -83,7 +83,7 @@ Seeded from PLAN.md section 4.15; later items were added while building, with th
 
 - A quoted figure passes the number check if the same number appears anywhere in the cited passage, even
   with a different meaning; the judge is the only check on that (as the plan anticipated).
-- GLM-5.3 is both the default writer and the provisional judge, so the judge may be lenient on its own
+- GLM-5.3 is both the writer and the judge, so the judge may be lenient on its own
   writing; phase 5 calibrates the judge against human labels.
 - Model outputs vary between runs and cannot be pinned (no seed); phase 5 measures the spread.
 - GLM-5.3 and DeepSeek-V4-Pro invent values when tools and a response schema share a request (probe); the
@@ -99,14 +99,14 @@ Seeded from PLAN.md section 4.15; later items were added while building, with th
   Vercel project exist.
 - ExxonMobil is refreshed on every run (its newest 10-Q's facts sit under its new registrant); this costs one
   extra EDGAR request a day and changes no file.
-- The scheduled run is off until the author approves it (phase 10).
+- The scheduled run was switched on in phase 10.
 
 ## Added in phase 7
 
 - `/api/ask` has no login. Since phase 10 a Vercel Firewall rule limits it per IP address (see phase 10 below).
 - When an answer passes the 60-second limit the caller gets a 503, but model requests already started run on
   (up to 45 seconds each) and are billed.
-- The follow-up judge is the provisional judge (GLM-5.3), the same model as the provisional writer.
+- The follow-up judge is GLM-5.3, the same model as the writer.
 - The maturity ladder is as of the last 10-K. Its first bucket keeps the XBRL tag's wording, "debt maturing in
   the next twelve months", meaning the twelve months after that fiscal year-end; an answer can read it as twelve
   months from today, and the judge accepted that reading in the smoke test (Walmart, maturity_year_1:FY0).
@@ -119,10 +119,9 @@ Seeded from PLAN.md section 4.15; later items were added while building, with th
 
 ## Added in phase 8
 
-- The opportunity map's ratings are the author's judgment (drafted for review), not measurements.
-- The effort comparison is pending until the author records timings; when recorded, it describes one analyst
-  with small samples.
-- The model recommendation is provisional until the claim labels and judge calibration exist.
+- The opportunity map's ratings are judgment, not measurements.
+- The effort comparison is not measured: no timings were recorded.
+- The model choice does not rest on human labels or judge calibration, which were not collected (D62).
 - The decision log is written by hand and records settings and dated one-off observations; unlike artifacts
   1 to 5 it is not generated from results files, so the automatic number check does not cover it. The author
   accepted this on 18 November 2026.
@@ -163,3 +162,14 @@ Seeded from PLAN.md section 4.15; later items were added while building, with th
   which GitHub delays or skips the schedule leaves the site a day behind.
 - The public commit history was rewritten before the first push to use GitHub's noreply address; commit IDs in
   stop reports written before that no longer exist.
+
+## Closing the project (18 November 2026)
+
+- No human evaluation was done. The 180-claim sample was never labelled, the golden-set sheets were not filled
+  in, and no agency ratings or timings were entered. So numeric accuracy against hand-checked values, citation
+  precision, the human-labelled unsupported-claim rate, the judge's agreement and false-pass rate, the scorecard's
+  agreement with agency ratings and the effort comparison are all "not measured".
+- What was measured is what code can check: every quoted figure was found in its cited passage, typed figures
+  were rejected before publication, seeded errors were caught or missed as RESULTS.md and the Results page show,
+  and cost and model time per memo. The judge's verdict shares are one model's estimates.
+

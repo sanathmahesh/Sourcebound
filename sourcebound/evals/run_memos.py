@@ -4,7 +4,7 @@ Run:  uv run python -m sourcebound.evals.run_memos                 (everything, 
       uv run python -m sourcebound.evals.run_memos --golden-only   (golden set, run 1, for the labelling sheet)
 
 Each writer model drafts a memo for all 15 companies (run 1), and the golden five twice more (runs 2 and 3)
-to measure run-to-run spread. Verification uses the provisional judge (SAIL_MODEL_JUDGE). Memos go to
+to measure run-to-run spread. Verification uses the judge (SAIL_MODEL_JUDGE). Memos go to
 evals/results/memos/<writer>/run<n>/; raw requests and responses to data/runs/. A memo already on disk is
 skipped, so a rerun never pays twice. Several memos run at once (--workers); each memo's own calls stay in
 order.

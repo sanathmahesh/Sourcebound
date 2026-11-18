@@ -28,7 +28,8 @@ matching term from the 2026 interagency model-risk guidance.
   open for comment until 16 December 2026.
 
 Evidence figures come from `evals/results/results.json` (generated {{r:generated_at|text}}), using the
-provisional judge, zai-org/GLM-5.3. "Pending" figures need the author's golden values or claim labels.
+judge, zai-org/GLM-5.3. Figures marked "not measured" needed human labels or hand-checked values, which were
+not collected.
 
 ## The table
 
@@ -52,6 +53,7 @@ provisional judge, zai-org/GLM-5.3. "Pending" figures need the author's golden v
 
 ## What is missing
 
-Pending figures need the author's golden values and claim labels. In a bank, the human sign-off would be recorded
+No human evaluation was done, so the judge's error rate and the engine's accuracy against hand-checked values
+are not measured. In a bank, the human sign-off would be recorded
 on a server with the reviewer's name and time; here it stays in one browser. An independent validator, who
 provides effective challenge, is part of the rollout plan, not of this prototype.

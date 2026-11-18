@@ -53,9 +53,9 @@ export function formatRaw(value: number, unit: string): string {
   return `${grouped(String(value))} ${unit}`;
 }
 
-/** A measured rate with its sample size; "pending" when nothing has been measured yet. */
+/** A measured rate with its sample size; "not measured" when nothing was measured. */
 export function formatRate(rate: { value: number | null; n: number } | undefined): string {
-  if (!rate || rate.value === null) return `pending (n = ${rate?.n ?? 0})`;
+  if (!rate || rate.value === null) return `not measured (n = ${rate?.n ?? 0})`;
   return `${toFixedPy(rate.value * 100, 1)}% (n = ${rate.n})`;
 }
 

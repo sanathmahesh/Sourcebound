@@ -106,7 +106,7 @@ were added while building, with the phase that added them.
 
 ## Added in phase 5
 
-52. Evaluation memos are verified by the provisional judge (GLM-5.3) until the author chooses a judge;
+52. Evaluation memos are verified by the judge, GLM-5.3 (chosen by the author in phase 10, D62);
     the chosen judge then re-judges every writer's claims from the saved drafts.
 53. Run-to-run spread uses three runs per writer on the golden five; the other ten companies run once.
 54. Model time per memo is the sum of its calls' latencies (memos run in parallel, so wall time per memo
@@ -122,7 +122,7 @@ were added while building, with the phase that added them.
     short-term investments and undrawn revolver at the LTM date.
 58. Published files are rewritten only when their content changes; generated_at, data_fetched_at and
     checked_at are ignored in that comparison. A weekly heartbeat updates the last-checked date.
-59. Until the author chooses the writer and judge, the published memos are the GLM-5.3 run-1 evaluation memos
+59. The published memos are the GLM-5.3 run-1 evaluation memos, GLM-5.3 being the chosen writer and judge
     (writer and judge GLM-5.3), copied without new model calls.
 
 ## Added in phase 7

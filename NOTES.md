@@ -1012,3 +1012,10 @@ A: No. All of them trace to one advisory in a pattern-matching library used only
 which match this project's own patterns. The packages shipped to the browser have no known advisories. There is
 no fixed version yet; downgrading the tools would be worse.
 
+**Q: Your results say "not measured" for accuracy and citation precision. Why?**
+A: Those need a person to label claims and check figures by hand, independently of the AI, and that was not
+done. I report them as not measured rather than letting the AI grade itself. What code can check was measured:
+every quoted figure was found in its cited passage, typed figures were rejected, and seeded errors show which
+check catches what. If I continued, labelling the 180-claim sample would come first, because it calibrates the
+judge.
+

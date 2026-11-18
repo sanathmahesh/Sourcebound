@@ -16,8 +16,8 @@ are a student's stylized scorecard, not credit ratings.
   supported, partially supported or unsupported with a reason.
 - **Follow-up box**: answers one question at a time with the same tools and checks; only claims the judge marks
   supported are shown, and the rest are listed as removed.
-- Models are reached through Sail. Until the author chooses (see the model recommendation), the writer and the
-  judge are both `zai-org/GLM-5.3`, a provisional choice. Model IDs and prices are pinned in
+- Models are reached through Sail. The writer and the judge are both `zai-org/GLM-5.3`, the author's choice (see
+  the model recommendation). Model IDs and prices are pinned in
   `config/models.yaml` and `config/prices.yaml` with the date they were read.
 
 ## Intended use
@@ -50,9 +50,8 @@ The full list is in `ASSUMPTIONS.md`. The ones that matter most to a reader:
 
 The full list is in `LIMITATIONS.md`. The ones that matter most to a reader:
 
-- The judge can be wrong in both directions, and until the author's blind labels exist its error rate is
-  unmeasured. With the provisional choice the judge is the same model as the writer, so they may share blind
-  spots.
+- The judge can be wrong in both directions, and its error rate was never measured against human labels. The
+  judge is the same model as the writer, so they may share blind spots.
 - Figures can be correct but stale: a memo describes the filings it lists, and a newer filing marks it stale.
 - XBRL tagging differs between companies; fallback tags and reconciliation warnings are listed, but a figure
   can still differ from what an analyst would take from the statements.
@@ -75,8 +74,9 @@ The full list is in `LIMITATIONS.md`. The ones that matter most to a reader:
 ## Evaluation
 
 Measured results, with sample sizes, dates, model IDs and the command that reproduces them, are in
-`RESULTS.md` and on the site's Results page. Figures that need the author's labels or hand-checked values are
-marked pending.
+`RESULTS.md` and on the site's Results page. No human evaluation was done: the measures that needed human labels
+or hand-checked values (numeric accuracy, citation precision, the unsupported-claim rate and the judge's error
+rate) are marked "not measured".
 
 ## Monitoring
 

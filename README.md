@@ -6,8 +6,9 @@ every figure against source data. Educational project. Not investment advice.
 Live: **https://sourcebound-app.vercel.app**
 
 Status: all ten phases built and deployed (verified memos, model evaluation, the daily watchlist, the live
-follow-up API, the strategy documents and the designed interface). Figures that need the author's labels and
-hand-checked values are marked pending. See PLAN.md, RESULTS.md and MODEL_CARD.md.
+follow-up API, the strategy documents and the designed interface). The writer and judge are `zai-org/GLM-5.3`. No
+human evaluation was done, so the measures that need human labels read "not measured". See PLAN.md, RESULTS.md
+and MODEL_CARD.md.
 
 ## Setup
 

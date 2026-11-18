@@ -2,7 +2,7 @@
 
 Evidence is the full text of each cited passage plus the engine values the claim's placeholders stand for
 (so "leverage rose" can be checked against the numbers). Unreadable output gets one retry; after that the
-claim is marked unsupported with a judge-error flag. GLM-5.3 is the provisional judge (phase 5 calibrates).
+claim is marked unsupported with a judge-error flag. The judge is GLM-5.3 (D62).
 """
 
 from __future__ import annotations

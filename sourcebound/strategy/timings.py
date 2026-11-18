@@ -1,7 +1,7 @@
 """The timing log (evals/timings.csv): manual against tool-assisted effort, recorded only by the author.
 
 Each row is one timed task. The summary is the median minutes and the count per task and condition, plus
-the errors found later; with no rows, every figure is "pending". Nothing here estimates a timing.
+the errors found later; with no rows, every figure is "not measured". Nothing here estimates a timing.
 """
 
 from __future__ import annotations

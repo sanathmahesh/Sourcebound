@@ -1,6 +1,6 @@
 // Screen 5: evaluation results from /data/evals.json. One block per writer model, then judge calibration,
-// seeded errors, and engine, retrieval and scorecard checks. Every figure shows its sample size; figures
-// that need my hand labels or hand-checked values say "pending" until those exist.
+// seeded errors, and engine, retrieval and scorecard checks. Every figure shows its sample size; measures that
+// needed human labels or hand-checked values say "not measured" (no human evaluation was done, D62).
 // evals.json "results" is an untyped object in the contract (EvalsFile.results: dict); the shapes below are
 // what sourcebound/evals/report.py writes, read defensively.
 import type { EvalsFile } from "../contracts/types";
@@ -29,7 +29,8 @@ interface Results {
 
 type Row = { measure: string; result: string; sample: string; how: string };
 
-const rate = (r: Rate | undefined) => (r && r.value !== null ? formatPct(r.value) : "pending");
+const NOT_MEASURED = "not measured";
+const rate = (r: Rate | undefined) => (r && r.value !== null ? formatPct(r.value) : NOT_MEASURED);
 const sample = (n: number | undefined) => `n = ${n ?? 0}`;
 
 function writerRows(name: string, w: Writer, r: Results): Row[] {
@@ -76,7 +77,7 @@ function Block({ kicker, title, mono, rows }: { kicker: string; title: string; m
             {rows.map((row) => (
               <tr key={row.measure}>
                 <td>{row.measure}</td>
-                <td className={`num mono strong-500${row.result === "pending" ? " muted" : ""}`}>{row.result}</td>
+                <td className={`num mono strong-500${row.result === NOT_MEASURED ? " muted" : ""}`}>{row.result}</td>
                 <td className="num mono muted">{row.sample}</td>
                 <td className="muted small-14 col-how">{row.how}</td>
               </tr>
@@ -98,8 +99,8 @@ export function ResultsPage() {
     <main className="page page-narrow">
       <h1 className="page-title">Results</h1>
       <p className="muted lede-tight">Evaluation results generated {formatDate(r.generated_at)} by <code>{r.command}</code>. Every figure shows its
-        sample size; “pending” means it needs hand labels or hand-checked values not yet entered
-        ({r.labels?.labelled_rows ?? 0} of {r.labels?.sheet_rows ?? 0} sample claims labelled).</p>
+        sample size. No human evaluation was done, so measures that needed human labels or hand-checked values read
+        “not measured”.</p>
       {Object.entries(r.writers ?? {}).map(([name, w]) => (
         <Block key={name} kicker="Drafting model" title={w.model} mono rows={writerRows(name, w, r)} />
       ))}
@@ -141,8 +142,8 @@ export function ResultsPage() {
           how: "Share of engine figures that match the author's hand-checked values from the filings." },
         { measure: "Retrieval recall (top 8)", result: rate(r.retrieval_recall?.top8), sample: sample(r.retrieval_recall?.top8?.n),
           how: "Share of golden fact questions whose hand-located passage is among the top 8 search results." },
-        { measure: "Scorecard against agency ratings", result: scorecardPending ? "pending" : "see results.json",
-          sample: scorecardPending ? "n = 0" : "–", how: "Rank correlation and IG / HY agreement with public agency ratings, once the author enters them." },
+        { measure: "Scorecard against agency ratings", result: scorecardPending ? NOT_MEASURED : "see results.json",
+          sample: scorecardPending ? "n = 0" : "–", how: "Rank correlation and IG / HY agreement with public agency ratings; none were entered." },
       ]} />
     </main>
   );

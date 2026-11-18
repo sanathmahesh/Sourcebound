@@ -5,7 +5,8 @@ Measured results only. Every figure here is filled in by code from `evals/result
 carries its sample size, and each column is one writer model, named by its exact model ID. Costs use the
 provider's list prices read on {{r:prices_read_on|text}}.
 
-Figures that need the author's hand-checked values or claim labels read "pending" until those exist. The judge
+No human evaluation was done: the claim sample was never labelled and no hand-checked figures were entered, so
+the measures that need them read "not measured". The judge
 model's verdict shares are estimates (a language model grading another), so they are kept out of this file;
 they are on the site's Results page and in the model recommendation.
 
@@ -24,9 +25,9 @@ they are on the site's Results page and in the model recommendation.
 ## How each figure is measured
 
 - **Numeric accuracy**: each computed figure in the golden-set memos is compared with the value the author
-  checked by hand against the filing. Pending until the golden-set sheets are filled in.
+  checked by hand against the filing. Not measured: the golden-set sheets were not filled in.
 - **Citation precision** and **unsupported-claim rate**: from a blind sample of claims the author labels without
-  seeing the judge's verdict. Pending until the labels are entered.
+  seeing the judge's verdict. Not measured: the sample was not labelled.
 - **Quoted figures found in the cited passage**: every figure the writer quoted from filing text is searched
   for in the passage its claim cites, by code.
 - **Cost** and **model time**: summed from the saved provider responses for each first-run memo, then averaged.

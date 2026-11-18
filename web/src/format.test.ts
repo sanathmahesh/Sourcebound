@@ -56,7 +56,7 @@ describe("formatRaw and formatRate", () => {
     expect(formatRaw(34_624_000_000, "USD")).toBe("$34,624,000,000");
     expect(formatRaw(-1_500_000, "USD")).toBe("-$1,500,000");
     expect(formatRate({ value: 0.8593155, n: 526 })).toBe("85.9% (n = 526)");
-    expect(formatRate({ value: null, n: 0 })).toBe("pending (n = 0)");
+    expect(formatRate({ value: null, n: 0 })).toBe("not measured (n = 0)");
   });
 });
 
