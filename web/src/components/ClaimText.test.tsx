@@ -16,22 +16,31 @@ const claim: MemoClaim = {
     { t: "quoted", v: "$15.0 billion", metric_id: null, chunk_id: "WMT-1" }],
   citations: [{ chunk_id: "WMT-1", quote: "a $15.0 billion revolving credit facility", check: "ok" }],
 };
+const props = { claim, metrics: { "net_leverage:LTM": metric }, passages: { "WMT-1": passage }, judgeModel: "judge/m" };
 
 describe("ClaimText", () => {
   it("shows the two kinds of figure differently, in words as well as style", () => {
-    render(<ClaimText claim={claim} metrics={{ "net_leverage:LTM": metric }} passages={{ "WMT-1": passage }} onOpen={() => {}} />);
-    expect(screen.getByRole("button", { name: /0\.96x.*computed from XBRL/ })).toBeTruthy();
-    expect(screen.getByRole("button", { name: /\$15\.0 billion.*quoted from the filing/ })).toBeTruthy();
-    expect(screen.getByText("Partly supported")).toBeTruthy();
+    render(<ClaimText {...props} onOpen={() => {}} />);
+    const computed = screen.getByRole("button", { name: /0\.96x.*computed from XBRL/ });
+    const quoted = screen.getByRole("button", { name: /\$15\.0 billion.*quoted from the filing/ });
+    expect(computed.className).toContain("chip-metric");
+    expect(quoted.className).toContain("chip-quoted");
+    expect(quoted.textContent).toBe("“$15.0 billion”");
   });
 
-  it("opens the metric's lineage or the cited passage", () => {
+  it("ends the claim with its verdict in a glyph and words", () => {
+    render(<ClaimText {...props} onOpen={() => {}} />);
+    expect(screen.getByRole("button", { name: /Verdict: partially supported/ }).textContent).toBe("◐ partially supported");
+  });
+
+  it("opens the metric's lineage, or the claim with its passages and verdict", () => {
     const onOpen = vi.fn();
-    render(<ClaimText claim={claim} metrics={{ "net_leverage:LTM": metric }} passages={{ "WMT-1": passage }} onOpen={onOpen} />);
+    render(<ClaimText {...props} onOpen={onOpen} />);
     fireEvent.click(screen.getByRole("button", { name: /0\.96x/ }));
     expect(onOpen).toHaveBeenLastCalledWith({ kind: "metric", key: "net_leverage:LTM", metric });
-    fireEvent.click(screen.getByRole("button", { name: /citation 1/ }));
-    expect(onOpen).toHaveBeenLastCalledWith(expect.objectContaining({ kind: "passage", chunkId: "WMT-1", passage,
-      quote: "a $15.0 billion revolving credit facility", verdict: "partially_supported" }));
+    fireEvent.click(screen.getByRole("button", { name: /Verdict/ }));
+    expect(onOpen).toHaveBeenLastCalledWith({ kind: "claim", claim, passages: props.passages, judgeModel: "judge/m", focus: undefined });
+    fireEvent.click(screen.getByRole("button", { name: /\$15\.0 billion/ }));
+    expect(onOpen).toHaveBeenLastCalledWith(expect.objectContaining({ kind: "claim", focus: "WMT-1" }));
   });
 });

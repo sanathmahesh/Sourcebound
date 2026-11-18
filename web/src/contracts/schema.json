@@ -2164,6 +2164,72 @@
    "title": "VerificationSummary",
    "type": "object"
   },
+  "WatchChange": {
+   "additionalProperties": false,
+   "description": "A headline ratio's change from the prior fiscal year-end (FY0) to the latest LTM, for the watchlist.",
+   "properties": {
+    "change": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Change"
+    },
+    "display": {
+     "title": "Display",
+     "type": "string"
+    },
+    "flagged": {
+     "title": "Flagged",
+     "type": "boolean"
+    },
+    "fy0": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Fy0"
+    },
+    "label": {
+     "title": "Label",
+     "type": "string"
+    },
+    "ltm": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Ltm"
+    },
+    "metric_id": {
+     "title": "Metric Id",
+     "type": "string"
+    }
+   },
+   "required": [
+    "metric_id",
+    "label",
+    "fy0",
+    "ltm",
+    "change",
+    "display",
+    "flagged"
+   ],
+   "title": "WatchChange",
+   "type": "object"
+  },
   "WatchFlag": {
    "additionalProperties": false,
    "properties": {
@@ -2210,6 +2276,13 @@
   "WatchItem": {
    "additionalProperties": false,
    "properties": {
+    "changes": {
+     "items": {
+      "$ref": "#/$defs/WatchChange"
+     },
+     "title": "Changes",
+     "type": "array"
+    },
     "data_to": {
      "anyOf": [
       {
@@ -2276,6 +2349,7 @@
     "data_to",
     "memo_status",
     "memo_date",
+    "changes",
     "flags"
    ],
    "title": "WatchItem",

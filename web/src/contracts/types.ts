@@ -546,6 +546,21 @@ export interface VerificationSummary {
   unsupported: number;
 }
 /**
+ * A headline ratio's change from the prior fiscal year-end (FY0) to the latest LTM, for the watchlist.
+ *
+ * This interface was referenced by `SourceboundDataContract`'s JSON-Schema
+ * via the `definition` "WatchChange".
+ */
+export interface WatchChange {
+  change: number | null;
+  display: string;
+  flagged: boolean;
+  fy0: number | null;
+  label: string;
+  ltm: number | null;
+  metric_id: string;
+}
+/**
  * This interface was referenced by `SourceboundDataContract`'s JSON-Schema
  * via the `definition` "WatchFlag".
  */
@@ -562,6 +577,7 @@ export interface WatchFlag {
  * via the `definition` "WatchItem".
  */
 export interface WatchItem {
+  changes: WatchChange[];
   data_to: string | null;
   flags: WatchFlag[];
   latest_filing: FilingRef | null;

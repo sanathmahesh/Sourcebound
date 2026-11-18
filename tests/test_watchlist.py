@@ -77,6 +77,14 @@ def test_new_filing_refreshes_flags_and_marks_the_memo_stale(site):
     assert index.companies[0].memo_status == "stale" and index.companies[0].open_flags == len(item.flags)
 
 
+def test_watchlist_items_carry_the_change_since_the_prior_year_end(site):
+    site_dir, cm, rows = site
+    watch(site_dir, rows, cm, T0, [])
+    item = Watchlist.model_validate_json((site_dir / "watchlist.json").read_text()).items[0]
+    assert [(c.metric_id, c.label, c.display) for c in item.changes] == [
+        ("debt_to_ebitda", "Debt / EBITDA", "+2.88x"), ("interest_coverage", "EBITDA / interest", "-0.66x")]
+
+
 def test_weekly_heartbeat_updates_the_checked_date_only(site):
     site_dir, cm, rows = site
     watch(site_dir, rows, cm, T0, [])

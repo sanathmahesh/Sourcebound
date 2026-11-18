@@ -2,13 +2,20 @@
 
 import pytest
 
+from sourcebound.contracts import CompanyMetrics
+from sourcebound.paths import PROJECT_ROOT
 from sourcebound.watchlist.flags import (
+    change_display,
+    compute_flags,
     coverage_down,
     grade_change,
     leverage_up,
     liquidity_shortfall,
     near_term_maturities,
+    ratio_changes,
 )
+
+COMPANIES = PROJECT_ROOT / "data" / "published" / "companies"
 
 
 @pytest.mark.parametrize(
@@ -62,3 +69,32 @@ def test_flag_records_rule_and_values():
     flag = leverage_up(2.0, 2.6, 3, 4)
     assert (flag.type, flag.metric_id, flag.from_value, flag.to_value) == ("leverage_up", "debt_to_ebitda", "2.00x", "2.60x")
     assert "0.5x" in flag.rule
+
+
+@pytest.mark.parametrize(
+    "fy0,ltm,expected",
+    [
+        ((2.0, "ok"), (2.6, "ok"), "+0.60x"),
+        ((3.05, "ok"), (2.39, "ok"), "-0.66x"),
+        ((2.0, "ok"), (2.001, "ok"), "0.00x"),  # rounds to zero: no sign
+        ((2.0, "ok"), (2.0 - 1e-4, "ok"), "0.00x"),  # never "-0.00x"
+        ((2.0, "ok"), (None, "not_meaningful"), "not meaningful"),  # EBITDA turned negative
+        ((None, "not_available"), (2.0, "ok"), "not available"),
+        ((None, "not_available"), (None, "not_meaningful"), "not available"),
+    ],
+)
+def test_change_display(fy0, ltm, expected):
+    change, display = change_display(*fy0, *ltm)
+    assert display == expected
+    assert (change is None) is (fy0[0] is None or ltm[0] is None)
+
+
+def test_ratio_changes_from_published_metrics_follow_the_flags():
+    gt = CompanyMetrics.model_validate_json((COMPANIES / "GT" / "metrics.json").read_text())
+    changes = ratio_changes(gt, compute_flags(gt))
+    assert [(c.metric_id, c.display, c.flagged) for c in changes] == [
+        ("debt_to_ebitda", "+2.88x", True), ("interest_coverage", "-0.66x", True)]
+    assert changes[0].fy0 == gt.metrics["debt_to_ebitda:FY0"].value
+    assert changes[0].ltm == gt.metrics["debt_to_ebitda:LTM"].value
+    wmt = CompanyMetrics.model_validate_json((COMPANIES / "WMT" / "metrics.json").read_text())
+    assert [c.flagged for c in ratio_changes(wmt, compute_flags(wmt))] == [False, False]

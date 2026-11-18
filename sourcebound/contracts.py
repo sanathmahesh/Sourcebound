@@ -350,6 +350,18 @@ class WatchFlag(BaseModel):
     to: str
 
 
+class WatchChange(Strict):
+    """A headline ratio's change from the prior fiscal year-end (FY0) to the latest LTM, for the watchlist."""
+
+    metric_id: str  # debt_to_ebitda or interest_coverage
+    label: str
+    fy0: float | None
+    ltm: float | None
+    change: float | None  # LTM minus FY0; None unless both are plain values
+    display: str  # "+0.60x", "-0.66x", "0.00x", "not available" or "not meaningful"
+    flagged: bool  # a watch flag fired on this ratio
+
+
 class WatchItem(Strict):
     ticker: str
     name: str
@@ -357,6 +369,7 @@ class WatchItem(Strict):
     data_to: date | None  # balance-sheet date of the latest metrics (LTM)
     memo_status: Literal["current", "stale", "missing"]
     memo_date: date | None
+    changes: list[WatchChange]
     flags: list[WatchFlag]
 
 

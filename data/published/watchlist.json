@@ -14,6 +14,26 @@
    "data_to": "2026-07-31",
    "memo_status": "current",
    "memo_date": "2026-11-18",
+   "changes": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "fy0": 1.1702325792677386,
+     "ltm": 1.208346526502438,
+     "change": 0.03811394723469941,
+     "display": "+0.04x",
+     "flagged": false
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "fy0": 16.300629396519806,
+     "ltm": 20.989366415595924,
+     "change": 4.688737019076118,
+     "display": "+4.69x",
+     "flagged": false
+    }
+   ],
    "flags": [
     {
      "type": "liquidity_shortfall",
@@ -53,6 +73,26 @@
    "data_to": "2026-09-30",
    "memo_status": "current",
    "memo_date": "2026-11-18",
+   "changes": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "fy0": 3.321920685599059,
+     "ltm": 3.421206445903394,
+     "change": 0.09928576030433511,
+     "display": "+0.10x",
+     "flagged": false
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "fy0": 7.112040633403048,
+     "ltm": 6.3648152999738015,
+     "change": -0.7472253334292462,
+     "display": "-0.75x",
+     "flagged": false
+    }
+   ],
    "flags": [
     {
      "type": "liquidity_shortfall",
@@ -84,6 +124,26 @@
    "data_to": "2026-09-30",
    "memo_status": "current",
    "memo_date": "2026-11-18",
+   "changes": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "fy0": 4.567428150331613,
+     "ltm": 7.443434343434343,
+     "change": 2.8760061931027296,
+     "display": "+2.88x",
+     "flagged": true
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "fy0": 3.049438202247191,
+     "ltm": 2.3855421686746987,
+     "change": -0.6638960335724922,
+     "display": "-0.66x",
+     "flagged": true
+    }
+   ],
    "flags": [
     {
      "type": "leverage_up",
@@ -139,6 +199,26 @@
    "data_to": "2026-09-30",
    "memo_status": "current",
    "memo_date": "2026-11-18",
+   "changes": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "fy0": 3.028263795423957,
+     "ltm": 3.1708741522230595,
+     "change": 0.1426103567991026,
+     "display": "+0.14x",
+     "flagged": false
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "fy0": 6.940836298932385,
+     "ltm": 6.741744284504657,
+     "change": -0.19909201442772773,
+     "display": "-0.20x",
+     "flagged": false
+    }
+   ],
    "flags": [
     {
      "type": "liquidity_shortfall",
@@ -170,6 +250,26 @@
    "data_to": "2026-08-31",
    "memo_status": "current",
    "memo_date": "2026-11-18",
+   "changes": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "fy0": 3.6628626426509006,
+     "ltm": 3.270688004376966,
+     "change": -0.3921746382739344,
+     "display": "-0.39x",
+     "flagged": false
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "fy0": 5.391401037805782,
+     "ltm": 6.211554800339847,
+     "change": 0.8201537625340656,
+     "display": "+0.82x",
+     "flagged": false
+    }
+   ],
    "flags": [
     {
      "type": "near_term_maturities",
@@ -193,6 +293,26 @@
    "data_to": "2026-09-30",
    "memo_status": "current",
    "memo_date": "2026-11-18",
+   "changes": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "fy0": 0.5502968023600036,
+     "ltm": 0.5175433052491358,
+     "change": -0.032753497110867724,
+     "display": "-0.03x",
+     "flagged": false
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "fy0": 63.66338905276958,
+     "ltm": 63.819733167856036,
+     "change": 0.15634411508645485,
+     "display": "+0.16x",
+     "flagged": false
+    }
+   ],
    "flags": []
   },
   {
@@ -207,6 +327,26 @@
    "data_to": "2026-09-30",
    "memo_status": "current",
    "memo_date": "2026-11-18",
+   "changes": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "fy0": 1.4902217565915836,
+     "ltm": 1.6895997916485805,
+     "change": 0.19937803505699692,
+     "display": "+0.20x",
+     "flagged": false
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "fy0": 26.120866590649943,
+     "ltm": 25.512735326688816,
+     "change": -0.6081312639611269,
+     "display": "-0.61x",
+     "flagged": false
+    }
+   ],
    "flags": [
     {
      "type": "liquidity_shortfall",
@@ -238,6 +378,26 @@
    "data_to": "2026-03-31",
    "memo_status": "current",
    "memo_date": "2026-11-18",
+   "changes": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "fy0": 0.6415330661322646,
+     "ltm": 0.7401925764870322,
+     "change": 0.09865951035476761,
+     "display": "+0.10x",
+     "flagged": false
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "fy0": 112.54394693200663,
+     "ltm": 92.91486291486291,
+     "change": -19.629084017143725,
+     "display": "-19.63x",
+     "flagged": false
+    }
+   ],
    "flags": [
     {
      "type": "liquidity_shortfall",
@@ -269,6 +429,26 @@
    "data_to": "2026-09-30",
    "memo_status": "current",
    "memo_date": "2026-11-18",
+   "changes": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "fy0": 2.584192998131752,
+     "ltm": 2.31427917270854,
+     "change": -0.2699138254232123,
+     "display": "-0.27x",
+     "flagged": false
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "fy0": 9.40488922841864,
+     "ltm": 10.317322834645669,
+     "change": 0.9124336062270295,
+     "display": "+0.91x",
+     "flagged": false
+    }
+   ],
    "flags": [
     {
      "type": "near_term_maturities",
@@ -292,6 +472,26 @@
    "data_to": "2026-08-31",
    "memo_status": "current",
    "memo_date": "2026-11-18",
+   "changes": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "fy0": 4.590033444816053,
+     "ltm": 3.963757440037716,
+     "change": -0.6262760047783376,
+     "display": "-0.63x",
+     "flagged": false
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "fy0": 6.501413350728419,
+     "ltm": 6.649294670846395,
+     "change": 0.1478813201179756,
+     "display": "+0.15x",
+     "flagged": false
+    }
+   ],
    "flags": [
     {
      "type": "liquidity_shortfall",
@@ -315,6 +515,26 @@
    "data_to": "2026-08-01",
    "memo_status": "current",
    "memo_date": "2026-11-18",
+   "changes": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "fy0": 2.5913897280966767,
+     "ltm": 2.5290923196276185,
+     "change": -0.06229740846905818,
+     "display": "-0.06x",
+     "flagged": false
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "fy0": 4.597222222222222,
+     "ltm": 4.957692307692308,
+     "change": 0.3604700854700855,
+     "display": "+0.36x",
+     "flagged": false
+    }
+   ],
    "flags": []
   },
   {
@@ -329,6 +549,26 @@
    "data_to": "2026-09-30",
    "memo_status": "current",
    "memo_date": "2026-11-18",
+   "changes": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "fy0": 7.879738205617671,
+     "ltm": 10.212037357315808,
+     "change": 2.3322991516981366,
+     "display": "+2.33x",
+     "flagged": true
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "fy0": 2.136946386946387,
+     "ltm": 1.7373798076923077,
+     "change": -0.39956657925407923,
+     "display": "-0.40x",
+     "flagged": true
+    }
+   ],
    "flags": [
     {
      "type": "leverage_up",
@@ -360,6 +600,26 @@
    "data_to": "2026-09-30",
    "memo_status": "current",
    "memo_date": "2026-11-18",
+   "changes": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "fy0": null,
+     "ltm": 9.928571428571429,
+     "change": null,
+     "display": "not meaningful",
+     "flagged": false
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "fy0": null,
+     "ltm": 1.2748344370860927,
+     "change": null,
+     "display": "not meaningful",
+     "flagged": false
+    }
+   ],
    "flags": [
     {
      "type": "liquidity_shortfall",
@@ -383,6 +643,26 @@
    "data_to": "2026-09-30",
    "memo_status": "current",
    "memo_date": "2026-11-18",
+   "changes": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "fy0": 7.596946564885497,
+     "ltm": 7.701836290071584,
+     "change": 0.10488972518608719,
+     "display": "+0.10x",
+     "flagged": false
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "fy0": 1.4061829111206527,
+     "ltm": 1.404897245299519,
+     "change": -0.0012856658211337635,
+     "display": "0.00x",
+     "flagged": false
+    }
+   ],
    "flags": []
   },
   {
@@ -397,6 +677,26 @@
    "data_to": "2026-09-30",
    "memo_status": "current",
    "memo_date": "2026-11-18",
+   "changes": [
+    {
+     "metric_id": "debt_to_ebitda",
+     "label": "Debt / EBITDA",
+     "fy0": 5.537617554858934,
+     "ltm": 5.744418331374853,
+     "change": 0.20680077651591944,
+     "display": "+0.21x",
+     "flagged": false
+    },
+    {
+     "metric_id": "interest_coverage",
+     "label": "EBITDA / interest",
+     "fy0": 2.2,
+     "ltm": 2.023781212841855,
+     "change": -0.17621878715814532,
+     "display": "-0.18x",
+     "flagged": false
+    }
+   ],
    "flags": [
     {
      "type": "liquidity_shortfall",

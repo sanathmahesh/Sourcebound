@@ -2,7 +2,7 @@ import { readdirSync, readFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import type { Memo } from "./contracts/types";
-import { formatRate, formatRaw, formatValue, toFixedPy } from "./format";
+import { formatDate, formatMillions, formatRate, formatRaw, formatValue, toFixedPy } from "./format";
 
 describe("formatValue", () => {
   it("formats like the Python engine (sourcebound/memo/render.py format_metric)", () => {
@@ -57,5 +57,16 @@ describe("formatRaw and formatRate", () => {
     expect(formatRaw(-1_500_000, "USD")).toBe("-$1,500,000");
     expect(formatRate({ value: 0.8593155, n: 526 })).toBe("85.9% (n = 526)");
     expect(formatRate({ value: null, n: 0 })).toBe("pending (n = 0)");
+  });
+});
+
+describe("formatDate and formatMillions", () => {
+  it("shows dates as the design does and ladder amounts in whole millions", () => {
+    expect(formatDate("2026-08-04")).toBe("4 Aug 2026");
+    expect(formatDate("2026-11-18T07:56:41Z")).toBe("18 Nov 2026");
+    expect(formatDate(null)).toBe("not available");
+    expect(formatMillions(3_542_000_000)).toBe("3,542");
+    expect(formatMillions(23_255_400_000)).toBe("23,255");
+    expect(formatMillions(-2_500_000)).toBe("-2");
   });
 });

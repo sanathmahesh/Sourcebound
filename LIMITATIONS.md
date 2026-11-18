@@ -114,9 +114,8 @@ Seeded from PLAN.md section 4.15; later items were added while building, with th
 - Not verified until a preview deploy: whether Vercel's Python runtime installs from pyproject.toml without
   the dev group, whether the rewrite keeps the /api/... path FastAPI routes on, and whether the 21 MB search
   index is bundled with the function.
-- Placeholder interface: plain styling; trends and the maturity ladder are tables, not charts; the watchlist
-  screen lacks the design brief's "change in leverage and coverage since the prior year-end" column, which
-  watchlist.json does not carry; the results screen reads evals.json's untyped `results` defensively.
+- The results screen reads evals.json's untyped `results` defensively. (Phase 7's plain styling and the missing
+  watchlist change column were resolved in phase 9.)
 - Checklist sign-off lives in one browser's localStorage: it is not an audit trail.
 
 ## Added in phase 8
@@ -127,3 +126,21 @@ Seeded from PLAN.md section 4.15; later items were added while building, with th
 - The model recommendation is provisional until the claim labels and judge calibration exist.
 - The decision log is written by hand and records settings and dated one-off observations; unlike artifacts
   1 to 5 it is not generated from results files, so the automatic number check does not cover it.
+
+## Added in phase 9
+
+- Fonts load from Google Fonts, so a viewer's browser contacts Google; if that is blocked the page falls back to
+  Georgia and system fonts.
+- Fiscal years are labelled FY-2, FY-1, FY0 and LTM rather than FY2024 and so on: memo.json carries no mapping
+  from period label to fiscal year (metrics.json does, but it can be newer than the memo).
+- The fallback log shows the tag used and the engine's message; the fallback rank is inside the message, not a
+  column of its own.
+- Checklist "Go to" links exist only for items that point at a claim, the scorecard, the maturity ladder or the
+  stale banner; items about a concept (fallback tags, blanks taken as zero) have no single place in the memo.
+- On a phone the header's navigation wraps into a column beside the wordmark, as in the handoff prototype.
+- The visual check is screenshots read by eye, not an automated pixel comparison. The prototype's own runtime
+  drew its header and filters but not its tables in headless Chrome, so tables were checked against the handoff
+  README and source rather than side by side.
+- watchlist.json gained its change field by an offline rebuild from the published state and metrics, with
+  checked_at unchanged and no EDGAR request; the next daily run writes it the normal way.
+

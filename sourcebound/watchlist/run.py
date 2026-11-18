@@ -28,7 +28,7 @@ from sourcebound.contracts import (
 from sourcebound.memo.render import format_metric
 from sourcebound.paths import PROJECT_ROOT
 from sourcebound.watchlist.detect import latest_filings
-from sourcebound.watchlist.flags import compute_flags
+from sourcebound.watchlist.flags import compute_flags, ratio_changes
 
 PUBLISHED = PROJECT_ROOT / "data" / "published"
 HEARTBEAT = timedelta(days=7)
@@ -92,10 +92,12 @@ def build_site_files(now: datetime, state: WatchState, metrics: dict[str, Compan
     items, entries = [], []
     for ticker, cs in state.companies.items():
         cm = metrics[ticker]
+        raised = compute_flags(cm)
         flags = [WatchFlag(type=f.type, severity=f.severity, rule=f.rule, metric_id=f.metric_id, from_=f.from_value,
-                           to=f.to_value) for f in compute_flags(cm)]
+                           to=f.to_value) for f in raised]
         items.append(WatchItem(ticker=ticker, name=cm.name, latest_filing=_latest(cs), data_to=_ltm_date(cm),
-                               memo_status=cs.memo_status, memo_date=cs.memo_date, flags=flags))
+                               memo_status=cs.memo_status, memo_date=cs.memo_date,
+                               changes=ratio_changes(cm, raised), flags=flags))
         verification_path = _company_dir(published, ticker) / "verification.json"
         counts = None
         if verification_path.exists():

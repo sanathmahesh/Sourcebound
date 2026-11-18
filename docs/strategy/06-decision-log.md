@@ -371,3 +371,32 @@ inventing one.
 - **Why:** read from the primary documents on 18 November 2026. The ratio engine is outside the definition and
   the generative parts are outside the scope, so a compliance claim would be false; the vocabulary is still how a
   bank's model-risk team would assess the tool.
+
+### D56. The watchlist carries each headline ratio's change since the prior year-end (phase 9)
+- **Decision:** a contract change, approved by the author on 18 November 2026 when the design handoff needed
+  it: each watchlist item gains `changes`, Debt / EBITDA and EBITDA / interest at FY0 and LTM, their difference,
+  how it reads ("+2.88x", "not meaningful") and whether a flag fired on that ratio. Computed in
+  sourcebound/watchlist/flags.py next to the flag rules. The published watchlist.json was rebuilt offline from
+  the published state and metrics, keeping checked_at; index.json was checked to be unchanged.
+- **Why:** every figure comes from tested Python code; highlighting by the flags that fired avoids a second copy
+  of the rule in the browser.
+- **Rejected:** dropping the columns (loses the design's main signal), and computing them in the browser from 15
+  metrics files (duplicated logic, more requests).
+
+### D57. Where the interface departs from the handoff, and why
+- **Decision:** the screens follow the handoff's tokens, type, layout, copy and interactions, except where the
+  real data or the project's rules require otherwise:
+  - The footer's "All companies and figures are fictional" is dropped (the data is real); the project's
+    disclaimer appears on every page.
+  - Every claim carries its verdict label, not only qualitative ones, because every claim was judged.
+  - The citation drawer lists every passage a claim cites, each with whether its quote was found.
+  - Multiples show two decimals, the engine's format, so a figure reads the same everywhere. Ratio tiles are
+    20 pixels wider to fit those labels.
+  - The chip key uses the word "figure" as its sample rather than invented numbers.
+  - Routes stay hash-based with the handoff's path names (`#/memo/WMT`), so the static host needs no rewrites.
+  - The Results screen keeps the measures the evaluation actually produces, in the handoff's table layout,
+    each with its sample size and a "how measured" note.
+  - The drawer gained focus trapping and Escape to close, which the handoff asked for.
+- **Why:** the plan says to implement the design over the data contract without changing it, and never to show
+  invented or false content.
+

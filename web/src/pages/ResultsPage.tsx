@@ -1,118 +1,149 @@
-// Screen 5: evaluation results from /data/evals.json, every figure with its sample size. Figures that need
-// my hand labels or hand-checked values show "pending" until those exist.
+// Screen 5: evaluation results from /data/evals.json. One block per writer model, then judge calibration,
+// seeded errors, and engine, retrieval and scorecard checks. Every figure shows its sample size; figures
+// that need my hand labels or hand-checked values say "pending" until those exist.
 // evals.json "results" is an untyped object in the contract (EvalsFile.results: dict); the shapes below are
 // what sourcebound/evals/report.py writes, read defensively.
 import type { EvalsFile } from "../contracts/types";
 import { useJson } from "../data";
-import { formatRate, toFixedPy } from "../format";
-import { Status } from "./Status";
+import { formatDate, formatPct, toFixedPy } from "../format";
+import { LoadError, Loading } from "./Status";
 
 type Rate = { value: number | null; n: number };
 interface Writer {
   model: string; memos_run1: number; claims_per_memo: number; judge_supported: Rate; judge_partially: Rate;
-  judge_unsupported: Rate; raw_numbers_rejected_per_memo: number; repairs_per_memo: number;
-  cost_total_per_memo: number; model_seconds_per_memo: number;
+  judge_unsupported: Rate; raw_numbers_rejected_per_memo: number; cost_total_per_memo: number; model_seconds_per_memo: number;
   run_to_run_judge_supported?: { mean: number; min: number; max: number; n: number };
 }
 interface Results {
   generated_at: string; command: string; prices_read_on: string;
   writers: Record<string, Writer>;
   memo_numeric_accuracy: Record<string, { engine_figures: Rate; quoted_figures_in_cited_passage: Rate }>;
-  engine_accuracy: { accuracy: Rate; coverage: Rate };
+  engine_accuracy: { accuracy: Rate };
   retrieval_recall: { top8: Rate };
   labels: { labelled_rows: number; sheet_rows: number;
-    per_writer: Record<string, { unsupported_rate: Rate; partially_rate: Rate; citation_precision: Rate }> };
+    per_writer: Record<string, { unsupported_rate: Rate; citation_precision: Rate }> };
   judge_calibration: Record<string, { rows_judged: number; cost_usd: number; agreement: Rate; false_pass_rate: Rate }>;
   seeded_errors: Record<string, Record<string, { n: number; code: number; judge_unsupported: number; judge_partial: number; missed: number }>>;
-  scorecard_vs_agencies: Record<string, unknown>;
+  scorecard_vs_agencies: { status?: string };
 }
 
-const pct = (v: number) => `${toFixedPy(v * 100, 1)}%`;
+type Row = { measure: string; result: string; sample: string; how: string };
 
-export function ResultsPage() {
-  const evals = useJson<EvalsFile>("/data/evals.json");
-  if (evals.state !== "ok") return <Status value={evals.state} message={evals.state === "error" ? evals.message : ""} />;
-  const r = evals.data.results as unknown as Results;
-  const writers = Object.entries(r.writers ?? {});
+const rate = (r: Rate | undefined) => (r && r.value !== null ? formatPct(r.value) : "pending");
+const sample = (n: number | undefined) => `n = ${n ?? 0}`;
+
+function writerRows(name: string, w: Writer, r: Results): Row[] {
+  const memos = sample(w.memos_run1);
+  const accuracy = r.memo_numeric_accuracy?.[name];
+  const labels = r.labels?.per_writer?.[name];
+  const spread = w.run_to_run_judge_supported;
+  return [
+    { measure: "Claims judged supported", result: rate(w.judge_supported), sample: sample(w.judge_supported?.n),
+      how: "Share of all claims in the first-run memos that the judge model marked supported." },
+    { measure: "Partially supported", result: rate(w.judge_partially), sample: sample(w.judge_partially?.n),
+      how: "Share the judge marked partially supported: the passage covers only part of the claim." },
+    { measure: "Unsupported (judge)", result: rate(w.judge_unsupported), sample: sample(w.judge_unsupported?.n),
+      how: "Share the judge marked unsupported." },
+    { measure: "Quoted figures in the cited passage", result: rate(accuracy?.quoted_figures_in_cited_passage),
+      sample: sample(accuracy?.quoted_figures_in_cited_passage?.n),
+      how: "Share of figures quoted from filing text that appear in the passage the claim cites." },
+    { measure: "Numeric accuracy", result: rate(accuracy?.engine_figures), sample: sample(accuracy?.engine_figures?.n),
+      how: "Share of computed figures in the memos that match the author's hand-checked golden values." },
+    { measure: "Unsupported-claim rate (human labels)", result: rate(labels?.unsupported_rate), sample: sample(labels?.unsupported_rate?.n),
+      how: "Share of claims in the blind sample that the author labelled unsupported." },
+    { measure: "Citation precision (human labels)", result: rate(labels?.citation_precision), sample: sample(labels?.citation_precision?.n),
+      how: "Share of citations in the blind sample that the author labelled correct." },
+    { measure: "Raw numbers rejected per memo", result: toFixedPy(w.raw_numbers_rejected_per_memo, 1), sample: memos,
+      how: "Typed digits in first drafts that the validator rejected, before any repair." },
+    { measure: "Cost per memo", result: `$${toFixedPy(w.cost_total_per_memo, 3)}`, sample: memos,
+      how: `Mean cost of drafting and judging one memo at list prices read on ${formatDate(r.prices_read_on)}.` },
+    { measure: "Model time per memo", result: `${toFixedPy(w.model_seconds_per_memo, 0)}s`, sample: memos,
+      how: "Mean total time spent waiting on model calls (drafting plus judging) per memo." },
+    { measure: "Run-to-run spread", result: spread ? `${formatPct(spread.mean)} (${formatPct(spread.min)} to ${formatPct(spread.max)})` : "not measured",
+      sample: `${spread?.n ?? 0} runs`, how: "Share judged supported in each of three drafts of the five golden-set memos: mean (lowest to highest)." },
+  ];
+}
+
+function Block({ kicker, title, mono, rows }: { kicker: string; title: string; mono?: boolean; rows: Row[] }) {
   return (
-    <article>
-      <h1>Results</h1>
-      <p className="note">Generated {r.generated_at} by <code>{r.command}</code>. Costs at list prices read on {r.prices_read_on}.
-        Every figure shows its sample size; "pending" means it needs hand labels or hand-checked values not yet entered.</p>
-
-      <h2>Writer models</h2>
-      <div className="table-wrap">
-        <table>
-          <thead><tr><th>Measure</th>{writers.map(([name]) => <th key={name}>{name}</th>)}</tr></thead>
+    <section className="result-block">
+      <div className="eyebrow">{kicker}</div>
+      <h2 className={mono ? "result-title mono" : "result-title serif"}>{title}</h2>
+      <div className="scroller ruled-top">
+        <table className="data-table results-table">
+          <thead><tr><th className="col-measure">Measure</th><th className="num col-result">Result</th><th className="num col-sample">Sample</th><th className="col-how">How this was measured</th></tr></thead>
           <tbody>
-            <Row label="Memos (first run)" cells={writers.map(([, w]) => String(w.memos_run1))} />
-            <Row label="Claims per memo" cells={writers.map(([, w]) => toFixedPy(w.claims_per_memo, 1))} />
-            <Row label="Judge: supported" cells={writers.map(([, w]) => formatRate(w.judge_supported))} />
-            <Row label="Judge: partly supported" cells={writers.map(([, w]) => formatRate(w.judge_partially))} />
-            <Row label="Judge: unsupported" cells={writers.map(([, w]) => formatRate(w.judge_unsupported))} />
-            <Row label="Quoted figures found in the cited passage" cells={writers.map(([n]) => formatRate(r.memo_numeric_accuracy?.[n]?.quoted_figures_in_cited_passage))} />
-            <Row label="Engine figures matching hand-checked values" cells={writers.map(([n]) => formatRate(r.memo_numeric_accuracy?.[n]?.engine_figures))} />
-            <Row label="Unsupported-claim rate (human labels)" cells={writers.map(([n]) => formatRate(r.labels?.per_writer?.[n]?.unsupported_rate))} />
-            <Row label="Citation precision (human labels)" cells={writers.map(([n]) => formatRate(r.labels?.per_writer?.[n]?.citation_precision))} />
-            <Row label="Raw numbers rejected per memo" cells={writers.map(([, w]) => toFixedPy(w.raw_numbers_rejected_per_memo, 1))} />
-            <Row label="Cost per memo (USD, list price)" cells={writers.map(([, w]) => `$${toFixedPy(w.cost_total_per_memo, 3)}`)} />
-            <Row label="Model time per memo" cells={writers.map(([, w]) => `${toFixedPy(w.model_seconds_per_memo, 0)} s`)} />
-            <Row label="Run-to-run: judge supported, mean (min to max)" cells={writers.map(([, w]) => {
-              const s = w.run_to_run_judge_supported;
-              return s ? `${pct(s.mean)} (${pct(s.min)} to ${pct(s.max)}), ${s.n} runs` : "not measured";
-            })} />
-          </tbody>
-        </table>
-      </div>
-      <p className="note">How measured: each writer drafted all 15 memos once, and the 5 golden-set memos twice more.
-        Verdicts are from the judge model; human labels come from a blind 180-claim sample
-        ({r.labels?.labelled_rows ?? 0} of {r.labels?.sheet_rows ?? 0} labelled so far).</p>
-
-      <h2>Judge calibration</h2>
-      <div className="table-wrap">
-        <table>
-          <thead><tr><th>Judge</th><th>Claims judged</th><th>Agreement with human labels</th><th>False-pass rate</th><th>Cost (USD)</th></tr></thead>
-          <tbody>
-            {Object.entries(r.judge_calibration ?? {}).map(([name, j]) => (
-              <tr key={name}><td>{name}</td><td className="num">{j.rows_judged}</td><td>{formatRate(j.agreement)}</td>
-                <td>{formatRate(j.false_pass_rate)}</td><td className="num">${toFixedPy(j.cost_usd, 4)}</td></tr>
+            {rows.map((row) => (
+              <tr key={row.measure}>
+                <td>{row.measure}</td>
+                <td className={`num mono strong-500${row.result === "pending" ? " muted" : ""}`}>{row.result}</td>
+                <td className="num mono muted">{row.sample}</td>
+                <td className="muted small-14 col-how">{row.how}</td>
+              </tr>
             ))}
           </tbody>
         </table>
       </div>
-      <p className="note">How measured: both candidate judges re-judged the 180-claim sample. Agreement is the share
-        of claims where judge and human label match; the false-pass rate is, of the claims labelled unsupported by a
-        human, the share the judge called supported.</p>
-
-      <h2>Seeded errors</h2>
-      {Object.entries(r.seeded_errors ?? {}).map(([judge, kinds]) => (
-        <div key={judge} className="table-wrap">
-          <h3>{judge}</h3>
-          <table>
-            <thead><tr><th>Error planted</th><th>n</th><th>Caught by code</th><th>Judge: unsupported</th><th>Judge: partly</th><th>Missed</th></tr></thead>
-            <tbody>
-              {Object.entries(kinds).map(([kind, k]) => (
-                <tr key={kind}><td>{kind.replaceAll("_", " ")}</td><td className="num">{k.n}</td><td className="num">{k.code}</td>
-                  <td className="num">{k.judge_unsupported}</td><td className="num">{k.judge_partial}</td><td className="num">{k.missed}</td></tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      ))}
-      <p className="note">How measured: claims the judge had marked supported were corrupted in five ways (a typed
-        wrong figure, a swapped placeholder, a negation, a citation moved to another passage, and one moved with a
-        real quote from it) and run through the same checks.</p>
-
-      <h2>Engine, retrieval and scorecard</h2>
-      <ul>
-        <li>Engine figures against hand-checked golden values: {formatRate(r.engine_accuracy?.accuracy)}</li>
-        <li>Retrieval: golden fact questions whose hand-located passage is in the top 8 results: {formatRate(r.retrieval_recall?.top8)}</li>
-        <li>Scorecard against agency ratings: {String(r.scorecard_vs_agencies?.status ?? "see results.json")}</li>
-      </ul>
-    </article>
+    </section>
   );
 }
 
-function Row({ label, cells }: { label: string; cells: string[] }) {
-  return <tr><td>{label}</td>{cells.map((c, n) => <td key={n} className="num">{c}</td>)}</tr>;
+export function ResultsPage() {
+  const evals = useJson<EvalsFile>("/data/evals.json");
+  if (evals.state === "loading") return <main className="page page-narrow"><Loading what="the results" /></main>;
+  if (evals.state === "error") return <main className="page page-narrow"><LoadError what="the results" /></main>;
+  const r = evals.data.results as unknown as Results;
+  const scorecardPending = r.scorecard_vs_agencies?.status?.startsWith("pending") ?? true;
+  return (
+    <main className="page page-narrow">
+      <h1 className="page-title">Results</h1>
+      <p className="muted lede-tight">Evaluation results generated {formatDate(r.generated_at)} by <code>{r.command}</code>. Every figure shows its
+        sample size; “pending” means it needs hand labels or hand-checked values not yet entered
+        ({r.labels?.labelled_rows ?? 0} of {r.labels?.sheet_rows ?? 0} sample claims labelled).</p>
+      {Object.entries(r.writers ?? {}).map(([name, w]) => (
+        <Block key={name} kicker="Drafting model" title={w.model} mono rows={writerRows(name, w, r)} />
+      ))}
+      {Object.entries(r.judge_calibration ?? {}).map(([judge, j]) => (
+        <Block key={judge} kicker="Judge calibration" title={judge} mono rows={[
+          { measure: "Agreement with human labels", result: rate(j.agreement), sample: sample(j.agreement?.n),
+            how: "Share of sample claims where the judge's verdict matches the author's label." },
+          { measure: "False-pass rate", result: rate(j.false_pass_rate), sample: sample(j.false_pass_rate?.n),
+            how: "Of the sample claims the author labelled unsupported, the share the judge called supported." },
+          { measure: "Claims re-judged", result: String(j.rows_judged), sample: sample(j.rows_judged),
+            how: "Claims in the blind sample this judge re-judged for calibration." },
+          { measure: "Calibration cost", result: `$${toFixedPy(j.cost_usd, 4)}`, sample: sample(j.rows_judged),
+            how: "Cost of re-judging the sample at list prices." },
+        ]} />
+      ))}
+      {Object.entries(r.seeded_errors ?? {}).map(([judge, kinds]) => (
+        <section key={judge} className="result-block">
+          <div className="eyebrow">Seeded errors</div>
+          <h2 className="result-title mono">{judge}</h2>
+          <div className="scroller ruled-top">
+            <table className="data-table">
+              <thead><tr><th>Error planted</th><th className="num">Sample</th><th className="num">Caught by code</th>
+                <th className="num">Judged unsupported</th><th className="num">Judged partially</th><th className="num">Missed</th></tr></thead>
+              <tbody>
+                {Object.entries(kinds).map(([kind, k]) => (
+                  <tr key={kind}><td>{kind.replaceAll("_", " ")}</td><td className="num mono muted">n = {k.n}</td><td className="num mono">{k.code}</td>
+                    <td className="num mono">{k.judge_unsupported}</td><td className="num mono">{k.judge_partial}</td><td className="num mono">{k.missed}</td></tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="muted small-14">Claims the judge had marked supported were corrupted in five ways (a typed wrong figure, a swapped
+            placeholder, a negation, a citation moved to another passage, and one moved with a real quote from it) and run through
+            the same checks.</p>
+        </section>
+      ))}
+      <Block kicker="Engine, retrieval and scorecard" title="Checks against hand-made answers" rows={[
+        { measure: "Engine figures against golden values", result: rate(r.engine_accuracy?.accuracy), sample: sample(r.engine_accuracy?.accuracy?.n),
+          how: "Share of engine figures that match the author's hand-checked values from the filings." },
+        { measure: "Retrieval recall (top 8)", result: rate(r.retrieval_recall?.top8), sample: sample(r.retrieval_recall?.top8?.n),
+          how: "Share of golden fact questions whose hand-located passage is among the top 8 search results." },
+        { measure: "Scorecard against agency ratings", result: scorecardPending ? "pending" : "see results.json",
+          sample: scorecardPending ? "n = 0" : "–", how: "Rank correlation and IG / HY agreement with public agency ratings, once the author enters them." },
+      ]} />
+    </main>
+  );
 }

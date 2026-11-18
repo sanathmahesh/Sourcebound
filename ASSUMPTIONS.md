@@ -143,3 +143,16 @@ were added while building, with the phase that added them.
     guidance) are not figures.
 66. The effort summary is the median minutes per task and condition, with the count of tasks and errors found
     later.
+
+## Added in phase 9
+
+67. The watchlist's change columns are LTM minus FY0 for Debt / EBITDA and EBITDA / interest, to two decimals.
+    When either end is not a plain value the change reads "not available" or "not meaningful"; it is never
+    estimated.
+68. A ratio change is highlighted when a watch flag fired on that ratio (whose rule also covers a move into a
+    worse band), not by a separate threshold in the interface.
+69. Every claim shows its verdict label, computed-figure claims included, because every claim in a memo was
+    judged.
+70. The stale banner's "figures as of" date is the latest period end among the memo's filings.
+71. The light theme is the default; a viewer's choice of theme is remembered in their browser.
+

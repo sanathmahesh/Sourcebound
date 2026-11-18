@@ -3,8 +3,8 @@
 A credit-analysis tool that drafts a credit memo on a US public company from its SEC filings and proves
 every figure against source data. Educational project. Not investment advice.
 
-Status: phase 8 of 10 (verified memos, model evaluation, daily watchlist, the live follow-up API, a plain
-interface and the strategy documents; not yet deployed). See PLAN.md.
+Status: phase 9 of 10 (verified memos, model evaluation, daily watchlist, the live follow-up API, the strategy
+documents and the designed interface; not yet deployed). See PLAN.md.
 
 ## Setup
 

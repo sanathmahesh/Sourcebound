@@ -751,13 +751,13 @@ reviewed override with the figure quoted from the filing, which is a proposal, n
 - **Banker's rounding (round half to even)**: Python rounds an exact tie to the even digit (47.25 -> 47.2),
   JavaScript's `toFixed` rounds it up (47.3). The interface copies Python's rule, and a test compares it with
   every figure in the 15 memos; that test found HCA's $47.25 billion reading differently in two places.
-- **Hash routing**: page addresses like `#/c/WMT` are handled in the browser, so the static host serves one
+- **Hash routing**: page addresses like `#/memo/WMT` are handled in the browser, so the static host serves one
   `index.html` and needs no server rules.
 
 ### Why it is built this way
 - The function imports neither pandas nor the EDGAR client (a test checks this): it reads only published files,
   so it starts fast and cannot reach EDGAR.
-- The interface is deliberately plain: phase 9 replaces its look with the design handoff over the same data.
+- Phase 7 built the interface plainly; phase 9 gave it the design handoff's look over the same data (section 26).
 - Measured once each on 18 November 2026 (GLM-5.3 as writer and judge): a Walmart revolver question took 18.3 s
   (two lookup rounds, three claims kept, one removed by the judge); "Should I buy Carnival stock?" was refused as
   out of scope in 2.5 s.
@@ -893,3 +893,66 @@ validator who did not build the tool would challenge it.
 A: As a third party: due diligence before use, contract terms on data and model changes, ongoing monitoring
 (here: model IDs and prices pinned with dates, evaluations re-run on any change), and an exit plan (the manual
 process stays in place).
+
+## 26. The designed interface (web/src/, phase 9)
+
+Phase 9 rebuilt every screen from the Claude Design handoff (an HTML prototype with sample data and a README of
+tokens and rules) as React components over the same published files. The look is the handoff's: warm paper
+colours, Source Serif for prose, Source Code Pro for every figure, square corners, rules instead of boxes.
+
+### Concepts in plain English
+- **Design tokens**: the handful of named colours, fonts and sizes the whole design uses (`--ink`, `--accent`,
+  `--warn` and so on). They live once in styles.css, and the dark theme only redefines them.
+- **Two kinds of number**: a *computed* figure (the engine calculated it from XBRL facts) sits in a solid blue
+  box in a monospace font; a *quoted* figure (copied from filing text) sits in a dashed box in the prose font,
+  inside curly quotes. Clicking either shows where it came from.
+- **Verdict label**: every claim ends with a bordered label such as "✓ supported" or "◐ partially supported".
+  Partly supported text also gets a dashed underline and unsupported text a wavy one.
+- **Never colour alone**: every state also has a glyph or words (✓ ◐ ✕ for verdicts; i, ! and ‼ for
+  severity; "not available" and "not meaningful" spelled out). A colour-blind reader, or a black-and-white
+  printout, loses nothing.
+- **Change since the prior year-end**: on the watchlist, Debt / EBITDA and EBITDA / interest now (LTM) minus at
+  the last fiscal year-end (FY0). "+2.88x" means leverage rose by 2.88 turns of EBITDA. It is shown in bold red
+  only when a watch flag fired on that ratio.
+- **Focus trap**: while the source drawer is open, the Tab key cycles inside it, Escape closes it, and focus
+  returns to the chip that opened it, so a keyboard user is never lost behind the dimmed page.
+
+### Why it is built this way
+- **The contract did not bend to the design.** Where the design needed data the files lacked (the watchlist's
+  change columns), I stopped and asked; the author chose to add it to the data (D56), so Python computes it with
+  tests and the browser only shows it.
+- **Where our data is richer than the prototype's sample, the screen shows all of it.** Many claims cite two to
+  four passages, so the drawer lists every one with its own "quote found" line; every claim was judged, so every
+  claim (computed ones too) carries its verdict label.
+- **Copy that would be false was not copied.** The prototype's footer says "All companies and figures are
+  fictional"; ours are real filings, so the footer carries the project's disclaimer instead, on every page.
+- **Figures keep the engine's format** (two decimals for multiples, Python's rounding), so a figure reads the
+  same in a chip, a tile and a table; the prototype's one-decimal samples were illustrations.
+- The visual check was screenshots of every screen at 1280 and 390 pixels wide, light and dark, compared with
+  the prototype and the handoff README (D57).
+
+**Q: Why compute the watchlist's "change since year-end" in Python rather than in the browser?**
+A: Every figure on the site comes from tested Python code; the browser only formats. Computing it next to the
+flag rules also lets the highlight follow the flags that actually fired, instead of a second copy of the rule
+that could drift. It was a contract change, so I asked first.
+
+**Q: How does the interface avoid relying on colour?**
+A: Each state has a glyph and words as well as a colour: ✓ supported, ◐ partially supported, ✕ unsupported;
+i information, ! warning, ‼ alert. The two kinds of figure differ in border style and font, and quoted ones carry
+quotation marks. Flagged ratio changes are bold as well as red.
+
+**Q: What did you do when the design and the data disagreed?**
+A: Three cases. Missing data: stop and ask (the watchlist change columns). Richer data: show it (several passages
+per claim, a verdict on every claim). Wrong copy: don't copy it (the "fictional" footer). Each is in the decision
+log (D56, D57).
+
+**Q: How do you test a visual design?**
+A: Behaviour with component tests (chips open the right source, the drawer traps focus and closes on Escape,
+the checklist counts and remembers ticks, the watchlist shows the published changes); the data contract with the
+unchanged contract tests; the look with screenshots at desktop and phone widths in both themes, checked by eye
+against the handoff.
+
+**Q: Why hash routes (`#/memo/WMT`) instead of real paths?**
+A: The site is static files. With hash routes the host serves one index.html for every page and needs no
+rewrite rules; the handoff's path names (`/memo/:ticker`, `/about/:doc`) are kept after the `#`.
+

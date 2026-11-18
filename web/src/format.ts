@@ -59,8 +59,30 @@ export function formatRate(rate: { value: number | null; n: number } | undefined
   return `${toFixedPy(rate.value * 100, 1)}% (n = ${rate.n})`;
 }
 
-export const VERDICT_LABEL = {
-  supported: "Supported",
-  partially_supported: "Partly supported",
-  unsupported: "Unsupported",
+/** A measured share as a percentage, one decimal: 92.3%. */
+export function formatPct(share: number): string {
+  return `${toFixedPy(share * 100, 1)}%`;
+}
+
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+/** An ISO date or date-time as the design shows it: 4 Aug 2026. */
+export function formatDate(iso: string | null | undefined): string {
+  if (!iso) return "not available";
+  const [year, month, day] = iso.slice(0, 10).split("-");
+  return `${Number(day)} ${MONTHS[Number(month) - 1]} ${year}`;
+}
+
+/** A USD amount in whole millions with thousands separators, for the maturity ladder: 3,542. */
+export function formatMillions(value: number): string {
+  return grouped(toFixedPy(value / 1e6, 0));
+}
+
+/** Each verdict as a glyph and words, so it never relies on colour alone. */
+export const VERDICT = {
+  supported: { glyph: "✓", words: "supported" },
+  partially_supported: { glyph: "◐", words: "partially supported" },
+  unsupported: { glyph: "✕", words: "unsupported" },
 } as const;
+
+export const SEVERITY = { info: "i information", warning: "! warning", alert: "‼ alert" } as const;

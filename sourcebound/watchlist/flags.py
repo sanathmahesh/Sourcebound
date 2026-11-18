@@ -6,14 +6,15 @@
 - near_term_maturities: debt due within 12 months above 50% of cash + short-term investments + undrawn
   revolver (warning) or above 100% (alert)
 - grade_change: a worse SB grade
-Computed from the published metrics only; no model is involved.
+Computed from the published metrics only; no model is involved. The watchlist also shows, for Debt / EBITDA
+and EBITDA / interest, the change from FY0 to LTM (ratio_changes), highlighted when a flag fired on that ratio.
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass
 
-from sourcebound.contracts import CompanyMetrics
+from sourcebound.contracts import CompanyMetrics, Status, WatchChange
 
 
 @dataclass(frozen=True)
@@ -96,3 +97,31 @@ def compute_flags(cm: CompanyMetrics) -> list[Flag]:
         grade_change(cm.scorecard_fy0.grade, cm.scorecard.grade),
     ]
     return [flag for flag in candidates if flag is not None]
+
+
+CHANGE_METRICS = ("debt_to_ebitda", "interest_coverage")
+
+
+def change_display(fy0: float | None, fy0_status: Status, ltm: float | None, ltm_status: Status) -> tuple[float | None, str]:
+    """LTM minus FY0 and how it reads ("+0.60x"); in words when either end is not a plain value."""
+    if fy0 is None or ltm is None or fy0_status != "ok" or ltm_status != "ok":
+        missing = "not_available" in (fy0_status, ltm_status)
+        return None, "not available" if missing else "not meaningful"
+    change = ltm - fy0
+    text = f"{change:+.2f}x"
+    return change, "0.00x" if text in ("+0.00x", "-0.00x") else text
+
+
+def ratio_changes(cm: CompanyMetrics, flags: list[Flag]) -> list[WatchChange]:
+    """The FY0-to-LTM change in each CHANGE_METRICS ratio, marked when a watch flag fired on it."""
+    changes = []
+    for metric_id in CHANGE_METRICS:
+        fy0, ltm = cm.metrics.get(f"{metric_id}:FY0"), cm.metrics.get(f"{metric_id}:LTM")
+        named = ltm or fy0
+        change, display = change_display(fy0.value if fy0 else None, fy0.status if fy0 else "not_available",
+                                         ltm.value if ltm else None, ltm.status if ltm else "not_available")
+        changes.append(WatchChange(
+            metric_id=metric_id, label=named.label if named else metric_id,
+            fy0=fy0.value if fy0 else None, ltm=ltm.value if ltm else None, change=change, display=display,
+            flagged=any(f.metric_id == metric_id for f in flags)))
+    return changes
