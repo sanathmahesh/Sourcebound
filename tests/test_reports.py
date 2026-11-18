@@ -62,3 +62,15 @@ def test_tag_discovery_marks_reported_and_missing_tags(gt):
     assert by_tag[("short_term_investments", "ShortTermInvestments")].fact_count == 0
     text = render_tag_discovery([gt], related={})
     assert "## GT" in text
+
+
+def test_ratio_report_has_ladder_trends_and_scorecard(gt):
+    from sourcebound.scorecard.grid import load_grid
+    from sourcebound.scorecard.scoring import score_company
+
+    grid = load_grid(CONFIG_DIR / "grid.yaml")
+    text = render_ratio_report(gt, [score_company(grid, gt, "latest")])
+    for heading in ["## Maturity ladder (FY0", "## Trends", "## Scorecard", "### Liquidity coverage — LTM",
+                    "### Near-term maturity cover — FY0"]:
+        assert heading in text
+    assert "not credit ratings" in text

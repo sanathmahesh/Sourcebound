@@ -16,6 +16,7 @@ import sys
 from dataclasses import dataclass
 from datetime import date, datetime, timezone
 
+from sourcebound.edgar.client import EdgarError
 from sourcebound.engine.analysis import CompanyAnalysis
 from sourcebound.engine.concepts import ConceptSpec, load_concepts
 from sourcebound.engine.periods import PERIOD_ORDER, Period, Window
@@ -136,7 +137,11 @@ def _tag_table(rows: list[TagRow], labels: list[str]) -> list[str]:
     return lines
 
 
-def render_tag_discovery(analyses: list[CompanyAnalysis], related: dict[str, list[RelatedTag]]) -> str:
+def render_tag_discovery(
+    analyses: list[CompanyAnalysis],
+    related: dict[str, list[RelatedTag]],
+    unusable: dict[str, str] | None = None,
+) -> str:
     generated = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     lines = [
         "# Tag-discovery report",
@@ -145,6 +150,10 @@ def render_tag_discovery(analyses: list[CompanyAnalysis], related: dict[str, lis
         "the company reported it for exactly that period (for LTM: all three windows).",
         "",
     ]
+    if unusable:
+        lines += ["## Companies that could not be analysed", ""]
+        lines += [f"- **{ticker}**: {reason}" for ticker, reason in unusable.items()]
+        lines.append("")
     for a in analyses:
         labels = [l for l in PERIOD_ORDER if l in a.periods]
         lines += [
@@ -176,9 +185,15 @@ def render_tag_discovery(analyses: list[CompanyAnalysis], related: dict[str, lis
 def main(tickers: list[str]) -> None:
     specs = load_concepts(CONFIG_DIR / "concepts.yaml")
     client = make_client()
-    analyses = [load_and_analyse(client, t, specs) for t in tickers]
+    analyses, unusable = [], {}
+    for ticker in tickers:
+        try:
+            analyses.append(load_and_analyse(client, ticker, specs))
+        except (ValueError, EdgarError) as exc:  # reported, never worked around
+            unusable[ticker] = str(exc)
+            print(f"{ticker}: could not be analysed: {exc}")
     related = {a.ticker: related_tags(a) for a in analyses}
-    text = render_tag_discovery(analyses, related)
+    text = render_tag_discovery(analyses, related, unusable)
     path = REPORTS_DIR / "tag-discovery.md"
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text)

@@ -52,3 +52,24 @@ were added while building, with the phase that added them.
     Operating leases, pensions and guarantees remain excluded (assumption 3).
 29. InterestExpense and InterestExpenseNonoperating are taken to include finance-lease interest. When only
     InterestExpenseDebt is reported, FinanceLeaseInterestExpense is added (assumed zero if not reported).
+
+## Added in phase 2
+
+30. Debt due within 12 months is the balance-sheet short-term debt (short-term borrowings plus current
+    portion of long-term debt) at each period's date; it counts as zero when no tag is reported (D19, D21).
+31. Net interest (interest expense net of interest income) is used, flagged, when no gross interest-expense
+    tag is reported (D19).
+32. In liquidity and near-term cover, cash means cash and cash equivalents plus short-term investments.
+33. The maturity ladder, debt due within 24 months (short-term debt + ladder year 2) and near-term maturity
+    cover are as of FY0. The year-1 maturity falls back to the balance-sheet current portion of long-term
+    debt when the table's year-1 tag is missing (D19).
+34. The "latest" scorecard uses LTM ratios and the FY0 near-term maturity cover; a value on a band
+    threshold takes the worse band; special statuses map to fixed bands as set out in D22.
+35. Trend direction runs from FY-2 to LTM; stable within 10% (at least 0.1x) for multiples and within 2
+    percentage points for percentages.
+36. Revenue moving more than 40% between consecutive fiscal years raises a "possible structural change"
+    warning; values are not adjusted.
+37. A 10-K or 10-Q without facts in the company's XBRL data is skipped in favour of the newest one with
+    facts, and flagged as stale data (D24).
+38. ExxonMobil is analysed through its predecessor registrant, Exxon Mobil Corp, under an approved override;
+    its latest figures are to 31 March 2026 (D20).

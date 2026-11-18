@@ -330,6 +330,164 @@ chain is a deliberate, visible test change.
 
 ---
 
+## 8. Chain revision 2 and the 15-company label check (phase 2)
+
+Running tag discovery on all 15 companies before building anything else found the same kinds of gap as
+phase 1: Union Pacific reports only "Depreciation"; Kohl's, Cleveland-Cliffs, Community Health and (for its
+latest quarter) Caesars report interest only as **net interest** (expense minus interest income, filed as a
+negative number); Oracle calls its debt "notes payable". Each fix was approved before it was made (D19).
+
+- **Sign flip ("negate")**: net interest is filed as, say, −594 (an expense). The chain uses minus that
+  value, so interest expense is +594. The lineage keeps the filed −594 and records that it was subtracted.
+- **Short-term debt as zero when untagged**: companies usually leave the tag out when nothing is due within a
+  year. Counting it as zero is logged and goes on the checklist, so a wrong zero would be caught.
+
+**Q: Why run the label check across all companies first?**
+A: Building ratios on top of unchecked chains spreads errors silently. One cheap pass showed every gap at
+once, each fix was approved with evidence, and afterwards every core ratio was available for all 15.
+
+---
+
+## 9. Liquidity (sourcebound/engine/ratios.py)
+
+### Concepts
+- **Liquidity**: can the company meet the cash it must pay out over the next year? Different from leverage:
+  a company with modest debt can still fail if a large payment falls due when it has no cash.
+- **Sources over uses** (liquidity coverage):
+  sources = cash + short-term investments + undrawn revolver + cash from operations (floored at zero);
+  uses = debt due within 12 months + capital expenditure + dividends. Below 1.0 is a shortfall.
+- **Revolver** (revolving credit facility): a committed bank credit line the company can draw and repay.
+  The undrawn part is ready money. It counts only if the company tags it in XBRL; only Verizon does among
+  the 15, so for the others it counts as zero (logged) and their liquidity looks weaker than it is.
+- **Commercial paper**: short-term IOUs sold to investors, rolled over continually. It is part of
+  short-term borrowings, so it is "due within 12 months".
+- **Trailing cash flow as a stand-in**: next year's cash flow is unknown, so the last twelve months' is used
+  (assumption 6). Negative cash from operations counts as zero rather than as a use.
+
+**Q: Why floor cash from operations at zero?**
+A: Sources should not go negative; a cash-burning company's burn shows up as weak coverage anyway, and
+treating burn as an extra "use" would double-count it against capex.
+
+---
+
+## 10. The maturity ladder (sourcebound/engine/ladder.py)
+
+### Concepts
+- **Maturity ladder**: how much debt falls due in each of the next five years and after, from the debt
+  note's maturity table in the 10-K. A **maturity wall** is a large amount due in one year: the company must
+  repay or refinance it, which is risky if markets are shut or its credit has weakened (**refinancing risk**).
+- **Debt due within 12 months** has one definition everywhere: the balance sheet's short-term debt
+  (short-term borrowings plus the current portion of long-term debt). It updates every quarter and includes
+  commercial paper, which the maturity table leaves out (D21).
+- **Debt due within 24 months** = short-term debt + ladder year 2.
+- **Near-term maturity cover** = debt due within 24 months / (cash + short-term investments + undrawn
+  revolver). Below 1 means liquid resources could repay everything due in two years.
+- **Ladder reconciliation**: ladder total + short-term borrowings + finance leases should be close to total
+  debt (the table shows principal of long-term debt only). More than 5% apart is a warning.
+
+**Q: Your ladder is annual. Isn't it stale by the third quarter?**
+A: Yes, partly. That's why "due within 12 months" comes from the latest balance sheet, which updates each
+quarter, while the later years come from the 10-K. The ladder is labelled as of FY0.
+
+---
+
+## 11. Trends and warnings (sourcebound/engine/trends.py, checks.py)
+
+- **Trend direction** compares LTM with FY-2: improving, worsening or stable (within 10% for multiples,
+  2 points for percentages). "Improving" is in the credit sense: lower leverage, higher coverage.
+- **Possible structural change**: revenue moving more than 40% in a year usually means a merger or
+  disposal, so trends across those years may not be like for like. It is a warning; nothing is adjusted.
+- **Stale data**: if the newest 10-Q has no facts in the company's XBRL data (it happened with ExxonMobil),
+  the engine uses the newest one that does and flags it (D24).
+
+---
+
+## 12. The scorecard (sourcebound/scorecard/, config/grid.yaml)
+
+### Concepts
+- **Credit rating**: a rating agency's opinion of a borrower's ability to repay (S&P, Moody's, Fitch).
+  **Investment grade (IG)** is BBB− (S&P, Fitch) / Baa3 (Moody's) and above; below that is **high yield
+  (HY)** or "junk". Banks and investors use the split for limits, capital and pricing.
+- **Scorecard (rating grid)**: a table mapping each ratio to a score band and weighting the scores into one
+  grade. Agencies and banks use grids as a starting point, then add business-risk judgment.
+- **SB grades are not ratings.** They are my stylized, ratio-only method. Every page says so.
+
+### How it works
+- Six factors, each scored 1 (strongest) to 6 (weakest) by thresholds in config/grid.yaml; weights sum to 1
+  (interest coverage 25%, debt / EBITDA and FCF / debt 20% each, liquidity 15%, net leverage and near-term
+  cover 10% each).
+- **Tie rule**: a value exactly on a threshold gets the worse band (conservative; approved).
+- **Special statuses**: EBITDA at or below zero scores 6 on the EBITDA ratios; net cash scores 1; zero debt
+  scores 1 on every debt-related factor.
+- **Renormalisation**: if a factor can't be scored, it is left out, the other weights are scaled up to sum
+  to 1, and the grade is marked **provisional** and put on the checklist (Kohl's, which tags no maturity
+  table).
+- Weighted score → SB-1 (≤1.5) … SB-6 (>5.5). 3.5 or below counts as "IG-like" for the agency comparison.
+- **Frozen** at the end of phase 2 (git tag `grid-v1`) before any comparison with agency ratings.
+
+### Why it is built this way
+- Thresholds are data, so I can read and approve them; tests check every boundary, that weights sum to 1,
+  and (a property test over thousands of random values) that a worse ratio never earns a better score.
+- The scorecard code never reads the agency-ratings file; a test enforces it.
+
+**Q: Why freeze the grid before comparing with agency ratings?**
+A: With 15 companies, if I tuned thresholds after seeing the agency ratings I'd be fitting the test set.
+Freezing first makes the comparison an honest out-of-sample check; any later change is logged as tuning.
+
+**Q: Kohl's scores IG-like. Is the method broken?**
+A: It's a known limitation: the grid is ratio-only, with no business-risk factors and no operating-lease
+adjustment, so retailers with large store leases can look stronger than a fuller analysis would rate them.
+The agency comparison will measure exactly that kind of miss.
+
+**Q: What does "provisional" mean?**
+A: A factor had no data, so the grade rests on the remaining factors with their weights scaled up. It is
+flagged, not hidden.
+
+---
+
+## 13. Overrides: the ExxonMobil case (config/overrides.yaml, sourcebound/overrides.py)
+
+- On 1 July 2026 ExxonMobil moved into a new **holding company**: a new parent company is put on top of the
+  old one, and shareholders end up holding the new parent's shares. The new parent filed a **Form 8-K12B** (the
+  form a **successor issuer** uses to say its shares are now the listed ones), and SEC's ticker file now
+  maps XOM to the new company, which has no annual report yet.
+- The plan allows company-specific handling only through config/overrides.yaml, each entry with a written
+  reason and my approval, and each on the company's checklist. XOM uses the predecessor's filings (D20).
+- Because the June 2026 quarter's facts sit under the new company, XOM's latest figures are to March 2026.
+
+**Q: How do you stop per-company fixes creeping in?**
+A: There's one file for them, each needs a reason and an approval date (the loader refuses otherwise), and
+each shows up on that company's reviewer checklist.
+
+---
+
+## 14. The published data contract (sourcebound/contracts.py, pipeline/export.py)
+
+- **Pydantic models** define every field of `data/published/companies/<T>/metrics.json`. A test validates
+  every published file against them.
+- **Metric keys** are `<metric_id>:<period>`, e.g. `net_leverage:LTM`, matching the memo placeholders
+  `{{m:net_leverage:LTM}}` in phase 4.
+- **Every metric carries its XBRL inputs** (tag, rank, value, period, form, accession, filing date, link),
+  so the site can show where any number came from without asking the server.
+- **Reviewer checklist (data part)**: figures not available, fallbacks, assumed zeros, overrides,
+  reconciliation warnings, structural changes, stale data and provisional grades; repeated log entries
+  become one item naming the periods.
+
+**Q: Why static JSON rather than a database?**
+A: The data changes at most daily, the site is read-only, and Vercel serves static files from its CDN for
+free. Nothing needs to be held in memory between requests.
+
+---
+
+## 15. What only I fill in (evals/)
+
+- **Golden-set sheets** `evals/golden/<T>.md`: I fill in values from the 10-K **before** looking at the
+  tool's, so the check is independent. The derived formulas match the engine's definitions.
+- **Agency ratings** `evals/agency_ratings.csv`: entered by hand with date and source. Ratings are the
+  agencies' property, so the site shows only aggregate agreement by default.
+
+---
+
 ## Still to write
 
 - US supervisory guidance on model risk (SR 11-7, its 2026 replacement SR 26-2 / OCC 2026-13 / FDIC

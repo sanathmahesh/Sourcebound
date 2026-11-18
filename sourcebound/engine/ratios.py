@@ -7,6 +7,9 @@
 - EBITDA / interest (coverage): how many times earnings cover the interest bill. Lower is riskier.
 - FCF / debt = (cash from operations - capital expenditure) / debt, in percent: the share of debt one
   year's free cash flow could repay.
+- Liquidity coverage = sources / uses over the next twelve months, using the trailing year as a stand-in:
+  sources = cash + short-term investments + undrawn revolver + cash from operations (floored at zero);
+  uses = debt due within 12 months (balance-sheet short-term debt) + capex + dividends.
 
 Edge-case rules, in order of precedence:
 1. Any input not available -> the ratio is not available (never estimated).
@@ -21,6 +24,13 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 from sourcebound.engine.resolver import Resolved
+
+# Reasons a ratio is not meaningful. The scorecard maps each to a score, so they are fixed strings.
+EBITDA_NOT_POSITIVE = "EBITDA at or below zero"
+NO_DEBT = "no debt"
+INTEREST_NOT_POSITIVE = "interest expense at or below zero"
+NO_USES = "no uses of cash"
+NO_LIQUID_RESOURCES = "no cash or undrawn revolver"
 
 NOT_AVAILABLE = "not_available"
 NOT_MEANINGFUL = "not_meaningful"
@@ -64,9 +74,9 @@ def debt_to_ebitda(total_debt: float | None, ebitda_value: float | None) -> Rati
     if _missing(total_debt, ebitda_value):
         return RatioValue(None, NOT_AVAILABLE, "an input is not available")
     if total_debt == 0:
-        return RatioValue(0.0, OK, "no debt")
+        return RatioValue(0.0, OK, NO_DEBT)
     if ebitda_value <= 0:
-        return RatioValue(None, NOT_MEANINGFUL, "EBITDA at or below zero")
+        return RatioValue(None, NOT_MEANINGFUL, EBITDA_NOT_POSITIVE)
     return RatioValue(total_debt / ebitda_value, OK)
 
 
@@ -77,10 +87,10 @@ def net_leverage(total_debt: float | None, cash: float | None, ebitda_value: flo
     net_debt = total_debt - cash
     if total_debt == 0:
         if net_debt < 0:
-            return RatioValue(net_debt / ebitda_value if ebitda_value > 0 else None, NET_CASH, "no debt; net cash")
-        return RatioValue(0.0, OK, "no debt")
+            return RatioValue(net_debt / ebitda_value if ebitda_value > 0 else None, NET_CASH, NO_DEBT)
+        return RatioValue(0.0, OK, NO_DEBT)
     if ebitda_value <= 0:
-        return RatioValue(None, NOT_MEANINGFUL, "EBITDA at or below zero")
+        return RatioValue(None, NOT_MEANINGFUL, EBITDA_NOT_POSITIVE)
     if net_debt < 0:
         return RatioValue(net_debt / ebitda_value, NET_CASH, "cash exceeds debt")
     return RatioValue(net_debt / ebitda_value, OK)
@@ -90,9 +100,9 @@ def interest_coverage(ebitda_value: float | None, interest_expense: float | None
     if _missing(ebitda_value, interest_expense):
         return RatioValue(None, NOT_AVAILABLE, "an input is not available")
     if ebitda_value <= 0:
-        return RatioValue(None, NOT_MEANINGFUL, "EBITDA at or below zero")
+        return RatioValue(None, NOT_MEANINGFUL, EBITDA_NOT_POSITIVE)
     if interest_expense <= 0:
-        return RatioValue(None, NOT_MEANINGFUL, "interest expense at or below zero")
+        return RatioValue(None, NOT_MEANINGFUL, INTEREST_NOT_POSITIVE)
     return RatioValue(ebitda_value / interest_expense, OK)
 
 
@@ -101,8 +111,26 @@ def fcf_to_debt(cfo: float | None, capex: float | None, total_debt: float | None
     if _missing(cfo, capex, total_debt):
         return RatioValue(None, NOT_AVAILABLE, "an input is not available")
     if total_debt == 0:
-        return RatioValue(None, NOT_MEANINGFUL, "not meaningful: no debt")
+        return RatioValue(None, NOT_MEANINGFUL, NO_DEBT)
     return RatioValue((cfo - capex) / total_debt * 100, OK)
+
+
+def liquidity_coverage(
+    cash: float | None,
+    undrawn_revolver: float | None,
+    cfo: float | None,
+    debt_due_12m: float | None,
+    capex: float | None,
+    dividends: float | None,
+) -> RatioValue:
+    """Sources over uses for the next twelve months. cash here is cash plus short-term investments."""
+    if _missing(cash, undrawn_revolver, cfo, debt_due_12m, capex, dividends):
+        return RatioValue(None, NOT_AVAILABLE, "an input is not available")
+    sources = cash + undrawn_revolver + max(cfo, 0)
+    uses = debt_due_12m + capex + dividends
+    if uses <= 0:
+        return RatioValue(None, NOT_MEANINGFUL, NO_USES)
+    return RatioValue(sources / uses, OK)
 
 
 def compute_ratios(values: dict[str, Resolved], period: str) -> list[Ratio]:
@@ -133,4 +161,8 @@ def compute_ratios(values: dict[str, Resolved], period: str) -> list[Ratio]:
               [*ebitda_inputs, "interest_expense"], interest_coverage(e, v("interest_expense"))),
         ratio("fcf_to_debt", "FCF / debt", "%", "(cfo - capex) / total_debt",
               ["cfo", "capex", "total_debt"], fcf_to_debt(v("cfo"), v("capex"), v("total_debt"))),
+        ratio("liquidity_coverage", "Liquidity coverage", "x",
+              "(cash + short_term_investments + undrawn_revolver + max(cfo, 0)) / (short_term_debt + capex + dividends)",
+              ["cash", "short_term_investments", "undrawn_revolver", "cfo", "short_term_debt", "capex", "dividends"],
+              liquidity_coverage(cash, v("undrawn_revolver"), v("cfo"), v("short_term_debt"), v("capex"), v("dividends"))),
     ]

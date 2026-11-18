@@ -6749,6 +6749,13 @@
      "USD": []
     }
    },
+   "NotesPayableCurrent": {
+    "label": "Notes Payable, Current",
+    "description": "Sum of the carrying values as of the balance sheet date of the portions of long-term notes payable due within one year or the operating cycle if longer.",
+    "units": {
+     "USD": []
+    }
+   },
    "OperatingIncomeLoss": {
     "label": "Operating Income (Loss)",
     "description": "The net result for the period of deducting operating expenses from operating revenues.",

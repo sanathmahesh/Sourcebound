@@ -16,7 +16,7 @@ assumed zero, restatements. The log feeds the report now and the reviewer checkl
 from __future__ import annotations
 
 from collections import defaultdict
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from datetime import date
 
 from sourcebound.edgar.facts import Fact
@@ -67,6 +67,7 @@ class LogEntry:
     period: str
     message: str
     severity: str = "info"  # "info" or "warning"
+    subject: str = ""  # the tag, candidate or component the entry is about; used to group checklist items
 
 
 class FactIndex:
@@ -129,11 +130,14 @@ class Resolver:
                     attempt.notes.append(
                         LogEntry("assumed_zero", spec.name, period.label,
                                  f"{component.describe()} assumed zero: not reported (part of rank {candidate.rank} "
-                                 f"{candidate.describe()})")
+                                 f"{candidate.describe()})", subject=component.describe())
                     )
                     continue
                 attempt.failure = f"{component.describe()} {part.failure}"
                 return attempt
+            if component.negate:
+                part.value = -part.value
+                part.inputs = [replace(s, sign=-s.sign) for s in part.inputs]
             reported += 1
             attempt.value += part.value
             attempt.inputs += part.inputs
@@ -157,7 +161,8 @@ class Resolver:
             if candidate.rank > 1:
                 self.log.append(
                     LogEntry("fallback", spec.name, period.label,
-                             f"used rank {candidate.rank} {candidate.describe()} because " + "; ".join(tried))
+                             f"used rank {candidate.rank} {candidate.describe()} because " + "; ".join(tried),
+                             subject=candidate.describe())
                 )
             self.log += attempt.notes
             return Resolved(
@@ -174,9 +179,13 @@ class Resolver:
 
         reason = "; ".join(tried)
         if spec.required:
-            self.log.append(LogEntry("not_available", spec.name, period.label, f"not available: {reason}", "warning"))
+            self.log.append(
+                LogEntry("not_available", spec.name, period.label, f"not available: {reason}", "warning", spec.name)
+            )
             return Resolved(spec.name, spec.label, period.label, "not_available", None, None, "", [], [], reason)
-        self.log.append(LogEntry("assumed_zero", spec.name, period.label, f"assumed zero: not reported ({reason})"))
+        self.log.append(
+            LogEntry("assumed_zero", spec.name, period.label, f"assumed zero: not reported ({reason})", subject=spec.name)
+        )
         return Resolved(spec.name, spec.label, period.label, "assumed_zero", 0, None, "", [], [], reason)
 
     def _concept_value(self, concept: str, period: Period) -> _Attempt:
@@ -207,7 +216,7 @@ class Resolver:
                     LogEntry("restated", spec.name, period.label,
                              f"{tag} {part.window}: restated from {first.value:,.0f} (accession {first.accession}, "
                              f"filed {first.filed}) to {chosen.value:,.0f} (accession {chosen.accession}, filed "
-                             f"{chosen.filed}); using the most recently filed value")
+                             f"{chosen.filed}); using the most recently filed value", subject=tag)
                 )
         return attempt
 

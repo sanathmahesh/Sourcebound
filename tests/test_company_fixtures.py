@@ -205,3 +205,68 @@ def test_gt_ltm_cfo_with_negative_year_to_date(gt):
     cfo = gt.values["cfo"]["LTM"]
     # 796 (0001628280-26-006708) + (-764) (0001628280-26-070703) - (-716) (0001628280-26-070703)
     assert cfo.value == (796 - 764 + 716) * M
+
+
+# ----- phase 2: liquidity, ladder, trends (values read from the captured JSON) ---------------------------
+
+
+def test_wmt_liquidity_coverage_fy0(wmt):
+    # sources: cash 10,727 (0000104169-26-000154) + no short-term investments or revolver tagged (assumed zero)
+    #          + cfo 41,565 (0000104169-26-000055)
+    # uses: short-term debt 3,542 + 6,596 (0000104169-26-000154) + capex 26,642 + dividends 7,507
+    #       (both 0000104169-26-000055; dividends via PaymentsOfDividendsCommonStock)
+    liquidity = wmt.ratios["liquidity_coverage"]["FY0"]
+    assert liquidity.value == pytest.approx((10_727 + 41_565) / (3_542 + 6_596 + 26_642 + 7_507))
+    assert wmt.values["undrawn_revolver"]["FY0"].status == "assumed_zero"
+
+
+def test_vz_ladder_and_near_term_cover(vz):
+    ladder = vz.ladder
+    # Maturity table, all accn 0000732712-26-000007
+    assert [b.value / M for b in ladder.buckets] == [17_267, 9_569, 13_032, 8_115, 11_081, 96_753]
+    assert ladder.total == 155_817 * M
+    metrics = {m.metric_id: m for m in ladder.metrics}
+    # Debt due in 24 months: DebtCurrent 18,618 + year 2 9,569 (both 0000732712-26-000007)
+    assert metrics["debt_due_24m"].value == (18_618 + 9_569) * M
+    # Over cash 19,048 (0000732712-26-000052) + undrawn revolver 13,657 (0000732712-26-000007)
+    assert metrics["near_term_maturity_cover"].value == pytest.approx((18_618 + 9_569) / (19_048 + 13_657))
+    # Ladder 155,817 + short-term borrowings 441 + finance leases 943 + 1,568 is within 5% of total debt 158,150
+    assert not [e for e in vz.log if e.subject == "maturity_ladder" and e.severity == "warning"]
+
+
+def test_gt_ladder_incomplete_without_after_year_five(gt):
+    """Goodyear tags years 1-5 (accn 0001628280-26-006708) but not 'after year five', so the ladder total
+    and its reconciliation are not available; the 24-month metrics still are."""
+    assert gt.ladder.total is None
+    assert gt.values["maturity_after_year_5"]["FY0"].status == "not_available"
+    metrics = {m.metric_id: m for m in gt.ladder.metrics}
+    # DebtCurrent 870 (0001628280-26-070703) + year 2 1,035; over cash 801, no revolver tagged
+    assert metrics["near_term_maturity_cover"].value == pytest.approx((870 + 1_035) / 801)
+    assert any(e.subject == "maturity_ladder" and "incomplete" in e.message for e in gt.log)
+
+
+def test_trends_cover_all_five_ratios(gt):
+    trend_ids = [t.metric_id for t in gt.trends]
+    assert trend_ids == ["debt_to_ebitda", "net_leverage", "interest_coverage", "fcf_to_debt", "liquidity_coverage"]
+    assert all(set(t.values) == {"FY-2", "FY-1", "FY0", "LTM"} for t in gt.trends)
+
+
+def test_gt_scorecard_latest_hand_computed(gt):
+    """Bands from ratios computed by hand from the captured facts ($m):
+    LTM debt 6,030 + 1,339 = 7,369; LTM EBITDA = (-388 pre-tax + 415 interest) + 963 D&A = 990
+      debt / EBITDA 7.44x -> 6; net (7,369 - 812) / 990 = 6.62x -> 6; coverage 990 / 415 = 2.39x -> 5
+      FCF / debt (748 - 658) / 7,369 = 1.2% -> 5; liquidity (812 + 748) / (1,339 + 658) = 0.78x -> 6
+    FY0 near-term cover (870 + 1,035) / 801 = 2.38x -> 6
+    Weighted: 0.2*6 + 0.1*6 + 0.25*5 + 0.2*5 + 0.15*6 + 0.1*6 = 5.55 -> SB-6."""
+    from sourcebound.paths import CONFIG_DIR
+    from sourcebound.scorecard.grid import load_grid
+    from sourcebound.scorecard.scoring import score_company
+
+    card = score_company(load_grid(CONFIG_DIR / "grid.yaml"), gt, basis="latest")
+    assert {f.id: f.band for f in card.factors} == {
+        "debt_to_ebitda": 6, "net_leverage": 6, "interest_coverage": 5,
+        "fcf_to_debt": 5, "liquidity_coverage": 6, "near_term_maturity_cover": 6,
+    }
+    assert {f.id: f.period for f in card.factors}["near_term_maturity_cover"] == "FY0"
+    assert card.weighted_score == pytest.approx(5.55)
+    assert (card.grade, card.provisional, card.ig_like) == ("SB-6", False, False)

@@ -1,4 +1,5 @@
-"""Phase-1 check: print every ratio with its formula and, directly beneath it, the XBRL facts it used.
+"""Per-company check report: every ratio with its formula and, directly beneath it, the XBRL facts it used;
+then the maturity ladder, trends and scorecard.
 
 Run:  uv run python -m sourcebound.pipeline.ratio_report WMT VZ GT
 
@@ -17,10 +18,14 @@ from sourcebound.engine.concepts import load_concepts
 from sourcebound.engine.periods import PERIOD_ORDER
 from sourcebound.engine.ratios import Ratio
 from sourcebound.engine.resolver import Resolved
+from sourcebound.contracts import DISCLAIMER
 from sourcebound.paths import CONFIG_DIR, REPORTS_DIR
 from sourcebound.pipeline.load import load_and_analyse, make_client
+from sourcebound.scorecard.grid import load_grid
+from sourcebound.scorecard.scoring import score_company
 
-RATIO_IDS = ["debt_to_ebitda", "net_leverage", "interest_coverage", "fcf_to_debt"]
+RATIO_IDS = ["debt_to_ebitda", "net_leverage", "interest_coverage", "fcf_to_debt", "liquidity_coverage"]
+LADDER_METRIC_IDS = ["debt_due_24m", "share_due_24m", "near_term_maturity_cover"]
 LOG_KINDS = [
     ("not_available", "Not available"),
     ("reconciliation", "Reconciliation"),
@@ -28,6 +33,8 @@ LOG_KINDS = [
     ("assumed_zero", "Assumed zero: not reported"),
     ("restated", "Restated values (most recently filed value used)"),
     ("mixed_ranks", "Different candidates across periods"),
+    ("structural_change", "Possible structural change"),
+    ("stale_data", "Stale data"),
 ]
 
 
@@ -93,7 +100,7 @@ def _fact_rows(inp: Resolved) -> list[str]:
         return [f"| {inp.concept} | — | — | 0 (assumed zero: not reported) | — | — | — | — | — |"]
     rows = []
     for s in inp.inputs:
-        value = ("−" if s.sign < 0 else "") + money(s.value)
+        value = money(s.value)  # exactly as filed; the role says whether it was subtracted
         period = f"{s.start} to {s.end}" if s.start else f"at {s.end}"
         role = f"{s.role}, subtracted" if s.sign < 0 else s.role
         rows.append(
@@ -156,12 +163,55 @@ def _log_sections(a: CompanyAnalysis) -> list[str]:
     return lines
 
 
-def render_ratio_report(a: CompanyAnalysis) -> str:
+def _ladder_section(a: CompanyAnalysis) -> list[str]:
+    if a.ladder is None:
+        return []
+    lines = [
+        "## Maturity ladder (FY0, from the latest 10-K)",
+        "",
+        "| Bucket | Tag | Value ($m) | Accession |",
+        "|---|---|---|---|",
+    ]
+    for bucket in a.ladder.buckets:
+        tag = bucket.inputs[0].tag if bucket.inputs else "—"
+        accession = bucket.inputs[0].accession if bucket.inputs else "—"
+        shown = money(bucket.value) if bucket.value is not None else f"not available"
+        lines.append(f"| {bucket.label} | {tag} | {shown} | {accession} |")
+    lines += [f"| **Total** | | {money(a.ladder.total) if a.ladder.total is not None else 'not available'} | |", ""]
+    for metric in a.ladder.metrics:
+        lines += _ratio_block(metric)
+    return lines
+
+
+def _trends_section(a: CompanyAnalysis) -> list[str]:
+    lines = ["## Trends (direction from FY-2 to LTM)", "", "| Ratio | " + " | ".join(PERIOD_ORDER) + " | Direction |",
+             "|---" * (len(PERIOD_ORDER) + 2) + "|"]
+    for t in a.trends:
+        cells = [show_ratio(a.ratios[t.metric_id][p]) if p in a.ratios[t.metric_id] else "—" for p in PERIOD_ORDER]
+        lines.append(f"| {t.label} | " + " | ".join(cells) + f" | {t.direction} |")
+    return lines + [""]
+
+
+def _scorecard_section(cards: list) -> list[str]:
+    lines = ["## Scorecard", "", f"**{DISCLAIMER}**", ""]
+    for card in cards:
+        weighted = f"{card.weighted_score:.2f}" if card.weighted_score is not None else "n/a"
+        lines += [f"### Basis: {card.basis} — weighted {weighted}, grade {card.grade or 'n/a'}"
+                  f"{' (provisional)' if card.provisional else ''}", "",
+                  "| Factor | Period | Value | Band | Weight | Note |", "|---|---|---|---|---|---|"]
+        for f in card.factors:
+            value = "—" if f.value is None else f"{f.value:.2f}"
+            lines.append(f"| {f.label} | {f.period} | {value} | {f.band or '—'} | {f.weight:.2f} | {f.note} |")
+        lines.append("")
+    return lines
+
+
+def render_ratio_report(a: CompanyAnalysis, cards: list | None = None) -> str:
     generated = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     lines = [
         f"# {a.ticker}: {a.name}",
         "",
-        "Phase-1 ratio check. Every ratio is followed by the XBRL facts it used. Values in US$ millions.",
+        "Check report. Every ratio is followed by the XBRL facts it used. Values in US$ millions.",
         "",
         f"- CIK: {a.cik}",
         f"- Company facts downloaded from EDGAR: {a.data_fetched_at or 'unknown'}; report generated {generated}",
@@ -185,18 +235,21 @@ def render_ratio_report(a: CompanyAnalysis) -> str:
         for label in PERIOD_ORDER:
             if label in a.ratios.get(metric_id, {}):
                 lines += _ratio_block(a.ratios[metric_id][label])
+    lines += [*_ladder_section(a), *_trends_section(a), *_scorecard_section(cards or [])]
     lines += ["## Debt reconciliation", "", *_debt_alternatives(a), "", *_log_sections(a)]
     return "\n".join(lines).rstrip() + "\n"
 
 
 def main(tickers: list[str]) -> None:
     specs = load_concepts(CONFIG_DIR / "concepts.yaml")
+    grid = load_grid(CONFIG_DIR / "grid.yaml")
     client = make_client()
     out_dir = REPORTS_DIR / "ratios"
     out_dir.mkdir(parents=True, exist_ok=True)
     for ticker in tickers:
         analysis = load_and_analyse(client, ticker, specs)
-        text = render_ratio_report(analysis)
+        cards = [score_company(grid, analysis, "latest"), score_company(grid, analysis, "FY0")]
+        text = render_ratio_report(analysis, cards)
         print(text)
         path = out_dir / f"{analysis.ticker}.md"
         path.write_text(text)
@@ -204,4 +257,6 @@ def main(tickers: list[str]) -> None:
 
 
 if __name__ == "__main__":
-    main([t.upper() for t in sys.argv[1:]] or ["WMT", "VZ", "GT"])
+    from sourcebound.pipeline.export import load_companies
+
+    main([t.upper() for t in sys.argv[1:]] or [c["ticker"] for c in load_companies()])

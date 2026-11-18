@@ -20,9 +20,11 @@ class Component:
     tag: str | None = None
     concept: str | None = None
     optional: bool = False
+    negate: bool = False  # use minus the reported value (for tags reported as negative, e.g. net interest)
 
     def describe(self) -> str:
-        return self.tag if self.tag else f"[{self.concept}]"
+        name = self.tag if self.tag else f"[{self.concept}]"
+        return f"−{name}" if self.negate else name
 
 
 @dataclass(frozen=True)
@@ -69,10 +71,15 @@ def parse_concepts(raw: dict) -> dict[str, ConceptSpec]:
 
 def _parse_candidate(rank: int, entry: dict) -> Candidate:
     if "tag" in entry:
-        components = (Component(tag=entry["tag"]),)
+        components = (Component(tag=entry["tag"], negate=bool(entry.get("negate", False))),)
     else:
         components = tuple(
-            Component(tag=c.get("tag"), concept=c.get("concept"), optional=bool(c.get("optional", False)))
+            Component(
+                tag=c.get("tag"),
+                concept=c.get("concept"),
+                optional=bool(c.get("optional", False)),
+                negate=bool(c.get("negate", False)),
+            )
             for c in entry["sum"]
         )
     return Candidate(rank=rank, components=components, flag=entry.get("flag"))

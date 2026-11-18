@@ -1,0 +1,17 @@
+# Per-company overrides (PLAN.md 4.5). The only place a company may be treated differently from the rest.
+# Each override needs a written reason and the author's approval date, and each appears on that
+# company's reviewer checklist.
+#
+# kind: cik -> use this CIK instead of the one SEC's company_tickers.json gives for the ticker.
+
+overrides:
+  - ticker: XOM
+    kind: cik
+    cik: 34088
+    reason: >-
+      On 1 July 2026 ExxonMobil moved into a new holding company, ExxonMobil Holdings Corp (CIK 2115436),
+      which SEC's ticker file now maps XOM to (Form 8-K12B, accession 0001193125-26-291990). The new
+      registrant has filed no 10-K yet. The predecessor, Exxon Mobil Corp (CIK 34088), holds the 10-K for
+      fiscal 2025 and the 10-Qs to 30 June 2026, so its filings are used. Remove this override once the new
+      registrant files its first 10-K (expected around February 2027).
+    approved_on: "2026-11-17"

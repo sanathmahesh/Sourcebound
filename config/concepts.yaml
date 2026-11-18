@@ -2,6 +2,10 @@
 # Revision 1, approved 17 November 2026 (decision log D18): total revenue first; finance-lease liabilities
 # count as debt and finance-lease interest as interest; balance-sheet components first for total debt;
 # Verizon's capex tag added.
+# Revision 2, approved 17 November 2026 (decision log D19): net-interest tags (sign flipped) before the
+# cash-paid proxy; amortisation optional beside depreciation; more short-term-debt tags, and short-term
+# debt assumed zero when nothing is reported; Oracle's notes-payable debt; balance-sheet current portion
+# as a year-1 maturity fallback.
 #
 # Each concept:
 #   label:     plain-English name
@@ -16,6 +20,7 @@
 #   - sum: [<component>, ...]                  the sum of several components.
 # A component is `tag: <us-gaap tag>` or `concept: <another concept>` (resolved through that concept's
 # own chain). A component marked `optional: true` counts as zero when not reported, and is logged.
+# A component marked `negate: true` uses minus the reported value (for tags reported as negative numbers).
 # A candidate resolves only if every non-optional component is reported for the period.
 # `flag` is a note shown beside every value resolved through that candidate.
 
@@ -55,9 +60,11 @@ d_and_a:
     - tag: DepreciationDepletionAndAmortization
     - tag: DepreciationAndAmortization
     - tag: DepreciationAmortizationAndAccretionNet
+    # Some companies (e.g. Union Pacific) report depreciation with no separate amortisation line.
     - sum:
         - tag: Depreciation
         - tag: AmortizationOfIntangibleAssets
+          optional: true
 
 interest_expense:
   label: Interest expense
@@ -74,13 +81,22 @@ interest_expense:
         - tag: FinanceLeaseInterestExpense
           optional: true
     - tag: InterestAndDebtExpense
+    # Net interest (expense minus interest income), reported as a negative number when it is an expense.
+    - tag: InterestIncomeExpenseNonoperatingNet
+      negate: true
+      flag: "net interest: interest expense net of interest income"
+    - tag: InterestIncomeExpenseNet
+      negate: true
+      flag: "net interest: interest expense net of interest income"
     - tag: InterestPaidNet
       flag: "proxy: cash interest paid, not interest expense"
 
 short_term_debt:
   label: Short-term debt (short-term borrowings plus current portion of long-term debt)
   kind: instant
-  required: true
+  # Not required (approved, D19): companies usually omit the tag when nothing is due within a year, so
+  # "nothing reported" counts as zero, is logged, and goes on the reviewer checklist.
+  required: false
   chain:
     - tag: DebtCurrent
     - sum:
@@ -89,6 +105,22 @@ short_term_debt:
           optional: true
         - tag: CommercialPaper
           optional: true
+    - sum:
+        - tag: LongTermDebtAndCapitalLeaseObligationsCurrent
+        - tag: ShortTermBorrowings
+          optional: true
+        - tag: CommercialPaper
+          optional: true
+    - tag: NotesPayableCurrent
+
+short_term_borrowings:
+  label: Short-term borrowings (including commercial paper)
+  kind: instant
+  required: false
+  # Used only to reconcile the maturity ladder with total debt.
+  chain:
+    - tag: ShortTermBorrowings
+    - tag: CommercialPaper
 
 total_debt:
   label: Total debt (borrowings plus finance-lease liabilities)
@@ -113,6 +145,11 @@ total_debt:
         - tag: LongTermDebt
         - tag: ShortTermBorrowings
           optional: true
+        - concept: finance_lease_liabilities
+    # Notes payable presented as their own lines (Oracle).
+    - sum:
+        - tag: LongTermNotesAndLoans
+        - concept: short_term_debt
         - concept: finance_lease_liabilities
     # Last: its scope varies by company (for Walmart it is long-term debt only).
     - tag: DebtLongtermAndShorttermCombinedAmount
@@ -191,6 +228,8 @@ maturity_year_1:
   required: true
   chain:
     - tag: LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths
+    - tag: LongTermDebtCurrent
+      flag: "balance-sheet current portion of long-term debt (the maturity table's year-1 figure is not tagged)"
 
 maturity_year_2:
   label: Debt maturing in year two

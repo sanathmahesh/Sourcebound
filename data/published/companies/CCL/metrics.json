@@ -1,0 +1,4639 @@
+{
+ "schema_version": "1",
+ "ticker": "CCL",
+ "name": "Carnival Corp Ltd.",
+ "cik": 815097,
+ "sector": "Leisure",
+ "generated_at": "2026-11-18T03:19:49Z",
+ "data_fetched_at": "2026-11-18T02:55:28+00:00",
+ "sources": [
+  {
+   "form": "10-K",
+   "accession": "0000815097-26-000007",
+   "period_end": "2025-11-30",
+   "filed": "2026-01-27",
+   "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+  },
+  {
+   "form": "10-Q",
+   "accession": "0000815097-26-000107",
+   "period_end": "2026-08-31",
+   "filed": "2026-09-29",
+   "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+  }
+ ],
+ "periods": [
+  {
+   "label": "FY-2",
+   "balance_sheet_date": "2023-11-30",
+   "flow_windows": [
+    "+ FY-2: 2022-12-01 to 2023-11-30"
+   ],
+   "note": ""
+  },
+  {
+   "label": "FY-1",
+   "balance_sheet_date": "2024-11-30",
+   "flow_windows": [
+    "+ FY-1: 2023-12-01 to 2024-11-30"
+   ],
+   "note": ""
+  },
+  {
+   "label": "FY0",
+   "balance_sheet_date": "2025-11-30",
+   "flow_windows": [
+    "+ FY0: 2024-12-01 to 2025-11-30"
+   ],
+   "note": ""
+  },
+  {
+   "label": "LTM",
+   "balance_sheet_date": "2026-08-31",
+   "flow_windows": [
+    "+ FY0: 2024-12-01 to 2025-11-30",
+    "+ current year-to-date: 2025-12-01 to 2026-08-31",
+    "− prior-year year-to-date: 2024-12-01 to 2025-08-31"
+   ],
+   "note": "LTM to 2026-08-31 = FY0 + (2025-12-01 to 2026-08-31) - (2024-12-01 to 2025-08-31), from 10-Q 0000815097-26-000107"
+  }
+ ],
+ "period_problems": [],
+ "metrics": {
+  "revenue:FY-2": {
+   "metric_id": "revenue",
+   "period": "FY-2",
+   "label": "Revenue",
+   "value": 21593000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: RevenueFromContractWithCustomerExcludingAssessedTax",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Revenue",
+     "concept": "revenue",
+     "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+     "fallback_rank": 2,
+     "value": 21593000000.0,
+     "unit": "USD",
+     "period": "2022-12-01 to 2023-11-30",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "revenue:FY-1": {
+   "metric_id": "revenue",
+   "period": "FY-1",
+   "label": "Revenue",
+   "value": 25021000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: RevenueFromContractWithCustomerExcludingAssessedTax",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Revenue",
+     "concept": "revenue",
+     "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+     "fallback_rank": 2,
+     "value": 25021000000.0,
+     "unit": "USD",
+     "period": "2023-12-01 to 2024-11-30",
+     "role": "FY-1",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "revenue:FY0": {
+   "metric_id": "revenue",
+   "period": "FY0",
+   "label": "Revenue",
+   "value": 26622000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: RevenueFromContractWithCustomerExcludingAssessedTax",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Revenue",
+     "concept": "revenue",
+     "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+     "fallback_rank": 2,
+     "value": 26622000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "revenue:LTM": {
+   "metric_id": "revenue",
+   "period": "LTM",
+   "label": "Revenue",
+   "value": 27593000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: RevenueFromContractWithCustomerExcludingAssessedTax",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Revenue",
+     "concept": "revenue",
+     "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+     "fallback_rank": 2,
+     "value": 26622000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Revenue",
+     "concept": "revenue",
+     "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+     "fallback_rank": 2,
+     "value": 21263000000.0,
+     "unit": "USD",
+     "period": "2025-12-01 to 2026-08-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Revenue",
+     "concept": "revenue",
+     "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+     "fallback_rank": 2,
+     "value": 20292000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-08-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    }
+   ]
+  },
+  "operating_income:FY-2": {
+   "metric_id": "operating_income",
+   "period": "FY-2",
+   "label": "Operating income",
+   "value": 1956000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: OperatingIncomeLoss",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 1956000000.0,
+     "unit": "USD",
+     "period": "2022-12-01 to 2023-11-30",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "operating_income:FY-1": {
+   "metric_id": "operating_income",
+   "period": "FY-1",
+   "label": "Operating income",
+   "value": 3574000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: OperatingIncomeLoss",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 3574000000.0,
+     "unit": "USD",
+     "period": "2023-12-01 to 2024-11-30",
+     "role": "FY-1",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "operating_income:FY0": {
+   "metric_id": "operating_income",
+   "period": "FY0",
+   "label": "Operating income",
+   "value": 4483000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: OperatingIncomeLoss",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 4483000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "operating_income:LTM": {
+   "metric_id": "operating_income",
+   "period": "LTM",
+   "label": "Operating income",
+   "value": 4413000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: OperatingIncomeLoss",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 4483000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 3678000000.0,
+     "unit": "USD",
+     "period": "2025-12-01 to 2026-08-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 3748000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-08-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    }
+   ]
+  },
+  "d_and_a:FY-2": {
+   "metric_id": "d_and_a",
+   "period": "FY-2",
+   "label": "Depreciation and amortisation",
+   "value": 2370000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: DepreciationAndAmortization",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2370000000.0,
+     "unit": "USD",
+     "period": "2022-12-01 to 2023-11-30",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "d_and_a:FY-1": {
+   "metric_id": "d_and_a",
+   "period": "FY-1",
+   "label": "Depreciation and amortisation",
+   "value": 2557000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: DepreciationAndAmortization",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2557000000.0,
+     "unit": "USD",
+     "period": "2023-12-01 to 2024-11-30",
+     "role": "FY-1",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "d_and_a:FY0": {
+   "metric_id": "d_and_a",
+   "period": "FY0",
+   "label": "Depreciation and amortisation",
+   "value": 2790000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: DepreciationAndAmortization",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2790000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "d_and_a:LTM": {
+   "metric_id": "d_and_a",
+   "period": "LTM",
+   "label": "Depreciation and amortisation",
+   "value": 2898000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: DepreciationAndAmortization",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2790000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2172000000.0,
+     "unit": "USD",
+     "period": "2025-12-01 to 2026-08-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2064000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-08-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    }
+   ]
+  },
+  "interest_expense:FY-2": {
+   "metric_id": "interest_expense",
+   "period": "FY-2",
+   "label": "Interest expense",
+   "value": 2066000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: InterestExpense",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 2066000000.0,
+     "unit": "USD",
+     "period": "2022-12-01 to 2023-11-30",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-24-000011",
+     "filed": "2024-01-26",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509724000011/0000815097-24-000011-index.htm"
+    }
+   ]
+  },
+  "interest_expense:FY-1": {
+   "metric_id": "interest_expense",
+   "period": "FY-1",
+   "label": "Interest expense",
+   "value": 1755000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: InterestExpenseNonoperating",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpenseNonoperating",
+     "fallback_rank": 2,
+     "value": 1755000000.0,
+     "unit": "USD",
+     "period": "2023-12-01 to 2024-11-30",
+     "role": "FY-1",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "interest_expense:FY0": {
+   "metric_id": "interest_expense",
+   "period": "FY0",
+   "label": "Interest expense",
+   "value": 1349000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: InterestExpenseNonoperating",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpenseNonoperating",
+     "fallback_rank": 2,
+     "value": 1349000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "interest_expense:LTM": {
+   "metric_id": "interest_expense",
+   "period": "LTM",
+   "label": "Interest expense",
+   "value": 1177000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: InterestExpenseNonoperating",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpenseNonoperating",
+     "fallback_rank": 2,
+     "value": 1349000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpenseNonoperating",
+     "fallback_rank": 2,
+     "value": 862000000.0,
+     "unit": "USD",
+     "period": "2025-12-01 to 2026-08-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpenseNonoperating",
+     "fallback_rank": 2,
+     "value": 1034000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-08-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    }
+   ]
+  },
+  "short_term_debt:FY-2": {
+   "metric_id": "short_term_debt",
+   "period": "FY-2",
+   "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+   "value": 2089000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2089000000.0,
+     "unit": "USD",
+     "period": "at 2023-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-25-000007",
+     "filed": "2025-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509725000007/0000815097-25-000007-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "ShortTermBorrowings",
+     "fallback_rank": 2,
+     "value": 0.0,
+     "unit": "USD",
+     "period": "at 2023-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-24-000011",
+     "filed": "2024-01-26",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509724000011/0000815097-24-000011-index.htm"
+    }
+   ]
+  },
+  "short_term_debt:FY-1": {
+   "metric_id": "short_term_debt",
+   "period": "FY-1",
+   "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+   "value": 1538000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 1538000000.0,
+     "unit": "USD",
+     "period": "at 2024-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "short_term_debt:FY0": {
+   "metric_id": "short_term_debt",
+   "period": "FY0",
+   "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+   "value": 2603000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2603000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    }
+   ]
+  },
+  "short_term_debt:LTM": {
+   "metric_id": "short_term_debt",
+   "period": "LTM",
+   "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+   "value": 2036000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 2: LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2036000000.0,
+     "unit": "USD",
+     "period": "at 2026-08-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    }
+   ]
+  },
+  "total_debt:FY-2": {
+   "metric_id": "total_debt",
+   "period": "FY-2",
+   "label": "Total debt (borrowings plus finance-lease liabilities)",
+   "value": 30572000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities]",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtNoncurrent",
+     "fallback_rank": 1,
+     "value": 28483000000.0,
+     "unit": "USD",
+     "period": "at 2023-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-25-000007",
+     "filed": "2025-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509725000007/0000815097-25-000007-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2089000000.0,
+     "unit": "USD",
+     "period": "at 2023-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-25-000007",
+     "filed": "2025-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509725000007/0000815097-25-000007-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "ShortTermBorrowings",
+     "fallback_rank": 2,
+     "value": 0.0,
+     "unit": "USD",
+     "period": "at 2023-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-24-000011",
+     "filed": "2024-01-26",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509724000011/0000815097-24-000011-index.htm"
+    }
+   ]
+  },
+  "total_debt:FY-1": {
+   "metric_id": "total_debt",
+   "period": "FY-1",
+   "label": "Total debt (borrowings plus finance-lease liabilities)",
+   "value": 27474000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities]",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtNoncurrent",
+     "fallback_rank": 1,
+     "value": 25936000000.0,
+     "unit": "USD",
+     "period": "at 2024-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 1538000000.0,
+     "unit": "USD",
+     "period": "at 2024-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "total_debt:FY0": {
+   "metric_id": "total_debt",
+   "period": "FY0",
+   "label": "Total debt (borrowings plus finance-lease liabilities)",
+   "value": 26640000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities]",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtNoncurrent",
+     "fallback_rank": 1,
+     "value": 24037000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2603000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    }
+   ]
+  },
+  "total_debt:LTM": {
+   "metric_id": "total_debt",
+   "period": "LTM",
+   "label": "Total debt (borrowings plus finance-lease liabilities)",
+   "value": 23912000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities]",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtNoncurrent",
+     "fallback_rank": 1,
+     "value": 21876000000.0,
+     "unit": "USD",
+     "period": "at 2026-08-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2036000000.0,
+     "unit": "USD",
+     "period": "at 2026-08-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    }
+   ]
+  },
+  "cash:FY-2": {
+   "metric_id": "cash",
+   "period": "FY-2",
+   "label": "Cash and cash equivalents",
+   "value": 2415000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: CashAndCashEquivalentsAtCarryingValue",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Cash and cash equivalents",
+     "concept": "cash",
+     "tag": "CashAndCashEquivalentsAtCarryingValue",
+     "fallback_rank": 1,
+     "value": 2415000000.0,
+     "unit": "USD",
+     "period": "at 2023-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "cash:FY-1": {
+   "metric_id": "cash",
+   "period": "FY-1",
+   "label": "Cash and cash equivalents",
+   "value": 1210000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: CashAndCashEquivalentsAtCarryingValue",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Cash and cash equivalents",
+     "concept": "cash",
+     "tag": "CashAndCashEquivalentsAtCarryingValue",
+     "fallback_rank": 1,
+     "value": 1210000000.0,
+     "unit": "USD",
+     "period": "at 2024-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "cash:FY0": {
+   "metric_id": "cash",
+   "period": "FY0",
+   "label": "Cash and cash equivalents",
+   "value": 1928000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: CashAndCashEquivalentsAtCarryingValue",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Cash and cash equivalents",
+     "concept": "cash",
+     "tag": "CashAndCashEquivalentsAtCarryingValue",
+     "fallback_rank": 1,
+     "value": 1928000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    }
+   ]
+  },
+  "cash:LTM": {
+   "metric_id": "cash",
+   "period": "LTM",
+   "label": "Cash and cash equivalents",
+   "value": 1220000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: CashAndCashEquivalentsAtCarryingValue",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Cash and cash equivalents",
+     "concept": "cash",
+     "tag": "CashAndCashEquivalentsAtCarryingValue",
+     "fallback_rank": 1,
+     "value": 1220000000.0,
+     "unit": "USD",
+     "period": "at 2026-08-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    }
+   ]
+  },
+  "short_term_investments:FY-2": {
+   "metric_id": "short_term_investments",
+   "period": "FY-2",
+   "label": "Short-term investments",
+   "value": 0.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "",
+   "notes": [
+    "assumed zero: not reported"
+   ],
+   "inputs": []
+  },
+  "short_term_investments:FY-1": {
+   "metric_id": "short_term_investments",
+   "period": "FY-1",
+   "label": "Short-term investments",
+   "value": 0.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "",
+   "notes": [
+    "assumed zero: not reported"
+   ],
+   "inputs": []
+  },
+  "short_term_investments:FY0": {
+   "metric_id": "short_term_investments",
+   "period": "FY0",
+   "label": "Short-term investments",
+   "value": 0.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "",
+   "notes": [
+    "assumed zero: not reported"
+   ],
+   "inputs": []
+  },
+  "short_term_investments:LTM": {
+   "metric_id": "short_term_investments",
+   "period": "LTM",
+   "label": "Short-term investments",
+   "value": 0.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "",
+   "notes": [
+    "assumed zero: not reported"
+   ],
+   "inputs": []
+  },
+  "cfo:FY-2": {
+   "metric_id": "cfo",
+   "period": "FY-2",
+   "label": "Cash from operations",
+   "value": 4281000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: NetCashProvidedByUsedInOperatingActivities",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 4281000000.0,
+     "unit": "USD",
+     "period": "2022-12-01 to 2023-11-30",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "cfo:FY-1": {
+   "metric_id": "cfo",
+   "period": "FY-1",
+   "label": "Cash from operations",
+   "value": 5923000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: NetCashProvidedByUsedInOperatingActivities",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 5923000000.0,
+     "unit": "USD",
+     "period": "2023-12-01 to 2024-11-30",
+     "role": "FY-1",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "cfo:FY0": {
+   "metric_id": "cfo",
+   "period": "FY0",
+   "label": "Cash from operations",
+   "value": 6218000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: NetCashProvidedByUsedInOperatingActivities",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 6218000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "cfo:LTM": {
+   "metric_id": "cfo",
+   "period": "LTM",
+   "label": "Cash from operations",
+   "value": 6821000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: NetCashProvidedByUsedInOperatingActivities",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 6218000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 5303000000.0,
+     "unit": "USD",
+     "period": "2025-12-01 to 2026-08-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 4700000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-08-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    }
+   ]
+  },
+  "capex:FY-2": {
+   "metric_id": "capex",
+   "period": "FY-2",
+   "label": "Capital expenditure",
+   "value": 3284000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: PaymentsToAcquirePropertyPlantAndEquipment",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 3284000000.0,
+     "unit": "USD",
+     "period": "2022-12-01 to 2023-11-30",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "capex:FY-1": {
+   "metric_id": "capex",
+   "period": "FY-1",
+   "label": "Capital expenditure",
+   "value": 4626000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: PaymentsToAcquirePropertyPlantAndEquipment",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 4626000000.0,
+     "unit": "USD",
+     "period": "2023-12-01 to 2024-11-30",
+     "role": "FY-1",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "capex:FY0": {
+   "metric_id": "capex",
+   "period": "FY0",
+   "label": "Capital expenditure",
+   "value": 3611000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: PaymentsToAcquirePropertyPlantAndEquipment",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 3611000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "capex:LTM": {
+   "metric_id": "capex",
+   "period": "LTM",
+   "label": "Capital expenditure",
+   "value": 3645000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: PaymentsToAcquirePropertyPlantAndEquipment",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 3611000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 2139000000.0,
+     "unit": "USD",
+     "period": "2025-12-01 to 2026-08-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 2105000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-08-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    }
+   ]
+  },
+  "dividends:FY-2": {
+   "metric_id": "dividends",
+   "period": "FY-2",
+   "label": "Dividends paid",
+   "value": 0.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "",
+   "notes": [
+    "assumed zero: not reported"
+   ],
+   "inputs": []
+  },
+  "dividends:FY-1": {
+   "metric_id": "dividends",
+   "period": "FY-1",
+   "label": "Dividends paid",
+   "value": 0.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "",
+   "notes": [
+    "assumed zero: not reported"
+   ],
+   "inputs": []
+  },
+  "dividends:FY0": {
+   "metric_id": "dividends",
+   "period": "FY0",
+   "label": "Dividends paid",
+   "value": 0.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "",
+   "notes": [
+    "assumed zero: not reported"
+   ],
+   "inputs": []
+  },
+  "dividends:LTM": {
+   "metric_id": "dividends",
+   "period": "LTM",
+   "label": "Dividends paid",
+   "value": 0.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "",
+   "notes": [
+    "assumed zero: not reported"
+   ],
+   "inputs": []
+  },
+  "undrawn_revolver:FY-2": {
+   "metric_id": "undrawn_revolver",
+   "period": "FY-2",
+   "label": "Undrawn revolving credit capacity",
+   "value": 0.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "",
+   "notes": [
+    "assumed zero: not reported"
+   ],
+   "inputs": []
+  },
+  "undrawn_revolver:FY-1": {
+   "metric_id": "undrawn_revolver",
+   "period": "FY-1",
+   "label": "Undrawn revolving credit capacity",
+   "value": 0.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "",
+   "notes": [
+    "assumed zero: not reported"
+   ],
+   "inputs": []
+  },
+  "undrawn_revolver:FY0": {
+   "metric_id": "undrawn_revolver",
+   "period": "FY0",
+   "label": "Undrawn revolving credit capacity",
+   "value": 0.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "",
+   "notes": [
+    "assumed zero: not reported"
+   ],
+   "inputs": []
+  },
+  "undrawn_revolver:LTM": {
+   "metric_id": "undrawn_revolver",
+   "period": "LTM",
+   "label": "Undrawn revolving credit capacity",
+   "value": 0.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "",
+   "notes": [
+    "assumed zero: not reported"
+   ],
+   "inputs": []
+  },
+  "maturity_year_1:FY0": {
+   "metric_id": "maturity_year_1",
+   "period": "FY0",
+   "label": "Debt maturing in the next twelve months",
+   "value": 2615000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Debt maturing in the next twelve months",
+     "concept": "maturity_year_1",
+     "tag": "LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths",
+     "fallback_rank": 1,
+     "value": 2615000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "maturity_year_2:FY0": {
+   "metric_id": "maturity_year_2",
+   "period": "FY0",
+   "label": "Debt maturing in year two",
+   "value": 2518000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Debt maturing in year two",
+     "concept": "maturity_year_2",
+     "tag": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo",
+     "fallback_rank": 1,
+     "value": 2518000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "maturity_year_3:FY0": {
+   "metric_id": "maturity_year_3",
+   "period": "FY0",
+   "label": "Debt maturing in year three",
+   "value": 3962000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: LongTermDebtMaturitiesRepaymentsOfPrincipalInYearThree",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Debt maturing in year three",
+     "concept": "maturity_year_3",
+     "tag": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearThree",
+     "fallback_rank": 1,
+     "value": 3962000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "maturity_year_4:FY0": {
+   "metric_id": "maturity_year_4",
+   "period": "FY0",
+   "label": "Debt maturing in year four",
+   "value": 4133000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFour",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Debt maturing in year four",
+     "concept": "maturity_year_4",
+     "tag": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFour",
+     "fallback_rank": 1,
+     "value": 4133000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "maturity_year_5:FY0": {
+   "metric_id": "maturity_year_5",
+   "period": "FY0",
+   "label": "Debt maturing in year five",
+   "value": 2886000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFive",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Debt maturing in year five",
+     "concept": "maturity_year_5",
+     "tag": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFive",
+     "fallback_rank": 1,
+     "value": 2886000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "maturity_after_year_5:FY0": {
+   "metric_id": "maturity_after_year_5",
+   "period": "FY0",
+   "label": "Debt maturing after year five",
+   "value": 11268000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "rank 1: LongTermDebtMaturitiesRepaymentsOfPrincipalAfterYearFive",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Debt maturing after year five",
+     "concept": "maturity_after_year_5",
+     "tag": "LongTermDebtMaturitiesRepaymentsOfPrincipalAfterYearFive",
+     "fallback_rank": 1,
+     "value": 11268000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "short_term_borrowings:FY0": {
+   "metric_id": "short_term_borrowings",
+   "period": "FY0",
+   "label": "Short-term borrowings (including commercial paper)",
+   "value": 0.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "",
+   "notes": [
+    "assumed zero: not reported"
+   ],
+   "inputs": []
+  },
+  "finance_lease_liabilities:FY0": {
+   "metric_id": "finance_lease_liabilities",
+   "period": "FY0",
+   "label": "Finance-lease liabilities (current plus non-current)",
+   "value": 0.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "",
+   "notes": [
+    "assumed zero: not reported"
+   ],
+   "inputs": []
+  },
+  "ebitda:FY-2": {
+   "metric_id": "ebitda",
+   "period": "FY-2",
+   "label": "EBITDA",
+   "value": 4326000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "operating_income + d_and_a",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 1956000000.0,
+     "unit": "USD",
+     "period": "2022-12-01 to 2023-11-30",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2370000000.0,
+     "unit": "USD",
+     "period": "2022-12-01 to 2023-11-30",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "ebitda:FY-1": {
+   "metric_id": "ebitda",
+   "period": "FY-1",
+   "label": "EBITDA",
+   "value": 6131000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "operating_income + d_and_a",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 3574000000.0,
+     "unit": "USD",
+     "period": "2023-12-01 to 2024-11-30",
+     "role": "FY-1",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2557000000.0,
+     "unit": "USD",
+     "period": "2023-12-01 to 2024-11-30",
+     "role": "FY-1",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "ebitda:FY0": {
+   "metric_id": "ebitda",
+   "period": "FY0",
+   "label": "EBITDA",
+   "value": 7273000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "operating_income + d_and_a",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 4483000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2790000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "ebitda:LTM": {
+   "metric_id": "ebitda",
+   "period": "LTM",
+   "label": "EBITDA",
+   "value": 7311000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "operating_income + d_and_a",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 4483000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 3678000000.0,
+     "unit": "USD",
+     "period": "2025-12-01 to 2026-08-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 3748000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-08-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2790000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2172000000.0,
+     "unit": "USD",
+     "period": "2025-12-01 to 2026-08-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2064000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-08-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    }
+   ]
+  },
+  "debt_to_ebitda:FY-2": {
+   "metric_id": "debt_to_ebitda",
+   "period": "FY-2",
+   "label": "Debt / EBITDA",
+   "value": 7.067036523347203,
+   "unit": "x",
+   "status": "ok",
+   "formula": "total_debt / EBITDA",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtNoncurrent",
+     "fallback_rank": 1,
+     "value": 28483000000.0,
+     "unit": "USD",
+     "period": "at 2023-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-25-000007",
+     "filed": "2025-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509725000007/0000815097-25-000007-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2089000000.0,
+     "unit": "USD",
+     "period": "at 2023-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-25-000007",
+     "filed": "2025-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509725000007/0000815097-25-000007-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "ShortTermBorrowings",
+     "fallback_rank": 2,
+     "value": 0.0,
+     "unit": "USD",
+     "period": "at 2023-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-24-000011",
+     "filed": "2024-01-26",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509724000011/0000815097-24-000011-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 1956000000.0,
+     "unit": "USD",
+     "period": "2022-12-01 to 2023-11-30",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2370000000.0,
+     "unit": "USD",
+     "period": "2022-12-01 to 2023-11-30",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "debt_to_ebitda:FY-1": {
+   "metric_id": "debt_to_ebitda",
+   "period": "FY-1",
+   "label": "Debt / EBITDA",
+   "value": 4.481161311368456,
+   "unit": "x",
+   "status": "ok",
+   "formula": "total_debt / EBITDA",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtNoncurrent",
+     "fallback_rank": 1,
+     "value": 25936000000.0,
+     "unit": "USD",
+     "period": "at 2024-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 1538000000.0,
+     "unit": "USD",
+     "period": "at 2024-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 3574000000.0,
+     "unit": "USD",
+     "period": "2023-12-01 to 2024-11-30",
+     "role": "FY-1",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2557000000.0,
+     "unit": "USD",
+     "period": "2023-12-01 to 2024-11-30",
+     "role": "FY-1",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "debt_to_ebitda:FY0": {
+   "metric_id": "debt_to_ebitda",
+   "period": "FY0",
+   "label": "Debt / EBITDA",
+   "value": 3.6628626426509006,
+   "unit": "x",
+   "status": "ok",
+   "formula": "total_debt / EBITDA",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtNoncurrent",
+     "fallback_rank": 1,
+     "value": 24037000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2603000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 4483000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2790000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "debt_to_ebitda:LTM": {
+   "metric_id": "debt_to_ebitda",
+   "period": "LTM",
+   "label": "Debt / EBITDA",
+   "value": 3.270688004376966,
+   "unit": "x",
+   "status": "ok",
+   "formula": "total_debt / EBITDA",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtNoncurrent",
+     "fallback_rank": 1,
+     "value": 21876000000.0,
+     "unit": "USD",
+     "period": "at 2026-08-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2036000000.0,
+     "unit": "USD",
+     "period": "at 2026-08-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 4483000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 3678000000.0,
+     "unit": "USD",
+     "period": "2025-12-01 to 2026-08-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 3748000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-08-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2790000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2172000000.0,
+     "unit": "USD",
+     "period": "2025-12-01 to 2026-08-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2064000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-08-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    }
+   ]
+  },
+  "net_leverage:FY-2": {
+   "metric_id": "net_leverage",
+   "period": "FY-2",
+   "label": "Net leverage",
+   "value": 6.508784096162737,
+   "unit": "x",
+   "status": "ok",
+   "formula": "(total_debt - cash - short_term_investments) / EBITDA",
+   "notes": [
+    "short_term_investments: assumed zero: not reported"
+   ],
+   "inputs": [
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtNoncurrent",
+     "fallback_rank": 1,
+     "value": 28483000000.0,
+     "unit": "USD",
+     "period": "at 2023-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-25-000007",
+     "filed": "2025-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509725000007/0000815097-25-000007-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2089000000.0,
+     "unit": "USD",
+     "period": "at 2023-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-25-000007",
+     "filed": "2025-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509725000007/0000815097-25-000007-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "ShortTermBorrowings",
+     "fallback_rank": 2,
+     "value": 0.0,
+     "unit": "USD",
+     "period": "at 2023-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-24-000011",
+     "filed": "2024-01-26",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509724000011/0000815097-24-000011-index.htm"
+    },
+    {
+     "label": "Cash and cash equivalents",
+     "concept": "cash",
+     "tag": "CashAndCashEquivalentsAtCarryingValue",
+     "fallback_rank": 1,
+     "value": 2415000000.0,
+     "unit": "USD",
+     "period": "at 2023-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 1956000000.0,
+     "unit": "USD",
+     "period": "2022-12-01 to 2023-11-30",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2370000000.0,
+     "unit": "USD",
+     "period": "2022-12-01 to 2023-11-30",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "net_leverage:FY-1": {
+   "metric_id": "net_leverage",
+   "period": "FY-1",
+   "label": "Net leverage",
+   "value": 4.28380362094275,
+   "unit": "x",
+   "status": "ok",
+   "formula": "(total_debt - cash - short_term_investments) / EBITDA",
+   "notes": [
+    "short_term_investments: assumed zero: not reported"
+   ],
+   "inputs": [
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtNoncurrent",
+     "fallback_rank": 1,
+     "value": 25936000000.0,
+     "unit": "USD",
+     "period": "at 2024-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 1538000000.0,
+     "unit": "USD",
+     "period": "at 2024-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Cash and cash equivalents",
+     "concept": "cash",
+     "tag": "CashAndCashEquivalentsAtCarryingValue",
+     "fallback_rank": 1,
+     "value": 1210000000.0,
+     "unit": "USD",
+     "period": "at 2024-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 3574000000.0,
+     "unit": "USD",
+     "period": "2023-12-01 to 2024-11-30",
+     "role": "FY-1",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2557000000.0,
+     "unit": "USD",
+     "period": "2023-12-01 to 2024-11-30",
+     "role": "FY-1",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "net_leverage:FY0": {
+   "metric_id": "net_leverage",
+   "period": "FY0",
+   "label": "Net leverage",
+   "value": 3.3977725835281176,
+   "unit": "x",
+   "status": "ok",
+   "formula": "(total_debt - cash - short_term_investments) / EBITDA",
+   "notes": [
+    "short_term_investments: assumed zero: not reported"
+   ],
+   "inputs": [
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtNoncurrent",
+     "fallback_rank": 1,
+     "value": 24037000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2603000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Cash and cash equivalents",
+     "concept": "cash",
+     "tag": "CashAndCashEquivalentsAtCarryingValue",
+     "fallback_rank": 1,
+     "value": 1928000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 4483000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2790000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "net_leverage:LTM": {
+   "metric_id": "net_leverage",
+   "period": "LTM",
+   "label": "Net leverage",
+   "value": 3.103816167418958,
+   "unit": "x",
+   "status": "ok",
+   "formula": "(total_debt - cash - short_term_investments) / EBITDA",
+   "notes": [
+    "short_term_investments: assumed zero: not reported"
+   ],
+   "inputs": [
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtNoncurrent",
+     "fallback_rank": 1,
+     "value": 21876000000.0,
+     "unit": "USD",
+     "period": "at 2026-08-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2036000000.0,
+     "unit": "USD",
+     "period": "at 2026-08-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Cash and cash equivalents",
+     "concept": "cash",
+     "tag": "CashAndCashEquivalentsAtCarryingValue",
+     "fallback_rank": 1,
+     "value": 1220000000.0,
+     "unit": "USD",
+     "period": "at 2026-08-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 4483000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 3678000000.0,
+     "unit": "USD",
+     "period": "2025-12-01 to 2026-08-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 3748000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-08-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2790000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2172000000.0,
+     "unit": "USD",
+     "period": "2025-12-01 to 2026-08-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2064000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-08-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    }
+   ]
+  },
+  "interest_coverage:FY-2": {
+   "metric_id": "interest_coverage",
+   "period": "FY-2",
+   "label": "EBITDA / interest",
+   "value": 2.093901258470474,
+   "unit": "x",
+   "status": "ok",
+   "formula": "EBITDA / interest_expense",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 1956000000.0,
+     "unit": "USD",
+     "period": "2022-12-01 to 2023-11-30",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2370000000.0,
+     "unit": "USD",
+     "period": "2022-12-01 to 2023-11-30",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpense",
+     "fallback_rank": 1,
+     "value": 2066000000.0,
+     "unit": "USD",
+     "period": "2022-12-01 to 2023-11-30",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-24-000011",
+     "filed": "2024-01-26",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509724000011/0000815097-24-000011-index.htm"
+    }
+   ]
+  },
+  "interest_coverage:FY-1": {
+   "metric_id": "interest_coverage",
+   "period": "FY-1",
+   "label": "EBITDA / interest",
+   "value": 3.4934472934472933,
+   "unit": "x",
+   "status": "ok",
+   "formula": "EBITDA / interest_expense",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 3574000000.0,
+     "unit": "USD",
+     "period": "2023-12-01 to 2024-11-30",
+     "role": "FY-1",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2557000000.0,
+     "unit": "USD",
+     "period": "2023-12-01 to 2024-11-30",
+     "role": "FY-1",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpenseNonoperating",
+     "fallback_rank": 2,
+     "value": 1755000000.0,
+     "unit": "USD",
+     "period": "2023-12-01 to 2024-11-30",
+     "role": "FY-1",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "interest_coverage:FY0": {
+   "metric_id": "interest_coverage",
+   "period": "FY0",
+   "label": "EBITDA / interest",
+   "value": 5.391401037805782,
+   "unit": "x",
+   "status": "ok",
+   "formula": "EBITDA / interest_expense",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 4483000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2790000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpenseNonoperating",
+     "fallback_rank": 2,
+     "value": 1349000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "interest_coverage:LTM": {
+   "metric_id": "interest_coverage",
+   "period": "LTM",
+   "label": "EBITDA / interest",
+   "value": 6.211554800339847,
+   "unit": "x",
+   "status": "ok",
+   "formula": "EBITDA / interest_expense",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 4483000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 3678000000.0,
+     "unit": "USD",
+     "period": "2025-12-01 to 2026-08-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Operating income",
+     "concept": "operating_income",
+     "tag": "OperatingIncomeLoss",
+     "fallback_rank": 1,
+     "value": 3748000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-08-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2790000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2172000000.0,
+     "unit": "USD",
+     "period": "2025-12-01 to 2026-08-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Depreciation and amortisation",
+     "concept": "d_and_a",
+     "tag": "DepreciationAndAmortization",
+     "fallback_rank": 2,
+     "value": 2064000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-08-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpenseNonoperating",
+     "fallback_rank": 2,
+     "value": 1349000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpenseNonoperating",
+     "fallback_rank": 2,
+     "value": 862000000.0,
+     "unit": "USD",
+     "period": "2025-12-01 to 2026-08-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Interest expense",
+     "concept": "interest_expense",
+     "tag": "InterestExpenseNonoperating",
+     "fallback_rank": 2,
+     "value": 1034000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-08-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    }
+   ]
+  },
+  "fcf_to_debt:FY-2": {
+   "metric_id": "fcf_to_debt",
+   "period": "FY-2",
+   "label": "FCF / debt",
+   "value": 3.261153997121549,
+   "unit": "%",
+   "status": "ok",
+   "formula": "(cfo - capex) / total_debt",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 4281000000.0,
+     "unit": "USD",
+     "period": "2022-12-01 to 2023-11-30",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 3284000000.0,
+     "unit": "USD",
+     "period": "2022-12-01 to 2023-11-30",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtNoncurrent",
+     "fallback_rank": 1,
+     "value": 28483000000.0,
+     "unit": "USD",
+     "period": "at 2023-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-25-000007",
+     "filed": "2025-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509725000007/0000815097-25-000007-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2089000000.0,
+     "unit": "USD",
+     "period": "at 2023-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-25-000007",
+     "filed": "2025-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509725000007/0000815097-25-000007-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "ShortTermBorrowings",
+     "fallback_rank": 2,
+     "value": 0.0,
+     "unit": "USD",
+     "period": "at 2023-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-24-000011",
+     "filed": "2024-01-26",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509724000011/0000815097-24-000011-index.htm"
+    }
+   ]
+  },
+  "fcf_to_debt:FY-1": {
+   "metric_id": "fcf_to_debt",
+   "period": "FY-1",
+   "label": "FCF / debt",
+   "value": 4.720826963674747,
+   "unit": "%",
+   "status": "ok",
+   "formula": "(cfo - capex) / total_debt",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 5923000000.0,
+     "unit": "USD",
+     "period": "2023-12-01 to 2024-11-30",
+     "role": "FY-1",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 4626000000.0,
+     "unit": "USD",
+     "period": "2023-12-01 to 2024-11-30",
+     "role": "FY-1",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtNoncurrent",
+     "fallback_rank": 1,
+     "value": 25936000000.0,
+     "unit": "USD",
+     "period": "at 2024-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 1538000000.0,
+     "unit": "USD",
+     "period": "at 2024-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "fcf_to_debt:FY0": {
+   "metric_id": "fcf_to_debt",
+   "period": "FY0",
+   "label": "FCF / debt",
+   "value": 9.786036036036036,
+   "unit": "%",
+   "status": "ok",
+   "formula": "(cfo - capex) / total_debt",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 6218000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 3611000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtNoncurrent",
+     "fallback_rank": 1,
+     "value": 24037000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2603000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    }
+   ]
+  },
+  "fcf_to_debt:LTM": {
+   "metric_id": "fcf_to_debt",
+   "period": "LTM",
+   "label": "FCF / debt",
+   "value": 13.282034125125461,
+   "unit": "%",
+   "status": "ok",
+   "formula": "(cfo - capex) / total_debt",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 6218000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 5303000000.0,
+     "unit": "USD",
+     "period": "2025-12-01 to 2026-08-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 4700000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-08-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 3611000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 2139000000.0,
+     "unit": "USD",
+     "period": "2025-12-01 to 2026-08-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 2105000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-08-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtNoncurrent",
+     "fallback_rank": 1,
+     "value": 21876000000.0,
+     "unit": "USD",
+     "period": "at 2026-08-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2036000000.0,
+     "unit": "USD",
+     "period": "at 2026-08-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    }
+   ]
+  },
+  "liquidity_coverage:FY-2": {
+   "metric_id": "liquidity_coverage",
+   "period": "FY-2",
+   "label": "Liquidity coverage",
+   "value": 1.2462311557788945,
+   "unit": "x",
+   "status": "ok",
+   "formula": "(cash + short_term_investments + undrawn_revolver + max(cfo, 0)) / (short_term_debt + capex + dividends)",
+   "notes": [
+    "short_term_investments: assumed zero: not reported",
+    "undrawn_revolver: assumed zero: not reported",
+    "dividends: assumed zero: not reported"
+   ],
+   "inputs": [
+    {
+     "label": "Cash and cash equivalents",
+     "concept": "cash",
+     "tag": "CashAndCashEquivalentsAtCarryingValue",
+     "fallback_rank": 1,
+     "value": 2415000000.0,
+     "unit": "USD",
+     "period": "at 2023-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 4281000000.0,
+     "unit": "USD",
+     "period": "2022-12-01 to 2023-11-30",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2089000000.0,
+     "unit": "USD",
+     "period": "at 2023-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-25-000007",
+     "filed": "2025-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509725000007/0000815097-25-000007-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "ShortTermBorrowings",
+     "fallback_rank": 2,
+     "value": 0.0,
+     "unit": "USD",
+     "period": "at 2023-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-24-000011",
+     "filed": "2024-01-26",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509724000011/0000815097-24-000011-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 3284000000.0,
+     "unit": "USD",
+     "period": "2022-12-01 to 2023-11-30",
+     "role": "FY-2",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "liquidity_coverage:FY-1": {
+   "metric_id": "liquidity_coverage",
+   "period": "FY-1",
+   "label": "Liquidity coverage",
+   "value": 1.1572031148604802,
+   "unit": "x",
+   "status": "ok",
+   "formula": "(cash + short_term_investments + undrawn_revolver + max(cfo, 0)) / (short_term_debt + capex + dividends)",
+   "notes": [
+    "short_term_investments: assumed zero: not reported",
+    "undrawn_revolver: assumed zero: not reported",
+    "dividends: assumed zero: not reported"
+   ],
+   "inputs": [
+    {
+     "label": "Cash and cash equivalents",
+     "concept": "cash",
+     "tag": "CashAndCashEquivalentsAtCarryingValue",
+     "fallback_rank": 1,
+     "value": 1210000000.0,
+     "unit": "USD",
+     "period": "at 2024-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 5923000000.0,
+     "unit": "USD",
+     "period": "2023-12-01 to 2024-11-30",
+     "role": "FY-1",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 1538000000.0,
+     "unit": "USD",
+     "period": "at 2024-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 4626000000.0,
+     "unit": "USD",
+     "period": "2023-12-01 to 2024-11-30",
+     "role": "FY-1",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "liquidity_coverage:FY0": {
+   "metric_id": "liquidity_coverage",
+   "period": "FY0",
+   "label": "Liquidity coverage",
+   "value": 1.3109108464757,
+   "unit": "x",
+   "status": "ok",
+   "formula": "(cash + short_term_investments + undrawn_revolver + max(cfo, 0)) / (short_term_debt + capex + dividends)",
+   "notes": [
+    "short_term_investments: assumed zero: not reported",
+    "undrawn_revolver: assumed zero: not reported",
+    "dividends: assumed zero: not reported"
+   ],
+   "inputs": [
+    {
+     "label": "Cash and cash equivalents",
+     "concept": "cash",
+     "tag": "CashAndCashEquivalentsAtCarryingValue",
+     "fallback_rank": 1,
+     "value": 1928000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 6218000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2603000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 3611000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "liquidity_coverage:LTM": {
+   "metric_id": "liquidity_coverage",
+   "period": "LTM",
+   "label": "Liquidity coverage",
+   "value": 1.4154198204541455,
+   "unit": "x",
+   "status": "ok",
+   "formula": "(cash + short_term_investments + undrawn_revolver + max(cfo, 0)) / (short_term_debt + capex + dividends)",
+   "notes": [
+    "short_term_investments: assumed zero: not reported",
+    "undrawn_revolver: assumed zero: not reported",
+    "dividends: assumed zero: not reported"
+   ],
+   "inputs": [
+    {
+     "label": "Cash and cash equivalents",
+     "concept": "cash",
+     "tag": "CashAndCashEquivalentsAtCarryingValue",
+     "fallback_rank": 1,
+     "value": 1220000000.0,
+     "unit": "USD",
+     "period": "at 2026-08-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 6218000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 5303000000.0,
+     "unit": "USD",
+     "period": "2025-12-01 to 2026-08-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Cash from operations",
+     "concept": "cfo",
+     "tag": "NetCashProvidedByUsedInOperatingActivities",
+     "fallback_rank": 1,
+     "value": 4700000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-08-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2036000000.0,
+     "unit": "USD",
+     "period": "at 2026-08-31",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 3611000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-11-30",
+     "role": "FY0",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 2139000000.0,
+     "unit": "USD",
+     "period": "2025-12-01 to 2026-08-31",
+     "role": "current year-to-date",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Capital expenditure",
+     "concept": "capex",
+     "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+     "fallback_rank": 1,
+     "value": 2105000000.0,
+     "unit": "USD",
+     "period": "2024-12-01 to 2025-08-31",
+     "role": "prior-year year-to-date",
+     "sign": -1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    }
+   ]
+  },
+  "debt_due_24m:FY0": {
+   "metric_id": "debt_due_24m",
+   "period": "FY0",
+   "label": "Debt due within 24 months",
+   "value": 5121000000.0,
+   "unit": "USD",
+   "status": "ok",
+   "formula": "short_term_debt + maturity_year_2",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2603000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Debt maturing in year two",
+     "concept": "maturity_year_2",
+     "tag": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo",
+     "fallback_rank": 1,
+     "value": 2518000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    }
+   ]
+  },
+  "share_due_24m:FY0": {
+   "metric_id": "share_due_24m",
+   "period": "FY0",
+   "label": "Share of debt due within 24 months",
+   "value": 19.222972972972975,
+   "unit": "%",
+   "status": "ok",
+   "formula": "(short_term_debt + maturity_year_2) / total_debt",
+   "notes": [],
+   "inputs": [
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2603000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Debt maturing in year two",
+     "concept": "maturity_year_2",
+     "tag": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo",
+     "fallback_rank": 1,
+     "value": 2518000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Total debt (borrowings plus finance-lease liabilities)",
+     "concept": "total_debt",
+     "tag": "LongTermDebtNoncurrent",
+     "fallback_rank": 1,
+     "value": 24037000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2603000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    }
+   ]
+  },
+  "near_term_maturity_cover:FY0": {
+   "metric_id": "near_term_maturity_cover",
+   "period": "FY0",
+   "label": "Near-term maturity cover",
+   "value": 2.6561203319502074,
+   "unit": "x",
+   "status": "ok",
+   "formula": "(short_term_debt + maturity_year_2) / (cash + short_term_investments + undrawn_revolver)",
+   "notes": [
+    "short_term_investments: assumed zero: not reported",
+    "undrawn_revolver: assumed zero: not reported"
+   ],
+   "inputs": [
+    {
+     "label": "Short-term debt (short-term borrowings plus current portion of long-term debt)",
+     "concept": "short_term_debt",
+     "tag": "LongTermDebtCurrent",
+     "fallback_rank": 2,
+     "value": 2603000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    },
+    {
+     "label": "Debt maturing in year two",
+     "concept": "maturity_year_2",
+     "tag": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo",
+     "fallback_rank": 1,
+     "value": 2518000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-K",
+     "accession": "0000815097-26-000007",
+     "filed": "2026-01-27",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000007/0000815097-26-000007-index.htm"
+    },
+    {
+     "label": "Cash and cash equivalents",
+     "concept": "cash",
+     "tag": "CashAndCashEquivalentsAtCarryingValue",
+     "fallback_rank": 1,
+     "value": 1928000000.0,
+     "unit": "USD",
+     "period": "at 2025-11-30",
+     "role": "balance sheet",
+     "sign": 1,
+     "form": "10-Q",
+     "accession": "0000815097-26-000107",
+     "filed": "2026-09-29",
+     "url": "https://www.sec.gov/Archives/edgar/data/815097/000081509726000107/0000815097-26-000107-index.htm"
+    }
+   ]
+  }
+ },
+ "trends": [
+  {
+   "metric_id": "debt_to_ebitda",
+   "label": "Debt / EBITDA",
+   "unit": "x",
+   "values": {
+    "FY-2": 7.067036523347203,
+    "FY-1": 4.481161311368456,
+    "FY0": 3.6628626426509006,
+    "LTM": 3.270688004376966
+   },
+   "statuses": {
+    "FY-2": "ok",
+    "FY-1": "ok",
+    "FY0": "ok",
+    "LTM": "ok"
+   },
+   "direction": "improving"
+  },
+  {
+   "metric_id": "net_leverage",
+   "label": "Net leverage",
+   "unit": "x",
+   "values": {
+    "FY-2": 6.508784096162737,
+    "FY-1": 4.28380362094275,
+    "FY0": 3.3977725835281176,
+    "LTM": 3.103816167418958
+   },
+   "statuses": {
+    "FY-2": "ok",
+    "FY-1": "ok",
+    "FY0": "ok",
+    "LTM": "ok"
+   },
+   "direction": "improving"
+  },
+  {
+   "metric_id": "interest_coverage",
+   "label": "EBITDA / interest",
+   "unit": "x",
+   "values": {
+    "FY-2": 2.093901258470474,
+    "FY-1": 3.4934472934472933,
+    "FY0": 5.391401037805782,
+    "LTM": 6.211554800339847
+   },
+   "statuses": {
+    "FY-2": "ok",
+    "FY-1": "ok",
+    "FY0": "ok",
+    "LTM": "ok"
+   },
+   "direction": "improving"
+  },
+  {
+   "metric_id": "fcf_to_debt",
+   "label": "FCF / debt",
+   "unit": "%",
+   "values": {
+    "FY-2": 3.261153997121549,
+    "FY-1": 4.720826963674747,
+    "FY0": 9.786036036036036,
+    "LTM": 13.282034125125461
+   },
+   "statuses": {
+    "FY-2": "ok",
+    "FY-1": "ok",
+    "FY0": "ok",
+    "LTM": "ok"
+   },
+   "direction": "improving"
+  },
+  {
+   "metric_id": "liquidity_coverage",
+   "label": "Liquidity coverage",
+   "unit": "x",
+   "values": {
+    "FY-2": 1.2462311557788945,
+    "FY-1": 1.1572031148604802,
+    "FY0": 1.3109108464757,
+    "LTM": 1.4154198204541455
+   },
+   "statuses": {
+    "FY-2": "ok",
+    "FY-1": "ok",
+    "FY0": "ok",
+    "LTM": "ok"
+   },
+   "direction": "improving"
+  }
+ ],
+ "maturity_ladder": {
+  "as_of": "2025-11-30",
+  "buckets": [
+   {
+    "id": "maturity_year_1",
+    "label": "Year 1",
+    "value": 2615000000.0,
+    "status": "ok",
+    "metric_key": "maturity_year_1:FY0"
+   },
+   {
+    "id": "maturity_year_2",
+    "label": "Year 2",
+    "value": 2518000000.0,
+    "status": "ok",
+    "metric_key": "maturity_year_2:FY0"
+   },
+   {
+    "id": "maturity_year_3",
+    "label": "Year 3",
+    "value": 3962000000.0,
+    "status": "ok",
+    "metric_key": "maturity_year_3:FY0"
+   },
+   {
+    "id": "maturity_year_4",
+    "label": "Year 4",
+    "value": 4133000000.0,
+    "status": "ok",
+    "metric_key": "maturity_year_4:FY0"
+   },
+   {
+    "id": "maturity_year_5",
+    "label": "Year 5",
+    "value": 2886000000.0,
+    "status": "ok",
+    "metric_key": "maturity_year_5:FY0"
+   },
+   {
+    "id": "maturity_after_year_5",
+    "label": "After year 5",
+    "value": 11268000000.0,
+    "status": "ok",
+    "metric_key": "maturity_after_year_5:FY0"
+   }
+  ],
+  "total": 27382000000.0,
+  "metric_keys": [
+   "debt_due_24m:FY0",
+   "share_due_24m:FY0",
+   "near_term_maturity_cover:FY0"
+  ]
+ },
+ "scorecard": {
+  "basis": "latest",
+  "grid_version": "grid-v1",
+  "factors": [
+   {
+    "id": "debt_to_ebitda",
+    "label": "Debt / EBITDA",
+    "period": "LTM",
+    "value": 3.270688004376966,
+    "status": "ok",
+    "band": 4,
+    "weight": 0.2,
+    "effective_weight": 0.2,
+    "note": ""
+   },
+   {
+    "id": "net_leverage",
+    "label": "Net debt / EBITDA",
+    "period": "LTM",
+    "value": 3.103816167418958,
+    "status": "ok",
+    "band": 4,
+    "weight": 0.1,
+    "effective_weight": 0.1,
+    "note": ""
+   },
+   {
+    "id": "interest_coverage",
+    "label": "EBITDA / interest",
+    "period": "LTM",
+    "value": 6.211554800339847,
+    "status": "ok",
+    "band": 3,
+    "weight": 0.25,
+    "effective_weight": 0.25,
+    "note": ""
+   },
+   {
+    "id": "fcf_to_debt",
+    "label": "FCF / debt",
+    "period": "LTM",
+    "value": 13.282034125125461,
+    "status": "ok",
+    "band": 4,
+    "weight": 0.2,
+    "effective_weight": 0.2,
+    "note": ""
+   },
+   {
+    "id": "liquidity_coverage",
+    "label": "Liquidity sources / uses",
+    "period": "LTM",
+    "value": 1.4154198204541455,
+    "status": "ok",
+    "band": 4,
+    "weight": 0.15,
+    "effective_weight": 0.15,
+    "note": ""
+   },
+   {
+    "id": "near_term_maturity_cover",
+    "label": "Debt due in 24 months / (cash + undrawn revolver)",
+    "period": "FY0",
+    "value": 2.6561203319502074,
+    "status": "ok",
+    "band": 6,
+    "weight": 0.1,
+    "effective_weight": 0.1,
+    "note": ""
+   }
+  ],
+  "weighted_score": 3.95,
+  "grade": "SB-4",
+  "provisional": false,
+  "ig_like": false,
+  "disclaimer": "Educational project. Not investment advice. SB grades are a student's stylized scorecard, not credit ratings."
+ },
+ "scorecard_fy0": {
+  "basis": "FY0",
+  "grid_version": "grid-v1",
+  "factors": [
+   {
+    "id": "debt_to_ebitda",
+    "label": "Debt / EBITDA",
+    "period": "FY0",
+    "value": 3.6628626426509006,
+    "status": "ok",
+    "band": 4,
+    "weight": 0.2,
+    "effective_weight": 0.2,
+    "note": ""
+   },
+   {
+    "id": "net_leverage",
+    "label": "Net debt / EBITDA",
+    "period": "FY0",
+    "value": 3.3977725835281176,
+    "status": "ok",
+    "band": 4,
+    "weight": 0.1,
+    "effective_weight": 0.1,
+    "note": ""
+   },
+   {
+    "id": "interest_coverage",
+    "label": "EBITDA / interest",
+    "period": "FY0",
+    "value": 5.391401037805782,
+    "status": "ok",
+    "band": 4,
+    "weight": 0.25,
+    "effective_weight": 0.25,
+    "note": ""
+   },
+   {
+    "id": "fcf_to_debt",
+    "label": "FCF / debt",
+    "period": "FY0",
+    "value": 9.786036036036036,
+    "status": "ok",
+    "band": 4,
+    "weight": 0.2,
+    "effective_weight": 0.2,
+    "note": ""
+   },
+   {
+    "id": "liquidity_coverage",
+    "label": "Liquidity sources / uses",
+    "period": "FY0",
+    "value": 1.3109108464757,
+    "status": "ok",
+    "band": 4,
+    "weight": 0.15,
+    "effective_weight": 0.15,
+    "note": ""
+   },
+   {
+    "id": "near_term_maturity_cover",
+    "label": "Debt due in 24 months / (cash + undrawn revolver)",
+    "period": "FY0",
+    "value": 2.6561203319502074,
+    "status": "ok",
+    "band": 6,
+    "weight": 0.1,
+    "effective_weight": 0.1,
+    "note": ""
+   }
+  ],
+  "weighted_score": 4.2,
+  "grade": "SB-4",
+  "provisional": false,
+  "ig_like": false,
+  "disclaimer": "Educational project. Not investment advice. SB grades are a student's stylized scorecard, not credit ratings."
+ },
+ "checklist": [
+  {
+   "id": "fallback:revenue:RevenueFromContractWithCustomerExcludingAssessedTax",
+   "category": "fallback",
+   "severity": "info",
+   "message": "Revenue: used rank 2 RevenueFromContractWithCustomerExcludingAssessedTax in FY-2, FY-1, FY0, LTM.",
+   "ref": "revenue"
+  },
+  {
+   "id": "fallback:d_and_a:DepreciationAndAmortization",
+   "category": "fallback",
+   "severity": "info",
+   "message": "Depreciation and amortisation: used rank 2 DepreciationAndAmortization in FY-2, FY-1, FY0, LTM.",
+   "ref": "d_and_a"
+  },
+  {
+   "id": "fallback:short_term_debt:LongTermDebtCurrent-ShortTermBorrowings-CommercialPaper",
+   "category": "fallback",
+   "severity": "info",
+   "message": "Short-term debt (short-term borrowings plus current portion of long-term debt): used rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper in FY-2, FY-1, FY0, LTM.",
+   "ref": "short_term_debt"
+  },
+  {
+   "id": "fallback:interest_expense:InterestExpenseNonoperating",
+   "category": "fallback",
+   "severity": "info",
+   "message": "Interest expense: used rank 2 InterestExpenseNonoperating in FY-1, FY0, LTM.",
+   "ref": "interest_expense"
+  },
+  {
+   "id": "assumed_zero:short_term_debt:CommercialPaper",
+   "category": "assumed_zero",
+   "severity": "info",
+   "message": "Short-term debt (short-term borrowings plus current portion of long-term debt): CommercialPaper assumed zero (not reported) in FY-2, FY-1, FY0, LTM.",
+   "ref": "short_term_debt"
+  },
+  {
+   "id": "assumed_zero:finance_lease_liabilities:finance-lease-liabilities",
+   "category": "assumed_zero",
+   "severity": "info",
+   "message": "Finance-lease liabilities (current plus non-current) assumed zero (not reported) in FY-2, FY-1, FY0, LTM.",
+   "ref": "finance_lease_liabilities"
+  },
+  {
+   "id": "assumed_zero:short_term_investments:short-term-investments",
+   "category": "assumed_zero",
+   "severity": "info",
+   "message": "Short-term investments assumed zero (not reported) in FY-2, FY-1, FY0, LTM.",
+   "ref": "short_term_investments"
+  },
+  {
+   "id": "assumed_zero:dividends:dividends",
+   "category": "assumed_zero",
+   "severity": "info",
+   "message": "Dividends paid assumed zero (not reported) in FY-2, FY-1, FY0, LTM.",
+   "ref": "dividends"
+  },
+  {
+   "id": "assumed_zero:undrawn_revolver:undrawn-revolver",
+   "category": "assumed_zero",
+   "severity": "info",
+   "message": "Undrawn revolving credit capacity assumed zero (not reported) in FY-2, FY-1, FY0, LTM.",
+   "ref": "undrawn_revolver"
+  },
+  {
+   "id": "assumed_zero:short_term_debt:ShortTermBorrowings",
+   "category": "assumed_zero",
+   "severity": "info",
+   "message": "Short-term debt (short-term borrowings plus current portion of long-term debt): ShortTermBorrowings assumed zero (not reported) in FY-1, FY0, LTM.",
+   "ref": "short_term_debt"
+  },
+  {
+   "id": "assumed_zero:short_term_borrowings:short-term-borrowings",
+   "category": "assumed_zero",
+   "severity": "info",
+   "message": "Short-term borrowings (including commercial paper) assumed zero (not reported) in FY0.",
+   "ref": "short_term_borrowings"
+  }
+ ],
+ "log": [
+  {
+   "kind": "fallback",
+   "concept": "revenue",
+   "period": "FY-2",
+   "message": "used rank 2 RevenueFromContractWithCustomerExcludingAssessedTax because rank 1 Revenues: Revenues not reported for 2022-12-01 to 2023-11-30",
+   "severity": "info",
+   "subject": "RevenueFromContractWithCustomerExcludingAssessedTax"
+  },
+  {
+   "kind": "fallback",
+   "concept": "d_and_a",
+   "period": "FY-2",
+   "message": "used rank 2 DepreciationAndAmortization because rank 1 DepreciationDepletionAndAmortization: DepreciationDepletionAndAmortization not reported for 2022-12-01 to 2023-11-30",
+   "severity": "info",
+   "subject": "DepreciationAndAmortization"
+  },
+  {
+   "kind": "fallback",
+   "concept": "short_term_debt",
+   "period": "FY-2",
+   "message": "used rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper because rank 1 DebtCurrent: DebtCurrent not reported at 2023-11-30",
+   "severity": "info",
+   "subject": "LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "short_term_debt",
+   "period": "FY-2",
+   "message": "CommercialPaper assumed zero: not reported (part of rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper)",
+   "severity": "info",
+   "subject": "CommercialPaper"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "finance_lease_liabilities",
+   "period": "FY-2",
+   "message": "assumed zero: not reported (rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityCurrent not reported at 2023-11-30; rank 2 FinanceLeaseLiability: FinanceLeaseLiability not reported at 2023-11-30)",
+   "severity": "info",
+   "subject": "finance_lease_liabilities"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "short_term_investments",
+   "period": "FY-2",
+   "message": "assumed zero: not reported (rank 1 ShortTermInvestments: ShortTermInvestments not reported at 2023-11-30; rank 2 MarketableSecuritiesCurrent: MarketableSecuritiesCurrent not reported at 2023-11-30; rank 3 AvailableForSaleSecuritiesDebtSecuritiesCurrent: AvailableForSaleSecuritiesDebtSecuritiesCurrent not reported at 2023-11-30)",
+   "severity": "info",
+   "subject": "short_term_investments"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "dividends",
+   "period": "FY-2",
+   "message": "assumed zero: not reported (rank 1 PaymentsOfDividends: PaymentsOfDividends not reported for 2022-12-01 to 2023-11-30; rank 2 PaymentsOfDividendsCommonStock: PaymentsOfDividendsCommonStock not reported for 2022-12-01 to 2023-11-30; rank 3 PaymentsOfOrdinaryDividends: PaymentsOfOrdinaryDividends not reported for 2022-12-01 to 2023-11-30)",
+   "severity": "info",
+   "subject": "dividends"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "undrawn_revolver",
+   "period": "FY-2",
+   "message": "assumed zero: not reported (rank 1 LineOfCreditFacilityRemainingBorrowingCapacity: LineOfCreditFacilityRemainingBorrowingCapacity not reported at 2023-11-30)",
+   "severity": "info",
+   "subject": "undrawn_revolver"
+  },
+  {
+   "kind": "fallback",
+   "concept": "revenue",
+   "period": "FY-1",
+   "message": "used rank 2 RevenueFromContractWithCustomerExcludingAssessedTax because rank 1 Revenues: Revenues not reported for 2023-12-01 to 2024-11-30",
+   "severity": "info",
+   "subject": "RevenueFromContractWithCustomerExcludingAssessedTax"
+  },
+  {
+   "kind": "fallback",
+   "concept": "d_and_a",
+   "period": "FY-1",
+   "message": "used rank 2 DepreciationAndAmortization because rank 1 DepreciationDepletionAndAmortization: DepreciationDepletionAndAmortization not reported for 2023-12-01 to 2024-11-30",
+   "severity": "info",
+   "subject": "DepreciationAndAmortization"
+  },
+  {
+   "kind": "fallback",
+   "concept": "interest_expense",
+   "period": "FY-1",
+   "message": "used rank 2 InterestExpenseNonoperating because rank 1 InterestExpense: InterestExpense not reported for 2023-12-01 to 2024-11-30",
+   "severity": "info",
+   "subject": "InterestExpenseNonoperating"
+  },
+  {
+   "kind": "fallback",
+   "concept": "short_term_debt",
+   "period": "FY-1",
+   "message": "used rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper because rank 1 DebtCurrent: DebtCurrent not reported at 2024-11-30",
+   "severity": "info",
+   "subject": "LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "short_term_debt",
+   "period": "FY-1",
+   "message": "ShortTermBorrowings assumed zero: not reported (part of rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper)",
+   "severity": "info",
+   "subject": "ShortTermBorrowings"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "short_term_debt",
+   "period": "FY-1",
+   "message": "CommercialPaper assumed zero: not reported (part of rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper)",
+   "severity": "info",
+   "subject": "CommercialPaper"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "finance_lease_liabilities",
+   "period": "FY-1",
+   "message": "assumed zero: not reported (rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityCurrent not reported at 2024-11-30; rank 2 FinanceLeaseLiability: FinanceLeaseLiability not reported at 2024-11-30)",
+   "severity": "info",
+   "subject": "finance_lease_liabilities"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "short_term_investments",
+   "period": "FY-1",
+   "message": "assumed zero: not reported (rank 1 ShortTermInvestments: ShortTermInvestments not reported at 2024-11-30; rank 2 MarketableSecuritiesCurrent: MarketableSecuritiesCurrent not reported at 2024-11-30; rank 3 AvailableForSaleSecuritiesDebtSecuritiesCurrent: AvailableForSaleSecuritiesDebtSecuritiesCurrent not reported at 2024-11-30)",
+   "severity": "info",
+   "subject": "short_term_investments"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "dividends",
+   "period": "FY-1",
+   "message": "assumed zero: not reported (rank 1 PaymentsOfDividends: PaymentsOfDividends not reported for 2023-12-01 to 2024-11-30; rank 2 PaymentsOfDividendsCommonStock: PaymentsOfDividendsCommonStock not reported for 2023-12-01 to 2024-11-30; rank 3 PaymentsOfOrdinaryDividends: PaymentsOfOrdinaryDividends not reported for 2023-12-01 to 2024-11-30)",
+   "severity": "info",
+   "subject": "dividends"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "undrawn_revolver",
+   "period": "FY-1",
+   "message": "assumed zero: not reported (rank 1 LineOfCreditFacilityRemainingBorrowingCapacity: LineOfCreditFacilityRemainingBorrowingCapacity not reported at 2024-11-30)",
+   "severity": "info",
+   "subject": "undrawn_revolver"
+  },
+  {
+   "kind": "fallback",
+   "concept": "revenue",
+   "period": "FY0",
+   "message": "used rank 2 RevenueFromContractWithCustomerExcludingAssessedTax because rank 1 Revenues: Revenues not reported for 2024-12-01 to 2025-11-30",
+   "severity": "info",
+   "subject": "RevenueFromContractWithCustomerExcludingAssessedTax"
+  },
+  {
+   "kind": "fallback",
+   "concept": "d_and_a",
+   "period": "FY0",
+   "message": "used rank 2 DepreciationAndAmortization because rank 1 DepreciationDepletionAndAmortization: DepreciationDepletionAndAmortization not reported for 2024-12-01 to 2025-11-30",
+   "severity": "info",
+   "subject": "DepreciationAndAmortization"
+  },
+  {
+   "kind": "fallback",
+   "concept": "interest_expense",
+   "period": "FY0",
+   "message": "used rank 2 InterestExpenseNonoperating because rank 1 InterestExpense: InterestExpense not reported for 2024-12-01 to 2025-11-30",
+   "severity": "info",
+   "subject": "InterestExpenseNonoperating"
+  },
+  {
+   "kind": "fallback",
+   "concept": "short_term_debt",
+   "period": "FY0",
+   "message": "used rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper because rank 1 DebtCurrent: DebtCurrent not reported at 2025-11-30",
+   "severity": "info",
+   "subject": "LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "short_term_debt",
+   "period": "FY0",
+   "message": "ShortTermBorrowings assumed zero: not reported (part of rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper)",
+   "severity": "info",
+   "subject": "ShortTermBorrowings"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "short_term_debt",
+   "period": "FY0",
+   "message": "CommercialPaper assumed zero: not reported (part of rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper)",
+   "severity": "info",
+   "subject": "CommercialPaper"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "finance_lease_liabilities",
+   "period": "FY0",
+   "message": "assumed zero: not reported (rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityCurrent not reported at 2025-11-30; rank 2 FinanceLeaseLiability: FinanceLeaseLiability not reported at 2025-11-30)",
+   "severity": "info",
+   "subject": "finance_lease_liabilities"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "short_term_investments",
+   "period": "FY0",
+   "message": "assumed zero: not reported (rank 1 ShortTermInvestments: ShortTermInvestments not reported at 2025-11-30; rank 2 MarketableSecuritiesCurrent: MarketableSecuritiesCurrent not reported at 2025-11-30; rank 3 AvailableForSaleSecuritiesDebtSecuritiesCurrent: AvailableForSaleSecuritiesDebtSecuritiesCurrent not reported at 2025-11-30)",
+   "severity": "info",
+   "subject": "short_term_investments"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "dividends",
+   "period": "FY0",
+   "message": "assumed zero: not reported (rank 1 PaymentsOfDividends: PaymentsOfDividends not reported for 2024-12-01 to 2025-11-30; rank 2 PaymentsOfDividendsCommonStock: PaymentsOfDividendsCommonStock not reported for 2024-12-01 to 2025-11-30; rank 3 PaymentsOfOrdinaryDividends: PaymentsOfOrdinaryDividends not reported for 2024-12-01 to 2025-11-30)",
+   "severity": "info",
+   "subject": "dividends"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "undrawn_revolver",
+   "period": "FY0",
+   "message": "assumed zero: not reported (rank 1 LineOfCreditFacilityRemainingBorrowingCapacity: LineOfCreditFacilityRemainingBorrowingCapacity not reported at 2025-11-30)",
+   "severity": "info",
+   "subject": "undrawn_revolver"
+  },
+  {
+   "kind": "fallback",
+   "concept": "revenue",
+   "period": "LTM",
+   "message": "used rank 2 RevenueFromContractWithCustomerExcludingAssessedTax because rank 1 Revenues: Revenues not reported for 2024-12-01 to 2025-11-30",
+   "severity": "info",
+   "subject": "RevenueFromContractWithCustomerExcludingAssessedTax"
+  },
+  {
+   "kind": "fallback",
+   "concept": "d_and_a",
+   "period": "LTM",
+   "message": "used rank 2 DepreciationAndAmortization because rank 1 DepreciationDepletionAndAmortization: DepreciationDepletionAndAmortization not reported for 2024-12-01 to 2025-11-30",
+   "severity": "info",
+   "subject": "DepreciationAndAmortization"
+  },
+  {
+   "kind": "fallback",
+   "concept": "interest_expense",
+   "period": "LTM",
+   "message": "used rank 2 InterestExpenseNonoperating because rank 1 InterestExpense: InterestExpense not reported for 2024-12-01 to 2025-11-30",
+   "severity": "info",
+   "subject": "InterestExpenseNonoperating"
+  },
+  {
+   "kind": "fallback",
+   "concept": "short_term_debt",
+   "period": "LTM",
+   "message": "used rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper because rank 1 DebtCurrent: DebtCurrent not reported at 2026-08-31",
+   "severity": "info",
+   "subject": "LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "short_term_debt",
+   "period": "LTM",
+   "message": "ShortTermBorrowings assumed zero: not reported (part of rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper)",
+   "severity": "info",
+   "subject": "ShortTermBorrowings"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "short_term_debt",
+   "period": "LTM",
+   "message": "CommercialPaper assumed zero: not reported (part of rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper)",
+   "severity": "info",
+   "subject": "CommercialPaper"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "finance_lease_liabilities",
+   "period": "LTM",
+   "message": "assumed zero: not reported (rank 1 FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent: FinanceLeaseLiabilityCurrent not reported at 2026-08-31; rank 2 FinanceLeaseLiability: FinanceLeaseLiability not reported at 2026-08-31)",
+   "severity": "info",
+   "subject": "finance_lease_liabilities"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "short_term_investments",
+   "period": "LTM",
+   "message": "assumed zero: not reported (rank 1 ShortTermInvestments: ShortTermInvestments not reported at 2026-08-31; rank 2 MarketableSecuritiesCurrent: MarketableSecuritiesCurrent not reported at 2026-08-31; rank 3 AvailableForSaleSecuritiesDebtSecuritiesCurrent: AvailableForSaleSecuritiesDebtSecuritiesCurrent not reported at 2026-08-31)",
+   "severity": "info",
+   "subject": "short_term_investments"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "dividends",
+   "period": "LTM",
+   "message": "assumed zero: not reported (rank 1 PaymentsOfDividends: PaymentsOfDividends not reported for 2024-12-01 to 2025-11-30; rank 2 PaymentsOfDividendsCommonStock: PaymentsOfDividendsCommonStock not reported for 2024-12-01 to 2025-11-30; rank 3 PaymentsOfOrdinaryDividends: PaymentsOfOrdinaryDividends not reported for 2024-12-01 to 2025-11-30)",
+   "severity": "info",
+   "subject": "dividends"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "undrawn_revolver",
+   "period": "LTM",
+   "message": "assumed zero: not reported (rank 1 LineOfCreditFacilityRemainingBorrowingCapacity: LineOfCreditFacilityRemainingBorrowingCapacity not reported at 2026-08-31)",
+   "severity": "info",
+   "subject": "undrawn_revolver"
+  },
+  {
+   "kind": "assumed_zero",
+   "concept": "short_term_borrowings",
+   "period": "FY0",
+   "message": "assumed zero: not reported (rank 1 ShortTermBorrowings: ShortTermBorrowings not reported at 2025-11-30; rank 2 CommercialPaper: CommercialPaper not reported at 2025-11-30)",
+   "severity": "info",
+   "subject": "short_term_borrowings"
+  },
+  {
+   "kind": "reconciliation",
+   "concept": "total_debt",
+   "period": "FY-2",
+   "message": "LongTermDebt $31,339m matches neither current + noncurrent nor noncurrent alone; LongTermDebtCurrent $2,089m, LongTermDebtNoncurrent $28,483m",
+   "severity": "info",
+   "subject": "LongTermDebt"
+  },
+  {
+   "kind": "reconciliation",
+   "concept": "total_debt",
+   "period": "FY-1",
+   "message": "LongTermDebt $28,213m matches neither current + noncurrent nor noncurrent alone; LongTermDebtCurrent $1,538m, LongTermDebtNoncurrent $25,936m",
+   "severity": "info",
+   "subject": "LongTermDebt"
+  },
+  {
+   "kind": "reconciliation",
+   "concept": "total_debt",
+   "period": "FY0",
+   "message": "LongTermDebt $27,383m matches neither current + noncurrent nor noncurrent alone; LongTermDebtCurrent $2,603m, LongTermDebtNoncurrent $24,037m",
+   "severity": "info",
+   "subject": "LongTermDebt"
+  },
+  {
+   "kind": "reconciliation",
+   "concept": "total_debt",
+   "period": "LTM",
+   "message": "LongTermDebt $24,559m matches neither current + noncurrent nor noncurrent alone; LongTermDebtCurrent $2,036m, LongTermDebtNoncurrent $21,876m",
+   "severity": "info",
+   "subject": "LongTermDebt"
+  },
+  {
+   "kind": "mixed_ranks",
+   "concept": "interest_expense",
+   "period": "all",
+   "message": "different candidates across periods (FY-2: rank 1 InterestExpense; FY-1: rank 2 InterestExpenseNonoperating; FY0: rank 2 InterestExpenseNonoperating; LTM: rank 2 InterestExpenseNonoperating)",
+   "severity": "info",
+   "subject": "interest_expense"
+  }
+ ],
+ "disclaimer": "Educational project. Not investment advice. SB grades are a student's stylized scorecard, not credit ratings."
+}

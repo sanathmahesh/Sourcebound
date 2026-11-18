@@ -120,3 +120,68 @@ inventing one.
   debt follows the same definition.
 - **Rejected:** debt exactly as each balance sheet presents it (inconsistent across companies); excluding
   finance leases everywhere (needs subtraction from combined tags, and understates debt-like obligations).
+
+### D19. Chain revision 2 (approved 17 November 2026, phase 2)
+- **Decision:** net-interest tags (InterestIncomeExpenseNonoperatingNet, InterestIncomeExpenseNet), sign
+  flipped and flagged, rank above the cash-interest-paid proxy; amortisation is optional beside
+  Depreciation; short-term debt adds LongTermDebtAndCapitalLeaseObligationsCurrent and NotesPayableCurrent,
+  and counts as zero when nothing is reported; total debt adds LongTermNotesAndLoans + short-term debt +
+  finance leases; the year-1 maturity falls back to the balance-sheet current portion of long-term debt.
+- **Why:** the tag-discovery run over all 15 companies showed these were the tags actually used by Union
+  Pacific (depreciation only), Kohl's, Cleveland-Cliffs, Community Health and Caesars (net interest), Oracle
+  (notes payable), Union Pacific and Community Health (current debt), and HCA (no year-1 maturity tag).
+  Afterwards every core ratio is available for every company.
+- **Rejected:** keeping the cash-interest-paid proxy (cash paid can differ from expense by timing); leaving
+  short-term debt "not available" when untagged (companies usually omit a nil line; the checklist shows each
+  assumed zero, so a wrong zero is caught).
+
+### D20. ExxonMobil uses its predecessor registrant (override, approved 17 November 2026)
+- **Decision:** config/overrides.yaml maps XOM to Exxon Mobil Corp (CIK 34088) instead of the new holding
+  company ExxonMobil Holdings Corp (CIK 2115436), with the written reason; the override is on XOM's checklist.
+- **Why:** the new registrant (from 1 July 2026, Form 8-K12B) has no 10-K yet; the predecessor has every
+  annual report. Its XBRL data runs to the 10-Q for 31 March 2026 (the June 10-Q's facts sit under the new
+  CIK), so XOM's latest figures are about six months older than most companies'.
+- **Rejected:** swapping in Occidental; dropping to 14 companies; merging two registrants' facts (more code,
+  harder to explain; revisit when the new registrant files its first 10-K).
+
+### D21. One definition of "debt due within 12 months"; ladder metrics as of FY0
+- **Decision:** debt due within 12 months is the balance sheet's short-term debt (short-term borrowings plus
+  the current portion of long-term debt), used in liquidity coverage and in debt due within 24 months
+  (= short-term debt + ladder year 2). Near-term maturity cover divides that by cash + short-term investments
+  + undrawn revolver. The ladder metrics are as of FY0, from the 10-K's maturity table.
+- **Why:** the balance sheet updates every quarter and includes commercial paper, which the maturity table
+  leaves out; one definition everywhere keeps the golden-set formulas and the engine identical.
+- **Rejected:** the maturity table's year 1 (omits short-term borrowings; annual only).
+
+### D22. Scorecard rules beyond the plan's grid
+- **Decision:** a value exactly on a threshold takes the worse band (approved 17 November 2026). Statuses
+  without a value map to fixed bands: EBITDA <= 0 -> 6 on leverage, net leverage and coverage; net cash -> 1;
+  no uses of cash -> 1 on liquidity; debt due with no cash or revolver -> 6; zero debt -> 1 on every
+  debt-related factor. Interest <= 0 with debt outstanding is not scored. The "latest" grade uses LTM
+  ratios and the FY0 near-term maturity cover; an FY0 grade is computed too (for the phase-6 grade-change flag).
+- **Why:** the plan's grid notation ("<1.0", "1.0-2.0", ">6.5") leaves exact boundaries ambiguous; a single
+  conservative rule is easy to state and test. Fixed bands for special statuses follow the plan's own
+  "EBITDA <= 0" and "net cash" entries.
+- **Rejected:** "better band" on ties; scoring "not meaningful" as not available (would hide distress).
+
+### D23. Trend direction rule
+- **Decision:** direction from FY-2 to LTM; "stable" within 10% of the FY-2 value (and at least 0.1x) for
+  multiples, within 2 percentage points for percentages.
+- **Why:** a simple, explainable rule that ignores noise. Not tuned on any result.
+
+### D24. Use the newest filing that has facts; flag skipped ones
+- **Decision:** the latest 10-K and 10-Q are the newest that have facts in the company's XBRL data; a newer
+  filing without facts is skipped and logged as stale data (on the checklist).
+- **Why:** facts can lag a new filing, or sit under another registrant (ExxonMobil). Without this, LTM failed
+  and XOM's "latest" grade rested on one factor of six.
+
+### D25. Published metrics contract
+- **Decision:** contracts.py (Pydantic) defines metrics.json. Metrics are keyed "<metric_id>:<period>" to
+  match memo placeholders; every metric carries its XBRL inputs; an assumed-zero value is exported as status
+  ok with a note; the checklist groups repeated log entries into one item naming the periods.
+- **Why:** one source of truth for the site and the memo; every number traceable from the JSON alone.
+
+### D26. Golden-set sheets
+- **Decision:** generated blank from the latest 10-K, never overwritten once they exist; a finance-lease row
+  (D18) and derived formulas identical to the engine's definitions.
+- **Why:** the author's values must be independent of the tool's, and both must measure the same thing.

@@ -226,3 +226,59 @@ def test_lineage_has_edgar_link():
     assert source.url == "https://www.sec.gov/Archives/edgar/data/1/000000000024000009/0000000000-24-000009-index.htm"
     assert source.fallback_rank == 1
     assert source.concept == "interest_expense"
+
+
+# ----- chain revision 2 (D19): sign-flipped components and optional concepts --------------------------
+
+NET_SPECS = parse_concepts(
+    {
+        "interest_expense": {
+            "label": "Interest expense",
+            "kind": "flow",
+            "required": True,
+            "chain": [
+                {"tag": "InterestExpense"},
+                {"tag": "InterestIncomeExpenseNonoperatingNet", "negate": True, "flag": "net of interest income"},
+            ],
+        },
+        "short_term_debt": {
+            "label": "Short-term debt",
+            "kind": "instant",
+            "required": False,
+            "chain": [{"tag": "DebtCurrent"}],
+        },
+    }
+)
+
+
+def test_negated_component_flips_sign_but_lineage_keeps_filed_value():
+    r = Resolver(NET_SPECS, FactIndex([flow("InterestIncomeExpenseNonoperatingNet", -594, FY0)]), cik=1)
+    got = r.resolve("interest_expense", P_FY0)
+    assert (got.value, got.fallback_rank, got.candidate) == (594, 2, "−InterestIncomeExpenseNonoperatingNet")
+    assert got.flags == ["net of interest income"]
+    [source] = got.inputs
+    assert (source.value, source.sign) == (-594, -1)  # the filed value, used with a minus sign
+
+
+def test_negated_component_in_ltm():
+    facts = [
+        flow("InterestIncomeExpenseNonoperatingNet", -100, FY0),
+        flow("InterestIncomeExpenseNonoperatingNet", -30, YTD),
+        flow("InterestIncomeExpenseNonoperatingNet", -20, PRIOR_YTD),
+    ]
+    got = Resolver(NET_SPECS, FactIndex(facts), cik=1).resolve("interest_expense", P_LTM)
+    assert got.value == 110  # -(-100 + -30 - -20)
+    assert [i.sign for i in got.inputs] == [-1, -1, +1]
+
+
+def test_optional_concept_assumed_zero_when_nothing_reported():
+    r = Resolver(NET_SPECS, FactIndex([]), cik=1)
+    got = r.resolve("short_term_debt", P_FY0)
+    assert (got.status, got.value) == ("assumed_zero", 0)
+    assert [(e.kind, e.subject) for e in r.log] == [("assumed_zero", "short_term_debt")]
+
+
+def test_log_entries_carry_a_subject_for_grouping():
+    r = resolver([flow("InterestExpenseNonoperating", 11, FY0)])
+    r.resolve("interest_expense", P_FY0)
+    assert r.log[0].subject == "InterestExpenseNonoperating"

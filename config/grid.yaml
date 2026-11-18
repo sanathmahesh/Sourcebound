@@ -1,0 +1,63 @@
+# The Sourcebound scorecard: the author's own stylized method (PLAN.md 4.6), approved 17 November 2026.
+# SB grades are a student's stylized scorecard, NOT credit ratings, and must never be presented as such.
+#
+# Each factor scores 1 (strongest) to 6 (weakest). The five thresholds split the number line into six bands.
+#   higher_is_better: false -> score 1 below the first threshold ... score 6 above the last
+#   higher_is_better: true  -> score 1 above the first threshold ... score 6 below the last
+# tie_rule "worse": a value exactly on a threshold gets the worse score (approved 17 November 2026).
+#
+# Frozen at the end of phase 2 (git tag grid-v1) before any comparison with agency ratings.
+# Any later change is logged in docs/strategy/06-decision-log.md and reported as tuning.
+
+version: grid-v1
+tie_rule: worse
+
+factors:
+  - id: debt_to_ebitda
+    label: Debt / EBITDA
+    weight: 0.20
+    higher_is_better: false
+    thresholds: [1.0, 2.0, 3.0, 4.5, 6.5]   # x; EBITDA <= 0 scores 6
+
+  - id: net_leverage
+    label: Net debt / EBITDA
+    weight: 0.10
+    higher_is_better: false
+    thresholds: [0.5, 1.5, 2.5, 4.0, 6.0]   # x; net cash scores 1; EBITDA <= 0 scores 6
+
+  - id: interest_coverage
+    label: EBITDA / interest
+    weight: 0.25
+    higher_is_better: true
+    thresholds: [15, 10, 6, 3.5, 2]         # x; EBITDA <= 0 scores 6
+
+  - id: fcf_to_debt
+    label: FCF / debt
+    weight: 0.20
+    higher_is_better: true
+    thresholds: [40, 25, 15, 8, 0]          # percent; negative scores 6
+
+  - id: liquidity_coverage
+    label: Liquidity sources / uses
+    weight: 0.15
+    higher_is_better: true
+    thresholds: [2.5, 2.0, 1.5, 1.2, 1.0]   # x
+
+  - id: near_term_maturity_cover
+    label: Debt due in 24 months / (cash + undrawn revolver)
+    weight: 0.10
+    higher_is_better: false
+    thresholds: [0.25, 0.5, 0.75, 1.0, 1.5]  # x
+
+# Weighted score -> grade: at or below each cutoff, else the worst grade.
+grades:
+  - [1.5, SB-1]
+  - [2.5, SB-2]
+  - [3.5, SB-3]
+  - [4.5, SB-4]
+  - [5.5, SB-5]
+worst_grade: SB-6
+
+# A weighted score at or below this counts as "IG-like" (investment-grade-like) for the comparison with
+# agency ratings.
+ig_like_max: 3.5

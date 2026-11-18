@@ -42,3 +42,23 @@ Seeded from PLAN.md section 4.15; later items were added while building, with th
 - Exact date matching means a fact with irregular dates is reported as not available rather than matched.
 - Test fixtures are trimmed (chain tags only, periods from 2021) to keep the repository small; the full
   responses are re-creatable from EDGAR.
+
+## Added in phase 2
+
+- Undrawn revolver capacity is tagged only by Verizon among the 15. For the others it counts as zero
+  (logged), which understates liquidity coverage and overstates near-term maturity cover, pushing those two
+  factors towards weaker bands (e.g. Walmart).
+- Maturity tables use company extension tags for some buckets, invisible to the API: Kohl's (all buckets),
+  HCA, Goodyear, Procter & Gamble and ExxonMobil ("after year 5"). Their ladder totals and the ladder
+  reconciliation are not available; Kohl's near-term maturity cover is not scored, so its grade is
+  provisional.
+- Caesars tags about $13.1bn of lease obligations (to be confirmed in its 10-K) as non-current finance-lease
+  liabilities without a current-portion tag, so they are left out of its debt while their interest is in its
+  interest expense. A chain change is proposed in the phase-2 stop report.
+- Net interest understates gross interest expense where interest income is material.
+- ExxonMobil's latest figures (31 March 2026) are about six months older than most companies'.
+- The scorecard is ratio-only: no business-risk factors and no operating-lease adjustment, so companies with
+  large operating leases (such as retailers) can look stronger than under methods that adjust for leases.
+  This is by design, and the comparison with agency ratings will measure its effect.
+- Several reconciliation warnings (total debt against alternative candidates, ladder against total debt)
+  remain open for a reviewer to resolve; none changes a value.

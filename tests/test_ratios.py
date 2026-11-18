@@ -107,9 +107,15 @@ def test_compute_ratios_builds_all_four_with_formulas():
         "short_term_investments": resolved("short_term_investments", 0, status="assumed_zero"),
         "cfo": resolved("cfo", 90),
         "capex": resolved("capex", 30),
+        "short_term_debt": resolved("short_term_debt", 20),
+        "undrawn_revolver": resolved("undrawn_revolver", 0, status="assumed_zero"),
+        "dividends": resolved("dividends", 0, status="assumed_zero"),
     }
     ratios = {r.metric_id: r for r in compute_ratios(values, "FY0")}
-    assert set(ratios) == {"ebitda", "debt_to_ebitda", "net_leverage", "interest_coverage", "fcf_to_debt"}
+    assert set(ratios) == {
+        "ebitda", "debt_to_ebitda", "net_leverage", "interest_coverage", "fcf_to_debt", "liquidity_coverage"
+    }
+    assert ratios["liquidity_coverage"].value == pytest.approx((40 + 0 + 0 + 90) / (20 + 30 + 0))
     assert ratios["ebitda"].value == 100
     assert ratios["debt_to_ebitda"].value == 3.0
     assert ratios["net_leverage"].value == pytest.approx(2.6)
@@ -131,6 +137,9 @@ def test_compute_ratios_propagates_not_available():
         "short_term_investments": resolved("short_term_investments", 0, status="assumed_zero"),
         "cfo": resolved("cfo", 90),
         "capex": resolved("capex", None, status="not_available"),
+        "short_term_debt": resolved("short_term_debt", 20),
+        "undrawn_revolver": resolved("undrawn_revolver", 0, status="assumed_zero"),
+        "dividends": resolved("dividends", 0, status="assumed_zero"),
     }
     ratios = {r.metric_id: r for r in compute_ratios(values, "FY0")}
     assert ratios["ebitda"].status == "not_available"
@@ -138,3 +147,4 @@ def test_compute_ratios_propagates_not_available():
     assert "operating_income" in ratios["debt_to_ebitda"].reason
     assert ratios["fcf_to_debt"].status == "not_available"
     assert "capex" in ratios["fcf_to_debt"].reason
+    assert ratios["liquidity_coverage"].status == "not_available"
