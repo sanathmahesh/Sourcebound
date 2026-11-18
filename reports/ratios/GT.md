@@ -3,7 +3,7 @@
 Phase-1 ratio check. Every ratio is followed by the XBRL facts it used. Values in US$ millions.
 
 - CIK: 42582
-- Company facts downloaded from EDGAR: 2026-11-18T01:51:41+00:00; report generated 2026-11-18 02:06 UTC
+- Company facts downloaded from EDGAR: 2026-11-18T01:51:41+00:00; report generated 2026-11-18 02:25 UTC
 - Latest 10-K: 10-K for the period ended 2025-12-31, filed 2026-02-10, accession 0001628280-26-006708 ([EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm))
 - Latest 10-Q: 10-Q for the period ended 2026-09-30, filed 2026-11-05, accession 0001628280-26-070703 ([EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm))
 
@@ -23,10 +23,10 @@ Phase-1 ratio check. Every ratio is followed by the XBRL facts it used. Values i
 | Metric | FY-2 | FY-1 | FY0 | LTM |
 |---|---|---|---|---|
 | EBITDA | $812m | $1,701m | $1,357m | $990m |
-| Debt / EBITDA | 9.06x | 4.42x | 4.38x | 7.19x |
-| Net leverage | 7.95x | 3.95x | 3.78x | 6.37x |
+| Debt / EBITDA | 9.39x | 4.57x | 4.57x | 7.44x |
+| Net leverage | 8.28x | 4.10x | 3.98x | 6.62x |
 | EBITDA / interest | 1.53x | 3.26x | 3.05x | 2.39x |
-| FCF / debt | -0.2% | -6.5% | -0.5% | 1.3% |
+| FCF / debt | -0.2% | -6.3% | -0.5% | 1.2% |
 
 ## Warnings (0)
 
@@ -37,13 +37,13 @@ None.
 ### Debt / EBITDA — FY-2
 
 **Formula:** total_debt / EBITDA  
-**Inputs ($m):** total_debt 7,356 · operating_income -189 · d_and_a 1,001 → **9.06x**  
+**Inputs ($m):** total_debt 7,624 · operating_income -189 · d_and_a 1,001 → **9.39x**  
 **Flags:** operating_income: derived: pre-tax income from continuing operations plus interest expense  
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
-| total_debt | LongTermDebt | 3 | 7,012 | at 2023-12-31 (balance sheet) | 10-K | 0000950170-25-020763 | 2025-02-14 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000095017025020763/0000950170-25-020763-index.htm) |
-| total_debt | ShortTermBorrowings | 3 | 344 | at 2023-12-31 (balance sheet) | 10-K | 0000950170-25-020763 | 2025-02-14 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000095017025020763/0000950170-25-020763-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 6,831 | at 2023-12-31 (balance sheet) | 10-K | 0000950170-25-020763 | 2025-02-14 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000095017025020763/0000950170-25-020763-index.htm) |
+| total_debt | DebtCurrent | 1 | 793 | at 2023-12-31 (balance sheet) | 10-K | 0000950170-25-020763 | 2025-02-14 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000095017025020763/0000950170-25-020763-index.htm) |
 | operating_income | IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest | 2 | -721 | 2023-01-01 to 2023-12-31 (FY-2) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
 | operating_income | InterestExpense | 1 | 532 | 2023-01-01 to 2023-12-31 (FY-2) | 10-K | 0000950170-25-020763 | 2025-02-14 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000095017025020763/0000950170-25-020763-index.htm) |
 | d_and_a | DepreciationDepletionAndAmortization | 1 | 1,001 | 2023-01-01 to 2023-12-31 (FY-2) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
@@ -51,13 +51,13 @@ None.
 ### Debt / EBITDA — FY-1
 
 **Formula:** total_debt / EBITDA  
-**Inputs ($m):** total_debt 7,521 · operating_income 652 · d_and_a 1,049 → **4.42x**  
+**Inputs ($m):** total_debt 7,782 · operating_income 652 · d_and_a 1,049 → **4.57x**  
 **Flags:** operating_income: derived: pre-tax income from continuing operations plus interest expense  
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
-| total_debt | LongTermDebt | 3 | 6,963 | at 2024-12-31 (balance sheet) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
-| total_debt | ShortTermBorrowings | 3 | 558 | at 2024-12-31 (balance sheet) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 6,392 | at 2024-12-31 (balance sheet) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
+| total_debt | DebtCurrent | 1 | 1,390 | at 2024-12-31 (balance sheet) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
 | operating_income | IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest | 2 | 130 | 2024-01-01 to 2024-12-31 (FY-1) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
 | operating_income | InterestExpense | 1 | 522 | 2024-01-01 to 2024-12-31 (FY-1) | 10-K | 0000950170-25-020763 | 2025-02-14 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000095017025020763/0000950170-25-020763-index.htm) |
 | d_and_a | DepreciationDepletionAndAmortization | 1 | 1,049 | 2024-01-01 to 2024-12-31 (FY-1) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
@@ -65,13 +65,13 @@ None.
 ### Debt / EBITDA — FY0
 
 **Formula:** total_debt / EBITDA  
-**Inputs ($m):** total_debt 5,937 · operating_income 312 · d_and_a 1,045 → **4.38x**  
+**Inputs ($m):** total_debt 6,198 · operating_income 312 · d_and_a 1,045 → **4.57x**  
 **Flags:** operating_income: derived: pre-tax income from continuing operations plus interest expense  
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
-| total_debt | LongTermDebt | 3 | 5,431 | at 2025-12-31 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
-| total_debt | ShortTermBorrowings | 3 | 506 | at 2025-12-31 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 5,328 | at 2025-12-31 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
+| total_debt | DebtCurrent | 1 | 870 | at 2025-12-31 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
 | operating_income | IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest | 2 | -133 | 2025-01-01 to 2025-12-31 (FY0) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
 | operating_income | InterestExpenseNonoperating | 2 | 445 | 2025-01-01 to 2025-12-31 (FY0) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
 | d_and_a | DepreciationDepletionAndAmortization | 1 | 1,045 | 2025-01-01 to 2025-12-31 (FY0) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
@@ -79,13 +79,13 @@ None.
 ### Debt / EBITDA — LTM
 
 **Formula:** total_debt / EBITDA  
-**Inputs ($m):** total_debt 7,114 · operating_income 27 · d_and_a 963 → **7.19x**  
+**Inputs ($m):** total_debt 7,369 · operating_income 27 · d_and_a 963 → **7.44x**  
 **Flags:** operating_income: derived: pre-tax income from continuing operations plus interest expense  
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
-| total_debt | LongTermDebt | 3 | 6,765 | at 2026-09-30 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
-| total_debt | ShortTermBorrowings | 3 | 349 | at 2026-09-30 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 6,030 | at 2026-09-30 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
+| total_debt | DebtCurrent | 1 | 1,339 | at 2026-09-30 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
 | operating_income | IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest | 2 | -133 | 2025-01-01 to 2025-12-31 (FY0) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
 | operating_income | IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest | 2 | -552 | 2026-01-01 to 2026-09-30 (current year-to-date) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
 | operating_income | IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest | 2 | −-297 | 2025-01-01 to 2025-09-30 (prior-year year-to-date, subtracted) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
@@ -99,13 +99,13 @@ None.
 ### Net leverage — FY-2
 
 **Formula:** (total_debt - cash - short_term_investments) / EBITDA  
-**Inputs ($m):** total_debt 7,356 · cash 902 · short_term_investments 0 · operating_income -189 · d_and_a 1,001 → **7.95x**  
+**Inputs ($m):** total_debt 7,624 · cash 902 · short_term_investments 0 · operating_income -189 · d_and_a 1,001 → **8.28x**  
 **Flags:** operating_income: derived: pre-tax income from continuing operations plus interest expense  
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
-| total_debt | LongTermDebt | 3 | 7,012 | at 2023-12-31 (balance sheet) | 10-K | 0000950170-25-020763 | 2025-02-14 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000095017025020763/0000950170-25-020763-index.htm) |
-| total_debt | ShortTermBorrowings | 3 | 344 | at 2023-12-31 (balance sheet) | 10-K | 0000950170-25-020763 | 2025-02-14 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000095017025020763/0000950170-25-020763-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 6,831 | at 2023-12-31 (balance sheet) | 10-K | 0000950170-25-020763 | 2025-02-14 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000095017025020763/0000950170-25-020763-index.htm) |
+| total_debt | DebtCurrent | 1 | 793 | at 2023-12-31 (balance sheet) | 10-K | 0000950170-25-020763 | 2025-02-14 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000095017025020763/0000950170-25-020763-index.htm) |
 | cash | CashAndCashEquivalentsAtCarryingValue | 1 | 902 | at 2023-12-31 (balance sheet) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
 | short_term_investments | — | — | 0 (assumed zero: not reported) | — | — | — | — | — |
 | operating_income | IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest | 2 | -721 | 2023-01-01 to 2023-12-31 (FY-2) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
@@ -115,13 +115,13 @@ None.
 ### Net leverage — FY-1
 
 **Formula:** (total_debt - cash - short_term_investments) / EBITDA  
-**Inputs ($m):** total_debt 7,521 · cash 810 · short_term_investments 0 · operating_income 652 · d_and_a 1,049 → **3.95x**  
+**Inputs ($m):** total_debt 7,782 · cash 810 · short_term_investments 0 · operating_income 652 · d_and_a 1,049 → **4.10x**  
 **Flags:** operating_income: derived: pre-tax income from continuing operations plus interest expense  
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
-| total_debt | LongTermDebt | 3 | 6,963 | at 2024-12-31 (balance sheet) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
-| total_debt | ShortTermBorrowings | 3 | 558 | at 2024-12-31 (balance sheet) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 6,392 | at 2024-12-31 (balance sheet) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
+| total_debt | DebtCurrent | 1 | 1,390 | at 2024-12-31 (balance sheet) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
 | cash | CashAndCashEquivalentsAtCarryingValue | 1 | 810 | at 2024-12-31 (balance sheet) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
 | short_term_investments | — | — | 0 (assumed zero: not reported) | — | — | — | — | — |
 | operating_income | IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest | 2 | 130 | 2024-01-01 to 2024-12-31 (FY-1) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
@@ -131,13 +131,13 @@ None.
 ### Net leverage — FY0
 
 **Formula:** (total_debt - cash - short_term_investments) / EBITDA  
-**Inputs ($m):** total_debt 5,937 · cash 801 · short_term_investments 0 · operating_income 312 · d_and_a 1,045 → **3.78x**  
+**Inputs ($m):** total_debt 6,198 · cash 801 · short_term_investments 0 · operating_income 312 · d_and_a 1,045 → **3.98x**  
 **Flags:** operating_income: derived: pre-tax income from continuing operations plus interest expense  
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
-| total_debt | LongTermDebt | 3 | 5,431 | at 2025-12-31 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
-| total_debt | ShortTermBorrowings | 3 | 506 | at 2025-12-31 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 5,328 | at 2025-12-31 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
+| total_debt | DebtCurrent | 1 | 870 | at 2025-12-31 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
 | cash | CashAndCashEquivalentsAtCarryingValue | 1 | 801 | at 2025-12-31 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
 | short_term_investments | — | — | 0 (assumed zero: not reported) | — | — | — | — | — |
 | operating_income | IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest | 2 | -133 | 2025-01-01 to 2025-12-31 (FY0) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
@@ -147,13 +147,13 @@ None.
 ### Net leverage — LTM
 
 **Formula:** (total_debt - cash - short_term_investments) / EBITDA  
-**Inputs ($m):** total_debt 7,114 · cash 812 · short_term_investments 0 · operating_income 27 · d_and_a 963 → **6.37x**  
+**Inputs ($m):** total_debt 7,369 · cash 812 · short_term_investments 0 · operating_income 27 · d_and_a 963 → **6.62x**  
 **Flags:** operating_income: derived: pre-tax income from continuing operations plus interest expense  
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
-| total_debt | LongTermDebt | 3 | 6,765 | at 2026-09-30 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
-| total_debt | ShortTermBorrowings | 3 | 349 | at 2026-09-30 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 6,030 | at 2026-09-30 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
+| total_debt | DebtCurrent | 1 | 1,339 | at 2026-09-30 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
 | cash | CashAndCashEquivalentsAtCarryingValue | 1 | 812 | at 2026-09-30 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
 | short_term_investments | — | — | 0 (assumed zero: not reported) | — | — | — | — | — |
 | operating_income | IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest | 2 | -133 | 2025-01-01 to 2025-12-31 (FY0) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
@@ -229,43 +229,43 @@ None.
 ### FCF / debt — FY-2
 
 **Formula:** (cfo - capex) / total_debt  
-**Inputs ($m):** cfo 1,032 · capex 1,050 · total_debt 7,356 → **-0.2%**  
+**Inputs ($m):** cfo 1,032 · capex 1,050 · total_debt 7,624 → **-0.2%**  
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
 | cfo | NetCashProvidedByUsedInOperatingActivities | 1 | 1,032 | 2023-01-01 to 2023-12-31 (FY-2) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
 | capex | PaymentsToAcquirePropertyPlantAndEquipment | 1 | 1,050 | 2023-01-01 to 2023-12-31 (FY-2) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
-| total_debt | LongTermDebt | 3 | 7,012 | at 2023-12-31 (balance sheet) | 10-K | 0000950170-25-020763 | 2025-02-14 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000095017025020763/0000950170-25-020763-index.htm) |
-| total_debt | ShortTermBorrowings | 3 | 344 | at 2023-12-31 (balance sheet) | 10-K | 0000950170-25-020763 | 2025-02-14 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000095017025020763/0000950170-25-020763-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 6,831 | at 2023-12-31 (balance sheet) | 10-K | 0000950170-25-020763 | 2025-02-14 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000095017025020763/0000950170-25-020763-index.htm) |
+| total_debt | DebtCurrent | 1 | 793 | at 2023-12-31 (balance sheet) | 10-K | 0000950170-25-020763 | 2025-02-14 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000095017025020763/0000950170-25-020763-index.htm) |
 
 ### FCF / debt — FY-1
 
 **Formula:** (cfo - capex) / total_debt  
-**Inputs ($m):** cfo 698 · capex 1,188 · total_debt 7,521 → **-6.5%**  
+**Inputs ($m):** cfo 698 · capex 1,188 · total_debt 7,782 → **-6.3%**  
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
 | cfo | NetCashProvidedByUsedInOperatingActivities | 1 | 698 | 2024-01-01 to 2024-12-31 (FY-1) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
 | capex | PaymentsToAcquirePropertyPlantAndEquipment | 1 | 1,188 | 2024-01-01 to 2024-12-31 (FY-1) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
-| total_debt | LongTermDebt | 3 | 6,963 | at 2024-12-31 (balance sheet) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
-| total_debt | ShortTermBorrowings | 3 | 558 | at 2024-12-31 (balance sheet) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 6,392 | at 2024-12-31 (balance sheet) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
+| total_debt | DebtCurrent | 1 | 1,390 | at 2024-12-31 (balance sheet) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
 
 ### FCF / debt — FY0
 
 **Formula:** (cfo - capex) / total_debt  
-**Inputs ($m):** cfo 796 · capex 826 · total_debt 5,937 → **-0.5%**  
+**Inputs ($m):** cfo 796 · capex 826 · total_debt 6,198 → **-0.5%**  
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
 | cfo | NetCashProvidedByUsedInOperatingActivities | 1 | 796 | 2025-01-01 to 2025-12-31 (FY0) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
 | capex | PaymentsToAcquirePropertyPlantAndEquipment | 1 | 826 | 2025-01-01 to 2025-12-31 (FY0) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
-| total_debt | LongTermDebt | 3 | 5,431 | at 2025-12-31 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
-| total_debt | ShortTermBorrowings | 3 | 506 | at 2025-12-31 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 5,328 | at 2025-12-31 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
+| total_debt | DebtCurrent | 1 | 870 | at 2025-12-31 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
 
 ### FCF / debt — LTM
 
 **Formula:** (cfo - capex) / total_debt  
-**Inputs ($m):** cfo 748 · capex 658 · total_debt 7,114 → **1.3%**  
+**Inputs ($m):** cfo 748 · capex 658 · total_debt 7,369 → **1.2%**  
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
@@ -275,8 +275,8 @@ None.
 | capex | PaymentsToAcquirePropertyPlantAndEquipment | 1 | 826 | 2025-01-01 to 2025-12-31 (FY0) | 10-K | 0001628280-26-006708 | 2026-02-10 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026006708/0001628280-26-006708-index.htm) |
 | capex | PaymentsToAcquirePropertyPlantAndEquipment | 1 | 481 | 2026-01-01 to 2026-09-30 (current year-to-date) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
 | capex | PaymentsToAcquirePropertyPlantAndEquipment | 1 | −649 | 2025-01-01 to 2025-09-30 (prior-year year-to-date, subtracted) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
-| total_debt | LongTermDebt | 3 | 6,765 | at 2026-09-30 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
-| total_debt | ShortTermBorrowings | 3 | 349 | at 2026-09-30 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 6,030 | at 2026-09-30 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
+| total_debt | DebtCurrent | 1 | 1,339 | at 2026-09-30 (balance sheet) | 10-Q | 0001628280-26-070703 | 2026-11-05 | [EDGAR](https://www.sec.gov/Archives/edgar/data/42582/000162828026070703/0001628280-26-070703-index.htm) |
 
 ## Debt reconciliation
 
@@ -284,22 +284,26 @@ Every total-debt candidate the company reports, for comparison with the one used
 
 | Period | Rank | Candidate | Value ($m) |
 |---|---|---|---|
-| FY-2 | 1 | DebtLongtermAndShorttermCombinedAmount | not usable: DebtLongtermAndShorttermCombinedAmount not reported at 2023-12-31 |
-| FY-2 | 2 | LongTermDebtNoncurrent + [short_term_debt] | not usable: LongTermDebtNoncurrent not reported at 2023-12-31 |
-| FY-2 | 3 ✔ | LongTermDebt + ShortTermBorrowings | 7,356 |
-| FY-2 | 4 | LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings | 7,624 |
-| FY-1 | 1 | DebtLongtermAndShorttermCombinedAmount | not usable: DebtLongtermAndShorttermCombinedAmount not reported at 2024-12-31 |
-| FY-1 | 2 | LongTermDebtNoncurrent + [short_term_debt] | not usable: LongTermDebtNoncurrent not reported at 2024-12-31 |
-| FY-1 | 3 ✔ | LongTermDebt + ShortTermBorrowings | 7,521 |
-| FY-1 | 4 | LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings | 7,782 |
-| FY0 | 1 | DebtLongtermAndShorttermCombinedAmount | not usable: DebtLongtermAndShorttermCombinedAmount not reported at 2025-12-31 |
-| FY0 | 2 | LongTermDebtNoncurrent + [short_term_debt] | not usable: LongTermDebtNoncurrent not reported at 2025-12-31 |
-| FY0 | 3 ✔ | LongTermDebt + ShortTermBorrowings | 5,937 |
-| FY0 | 4 | LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings | 6,198 |
-| LTM | 1 | DebtLongtermAndShorttermCombinedAmount | not usable: DebtLongtermAndShorttermCombinedAmount not reported at 2026-09-30 |
-| LTM | 2 | LongTermDebtNoncurrent + [short_term_debt] | not usable: LongTermDebtNoncurrent not reported at 2026-09-30 |
-| LTM | 3 ✔ | LongTermDebt + ShortTermBorrowings | 7,114 |
-| LTM | 4 | LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings | 7,369 |
+| FY-2 | 1 | LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities] | not usable: LongTermDebtNoncurrent not reported at 2023-12-31 |
+| FY-2 | 2 ✔ | LongTermDebtAndCapitalLeaseObligations + [short_term_debt] | 7,624 |
+| FY-2 | 3 | LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings | 7,624 |
+| FY-2 | 4 | LongTermDebt + ShortTermBorrowings + [finance_lease_liabilities] | 7,624 |
+| FY-2 | 5 | DebtLongtermAndShorttermCombinedAmount | not usable: DebtLongtermAndShorttermCombinedAmount not reported at 2023-12-31 |
+| FY-1 | 1 | LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities] | not usable: LongTermDebtNoncurrent not reported at 2024-12-31 |
+| FY-1 | 2 ✔ | LongTermDebtAndCapitalLeaseObligations + [short_term_debt] | 7,782 |
+| FY-1 | 3 | LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings | 7,782 |
+| FY-1 | 4 | LongTermDebt + ShortTermBorrowings + [finance_lease_liabilities] | 7,782 |
+| FY-1 | 5 | DebtLongtermAndShorttermCombinedAmount | not usable: DebtLongtermAndShorttermCombinedAmount not reported at 2024-12-31 |
+| FY0 | 1 | LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities] | not usable: LongTermDebtNoncurrent not reported at 2025-12-31 |
+| FY0 | 2 ✔ | LongTermDebtAndCapitalLeaseObligations + [short_term_debt] | 6,198 |
+| FY0 | 3 | LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings | 6,198 |
+| FY0 | 4 | LongTermDebt + ShortTermBorrowings + [finance_lease_liabilities] | 6,198 |
+| FY0 | 5 | DebtLongtermAndShorttermCombinedAmount | not usable: DebtLongtermAndShorttermCombinedAmount not reported at 2025-12-31 |
+| LTM | 1 | LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities] | not usable: LongTermDebtNoncurrent not reported at 2026-09-30 |
+| LTM | 2 ✔ | LongTermDebtAndCapitalLeaseObligations + [short_term_debt] | 7,369 |
+| LTM | 3 | LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings | 7,369 |
+| LTM | 4 | LongTermDebt + ShortTermBorrowings + [finance_lease_liabilities] | 7,369 |
+| LTM | 5 | DebtLongtermAndShorttermCombinedAmount | not usable: DebtLongtermAndShorttermCombinedAmount not reported at 2026-09-30 |
 
 ## Fallback log
 
@@ -312,15 +316,15 @@ Every total-debt candidate the company reports, for comparison with the one used
 ### Fallbacks beyond rank 1 (10)
 
 - **operating_income FY-2**: used rank 2 IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest + [interest_expense] because rank 1 OperatingIncomeLoss: OperatingIncomeLoss not reported for 2023-01-01 to 2023-12-31
-- **total_debt FY-2**: used rank 3 LongTermDebt + ShortTermBorrowings because rank 1 DebtLongtermAndShorttermCombinedAmount: DebtLongtermAndShorttermCombinedAmount not reported at 2023-12-31; rank 2 LongTermDebtNoncurrent + [short_term_debt]: LongTermDebtNoncurrent not reported at 2023-12-31
+- **total_debt FY-2**: used rank 2 LongTermDebtAndCapitalLeaseObligations + [short_term_debt] because rank 1 LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities]: LongTermDebtNoncurrent not reported at 2023-12-31
 - **operating_income FY-1**: used rank 2 IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest + [interest_expense] because rank 1 OperatingIncomeLoss: OperatingIncomeLoss not reported for 2024-01-01 to 2024-12-31
-- **total_debt FY-1**: used rank 3 LongTermDebt + ShortTermBorrowings because rank 1 DebtLongtermAndShorttermCombinedAmount: DebtLongtermAndShorttermCombinedAmount not reported at 2024-12-31; rank 2 LongTermDebtNoncurrent + [short_term_debt]: LongTermDebtNoncurrent not reported at 2024-12-31
+- **total_debt FY-1**: used rank 2 LongTermDebtAndCapitalLeaseObligations + [short_term_debt] because rank 1 LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities]: LongTermDebtNoncurrent not reported at 2024-12-31
 - **interest_expense FY0**: used rank 2 InterestExpenseNonoperating because rank 1 InterestExpense: InterestExpense not reported for 2025-01-01 to 2025-12-31
 - **operating_income FY0**: used rank 2 IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest + [interest_expense] because rank 1 OperatingIncomeLoss: OperatingIncomeLoss not reported for 2025-01-01 to 2025-12-31
-- **total_debt FY0**: used rank 3 LongTermDebt + ShortTermBorrowings because rank 1 DebtLongtermAndShorttermCombinedAmount: DebtLongtermAndShorttermCombinedAmount not reported at 2025-12-31; rank 2 LongTermDebtNoncurrent + [short_term_debt]: LongTermDebtNoncurrent not reported at 2025-12-31
+- **total_debt FY0**: used rank 2 LongTermDebtAndCapitalLeaseObligations + [short_term_debt] because rank 1 LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities]: LongTermDebtNoncurrent not reported at 2025-12-31
 - **interest_expense LTM**: used rank 2 InterestExpenseNonoperating because rank 1 InterestExpense: InterestExpense not reported for 2025-01-01 to 2025-12-31
 - **operating_income LTM**: used rank 2 IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest + [interest_expense] because rank 1 OperatingIncomeLoss: OperatingIncomeLoss not reported for 2025-01-01 to 2025-12-31
-- **total_debt LTM**: used rank 3 LongTermDebt + ShortTermBorrowings because rank 1 DebtLongtermAndShorttermCombinedAmount: DebtLongtermAndShorttermCombinedAmount not reported at 2026-09-30; rank 2 LongTermDebtNoncurrent + [short_term_debt]: LongTermDebtNoncurrent not reported at 2026-09-30
+- **total_debt LTM**: used rank 2 LongTermDebtAndCapitalLeaseObligations + [short_term_debt] because rank 1 LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities]: LongTermDebtNoncurrent not reported at 2026-09-30
 
 ### Assumed zero: not reported (4)
 

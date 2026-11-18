@@ -24,7 +24,7 @@ def test_ratio_report_puts_facts_directly_beneath_each_ratio(gt):
     lines = [line for line in block.splitlines() if line.strip()]
     assert lines[0].startswith("**Formula:** total_debt / EBITDA")
     table = "\n".join(lines[1:])
-    for expected in ["LongTermDebt", "ShortTermBorrowings", "DepreciationDepletionAndAmortization", "0001628280-26-070703", "https://www.sec.gov/Archives/edgar/data/42582/"]:
+    for expected in ["LongTermDebtAndCapitalLeaseObligations", "DebtCurrent", "DepreciationDepletionAndAmortization", "0001628280-26-070703", "https://www.sec.gov/Archives/edgar/data/42582/"]:
         assert expected in table
 
 

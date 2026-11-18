@@ -25,8 +25,21 @@ def test_ranks_follow_list_order():
 
 def test_candidate_description():
     specs = load_concepts(CONFIG_DIR / "concepts.yaml")
-    assert specs["total_debt"].chain[1].describe() == "LongTermDebtNoncurrent + [short_term_debt]"
+    assert (
+        specs["total_debt"].chain[0].describe()
+        == "LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities]"
+    )
     assert specs["d_and_a"].chain[0].describe() == "DepreciationDepletionAndAmortization"
+
+
+def test_approved_chain_changes_d18():
+    """Chain changes approved 17 November 2026 (decision log D18)."""
+    specs = load_concepts(CONFIG_DIR / "concepts.yaml")
+    assert specs["revenue"].chain[0].describe() == "Revenues"
+    assert specs["total_debt"].chain[-1].describe() == "DebtLongtermAndShorttermCombinedAmount"
+    assert "PaymentsToAcquireOtherProductiveAssets" in [c.describe() for c in specs["capex"].chain]
+    assert specs["interest_expense"].chain[2].describe() == "InterestExpenseDebt + FinanceLeaseInterestExpense"
+    assert not specs["finance_lease_liabilities"].required
 
 
 def test_unknown_concept_reference_is_rejected():

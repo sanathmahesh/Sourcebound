@@ -1,6 +1,6 @@
 # Tag-discovery report
 
-Generated 2026-11-18 02:06 UTC from EDGAR company facts. Values in US$ millions. A tag 'covers' a period when
+Generated 2026-11-18 02:25 UTC from EDGAR company facts. Values in US$ millions. A tag 'covers' a period when
 the company reported it for exactly that period (for LTM: all three windows).
 
 ## WMT
@@ -12,12 +12,13 @@ Facts downloaded 2026-11-18T01:51:40+00:00.
 
 | Concept | FY-2 | FY-1 | FY0 | LTM |
 |---|---|---|---|---|
-| revenue | rank 1: RevenueFromContractWithCustomerExcludingAssessedTax = 642,637 | rank 1: RevenueFromContractWithCustomerExcludingAssessedTax = 674,538 | rank 1: RevenueFromContractWithCustomerExcludingAssessedTax = 706,413 | rank 1: RevenueFromContractWithCustomerExcludingAssessedTax = 728,466 |
+| revenue | rank 1: Revenues = 648,125 | rank 1: Revenues = 680,985 | rank 1: Revenues = 713,163 | rank 1: Revenues = 735,840 |
 | operating_income | rank 1: OperatingIncomeLoss = 27,012 | rank 1: OperatingIncomeLoss = 29,348 | rank 1: OperatingIncomeLoss = 29,825 | rank 1: OperatingIncomeLoss = 32,280 |
 | d_and_a | rank 3: DepreciationAmortizationAndAccretionNet = 11,853 | rank 3: DepreciationAmortizationAndAccretionNet = 12,973 | rank 3: DepreciationAmortizationAndAccretionNet = 14,203 | rank 3: DepreciationAmortizationAndAccretionNet = 15,093 |
-| interest_expense | rank 3: InterestExpenseDebt = 2,259 | rank 3: InterestExpenseDebt = 2,249 | rank 3: InterestExpenseDebt = 2,318 | rank 3: InterestExpenseDebt = 1,859 |
+| interest_expense | rank 3: InterestExpenseDebt + FinanceLeaseInterestExpense = 2,585 | rank 3: InterestExpenseDebt + FinanceLeaseInterestExpense = 2,630 | rank 3: InterestExpenseDebt + FinanceLeaseInterestExpense = 2,701 | rank 3: InterestExpenseDebt + FinanceLeaseInterestExpense = 2,257 |
 | short_term_debt | rank 2: LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper = 4,325 | rank 2: LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper = 5,666 | rank 2: LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper = 10,138 | rank 2: LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper = 13,949 |
-| total_debt | rank 1: DebtLongtermAndShorttermCombinedAmount = 39,579 | rank 1: DebtLongtermAndShorttermCombinedAmount = 35,999 | rank 1: DebtLongtermAndShorttermCombinedAmount = 38,166 | rank 1: DebtLongtermAndShorttermCombinedAmount = 39,932 |
+| total_debt | rank 1: LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities] = 46,891 | rank 1: LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities] = 45,790 | rank 1: LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities] = 51,523 | rank 1: LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities] = 57,243 |
+| finance_lease_liabilities | rank 1: FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent = 6,434 | rank 1: FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent = 6,723 | rank 1: FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent = 6,761 | rank 1: FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent = 6,832 |
 | cash | rank 1: CashAndCashEquivalentsAtCarryingValue = 9,867 | rank 1: CashAndCashEquivalentsAtCarryingValue = 9,037 | rank 1: CashAndCashEquivalentsAtCarryingValue = 10,727 | rank 1: CashAndCashEquivalentsAtCarryingValue = 11,529 |
 | short_term_investments | assumed zero | assumed zero | assumed zero | assumed zero |
 | cfo | rank 1: NetCashProvidedByUsedInOperatingActivities = 35,726 | rank 1: NetCashProvidedByUsedInOperatingActivities = 36,443 | rank 1: NetCashProvidedByUsedInOperatingActivities = 41,565 | rank 1: NetCashProvidedByUsedInOperatingActivities = 42,923 |
@@ -35,8 +36,8 @@ Facts downloaded 2026-11-18T01:51:40+00:00.
 
 | Concept | Rank | Tag | Facts | Latest period end | FY-2 | FY-1 | FY0 | LTM |
 |---|---|---|---|---|---|---|---|---|
-| revenue | 1 | RevenueFromContractWithCustomerExcludingAssessedTax | 120 | 2026-07-31 | yes | yes | yes | yes |
-| revenue | 2 | Revenues | 293 | 2026-07-31 | yes | yes | yes | yes |
+| revenue | 1 | Revenues | 293 | 2026-07-31 | yes | yes | yes | yes |
+| revenue | 2 | RevenueFromContractWithCustomerExcludingAssessedTax | 120 | 2026-07-31 | yes | yes | yes | yes |
 | revenue | 3 | RevenueFromContractWithCustomerIncludingAssessedTax | 0 | never reported | — | — | — | — |
 | revenue | 4 | SalesRevenueNet | 189 | 2018-07-31 | — | — | — | — |
 | operating_income | 1 | OperatingIncomeLoss | 229 | 2026-07-31 | yes | yes | yes | yes |
@@ -50,19 +51,24 @@ Facts downloaded 2026-11-18T01:51:40+00:00.
 | interest_expense | 1 | InterestExpense | 0 | never reported | — | — | — | — |
 | interest_expense | 2 | InterestExpenseNonoperating | 0 | never reported | — | — | — | — |
 | interest_expense | 3 | InterestExpenseDebt | 229 | 2026-07-31 | yes | yes | yes | yes |
+| interest_expense | 3 | FinanceLeaseInterestExpense | 89 | 2026-07-31 | yes | yes | yes | yes |
 | interest_expense | 4 | InterestAndDebtExpense | 0 | never reported | — | — | — | — |
 | interest_expense | 5 | InterestPaidNet | 21 | 2026-01-31 | yes | yes | yes | — |
 | short_term_debt | 1 | DebtCurrent | 0 | never reported | — | — | — | — |
 | short_term_debt | 2 | LongTermDebtCurrent | 193 | 2026-07-31 | yes | yes | yes | yes |
 | short_term_debt | 2 | ShortTermBorrowings | 187 | 2026-07-31 | yes | yes | yes | yes |
 | short_term_debt | 2 | CommercialPaper | 6 | 2009-10-31 | — | — | — | — |
-| total_debt | 1 | DebtLongtermAndShorttermCombinedAmount | 76 | 2026-07-31 | yes | yes | yes | yes |
-| total_debt | 2 | LongTermDebtNoncurrent | 193 | 2026-07-31 | yes | yes | yes | yes |
-| total_debt | 3 | LongTermDebt | 52 | 2026-01-31 | yes | yes | yes | — |
+| total_debt | 1 | LongTermDebtNoncurrent | 193 | 2026-07-31 | yes | yes | yes | yes |
+| total_debt | 2 | LongTermDebtAndCapitalLeaseObligations | 0 | never reported | — | — | — | — |
+| total_debt | 3 | LongTermDebtAndCapitalLeaseObligations | 0 | never reported | — | — | — | — |
+| total_debt | 3 | LongTermDebtAndCapitalLeaseObligationsCurrent | 0 | never reported | — | — | — | — |
 | total_debt | 3 | ShortTermBorrowings | 187 | 2026-07-31 | yes | yes | yes | yes |
-| total_debt | 4 | LongTermDebtAndCapitalLeaseObligations | 0 | never reported | — | — | — | — |
-| total_debt | 4 | LongTermDebtAndCapitalLeaseObligationsCurrent | 0 | never reported | — | — | — | — |
+| total_debt | 4 | LongTermDebt | 52 | 2026-01-31 | yes | yes | yes | — |
 | total_debt | 4 | ShortTermBorrowings | 187 | 2026-07-31 | yes | yes | yes | yes |
+| total_debt | 5 | DebtLongtermAndShorttermCombinedAmount | 76 | 2026-07-31 | yes | yes | yes | yes |
+| finance_lease_liabilities | 1 | FinanceLeaseLiabilityCurrent | 83 | 2026-07-31 | yes | yes | yes | yes |
+| finance_lease_liabilities | 1 | FinanceLeaseLiabilityNoncurrent | 83 | 2026-07-31 | yes | yes | yes | yes |
+| finance_lease_liabilities | 2 | FinanceLeaseLiability | 10 | 2026-01-31 | yes | yes | yes | — |
 | cash | 1 | CashAndCashEquivalentsAtCarryingValue | 229 | 2026-07-31 | yes | yes | yes | yes |
 | cash | 2 | CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | 124 | 2026-07-31 | yes | yes | yes | yes |
 | short_term_investments | 1 | ShortTermInvestments | 0 | never reported | — | — | — | — |
@@ -73,6 +79,7 @@ Facts downloaded 2026-11-18T01:51:40+00:00.
 | capex | 1 | PaymentsToAcquirePropertyPlantAndEquipment | 157 | 2026-07-31 | yes | yes | yes | yes |
 | capex | 2 | PaymentsToAcquireProductiveAssets | 0 | never reported | — | — | — | — |
 | capex | 3 | PaymentsForCapitalImprovements | 3 | 2012-01-31 | — | — | — | — |
+| capex | 4 | PaymentsToAcquireOtherProductiveAssets | 0 | never reported | — | — | — | — |
 | dividends | 1 | PaymentsOfDividends | 99 | 2020-01-31 | — | — | — | — |
 | dividends | 2 | PaymentsOfDividendsCommonStock | 58 | 2026-07-31 | yes | yes | yes | yes |
 | dividends | 3 | PaymentsOfOrdinaryDividends | 0 | never reported | — | — | — | — |
@@ -84,7 +91,7 @@ Facts downloaded 2026-11-18T01:51:40+00:00.
 | maturity_year_5 | 1 | LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFive | 12 | 2026-01-31 | — | — | yes | — |
 | maturity_after_year_5 | 1 | LongTermDebtMaturitiesRepaymentsOfPrincipalAfterYearFive | 12 | 2026-01-31 | — | — | yes | — |
 
-### Related tags reported for FY0 but in no chain (27)
+### Related tags reported for FY0 but in no chain (23)
 
 | Group | Tag | FY0 value ($m) | Period |
 |---|---|---|---|
@@ -93,11 +100,7 @@ Facts downloaded 2026-11-18T01:51:40+00:00.
 | operating income | IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign | 6,197 | 2025-02-01 to 2026-01-31 |
 | depreciation and amortisation | AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment | 120,338 | at 2026-01-31 |
 | depreciation and amortisation | FinanceLeaseRightOfUseAssetAmortization | 888 | 2025-02-01 to 2026-01-31 |
-| interest | FinanceLeaseInterestExpense | 383 | 2025-02-01 to 2026-01-31 |
 | interest | InterestIncomeExpenseNonoperatingNet | -2,431 | 2025-02-01 to 2026-01-31 |
-| debt | FinanceLeaseLiability | 6,761 | at 2026-01-31 |
-| debt | FinanceLeaseLiabilityCurrent | 856 | at 2026-01-31 |
-| debt | FinanceLeaseLiabilityNoncurrent | 5,905 | at 2026-01-31 |
 | debt | FinanceLeaseLiabilityPaymentsDue | 10,815 | at 2026-01-31 |
 | debt | FinanceLeaseLiabilityPaymentsDueAfterYearFive | 6,003 | at 2026-01-31 |
 | debt | FinanceLeaseLiabilityPaymentsDueNextTwelveMonths | 1,228 | at 2026-01-31 |
@@ -125,16 +128,17 @@ Facts downloaded 2026-11-18T01:51:40+00:00.
 
 | Concept | FY-2 | FY-1 | FY0 | LTM |
 |---|---|---|---|---|
-| revenue | rank 2: Revenues = 133,974 | rank 2: Revenues = 134,788 | rank 2: Revenues = 138,191 | rank 2: Revenues = 139,387 |
+| revenue | rank 1: Revenues = 133,974 | rank 1: Revenues = 134,788 | rank 1: Revenues = 138,191 | rank 1: Revenues = 139,387 |
 | operating_income | rank 1: OperatingIncomeLoss = 22,877 | rank 1: OperatingIncomeLoss = 28,686 | rank 1: OperatingIncomeLoss = 29,259 | rank 1: OperatingIncomeLoss = 29,075 |
 | d_and_a | rank 2: DepreciationAndAmortization = 17,624 | rank 2: DepreciationAndAmortization = 17,892 | rank 2: DepreciationAndAmortization = 18,349 | rank 2: DepreciationAndAmortization = 19,514 |
 | interest_expense | rank 1: InterestExpense = 5,524 | rank 2: InterestExpenseNonoperating = 6,649 | rank 2: InterestExpenseNonoperating = 6,694 | rank 2: InterestExpenseNonoperating = 7,634 |
 | short_term_debt | rank 2: LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper = 12,973 | rank 1: DebtCurrent = 22,633 | rank 1: DebtCurrent = 18,618 | rank 2: LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper = 23,889 |
-| total_debt | rank 1: DebtLongtermAndShorttermCombinedAmount = 150,674 | rank 1: DebtLongtermAndShorttermCombinedAmount = 144,014 | rank 1: DebtLongtermAndShorttermCombinedAmount = 158,150 | not available |
+| total_debt | rank 2: LongTermDebtAndCapitalLeaseObligations + [short_term_debt] = 150,674 | rank 2: LongTermDebtAndCapitalLeaseObligations + [short_term_debt] = 144,014 | rank 2: LongTermDebtAndCapitalLeaseObligations + [short_term_debt] = 158,150 | rank 2: LongTermDebtAndCapitalLeaseObligations + [short_term_debt] = 166,233 |
+| finance_lease_liabilities | rank 1: FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent = 2,091 | rank 1: FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent = 2,349 | rank 1: FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent = 2,511 | assumed zero |
 | cash | rank 1: CashAndCashEquivalentsAtCarryingValue = 2,065 | rank 1: CashAndCashEquivalentsAtCarryingValue = 4,194 | rank 1: CashAndCashEquivalentsAtCarryingValue = 19,048 | rank 1: CashAndCashEquivalentsAtCarryingValue = 4,495 |
 | short_term_investments | assumed zero | assumed zero | assumed zero | assumed zero |
 | cfo | rank 1: NetCashProvidedByUsedInOperatingActivities = 37,475 | rank 1: NetCashProvidedByUsedInOperatingActivities = 36,912 | rank 1: NetCashProvidedByUsedInOperatingActivities = 37,137 | rank 1: NetCashProvidedByUsedInOperatingActivities = 39,050 |
-| capex | not available | not available | not available | not available |
+| capex | rank 4: PaymentsToAcquireOtherProductiveAssets = 18,767 | rank 4: PaymentsToAcquireOtherProductiveAssets = 17,090 | rank 4: PaymentsToAcquireOtherProductiveAssets = 17,011 | rank 4: PaymentsToAcquireOtherProductiveAssets = 16,674 |
 | dividends | rank 1: PaymentsOfDividends = 11,025 | rank 1: PaymentsOfDividends = 11,249 | rank 1: PaymentsOfDividends = 11,481 | rank 1: PaymentsOfDividends = 11,716 |
 | undrawn_revolver | rank 1: LineOfCreditFacilityRemainingBorrowingCapacity = 9,457 | rank 1: LineOfCreditFacilityRemainingBorrowingCapacity = 11,963 | rank 1: LineOfCreditFacilityRemainingBorrowingCapacity = 13,657 | rank 1: LineOfCreditFacilityRemainingBorrowingCapacity = 12,014 |
 | maturity_year_1 | rank 1: LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths = 12,253 | rank 1: LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths = 21,709 | rank 1: LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths = 17,267 | not available |
@@ -148,8 +152,8 @@ Facts downloaded 2026-11-18T01:51:40+00:00.
 
 | Concept | Rank | Tag | Facts | Latest period end | FY-2 | FY-1 | FY0 | LTM |
 |---|---|---|---|---|---|---|---|---|
-| revenue | 1 | RevenueFromContractWithCustomerExcludingAssessedTax | 0 | never reported | — | — | — | — |
-| revenue | 2 | Revenues | 309 | 2026-09-30 | yes | yes | yes | yes |
+| revenue | 1 | Revenues | 309 | 2026-09-30 | yes | yes | yes | yes |
+| revenue | 2 | RevenueFromContractWithCustomerExcludingAssessedTax | 0 | never reported | — | — | — | — |
 | revenue | 3 | RevenueFromContractWithCustomerIncludingAssessedTax | 0 | never reported | — | — | — | — |
 | revenue | 4 | SalesRevenueNet | 0 | never reported | — | — | — | — |
 | operating_income | 1 | OperatingIncomeLoss | 309 | 2026-09-30 | yes | yes | yes | yes |
@@ -163,19 +167,24 @@ Facts downloaded 2026-11-18T01:51:40+00:00.
 | interest_expense | 1 | InterestExpense | 199 | 2024-06-30 | yes | — | — | — |
 | interest_expense | 2 | InterestExpenseNonoperating | 30 | 2026-09-30 | yes | yes | yes | yes |
 | interest_expense | 3 | InterestExpenseDebt | 0 | never reported | — | — | — | — |
+| interest_expense | 3 | FinanceLeaseInterestExpense | 31 | 2025-12-31 | yes | yes | yes | — |
 | interest_expense | 4 | InterestAndDebtExpense | 0 | never reported | — | — | — | — |
 | interest_expense | 5 | InterestPaidNet | 48 | 2025-12-31 | yes | yes | yes | — |
 | short_term_debt | 1 | DebtCurrent | 88 | 2025-12-31 | — | yes | yes | — |
 | short_term_debt | 2 | LongTermDebtCurrent | 64 | 2026-09-30 | yes | yes | yes | yes |
 | short_term_debt | 2 | ShortTermBorrowings | 21 | 2025-12-31 | yes | yes | yes | — |
 | short_term_debt | 2 | CommercialPaper | 12 | 2020-06-30 | — | — | — | — |
-| total_debt | 1 | DebtLongtermAndShorttermCombinedAmount | 16 | 2025-12-31 | yes | yes | yes | — |
-| total_debt | 2 | LongTermDebtNoncurrent | 8 | 2013-12-31 | — | — | — | — |
-| total_debt | 3 | LongTermDebt | 8 | 2013-12-31 | — | — | — | — |
+| total_debt | 1 | LongTermDebtNoncurrent | 8 | 2013-12-31 | — | — | — | — |
+| total_debt | 2 | LongTermDebtAndCapitalLeaseObligations | 140 | 2026-09-30 | yes | yes | yes | yes |
+| total_debt | 3 | LongTermDebtAndCapitalLeaseObligations | 140 | 2026-09-30 | yes | yes | yes | yes |
+| total_debt | 3 | LongTermDebtAndCapitalLeaseObligationsCurrent | 24 | 2025-12-31 | yes | yes | yes | — |
 | total_debt | 3 | ShortTermBorrowings | 21 | 2025-12-31 | yes | yes | yes | — |
-| total_debt | 4 | LongTermDebtAndCapitalLeaseObligations | 140 | 2026-09-30 | yes | yes | yes | yes |
-| total_debt | 4 | LongTermDebtAndCapitalLeaseObligationsCurrent | 24 | 2025-12-31 | yes | yes | yes | — |
+| total_debt | 4 | LongTermDebt | 8 | 2013-12-31 | — | — | — | — |
 | total_debt | 4 | ShortTermBorrowings | 21 | 2025-12-31 | yes | yes | yes | — |
+| total_debt | 5 | DebtLongtermAndShorttermCombinedAmount | 16 | 2025-12-31 | yes | yes | yes | — |
+| finance_lease_liabilities | 1 | FinanceLeaseLiabilityCurrent | 18 | 2025-12-31 | yes | yes | yes | — |
+| finance_lease_liabilities | 1 | FinanceLeaseLiabilityNoncurrent | 18 | 2025-12-31 | yes | yes | yes | — |
+| finance_lease_liabilities | 2 | FinanceLeaseLiability | 18 | 2025-12-31 | yes | yes | yes | — |
 | cash | 1 | CashAndCashEquivalentsAtCarryingValue | 210 | 2026-09-30 | yes | yes | yes | yes |
 | cash | 2 | CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | 140 | 2026-09-30 | yes | yes | yes | yes |
 | short_term_investments | 1 | ShortTermInvestments | 58 | 2015-12-31 | — | — | — | — |
@@ -186,6 +195,7 @@ Facts downloaded 2026-11-18T01:51:40+00:00.
 | capex | 1 | PaymentsToAcquirePropertyPlantAndEquipment | 0 | never reported | — | — | — | — |
 | capex | 2 | PaymentsToAcquireProductiveAssets | 94 | 2019-09-30 | — | — | — | — |
 | capex | 3 | PaymentsForCapitalImprovements | 0 | never reported | — | — | — | — |
+| capex | 4 | PaymentsToAcquireOtherProductiveAssets | 105 | 2026-09-30 | yes | yes | yes | yes |
 | dividends | 1 | PaymentsOfDividends | 157 | 2026-09-30 | yes | yes | yes | yes |
 | dividends | 2 | PaymentsOfDividendsCommonStock | 0 | never reported | — | — | — | — |
 | dividends | 3 | PaymentsOfOrdinaryDividends | 0 | never reported | — | — | — | — |
@@ -197,7 +207,7 @@ Facts downloaded 2026-11-18T01:51:40+00:00.
 | maturity_year_5 | 1 | LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFive | 16 | 2025-12-31 | yes | yes | yes | — |
 | maturity_after_year_5 | 1 | LongTermDebtMaturitiesRepaymentsOfPrincipalAfterYearFive | 16 | 2025-12-31 | yes | yes | yes | — |
 
-### Related tags reported for FY0 but in no chain (46)
+### Related tags reported for FY0 but in no chain (41)
 
 | Group | Tag | FY0 value ($m) | Period |
 |---|---|---|---|
@@ -214,14 +224,10 @@ Facts downloaded 2026-11-18T01:51:40+00:00.
 | depreciation and amortisation | FiniteLivedIntangibleAssetsAmortizationExpenseYearFour | 1,183 | at 2025-12-31 |
 | depreciation and amortisation | FiniteLivedIntangibleAssetsAmortizationExpenseYearThree | 1,887 | at 2025-12-31 |
 | depreciation and amortisation | FiniteLivedIntangibleAssetsAmortizationExpenseYearTwo | 2,379 | at 2025-12-31 |
-| interest | FinanceLeaseInterestExpense | 116 | 2025-01-01 to 2025-12-31 |
 | interest | InterestCostsCapitalized | 740 | 2025-01-01 to 2025-12-31 |
 | interest | InterestCostsIncurred | 7,291 | 2025-01-01 to 2025-12-31 |
 | debt | DebtInstrumentUnamortizedDiscountPremiumNet | 3,463 | at 2025-12-31 |
 | debt | DebtInstrumentUnamortizedPremium | 45 | at 2025-12-31 |
-| debt | FinanceLeaseLiability | 2,511 | at 2025-12-31 |
-| debt | FinanceLeaseLiabilityCurrent | 943 | at 2025-12-31 |
-| debt | FinanceLeaseLiabilityNoncurrent | 1,568 | at 2025-12-31 |
 | debt | FinanceLeaseLiabilityPaymentsDue | 2,746 | at 2025-12-31 |
 | debt | FinanceLeaseLiabilityPaymentsDueAfterYearFive | 139 | at 2025-12-31 |
 | debt | FinanceLeaseLiabilityPaymentsDueNextTwelveMonths | 994 | at 2025-12-31 |
@@ -243,7 +249,6 @@ Facts downloaded 2026-11-18T01:51:40+00:00.
 | capital expenditure | CapitalExpendituresIncurredButNotYetPaid | 3,800 | 2025-01-01 to 2025-12-31 |
 | capital expenditure | PaymentsToAcquireBusinessesNetOfCashAcquired | 0 | 2025-01-01 to 2025-12-31 |
 | capital expenditure | PaymentsToAcquireIntangibleAssets | 450 | 2025-01-01 to 2025-12-31 |
-| capital expenditure | PaymentsToAcquireOtherProductiveAssets | 17,011 | 2025-01-01 to 2025-12-31 |
 | dividends | DividendsPayableCurrent | 2,937 | at 2025-12-31 |
 | dividends | IncomeLossFromEquityMethodInvestmentsNetOfDividendsOrDistributions | -42 | 2025-01-01 to 2025-12-31 |
 | revolver | LineOfCredit | 4,652 | at 2025-12-31 |
@@ -257,12 +262,13 @@ Facts downloaded 2026-11-18T01:51:41+00:00.
 
 | Concept | FY-2 | FY-1 | FY0 | LTM |
 |---|---|---|---|---|
-| revenue | rank 1: RevenueFromContractWithCustomerExcludingAssessedTax = 20,066 | rank 1: RevenueFromContractWithCustomerExcludingAssessedTax = 18,878 | rank 1: RevenueFromContractWithCustomerExcludingAssessedTax = 18,280 | rank 1: RevenueFromContractWithCustomerExcludingAssessedTax = 17,588 |
+| revenue | rank 2: RevenueFromContractWithCustomerExcludingAssessedTax = 20,066 | rank 2: RevenueFromContractWithCustomerExcludingAssessedTax = 18,878 | rank 2: RevenueFromContractWithCustomerExcludingAssessedTax = 18,280 | rank 2: RevenueFromContractWithCustomerExcludingAssessedTax = 17,588 |
 | operating_income | rank 2: IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest + [interest_expense] = -189 | rank 2: IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest + [interest_expense] = 652 | rank 2: IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest + [interest_expense] = 312 | rank 2: IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest + [interest_expense] = 27 |
 | d_and_a | rank 1: DepreciationDepletionAndAmortization = 1,001 | rank 1: DepreciationDepletionAndAmortization = 1,049 | rank 1: DepreciationDepletionAndAmortization = 1,045 | rank 1: DepreciationDepletionAndAmortization = 963 |
 | interest_expense | rank 1: InterestExpense = 532 | rank 1: InterestExpense = 522 | rank 2: InterestExpenseNonoperating = 445 | rank 2: InterestExpenseNonoperating = 415 |
 | short_term_debt | rank 1: DebtCurrent = 793 | rank 1: DebtCurrent = 1,390 | rank 1: DebtCurrent = 870 | rank 1: DebtCurrent = 1,339 |
-| total_debt | rank 3: LongTermDebt + ShortTermBorrowings = 7,356 | rank 3: LongTermDebt + ShortTermBorrowings = 7,521 | rank 3: LongTermDebt + ShortTermBorrowings = 5,937 | rank 3: LongTermDebt + ShortTermBorrowings = 7,114 |
+| total_debt | rank 2: LongTermDebtAndCapitalLeaseObligations + [short_term_debt] = 7,624 | rank 2: LongTermDebtAndCapitalLeaseObligations + [short_term_debt] = 7,782 | rank 2: LongTermDebtAndCapitalLeaseObligations + [short_term_debt] = 6,198 | rank 2: LongTermDebtAndCapitalLeaseObligations + [short_term_debt] = 7,369 |
+| finance_lease_liabilities | rank 1: FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent = 268 | rank 1: FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent = 261 | rank 1: FinanceLeaseLiabilityCurrent + FinanceLeaseLiabilityNoncurrent = 261 | rank 2: FinanceLeaseLiability = 255 |
 | cash | rank 1: CashAndCashEquivalentsAtCarryingValue = 902 | rank 1: CashAndCashEquivalentsAtCarryingValue = 810 | rank 1: CashAndCashEquivalentsAtCarryingValue = 801 | rank 1: CashAndCashEquivalentsAtCarryingValue = 812 |
 | short_term_investments | assumed zero | assumed zero | assumed zero | assumed zero |
 | cfo | rank 1: NetCashProvidedByUsedInOperatingActivities = 1,032 | rank 1: NetCashProvidedByUsedInOperatingActivities = 698 | rank 1: NetCashProvidedByUsedInOperatingActivities = 796 | rank 1: NetCashProvidedByUsedInOperatingActivities = 748 |
@@ -280,8 +286,8 @@ Facts downloaded 2026-11-18T01:51:41+00:00.
 
 | Concept | Rank | Tag | Facts | Latest period end | FY-2 | FY-1 | FY0 | LTM |
 |---|---|---|---|---|---|---|---|---|
-| revenue | 1 | RevenueFromContractWithCustomerExcludingAssessedTax | 113 | 2026-09-30 | yes | yes | yes | yes |
-| revenue | 2 | Revenues | 0 | never reported | — | — | — | — |
+| revenue | 1 | Revenues | 0 | never reported | — | — | — | — |
+| revenue | 2 | RevenueFromContractWithCustomerExcludingAssessedTax | 113 | 2026-09-30 | yes | yes | yes | yes |
 | revenue | 3 | RevenueFromContractWithCustomerIncludingAssessedTax | 0 | never reported | — | — | — | — |
 | revenue | 4 | SalesRevenueNet | 0 | never reported | — | — | — | — |
 | operating_income | 1 | OperatingIncomeLoss | 75 | 2016-09-30 | — | — | — | — |
@@ -295,19 +301,24 @@ Facts downloaded 2026-11-18T01:51:41+00:00.
 | interest_expense | 1 | InterestExpense | 197 | 2025-03-31 | yes | yes | — | — |
 | interest_expense | 2 | InterestExpenseNonoperating | 21 | 2026-09-30 | yes | yes | yes | yes |
 | interest_expense | 3 | InterestExpenseDebt | 0 | never reported | — | — | — | — |
+| interest_expense | 3 | FinanceLeaseInterestExpense | 23 | 2025-12-31 | yes | yes | yes | — |
 | interest_expense | 4 | InterestAndDebtExpense | 0 | never reported | — | — | — | — |
 | interest_expense | 5 | InterestPaidNet | 45 | 2025-12-31 | yes | yes | yes | — |
 | short_term_debt | 1 | DebtCurrent | 126 | 2026-09-30 | yes | yes | yes | yes |
 | short_term_debt | 2 | LongTermDebtCurrent | 0 | never reported | — | — | — | — |
 | short_term_debt | 2 | ShortTermBorrowings | 134 | 2026-09-30 | yes | yes | yes | yes |
 | short_term_debt | 2 | CommercialPaper | 0 | never reported | — | — | — | — |
-| total_debt | 1 | DebtLongtermAndShorttermCombinedAmount | 0 | never reported | — | — | — | — |
-| total_debt | 2 | LongTermDebtNoncurrent | 0 | never reported | — | — | — | — |
-| total_debt | 3 | LongTermDebt | 126 | 2026-09-30 | yes | yes | yes | yes |
+| total_debt | 1 | LongTermDebtNoncurrent | 0 | never reported | — | — | — | — |
+| total_debt | 2 | LongTermDebtAndCapitalLeaseObligations | 138 | 2026-09-30 | yes | yes | yes | yes |
+| total_debt | 3 | LongTermDebtAndCapitalLeaseObligations | 138 | 2026-09-30 | yes | yes | yes | yes |
+| total_debt | 3 | LongTermDebtAndCapitalLeaseObligationsCurrent | 114 | 2026-09-30 | yes | yes | yes | yes |
 | total_debt | 3 | ShortTermBorrowings | 134 | 2026-09-30 | yes | yes | yes | yes |
-| total_debt | 4 | LongTermDebtAndCapitalLeaseObligations | 138 | 2026-09-30 | yes | yes | yes | yes |
-| total_debt | 4 | LongTermDebtAndCapitalLeaseObligationsCurrent | 114 | 2026-09-30 | yes | yes | yes | yes |
+| total_debt | 4 | LongTermDebt | 126 | 2026-09-30 | yes | yes | yes | yes |
 | total_debt | 4 | ShortTermBorrowings | 134 | 2026-09-30 | yes | yes | yes | yes |
+| total_debt | 5 | DebtLongtermAndShorttermCombinedAmount | 0 | never reported | — | — | — | — |
+| finance_lease_liabilities | 1 | FinanceLeaseLiabilityCurrent | 16 | 2025-12-31 | yes | yes | yes | — |
+| finance_lease_liabilities | 1 | FinanceLeaseLiabilityNoncurrent | 16 | 2025-12-31 | yes | yes | yes | — |
+| finance_lease_liabilities | 2 | FinanceLeaseLiability | 62 | 2026-09-30 | yes | yes | yes | yes |
 | cash | 1 | CashAndCashEquivalentsAtCarryingValue | 229 | 2026-09-30 | yes | yes | yes | yes |
 | cash | 2 | CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents | 152 | 2026-09-30 | yes | yes | yes | yes |
 | short_term_investments | 1 | ShortTermInvestments | 0 | never reported | — | — | — | — |
@@ -318,6 +329,7 @@ Facts downloaded 2026-11-18T01:51:41+00:00.
 | capex | 1 | PaymentsToAcquirePropertyPlantAndEquipment | 150 | 2026-09-30 | yes | yes | yes | yes |
 | capex | 2 | PaymentsToAcquireProductiveAssets | 0 | never reported | — | — | — | — |
 | capex | 3 | PaymentsForCapitalImprovements | 0 | never reported | — | — | — | — |
+| capex | 4 | PaymentsToAcquireOtherProductiveAssets | 0 | never reported | — | — | — | — |
 | dividends | 1 | PaymentsOfDividends | 0 | never reported | — | — | — | — |
 | dividends | 2 | PaymentsOfDividendsCommonStock | 89 | 2025-12-31 | yes | yes | yes | — |
 | dividends | 3 | PaymentsOfOrdinaryDividends | 0 | never reported | — | — | — | — |
@@ -329,7 +341,7 @@ Facts downloaded 2026-11-18T01:51:41+00:00.
 | maturity_year_5 | 1 | LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFive | 17 | 2025-12-31 | yes | yes | yes | — |
 | maturity_after_year_5 | 1 | LongTermDebtMaturitiesRepaymentsOfPrincipalAfterYearFive | 0 | never reported | — | — | — | — |
 
-### Related tags reported for FY0 but in no chain (46)
+### Related tags reported for FY0 but in no chain (42)
 
 | Group | Tag | FY0 value ($m) | Period |
 |---|---|---|---|
@@ -348,15 +360,11 @@ Facts downloaded 2026-11-18T01:51:41+00:00.
 | depreciation and amortisation | PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAccumulatedDepreciationAndAmortization | 12,390 | at 2025-12-31 |
 | depreciation and amortisation | PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization | 7,843 | at 2025-12-31 |
 | depreciation and amortisation | RestructuringReserveAcceleratedDepreciation | 160 | 2025-01-01 to 2025-12-31 |
-| interest | FinanceLeaseInterestExpense | 21 | 2025-01-01 to 2025-12-31 |
 | interest | InterestCostsCapitalizedAdjustment | 32 | 2025-01-01 to 2025-12-31 |
 | interest | InterestCostsIncurred | 477 | 2025-01-01 to 2025-12-31 |
 | debt | DebtAndCapitalLeaseObligations | 5,692 | at 2025-12-31 |
 | debt | DebtInstrumentCarryingAmount | 5,457 | at 2025-12-31 |
 | debt | DebtInstrumentUnusedBorrowingCapacityAmount | 4,421 | at 2025-12-31 |
-| debt | FinanceLeaseLiability | 261 | at 2025-12-31 |
-| debt | FinanceLeaseLiabilityCurrent | 11 | at 2025-12-31 |
-| debt | FinanceLeaseLiabilityNoncurrent | 250 | at 2025-12-31 |
 | debt | FinanceLeaseLiabilityPaymentsDue | 710 | at 2025-12-31 |
 | debt | FinanceLeaseLiabilityPaymentsDueAfterYearFive | 568 | at 2025-12-31 |
 | debt | FinanceLeaseLiabilityPaymentsDueNextTwelveMonths | 30 | at 2025-12-31 |

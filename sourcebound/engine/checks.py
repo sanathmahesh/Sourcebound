@@ -30,11 +30,15 @@ class Alternative:
 
 
 def debt_alternatives(resolver: Resolver, period: Period) -> list[Alternative]:
-    """Every total_debt candidate evaluated for this period, whether or not it was the one used."""
-    spec = resolver.specs["total_debt"]
+    """Every total_debt candidate evaluated for this period, whether or not it was the one used.
+
+    Uses a scratch resolver, so candidates that were not used add nothing to the company's log.
+    """
+    scratch = Resolver(resolver.specs, resolver.index, resolver.cik)
+    spec = scratch.specs["total_debt"]
     result = []
     for candidate in spec.chain:
-        attempt = resolver.try_candidate(spec, candidate, period)
+        attempt = scratch.try_candidate(spec, candidate, period)
         value = None if attempt.failure else attempt.value
         result.append(Alternative(candidate.rank, candidate.describe(), value, attempt.failure))
     return result

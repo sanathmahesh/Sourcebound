@@ -23,19 +23,22 @@ Seeded from PLAN.md section 4.15; later items were added while building, with th
 
 ## Added in phase 1
 
-- With the starting chains (pending decisions, see the phase-1 stop report):
-  - Walmart's rank-1 total debt (DebtLongtermAndShorttermCombinedAmount) excludes its short-term
-    borrowings; the balance-sheet component sum is 2.2% (FY-2) to 26.2% (LTM) higher. Flagged by the
-    reconciliation check above 5%; not corrected.
-  - Verizon's LTM total debt is not available: no candidate pairs LongTermDebtAndCapitalLeaseObligations
-    with the current portion.
-  - Verizon's capital expenditure, and so its FCF / debt, is not available in any period: it uses
-    PaymentsToAcquireOtherProductiveAssets, which is not in the chain.
-  - Finance-lease liabilities are treated inconsistently: inside Verizon's rank-1 total and Goodyear's
-    rank-4 alternative, outside Walmart's rank-2 components and Goodyear's rank-3 total.
+- Chain revision 1 (decision D18) resolved the phase-1 chain issues. Remaining risks:
+  - Rank 1 total debt adds finance-lease liabilities from their own tags. If a company's
+    LongTermDebtNoncurrent line already includes finance leases and it also tags FinanceLeaseLiability in
+    its lease note, leases are counted twice. The reconciliation check catches this only when another
+    candidate is reported for the same date.
+  - Rank 2 pairs a combined debt-and-lease tag with short-term debt. If short-term debt comes from
+    LongTermDebtCurrent alone, the current portion of finance leases may be missing (usually small).
+  - At 30 September 2026 Verizon tags its whole "debt maturing within one year" line as LongTermDebtCurrent,
+    so its short-term borrowings are logged as "assumed zero" although they sit inside that figure; the
+    total is right.
+  - DebtLongtermAndShorttermCombinedAmount (now rank 5) varies in scope by company. Walmart's
+    reconciliation warns against it in every period; that is expected and stays visible.
 - The derived operating income (pre-tax income plus interest expense) includes non-operating items such as
   other income and expense, so it differs from a true operating line.
-- Interest-expense tags differ in scope: InterestExpenseDebt (Walmart) excludes finance-lease interest.
+- InterestExpense and InterestExpenseNonoperating are assumed to include finance-lease interest; this is
+  not checked company by company.
 - Exact date matching means a fact with irregular dates is reported as not available rather than matched.
 - Test fixtures are trimmed (chain tags only, periods from 2021) to keep the repository small; the full
   responses are re-creatable from EDGAR.

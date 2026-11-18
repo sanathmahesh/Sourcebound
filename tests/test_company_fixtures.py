@@ -2,9 +2,9 @@
 
 Every expected figure below was read directly from the captured JSON in tests/fixtures/edgar/, not from
 the engine, and carries the accession number of the filing that reported it. Values are in USD.
-These tests pin the behaviour of the chains in config/concepts.yaml as first written; where a test pins a
-known weakness of a chain (marked CHAIN ISSUE), changing the chain needs the author's approval and an
-update here.
+These tests pin the behaviour of the chains in config/concepts.yaml as revised and approved on
+17 November 2026 (decision D18): finance-lease liabilities count as debt, balance-sheet components are
+preferred for total debt, Verizon's capex tag is in the chain, and total revenue ranks first.
 """
 
 from datetime import date
@@ -70,29 +70,42 @@ def test_wmt_fy0_flows(wmt):
     assert da.fallback_rank == 3
 
 
-def test_wmt_ltm_interest_and_cfo(wmt):
-    interest = wmt.values["interest_expense"]["LTM"]
-    # 2,318 (FY0, 0000104169-26-000055) + 711 (YTD, 0000104169-26-000154) - 1,170 (prior YTD, 0000104169-26-000154)
-    assert interest.value == (2_318 + 711 - 1_170) * M
-    assert interest.candidate == "InterestExpenseDebt"
-    assert accessions(interest) == ["0000104169-26-000055", "0000104169-26-000154", "0000104169-26-000154"]
+def test_wmt_interest_includes_finance_lease_interest(wmt):
+    fy0 = wmt.values["interest_expense"]["FY0"]
+    # InterestExpenseDebt 2,318 + FinanceLeaseInterestExpense 383, both accn 0000104169-26-000055
+    assert (fy0.value, fy0.fallback_rank) == ((2_318 + 383) * M, 3)
+    ltm = wmt.values["interest_expense"]["LTM"]
+    # Debt interest: 2,318 (0000104169-26-000055) + 711 - 1,170 (both 0000104169-26-000154)
+    # Lease interest: 383 (0000104169-26-000055) + 251 - 236 (both 0000104169-26-000154)
+    assert ltm.value == ((2_318 + 711 - 1_170) + (383 + 251 - 236)) * M
+    assert {i.tag for i in ltm.inputs} == {"InterestExpenseDebt", "FinanceLeaseInterestExpense"}
+
+
+def test_wmt_ltm_cfo(wmt):
     cfo = wmt.values["cfo"]["LTM"]
     # 41,565 (0000104169-26-000055) + 19,710 (0000104169-26-000154) - 18,352 (0000104169-26-000154)
     assert cfo.value == (41_565 + 19_710 - 18_352) * M
 
 
-def test_wmt_total_debt_rank_one_excludes_short_term_borrowings(wmt):
-    """CHAIN ISSUE: rank 1 DebtLongtermAndShorttermCombinedAmount equals Walmart's long-term debt including
-    the current portion, but not its short-term borrowings. The reconciliation check must flag it."""
+def test_wmt_total_debt_includes_short_term_borrowings_and_finance_leases(wmt):
     debt = wmt.values["total_debt"]["FY0"]
-    assert (debt.value, debt.fallback_rank) == (38_166 * M, 1)  # accn 0000104169-26-000154
-    # Rank 2 would be 34,624 + 3,542 + 6,596 = 44,762 (accn 0000104169-26-000154), 14.7% higher.
+    # LongTermDebtNoncurrent 34,624 + LongTermDebtCurrent 3,542 + ShortTermBorrowings 6,596
+    # + FinanceLeaseLiabilityCurrent 856 + FinanceLeaseLiabilityNoncurrent 5,905, all accn 0000104169-26-000154
+    assert (debt.value, debt.fallback_rank) == ((34_624 + 3_542 + 6_596 + 856 + 5_905) * M, 1)
+    ltm = wmt.values["total_debt"]["LTM"]
+    # At 31 Jul 2026, all accn 0000104169-26-000154: 36,462 + 3,470 + 10,479 + 880 + 5,952
+    assert (ltm.value, ltm.fallback_rank) == ((36_462 + 3_470 + 10_479 + 880 + 5_952) * M, 1)
+
+
+def test_wmt_reconciliation_still_flags_the_narrow_combined_tag(wmt):
+    """DebtLongtermAndShorttermCombinedAmount (now rank 5) is 38,166 at FY0 (accn 0000104169-26-000154):
+    long-term debt only. The check keeps showing the gap to the reviewer."""
     warnings = [
         e
         for e in wmt.log
         if e.kind == "reconciliation" and e.severity == "warning" and e.concept == "total_debt" and e.period == "FY0"
     ]
-    assert any("44,762" in e.message for e in warnings)
+    assert any("38,166" in e.message for e in warnings)
 
 
 # ----- Verizon: December year-end ------------------------------------------------------------------
@@ -105,21 +118,27 @@ def vz(specs):
 
 def test_vz_fy0_debt(vz):
     debt = vz.values["total_debt"]["FY0"]
-    assert (debt.value, debt.fallback_rank) == (158_150 * M, 1)  # accn 0000732712-26-000007
+    # LongTermDebtAndCapitalLeaseObligations 139,532 (accn 0000732712-26-000052)
+    # + DebtCurrent 18,618 (accn 0000732712-26-000007)
+    assert (debt.value, debt.fallback_rank) == ((139_532 + 18_618) * M, 2)
 
 
-def test_vz_ltm_debt_not_available_under_current_chain(vz):
-    """CHAIN ISSUE: at 30 Sep 2026 Verizon tags LongTermDebtCurrent and LongTermDebtAndCapitalLeaseObligations,
-    a pair no current candidate covers. Reported as not available, never estimated."""
+def test_vz_ltm_debt(vz):
     debt = vz.values["total_debt"]["LTM"]
-    assert debt.status == "not_available"
-    assert vz.ratios["debt_to_ebitda"]["LTM"].status == "not_available"
+    # At 30 Sep 2026, accn 0000732712-26-000052: LongTermDebtAndCapitalLeaseObligations 142,344
+    # + LongTermDebtCurrent 23,889 (Verizon's whole "debt maturing within one year" line)
+    assert (debt.value, debt.fallback_rank) == ((142_344 + 23_889) * M, 2)
+    assert vz.ratios["debt_to_ebitda"]["LTM"].status == "ok"
 
 
-def test_vz_capex_not_available_under_current_chain(vz):
-    """CHAIN ISSUE: Verizon tags capital expenditure as PaymentsToAcquireOtherProductiveAssets."""
-    assert vz.values["capex"]["FY0"].status == "not_available"
-    assert vz.ratios["fcf_to_debt"]["FY0"].status == "not_available"
+def test_vz_capex(vz):
+    fy0 = vz.values["capex"]["FY0"]
+    # PaymentsToAcquireOtherProductiveAssets 17,011, accn 0000732712-26-000007
+    assert (fy0.value, fy0.fallback_rank) == (17_011 * M, 4)
+    ltm = vz.values["capex"]["LTM"]
+    # 17,011 (0000732712-26-000007) + 11,926 (0000732712-26-000052) - 12,263 (0000732712-26-000052)
+    assert ltm.value == (17_011 + 11_926 - 12_263) * M
+    assert vz.ratios["fcf_to_debt"]["FY0"].status == "ok"
 
 
 def test_vz_interest_tag_changes_between_years(vz):
@@ -163,17 +182,23 @@ def test_gt_restatement_uses_latest_filing_and_is_logged(gt):
 
 def test_gt_total_debt_and_ratios_fy0(gt):
     debt = gt.values["total_debt"]["FY0"]
-    # LongTermDebt 5,431 + ShortTermBorrowings 506 (both latest in accn 0001628280-26-070703)
-    assert (debt.value, debt.fallback_rank) == ((5_431 + 506) * M, 3)
+    # LongTermDebtAndCapitalLeaseObligations 5,328 + DebtCurrent 870 (both latest in accn 0001628280-26-070703)
+    assert (debt.value, debt.fallback_rank) == ((5_328 + 870) * M, 2)
     ebitda = (-133 + 445 + 1_045) * M  # operating income (derived) + D&A, accn 0001628280-26-006708
     assert gt.ratios["ebitda"]["FY0"].value == ebitda
-    assert gt.ratios["debt_to_ebitda"]["FY0"].value == pytest.approx((5_431 + 506) * M / ebitda)
+    assert gt.ratios["debt_to_ebitda"]["FY0"].value == pytest.approx(6_198 * M / ebitda)
     assert gt.ratios["interest_coverage"]["FY0"].value == pytest.approx(ebitda / (445 * M))
     # cfo 796 - capex 826, accn 0001628280-26-006708
-    assert gt.ratios["fcf_to_debt"]["FY0"].value == pytest.approx((796 - 826) / (5_431 + 506) * 100)
+    assert gt.ratios["fcf_to_debt"]["FY0"].value == pytest.approx((796 - 826) / 6_198 * 100)
     # cash 801 (accn 0001628280-26-070703); no short-term investments tag, assumed zero
-    assert gt.ratios["net_leverage"]["FY0"].value == pytest.approx((5_937 - 801) * M / ebitda)
+    assert gt.ratios["net_leverage"]["FY0"].value == pytest.approx((6_198 - 801) * M / ebitda)
     assert gt.values["short_term_investments"]["FY0"].status == "assumed_zero"
+
+
+def test_gt_ltm_debt(gt):
+    debt = gt.values["total_debt"]["LTM"]
+    # At 30 Sep 2026, accn 0001628280-26-070703: LongTermDebtAndCapitalLeaseObligations 6,030 + DebtCurrent 1,339
+    assert (debt.value, debt.fallback_rank) == ((6_030 + 1_339) * M, 2)
 
 
 def test_gt_ltm_cfo_with_negative_year_to_date(gt):

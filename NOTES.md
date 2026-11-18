@@ -156,8 +156,11 @@ A: No. Periods are anchored on the 10-K's report date and found by dates, so Jan
   leases, pensions and guarantees are excluded (assumption 3).
 - **Commercial paper**: short-term unsecured IOUs large companies sell to investors, usually for under
   270 days.
-- **Finance lease**: a lease that is economically a purchase financed by debt. Companies present finance
-  lease liabilities either inside their debt lines or separately; see the open question below.
+- **Finance lease**: a lease that is economically a purchase financed by debt, like leasing a car you
+  will end up owning. Companies present finance-lease liabilities either inside their debt lines (Verizon,
+  Goodyear) or on separate lines (Walmart, $6,761m at 31 January 2026). Sourcebound counts them as debt for
+  every company (decision D18), as credit analysts normally do. Operating leases (ordinary rentals) are not
+  counted.
 - **Cash and cash equivalents**: cash and very short-term, very safe investments. Restricted cash
   (set aside for a purpose) is different and is flagged when included.
 - **Short-term investments**: liquid securities held for less than a year; counted with cash for net
@@ -271,9 +274,17 @@ sign is information.
 
 - **Debt reconciliation**: total debt uses one candidate, but every other candidate the company reports
   for that date is computed too. If any differs by more than 5%, a warning is raised. No value changes.
-  On real data this caught a real problem: for Walmart, rank 1 `DebtLongtermAndShorttermCombinedAmount`
-  ($38,166m at 31 Jan 2026) equals its long-term debt including the current portion, *without* its
-  $6,596m of short-term borrowings. Rank 2 (balance-sheet components) gives $44,762m.
+  On real data this caught a real problem: for Walmart, the plan's starting rank-1 tag
+  `DebtLongtermAndShorttermCombinedAmount` ($38,166m at 31 Jan 2026) turned out to be long-term debt
+  only, *without* $6,596m of short-term borrowings. After the approved chain revision (D18) Walmart's
+  debt comes from its balance-sheet lines plus finance leases ($51,523m), and the check still shows the
+  gap to the narrow tag, now ranked last.
+
+**Q: Tell me about a time your validation caught a data problem.**
+A: The first run's reconciliation flagged Walmart's debt: the top-ranked XBRL tag was 15–30% below the sum
+of the balance-sheet lines because it left out short-term borrowings. I didn't patch it silently; I
+reported it with the evidence, proposed a chain change, and changed it only after approval, with the
+tests updated to pin the new behaviour.
 - **LongTermDebt scope**: `LongTermDebt` should include the current portion but companies differ. When all
   three tags exist for a date, the report records which reading the numbers support (Walmart's includes
   it: 38,166 = 34,624 + 3,542).

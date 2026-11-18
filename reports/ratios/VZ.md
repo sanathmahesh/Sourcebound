@@ -3,7 +3,7 @@
 Phase-1 ratio check. Every ratio is followed by the XBRL facts it used. Values in US$ millions.
 
 - CIK: 732712
-- Company facts downloaded from EDGAR: 2026-11-18T01:51:40+00:00; report generated 2026-11-18 02:06 UTC
+- Company facts downloaded from EDGAR: 2026-11-18T01:51:40+00:00; report generated 2026-11-18 02:25 UTC
 - Latest 10-K: 10-K for the period ended 2025-12-31, filed 2026-02-17, accession 0000732712-26-000007 ([EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm))
 - Latest 10-Q: 10-Q for the period ended 2026-09-30, filed 2026-10-29, accession 0000732712-26-000052 ([EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm))
 
@@ -23,18 +23,14 @@ Phase-1 ratio check. Every ratio is followed by the XBRL facts it used. Values i
 | Metric | FY-2 | FY-1 | FY0 | LTM |
 |---|---|---|---|---|
 | EBITDA | $40,501m | $46,578m | $47,608m | $48,589m |
-| Debt / EBITDA | 3.72x | 3.09x | 3.32x | not available |
-| Net leverage | 3.67x | 3.00x | 2.92x | not available |
+| Debt / EBITDA | 3.72x | 3.09x | 3.32x | 3.42x |
+| Net leverage | 3.67x | 3.00x | 2.92x | 3.33x |
 | EBITDA / interest | 7.33x | 7.01x | 7.11x | 6.36x |
-| FCF / debt | not available | not available | not available | not available |
+| FCF / debt | 12.4% | 13.8% | 12.7% | 13.5% |
 
-## Warnings (5)
+## Warnings (0)
 
-- **capex FY-2**: not available: rank 1 PaymentsToAcquirePropertyPlantAndEquipment: PaymentsToAcquirePropertyPlantAndEquipment not reported for 2023-01-01 to 2023-12-31; rank 2 PaymentsToAcquireProductiveAssets: PaymentsToAcquireProductiveAssets not reported for 2023-01-01 to 2023-12-31; rank 3 PaymentsForCapitalImprovements: PaymentsForCapitalImprovements not reported for 2023-01-01 to 2023-12-31
-- **capex FY-1**: not available: rank 1 PaymentsToAcquirePropertyPlantAndEquipment: PaymentsToAcquirePropertyPlantAndEquipment not reported for 2024-01-01 to 2024-12-31; rank 2 PaymentsToAcquireProductiveAssets: PaymentsToAcquireProductiveAssets not reported for 2024-01-01 to 2024-12-31; rank 3 PaymentsForCapitalImprovements: PaymentsForCapitalImprovements not reported for 2024-01-01 to 2024-12-31
-- **capex FY0**: not available: rank 1 PaymentsToAcquirePropertyPlantAndEquipment: PaymentsToAcquirePropertyPlantAndEquipment not reported for 2025-01-01 to 2025-12-31; rank 2 PaymentsToAcquireProductiveAssets: PaymentsToAcquireProductiveAssets not reported for 2025-01-01 to 2025-12-31; rank 3 PaymentsForCapitalImprovements: PaymentsForCapitalImprovements not reported for 2025-01-01 to 2025-12-31
-- **total_debt LTM**: not available: rank 1 DebtLongtermAndShorttermCombinedAmount: DebtLongtermAndShorttermCombinedAmount not reported at 2026-09-30; rank 2 LongTermDebtNoncurrent + [short_term_debt]: LongTermDebtNoncurrent not reported at 2026-09-30; rank 3 LongTermDebt + ShortTermBorrowings: LongTermDebt not reported at 2026-09-30; rank 4 LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings: LongTermDebtAndCapitalLeaseObligationsCurrent not reported at 2026-09-30
-- **capex LTM**: not available: rank 1 PaymentsToAcquirePropertyPlantAndEquipment: PaymentsToAcquirePropertyPlantAndEquipment not reported for 2025-01-01 to 2025-12-31; rank 2 PaymentsToAcquireProductiveAssets: PaymentsToAcquireProductiveAssets not reported for 2025-01-01 to 2025-12-31; rank 3 PaymentsForCapitalImprovements: PaymentsForCapitalImprovements not reported for 2025-01-01 to 2025-12-31
+None.
 
 ## Ratios with their source facts
 
@@ -45,7 +41,9 @@ Phase-1 ratio check. Every ratio is followed by the XBRL facts it used. Values i
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
-| total_debt | DebtLongtermAndShorttermCombinedAmount | 1 | 150,674 | at 2023-12-31 (balance sheet) | 10-K | 0000732712-25-000006 | 2025-02-12 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271225000006/0000732712-25-000006-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 137,701 | at 2023-12-31 (balance sheet) | 10-K | 0000732712-25-000006 | 2025-02-12 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271225000006/0000732712-25-000006-index.htm) |
+| total_debt | LongTermDebtCurrent | 2 | 12,973 | at 2023-12-31 (balance sheet) | 10-K | 0000732712-25-000006 | 2025-02-12 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271225000006/0000732712-25-000006-index.htm) |
+| total_debt | ShortTermBorrowings | 2 | 0 | at 2023-12-31 (balance sheet) | 10-K | 0000732712-25-000006 | 2025-02-12 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271225000006/0000732712-25-000006-index.htm) |
 | operating_income | OperatingIncomeLoss | 1 | 22,877 | 2023-01-01 to 2023-12-31 (FY-2) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
 | d_and_a | DepreciationAndAmortization | 2 | 17,624 | 2023-01-01 to 2023-12-31 (FY-2) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
 
@@ -56,7 +54,8 @@ Phase-1 ratio check. Every ratio is followed by the XBRL facts it used. Values i
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
-| total_debt | DebtLongtermAndShorttermCombinedAmount | 1 | 144,014 | at 2024-12-31 (balance sheet) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 121,381 | at 2024-12-31 (balance sheet) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
+| total_debt | DebtCurrent | 1 | 22,633 | at 2024-12-31 (balance sheet) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
 | operating_income | OperatingIncomeLoss | 1 | 28,686 | 2024-01-01 to 2024-12-31 (FY-1) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
 | d_and_a | DepreciationAndAmortization | 2 | 17,892 | 2024-01-01 to 2024-12-31 (FY-1) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
 
@@ -67,19 +66,20 @@ Phase-1 ratio check. Every ratio is followed by the XBRL facts it used. Values i
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
-| total_debt | DebtLongtermAndShorttermCombinedAmount | 1 | 158,150 | at 2025-12-31 (balance sheet) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 139,532 | at 2025-12-31 (balance sheet) | 10-Q | 0000732712-26-000052 | 2026-10-29 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm) |
+| total_debt | DebtCurrent | 1 | 18,618 | at 2025-12-31 (balance sheet) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
 | operating_income | OperatingIncomeLoss | 1 | 29,259 | 2025-01-01 to 2025-12-31 (FY0) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
 | d_and_a | DepreciationAndAmortization | 2 | 18,349 | 2025-01-01 to 2025-12-31 (FY0) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
 
 ### Debt / EBITDA — LTM
 
 **Formula:** total_debt / EBITDA  
-**Inputs ($m):** total_debt n/a · operating_income 29,075 · d_and_a 19,514 → **not available**  
-**Status:** not available: not available: no value for total_debt  
+**Inputs ($m):** total_debt 166,233 · operating_income 29,075 · d_and_a 19,514 → **3.42x**  
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
-| total_debt | — | — | **not available** | — | — | — | — | rank 1 DebtLongtermAndShorttermCombinedAmount: DebtLongtermAndShorttermCombinedAmount not reported at 2026-09-30; rank 2 LongTermDebtNoncurrent + [short_term_debt]: LongTermDebtNoncurrent not reported at 2026-09-30; rank 3 LongTermDebt + ShortTermBorrowings: LongTermDebt not reported at 2026-09-30; rank 4 LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings: LongTermDebtAndCapitalLeaseObligationsCurrent not reported at 2026-09-30 |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 142,344 | at 2026-09-30 (balance sheet) | 10-Q | 0000732712-26-000052 | 2026-10-29 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm) |
+| total_debt | LongTermDebtCurrent | 2 | 23,889 | at 2026-09-30 (balance sheet) | 10-Q | 0000732712-26-000052 | 2026-10-29 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm) |
 | operating_income | OperatingIncomeLoss | 1 | 29,259 | 2025-01-01 to 2025-12-31 (FY0) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
 | operating_income | OperatingIncomeLoss | 1 | 24,071 | 2026-01-01 to 2026-09-30 (current year-to-date) | 10-Q | 0000732712-26-000052 | 2026-10-29 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm) |
 | operating_income | OperatingIncomeLoss | 1 | −24,255 | 2025-01-01 to 2025-09-30 (prior-year year-to-date, subtracted) | 10-Q | 0000732712-26-000052 | 2026-10-29 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm) |
@@ -94,7 +94,9 @@ Phase-1 ratio check. Every ratio is followed by the XBRL facts it used. Values i
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
-| total_debt | DebtLongtermAndShorttermCombinedAmount | 1 | 150,674 | at 2023-12-31 (balance sheet) | 10-K | 0000732712-25-000006 | 2025-02-12 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271225000006/0000732712-25-000006-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 137,701 | at 2023-12-31 (balance sheet) | 10-K | 0000732712-25-000006 | 2025-02-12 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271225000006/0000732712-25-000006-index.htm) |
+| total_debt | LongTermDebtCurrent | 2 | 12,973 | at 2023-12-31 (balance sheet) | 10-K | 0000732712-25-000006 | 2025-02-12 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271225000006/0000732712-25-000006-index.htm) |
+| total_debt | ShortTermBorrowings | 2 | 0 | at 2023-12-31 (balance sheet) | 10-K | 0000732712-25-000006 | 2025-02-12 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271225000006/0000732712-25-000006-index.htm) |
 | cash | CashAndCashEquivalentsAtCarryingValue | 1 | 2,065 | at 2023-12-31 (balance sheet) | 10-K | 0000732712-25-000006 | 2025-02-12 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271225000006/0000732712-25-000006-index.htm) |
 | short_term_investments | — | — | 0 (assumed zero: not reported) | — | — | — | — | — |
 | operating_income | OperatingIncomeLoss | 1 | 22,877 | 2023-01-01 to 2023-12-31 (FY-2) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
@@ -107,7 +109,8 @@ Phase-1 ratio check. Every ratio is followed by the XBRL facts it used. Values i
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
-| total_debt | DebtLongtermAndShorttermCombinedAmount | 1 | 144,014 | at 2024-12-31 (balance sheet) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 121,381 | at 2024-12-31 (balance sheet) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
+| total_debt | DebtCurrent | 1 | 22,633 | at 2024-12-31 (balance sheet) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
 | cash | CashAndCashEquivalentsAtCarryingValue | 1 | 4,194 | at 2024-12-31 (balance sheet) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
 | short_term_investments | — | — | 0 (assumed zero: not reported) | — | — | — | — | — |
 | operating_income | OperatingIncomeLoss | 1 | 28,686 | 2024-01-01 to 2024-12-31 (FY-1) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
@@ -120,7 +123,8 @@ Phase-1 ratio check. Every ratio is followed by the XBRL facts it used. Values i
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
-| total_debt | DebtLongtermAndShorttermCombinedAmount | 1 | 158,150 | at 2025-12-31 (balance sheet) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 139,532 | at 2025-12-31 (balance sheet) | 10-Q | 0000732712-26-000052 | 2026-10-29 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm) |
+| total_debt | DebtCurrent | 1 | 18,618 | at 2025-12-31 (balance sheet) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
 | cash | CashAndCashEquivalentsAtCarryingValue | 1 | 19,048 | at 2025-12-31 (balance sheet) | 10-Q | 0000732712-26-000052 | 2026-10-29 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm) |
 | short_term_investments | — | — | 0 (assumed zero: not reported) | — | — | — | — | — |
 | operating_income | OperatingIncomeLoss | 1 | 29,259 | 2025-01-01 to 2025-12-31 (FY0) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
@@ -129,12 +133,12 @@ Phase-1 ratio check. Every ratio is followed by the XBRL facts it used. Values i
 ### Net leverage — LTM
 
 **Formula:** (total_debt - cash - short_term_investments) / EBITDA  
-**Inputs ($m):** total_debt n/a · cash 4,495 · short_term_investments 0 · operating_income 29,075 · d_and_a 19,514 → **not available**  
-**Status:** not available: not available: no value for total_debt  
+**Inputs ($m):** total_debt 166,233 · cash 4,495 · short_term_investments 0 · operating_income 29,075 · d_and_a 19,514 → **3.33x**  
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
-| total_debt | — | — | **not available** | — | — | — | — | rank 1 DebtLongtermAndShorttermCombinedAmount: DebtLongtermAndShorttermCombinedAmount not reported at 2026-09-30; rank 2 LongTermDebtNoncurrent + [short_term_debt]: LongTermDebtNoncurrent not reported at 2026-09-30; rank 3 LongTermDebt + ShortTermBorrowings: LongTermDebt not reported at 2026-09-30; rank 4 LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings: LongTermDebtAndCapitalLeaseObligationsCurrent not reported at 2026-09-30 |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 142,344 | at 2026-09-30 (balance sheet) | 10-Q | 0000732712-26-000052 | 2026-10-29 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm) |
+| total_debt | LongTermDebtCurrent | 2 | 23,889 | at 2026-09-30 (balance sheet) | 10-Q | 0000732712-26-000052 | 2026-10-29 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm) |
 | cash | CashAndCashEquivalentsAtCarryingValue | 1 | 4,495 | at 2026-09-30 (balance sheet) | 10-Q | 0000732712-26-000052 | 2026-10-29 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm) |
 | short_term_investments | — | — | 0 (assumed zero: not reported) | — | — | — | — | — |
 | operating_income | OperatingIncomeLoss | 1 | 29,259 | 2025-01-01 to 2025-12-31 (FY0) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
@@ -197,52 +201,55 @@ Phase-1 ratio check. Every ratio is followed by the XBRL facts it used. Values i
 ### FCF / debt — FY-2
 
 **Formula:** (cfo - capex) / total_debt  
-**Inputs ($m):** cfo 37,475 · capex n/a · total_debt 150,674 → **not available**  
-**Status:** not available: not available: no value for capex  
+**Inputs ($m):** cfo 37,475 · capex 18,767 · total_debt 150,674 → **12.4%**  
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
 | cfo | NetCashProvidedByUsedInOperatingActivities | 1 | 37,475 | 2023-01-01 to 2023-12-31 (FY-2) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
-| capex | — | — | **not available** | — | — | — | — | rank 1 PaymentsToAcquirePropertyPlantAndEquipment: PaymentsToAcquirePropertyPlantAndEquipment not reported for 2023-01-01 to 2023-12-31; rank 2 PaymentsToAcquireProductiveAssets: PaymentsToAcquireProductiveAssets not reported for 2023-01-01 to 2023-12-31; rank 3 PaymentsForCapitalImprovements: PaymentsForCapitalImprovements not reported for 2023-01-01 to 2023-12-31 |
-| total_debt | DebtLongtermAndShorttermCombinedAmount | 1 | 150,674 | at 2023-12-31 (balance sheet) | 10-K | 0000732712-25-000006 | 2025-02-12 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271225000006/0000732712-25-000006-index.htm) |
+| capex | PaymentsToAcquireOtherProductiveAssets | 4 | 18,767 | 2023-01-01 to 2023-12-31 (FY-2) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 137,701 | at 2023-12-31 (balance sheet) | 10-K | 0000732712-25-000006 | 2025-02-12 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271225000006/0000732712-25-000006-index.htm) |
+| total_debt | LongTermDebtCurrent | 2 | 12,973 | at 2023-12-31 (balance sheet) | 10-K | 0000732712-25-000006 | 2025-02-12 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271225000006/0000732712-25-000006-index.htm) |
+| total_debt | ShortTermBorrowings | 2 | 0 | at 2023-12-31 (balance sheet) | 10-K | 0000732712-25-000006 | 2025-02-12 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271225000006/0000732712-25-000006-index.htm) |
 
 ### FCF / debt — FY-1
 
 **Formula:** (cfo - capex) / total_debt  
-**Inputs ($m):** cfo 36,912 · capex n/a · total_debt 144,014 → **not available**  
-**Status:** not available: not available: no value for capex  
+**Inputs ($m):** cfo 36,912 · capex 17,090 · total_debt 144,014 → **13.8%**  
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
 | cfo | NetCashProvidedByUsedInOperatingActivities | 1 | 36,912 | 2024-01-01 to 2024-12-31 (FY-1) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
-| capex | — | — | **not available** | — | — | — | — | rank 1 PaymentsToAcquirePropertyPlantAndEquipment: PaymentsToAcquirePropertyPlantAndEquipment not reported for 2024-01-01 to 2024-12-31; rank 2 PaymentsToAcquireProductiveAssets: PaymentsToAcquireProductiveAssets not reported for 2024-01-01 to 2024-12-31; rank 3 PaymentsForCapitalImprovements: PaymentsForCapitalImprovements not reported for 2024-01-01 to 2024-12-31 |
-| total_debt | DebtLongtermAndShorttermCombinedAmount | 1 | 144,014 | at 2024-12-31 (balance sheet) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
+| capex | PaymentsToAcquireOtherProductiveAssets | 4 | 17,090 | 2024-01-01 to 2024-12-31 (FY-1) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 121,381 | at 2024-12-31 (balance sheet) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
+| total_debt | DebtCurrent | 1 | 22,633 | at 2024-12-31 (balance sheet) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
 
 ### FCF / debt — FY0
 
 **Formula:** (cfo - capex) / total_debt  
-**Inputs ($m):** cfo 37,137 · capex n/a · total_debt 158,150 → **not available**  
-**Status:** not available: not available: no value for capex  
+**Inputs ($m):** cfo 37,137 · capex 17,011 · total_debt 158,150 → **12.7%**  
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
 | cfo | NetCashProvidedByUsedInOperatingActivities | 1 | 37,137 | 2025-01-01 to 2025-12-31 (FY0) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
-| capex | — | — | **not available** | — | — | — | — | rank 1 PaymentsToAcquirePropertyPlantAndEquipment: PaymentsToAcquirePropertyPlantAndEquipment not reported for 2025-01-01 to 2025-12-31; rank 2 PaymentsToAcquireProductiveAssets: PaymentsToAcquireProductiveAssets not reported for 2025-01-01 to 2025-12-31; rank 3 PaymentsForCapitalImprovements: PaymentsForCapitalImprovements not reported for 2025-01-01 to 2025-12-31 |
-| total_debt | DebtLongtermAndShorttermCombinedAmount | 1 | 158,150 | at 2025-12-31 (balance sheet) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
+| capex | PaymentsToAcquireOtherProductiveAssets | 4 | 17,011 | 2025-01-01 to 2025-12-31 (FY0) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 139,532 | at 2025-12-31 (balance sheet) | 10-Q | 0000732712-26-000052 | 2026-10-29 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm) |
+| total_debt | DebtCurrent | 1 | 18,618 | at 2025-12-31 (balance sheet) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
 
 ### FCF / debt — LTM
 
 **Formula:** (cfo - capex) / total_debt  
-**Inputs ($m):** cfo 39,050 · capex n/a · total_debt n/a → **not available**  
-**Status:** not available: not available: no value for capex, total_debt  
+**Inputs ($m):** cfo 39,050 · capex 16,674 · total_debt 166,233 → **13.5%**  
 
 | Concept | Tag | Rank | Value ($m) | Period | Form | Accession | Filed | Link |
 |---|---|---|---|---|---|---|---|---|
 | cfo | NetCashProvidedByUsedInOperatingActivities | 1 | 37,137 | 2025-01-01 to 2025-12-31 (FY0) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
 | cfo | NetCashProvidedByUsedInOperatingActivities | 1 | 29,936 | 2026-01-01 to 2026-09-30 (current year-to-date) | 10-Q | 0000732712-26-000052 | 2026-10-29 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm) |
 | cfo | NetCashProvidedByUsedInOperatingActivities | 1 | −28,023 | 2025-01-01 to 2025-09-30 (prior-year year-to-date, subtracted) | 10-Q | 0000732712-26-000052 | 2026-10-29 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm) |
-| capex | — | — | **not available** | — | — | — | — | rank 1 PaymentsToAcquirePropertyPlantAndEquipment: PaymentsToAcquirePropertyPlantAndEquipment not reported for 2025-01-01 to 2025-12-31; rank 2 PaymentsToAcquireProductiveAssets: PaymentsToAcquireProductiveAssets not reported for 2025-01-01 to 2025-12-31; rank 3 PaymentsForCapitalImprovements: PaymentsForCapitalImprovements not reported for 2025-01-01 to 2025-12-31 |
-| total_debt | — | — | **not available** | — | — | — | — | rank 1 DebtLongtermAndShorttermCombinedAmount: DebtLongtermAndShorttermCombinedAmount not reported at 2026-09-30; rank 2 LongTermDebtNoncurrent + [short_term_debt]: LongTermDebtNoncurrent not reported at 2026-09-30; rank 3 LongTermDebt + ShortTermBorrowings: LongTermDebt not reported at 2026-09-30; rank 4 LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings: LongTermDebtAndCapitalLeaseObligationsCurrent not reported at 2026-09-30 |
+| capex | PaymentsToAcquireOtherProductiveAssets | 4 | 17,011 | 2025-01-01 to 2025-12-31 (FY0) | 10-K | 0000732712-26-000007 | 2026-02-17 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm) |
+| capex | PaymentsToAcquireOtherProductiveAssets | 4 | 11,926 | 2026-01-01 to 2026-09-30 (current year-to-date) | 10-Q | 0000732712-26-000052 | 2026-10-29 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm) |
+| capex | PaymentsToAcquireOtherProductiveAssets | 4 | −12,263 | 2025-01-01 to 2025-09-30 (prior-year year-to-date, subtracted) | 10-Q | 0000732712-26-000052 | 2026-10-29 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm) |
+| total_debt | LongTermDebtAndCapitalLeaseObligations | 2 | 142,344 | at 2026-09-30 (balance sheet) | 10-Q | 0000732712-26-000052 | 2026-10-29 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm) |
+| total_debt | LongTermDebtCurrent | 2 | 23,889 | at 2026-09-30 (balance sheet) | 10-Q | 0000732712-26-000052 | 2026-10-29 | [EDGAR](https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/0000732712-26-000052-index.htm) |
 
 ## Debt reconciliation
 
@@ -250,47 +257,54 @@ Every total-debt candidate the company reports, for comparison with the one used
 
 | Period | Rank | Candidate | Value ($m) |
 |---|---|---|---|
-| FY-2 | 1 ✔ | DebtLongtermAndShorttermCombinedAmount | 150,674 |
-| FY-2 | 2 | LongTermDebtNoncurrent + [short_term_debt] | not usable: LongTermDebtNoncurrent not reported at 2023-12-31 |
-| FY-2 | 3 | LongTermDebt + ShortTermBorrowings | not usable: LongTermDebt not reported at 2023-12-31 |
-| FY-2 | 4 | LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings | 150,674 |
-| FY-1 | 1 ✔ | DebtLongtermAndShorttermCombinedAmount | 144,014 |
-| FY-1 | 2 | LongTermDebtNoncurrent + [short_term_debt] | not usable: LongTermDebtNoncurrent not reported at 2024-12-31 |
-| FY-1 | 3 | LongTermDebt + ShortTermBorrowings | not usable: LongTermDebt not reported at 2024-12-31 |
-| FY-1 | 4 | LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings | 144,014 |
-| FY0 | 1 ✔ | DebtLongtermAndShorttermCombinedAmount | 158,150 |
-| FY0 | 2 | LongTermDebtNoncurrent + [short_term_debt] | not usable: LongTermDebtNoncurrent not reported at 2025-12-31 |
-| FY0 | 3 | LongTermDebt + ShortTermBorrowings | not usable: LongTermDebt not reported at 2025-12-31 |
-| FY0 | 4 | LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings | 158,150 |
-| LTM | 1 | DebtLongtermAndShorttermCombinedAmount | not usable: DebtLongtermAndShorttermCombinedAmount not reported at 2026-09-30 |
-| LTM | 2 | LongTermDebtNoncurrent + [short_term_debt] | not usable: LongTermDebtNoncurrent not reported at 2026-09-30 |
-| LTM | 3 | LongTermDebt + ShortTermBorrowings | not usable: LongTermDebt not reported at 2026-09-30 |
-| LTM | 4 | LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings | not usable: LongTermDebtAndCapitalLeaseObligationsCurrent not reported at 2026-09-30 |
+| FY-2 | 1 | LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities] | not usable: LongTermDebtNoncurrent not reported at 2023-12-31 |
+| FY-2 | 2 ✔ | LongTermDebtAndCapitalLeaseObligations + [short_term_debt] | 150,674 |
+| FY-2 | 3 | LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings | 150,674 |
+| FY-2 | 4 | LongTermDebt + ShortTermBorrowings + [finance_lease_liabilities] | not usable: LongTermDebt not reported at 2023-12-31 |
+| FY-2 | 5 | DebtLongtermAndShorttermCombinedAmount | 150,674 |
+| FY-1 | 1 | LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities] | not usable: LongTermDebtNoncurrent not reported at 2024-12-31 |
+| FY-1 | 2 ✔ | LongTermDebtAndCapitalLeaseObligations + [short_term_debt] | 144,014 |
+| FY-1 | 3 | LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings | 144,014 |
+| FY-1 | 4 | LongTermDebt + ShortTermBorrowings + [finance_lease_liabilities] | not usable: LongTermDebt not reported at 2024-12-31 |
+| FY-1 | 5 | DebtLongtermAndShorttermCombinedAmount | 144,014 |
+| FY0 | 1 | LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities] | not usable: LongTermDebtNoncurrent not reported at 2025-12-31 |
+| FY0 | 2 ✔ | LongTermDebtAndCapitalLeaseObligations + [short_term_debt] | 158,150 |
+| FY0 | 3 | LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings | 158,150 |
+| FY0 | 4 | LongTermDebt + ShortTermBorrowings + [finance_lease_liabilities] | not usable: LongTermDebt not reported at 2025-12-31 |
+| FY0 | 5 | DebtLongtermAndShorttermCombinedAmount | 158,150 |
+| LTM | 1 | LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities] | not usable: LongTermDebtNoncurrent not reported at 2026-09-30 |
+| LTM | 2 ✔ | LongTermDebtAndCapitalLeaseObligations + [short_term_debt] | 166,233 |
+| LTM | 3 | LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings | not usable: LongTermDebtAndCapitalLeaseObligationsCurrent not reported at 2026-09-30 |
+| LTM | 4 | LongTermDebt + ShortTermBorrowings + [finance_lease_liabilities] | not usable: LongTermDebt not reported at 2026-09-30 |
+| LTM | 5 | DebtLongtermAndShorttermCombinedAmount | not usable: DebtLongtermAndShorttermCombinedAmount not reported at 2026-09-30 |
 
 ## Fallback log
 
-### Not available (5)
+### Not available (0)
 
-- **capex FY-2** (warning): not available: rank 1 PaymentsToAcquirePropertyPlantAndEquipment: PaymentsToAcquirePropertyPlantAndEquipment not reported for 2023-01-01 to 2023-12-31; rank 2 PaymentsToAcquireProductiveAssets: PaymentsToAcquireProductiveAssets not reported for 2023-01-01 to 2023-12-31; rank 3 PaymentsForCapitalImprovements: PaymentsForCapitalImprovements not reported for 2023-01-01 to 2023-12-31
-- **capex FY-1** (warning): not available: rank 1 PaymentsToAcquirePropertyPlantAndEquipment: PaymentsToAcquirePropertyPlantAndEquipment not reported for 2024-01-01 to 2024-12-31; rank 2 PaymentsToAcquireProductiveAssets: PaymentsToAcquireProductiveAssets not reported for 2024-01-01 to 2024-12-31; rank 3 PaymentsForCapitalImprovements: PaymentsForCapitalImprovements not reported for 2024-01-01 to 2024-12-31
-- **capex FY0** (warning): not available: rank 1 PaymentsToAcquirePropertyPlantAndEquipment: PaymentsToAcquirePropertyPlantAndEquipment not reported for 2025-01-01 to 2025-12-31; rank 2 PaymentsToAcquireProductiveAssets: PaymentsToAcquireProductiveAssets not reported for 2025-01-01 to 2025-12-31; rank 3 PaymentsForCapitalImprovements: PaymentsForCapitalImprovements not reported for 2025-01-01 to 2025-12-31
-- **total_debt LTM** (warning): not available: rank 1 DebtLongtermAndShorttermCombinedAmount: DebtLongtermAndShorttermCombinedAmount not reported at 2026-09-30; rank 2 LongTermDebtNoncurrent + [short_term_debt]: LongTermDebtNoncurrent not reported at 2026-09-30; rank 3 LongTermDebt + ShortTermBorrowings: LongTermDebt not reported at 2026-09-30; rank 4 LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent + ShortTermBorrowings: LongTermDebtAndCapitalLeaseObligationsCurrent not reported at 2026-09-30
-- **capex LTM** (warning): not available: rank 1 PaymentsToAcquirePropertyPlantAndEquipment: PaymentsToAcquirePropertyPlantAndEquipment not reported for 2025-01-01 to 2025-12-31; rank 2 PaymentsToAcquireProductiveAssets: PaymentsToAcquireProductiveAssets not reported for 2025-01-01 to 2025-12-31; rank 3 PaymentsForCapitalImprovements: PaymentsForCapitalImprovements not reported for 2025-01-01 to 2025-12-31
 
 ### Reconciliation (0)
 
 
-### Fallbacks beyond rank 1 (9)
+### Fallbacks beyond rank 1 (17)
 
 - **d_and_a FY-2**: used rank 2 DepreciationAndAmortization because rank 1 DepreciationDepletionAndAmortization: DepreciationDepletionAndAmortization not reported for 2023-01-01 to 2023-12-31
 - **short_term_debt FY-2**: used rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper because rank 1 DebtCurrent: DebtCurrent not reported at 2023-12-31
+- **total_debt FY-2**: used rank 2 LongTermDebtAndCapitalLeaseObligations + [short_term_debt] because rank 1 LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities]: LongTermDebtNoncurrent not reported at 2023-12-31
+- **capex FY-2**: used rank 4 PaymentsToAcquireOtherProductiveAssets because rank 1 PaymentsToAcquirePropertyPlantAndEquipment: PaymentsToAcquirePropertyPlantAndEquipment not reported for 2023-01-01 to 2023-12-31; rank 2 PaymentsToAcquireProductiveAssets: PaymentsToAcquireProductiveAssets not reported for 2023-01-01 to 2023-12-31; rank 3 PaymentsForCapitalImprovements: PaymentsForCapitalImprovements not reported for 2023-01-01 to 2023-12-31
 - **d_and_a FY-1**: used rank 2 DepreciationAndAmortization because rank 1 DepreciationDepletionAndAmortization: DepreciationDepletionAndAmortization not reported for 2024-01-01 to 2024-12-31
 - **interest_expense FY-1**: used rank 2 InterestExpenseNonoperating because rank 1 InterestExpense: InterestExpense not reported for 2024-01-01 to 2024-12-31
+- **total_debt FY-1**: used rank 2 LongTermDebtAndCapitalLeaseObligations + [short_term_debt] because rank 1 LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities]: LongTermDebtNoncurrent not reported at 2024-12-31
+- **capex FY-1**: used rank 4 PaymentsToAcquireOtherProductiveAssets because rank 1 PaymentsToAcquirePropertyPlantAndEquipment: PaymentsToAcquirePropertyPlantAndEquipment not reported for 2024-01-01 to 2024-12-31; rank 2 PaymentsToAcquireProductiveAssets: PaymentsToAcquireProductiveAssets not reported for 2024-01-01 to 2024-12-31; rank 3 PaymentsForCapitalImprovements: PaymentsForCapitalImprovements not reported for 2024-01-01 to 2024-12-31
 - **d_and_a FY0**: used rank 2 DepreciationAndAmortization because rank 1 DepreciationDepletionAndAmortization: DepreciationDepletionAndAmortization not reported for 2025-01-01 to 2025-12-31
 - **interest_expense FY0**: used rank 2 InterestExpenseNonoperating because rank 1 InterestExpense: InterestExpense not reported for 2025-01-01 to 2025-12-31
+- **total_debt FY0**: used rank 2 LongTermDebtAndCapitalLeaseObligations + [short_term_debt] because rank 1 LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities]: LongTermDebtNoncurrent not reported at 2025-12-31
+- **capex FY0**: used rank 4 PaymentsToAcquireOtherProductiveAssets because rank 1 PaymentsToAcquirePropertyPlantAndEquipment: PaymentsToAcquirePropertyPlantAndEquipment not reported for 2025-01-01 to 2025-12-31; rank 2 PaymentsToAcquireProductiveAssets: PaymentsToAcquireProductiveAssets not reported for 2025-01-01 to 2025-12-31; rank 3 PaymentsForCapitalImprovements: PaymentsForCapitalImprovements not reported for 2025-01-01 to 2025-12-31
 - **d_and_a LTM**: used rank 2 DepreciationAndAmortization because rank 1 DepreciationDepletionAndAmortization: DepreciationDepletionAndAmortization not reported for 2025-01-01 to 2025-12-31
 - **interest_expense LTM**: used rank 2 InterestExpenseNonoperating because rank 1 InterestExpense: InterestExpense not reported for 2025-01-01 to 2025-12-31
 - **short_term_debt LTM**: used rank 2 LongTermDebtCurrent + ShortTermBorrowings + CommercialPaper because rank 1 DebtCurrent: DebtCurrent not reported at 2026-09-30
+- **total_debt LTM**: used rank 2 LongTermDebtAndCapitalLeaseObligations + [short_term_debt] because rank 1 LongTermDebtNoncurrent + [short_term_debt] + [finance_lease_liabilities]: LongTermDebtNoncurrent not reported at 2026-09-30
+- **capex LTM**: used rank 4 PaymentsToAcquireOtherProductiveAssets because rank 1 PaymentsToAcquirePropertyPlantAndEquipment: PaymentsToAcquirePropertyPlantAndEquipment not reported for 2025-01-01 to 2025-12-31; rank 2 PaymentsToAcquireProductiveAssets: PaymentsToAcquireProductiveAssets not reported for 2025-01-01 to 2025-12-31; rank 3 PaymentsForCapitalImprovements: PaymentsForCapitalImprovements not reported for 2025-01-01 to 2025-12-31
 
 ### Assumed zero: not reported (7)
 

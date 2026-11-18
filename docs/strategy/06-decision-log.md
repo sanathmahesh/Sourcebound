@@ -101,3 +101,22 @@ inventing one.
 - **Why:** the full responses for three companies are about 13 MB. The capture keeps every chain tag from
   2021 on, unmodified, with the source URL and fetch time; the script makes the trimming reproducible.
 - **Rejected:** committing full responses; hand-written fixtures of real companies (not traceable).
+
+### D18. Chain revision 1: finance leases count as debt; components before combined tags (approved 17 November 2026)
+- **Decision:** (1) total debt prefers balance-sheet components, adds a candidate pairing
+  LongTermDebtAndCapitalLeaseObligations with short-term debt, and moves DebtLongtermAndShorttermCombinedAmount
+  to last; (2) finance-lease liabilities count as debt for every company, and finance-lease interest is
+  added when only InterestExpenseDebt is reported; (3) capex adds PaymentsToAcquireOtherProductiveAssets
+  (Verizon); (4) revenue ranks Revenues (total revenue) first.
+- **Why:** the phase-1 tag-discovery and reconciliation reports showed the starting chains understated
+  Walmart's debt (the combined tag omits its $6,596m of short-term borrowings at FY0), could not produce
+  Verizon's LTM debt or any Verizon capex, and treated finance leases differently by company (inside
+  Verizon's and Goodyear's debt lines, separate for Walmart at $6,761m). Finance leases are economically
+  borrowings, and credit analysts normally count them as debt.
+- **Effect at FY0:** Walmart total debt $38,166m -> $51,523m; Goodyear $5,937m -> $6,198m (its balance-sheet
+  total); Verizon unchanged at $158,150m. Verizon's LTM debt ($166,233m) and capex ($17,011m in FY0) became
+  available.
+- **Consequence for phase 2:** the golden-set template needs a finance-lease row, so a hand-computed total
+  debt follows the same definition.
+- **Rejected:** debt exactly as each balance sheet presents it (inconsistent across companies); excluding
+  finance leases everywhere (needs subtraction from combined tags, and understates debt-like obligations).

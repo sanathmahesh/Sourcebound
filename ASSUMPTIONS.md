@@ -48,3 +48,7 @@ were added while building, with the phase that added them.
 26. The EDGAR cache does not expire. Delete data/raw/ to download fresh data.
 27. Unit tests use synthetic values with the fictional accession prefix 0000000000. Real-company values
     appear only in fixture tests, each with its accession number.
+28. Finance-lease liabilities count as debt for every company (approved 17 November 2026, decision D18).
+    Operating leases, pensions and guarantees remain excluded (assumption 3).
+29. InterestExpense and InterestExpenseNonoperating are taken to include finance-lease interest. When only
+    InterestExpenseDebt is reported, FinanceLeaseInterestExpense is added (assumed zero if not reported).

@@ -1,4 +1,7 @@
-# Concept fallback chains (PLAN.md 4.5). Starting points, to be revised only with approval.
+# Concept fallback chains (PLAN.md 4.5). Revised only with the author's approval.
+# Revision 1, approved 17 November 2026 (decision log D18): total revenue first; finance-lease liabilities
+# count as debt and finance-lease interest as interest; balance-sheet components first for total debt;
+# Verizon's capex tag added.
 #
 # Each concept:
 #   label:     plain-English name
@@ -21,8 +24,10 @@ revenue:
   kind: flow
   required: true
   chain:
-    - tag: RevenueFromContractWithCustomerExcludingAssessedTax
+    # Revenues is total revenue; the contract-revenue tag can leave out other income such as membership
+    # fees (Walmart: 713,163 against 706,413 for FY2026).
     - tag: Revenues
+    - tag: RevenueFromContractWithCustomerExcludingAssessedTax
     - tag: RevenueFromContractWithCustomerIncludingAssessedTax
     - tag: SalesRevenueNet
 
@@ -61,7 +66,13 @@ interest_expense:
   chain:
     - tag: InterestExpense
     - tag: InterestExpenseNonoperating
-    - tag: InterestExpenseDebt
+    # InterestExpense and InterestExpenseNonoperating are total interest expense, which normally includes
+    # finance-lease interest. InterestExpenseDebt covers debt only, so lease interest is added to match
+    # the debt definition (finance leases count as debt).
+    - sum:
+        - tag: InterestExpenseDebt
+        - tag: FinanceLeaseInterestExpense
+          optional: true
     - tag: InterestAndDebtExpense
     - tag: InterestPaidNet
       flag: "proxy: cash interest paid, not interest expense"
@@ -80,23 +91,42 @@ short_term_debt:
           optional: true
 
 total_debt:
-  label: Total debt
+  label: Total debt (borrowings plus finance-lease liabilities)
   kind: instant
   required: true
   chain:
-    - tag: DebtLongtermAndShorttermCombinedAmount
+    # Debt-only balance-sheet lines, with finance leases added from their own lines.
     - sum:
         - tag: LongTermDebtNoncurrent
         - concept: short_term_debt
+        - concept: finance_lease_liabilities
+    # Lines that already combine debt and finance leases.
     - sum:
-        - tag: LongTermDebt
-        - tag: ShortTermBorrowings
-          optional: true
+        - tag: LongTermDebtAndCapitalLeaseObligations
+        - concept: short_term_debt
     - sum:
         - tag: LongTermDebtAndCapitalLeaseObligations
         - tag: LongTermDebtAndCapitalLeaseObligationsCurrent
         - tag: ShortTermBorrowings
           optional: true
+    - sum:
+        - tag: LongTermDebt
+        - tag: ShortTermBorrowings
+          optional: true
+        - concept: finance_lease_liabilities
+    # Last: its scope varies by company (for Walmart it is long-term debt only).
+    - tag: DebtLongtermAndShorttermCombinedAmount
+      flag: "scope varies by company: may leave out short-term borrowings or finance leases"
+
+finance_lease_liabilities:
+  label: Finance-lease liabilities (current plus non-current)
+  kind: instant
+  required: false
+  chain:
+    - sum:
+        - tag: FinanceLeaseLiabilityCurrent
+        - tag: FinanceLeaseLiabilityNoncurrent
+    - tag: FinanceLeaseLiability
 
 cash:
   label: Cash and cash equivalents
@@ -134,6 +164,8 @@ capex:
     - tag: PaymentsToAcquirePropertyPlantAndEquipment
     - tag: PaymentsToAcquireProductiveAssets
     - tag: PaymentsForCapitalImprovements
+    # Verizon reports "capital expenditures (including capitalized software)" under this tag.
+    - tag: PaymentsToAcquireOtherProductiveAssets
 
 # ----- Used from phase 2 (listed now so the tag-discovery report covers them) ------------------------
 
